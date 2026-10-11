@@ -365,7 +365,7 @@ function loadData(){if(loaded)return;loaded=true;var name=null,xp=0;
       $('p-'+g.id+'-v').textContent=pct+'%';setTimeout(function(){$('p-'+g.id+'-b').style.width=pct+'%'},350);
       if(me)$('p-'+g.id+'-l').textContent=me.total+' de '+g.max+' pts';
       $('m-'+g.id).textContent='Patente: '+pat(g,pct)+(me?' · '+(i+1)+'º lugar':'');
-      if(g.id==='objetivo'){if(me){$('kRank').textContent=(i+1)+'º';$('kRankS').textContent='de '+list.length+' na missão';$('a-objetivo').textContent=pct>0?'Continuar a revisão':'Começar a revisão'}else{$('kRankS').textContent=list.length?list.length+' na missão':'seja o primeiro!'}}
+      if(g.id==='objetivo'){var nAt=list.filter(function(r){return r.total>0}).length;if(me){$('kRank').textContent=(i+1)+'º';$('kRankS').textContent='de '+Math.max(nAt,1)+' na missão';$('a-objetivo').textContent=pct>0?'Continuar a revisão':'Começar a revisão'}else{$('kRankS').textContent=nAt?nAt+' na missão':'seja o primeiro!'}}
     }).catch(function(){RANKS[g.id]=null})
   })).then(function(){
     $('kXp').textContent=xp.toLocaleString('pt-BR');
