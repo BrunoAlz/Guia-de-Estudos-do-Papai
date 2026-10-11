@@ -3,7 +3,7 @@
 Site: https://guia-de-estudos-do-papai.vercel.app
 
 ## Como o site funciona
-- `site/` — o que vai para a Vercel: `index.html` (casca do hub), uma casca por guia (`2gm.html`, `geo3.html`, `objetivo.html`) e `vercel.json`.
+- Raiz do repositório — o que vai para a Vercel (deploy automático a cada push na `main`): `index.html` (casca do hub), uma casca por guia (`2gm.html`, `geo3.html`, `objetivo.html`) e `vercel.json`. O `.vercelignore` deixa `guias/`, `tools/` e este README fora do deploy.
   Cada casca baixa a página completa do Supabase Storage (`guias/<slug>.html`) e faz `document.write`.
 - `guias/` — as páginas completas que ficam no Storage (bucket público `guias`): `hub.html`, `2gm.html`, `geo3.html`, `objetivo.html`.
   Atualizar conteúdo = reenviar o arquivo ao Storage (sem redeploy).
