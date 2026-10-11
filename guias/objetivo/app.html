@@ -218,6 +218,53 @@ sup,sub{font-size:.7em;line-height:0}
 #toast{white-space:nowrap;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--ink);color:var(--paper2);font:800 16px var(--head);padding:10px 18px;border-radius:99px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
 @media (max-width:700px){#toast{bottom:calc(88px + env(safe-area-inset-bottom,0px))}.sum b{font-size:19px}.trow{grid-template-columns:1fr auto}.trow .st{grid-column:1/-1;width:auto;margin-bottom:-6px}}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
+/* macete, contagem e treino */
+.mac{position:relative;background:var(--card);border:2px dashed var(--ac,var(--gold));border-radius:12px;padding:12px 16px;margin:18px 0}
+.mac b.h{display:block;font:700 24px/1 var(--hand);color:var(--ac,var(--gold));margin-bottom:4px}
+.count{display:flex;align-items:center;gap:12px;margin-top:12px;background:var(--red-bg);border:1.5px solid var(--red);border-radius:14px;padding:8px 14px;color:var(--ink);font-size:14px;line-height:1.25}
+.count>b{font:800 34px/1 var(--head);color:var(--red)}
+.count small{color:var(--muted)}
+.tcard{padding:16px;margin-bottom:14px}
+.opt-g{margin-bottom:12px}
+.opt-g .lbl{display:block;font:800 12px var(--head);letter-spacing:.1em;text-transform:uppercase;color:var(--muted);margin-bottom:6px}
+.chips{display:flex;flex-wrap:wrap;gap:6px}
+.chips button{border:1.5px solid var(--line);background:var(--card);border-radius:99px;min-height:42px;padding:0 14px;font:700 14px var(--serif);cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--ink);color:var(--paper2);border-color:var(--ink)}
+.btn.big{width:100%;min-height:56px;font-size:17px;margin:6px 0 10px;background:var(--red);border-color:var(--red);color:#fff}
+.pill.bad{background:var(--red-bg);color:var(--red)}
+.qhead{display:flex;align-items:center;gap:10px;font:700 14px var(--serif)}
+.qhead .qn{flex:1;text-align:center}
+.qhead .qok{color:var(--ok)}
+.lnk{border:0;background:none;cursor:pointer;color:var(--muted);font:700 14px var(--serif);padding:8px 0;min-height:40px}
+.pbar{height:6px;border-radius:9px;background:var(--line);overflow:hidden;margin-top:4px}
+.pbar i{display:block;height:100%;background:var(--ac)}
+.tag.dif{background:var(--card);color:var(--muted);border:1px solid var(--line)}
+.qq.big .qt{font-size:17px}
+.verdict{font:800 18px var(--head);padding:12px 16px;border-radius:12px;margin:4px 0 10px}
+.verdict.good{background:var(--ok-bg);color:var(--ok)}
+.verdict.bad{background:var(--red-bg);color:var(--red)}
+.verdict.bad b{font-size:20px}
+.why{background:var(--red-bg);border-left:5px solid var(--red);border-radius:10px;padding:10px 14px;margin-bottom:10px;font-size:16px}
+.res{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ok);border-radius:12px;padding:12px 16px;margin-bottom:10px}
+.res b.h{display:block;font:700 24px/1 var(--hand);color:var(--ok);margin-bottom:6px}
+.res ol,.res ul{padding-left:22px;margin:6px 0}
+.allo{list-style:none;padding:0;margin:10px 0 0}
+.allo li{padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.allo li span{color:var(--muted)}
+.allo li.c span{color:var(--ok);font-weight:700}
+.nav1{display:grid;grid-template-columns:1fr 1.4fr;gap:10px;margin:16px 0 30px}
+.nav1 .btn{min-height:54px}
+.score{display:flex;align-items:center;gap:18px;padding:18px;margin-bottom:14px}
+.score .big{font:800 54px/1 var(--head)}
+.score .big small{font-size:22px;color:var(--muted)}
+.score .rk{font:700 30px var(--hand);color:var(--red)}
+.rlist{list-style:none;padding:0;margin:0}
+.rlist li{display:flex;gap:10px;padding:8px 0;border-top:1px solid var(--line);font-size:15px}
+.rlist li:first-child{border-top:0}
+.rlist li.g>span:first-child{color:var(--ok);font-weight:800}
+.rlist li.b>span:first-child{color:var(--red);font-weight:800}
+@media (max-width:700px){.nav1{grid-template-columns:1fr}.nav1 .btn.ghost{order:2}body.focus header .title,body.focus header .count,body.focus header .back{display:none}body.focus header.top{padding-top:calc(6px + env(safe-area-inset-top,0px))}body.focus .player{margin-top:4px}}
+
 </style>
 </head>
 <body>
@@ -228,12 +275,13 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
   <div><h1>Missão <em>Bolsa 100%</em></h1><p>Desafio de Português e Matemática · Colégio Objetivo · 1ª série do Ensino Médio</p></div>
   <div class="stamp" aria-hidden="true">Desafio<b>30</b>questões</div>
  </div>
+ <div class="count" id="count" hidden></div>
  <div class="player" id="player"></div>
 </header>
 
 <nav class="tabs" role="tablist" aria-label="Seções">
  <button class="tab" role="tab" data-tab="rev" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 8h6M9 12h6"/></svg><span class="tl">Revisão completa</span><span class="ts">Revisão</span></button>
- <button class="tab" role="tab" data-tab="treino" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="tl">Treino</span><span class="ts">Treino</span><span class="soon">em breve</span></button>
+ <button class="tab" role="tab" data-tab="treino" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="tl">Treino estilo prova</span><span class="ts">Treino</span></button>
  <button class="tab" role="tab" data-tab="cards" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v10"/></svg><span class="tl">Flashcards</span><span class="ts">Cards</span><span class="soon">em breve</span></button>
  <button class="tab" role="tab" data-tab="simu" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span class="tl">Simulado</span><span class="ts">Simulado</span><span class="soon">em breve</span></button>
  <button class="tab" role="tab" data-tab="placar" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6"/></svg><span class="tl">Placar ★</span><span class="ts">Placar</span></button>
@@ -287,7 +335,7 @@ function order(id,n){const a=[...Array(n).keys()];let h=hash(id);for(let i=n-1;i
 
 /* ---------- jogador e pontos ---------- */
 let USERS=LS.get(P+':users')||{},CUR=LS.get(P+':cur');if(CUR&&!USERS[CUR])CUR=null;
-const blank=()=>({rev:{},tr:{},sol:{}});
+const blank=()=>({rev:{},tr:{},sol:{},tn:{}});
 let S=CUR?Object.assign(blank(),USERS[CUR].s):blank();
 const sum=o=>Object.values(o).reduce((a,v)=>a+(+v||0),0);
 const trOk=()=>QS.filter(x=>S.tr[x.id]===x.q[2]).length;
@@ -360,15 +408,19 @@ areas:'<svg viewBox="0 0 340 110" role="img" aria-label="Triângulo, trapézio, 
 };
 const FIGCAP={paralelas:'Mesma cor = mesmo ângulo. Azul + rosa = 180°. Correspondentes: b e f · alternos internos: c e f · colaterais internos: c e e (somam 180°).',sombra:'Raios de sol paralelos → triângulos semelhantes: [[h|6]] = [[1,6|1,2]].',pitagoras:'a² = b² + c² · h² = m·n · b² = a·m · c² = a·n · a·h = b·c',inscrito:'O ângulo inscrito (vértice na circunferência) vale metade do central que olha o mesmo arco.',cartesiano:'Os deslocamentos Δx e Δy são os catetos; a distância é a hipotenusa.',areas:'Triângulo [[b·h|2]] · trapézio [[(B + b)·h|2]] · losango [[D·d|2]] · círculo πr²'};
 
+/* ---------- contagem regressiva ---------- */
+function renderCount(){const el=$('count');const now=new Date(),d0=new Date(now.getFullYear(),now.getMonth(),now.getDate()),prova=new Date(2026,9,17);const d=Math.round((prova-d0)/864e5);
+ if(d<0){el.hidden=true;return}el.hidden=false;el.innerHTML=d===0?'<b>É HOJE!</b> Respira, lê com calma e boa prova! 🍀':'<b>'+d+'</b><span>'+(d===1?'dia':'dias')+' para a prova<br><small>sábado, 17 de outubro</small></span>'}
+
 /* ---------- navegação (hash) ---------- */
 let AREA=LS.get(P+':area')||'mat';
 function go(h){if(location.hash!=='#'+h)location.hash=h;else route()}
 function setTab(k){document.querySelectorAll('.tab').forEach(b=>b.setAttribute('aria-selected',String(b.dataset.tab===k)));document.querySelectorAll('section.panel').forEach(s=>s.hidden=s.id!==k)}
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
 function route(){const h=(location.hash||'#rev').slice(1);const [tab,arg]=h.split('/');
- const k=['rev','treino','cards','simu','placar'].includes(tab)?tab:'rev';setTab(k);
+ const k=['rev','treino','cards','simu','placar'].includes(tab)?tab:'rev';setTab(k);document.body.classList.remove('focus');
  if(k==='rev'){if(arg==='folha')renderFolha();else if(arg&&T[arg])renderTopic(arg);else renderList()}
- else if(k==='placar')renderPlacar();else renderSoon(k);
+ else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else renderSoon(k);
  try{window.scrollTo(0,0)}catch(e){}}
 addEventListener('hashchange',route);
 
@@ -403,6 +455,7 @@ function renderTopic(id){const t=T[id];AREA=t.area;LS.set(P+':area',AREA);const 
  h+='<div class="sec">Entenda</div><div class="body">'+fmt(t.body).replace(/<table class="tb">/g,'<div class="tbw"><table class="tb">').replace(/<\/table>/g,'</table></div>')+'</div>';
  if(t.fig&&FIG[t.fig])h+='<figure>'+FIG[t.fig]+'<figcaption>'+fmt(FIGCAP[t.fig])+'</figcaption></figure>';
  h+='<div class="rule"><span class="lb">Regra de ouro</span>'+fmt(t.rule)+'</div>';
+ if(MACETES[t.id])h+='<div class="mac"><b class="h">Macete</b>'+fmt(MACETES[t.id])+'</div>';
  if(t.ex&&t.ex.length){h+='<div class="sec">Exemplos resolvidos</div><p style="margin:-2px 0 10px;font-size:14px;color:var(--muted)">Tente resolver antes de abrir a resolução.</p>';
   t.ex.forEach((e,i)=>{const k=t.id+':'+i,open=!!S.sol[k];h+='<div class="ex"><div class="q" data-n="'+(i+1)+'">'+fmt(e.q)+'</div><div class="sol" '+(open?'':'hidden')+'><ol>'+e.s.map(x=>'<li>'+fmt(x)+'</li>').join('')+'</ol><span class="ans">Resposta: '+fmt(e.r)+'</span></div>'+(open?'':'<button type="button" class="btn ghost sm show" data-k="'+k+'">Tentei! Mostrar resolução</button>')+'</div>'})}
  h+='<div class="trap"><b class="h">Pegadinha!</b>'+fmt(t.trap)+'</div>';
@@ -445,7 +498,7 @@ let confirmReset=false;
 function renderPlacar(){const el=$('placar');const t=TOTAL(),p=pctOf(t);
  let h='<div class="card hero"><div><div class="big">'+t+'<small style="font-size:16px;color:var(--muted)"> / '+MAX()+' pts</small></div><div class="rk">'+patente(p)+'</div><small style="color:var(--muted)">'+p+'% da missão</small></div></div>';
  if(!CUR)h+='<p class="card" style="padding:14px">Entre com seu nome para salvar seus pontos. <button type="button" class="btn sm" id="plIn">Entrar</button></p>';
- h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'<div class="r" style="opacity:.6"><span>Treino, cards e simulado</span><b>em breve</b></div></div>';
+ h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'<div class="r" style="opacity:.6"><span>Flashcards e simulado</span><b>em breve</b></div></div>';
  h+='<div class="card heat"><h3>Mapa dos tópicos</h3>';
  Object.keys(AREAS).forEach(a=>{const A=AREAS[a];h+='<p style="margin:6px 0;font-weight:700;color:'+A.ac+'">'+A.n+'</p><div class="cells">'+A.tops.map(x=>{const s=stat(x);const lv=s.r&&s.ok===s.n?2:(s.r||s.ans)?1:0;return '<button type="button" class="cell r'+lv+'" title="'+esc(x.t)+'" aria-label="'+esc(x.t)+'" data-t="'+x.id+'"></button>'}).join('')+'</div>'});
  h+='<div class="hleg"><span><i></i>não começado</span><span><i style="background:var(--hl)"></i>em andamento</span><span><i style="background:var(--ok)"></i>revisado e teste 100%</span></div></div>';
@@ -463,7 +516,9 @@ function renderPlacar(){const el=$('placar');const t=TOTAL(),p=pctOf(t);
  if($('rsNo'))$('rsNo').onclick=()=>{confirmReset=false;renderPlacar()};
  if($('rsYes'))$('rsYes').onclick=async()=>{confirmReset=false;S=blank();USERS[CUR].s=S;LS.set(P+':users',USERS);if(SB){try{await rpc('delete_score',{p_guia:SB.guia,p_secret:secret()});await fetchRank()}catch(e){}}renderBar();renderPlacar();toast('Progresso zerado')};}
 
-window.__OBJ={ids:TOPS.map(t=>t.id)};
+/*__TREINO__*/
+window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id)};
+renderCount();
 renderBar();route();
 if(!CUR)setTimeout(openLogin,600);
 })();

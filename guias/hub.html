@@ -218,9 +218,9 @@ footer{color:var(--muted);font:400 12px "IBM Plex Mono",monospace;text-align:cen
         <div class="bd">
           <span class="sub">Prova de bolsa · Colégio Objetivo</span>
           <h4>Missão Bolsa 100%</h4>
-          <p class="desc">Revisão completa de Português e Matemática do 9º ano para o Desafio do Objetivo: teoria, exemplos resolvidos, pegadinhas e testes.</p>
+          <p class="desc">Revisão completa e treino estilo prova de Português e Matemática do 9º ano para o Desafio do Objetivo, com macetes e explicação de cada alternativa.</p>
           <div class="prog"><div class="row"><span id="p-objetivo-l">Progresso</span><b id="p-objetivo-v">0%</b></div><div class="bar"><i id="p-objetivo-b"></i></div></div>
-          <div class="meta"><span>48 tópicos · BNCC + SAEB</span><span id="m-objetivo">Patente: Candidato</span></div>
+          <div class="meta"><span>Revisão + 186 questões de treino</span><span id="m-objetivo">Patente: Candidato</span></div>
           <div class="act"><b id="a-objetivo">Começar a revisão</b><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
         </div>
       </a>
@@ -345,7 +345,7 @@ $('skipBtn').onclick=function(){enter()};
 $('portalBtn').onclick=function(){history.pushState(null,'',location.pathname);showPortal()};
 addEventListener('popstate',function(){if(/^#escola/.test(location.hash))showEscola();else showPortal()});
 
-var GUIAS=[{id:'objetivo',ls:'gobj',max:980,ranks:[[0,'Candidato'],[10,'Inscrito'],[25,'Concorrente'],[40,'Classificado'],[55,'Aprovado'],[70,'Bolsista 50%'],[85,'Bolsista 80%'],[95,'Bolsa 100%']]},
+var GUIAS=[{id:'objetivo',ls:'gobj',max:2840,ranks:[[0,'Candidato'],[10,'Inscrito'],[25,'Concorrente'],[40,'Classificado'],[55,'Aprovado'],[70,'Bolsista 50%'],[85,'Bolsista 80%'],[95,'Bolsa 100%']]},
            {id:'geo3',ls:'ggeo3',max:1709,ranks:[[0,'Turista'],[10,'Mochileiro'],[25,'Explorador'],[40,'Navegador'],[55,'Cartógrafo'],[70,'Geógrafo'],[85,'Diplomata'],[95,'Embaixador']]},
            {id:'2gm',ls:'g2gm',max:1316,ranks:[[0,'Recruta'],[10,'Soldado'],[25,'Cabo'],[40,'Sargento'],[55,'Tenente'],[70,'Capitão'],[85,'Major'],[95,'General']]}];
 function ls(k){try{var v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
@@ -353,8 +353,8 @@ function pat(g,p){var r=g.ranks[0][1];g.ranks.forEach(function(x){if(p>=x[0])r=x
 function rpc(fn,body){return fetch(SB.url+fn,{method:'POST',headers:{apikey:SB.key,'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
 var RANKS={},loaded=false;
 function loadData(){if(loaded)return;loaded=true;var name=null,xp=0;
-  var prova=new Date(2026,9,6,7,0,0),d=Math.ceil((prova-new Date())/864e5);
-  if(d>=0){$('exam').hidden=false;$('examD').textContent=d===0?'HOJE':d;$('examT').innerHTML=d===0?'é dia de prova<br>de Geografia!':(d===1?'dia':'dias')+' para a<br>prova de Geografia'}
+  var hoje=new Date(),prova=new Date(2026,9,17),d=Math.round((prova-new Date(hoje.getFullYear(),hoje.getMonth(),hoje.getDate()))/864e5);
+  if(d>=0){$('exam').hidden=false;$('examD').textContent=d===0?'HOJE':d;$('examT').innerHTML=d===0?'é dia da prova<br>do Objetivo! Boa prova!':(d===1?'dia':'dias')+' para a<br>prova do Objetivo'}
   var tips=['só mais um capítulo…','na prova do Objetivo são 6 minutos por questão: leia com calma.','(a + b)² não é a² + b². Falta o 2ab!','embora = ainda que = mesmo que. É concessão!','aumentar 20% e depois tirar 20% não volta ao preço original.','termine o quiz antes dos desafios: eles ficam mais fáceis.','vire os flashcards que você errou até acertar todos.','na prova, use um exemplo do Brasil na resposta. Professor ama!','nova DIT: descentralização da produção, centralização do comando.','Maastricht (1992) criou a UE. Roma (1957) criou o Mercado Comum.'];
   $('tip').textContent=tips[Math.floor(Math.random()*tips.length)];
   Promise.all(GUIAS.map(function(g){
