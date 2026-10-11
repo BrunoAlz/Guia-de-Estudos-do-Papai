@@ -243,6 +243,62 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
 .fkeys{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 24px}
 @media (max-width:700px){.fkeys b{font-weight:400}}
 @media (prefers-reduced-motion:reduce){.fcin{transition:none}}
+
+/* simulados */
+.simcard{padding:14px 16px;margin-bottom:12px}
+.simh{display:flex;align-items:center;justify-content:space-between;margin-bottom:8px}
+.simh b{font:800 20px var(--head)}
+.simst{display:grid;grid-template-columns:repeat(4,1fr);gap:6px;margin-bottom:8px}
+.simst div{background:var(--paper2);border:1px solid var(--line);border-radius:10px;padding:6px 8px}
+.simst span{display:block;font-size:11px;color:var(--muted)}
+.simst b{font:800 18px var(--head)}
+.simst small{display:block;font-size:11px;color:var(--muted)}
+.simmini{margin:0 0 8px;font-size:13px;color:var(--muted)}
+.simb{display:flex;gap:8px}
+.simb .btn{flex:1}
+.simbar{position:sticky;top:0;z-index:20;display:flex;align-items:center;gap:10px;background:var(--bar);color:#fff;padding:8px 12px;border-radius:0 0 14px 14px;margin:0 -4px;box-shadow:0 8px 20px -12px rgba(0,0,0,.6)}
+.simbar .clock{font:800 22px/1 var(--head);font-variant-numeric:tabular-nums;color:#fff}
+.simbar .clock.warn{color:var(--hl)}
+.simbar .clock.crit{color:#ff8d80;animation:blinkc 1s steps(2) infinite}
+@keyframes blinkc{50%{opacity:.55}}
+.simbar .sp{flex:1;font-size:13px;color:var(--bar-ink)}
+.simbar .btn{background:var(--red);border-color:var(--red);color:#fff}
+.opt.sel{border-color:var(--ac);background:var(--abg);box-shadow:inset 0 0 0 1px var(--ac)}
+.opt.sel .l{background:var(--ac);color:#fff}
+.simtx summary{cursor:pointer;list-style:none;font-size:14px;color:var(--muted)}
+.simtx summary b{color:var(--ink)}
+.simtx[open] summary{margin-bottom:8px}
+.simtx>div{font-size:16px}
+.simnav{display:grid;grid-template-columns:auto 1fr 1.3fr;gap:8px;margin:12px 0}
+.simnav .btn{min-height:52px;padding:0 12px}
+.sheet{background:var(--card);border:1px solid var(--line);border-radius:14px;padding:10px 12px;margin-bottom:14px}
+.sheet p{margin:0 0 8px;font-size:13px;color:var(--muted)}
+.cells2{display:grid;grid-template-columns:repeat(10,1fr);gap:4px}
+.c2{position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;min-height:42px;border-radius:8px;border:1.5px solid var(--line);background:var(--paper2);font:800 14px var(--head);cursor:pointer;padding:0}
+.c2 small{font:600 9px var(--serif);color:var(--muted)}
+.c2.an{background:var(--mat-bg);border-color:var(--mat)}
+.c2.mk::after{content:"⚑";position:absolute;top:-6px;right:-3px;font-size:11px;color:#b08900}
+.c2.mk{background:#fff4c2;border-color:#d4b93c;color:#3b2f00}
+.c2.cur{outline:2.5px solid var(--red);outline-offset:1px}
+.leg2{display:flex;flex-wrap:wrap;gap:12px;margin:8px 0 0!important}
+.leg2 i{display:inline-block;width:11px;height:11px;border-radius:3px;border:1px solid var(--line);margin-right:4px;vertical-align:-1px}
+.leg2 i.an{background:var(--mat-bg);border-color:var(--mat)}.leg2 i.mk{background:#fff4c2;border-color:#d4b93c}
+.endbox{padding:16px;margin:4px 0 20px;border:2px solid var(--red)}
+.endbox h3{margin:0 0 6px;font:800 19px var(--head)}
+.diag{display:grid;grid-template-columns:44px 1fr auto auto;gap:8px;align-items:center;padding:8px 0;border-top:1px solid var(--line)}
+.diag .dn{font:800 15px var(--head);color:var(--red)}
+.diag .dt{font-weight:700;font-size:15px;line-height:1.3}
+.diag .dt small{display:block;font-weight:400;font-size:12px;color:var(--ac)}
+.glist{display:grid;gap:6px;margin-bottom:10px}
+.gq{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ok);border-radius:10px}
+.gq.b{border-left-color:var(--red)}
+.gq summary{list-style:none;cursor:pointer;display:grid;grid-template-columns:28px auto 1fr auto;gap:8px;align-items:center;padding:10px 12px;font-size:14px}
+.gq summary::-webkit-details-marker{display:none}
+.gq .gn{font:800 15px var(--head)}
+.gq .gs{font-weight:800;color:var(--ok)}.gq.b .gs{color:var(--red)}
+.gq .gt{overflow:hidden;text-overflow:ellipsis;white-space:nowrap;color:var(--muted)}
+.gq .gb{padding:0 12px 12px}
+@media (max-width:700px){.simst{grid-template-columns:repeat(2,1fr)}.cells2{grid-template-columns:repeat(6,1fr)}.diag{grid-template-columns:40px 1fr 1fr}.diag .dt{grid-column:2/4}.diag [data-rv]{grid-column:2}.diag [data-tr]{grid-column:3}.gq summary{grid-template-columns:24px auto 1fr}.gq .ga{grid-column:2/-1}}
 /* macete, contagem e treino */
 .mac{position:relative;background:var(--card);border:2px dashed var(--ac,var(--gold));border-radius:12px;padding:12px 16px;margin:18px 0}
 .mac b.h{display:block;font:700 24px/1 var(--hand);color:var(--ac,var(--gold));margin-bottom:4px}
@@ -308,7 +364,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
  <button class="tab" role="tab" data-tab="rev" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 8h6M9 12h6"/></svg><span class="tl">Revisão completa</span><span class="ts">Revisão</span></button>
  <button class="tab" role="tab" data-tab="treino" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="tl">Treino estilo prova</span><span class="ts">Treino</span></button>
  <button class="tab" role="tab" data-tab="cards" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v10"/></svg><span class="tl">Flashcards</span><span class="ts">Cards</span></button>
- <button class="tab" role="tab" data-tab="simu" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span class="tl">Simulado</span><span class="ts">Simulado</span><span class="soon">em breve</span></button>
+ <button class="tab" role="tab" data-tab="simu" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span class="tl">Simulados</span><span class="ts">Simulado</span></button>
  <button class="tab" role="tab" data-tab="placar" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6"/></svg><span class="tl">Placar ★</span><span class="ts">Placar</span></button>
 </nav>
 
@@ -360,7 +416,7 @@ function order(id,n){const a=[...Array(n).keys()];let h=hash(id);for(let i=n-1;i
 
 /* ---------- jogador e pontos ---------- */
 let USERS=LS.get(P+':users')||{},CUR=LS.get(P+':cur');if(CUR&&!USERS[CUR])CUR=null;
-const blank=()=>({rev:{},tr:{},sol:{},tn:{},fc:{}});
+const blank=()=>({rev:{},tr:{},sol:{},tn:{},fc:{},sim:{},simrun:null});
 let S=CUR?Object.assign(blank(),USERS[CUR].s):blank();
 const sum=o=>Object.values(o).reduce((a,v)=>a+(+v||0),0);
 const trOk=()=>QS.filter(x=>S.tr[x.id]===x.q[2]).length;
@@ -445,7 +501,7 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>go(b
 function route(){const h=(location.hash||'#rev').slice(1);const [tab,arg]=h.split('/');
  const k=['rev','treino','cards','simu','placar'].includes(tab)?tab:'rev';setTab(k);document.body.classList.remove('focus');
  if(k==='rev'){if(arg==='folha')renderFolha();else if(arg&&T[arg])renderTopic(arg);else renderList()}
- else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else if(k==='cards')renderCards();else renderSoon(k);
+ else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else if(k==='cards')renderCards();else if(k==='simu')renderSimu();else renderSoon(k);
  try{window.scrollTo(0,0)}catch(e){}}
 addEventListener('hashchange',route);
 
@@ -523,7 +579,7 @@ let confirmReset=false;
 function renderPlacar(){const el=$('placar');const t=TOTAL(),p=pctOf(t);
  let h='<div class="card hero"><div><div class="big">'+t+'<small style="font-size:16px;color:var(--muted)"> / '+MAX()+' pts</small></div><div class="rk">'+patente(p)+'</div><small style="color:var(--muted)">'+p+'% da missão</small></div></div>';
  if(!CUR)h+='<p class="card" style="padding:14px">Entre com seu nome para salvar seus pontos. <button type="button" class="btn sm" id="plIn">Entrar</button></p>';
- h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'<div class="r" style="opacity:.6"><span>Simulado cronometrado</span><b>em breve</b></div></div>';
+ h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'</div>';
  h+='<div class="card heat"><h3>Mapa dos tópicos</h3>';
  Object.keys(AREAS).forEach(a=>{const A=AREAS[a];h+='<p style="margin:6px 0;font-weight:700;color:'+A.ac+'">'+A.n+'</p><div class="cells">'+A.tops.map(x=>{const s=stat(x);const lv=s.r&&s.ok===s.n?2:(s.r||s.ans)?1:0;return '<button type="button" class="cell r'+lv+'" title="'+esc(x.t)+'" aria-label="'+esc(x.t)+'" data-t="'+x.id+'"></button>'}).join('')+'</div>'});
  h+='<div class="hleg"><span><i></i>não começado</span><span><i style="background:var(--hl)"></i>em andamento</span><span><i style="background:var(--ok)"></i>revisado e teste 100%</span></div></div>';
@@ -543,7 +599,8 @@ function renderPlacar(){const el=$('placar');const t=TOTAL(),p=pctOf(t);
 
 /*__TREINO__*/
 /*__CARDS__*/
-window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id),fc:FC.map(c=>c.id)};
+/*__SIMU__*/
+window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id),fc:FC.map(c=>c.id),sims:SIMS.map(s=>s.id),simA:SIMI.A.q.map(x=>x.a)};
 renderCount();
 renderBar();route();
 if(!CUR)setTimeout(openLogin,600);

@@ -3364,6 +3364,1039 @@ const CARDS_P3 = [
  {t:'p-form', k:'pegadinha', f:`“Idéia”, “heróico” e “vôo” estão corretas pelo Acordo Ortográfico em vigor?`, b:`<b>Não!</b> Escreve-se <b>ideia, heroico, voo</b>, sem acento.`}
 ];
 
+/* SIMULADO A · PORTUGUÊS (15 questões, na ordem da prova)
+   Todos os textos-base foram escritos para este guia (originais). */
+const SIM_A_POR = [
+
+/* 01 · p-impl */
+{t:'p-impl', d:2,
+ tt:`Texto 1`,
+ tx:`<b>O fone</b><br>Meu filho, Tomás, tem catorze anos e um par de fones de ouvido que, há uns oito meses, parece ter criado raízes nas orelhas dele. Ele toma café de fone, faz a lição de fone, atravessa a sala de fone. Já me acostumei a conversar com ele por gestos, como quem orienta um avião na pista.<br>Na terça-feira passada, porém, o fio arrebentou. Tomás apareceu na cozinha segurando as duas pontas, com a cara de quem acabou de perder o último ônibus. Ofereci cola, fita isolante e solidariedade. Ele recusou as três.<br>Como a loja só abriria no dia seguinte, ele precisou atravessar uma noite inteira com os ouvidos desocupados. Sentou-se à mesa do jantar, estranhou o barulho dos talheres e, de repente, perguntou à irmã como tinha sido a apresentação de teatro. Ela, que já tinha contado a história três vezes na semana anterior, contou pela quarta, agora com plateia.<br>Depois do jantar, ele ficou na sala. Descobriu que a avó ri alto com a novela, que o vizinho de cima ensaia trompete às nove e que eu canto mal enquanto lavo a louça. Esta última descoberta ele fez questão de comentar.<br>No dia seguinte, comprou fones novos, sem fio, para não arrebentarem mais. Na hora do jantar, porém, eu os vi pendurados no pescoço dele, desligados, enquanto ele perguntava à irmã se a peça ia ter outra sessão.`,
+ q:`O trecho “Ela, que já tinha contado a história três vezes na semana anterior, contou pela quarta, <b>agora com plateia</b>” permite inferir que:`,
+ o:[
+  [`a irmã de Tomás costuma repetir as histórias porque esquece que já as contou.`, `O texto não fala em esquecimento. Essa explicação é inventada: não há pista para ela.`],
+  [`Tomás tinha assistido à apresentação de teatro da irmã.`, `Ao contrário: ele pergunta “como tinha sido” a apresentação, o que sugere que não esteve lá.`],
+  [`nas vezes anteriores, Tomás não tinha realmente ouvido o relato da irmã, por causa dos fones.`, ``],
+  [`a apresentação de teatro tinha acontecido naquela mesma terça-feira.`, `A irmã já tinha contado a história “na semana anterior”; logo, a apresentação foi antes.`],
+  [`a irmã ficou irritada por ter de contar a mesma história mais uma vez.`, `Nada indica irritação. A expressão “agora com plateia” sugere justamente que, desta vez, ela teve quem a escutasse.`],
+ ], a:2,
+ e:`A pista está em “<b>agora com plateia</b>”: a irmã já contara a história três vezes, mas só nesta quarta vez teve um ouvinte de verdade. Como o texto mostra que Tomás vivia de fone, conclui-se que antes ele não a escutava. É uma inferência apoiada no texto, e não uma invenção.`},
+
+/* 02 · p-lit */
+{t:'p-lit', d:1,
+ tt:`Texto 1`,
+ tx:`<b>O fone</b><br>Meu filho, Tomás, tem catorze anos e um par de fones de ouvido que, há uns oito meses, parece ter criado raízes nas orelhas dele. Ele toma café de fone, faz a lição de fone, atravessa a sala de fone. Já me acostumei a conversar com ele por gestos, como quem orienta um avião na pista.<br>Na terça-feira passada, porém, o fio arrebentou. Tomás apareceu na cozinha segurando as duas pontas, com a cara de quem acabou de perder o último ônibus. Ofereci cola, fita isolante e solidariedade. Ele recusou as três.<br>Como a loja só abriria no dia seguinte, ele precisou atravessar uma noite inteira com os ouvidos desocupados. Sentou-se à mesa do jantar, estranhou o barulho dos talheres e, de repente, perguntou à irmã como tinha sido a apresentação de teatro. Ela, que já tinha contado a história três vezes na semana anterior, contou pela quarta, agora com plateia.<br>Depois do jantar, ele ficou na sala. Descobriu que a avó ri alto com a novela, que o vizinho de cima ensaia trompete às nove e que eu canto mal enquanto lavo a louça. Esta última descoberta ele fez questão de comentar.<br>No dia seguinte, comprou fones novos, sem fio, para não arrebentarem mais. Na hora do jantar, porém, eu os vi pendurados no pescoço dele, desligados, enquanto ele perguntava à irmã se a peça ia ter outra sessão.`,
+ q:`Sobre o narrador do Texto 1, é correto afirmar que ele:`,
+ o:[
+  [`narra em 1ª pessoa e participa dos fatos, como pai de Tomás.`, ``],
+  [`narra em 3ª pessoa e apenas observa os fatos, sem participar deles.`, `Expressões como “Meu filho”, “Ofereci cola” e “eu canto mal” mostram um narrador em 1ª pessoa, que age na história.`],
+  [`narra em 3ª pessoa e conhece todos os pensamentos de todas as personagens.`, `O narrador não é de 3ª pessoa (usa “eu”, “meu”) e só conta o que vê; não revela, por exemplo, o que a irmã pensa.`],
+  [`é o próprio Tomás, que conta a história da perda dos seus fones.`, `Tomás é chamado de “Meu filho”: quem narra é o pai, não ele.`],
+  [`é a irmã de Tomás, que finalmente conseguiu contar sua história.`, `A irmã aparece em 3ª pessoa (“Ela, que já tinha contado…”); quem narra é o pai.`],
+ ], a:0,
+ e:`O foco narrativo é de <b>1ª pessoa</b>, com <b>narrador-personagem</b>: “<b>Meu</b> filho, Tomás…”, “<b>Ofereci</b> cola…”, “<b>eu</b> canto mal enquanto lavo a louça”. Quem conta é o pai, que participa das cenas.`},
+
+/* 03 · p-sent */
+{t:'p-sent', d:2,
+ tt:`Texto 1`,
+ tx:`<b>O fone</b><br>Meu filho, Tomás, tem catorze anos e um par de fones de ouvido que, há uns oito meses, parece ter criado raízes nas orelhas dele. Ele toma café de fone, faz a lição de fone, atravessa a sala de fone. Já me acostumei a conversar com ele por gestos, como quem orienta um avião na pista.<br>Na terça-feira passada, porém, o fio arrebentou. Tomás apareceu na cozinha segurando as duas pontas, com a cara de quem acabou de perder o último ônibus. Ofereci cola, fita isolante e solidariedade. Ele recusou as três.<br>Como a loja só abriria no dia seguinte, ele precisou atravessar uma noite inteira com os ouvidos desocupados. Sentou-se à mesa do jantar, estranhou o barulho dos talheres e, de repente, perguntou à irmã como tinha sido a apresentação de teatro. Ela, que já tinha contado a história três vezes na semana anterior, contou pela quarta, agora com plateia.<br>Depois do jantar, ele ficou na sala. Descobriu que a avó ri alto com a novela, que o vizinho de cima ensaia trompete às nove e que eu canto mal enquanto lavo a louça. Esta última descoberta ele fez questão de comentar.<br>No dia seguinte, comprou fones novos, sem fio, para não arrebentarem mais. Na hora do jantar, porém, eu os vi pendurados no pescoço dele, desligados, enquanto ele perguntava à irmã se a peça ia ter outra sessão.`,
+ q:`No primeiro parágrafo, ao dizer que o par de fones “parece ter <b>criado raízes</b> nas orelhas dele”, o narrador quer dizer que:`,
+ o:[
+  [`os fones machucavam as orelhas do garoto, de tanto que apertavam.`, `O texto não fala em dor nem em aperto. A expressão não é literal.`],
+  [`os fones estavam presos às orelhas por causa de um defeito.`, `Essa é uma leitura literal (algo realmente “preso”). O defeito só aparece depois, e é no fio.`],
+  [`Tomás usava aqueles mesmos fones desde que era pequeno.`, `O texto informa que isso acontece “há uns oito meses”, e não desde a infância.`],
+  [`os fones eram um presente de família, com grande valor sentimental.`, `Você associou “raízes” a “origem, família”, mas o texto não fala de presente nem de valor sentimental.`],
+  [`Tomás quase nunca tirava os fones, como se eles fizessem parte do corpo dele.`, ``],
+ ], a:4,
+ e:`“Criar raízes” está em sentido <b>conotativo</b> (figurado): o que cria raízes fica fixo, não sai do lugar. O próprio texto confirma logo em seguida: “toma café de fone, faz a lição de fone, atravessa a sala de fone”.`},
+
+/* 04 · p-conj */
+{t:'p-conj', d:3,
+ tt:`Texto 1`,
+ tx:`<b>O fone</b><br>Meu filho, Tomás, tem catorze anos e um par de fones de ouvido que, há uns oito meses, parece ter criado raízes nas orelhas dele. Ele toma café de fone, faz a lição de fone, atravessa a sala de fone. Já me acostumei a conversar com ele por gestos, como quem orienta um avião na pista.<br>Na terça-feira passada, porém, o fio arrebentou. Tomás apareceu na cozinha segurando as duas pontas, com a cara de quem acabou de perder o último ônibus. Ofereci cola, fita isolante e solidariedade. Ele recusou as três.<br>Como a loja só abriria no dia seguinte, ele precisou atravessar uma noite inteira com os ouvidos desocupados. Sentou-se à mesa do jantar, estranhou o barulho dos talheres e, de repente, perguntou à irmã como tinha sido a apresentação de teatro. Ela, que já tinha contado a história três vezes na semana anterior, contou pela quarta, agora com plateia.<br>Depois do jantar, ele ficou na sala. Descobriu que a avó ri alto com a novela, que o vizinho de cima ensaia trompete às nove e que eu canto mal enquanto lavo a louça. Esta última descoberta ele fez questão de comentar.<br>No dia seguinte, comprou fones novos, sem fio, para não arrebentarem mais. Na hora do jantar, porém, eu os vi pendurados no pescoço dele, desligados, enquanto ele perguntava à irmã se a peça ia ter outra sessão.`,
+ q:`No trecho “<b>Como</b> a loja só abriria no dia seguinte, ele precisou atravessar uma noite inteira com os ouvidos desocupados”, a palavra destacada estabelece a mesma relação de sentido que a expressão destacada em:`,
+ o:[
+  [`“<b>Como</b> prometeu, a professora trouxe as provas corrigidas.”`, `Aqui “como” equivale a “conforme”: a professora agiu de acordo com o que prometeu. É <b>conformidade</b>, não causa.`],
+  [`“<b>Visto que</b> a quadra estava molhada, o treino foi transferido para o ginásio.”`, ``],
+  [`“Ele dança <b>como</b> o pai dançava na juventude.”`, `Aqui “como” compara o jeito de dançar de dois personagens: é <b>comparação</b>.`],
+  [`“<b>Embora</b> a loja estivesse aberta, ninguém entrou.”`, `“Embora” indica <b>concessão</b>: um fato que poderia impedir o outro, mas não impede.`],
+  [`“<b>Assim que</b> a loja abriu, ele comprou fones novos.”`, `“Assim que” indica <b>tempo</b> (logo depois que). Não há relação de causa.`],
+ ], a:1,
+ e:`No texto, “como” introduz a <b>causa</b>: a loja estar fechada é o motivo de Tomás ficar sem fone a noite toda (dá para trocar por “Já que” ou “Visto que”). A mesma relação aparece em “<b>Visto que</b> a quadra estava molhada…”. Atenção: “como” pode indicar causa, conformidade ou comparação; quem decide é o contexto.`},
+
+/* 05 · p-arg */
+{t:'p-arg', d:1,
+ tt:`Texto 2`,
+ tx:`<b>Proibir a inteligência artificial não ensina ninguém a pensar</b><br>Desde que os aplicativos de inteligência artificial passaram a escrever redações e resolver exercícios em segundos, muitas escolas reagiram da forma mais rápida: proibiram o seu uso. A medida parece firme, mas é ineficaz. O melhor caminho é ensinar os alunos a usar essas ferramentas com critério.<br>Em primeiro lugar, a proibição é quase impossível de fiscalizar. A lição de casa é feita longe dos olhos do professor, e o aluno que quiser burlar a regra terá sempre um celular por perto. Uma regra que não pode ser cumprida acaba ensinando apenas a disfarçar.<br>Além disso, a escola já viveu situação parecida. Quando as calculadoras se tornaram baratas, houve quem previsse o fim do raciocínio matemático. As escolas, no entanto, aprenderam a separar momentos: há atividades em que a calculadora é proibida e outras em que ela é bem-vinda, porque o objetivo é interpretar o problema, e não fazer contas.<br>É verdade que alguns estudantes usam a ferramenta apenas para copiar respostas prontas. Esse comportamento, porém, não nasceu com a tecnologia: antes dela, já havia quem copiasse o trabalho do colega. A solução está em mudar o tipo de tarefa. Uma professora pode, por exemplo, entregar à turma um texto produzido pelo aplicativo e pedir que os alunos encontrem os erros do texto. Para isso, eles precisam estudar o assunto de verdade.<br>Talvez a escola não consiga impedir que os jovens recorram à inteligência artificial. Certamente consegue, porém, ensiná-los a desconfiar dela, a conferir informações e a assumir a autoria do que entregam. Isso é bem mais útil do que fingir que ela não existe.`,
+ q:`A tese defendida no Texto 2 é a de que:`,
+ o:[
+  [`a inteligência artificial deve ser proibida nas escolas, porque estimula a cópia.`, `É a posição contrária, que o autor critica desde o título.`],
+  [`as calculadoras prejudicaram o raciocínio matemático dos estudantes.`, `O autor diz que “houve quem previsse” isso, mas mostra que as escolas aprenderam a lidar com a calculadora.`],
+  [`a lição de casa deve deixar de existir, já que não pode ser fiscalizada.`, `O autor usa a dificuldade de fiscalizar como argumento contra a proibição, não propõe acabar com a lição.`],
+  [`a escola deve ensinar os alunos a usar a inteligência artificial com critério, em vez de proibi-la.`, ``],
+  [`os professores devem usar a inteligência artificial para corrigir as tarefas dos alunos.`, `O texto não fala em professores corrigindo com a ferramenta; essa ideia extrapola o texto.`],
+ ], a:3,
+ e:`A tese aparece no 1º parágrafo (“O melhor caminho é ensinar os alunos a usar essas ferramentas com critério”) e é retomada na conclusão (“ensiná-los a desconfiar dela, a conferir informações…”). Todos os outros parágrafos servem para sustentá-la.`},
+
+/* 06 · p-arg */
+{t:'p-arg', d:3,
+ tt:`Texto 2`,
+ tx:`<b>Proibir a inteligência artificial não ensina ninguém a pensar</b><br>Desde que os aplicativos de inteligência artificial passaram a escrever redações e resolver exercícios em segundos, muitas escolas reagiram da forma mais rápida: proibiram o seu uso. A medida parece firme, mas é ineficaz. O melhor caminho é ensinar os alunos a usar essas ferramentas com critério.<br>Em primeiro lugar, a proibição é quase impossível de fiscalizar. A lição de casa é feita longe dos olhos do professor, e o aluno que quiser burlar a regra terá sempre um celular por perto. Uma regra que não pode ser cumprida acaba ensinando apenas a disfarçar.<br>Além disso, a escola já viveu situação parecida. Quando as calculadoras se tornaram baratas, houve quem previsse o fim do raciocínio matemático. As escolas, no entanto, aprenderam a separar momentos: há atividades em que a calculadora é proibida e outras em que ela é bem-vinda, porque o objetivo é interpretar o problema, e não fazer contas.<br>É verdade que alguns estudantes usam a ferramenta apenas para copiar respostas prontas. Esse comportamento, porém, não nasceu com a tecnologia: antes dela, já havia quem copiasse o trabalho do colega. A solução está em mudar o tipo de tarefa. Uma professora pode, por exemplo, entregar à turma um texto produzido pelo aplicativo e pedir que os alunos encontrem os erros do texto. Para isso, eles precisam estudar o assunto de verdade.<br>Talvez a escola não consiga impedir que os jovens recorram à inteligência artificial. Certamente consegue, porém, ensiná-los a desconfiar dela, a conferir informações e a assumir a autoria do que entregam. Isso é bem mais útil do que fingir que ela não existe.`,
+ q:`Para sustentar sua tese, o autor usa, no 2º e no 3º parágrafos, respectivamente, argumentos baseados em:`,
+ o:[
+  [`relação de causa e consequência e comparação com uma situação semelhante do passado.`, ``],
+  [`dados estatísticos e opinião de um especialista.`, `O texto não apresenta números nem cita especialistas. Cuidado para não marcar “tipos de argumento” que não aparecem.`],
+  [`comparação com uma situação do passado e relação de causa e consequência.`, `Os dois tipos estão no texto, mas na ordem trocada. O 2º parágrafo trata da fiscalização; a comparação com as calculadoras está no 3º. Atenção ao “respectivamente”.`],
+  [`experiência pessoal do autor e dados de uma pesquisa.`, `O autor não conta nenhuma experiência própria e não cita pesquisa.`],
+  [`opinião de um especialista e exemplo de uma professora real.`, `Não há especialista citado. E a professora do 4º parágrafo é um exemplo hipotético (“pode, por exemplo”), que nem está no 2º ou no 3º parágrafo.`],
+ ], a:0,
+ e:`<b>2º parágrafo:</b> a proibição não pode ser fiscalizada (causa) e, por isso, acaba “ensinando apenas a disfarçar” (consequência). <b>3º parágrafo:</b> o autor compara a situação atual com a chegada das calculadoras, que também assustou e foi resolvida pela escola. Logo, causa e consequência e, depois, comparação.`},
+
+/* 07 · p-modal */
+{t:'p-modal', d:2,
+ tt:`Texto 2`,
+ tx:`<b>Proibir a inteligência artificial não ensina ninguém a pensar</b><br>Desde que os aplicativos de inteligência artificial passaram a escrever redações e resolver exercícios em segundos, muitas escolas reagiram da forma mais rápida: proibiram o seu uso. A medida parece firme, mas é ineficaz. O melhor caminho é ensinar os alunos a usar essas ferramentas com critério.<br>Em primeiro lugar, a proibição é quase impossível de fiscalizar. A lição de casa é feita longe dos olhos do professor, e o aluno que quiser burlar a regra terá sempre um celular por perto. Uma regra que não pode ser cumprida acaba ensinando apenas a disfarçar.<br>Além disso, a escola já viveu situação parecida. Quando as calculadoras se tornaram baratas, houve quem previsse o fim do raciocínio matemático. As escolas, no entanto, aprenderam a separar momentos: há atividades em que a calculadora é proibida e outras em que ela é bem-vinda, porque o objetivo é interpretar o problema, e não fazer contas.<br>É verdade que alguns estudantes usam a ferramenta apenas para copiar respostas prontas. Esse comportamento, porém, não nasceu com a tecnologia: antes dela, já havia quem copiasse o trabalho do colega. A solução está em mudar o tipo de tarefa. Uma professora pode, por exemplo, entregar à turma um texto produzido pelo aplicativo e pedir que os alunos encontrem os erros do texto. Para isso, eles precisam estudar o assunto de verdade.<br>Talvez a escola não consiga impedir que os jovens recorram à inteligência artificial. Certamente consegue, porém, ensiná-los a desconfiar dela, a conferir informações e a assumir a autoria do que entregam. Isso é bem mais útil do que fingir que ela não existe.`,
+ q:`No último parágrafo, as palavras “<b>Talvez</b>” e “<b>Certamente</b>” foram empregadas para:`,
+ o:[
+  [`indicar que o autor tem dúvida tanto sobre impedir o uso da ferramenta quanto sobre ensinar a usá-la.`, `“Certamente” não exprime dúvida, e sim certeza. Só “Talvez” indica dúvida.`],
+  [`marcar o tempo em que os fatos acontecem: primeiro, o presente; depois, o futuro.`, `Essas palavras não situam os fatos no tempo; elas mostram o grau de certeza do autor.`],
+  [`mostrar que o autor admite não ter certeza de que a escola possa impedir o uso, mas tem convicção de que ela pode ensinar a usá-lo bem.`, ``],
+  [`revelar que o autor mudou de ideia e passou a defender a proibição.`, `Não há mudança de opinião: o parágrafo reforça a tese de ensinar a usar com critério.`],
+  [`expressar certeza de que a escola vai conseguir impedir o uso da inteligência artificial.`, `É o contrário: “Talvez a escola não consiga impedir” mostra dúvida sobre essa possibilidade.`],
+ ], a:2,
+ e:`“Talvez” e “certamente” são <b>modalizadores</b>: mostram o grau de certeza de quem escreve. O autor contrapõe a dúvida (“<b>Talvez</b> a escola não consiga impedir…”) à certeza (“<b>Certamente</b> consegue, porém, ensiná-los…”), e isso fortalece a tese: o que é seguro é ensinar.`},
+
+/* 08 · p-coes */
+{t:'p-coes', d:2,
+ tt:`Texto 2`,
+ tx:`<b>Proibir a inteligência artificial não ensina ninguém a pensar</b><br>Desde que os aplicativos de inteligência artificial passaram a escrever redações e resolver exercícios em segundos, muitas escolas reagiram da forma mais rápida: proibiram o seu uso. A medida parece firme, mas é ineficaz. O melhor caminho é ensinar os alunos a usar essas ferramentas com critério.<br>Em primeiro lugar, a proibição é quase impossível de fiscalizar. A lição de casa é feita longe dos olhos do professor, e o aluno que quiser burlar a regra terá sempre um celular por perto. Uma regra que não pode ser cumprida acaba ensinando apenas a disfarçar.<br>Além disso, a escola já viveu situação parecida. Quando as calculadoras se tornaram baratas, houve quem previsse o fim do raciocínio matemático. As escolas, no entanto, aprenderam a separar momentos: há atividades em que a calculadora é proibida e outras em que ela é bem-vinda, porque o objetivo é interpretar o problema, e não fazer contas.<br>É verdade que alguns estudantes usam a ferramenta apenas para copiar respostas prontas. Esse comportamento, porém, não nasceu com a tecnologia: antes dela, já havia quem copiasse o trabalho do colega. A solução está em mudar o tipo de tarefa. Uma professora pode, por exemplo, entregar à turma um texto produzido pelo aplicativo e pedir que os alunos encontrem os erros do texto. Para isso, eles precisam estudar o assunto de verdade.<br>Talvez a escola não consiga impedir que os jovens recorram à inteligência artificial. Certamente consegue, porém, ensiná-los a desconfiar dela, a conferir informações e a assumir a autoria do que entregam. Isso é bem mais útil do que fingir que ela não existe.`,
+ q:`No último parágrafo, os termos destacados em “ensiná-<b>los</b> a desconfiar <b>dela</b>” e em “<b>Isso</b> é bem mais útil” retomam, respectivamente:`,
+ o:[
+  [`os professores; a escola; impedir o uso da inteligência artificial.`, `“Professores” nem aparece no parágrafo; e “desconfiar da escola” contraria o texto, já que é a escola quem ensina.`],
+  [`os jovens; a escola; recorrer à inteligência artificial.`, `Desconfiar “da escola” não faz sentido no texto, e “Isso” não retoma recorrer à ferramenta, que o autor não apresenta como “útil”.`],
+  [`os aplicativos; a tecnologia; fingir que a inteligência artificial não existe.`, `“Fingir que ela não existe” é justamente aquilo com que “Isso” está sendo comparado, não o que ele retoma.`],
+  [`os alunos; a inteligência artificial; proibir o uso da inteligência artificial.`, `Os dois primeiros referentes estão certos, mas “Isso” não retoma a proibição: o autor é contra ela.`],
+  [`os jovens; a inteligência artificial; ensinar os jovens a desconfiar da ferramenta, conferir informações e assumir a autoria do que entregam.`, ``],
+ ], a:4,
+ e:`“-los” retoma “os jovens” (mencionados na frase anterior); “dela”, “a inteligência artificial”, aquilo de que se deve desconfiar. Já “Isso” resume toda a ideia anterior: ensinar os jovens a desconfiar da ferramenta, a conferir informações e a assumir a autoria. É essa atitude que o autor considera “bem mais útil do que fingir que ela não existe”.`},
+
+/* 09 · p-tira */
+{t:'p-tira', d:1,
+ tt:`Texto 3`,
+ tx:`<b>Tirinha</b><br><b>Quadro 1:</b> Nina, de 13 anos, entra animada na sala, onde a mãe lê um livro no sofá. Nina: “Mãe, posso ir ao show no sábado? Todo mundo vai!”<br><b>Quadro 2:</b> A mãe, sem tirar os olhos do livro: “Todo mundo quem?”<br><b>Quadro 3:</b> Nina, contando nos dedos, com a voz cada vez mais baixa: “A Bia… a Carol… e o primo da Carol. Talvez.”<br><b>Quadro 4:</b> A mãe fecha o livro e sorri: “Nossa! Que multidão!”. Nina, de braços cruzados e cara emburrada, olha para o leitor.`,
+ q:`No 2º quadro, ao perguntar “Todo mundo quem?”, a mãe:`,
+ o:[
+  [`mostra que não ouviu o pedido da filha, porque estava concentrada no livro.`, `Ela ouviu, tanto que repete as palavras da filha (“Todo mundo”). Não tirar os olhos do livro não significa não ouvir.`],
+  [`põe em dúvida a expressão “todo mundo” e pede que a filha diga quem, de fato, vai ao show.`, ``],
+  [`proíbe a filha de ir ao show no sábado.`, `Nesse quadro ela apenas faz uma pergunta; não há proibição.`],
+  [`revela que não conhece nenhuma das amigas da filha.`, `Nada na tirinha mostra isso; é uma conclusão sem pista.`],
+  [`concorda com a filha e autoriza a ida ao show.`, `Uma pergunta como essa não é autorização; ela questiona o argumento da filha.`],
+ ], a:1,
+ e:`A mãe retoma as palavras da filha (“Todo mundo”) e pede que ela as explique. Com isso, mostra que <b>desconfia da generalização</b>, e o 3º quadro confirma que essa desconfiança tinha motivo.`},
+
+/* 10 · p-tira */
+{t:'p-tira', d:3,
+ tt:`Texto 3`,
+ tx:`<b>Tirinha</b><br><b>Quadro 1:</b> Nina, de 13 anos, entra animada na sala, onde a mãe lê um livro no sofá. Nina: “Mãe, posso ir ao show no sábado? Todo mundo vai!”<br><b>Quadro 2:</b> A mãe, sem tirar os olhos do livro: “Todo mundo quem?”<br><b>Quadro 3:</b> Nina, contando nos dedos, com a voz cada vez mais baixa: “A Bia… a Carol… e o primo da Carol. Talvez.”<br><b>Quadro 4:</b> A mãe fecha o livro e sorri: “Nossa! Que multidão!”. Nina, de braços cruzados e cara emburrada, olha para o leitor.`,
+ q:`Considerando os quatro quadros, o humor da tirinha resulta principalmente:`,
+ o:[
+  [`da mudança de opinião da mãe, que, no último quadro, sorri porque passa a apoiar a ida da filha ao show.`, `O sorriso da mãe não é de apoio, e a reação emburrada de Nina mostra que ela entendeu a crítica.`],
+  [`da interpretação literal que a mãe faz da palavra “show”.`, `A mãe não se prende à palavra “show”; ela questiona a expressão “todo mundo”.`],
+  [`da tristeza de Nina por perceber que não tem amigos.`, `Nina fica contrariada por ter perdido o argumento, não triste por falta de amigos.`],
+  [`do contraste entre a generalização “todo mundo” e a lista de apenas três pessoas, uma delas incerta, contraste que a mãe ressalta com ironia em “Que multidão!”.`, ``],
+  [`do exagero da mãe, que acredita sinceramente que três pessoas formam uma multidão.`, `“Que multidão!” não é dito com sinceridade: é ironia. A mãe diz o contrário do que pensa para mostrar que são poucas pessoas.`],
+ ], a:3,
+ e:`Nina usa uma <b>generalização</b> (“Todo mundo vai!”) como argumento. Ao ser questionada, ela só consegue citar três pessoas, e a voz baixa e o “Talvez” mostram que nem ela acredita mais no que disse. A mãe fecha a tira com <b>ironia</b>: “Que multidão!” significa o contrário (“é quase ninguém”). O humor está nessa quebra de expectativa, e a cara emburrada de Nina mostra que ela entendeu.`},
+
+/* 11 · p-pub */
+{t:'p-pub', d:1,
+ tt:`Texto 4`,
+ tx:`<b>Cartaz de campanha</b><br>[Imagem: à esquerda, um livro coberto de poeira numa estante escura. À direita, o mesmo livro aberto nas mãos de uma menina, numa sala iluminada, cheia de crianças lendo.]<br>Aquele livro que você já leu…<br><b>Na sua estante, ele dorme. Aqui, ele acorda alguém.</b><br>Doe livros infantis e juvenis em bom estado.<br>Pontos de coleta: secretaria da Escola Municipal Nova Aurora e Biblioteca Comunitária do Parque das Águas, de segunda a sábado, das 9h às 17h.<br><b>Ler muda histórias. Comece pela de alguém.</b>`,
+ q:`O principal objetivo do cartaz é:`,
+ o:[
+  [`vender livros infantis e juvenis em promoção.`, `Nada é vendido: o cartaz pede doações. É uma campanha, e não uma publicidade.`],
+  [`convidar as crianças para uma tarde de leitura na biblioteca.`, `A imagem mostra crianças lendo, mas o pedido do texto é “Doe livros”.`],
+  [`convencer o leitor a doar livros que já leu para que outras pessoas possam lê-los.`, ``],
+  [`informar o horário de funcionamento da escola municipal.`, `O horário aparece só como informação de apoio, para dizer quando entregar as doações.`],
+  [`incentivar o leitor a reler os livros que tem na estante.`, `O cartaz sugere tirar o livro da estante para entregá-lo a outra pessoa, e não relê-lo.`],
+ ], a:2,
+ e:`O verbo no imperativo “<b>Doe</b>”, os pontos de coleta e a imagem (o livro empoeirado que vai parar nas mãos de uma menina) mostram a finalidade: <b>mobilizar o leitor a doar</b> livros já lidos. É uma campanha que divulga uma causa.`},
+
+/* 12 · p-fig */
+{t:'p-fig', d:2,
+ tt:`Texto 4`,
+ tx:`<b>Cartaz de campanha</b><br>[Imagem: à esquerda, um livro coberto de poeira numa estante escura. À direita, o mesmo livro aberto nas mãos de uma menina, numa sala iluminada, cheia de crianças lendo.]<br>Aquele livro que você já leu…<br><b>Na sua estante, ele dorme. Aqui, ele acorda alguém.</b><br>Doe livros infantis e juvenis em bom estado.<br>Pontos de coleta: secretaria da Escola Municipal Nova Aurora e Biblioteca Comunitária do Parque das Águas, de segunda a sábado, das 9h às 17h.<br><b>Ler muda histórias. Comece pela de alguém.</b>`,
+ q:`No slogan “Na sua estante, ele <b>dorme</b>. Aqui, ele <b>acorda</b> alguém.”, há:`,
+ o:[
+  [`personificação, pois se atribuem ao livro ações próprias de seres vivos, e antítese, pela oposição entre “dorme” e “acorda”.`, ``],
+  [`hipérbole, pois há exagero ao falar do livro, e metonímia, pois “estante” substitui “biblioteca”.`, `Não há exagero; e “estante” está em sentido próprio (a estante da casa do leitor), sem substituir outra palavra.`],
+  [`comparação, pois o livro é comparado a uma pessoa por meio de um conectivo, e eufemismo.`, `Não há conectivo de comparação (“como”, “tal qual”), e nada é dito de modo suavizado.`],
+  [`ironia, pois o cartaz diz o contrário do que pensa, e pleonasmo, pela repetição de “ele”.`, `O cartaz fala a sério; e repetir o pronome não é pleonasmo (redundância de sentido).`],
+  [`paradoxo, pois as duas ações são impossíveis de acontecer juntas, e metonímia.`, `As ações não acontecem ao mesmo tempo nem no mesmo lugar (“Na sua estante” × “Aqui”); por isso há antítese, e não paradoxo. Também não há metonímia.`],
+ ], a:0,
+ e:`Dormir é próprio de seres vivos; dizer que o livro “dorme” na estante é <b>personificação</b> (prosopopeia): o livro parado, sem leitor. “Dorme” e “acorda” têm sentidos opostos, colocados lado a lado em situações diferentes: é <b>antítese</b>. O efeito é mostrar que o mesmo livro pode passar de esquecido a transformador.`},
+
+/* 13 · p-adj */
+{t:'p-adj', d:3,
+ q:`A coordenadora de uma escola queria dar o direito de refazer a prova <b>somente</b> aos alunos que tivessem entregado o trabalho até sexta-feira. Ela, porém, escreveu no mural:<br>“Os alunos do 9º ano<b>,</b> que entregaram o trabalho de Ciências até sexta-feira<b>,</b> poderão refazer a prova.”<br>Para que a frase expresse corretamente a intenção da coordenadora, ela deveria:`,
+ o:[
+  [`manter a frase como está, pois a oração entre vírgulas já separa os alunos que entregaram dos que não entregaram.`, `Entre vírgulas, a oração é explicativa: informa algo sobre <b>todos</b> os alunos do 9º ano, como se todos tivessem entregado. Ela não separa grupo nenhum.`],
+  [`trocar “que” por “os quais”, mantendo as vírgulas.`, `Com vírgulas, “os quais” continua introduzindo uma oração explicativa; o sentido não muda.`],
+  [`retirar apenas a vírgula depois de “sexta-feira”.`, `Ficaria uma vírgula sozinha separando o sujeito “Os alunos do 9º ano” do resto, o que quebra a frase e não resolve o sentido.`],
+  [`trocar “que” por “onde”, mantendo as vírgulas.`, `“Onde” só retoma lugar, e “alunos” não é lugar. Além disso, as vírgulas continuariam.`],
+  [`retirar as duas vírgulas, transformando a oração em adjetiva restritiva.`, ``],
+ ], a:4,
+ e:`Com vírgulas, a oração adjetiva é <b>explicativa</b>: diz que os alunos do 9º ano (todos) entregaram o trabalho e que todos podem refazer a prova. Sem as vírgulas, ela vira <b>restritiva</b>: “Os alunos do 9º ano que entregaram o trabalho… poderão refazer a prova”, ou seja, <b>só</b> esses. Era essa a intenção da coordenadora.`},
+
+/* 14 · p-reg */
+{t:'p-reg', d:2,
+ q:`Na mensagem para a turma, a professora escreveu:<br>“O documentário ______ assistimos na excursão vai ser tema da próxima redação.”<br>De acordo com a norma-padrão, a lacuna deve ser preenchida por:`,
+ o:[
+  [`que`, `É a forma comum na fala, mas, na norma-padrão, “assistir” no sentido de “ver” pede a preposição “a” (quem assiste, assiste <b>a</b> algo).`],
+  [`o qual`, `Falta a preposição exigida pelo verbo: assistimos <b>ao</b> documentário, então seria “ao qual”.`],
+  [`onde`, `“Onde” só retoma lugar, e documentário não é lugar.`],
+  [`a que`, ``],
+  [`em que`, `“Assistir”, no sentido de “ver”, pede a preposição “a”, e não “em”.`],
+ ], a:3,
+ e:`Desfaça a oração: “assistimos <b>ao</b> documentário na excursão”. No sentido de “ver”, o verbo assistir é transitivo indireto e exige a preposição <b>a</b>. Essa preposição vai para antes do pronome relativo: o documentário <b>a que</b> assistimos (ou <b>ao qual</b> assistimos).`},
+
+/* 15 · p-conc */
+{t:'p-conc', d:1,
+ q:`No grupo da excursão, um aluno escreveu:<br>“______ dez minutos que o ônibus saiu da escola, e a Júlia ainda não chegou ao ponto.”<br>De acordo com a norma-padrão, a lacuna deve ser preenchida por:`,
+ o:[
+  [`Fazem`, `Indicando tempo decorrido, “fazer” é impessoal (não tem sujeito) e fica sempre no singular. “Dez minutos” não é sujeito.`],
+  [`Faz`, ``],
+  [`Fizeram`, `Além do plural, que é proibido no verbo impessoal, o pretérito não serve: o tempo é contado até o momento em que o aluno escreve (Júlia “ainda não chegou”), o que pede o presente.`],
+  [`Farão`, `O futuro não faz sentido (o ônibus já saiu) e o verbo impessoal não vai para o plural.`],
+  [`Estão fazendo`, `O verbo impessoal não vai para o plural, nem mesmo em locução verbal: na locução, o auxiliar também fica no singular.`],
+ ], a:1,
+ e:`O verbo <b>fazer</b>, quando indica tempo decorrido, é <b>impessoal</b>: a oração não tem sujeito, e o verbo fica na 3ª pessoa do <b>singular</b>. Por isso: “<b>Faz</b> dez minutos que o ônibus saiu”, como em “Faz dois anos”, “Faz muito tempo”.`},
+];
+
+/* SIMULADO A · Matemática (15 questões, na ordem da prova)
+   Formato: {t, d, q, o:[[texto, feedback]...5], a, e, tx?, tt?}  ·  ver SIMULADO_SPEC.md
+   Alternativas NÃO são embaralhadas: a ordem abaixo é a da prova. */
+const SIM_A_MAT = [
+
+/* 1 · m-pct · d1 */
+{t:'m-pct', d:1, q:`Numa turma de 40 alunos, 14 vão para a escola de bicicleta. Que porcentagem da turma vai de bicicleta?`, o:[
+  [`14%`, `14 é a quantidade de alunos, não a porcentagem. É preciso comparar 14 com o total de 40.`],
+  [`26%`, `26 é o número de alunos que NÃO vão de bicicleta (40 − 14), e ainda assim não é porcentagem.`],
+  [`35%`, ``],
+  [`40%`, `40 é o total de alunos da turma, não a porcentagem procurada.`],
+  [`65%`, `Essa é a porcentagem dos que NÃO vão de bicicleta (26 de 40). A pergunta pede os que vão.`]
+ ], a:2, e:`Porcentagem = parte ÷ total × 100.<br>14 ÷ 40 = 0,35 = 35%.<br>Outro jeito: [[14|40]] = [[35|100]] (multiplicando em cima e embaixo por 2,5).`},
+
+/* 2 · m-frac · d2 */
+{t:'m-frac', d:2, q:`Uma caixa-d'água estava com [[3|4]] da sua capacidade. Foram gastos 600 litros e ela ficou com metade da capacidade. Qual é a capacidade total da caixa-d'água?`, o:[
+  [`150 litros`, `Você multiplicou 600 por [[1|4]]. Mas 600 litros SÃO [[1|4]] da caixa: é preciso multiplicar por 4.`],
+  [`800 litros`, `Você dividiu 600 por [[3|4]], como se 600 litros fossem [[3|4]] da caixa. Os 600 litros são a diferença entre [[3|4]] e [[1|2]].`],
+  [`1 200 litros`, `Você dividiu 600 por [[1|2]], como se 600 litros fossem metade da caixa. Os 600 litros correspondem a [[3|4]] − [[1|2]].`],
+  [`1 800 litros`, `Esse é o volume que havia no começo ([[3|4]] de 2 400). A pergunta pede a capacidade total.`],
+  [`2 400 litros`, ``]
+ ], a:4, e:`A parte gasta é [[3|4]] − [[1|2]] = [[3|4]] − [[2|4]] = [[1|4]] da capacidade.<br>Então [[1|4]] da capacidade = 600 L.<br>Capacidade = 600 × 4 = 2 400 L.<br>Conferindo: [[3|4]] de 2 400 = 1 800; 1 800 − 600 = 1 200 = metade de 2 400. ✔`},
+
+/* 3 · m-pot · d2 */
+{t:'m-pot', d:2, q:`Qual é o valor da expressão (0,5)<sup>−2</sup> + 8<sup>2/3</sup> − 2<sup>0</sup>?`, o:[
+  [`2,75`, `Você trocou o expoente negativo por sinal negativo: (0,5)<sup>−2</sup> não é −0,25. Expoente negativo inverte a base: (0,5)<sup>−2</sup> = 2<sup>2</sup> = 4.`],
+  [`3,25`, `Você calculou (0,5)<sup>2</sup> = 0,25, ignorando o sinal do expoente. (0,5)<sup>−2</sup> = ([[1|2]])<sup>−2</sup> = 2<sup>2</sup> = 4.`],
+  [`6`, `Você considerou 2<sup>0</sup> = 2. Todo número diferente de zero elevado a 0 vale 1.`],
+  [`7`, ``],
+  [`8`, `Você considerou 2<sup>0</sup> = 0. Todo número diferente de zero elevado a 0 vale 1.`]
+ ], a:3, e:`(0,5)<sup>−2</sup> = ([[1|2]])<sup>−2</sup> = 2<sup>2</sup> = 4 (expoente negativo inverte a base).<br>8<sup>2/3</sup> = (∛8)<sup>2</sup> = 2<sup>2</sup> = 4.<br>2<sup>0</sup> = 1.<br>Total: 4 + 4 − 1 = 7.`},
+
+/* 4 · m-eq1 · d1 */
+{t:'m-eq1', d:1, q:`Lucas comprou 3 cadernos iguais e uma mochila de R$ 84,00, pagando R$ 150,00 ao todo. Quanto custou cada caderno?`, o:[
+  [`R$ 22,00`, ``],
+  [`R$ 37,50`, `Você dividiu R$ 150,00 por 4 itens, como se a mochila custasse o mesmo que um caderno.`],
+  [`R$ 50,00`, `Você dividiu o total por 3 e esqueceu de descontar o preço da mochila.`],
+  [`R$ 66,00`, `Esse é o preço dos 3 cadernos juntos. Falta dividir por 3.`],
+  [`R$ 78,00`, `Você somou 84 a 150 em vez de subtrair: ao passar o 84 para o outro lado, o sinal troca para menos.`]
+ ], a:0, e:`Seja x o preço de um caderno: 3x + 84 = 150.<br>3x = 150 − 84 = 66.<br>x = 66 ÷ 3 = 22.<br>Conferindo: 3 × 22 + 84 = 66 + 84 = 150. ✔`},
+
+/* 5 · m-sist · d2 */
+{t:'m-sist', d:2, q:`Hoje, a soma das idades de Marta e de sua filha Júlia é 50 anos. Há 5 anos, a idade de Marta era o quádruplo da idade de Júlia. Quantos anos Marta tem hoje?`, o:[
+  [`8`, `Essa é a idade de Júlia há 5 anos. A pergunta é a idade de Marta hoje.`],
+  [`13`, `Essa é a idade de Júlia hoje. A pergunta é a idade de Marta.`],
+  [`32`, `Essa é a idade de Marta há 5 anos. Falta somar 5 para chegar à idade de hoje.`],
+  [`36`, `Você tirou 5 anos só da idade de Júlia e esqueceu de tirar da idade de Marta: há 5 anos, as DUAS eram 5 anos mais novas.`],
+  [`37`, ``]
+ ], a:4, e:`Idades hoje: Marta = m e Júlia = j.<br>1ª equação: m + j = 50.<br>Há 5 anos: m − 5 = 4(j − 5) → m − 5 = 4j − 20 → m = 4j − 15.<br>Substituindo: 4j − 15 + j = 50 → 5j = 65 → j = 13.<br>m = 50 − 13 = 37.<br>Conferindo: há 5 anos, 32 e 8, e 32 = 4 × 8. ✔`},
+
+/* 6 · m-eq2 · d3 */
+{t:'m-eq2', d:3, q:`Um grupo de amigos alugou uma van por R$ 600,00, e o valor seria dividido igualmente entre todos. Na véspera, 2 amigos desistiram, e cada um dos que foram teve de pagar R$ 25,00 a mais do que o combinado. Quantos amigos havia no grupo inicialmente?`, o:[
+  [`6`, `6 é o número de amigos que FORAM (e pagaram R$ 100,00 cada). A pergunta pede quantos havia no início.`],
+  [`8`, ``],
+  [`10`, `Você achou 8 e somou os 2 que desistiram, mas 8 já é o grupo inicial: 600 ÷ 8 = 75 e 600 ÷ 6 = 100, diferença de 25.`],
+  [`24`, `Você fez 600 ÷ 25. Mas R$ 25,00 é o aumento por pessoa, não o valor que cada um pagaria.`],
+  [`48`, `48 é o termo independente da equação n<sup>2</sup> − 2n − 48 = 0, não a raiz. É preciso resolver a equação.`]
+ ], a:1, e:`Seja n o número inicial de amigos. Combinado: [[600|n]] por pessoa. Depois: [[600|n − 2]].<br>[[600|n − 2]] − [[600|n]] = 25.<br>Multiplicando tudo por n(n − 2): 600n − 600(n − 2) = 25n(n − 2) → 1 200 = 25n<sup>2</sup> − 50n.<br>Dividindo por 25: n<sup>2</sup> − 2n − 48 = 0.<br>Δ = 4 + 192 = 196 → √{196} = 14 → n = [[2 ± 14|2]] → 8 ou −6. Não existe grupo negativo: n = 8.<br>Conferindo: 600 ÷ 8 = 75 e 600 ÷ 6 = 100; 100 − 75 = 25. ✔`},
+
+/* 7 · m-prop · d2 */
+{t:'m-prop', d:2, q:`Numa gráfica, 6 impressoras iguais imprimem 360 cartazes em 5 horas. Trabalhando no mesmo ritmo, quantos cartazes 8 dessas impressoras imprimem em 3 horas?`, o:[
+  [`162`, `Você tratou o número de impressoras como inversamente proporcional (360 × [[6|8]] × [[3|5]]). Mais impressoras produzem MAIS cartazes: as duas grandezas são diretamente proporcionais à produção.`],
+  [`216`, `Você só ajustou o tempo (360 × [[3|5]]) e esqueceu que agora são 8 impressoras, e não 6.`],
+  [`288`, ``],
+  [`480`, `Você só ajustou o número de impressoras (360 × [[8|6]]) e esqueceu que agora são só 3 horas, e não 5.`],
+  [`800`, `Você tratou o tempo como inversamente proporcional. Menos horas de trabalho produzem MENOS cartazes.`]
+ ], a:2, e:`Regra de três composta: cartazes são diretamente proporcionais às impressoras e às horas.<br>Uma impressora em 1 hora: 360 ÷ (6 × 5) = 360 ÷ 30 = 12 cartazes.<br>8 impressoras em 3 horas: 12 × 8 × 3 = 288 cartazes.<br>Ou: 360 × [[8|6]] × [[3|5]] = 288.`},
+
+/* 8 · m-func · d1 */
+{t:'m-func', d:1, q:`Uma academia cobra uma taxa de matrícula de R$ 60,00, paga uma única vez, e uma mensalidade de R$ 90,00. Qual expressão dá o gasto total y, em reais, de quem frequenta a academia por x meses (incluindo a matrícula)?`, o:[
+  [`y = 60x + 90`, `Você trocou os papéis: o valor que se repete todo mês (e por isso multiplica x) é a mensalidade de R$ 90,00. A matrícula é paga uma vez só.`],
+  [`y = 90x + 60`, ``],
+  [`y = 150x`, `Assim a matrícula seria cobrada todo mês. Ela é paga uma única vez, então não multiplica x.`],
+  [`y = 90x − 60`, `A matrícula é um gasto a mais, então deve ser somada, e não subtraída.`],
+  [`y = x + 150`, `Assim cada mês custaria só R$ 1,00. A mensalidade de R$ 90,00 precisa multiplicar o número de meses.`]
+ ], a:1, e:`O que se repete a cada mês multiplica x: 90x.<br>O que é pago uma vez só é o valor fixo: + 60.<br>y = 90x + 60. Exemplo: 3 meses → 90 × 3 + 60 = 330 reais.`},
+
+/* 9 · m-ang · d1 */
+{t:'m-ang', d:1, q:`Uma ciclovia reta atravessa duas linhas de trem paralelas, sem ser perpendicular a elas. No primeiro cruzamento, o ângulo agudo entre a ciclovia e o trilho mede 48°. Quanto mede cada ângulo obtuso formado no segundo cruzamento?`, o:[
+  [`42°`, `42° é o complemento de 48° (soma 90°). O ângulo agudo e o obtuso formados com a transversal são suplementares: somam 180°.`],
+  [`48°`, `48° é a medida de cada ângulo AGUDO. A pergunta pede os ângulos obtusos.`],
+  [`90°`, `Os ângulos só seriam de 90° se a ciclovia fosse perpendicular aos trilhos, e o enunciado diz que não é.`],
+  [`132°`, ``],
+  [`312°`, `Você subtraiu 48° de 360°. O agudo e o obtuso vizinhos ficam sobre uma reta e somam 180°.`]
+ ], a:3, e:`Paralelas cortadas por uma transversal formam só dois tamanhos de ângulo: um agudo e um obtuso, que somam 180°.<br>Nos dois cruzamentos os agudos medem 48° (ângulos correspondentes ou alternos são iguais).<br>Cada obtuso: 180° − 48° = 132°.`},
+
+/* 10 · m-sem · d3 */
+{t:'m-sem', d:3, q:`Uma placa de madeira tem a forma de um triângulo com base de 12 dm e altura de 8 dm (altura relativa a essa base). Dela será recortada uma placa quadrada, com um lado apoiado sobre a base do triângulo e os outros dois vértices sobre os outros dois lados do triângulo. Quanto mede o lado do quadrado?`, o:[
+  [`3,2 dm`, `Você trocou as medidas correspondentes na proporção ([[x|8]] = [[8 − x|12]]). O lado de cima do quadrado corresponde à BASE (12), e a altura do triângulo pequeno corresponde à ALTURA (8).`],
+  [`4 dm`, `4 é a metade da altura. Com lado 4, o topo do quadrado ficaria a 4 dm de altura, onde o triângulo tem 6 dm de largura: o quadrado não encostaria nos dois lados.`],
+  [`4,8 dm`, ``],
+  [`6 dm`, `6 é a metade da base. Com lado 6, o topo do quadrado ficaria a 6 dm de altura, onde o triângulo tem só 3 dm de largura: o quadrado não caberia.`],
+  [`10 dm`, `10 é a média entre 12 e 8, e nem caberia: o lado do quadrado tem de ser menor que a altura, 8 dm.`]
+ ], a:2, e:`Acima do quadrado sobra um triângulo pequeno, semelhante ao grande (o lado de cima do quadrado é paralelo à base).<br>No triângulo pequeno: base = x (lado do quadrado) e altura = 8 − x.<br>Semelhança (base com base, altura com altura): [[x|12]] = [[8 − x|8]].<br>8x = 12(8 − x) → 8x = 96 − 12x → 20x = 96 → x = 4,8 dm.<br>Conferindo: [[4,8|12]] = 0,4 e [[3,2|8]] = 0,4. ✔`},
+
+/* 11 · m-pit · d2 */
+{t:'m-pit', d:2, q:`Uma caixa de presente tem a forma de um paralelepípedo de 12 cm de comprimento, 4 cm de largura e 3 cm de altura. Qual é o comprimento do maior palito reto (desprezando a espessura) que cabe dentro da caixa fechada, indo de um canto do fundo até o canto oposto da tampa?`, o:[
+  [`5 cm`, `5 cm é a diagonal da lateral de 4 cm por 3 cm. O palito precisa atravessar a caixa inteira, incluindo os 12 cm.`],
+  [`12 cm`, `12 cm é só a maior aresta. Na diagonal cabe um palito maior.`],
+  [`4√{10} cm`, `4√{10} cm (cerca de 12,6 cm) é só a diagonal do fundo (12 por 4). Falta usar Pitágoras de novo com a altura de 3 cm.`],
+  [`13 cm`, ``],
+  [`19 cm`, `Você somou as três medidas (12 + 4 + 3). Isso seria andar pelas arestas, e não em linha reta.`]
+ ], a:3, e:`1º Pitágoras (diagonal do fundo): d<sup>2</sup> = 12<sup>2</sup> + 4<sup>2</sup> = 144 + 16 = 160.<br>2º Pitágoras (diagonal da caixa, com a altura 3): D<sup>2</sup> = d<sup>2</sup> + 3<sup>2</sup> = 160 + 9 = 169.<br>D = √{169} = 13 cm.`},
+
+/* 12 · m-area · d3 */
+{t:'m-area', d:3, q:`Um azulejo quadrado ABCD tem 10 cm de lado. Nele foram desenhados dois arcos, ambos ligando B a D: um é o quarto de circunferência de centro A e raio 10 cm, e o outro é o quarto de circunferência de centro C e raio 10 cm. A região entre os dois arcos, que lembra uma folha, foi pintada de verde. Qual é a área pintada de verde? (Use π ≈ 3,14.)`, o:[
+  [`21,5 cm<sup>2</sup>`, `Esse é o que sobra do quadrado fora de UM quarto de círculo (100 − 78,5). A folha é a parte comum aos dois quartos de círculo.`],
+  [`28,5 cm<sup>2</sup>`, `Essa é só a metade da folha (quarto de círculo menos o triângulo ABD). A diagonal BD divide a folha em duas metades iguais.`],
+  [`43 cm<sup>2</sup>`, `Essa é a área do azulejo que ficou FORA da folha (100 − 57).`],
+  [`57 cm<sup>2</sup>`, ``],
+  [`78,5 cm<sup>2</sup>`, `Essa é a área de um quarto de círculo inteiro ([[1|4]] × 3,14 × 100). A folha é só a parte comum aos dois.`]
+ ], a:3, e:`A diagonal BD divide a folha em duas metades iguais.<br>Cada metade = quarto de círculo − triângulo retângulo.<br>Quarto de círculo: [[1|4]] × 3,14 × 10<sup>2</sup> = 78,5 cm<sup>2</sup>.<br>Triângulo (metade do quadrado): [[10 × 10|2]] = 50 cm<sup>2</sup>.<br>Meia folha: 78,5 − 50 = 28,5 cm<sup>2</sup>. Folha inteira: 2 × 28,5 = 57 cm<sup>2</sup>.`},
+
+/* 13 · m-graf · d2 */
+{t:'m-graf', d:2, tx:`<p><b>Consumo de água de uma casa (em m<sup>3</sup>), de janeiro a junho</b></p><table class="tb"><tr><th>Mês</th><th>Jan</th><th>Fev</th><th>Mar</th><th>Abr</th><th>Mai</th><th>Jun</th></tr><tr><td>Consumo (m<sup>3</sup>)</td><td>10</td><td>14</td><td>15</td><td>20</td><td>18</td><td>22</td></tr></table>`,
+ q:`De acordo com a tabela, em qual mês houve o maior aumento <b>percentual</b> do consumo em relação ao mês anterior?`, o:[
+  [`Fevereiro`, ``],
+  [`Março`, `Em março o consumo subiu só 1 m<sup>3</sup> sobre 14, cerca de 7%, o menor aumento do período.`],
+  [`Abril`, `Abril teve o maior aumento em m<sup>3</sup> (5), mas sobre uma base de 15: 5 ÷ 15 ≈ 33%. Em fevereiro, 4 sobre 10 deu 40%.`],
+  [`Maio`, `Em maio o consumo caiu (de 20 para 18). Não houve aumento.`],
+  [`Junho`, `Junho tem o MAIOR consumo, mas o aumento foi de 4 sobre 18, cerca de 22%.`]
+ ], a:0, e:`Aumento percentual = [[novo − antigo|antigo]] × 100.<br>Fev: [[4|10]] = 40% · Mar: [[1|14]] ≈ 7% · Abr: [[5|15]] ≈ 33% · Mai: queda · Jun: [[4|18]] ≈ 22%.<br>O maior é fevereiro, com 40%. Cuidado: o maior aumento em m<sup>3</sup> (abril) não é o maior em porcentagem, porque a base é diferente.`},
+
+/* 14 · m-media · d1 */
+{t:'m-media', d:1, tx:`<p><b>Número de irmãos dos alunos do 9º ano B</b></p><table class="tb"><tr><th>Número de irmãos</th><th>Quantidade de alunos</th></tr><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>9</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>2</td></tr></table>`,
+ q:`Considerando os dados da tabela, qual é a moda do número de irmãos dos alunos dessa turma?`, o:[
+  [`0`, `0 irmão foi a resposta de 5 alunos, que não é a mais frequente.`],
+  [`1`, ``],
+  [`1,15`, `1,15 é a média de irmãos por aluno (23 irmãos ÷ 20 alunos), não a moda.`],
+  [`2`, `2 irmãos foi a resposta de só 4 alunos.`],
+  [`9`, `9 é a QUANTIDADE de alunos que deram a resposta mais comum. A moda é o próprio valor: 1 irmão.`]
+ ], a:1, e:`A moda é o valor que mais aparece.<br>O valor "1 irmão" aparece 9 vezes, mais que qualquer outro (5, 4 e 2 vezes).<br>Moda = 1 irmão. Atenção: a moda é o valor (1), e não a frequência (9).`},
+
+/* 15 · m-prob · d3 */
+{t:'m-prob', d:3, q:`Ana e Bia lançam, cada uma, um dado comum de 6 faces. Ganha quem tirar o número maior; se os números forem iguais, ninguém ganha. Qual é a probabilidade de Ana ganhar?`, o:[
+  [`[[1|6]]`, `[[1|6]] é a probabilidade de EMPATE (6 casos iguais em 36).`],
+  [`[[5|12]]`, ``],
+  [`[[1|2]]`, `Você dividiu as chances igualmente entre Ana e Bia, esquecendo os empates: Ana ganha em 15 casos, Bia em 15 e há 6 empates.`],
+  [`[[7|12]]`, `Você contou também os empates (15 + 6 = 21 casos). Em caso de empate, Ana não ganha.`],
+  [`[[5|6]]`, `[[5|6]] é a probabilidade de os números serem DIFERENTES (alguém ganhar), não de Ana ganhar.`]
+ ], a:1, e:`São 6 × 6 = 36 resultados igualmente prováveis.<br>Empates: 6 casos. Sobram 30, metade com Ana maior e metade com Bia maior (por simetria): 15 casos.<br>Contando direto: Ana tira 2 (1 caso), 3 (2), 4 (3), 5 (4), 6 (5) → 1 + 2 + 3 + 4 + 5 = 15.<br>P = [[15|36]] = [[5|12]].`}
+
+];
+
+/* SIMULADO B · Português (15 questões)
+   Todos os textos foram escritos para este simulado (notícia, carta do leitor, poema, charge e anúncio são fictícios). */
+const SIM_B_POR = [
+
+/* ================= Texto 1 · Notícia + carta do leitor ================= */
+{t:'p-gen', d:1, tt:`Texto 1`,
+ tx:`<b>Notícia</b><br><b>Quadra do Jardim Primavera é entregue com oito meses de atraso</b><br>A Prefeitura de Campo Verde do Oeste entregou, no último sábado, a cobertura da quadra poliesportiva do Jardim Primavera. A obra custou R$ 640 mil e estava prevista para fevereiro. Segundo a Secretaria de Obras, o atraso ocorreu por falta de material. Com o telhado e a nova iluminação, a quadra poderá ser usada também em dias de chuva e à noite. O espaço funcionará das 7h às 22h, e o uso por times deverá ser agendado pelo aplicativo da prefeitura.<br><br><b>Carta do leitor</b><br>Moro no Jardim Primavera há vinte anos e vi, enfim, a quadra coberta. Pena que a alegria durou pouco. Para jogar lá, agora é preciso agendar horário pelo aplicativo da prefeitura, que vive fora do ar. Na primeira semana, os meninos do bairro, que antes chegavam e jogavam, ficaram do lado de fora do alambrado, olhando a quadra vazia. Uma obra que demorou oito meses a mais merecia, no mínimo, regras pensadas para quem mora aqui.<br><i>Sílvia Moraes, Campo Verde do Oeste</i>`,
+ q:`Entre os trechos abaixo, retirados do Texto 1, qual expressa uma <b>opinião</b>?`,
+ o:[
+  [`“A obra custou R$ 640 mil”`, `É um dado que pode ser conferido (em documentos da prefeitura, por exemplo): é fato.`],
+  [`“O espaço funcionará das 7h às 22h”`, `O horário de funcionamento é uma informação verificável, não um julgamento.`],
+  [`“Uma obra que demorou oito meses a mais merecia, no mínimo, regras pensadas para quem mora aqui”`, ``],
+  [`“Moro no Jardim Primavera há vinte anos”`, `Estar na carta do leitor não transforma tudo em opinião. Há quanto tempo alguém mora num bairro é um fato que pode ser comprovado.`],
+  [`“[A obra] estava prevista para fevereiro”`, `A data prevista no cronograma é um fato verificável.`]
+ ], a:2,
+ e:`<b>Fato</b> pode ser verificado; <b>opinião</b> é um julgamento de quem escreve. Em “merecia, no mínimo, regras pensadas para quem mora aqui”, a leitora avalia como a obra <b>deveria</b> ter sido conduzida: o verbo “merecia” e a expressão “no mínimo” revelam o julgamento. As demais alternativas trazem dados (custo, horário, data, tempo de moradia) que podem ser conferidos.`},
+
+{t:'p-gen', d:2, tt:`Texto 1`,
+ tx:`<b>Notícia</b><br><b>Quadra do Jardim Primavera é entregue com oito meses de atraso</b><br>A Prefeitura de Campo Verde do Oeste entregou, no último sábado, a cobertura da quadra poliesportiva do Jardim Primavera. A obra custou R$ 640 mil e estava prevista para fevereiro. Segundo a Secretaria de Obras, o atraso ocorreu por falta de material. Com o telhado e a nova iluminação, a quadra poderá ser usada também em dias de chuva e à noite. O espaço funcionará das 7h às 22h, e o uso por times deverá ser agendado pelo aplicativo da prefeitura.<br><br><b>Carta do leitor</b><br>Moro no Jardim Primavera há vinte anos e vi, enfim, a quadra coberta. Pena que a alegria durou pouco. Para jogar lá, agora é preciso agendar horário pelo aplicativo da prefeitura, que vive fora do ar. Na primeira semana, os meninos do bairro, que antes chegavam e jogavam, ficaram do lado de fora do alambrado, olhando a quadra vazia. Uma obra que demorou oito meses a mais merecia, no mínimo, regras pensadas para quem mora aqui.<br><i>Sílvia Moraes, Campo Verde do Oeste</i>`,
+ q:`Comparando a notícia e a carta do leitor, é correto afirmar que:`,
+ o:[
+  [`a notícia relata o fato em 3ª pessoa e atribui a explicação do atraso a uma fonte (a Secretaria de Obras); a carta, em 1ª pessoa, avalia o fato a partir da experiência de quem mora no bairro.`, ``],
+  [`os dois textos são opinativos, pois ambos tratam do atraso da obra.`, `Falar do mesmo assunto não torna um texto opinativo. A notícia apenas informa; quem julga é a carta.`],
+  [`a notícia critica abertamente a prefeitura, ao classificar o atraso como inaceitável.`, `A palavra “inaceitável” não aparece. A notícia informa o atraso e a explicação da Secretaria, sem julgar.`],
+  [`a carta é mais objetiva que a notícia, porque informa há quanto tempo a autora mora no bairro.`, `Um dado isolado não torna o texto objetivo. A carta é escrita em 1ª pessoa e cheia de avaliações (“Pena que”, “merecia, no mínimo”).`],
+  [`a notícia é, na verdade, uma reportagem, pois ouve moradores e apresenta vários pontos de vista.`, `A notícia não ouve nenhum morador: a única fonte citada é a Secretaria de Obras. E ela é curta, sem o aprofundamento de uma reportagem.`]
+ ], a:0,
+ e:`Os dois textos tratam do mesmo fato, mas com finalidades diferentes. A <b>notícia</b> informa de forma objetiva, em 3ª pessoa, e atribui a explicação a uma fonte (“Segundo a Secretaria de Obras…”). A <b>carta do leitor</b> é escrita em 1ª pessoa (“Moro”, “vi”) e expressa a avaliação da leitora (“Pena que a alegria durou pouco”, “merecia, no mínimo…”).`},
+
+{t:'p-impl', d:3, tt:`Texto 1`,
+ tx:`<b>Notícia</b><br><b>Quadra do Jardim Primavera é entregue com oito meses de atraso</b><br>A Prefeitura de Campo Verde do Oeste entregou, no último sábado, a cobertura da quadra poliesportiva do Jardim Primavera. A obra custou R$ 640 mil e estava prevista para fevereiro. Segundo a Secretaria de Obras, o atraso ocorreu por falta de material. Com o telhado e a nova iluminação, a quadra poderá ser usada também em dias de chuva e à noite. O espaço funcionará das 7h às 22h, e o uso por times deverá ser agendado pelo aplicativo da prefeitura.<br><br><b>Carta do leitor</b><br>Moro no Jardim Primavera há vinte anos e vi, enfim, a quadra coberta. Pena que a alegria durou pouco. Para jogar lá, agora é preciso agendar horário pelo aplicativo da prefeitura, que vive fora do ar. Na primeira semana, os meninos do bairro, que antes chegavam e jogavam, ficaram do lado de fora do alambrado, olhando a quadra vazia. Uma obra que demorou oito meses a mais merecia, no mínimo, regras pensadas para quem mora aqui.<br><i>Sílvia Moraes, Campo Verde do Oeste</i>`,
+ q:`Lendo os dois textos em conjunto, pode-se inferir que:`,
+ o:[
+  [`a leitora contesta o valor de R$ 640 mil divulgado na notícia, por considerá-lo alto demais.`, `A carta não menciona o custo da obra. A queixa da leitora é sobre as regras de uso.`],
+  [`a leitora preferia que a quadra não tivesse sido coberta, pois o bairro estava melhor antes da obra.`, `Ela diz que sentiu “alegria” ao ver a quadra coberta. O problema, para ela, não é a cobertura, e sim a exigência de agendamento.`],
+  [`a notícia já antecipava que o aplicativo da prefeitura apresentaria falhas.`, `A notícia só informa que o uso será agendado pelo aplicativo; quem diz que ele “vive fora do ar” é a leitora.`],
+  [`os meninos do bairro deixaram de jogar porque a quadra passou a funcionar apenas à noite.`, `A notícia informa que a quadra funciona das 7h às 22h. Na carta, a causa apontada é o agendamento pelo aplicativo.`],
+  [`o agendamento pelo aplicativo, apresentado na notícia como simples informação prática, é justamente o ponto que a leitora aponta como problema.`, ``]
+ ], a:4,
+ e:`A notícia termina com um detalhe aparentemente neutro: “o uso por times deverá ser agendado pelo aplicativo da prefeitura”. A carta retoma exatamente esse ponto e mostra a consequência: o aplicativo “vive fora do ar”, e os meninos que “antes chegavam e jogavam” ficaram do lado de fora, com a quadra vazia. Cruzando as pistas dos dois textos, conclui-se que a regra de agendamento é o centro da crítica. As outras alternativas atribuem aos textos informações que eles não trazem.`},
+
+{t:'p-coes', d:1, tt:`Texto 1`,
+ tx:`<b>Notícia</b><br><b>Quadra do Jardim Primavera é entregue com oito meses de atraso</b><br>A Prefeitura de Campo Verde do Oeste entregou, no último sábado, a cobertura da quadra poliesportiva do Jardim Primavera. A obra custou R$ 640 mil e estava prevista para fevereiro. Segundo a Secretaria de Obras, o atraso ocorreu por falta de material. Com o telhado e a nova iluminação, a quadra poderá ser usada também em dias de chuva e à noite. O espaço funcionará das 7h às 22h, e o uso por times deverá ser agendado pelo aplicativo da prefeitura.<br><br><b>Carta do leitor</b><br>Moro no Jardim Primavera há vinte anos e vi, enfim, a quadra coberta. Pena que a alegria durou pouco. Para jogar lá, agora é preciso agendar horário pelo aplicativo da prefeitura, que vive fora do ar. Na primeira semana, os meninos do bairro, que antes chegavam e jogavam, ficaram do lado de fora do alambrado, olhando a quadra vazia. Uma obra que demorou oito meses a mais merecia, no mínimo, regras pensadas para quem mora aqui.<br><i>Sílvia Moraes, Campo Verde do Oeste</i>`,
+ q:`Na carta do leitor, a expressão “a alegria”, em “Pena que <b>a alegria</b> durou pouco”, retoma:`,
+ o:[
+  [`a festa de inauguração organizada pela prefeitura.`, `Nenhum dos textos fala em festa de inauguração.`],
+  [`a satisfação da leitora ao ver, enfim, a quadra coberta.`, ``],
+  [`o prazer dos meninos de jogar sem precisar agendar horário.`, `Os meninos só aparecem depois, e o que se conta sobre eles é que ficaram do lado de fora. A expressão retoma algo dito antes dela.`],
+  [`o orgulho da leitora por morar no bairro há vinte anos.`, `A leitora não fala em orgulho, e morar no bairro não é algo que “durou pouco”.`],
+  [`a reação da Secretaria de Obras ao concluir a obra.`, `A Secretaria aparece só na notícia, e nada é dito sobre a reação dela.`]
+ ], a:1,
+ e:`A expressão “a alegria” resume uma ideia que veio logo antes: “vi, enfim, a quadra coberta”. É um caso de <b>coesão por retomada</b>: em vez de repetir a frase, a autora usa um substantivo que a condensa. Teste: “Pena que a satisfação de ver a quadra coberta durou pouco” faz sentido completo.`},
+
+/* ================= Texto 2 · Poema ================= */
+{t:'p-fig', d:1, tt:`Texto 2`,
+ tx:`<b>Rodoviária</b><br>A rodoviária acorda cedo<br>e boceja ônibus na avenida.<br>Minha mãe me aperta com medo<br>num abraço do tamanho da vida.<br><br>Levo na mala um cheiro dourado<br>de bolo de milho, ainda morno,<br>e deixo no portão, do outro lado,<br>a promessa de um breve retorno.<br><br>O ônibus parte. E eu, partido,<br>metade estrada, metade abrigo.<br><i>(poema escrito para este simulado)</i>`,
+ q:`Nos versos 1 e 2, a rodoviária “acorda” e “boceja ônibus”. A figura de linguagem predominante nesses versos é:`,
+ o:[
+  [`hipérbole`, `Hipérbole é exagero de quantidade ou intensidade. Aqui, o que chama atenção é a rodoviária fazer coisas de gente.`],
+  [`metonímia`, `Não há troca de um termo por outro relacionado (como autor pela obra ou continente pelo conteúdo).`],
+  [`comparação`, `Não há conectivo comparativo (“como”, “feito”, “tal qual”).`],
+  [`personificação`, ``],
+  [`antítese`, `Não há ideias opostas lado a lado nesses dois versos.`]
+ ], a:3,
+ e:`Acordar e bocejar são ações de seres vivos, típicas de pessoas. Atribuí-las a um lugar (a rodoviária) é <b>personificação</b>. O efeito é mostrar a rodoviária “despertando” de manhã e “soltando” os ônibus como quem boceja, de forma preguiçosa.`},
+
+{t:'p-fig', d:2, tt:`Texto 2`,
+ tx:`<b>Rodoviária</b><br>A rodoviária acorda cedo<br>e boceja ônibus na avenida.<br>Minha mãe me aperta com medo<br>num abraço do tamanho da vida.<br><br>Levo na mala um cheiro dourado<br>de bolo de milho, ainda morno,<br>e deixo no portão, do outro lado,<br>a promessa de um breve retorno.<br><br>O ônibus parte. E eu, partido,<br>metade estrada, metade abrigo.<br><i>(poema escrito para este simulado)</i>`,
+ q:`Na expressão “um cheiro dourado” (verso 5), ocorre:`,
+ o:[
+  [`sinestesia, pois mistura uma sensação do olfato (cheiro) com uma da visão (dourado).`, ``],
+  [`personificação, pois o cheiro realiza uma ação humana.`, `“Dourado” é uma cor, não uma ação humana. Nenhuma ação de pessoa é atribuída ao cheiro.`],
+  [`metonímia, pois o cheiro é usado no lugar da mala.`, `O cheiro não substitui a mala: ele é o que vai dentro dela, junto com a lembrança do bolo.`],
+  [`comparação, pois aproxima o cheiro da cor do ouro por meio de um conectivo.`, `Não há conectivo (“como”, “feito”) na expressão.`],
+  [`onomatopeia, pois imita o som do bolo assando.`, `Onomatopeia imita sons. “Cheiro dourado” não reproduz som nenhum.`]
+ ], a:0,
+ e:`<b>Sinestesia</b> é a mistura de sensações de sentidos diferentes. “Cheiro” pertence ao olfato; “dourado”, à visão. A combinação torna a lembrança do bolo da mãe mais viva, como se o eu lírico pudesse ver o cheiro.`},
+
+{t:'p-sent', d:3, tt:`Texto 2`,
+ tx:`<b>Rodoviária</b><br>A rodoviária acorda cedo<br>e boceja ônibus na avenida.<br>Minha mãe me aperta com medo<br>num abraço do tamanho da vida.<br><br>Levo na mala um cheiro dourado<br>de bolo de milho, ainda morno,<br>e deixo no portão, do outro lado,<br>a promessa de um breve retorno.<br><br>O ônibus parte. E eu, partido,<br>metade estrada, metade abrigo.<br><i>(poema escrito para este simulado)</i>`,
+ q:`No verso 9, “O ônibus parte. E eu, <b>partido</b>,”, a palavra destacada ganha força no poema porque:`,
+ o:[
+  [`tem apenas o sentido denotativo de “que foi embora”, repetindo a informação do verbo “parte”.`, `Essa é só uma das leituras. O último verso (“metade estrada, metade abrigo”) mostra que o poema também explora a ideia de estar dividido.`],
+  [`significa “membro de um partido político”, um dos sentidos da palavra no dicionário.`, `É de fato um dos sentidos de “partido”, mas não tem relação nenhuma com o contexto do poema.`],
+  [`é polissêmica: sugere, ao mesmo tempo, que o eu lírico partiu (foi embora) e que está dividido, “quebrado” por dentro, ideia reforçada no último verso.`, ``],
+  [`cria uma ambiguidade que é um defeito do poema, pois o leitor não consegue saber o sentido pretendido.`, `No poema, o duplo sentido é intencional: é um recurso expressivo, e os dois sentidos se somam em vez de confundir.`],
+  [`é empregada no sentido conotativo de “zangado”, pois o eu lírico está irritado com a mãe.`, `Nada no poema indica irritação. O abraço e a “promessa de um breve retorno” mostram afeto.`]
+ ], a:2,
+ e:`“Partido” pode vir de <b>partir</b> no sentido de “ir embora” (eu, que parti) e de <b>partir</b> no sentido de “dividir, quebrar” (como em “coração partido”). O poema aproveita os dois sentidos ao mesmo tempo (<b>polissemia</b>): o eu lírico vai embora e, por isso, fica dividido. O último verso confirma: “metade estrada” (a viagem) e “metade abrigo” (a casa que ficou).`},
+
+/* ================= Texto 3 · Charge ================= */
+{t:'p-tira', d:2, tt:`Texto 3`,
+ tx:`<b>Charge</b> (descrição)<br>Uma calçada estreita está completamente ocupada por carros estacionados, um atrás do outro. Uma senhora empurra um carrinho de bebê pelo meio da rua, espremida entre os veículos que passam. Num poste, um cartaz da prefeitura anuncia: “SEMANA DO PEDESTRE — Nesta cidade, quem anda a pé tem prioridade!”. De dentro de um carro, um motorista buzina e grita: “Sai da rua, minha senhora! Rua é lugar de carro!”`,
+ q:`A crítica da charge é construída principalmente:`,
+ o:[
+  [`pela imprudência da senhora, que decidiu andar pelo meio da rua com um bebê.`, `Essa é a leitura do motorista, não a da charge. A cena mostra que a senhora não tem outra opção, porque a calçada está ocupada.`],
+  [`pela falta de cartazes sobre os direitos dos pedestres na cidade.`, `Há um cartaz bem visível. O problema não é a falta de aviso, e sim a distância entre o que ele promete e o que acontece.`],
+  [`pela defesa de mais estacionamentos, já que os carros não têm onde parar.`, `A charge se coloca do lado do pedestre. Os carros sobre a calçada são parte do problema criticado, e não vítimas.`],
+  [`pelo exagero no número de carrinhos de bebê nas ruas da cidade.`, `Há um único carrinho na cena; ele serve para mostrar como o pedestre fica vulnerável.`],
+  [`pelo contraste entre a promessa do cartaz e a situação real do pedestre, agravado pela fala do motorista, que culpa justamente quem foi prejudicado.`, ``]
+ ], a:4,
+ e:`O humor crítico nasce do <b>contraste</b>: o cartaz garante “prioridade” a quem anda a pé, mas a calçada foi tomada pelos carros e a senhora é obrigada a disputar espaço com eles. A fala do motorista (“Rua é lugar de carro!”) completa a ironia: ele expulsa da rua a pessoa que só está ali porque os carros ocuparam o espaço dela.`},
+
+{t:'p-impl', d:1, tt:`Texto 3`,
+ tx:`<b>Charge</b> (descrição)<br>Uma calçada estreita está completamente ocupada por carros estacionados, um atrás do outro. Uma senhora empurra um carrinho de bebê pelo meio da rua, espremida entre os veículos que passam. Num poste, um cartaz da prefeitura anuncia: “SEMANA DO PEDESTRE — Nesta cidade, quem anda a pé tem prioridade!”. De dentro de um carro, um motorista buzina e grita: “Sai da rua, minha senhora! Rua é lugar de carro!”`,
+ q:`Pela cena descrita, pode-se inferir que a senhora anda pelo meio da rua porque:`,
+ o:[
+  [`o cartaz da prefeitura manda os pedestres usarem a rua durante a Semana do Pedestre.`, `O cartaz fala em “prioridade” ao pedestre; não manda ninguém andar na rua.`],
+  [`a calçada está tomada pelos carros estacionados e não há espaço para passar com o carrinho.`, ``],
+  [`ela quer protestar contra o motorista que buzina.`, `O motorista reage depois que ela já está na rua. Nada indica que ela esteja protestando.`],
+  [`a rua está fechada para carros durante a Semana do Pedestre.`, `A cena mostra veículos passando e um motorista buzinando: a rua não está fechada.`],
+  [`ela não sabe que a calçada é o lugar dos pedestres.`, `Não há nenhuma pista disso. A cena mostra que a calçada está ocupada, e não que ela a ignore.`]
+ ], a:1,
+ e:`A pista está logo na primeira frase: a calçada estreita está “completamente ocupada por carros estacionados”. Sem espaço para o carrinho de bebê, a senhora é obrigada a ir pela rua. Uma inferência boa sempre se apoia numa pista do texto.`},
+
+/* ================= Texto 4 · Anúncio ================= */
+{t:'p-pub', d:2, tt:`Texto 4`,
+ tx:`<b>Anúncio</b><br>[Imagem: um garoto de capacete e mochila pedala, sorrindo, numa ciclovia, ao lado de uma longa fila de carros parados no congestionamento.]<br><b>BIKE ELÉTRICA PULSO</b><br>Enquanto o trânsito para, você chega.<br>Bateria que dura até 60 km por carga. Recarregue em qualquer tomada.<br>Certamente, o seu caminho para a escola nunca mais será o mesmo.<br><b>Pulso. Sua cidade em outro ritmo.</b>`,
+ q:`Considerando a imagem e a frase “Enquanto o trânsito para, você chega”, a principal estratégia de persuasão do anúncio é:`,
+ o:[
+  [`apelar à autoridade de um especialista em mobilidade urbana.`, `Nenhum especialista é citado no anúncio.`],
+  [`conscientizar sobre o uso do capacete, como numa campanha de trânsito.`, `O capacete é um detalhe da imagem. O texto quer vender a bicicleta (publicidade), e não divulgar uma causa (propaganda).`],
+  [`criticar a prefeitura pela falta de ciclovias na cidade.`, `A imagem mostra justamente uma ciclovia, e a finalidade do anúncio é vender um produto, não fazer crítica.`],
+  [`mostrar, por contraste, a vantagem de quem usa o produto: enquanto os carros ficam parados, o ciclista avança.`, ``],
+  [`apresentar dados técnicos de forma neutra, sem tentar convencer o leitor.`, `Um anúncio nunca é neutro: frase de efeito, “você” e slogan servem para convencer.`]
+ ], a:3,
+ e:`O anúncio monta uma <b>oposição</b> entre “o trânsito para” e “você chega”, reforçada pela imagem (carros parados × garoto sorrindo e avançando). Assim, o produto aparece como a solução para um problema que o leitor conhece. O uso de “você” e a referência ao “caminho para a escola” mostram que o público são estudantes jovens.`},
+
+{t:'p-modal', d:3, tt:`Texto 4`,
+ tx:`<b>Anúncio</b><br>[Imagem: um garoto de capacete e mochila pedala, sorrindo, numa ciclovia, ao lado de uma longa fila de carros parados no congestionamento.]<br><b>BIKE ELÉTRICA PULSO</b><br>Enquanto o trânsito para, você chega.<br>Bateria que dura até 60 km por carga. Recarregue em qualquer tomada.<br>Certamente, o seu caminho para a escola nunca mais será o mesmo.<br><b>Pulso. Sua cidade em outro ritmo.</b>`,
+ q:`Observe as palavras “<b>até</b>” (em “dura até 60 km por carga”) e “<b>Certamente</b>”. É correto afirmar que:`,
+ o:[
+  [`“até” introduz o argumento mais forte, como em “Até o goleiro fez gol”, e “certamente” indica dúvida.`, `Aqui “até” não introduz o caso mais surpreendente: ele marca um limite (60 km). E “certamente” expressa certeza, não dúvida.`],
+  [`“até” marca um limite máximo, de modo que a bateria pode durar menos que 60 km; “certamente” apresenta como certeza o que é, na verdade, uma promessa do anunciante.`, ``],
+  [`“até” garante que a bateria dura, no mínimo, 60 km; “certamente” expressa apenas uma possibilidade.`, `É o contrário: “até” indica o máximo, não o mínimo. E “certamente” é um modalizador de certeza; possibilidade seria “talvez” ou “provavelmente”.`],
+  [`“até” indica tempo, como em “até amanhã”, e “certamente” expressa uma obrigação do leitor.`, `“60 km” é distância, não tempo. E obrigação seria “é preciso” ou “deve”, não “certamente”.`],
+  [`as duas palavras são neutras e poderiam ser retiradas sem nenhuma mudança de sentido.`, `Sem “até”, pareceria que a bateria sempre dura 60 km; sem “certamente”, a frase perderia o tom de garantia. As duas mudam o sentido.`]
+ ], a:1,
+ e:`A mesma palavra pode ter funções diferentes. Em “dura <b>até</b> 60 km”, “até” marca o <b>limite máximo</b>: a bateria pode durar 60 km ou menos, um detalhe que protege o anunciante. Já “<b>Certamente</b>” é um modalizador de <b>certeza</b>: apresenta como garantida uma previsão sobre o futuro (“nunca mais será o mesmo”), o que aumenta o poder de convencimento do anúncio.`},
+
+/* ================= Questões avulsas de gramática em contexto ================= */
+{t:'p-per', d:3,
+ q:`Leia a frase de uma crônica esportiva:<br>“<b>Por mais que treinasse todos os dias</b>, o goleiro estava tão inseguro <b>que o técnico escalou o reserva para a final</b>.”<br>As orações destacadas expressam, respectivamente, relações de:`,
+ o:[
+  [`concessão e consequência`, ``],
+  [`causa e consequência`, `Treinar não é a causa da insegurança. “Por mais que” apresenta um fato que deveria levar a outro resultado, mas não leva: isso é concessão.`],
+  [`concessão e finalidade`, `O técnico não escalou o reserva “para que” o goleiro ficasse inseguro. Depois de “tão”, o “que” introduz o resultado (consequência).`],
+  [`condição e consequência`, `“Por mais que” não equivale a “se”: o treino é um fato admitido, não uma hipótese.`],
+  [`proporção e conclusão`, `“Por mais que” lembra “quanto mais”, mas não indica proporção; e o par “tão… que” indica consequência, não conclusão.`]
+ ], a:0,
+ e:`“<b>Por mais que</b> treinasse” = “<b>embora</b> treinasse”: admite-se um fato (o treino diário) que não impede o resultado contrário (a insegurança) → <b>concessão</b>. Em “<b>tão</b> inseguro <b>que</b> o técnico escalou o reserva”, a segunda parte é o efeito da insegurança → <b>consequência</b>.`},
+
+{t:'p-pont', d:2,
+ q:`Lia mandou esta mensagem para a mãe:<br>“Para o meu aniversário, convidei meus vizinhos, o Caio e a Luana.”<br>A mãe ficou em dúvida: Caio e Luana são os vizinhos ou são outras duas pessoas convidadas? Qual reescrita deixa claro que <b>Caio e Luana são os vizinhos</b>?`,
+ o:[
+  [`Para o meu aniversário, convidei meus vizinhos e o Caio e a Luana.`, `O “e” separa os vizinhos de Caio e Luana: a frase passa a dizer que são pessoas diferentes, o contrário do pedido.`],
+  [`Para o meu aniversário, convidei, meus vizinhos, o Caio e a Luana.`, `Entre vírgulas, logo após o verbo, “meus vizinhos” parece um vocativo (como se Lia falasse com os vizinhos), mas a mensagem é para a mãe. A frase fica confusa.`],
+  [`Para o meu aniversário convidei meus vizinhos o Caio e a Luana.`, `Sem nenhuma vírgula, a relação entre “meus vizinhos” e os nomes fica ainda mais confusa. A dúvida não é resolvida.`],
+  [`Para o meu aniversário, convidei meus vizinhos, o Caio, e a Luana.`, `A vírgula antes do “e” reforça a ideia de uma lista de itens separados: parece que foram convidados os vizinhos, o Caio e também a Luana.`],
+  [`Para o meu aniversário, convidei o Caio e a Luana, meus vizinhos.`, ``]
+ ], a:4,
+ e:`Na frase original, “o Caio e a Luana” pode ser lido como <b>aposto</b> (explicando quem são os vizinhos) ou como mais itens de uma <b>enumeração</b>. Ao colocar os nomes primeiro e “meus vizinhos” depois da vírgula, no fim da frase, a expressão só pode ser aposto: ela explica quem são Caio e Luana. Como a mensagem é para a mãe, não há como ler “meus vizinhos” como vocativo.`},
+
+{t:'p-col', d:2,
+ q:`Leia o aviso enviado pela escola:<br>“Senhores pais: os boletins do 3º bimestre já estão prontos. <b>Retirem-nos</b> na secretaria até sexta-feira.”<br>Sobre a forma destacada, é correto afirmar que:`,
+ o:[
+  [`o pronome “nos” representa a escola que escreve o aviso (nós), e o certo seria “Nos retirem”.`, `Quem será retirado são os boletins, não a escola. E, na norma-padrão, não se inicia frase com pronome oblíquo.`],
+  [`o pronome deveria vir antes do verbo (“Nos retirem”), pois a norma-padrão prefere a próclise em avisos formais.`, `É o contrário: no início da frase, a norma-padrão pede o pronome depois do verbo (ênclise).`],
+  [`“nos” retoma “os boletins”: é a forma que o pronome “os” assume depois de verbo terminado em -m, e fica após o verbo porque a norma-padrão não inicia frase com pronome oblíquo.`, ``],
+  [`o correto seria “Retirem-os”, pois o pronome “os” não muda de forma depois do verbo.`, `Depois de verbo terminado em som nasal (-m, -ão, -õe), “o, a, os, as” viram “no, na, nos, nas”: retirem + os = retirem-nos.`],
+  [`o correto seria “Retirem-lhes”, pois o verbo “retirar” pede pronome que indique pessoa.`, `“Os boletins” é objeto direto (retirar algo), por isso o pronome é “os” (aqui, “nos”). “Lhes” indica objeto indireto (a alguém).`]
+ ], a:2,
+ e:`Dois pontos se juntam aqui. 1) <b>Forma do pronome</b>: depois de verbo terminado em som nasal, “os” vira “nos” (retirem + os → retirem-<b>nos</b>), e ele retoma “os boletins”. 2) <b>Colocação</b>: o verbo inicia a frase, e a norma-padrão não começa frase com pronome oblíquo; por isso, ênclise (“Retirem-nos”).`},
+
+{t:'p-var', d:1,
+ q:`No hospital, a médica falou com a equipe: “A paciente teve uma <b>cefaleia</b> intensa, mas o quadro está estável.” Logo depois, conversando com o filho da paciente, disse: “Sua mãe teve uma forte <b>dor de cabeça</b>, mas já está bem.”<br>A mudança na forma de falar da médica mostra que ela:`,
+ o:[
+  [`corrigiu um erro de português que tinha cometido na primeira fala.`, `A primeira fala não tem erro: é a linguagem técnica da medicina, adequada para falar com a equipe.`],
+  [`usou, na segunda fala, uma variedade regional típica do lugar onde o filho mora.`, `“Dor de cabeça” é usada em todo o país; não é marca regional.`],
+  [`demonstrou preconceito linguístico ao simplificar a fala para o filho.`, `Adequar a linguagem para ser compreendido não é discriminar ninguém; é cuidado com o interlocutor.`],
+  [`adequou a linguagem ao interlocutor: usou o jargão médico com a equipe e palavras do dia a dia com o familiar.`, ``],
+  [`exemplificou a variação histórica, pois “cefaleia” é uma palavra que caiu em desuso.`, `“Cefaleia” é um termo técnico usado até hoje na medicina; não é uma palavra antiga.`]
+ ], a:3,
+ e:`É um caso de <b>variação situacional</b> (ou de registro): a médica escolhe as palavras conforme <b>com quem</b> fala. Com colegas, o <b>jargão</b> técnico (“cefaleia”, “quadro estável”) é preciso e adequado; com o filho da paciente, palavras do dia a dia garantem a compreensão. Nenhuma das falas está “errada”.`}
+
+];
+
+/* SIMULADO B · Matemática (15 questões, na ordem da prova)
+   Formato: {t, d, q, o:[[texto, feedback]...5], a, e, tx?, tt?}  ·  ver SIMULADO_SPEC.md
+   Conferido por simulados/check_sim_b_mat.py */
+const SIM_B_MAT = [
+
+/* 1 · m-pct */
+{t:'m-pct', d:2, q:`Numa escola, 60% dos alunos são meninas e os demais são meninos. Entre as meninas, 25% fazem parte de algum time esportivo da escola; entre os meninos, 40% fazem parte de algum time. Que porcentagem do total de alunos da escola faz parte de algum time esportivo?`, o:[
+  [`15%`, `Esse é só o grupo das meninas que estão em times (25% de 60% = 15% do total). Faltou somar os meninos.`],
+  [`16%`, `Esse é só o grupo dos meninos que estão em times (40% de 40% = 16% do total). Faltou somar as meninas.`],
+  [`31%`, ``],
+  [`32,5%`, `Você fez a média simples de 25% e 40%. Mas há mais meninas (60%) que meninos (40%), então cada porcentagem pesa diferente.`],
+  [`65%`, `Você somou 25% + 40%. Essas porcentagens são de grupos diferentes (meninas e meninos), não do total da escola.`]
+ ], a:2, e:`Pense numa escola com 100 alunos: 60 meninas e 40 meninos.<br>Meninas em times: 25% de 60 = 15.<br>Meninos em times: 40% de 40 = 16.<br>Total em times: 15 + 16 = 31 de 100 alunos → <b>31%</b>.`},
+
+/* 2 · m-reais */
+{t:'m-reais', d:1, q:`Três barras de ferro têm comprimentos √{5} m, 2,2 m e [[9|4]] m. Qual alternativa mostra esses comprimentos em ordem <b>crescente</b>?`, o:[
+  [`2,2 &lt; √{5} &lt; [[9|4]]`, ``],
+  [`√{5} &lt; 2,2 &lt; [[9|4]]`, `√{5} é maior que 2,2, porque 2,2² = 4,84, que é menor que 5.`],
+  [`2,2 &lt; [[9|4]] &lt; √{5}`, `[[9|4]] = 2,25 e 2,25² = 5,0625, que é maior que 5. Logo, [[9|4]] é maior que √{5} (que vale cerca de 2,236).`],
+  [`[[9|4]] &lt; 2,2 &lt; √{5}`, `9 ÷ 4 = 2,25, que é maior que 2,2. Faça a divisão com cuidado antes de comparar.`],
+  [`[[9|4]] &lt; √{5} &lt; 2,2`, `Essa é a ordem do maior para o menor (decrescente), escrita com o sinal &lt;. A pergunta pede do menor para o maior.`]
+ ], a:0, e:`Para comparar números positivos sem calculadora, compare os quadrados:<br>2,2² = 4,84 · (√{5})² = 5 · ([[9|4]])² = [[81|16]] = 5,0625.<br>Como 4,84 &lt; 5 &lt; 5,0625, temos <b>2,2 &lt; √{5} &lt; [[9|4]]</b>.<br>(Em decimais: 2,2 &lt; 2,236… &lt; 2,25.)`},
+
+/* 3 · m-mmc */
+{t:'m-mmc', d:2, q:`Richard tem mais de 200 e menos de 300 figurinhas. Se ele as separa em montes de 6, sobram 3 figurinhas; em montes de 8, também sobram 3; e em montes de 10, também sobram 3. Quantas figurinhas Richard tem?`, o:[
+  [`123`, `123 deixa resto 3 nas três divisões, mas é menor que 200. É preciso usar o próximo múltiplo do MMC: 240 + 3.`],
+  [`237`, `Você subtraiu 3 do múltiplo do MMC. Se sobram 3, o número é 3 a <b>mais</b> que um múltiplo de 6, 8 e 10.`],
+  [`240`, `240 é o múltiplo comum de 6, 8 e 10, mas nessas divisões ele deixa resto 0. Faltou somar as 3 figurinhas que sobram.`],
+  [`243`, ``],
+  [`283`, `280 + 3 deixa resto 3 na divisão por 8 e por 10, mas 280 não é múltiplo de 6: 283 em montes de 6 deixa resto 1. Use o MMC dos três números.`]
+ ], a:3, e:`Tirando as 3 que sobram, o resto é múltiplo de 6, de 8 e de 10 ao mesmo tempo, ou seja, múltiplo do MMC.<br>6 = 2 · 3 · 8 = 2³ · 10 = 2 · 5 → MMC = 2³ · 3 · 5 = 120.<br>Múltiplos de 120: 120, 240, 360… Somando 3: 123, 243, 363…<br>O único entre 200 e 300 é <b>243</b>.`},
+
+/* 4 · m-eq1 */
+{t:'m-eq1', d:1, q:`Um estacionamento cobra R$ 15,00 pela primeira hora e R$ 6,00 por hora adicional, e só cobra horas inteiras. Ao retirar o carro, o pai de Richard pagou R$ 63,00. Por quantas horas o carro ficou estacionado?`, o:[
+  [`3 h`, `Você dividiu 63 por 21 (15 + 6), como se toda hora custasse R$ 21,00. Só a primeira hora custa R$ 15,00; as outras custam R$ 6,00 cada.`],
+  [`8 h`, `8 é o número de horas <b>adicionais</b>. Faltou somar a primeira hora.`],
+  [`9 h`, ``],
+  [`10 h 30 min`, `Você dividiu 63 por 6, como se todas as horas custassem R$ 6,00. A primeira hora tem preço diferente (R$ 15,00).`],
+  [`13 h`, `Você somou 15 a 63 em vez de subtrair: (63 + 15) ÷ 6 = 13. Os R$ 15,00 da primeira hora já estão dentro dos R$ 63,00.`]
+ ], a:2, e:`Seja x o total de horas. A primeira custa 15 e as outras (x − 1) custam 6 cada:<br>15 + 6(x − 1) = 63<br>6(x − 1) = 48 → x − 1 = 8 → x = <b>9 horas</b>.<br>Confere: 15 + 8 · 6 = 15 + 48 = 63. ✔`},
+
+/* 5 · m-prod */
+{t:'m-prod', d:2, q:`Um número real positivo x satisfaz x − [[1|x]] = 4. Qual é o valor de x² + [[1|x²]]?`, o:[
+  [`8`, `Você multiplicou 4 por 2. Para chegar em x² e [[1|x²]], é preciso elevar a igualdade ao quadrado.`],
+  [`14`, `Você trocou o sinal do termo do meio. Em (a − b)² o termo do meio é −2ab, que aqui vale −2; para isolar x² + [[1|x²]], soma-se 2.`],
+  [`16`, `Você elevou ao quadrado esquecendo o termo do meio, como se (x − [[1|x]])² fosse x² + [[1|x²]]. Na verdade, (x − [[1|x]])² = x² − 2 + [[1|x²]].`],
+  [`17`, `Você esqueceu o “2” do termo do meio: 2 · x · [[1|x]] = 2, não 1.`],
+  [`18`, ``]
+ ], a:4, e:`Eleve os dois lados ao quadrado, usando (a − b)² = a² − 2ab + b²:<br>(x − [[1|x]])² = x² − 2 · x · [[1|x]] + [[1|x²]] = x² − 2 + [[1|x²]].<br>Então x² − 2 + [[1|x²]] = 4² = 16 → x² + [[1|x²]] = 16 + 2 = <b>18</b>.`},
+
+/* 6 · m-eq2 */
+{t:'m-eq2', d:3, q:`De uma folha retangular de papelão de 30 cm por 20 cm, recorta-se um quadrado de lado x cm em cada um dos quatro cantos. Depois, dobram-se as abas para cima, formando uma caixa sem tampa. Para que o fundo da caixa tenha área de 336 cm², quanto deve medir x?`, o:[
+  [`3 cm`, ``],
+  [`6 cm`, `Você descontou x só uma vez de cada medida: (30 − x)(20 − x) = 336. Como há um quadrado recortado em cada ponta, cada medida perde 2x.`],
+  [`14 cm`, `14 cm é a largura do fundo da caixa (20 − 2 × 3), não o lado do quadrado recortado.`],
+  [`22 cm`, `22 é a outra raiz da equação, mas não serve: a folha tem só 20 cm de largura, e 20 − 2 × 22 daria uma medida negativa.`],
+  [`24 cm`, `24 cm é o comprimento do fundo da caixa (30 − 2 × 3), não o lado do quadrado recortado.`]
+ ], a:0, e:`Cada medida da folha perde x em cada ponta, ou seja, 2x. O fundo mede (30 − 2x) por (20 − 2x).<br>(30 − 2x)(20 − 2x) = 336 → 600 − 60x − 40x + 4x² = 336 → 4x² − 100x + 264 = 0.<br>Dividindo por 4: x² − 25x + 66 = 0.<br>Δ = 625 − 264 = 361 → √{361} = 19 → x = [[25 ± 19|2]] → x = 22 ou x = 3.<br>x = 22 não serve (20 − 44 é negativo). Resposta: <b>x = 3 cm</b>.<br>Confere: fundo de 24 cm por 14 cm → 24 × 14 = 336 cm². ✔`},
+
+/* 7 · m-prop */
+{t:'m-prop', d:2, q:`Numa gráfica, 4 impressoras iguais, trabalhando juntas, imprimem 600 cartazes em 6 horas. Uma das impressoras quebrou, e as 3 restantes, no mesmo ritmo, precisam imprimir 900 cartazes. Quanto tempo elas vão levar?`, o:[
+  [`4 h 30 min`, `Você achou que, com menos impressoras, o tempo diminui (6 × [[3|4]]) e ainda esqueceu que há mais cartazes. Menos impressoras → <b>mais</b> tempo.`],
+  [`6 h 45 min`, `Você tratou impressoras e tempo como diretamente proporcionais (6 × [[3|4]] × [[3|2]]). Com menos impressoras, o tempo aumenta: o fator é [[4|3]].`],
+  [`8 h`, `Você considerou só a impressora quebrada (6 × [[4|3]]) e esqueceu que agora são 900 cartazes, não 600.`],
+  [`9 h`, `Você considerou só o aumento de cartazes (6 × [[3|2]]) e esqueceu que agora há só 3 impressoras.`],
+  [`12 h`, ``]
+ ], a:4, e:`Regra de três composta. Compare cada grandeza com o tempo:<br>• impressoras: 4 → 3 (menos impressoras, <b>mais</b> tempo: inversa) → fator [[4|3]];<br>• cartazes: 600 → 900 (mais cartazes, mais tempo: direta) → fator [[900|600]] = [[3|2]].<br>Tempo = 6 × [[4|3]] × [[3|2]] = 6 × 2 = <b>12 horas</b>.<br>Outro jeito: cada impressora faz 600 ÷ 4 ÷ 6 = 25 cartazes por hora; 3 impressoras fazem 75 por hora; 900 ÷ 75 = 12 h.`},
+
+/* 8 · m-seq */
+{t:'m-seq', d:1, q:`Para a festa junina, Bia pendurou bandeirinhas numa fila, sempre nesta ordem de cores: vermelha, laranja, amarela, verde, azul, roxa. Depois da roxa, a sequência recomeça na vermelha, e assim por diante. Qual é a cor da 100ª bandeirinha?`, o:[
+  [`Amarela`, `Você parou uma posição antes. O resto da divisão de 100 por 6 é 4, e a 4ª cor do ciclo é a verde.`],
+  [`Verde`, ``],
+  [`Azul`, `Você avançou uma posição a mais. O resto 4 indica a 4ª cor do ciclo (verde), não a 5ª.`],
+  [`Vermelha`, `A vermelha é a 97ª bandeirinha (logo depois da 96ª, que fecha um ciclo). A 100ª está 3 posições depois dela.`],
+  [`Roxa`, `A roxa ocupa as posições múltiplas de 6 (6, 12, …, 96). Como 100 não é múltiplo de 6, a 100ª não é roxa.`]
+ ], a:1, e:`O padrão se repete a cada 6 bandeirinhas. Divida 100 por 6:<br>100 = 6 × 16 + 4.<br>Depois de 16 ciclos completos (96 bandeirinhas), a 100ª é a 4ª cor do ciclo: vermelha (1ª), laranja (2ª), amarela (3ª), <b>verde</b> (4ª).`},
+
+/* 9 · m-pol */
+{t:'m-pol', d:2, q:`Um piso é coberto por ladrilhos em forma de polígonos regulares, sem frestas e sem sobreposição. Em cada vértice do desenho encontram-se exatamente três ladrilhos: um quadrado e dois polígonos regulares iguais entre si. Quantos lados tem cada um desses dois polígonos?`, o:[
+  [`6`, `O ângulo interno do hexágono regular é 120°: 90° + 2 · 120° = 330°. Faltariam 30° para fechar a volta.`],
+  [`8`, ``],
+  [`9`, `O ângulo interno do eneágono regular é 140°: 90° + 2 · 140° = 370°. Passa de 360° e os ladrilhos se sobreporiam.`],
+  [`10`, `O ângulo interno do decágono regular é 144°: 90° + 2 · 144° = 378°. Passa de 360°.`],
+  [`12`, `O ângulo interno do dodecágono regular é 150°: 90° + 2 · 150° = 390°. Passa de 360°.`]
+ ], a:1, e:`Em torno de um vértice, os ângulos somam 360°.<br>O quadrado ocupa 90°, então cada um dos outros dois ocupa (360° − 90°) ÷ 2 = 135°.<br>Ângulo interno de 135° → ângulo externo de 180° − 135° = 45°.<br>Número de lados: 360° ÷ 45° = <b>8</b> (octógono).<br>Confere: [[(8 − 2) · 180°|8]] = [[1 080°|8]] = 135°. ✔`},
+
+/* 10 · m-pit */
+{t:'m-pit', d:3, q:`Um bambu de 9 m de altura estava em pé, perpendicular a um chão plano. O vento o quebrou a certa altura: a parte de cima tombou sem se soltar, e a sua ponta encostou no chão a 3 m da base do bambu. A que altura do chão o bambu quebrou?`, o:[
+  [`4 m`, ``],
+  [`4,5 m`, `Você supôs que o bambu quebrou na metade. Nesse caso, a parte tombada (4,5 m) teria de ser a hipotenusa, mas 4,5² ≠ 4,5² + 3².`],
+  [`5 m`, `5 m é o comprimento da parte que tombou (a hipotenusa), não a altura em que o bambu quebrou.`],
+  [`6 m`, `Você fez 9 − 3. A distância de 3 m está no chão (um cateto) e não se subtrai da altura assim; é preciso usar Pitágoras.`],
+  [`6√{2} m`, `Você usou 9 m como hipotenusa: √{9² − 3²} = √{72} = 6√{2}. Mas a hipotenusa é só a parte que tombou (9 − x), não o bambu inteiro.`]
+ ], a:0, e:`Seja x a altura da quebra. A parte que ficou em pé (x) e a distância no chão (3) são os catetos; a parte tombada (9 − x) é a hipotenusa.<br>(9 − x)² = x² + 3²<br>81 − 18x + x² = x² + 9<br>72 = 18x → x = <b>4 m</b>.<br>Confere: parte tombada 5 m; 4² + 3² = 16 + 9 = 25 = 5². ✔`},
+
+/* 11 · m-circ */
+{t:'m-circ', d:1, q:`Uma roda-gigante tem 12 cabines, numeradas de 1 a 12 em sequência e igualmente espaçadas ao longo de uma circunferência. Qual é a medida do <b>menor</b> ângulo central formado pelos raios que ligam o centro da roda às cabines 1 e 5?`, o:[
+  [`30°`, `30° é o ângulo entre duas cabines <b>vizinhas</b>. Da 1 à 5 há 4 desses espaços.`],
+  [`60°`, `Você calculou a metade de 120°, que seria um ângulo inscrito. A pergunta pede o ângulo <b>central</b>, que é igual ao arco.`],
+  [`90°`, `Você contou 3 espaços. Da cabine 1 à 5 há 4 espaços: 1→2, 2→3, 3→4, 4→5.`],
+  [`120°`, ``],
+  [`150°`, `Você contou 5 espaços (cabines 1, 2, 3, 4 e 5). Mas entre 5 cabines há 4 espaços, não 5.`]
+ ], a:3, e:`As 12 cabines dividem a volta (360°) em 12 arcos iguais: 360° ÷ 12 = 30° cada.<br>Da cabine 1 à cabine 5 há 4 arcos: 4 × 30° = <b>120°</b>.<br>(O outro ângulo, pelo lado de fora, mede 360° − 120° = 240°; o menor é 120°.)`},
+
+/* 12 · m-vol */
+{t:'m-vol', d:3, q:`Uma caixa-d’água tem a forma de um cilindro com 2 m de diâmetro e 1,5 m de altura, e está com água até [[1|3]] de sua capacidade. Abre-se uma torneira com vazão de 15 litros por minuto para terminar de enchê-la. Em quanto tempo a caixa-d’água ficará cheia? (Use π ≈ 3.)`, o:[
+  [`20 min`, `Você usou 1 m³ = 100 L. O certo é 1 m³ = 1 000 L.`],
+  [`1 h 40 min`, `Você calculou o tempo para encher só [[1|3]] da caixa. Como ela já tem [[1|3]], faltam [[2|3]].`],
+  [`3 h 20 min`, ``],
+  [`5 h`, `Esse é o tempo para encher a caixa vazia. Ela já tem [[1|3]] de água; faltam só [[2|3]].`],
+  [`13 h 20 min`, `Você usou 2 m como raio. O raio é a metade do diâmetro: 1 m.`]
+ ], a:2, e:`Raio = 2 ÷ 2 = 1 m.<br>Volume = π · r² · h = 3 · 1² · 1,5 = 4,5 m³ = 4 500 L.<br>Falta encher [[2|3]]: [[2|3]] · 4 500 = 3 000 L.<br>Tempo: 3 000 ÷ 15 = 200 min = 3 h 20 min → <b>3 h 20 min</b>.`},
+
+/* 13 · m-graf */
+{t:'m-graf', d:1, tx:`<p><b>Visitantes de um museu de ciências, por mês</b></p><table class="tb"><tr><th>Mês</th><th>Visitantes</th></tr><tr><td>Janeiro</td><td>12 000</td></tr><tr><td>Fevereiro</td><td>9 000</td></tr><tr><td>Março</td><td>15 000</td></tr><tr><td>Abril</td><td>14 000</td></tr><tr><td>Maio</td><td>18 000</td></tr></table>`,
+ q:`De acordo com a tabela, qual foi o maior <b>aumento</b> no número de visitantes de um mês para o mês seguinte?`, o:[
+  [`1 000`, `De março para abril o número caiu 1 000 (de 15 000 para 14 000). Foi uma queda, não um aumento.`],
+  [`3 000`, `De janeiro para fevereiro o número caiu 3 000. Foi uma queda, não um aumento.`],
+  [`4 000`, `De abril para maio houve aumento de 4 000, mas de fevereiro para março o aumento foi maior.`],
+  [`6 000`, ``],
+  [`9 000`, `9 000 é a diferença entre o maior valor (maio) e o menor (fevereiro), que não são meses seguidos.`]
+ ], a:3, e:`Variações de um mês para o seguinte:<br>jan → fev: 9 000 − 12 000 = −3 000 (queda)<br>fev → mar: 15 000 − 9 000 = +6 000<br>mar → abr: 14 000 − 15 000 = −1 000 (queda)<br>abr → mai: 18 000 − 14 000 = +4 000<br>Maior aumento: <b>6 000 visitantes</b> (de fevereiro para março).`},
+
+/* 14 · m-media */
+{t:'m-media', d:2, q:`Duas turmas do 9º ano fizeram a mesma prova. A turma A, com 30 alunos, teve média 6,0; a turma B, com 20 alunos, teve média 8,5. Qual foi a média das notas dos 50 alunos juntos?`, o:[
+  [`7,0`, ``],
+  [`7,25`, `Você fez a média simples de 6,0 e 8,5. As turmas têm tamanhos diferentes, então cada média pesa conforme o número de alunos.`],
+  [`7,5`, `Você trocou os pesos: usou 20 alunos com média 6,0 e 30 com média 8,5. A turma maior (30) é a de média 6,0.`],
+  [`14,5`, `Você somou as duas médias (6,0 + 8,5). Média não se soma; é preciso dividir o total de pontos pelo total de alunos.`],
+  [`17,5`, `Você dividiu o total de pontos (350) por 20, que é só o número de alunos da turma B. São 50 alunos ao todo.`]
+ ], a:0, e:`Soma das notas da turma A: 30 × 6,0 = 180.<br>Soma das notas da turma B: 20 × 8,5 = 170.<br>Total: 180 + 170 = 350 pontos para 50 alunos.<br>Média geral: 350 ÷ 50 = <b>7,0</b>.`},
+
+/* 15 · m-cont */
+{t:'m-cont', d:3, q:`Numa rifa, os bilhetes são numerados de 100 a 999, sem repetição. Ganha um brinde quem tiver um bilhete cujo número tenha <b>pelo menos um</b> algarismo 7. Quantos bilhetes dão direito a brinde?`, o:[
+  [`171`, `Você calculou os números sem nenhum 7 como 9 × 9 × 9 = 729. Mas o algarismo das centenas não pode ser 0: são 8 opções (1 a 9, sem o 7), e o total sem 7 é 648.`],
+  [`225`, `225 são os números com <b>exatamente um</b> algarismo 7. Faltaram os que têm dois ou três setes (como 377 ou 777).`],
+  [`252`, ``],
+  [`280`, `Você somou “7 nas centenas” (100) + “7 nas dezenas” (90) + “7 nas unidades” (90). Assim, números como 777 e 707 são contados mais de uma vez.`],
+  [`648`, `648 é a quantidade de bilhetes <b>sem nenhum</b> 7. Faltou subtrair do total de 900 bilhetes.`]
+ ], a:2, e:`Conte pelo complementar: total − bilhetes sem nenhum 7.<br>Total de 100 a 999: 900 bilhetes.<br>Sem nenhum 7: centenas com 8 opções (1 a 9, menos o 7), dezenas com 9 (0 a 9, menos o 7) e unidades com 9 → 8 × 9 × 9 = 648.<br>Com pelo menos um 7: 900 − 648 = <b>252</b>.`}
+];
+
+/* SIMULADO C · Português (15 questões)
+   Textos-base escritos para este simulado, exceto o trecho em domínio público de Casimiro de Abreu (“Meus oito anos”, 1859). */
+const SIM_C_POR = [
+
+/* 1 · p-impl */
+{t:'p-impl', d:2,
+ tt:`Texto 1`,
+ tx:`<b>Pequenos, mas resistentes</b><br>A maioria dos tardígrados mede menos de um milímetro, tem oito patas gordinhas e anda devagar, como se estivesse sempre com preguiça. Por causa desse jeito desajeitado, eles ganharam o apelido de ursos-d'água. Vivem em lugares úmidos, como o musgo dos muros e das árvores, e já foram encontrados do alto das montanhas ao fundo do mar.<br>O que deixou esses bichinhos famosos, porém, foi a sua resistência. Quando o ambiente seca, o tardígrado recolhe as patas, perde quase toda a água do corpo e se enrola numa espécie de barrilzinho. Nesse estado, seu metabolismo fica tão lento que mal pode ser medido. Assim, ele aguenta frio intenso, calor forte e até radiação. Em 2007, cientistas enviaram alguns deles à órbita da Terra e os deixaram expostos ao vácuo do espaço; ao voltar, muitos se reidrataram e continuaram vivos.<br>Nas redes, é comum ler que os tardígrados são “indestrutíveis”. A fama é exagerada. Quando estão ativos, eles são tão frágeis quanto qualquer animal pequeno: precisam de uma película de água ao redor do corpo para se mover, comer e se reproduzir. A resistência só aparece no “modo barrilzinho”, e mesmo assim tem limite. Os tardígrados, portanto, não são super-heróis: são especialistas em esperar a hora certa de voltar à vida.<br>Entender como eles fazem isso pode ajudar a ciência a, um dia, conservar vacinas sem precisar de geladeira.<br><i>(Texto escrito para este simulado.)</i>`,
+ q:`O último parágrafo do texto permite inferir que:`,
+ o:[
+  [`os tardígrados já são usados como ingrediente na fabricação de vacinas.`, `O texto fala de algo que <b>pode</b> acontecer <b>um dia</b>; não afirma que isso já ocorre.`],
+  [`as vacinas atuais deixaram de funcionar e precisam ser substituídas.`, `Nada no texto sugere que as vacinas não funcionem; fala-se apenas da forma de conservá-las.`],
+  [`atualmente, ao menos parte das vacinas precisa de refrigeração para ser conservada.`, ``],
+  [`as geladeiras estragam as vacinas, por isso os cientistas querem eliminá-las.`, `Inferência sem base: o texto não diz que a geladeira prejudica as vacinas, só que seria bom não depender dela.`],
+  [`a ciência já sabe exatamente como os tardígrados resistem; falta só aplicar esse conhecimento.`, `“Entender como eles fazem isso” mostra que o mecanismo ainda está sendo estudado, não que já esteja totalmente compreendido.`]
+ ], a:2,
+ e:`Se a ciência quer, um dia, “conservar vacinas <b>sem precisar de geladeira</b>”, é porque hoje ao menos parte delas <b>precisa</b> de geladeira. Essa informação não está escrita, mas está implícita na frase. As demais alternativas vão além do texto ou o contradizem (“pode”, “um dia” indicam possibilidade futura).`},
+
+/* 2 · p-coes */
+{t:'p-coes', d:1,
+ tt:`Texto 1`,
+ tx:`<b>Pequenos, mas resistentes</b><br>A maioria dos tardígrados mede menos de um milímetro, tem oito patas gordinhas e anda devagar, como se estivesse sempre com preguiça. Por causa desse jeito desajeitado, eles ganharam o apelido de ursos-d'água. Vivem em lugares úmidos, como o musgo dos muros e das árvores, e já foram encontrados do alto das montanhas ao fundo do mar.<br>O que deixou esses bichinhos famosos, porém, foi a sua resistência. Quando o ambiente seca, o tardígrado recolhe as patas, perde quase toda a água do corpo e se enrola numa espécie de barrilzinho. Nesse estado, seu metabolismo fica tão lento que mal pode ser medido. Assim, ele aguenta frio intenso, calor forte e até radiação. Em 2007, cientistas enviaram alguns deles à órbita da Terra e os deixaram expostos ao vácuo do espaço; ao voltar, muitos se reidrataram e continuaram vivos.<br>Nas redes, é comum ler que os tardígrados são “indestrutíveis”. A fama é exagerada. Quando estão ativos, eles são tão frágeis quanto qualquer animal pequeno: precisam de uma película de água ao redor do corpo para se mover, comer e se reproduzir. A resistência só aparece no “modo barrilzinho”, e mesmo assim tem limite. Os tardígrados, portanto, não são super-heróis: são especialistas em esperar a hora certa de voltar à vida.<br>Entender como eles fazem isso pode ajudar a ciência a, um dia, conservar vacinas sem precisar de geladeira.<br><i>(Texto escrito para este simulado.)</i>`,
+ q:`No segundo parágrafo, no trecho “cientistas enviaram alguns deles à órbita da Terra e <b>os</b> deixaram expostos ao vácuo do espaço”, o pronome destacado retoma:`,
+ o:[
+  [`os cientistas.`, `Os cientistas são quem pratica a ação (o sujeito de “deixaram”); quem foi deixado exposto ao vácuo foram os animais.`],
+  [`os lugares úmidos citados no primeiro parágrafo.`, `Lugares úmidos não foram levados ao espaço; o referente está bem mais perto, na mesma frase.`],
+  [`o frio intenso e o calor forte.`, `Frio e calor são condições que o animal suporta, não o que foi enviado à órbita.`],
+  [`os músculos das patas gordinhas.`, `O texto não fala em músculos; as patas aparecem no primeiro parágrafo e não têm relação com essa frase.`],
+  [`os tardígrados enviados à órbita (“alguns deles”).`, ``]
+ ], a:4,
+ e:`Pergunte ao verbo: os cientistas deixaram <b>quem</b> exposto ao vácuo? “Alguns deles”, isto é, os tardígrados que foram enviados à órbita. O pronome “os” retoma esse termo e evita repeti-lo.`},
+
+/* 3 · p-sent */
+{t:'p-sent', d:2,
+ tt:`Texto 1`,
+ tx:`<b>Pequenos, mas resistentes</b><br>A maioria dos tardígrados mede menos de um milímetro, tem oito patas gordinhas e anda devagar, como se estivesse sempre com preguiça. Por causa desse jeito desajeitado, eles ganharam o apelido de ursos-d'água. Vivem em lugares úmidos, como o musgo dos muros e das árvores, e já foram encontrados do alto das montanhas ao fundo do mar.<br>O que deixou esses bichinhos famosos, porém, foi a sua resistência. Quando o ambiente seca, o tardígrado recolhe as patas, perde quase toda a água do corpo e se enrola numa espécie de barrilzinho. Nesse estado, seu metabolismo fica tão lento que mal pode ser medido. Assim, ele aguenta frio intenso, calor forte e até radiação. Em 2007, cientistas enviaram alguns deles à órbita da Terra e os deixaram expostos ao vácuo do espaço; ao voltar, muitos se reidrataram e continuaram vivos.<br>Nas redes, é comum ler que os tardígrados são “indestrutíveis”. A fama é exagerada. Quando estão ativos, eles são tão frágeis quanto qualquer animal pequeno: precisam de uma película de água ao redor do corpo para se mover, comer e se reproduzir. A resistência só aparece no “modo barrilzinho”, e mesmo assim tem limite. Os tardígrados, portanto, não são super-heróis: são especialistas em esperar a hora certa de voltar à vida.<br>Entender como eles fazem isso pode ajudar a ciência a, um dia, conservar vacinas sem precisar de geladeira.<br><i>(Texto escrito para este simulado.)</i>`,
+ q:`No trecho “Os tardígrados, portanto, não são <b>super-heróis</b>”, a palavra destacada foi empregada em sentido:`,
+ o:[
+  [`conotativo, representando seres de resistência ilimitada, imagem que o texto procura desfazer.`, ``],
+  [`denotativo, porque os tardígrados aparecem como personagens em filmes e quadrinhos.`, `O texto não fala de filmes nem de quadrinhos; a palavra não se refere a personagens de ficção.`],
+  [`conotativo, para elogiar os tardígrados como os animais mais fortes do planeta.`, `É o contrário: a frase <b>nega</b> que eles tenham poderes ilimitados (“A fama é exagerada”).`],
+  [`denotativo, pois o autor só quer informar que os tardígrados não são personagens inventados.`, `Essa é a leitura ao pé da letra. O autor usa “super-heróis” como imagem de invencibilidade, para corrigir o exagero das redes.`],
+  [`conotativo, para indicar que os tardígrados são perigosos para o ser humano.`, `Nada no texto fala em perigo para as pessoas; “super-herói” remete a força e invencibilidade, não a ameaça.`]
+ ], a:0,
+ e:`“Super-heróis” está em sentido <b>figurado (conotativo)</b>: representa a ideia de “indestrutível”, que circula nas redes. Ao dizer que eles <b>não</b> são super-heróis, o texto conclui (“portanto”) que a resistência existe, mas tem limites.`},
+
+/* 4 · p-conj */
+{t:'p-conj', d:3,
+ tt:`Texto 1`,
+ tx:`<b>Pequenos, mas resistentes</b><br>A maioria dos tardígrados mede menos de um milímetro, tem oito patas gordinhas e anda devagar, como se estivesse sempre com preguiça. Por causa desse jeito desajeitado, eles ganharam o apelido de ursos-d'água. Vivem em lugares úmidos, como o musgo dos muros e das árvores, e já foram encontrados do alto das montanhas ao fundo do mar.<br>O que deixou esses bichinhos famosos, porém, foi a sua resistência. Quando o ambiente seca, o tardígrado recolhe as patas, perde quase toda a água do corpo e se enrola numa espécie de barrilzinho. Nesse estado, seu metabolismo fica tão lento que mal pode ser medido. Assim, ele aguenta frio intenso, calor forte e até radiação. Em 2007, cientistas enviaram alguns deles à órbita da Terra e os deixaram expostos ao vácuo do espaço; ao voltar, muitos se reidrataram e continuaram vivos.<br>Nas redes, é comum ler que os tardígrados são “indestrutíveis”. A fama é exagerada. Quando estão ativos, eles são tão frágeis quanto qualquer animal pequeno: precisam de uma película de água ao redor do corpo para se mover, comer e se reproduzir. A resistência só aparece no “modo barrilzinho”, e mesmo assim tem limite. Os tardígrados, portanto, não são super-heróis: são especialistas em esperar a hora certa de voltar à vida.<br>Entender como eles fazem isso pode ajudar a ciência a, um dia, conservar vacinas sem precisar de geladeira.<br><i>(Texto escrito para este simulado.)</i>`,
+ q:`Assinale a alternativa em que a relação de sentido indicada para a expressão retirada do texto está correta.`,
+ o:[
+  [`“O que deixou esses bichinhos famosos, <b>porém</b>, foi a sua resistência”: causa.`, `“Porém” é adversativo: opõe a fama de resistente ao tamanho minúsculo e ao jeito desajeitado descritos no 1º parágrafo.`],
+  [`“<b>Por causa desse</b> jeito desajeitado, eles ganharam o apelido”: consequência.`, `A expressão introduz a <b>causa</b> do apelido; a consequência é “ganharam o apelido de ursos-d'água”.`],
+  [`“anda devagar, <b>como se</b> estivesse sempre com preguiça”: conformidade.`, `“Como se” estabelece uma <b>comparação</b> (hipotética). Conformidade seria “como” no sentido de “conforme” (“fiz como você mandou”).`],
+  [`“<b>Assim</b>, ele aguenta frio intenso, calor forte e até radiação”: conclusão ou consequência do que foi descrito antes, com o sentido de “dessa forma”.`, ``],
+  [`“A resistência só aparece no ‘modo barrilzinho’, e <b>mesmo assim</b> tem limite”: explicação.`, `“Mesmo assim” tem valor <b>concessivo</b>: apesar de estar no modo barrilzinho, a resistência tem limite.`]
+ ], a:3,
+ e:`Depois de explicar o que o tardígrado faz quando o ambiente seca (recolhe as patas, perde água, desacelera o metabolismo), o texto apresenta o <b>resultado</b> disso: “Assim (= dessa forma, por isso), ele aguenta...”. Revise: porém = oposição; por causa de = causa; como se = comparação; mesmo assim = concessão.`},
+
+/* 5 · p-fake */
+{t:'p-fake', d:1,
+ tt:`Texto 2`,
+ tx:`<b>Postagem compartilhada numa rede social</b><br><i>@alerta.saude.verdade · 1,2 mil compartilhamentos</i><br>ATENÇÃO, PAIS!!! Cientistas COMPROVARAM: quem passa mais de 3 horas por dia no celular PERDE 10 PONTOS DE INTELIGÊNCIA POR ANO!!! O estudo foi feito numa universidade famosa dos Estados Unidos, mas a grande imprensa está escondendo. COMPARTILHE ANTES QUE APAGUEM!!!<br><br><b>Checagem publicada pela agência Fato em Foco</b><br>Classificação: <b>FALSO</b>. A postagem não informa o nome da universidade, dos pesquisadores nem da revista em que o suposto estudo teria sido publicado. Nossa equipe procurou nas principais bases de pesquisas científicas e não encontrou nenhum trabalho com essa conclusão. A pesquisadora Marina Teles, especialista em desenvolvimento infantil, explica que o uso excessivo de telas <b>pode</b> prejudicar o sono e a concentração, o que <b>talvez</b> afete o desempenho escolar. “Mas não existe nenhuma pesquisa que mostre perda de 10 pontos de inteligência por ano. Esse número foi inventado”, afirma.<br><i>(Postagem, agência e pesquisadora fictícias, criadas para este simulado.)</i>`,
+ q:`Qual alternativa reúne <b>apenas</b> sinais de alerta presentes na postagem?`,
+ o:[
+  [`O tema ligado à saúde e o uso da palavra “cientistas”.`, `Falar de saúde ou mencionar cientistas não é, por si só, sinal de falsidade; textos confiáveis também fazem isso.`],
+  [`Perfil que não identifica quem escreveu, ausência do nome da universidade e dos pesquisadores e pedido urgente de compartilhamento.`, ``],
+  [`O número de compartilhamentos e a menção aos Estados Unidos.`, `Ser muito compartilhada não prova nada, nem a favor nem contra; e citar um país não é sinal de alerta.`],
+  [`A linguagem formal e a citação de dados que podem ser conferidos.`, `É o oposto: a postagem usa CAIXA ALTA e exclamações e não traz dados verificáveis.`],
+  [`A data recente e o link para o estudo original.`, `A postagem não traz data nem link; a falta deles é que seria um sinal de alerta.`]
+ ], a:1,
+ e:`Checklist do detetive: <b>autor</b> não identificado, <b>fonte</b> vaga (“uma universidade famosa”), tom sensacionalista e apelo do tipo “compartilhe antes que apaguem”. Todos esses sinais estão na alternativa B.`},
+
+/* 6 · p-fake */
+{t:'p-fake', d:3,
+ tt:`Texto 2`,
+ tx:`<b>Postagem compartilhada numa rede social</b><br><i>@alerta.saude.verdade · 1,2 mil compartilhamentos</i><br>ATENÇÃO, PAIS!!! Cientistas COMPROVARAM: quem passa mais de 3 horas por dia no celular PERDE 10 PONTOS DE INTELIGÊNCIA POR ANO!!! O estudo foi feito numa universidade famosa dos Estados Unidos, mas a grande imprensa está escondendo. COMPARTILHE ANTES QUE APAGUEM!!!<br><br><b>Checagem publicada pela agência Fato em Foco</b><br>Classificação: <b>FALSO</b>. A postagem não informa o nome da universidade, dos pesquisadores nem da revista em que o suposto estudo teria sido publicado. Nossa equipe procurou nas principais bases de pesquisas científicas e não encontrou nenhum trabalho com essa conclusão. A pesquisadora Marina Teles, especialista em desenvolvimento infantil, explica que o uso excessivo de telas <b>pode</b> prejudicar o sono e a concentração, o que <b>talvez</b> afete o desempenho escolar. “Mas não existe nenhuma pesquisa que mostre perda de 10 pontos de inteligência por ano. Esse número foi inventado”, afirma.<br><i>(Postagem, agência e pesquisadora fictícias, criadas para este simulado.)</i>`,
+ q:`Comparando a postagem e a checagem, é correto afirmar que a checagem:`,
+ o:[
+  [`confirma a postagem em parte, porque admite que o celular reduz a inteligência, embora menos de 10 pontos por ano.`, `A checagem não fala em redução de inteligência; a pesquisadora afirma que esse número “foi inventado”.`],
+  [`afirma que a universidade citada na postagem não existe.`, `A postagem nem chega a dizer o nome da universidade; a checagem critica justamente essa falta de informação.`],
+  [`considera o uso do celular inofensivo, desde que não passe de 3 horas por dia.`, `A checagem não estabelece limite de horas nem diz que o celular é inofensivo; você trouxe o número da postagem para a checagem.`],
+  [`classifica a postagem como falsa porque a grande imprensa não publicou o estudo.`, `O motivo é outro: nenhuma pesquisa com essa conclusão foi encontrada nas bases científicas. O silêncio da imprensa é argumento da própria postagem.`],
+  [`reconhece que o excesso de telas pode trazer prejuízos, mas desmente o dado sobre a perda de inteligência, que não tem base em pesquisa.`, ``]
+ ], a:4,
+ e:`A checagem é equilibrada: <b>não</b> diz que telas são inofensivas (admite possíveis efeitos no sono e na concentração), mas mostra que o dado central da postagem (10 pontos de inteligência por ano) não aparece em nenhum estudo. Uma fake news muitas vezes mistura um assunto real com um dado inventado.`},
+
+/* 7 · p-modal */
+{t:'p-modal', d:2,
+ tt:`Texto 2`,
+ tx:`<b>Postagem compartilhada numa rede social</b><br><i>@alerta.saude.verdade · 1,2 mil compartilhamentos</i><br>ATENÇÃO, PAIS!!! Cientistas COMPROVARAM: quem passa mais de 3 horas por dia no celular PERDE 10 PONTOS DE INTELIGÊNCIA POR ANO!!! O estudo foi feito numa universidade famosa dos Estados Unidos, mas a grande imprensa está escondendo. COMPARTILHE ANTES QUE APAGUEM!!!<br><br><b>Checagem publicada pela agência Fato em Foco</b><br>Classificação: <b>FALSO</b>. A postagem não informa o nome da universidade, dos pesquisadores nem da revista em que o suposto estudo teria sido publicado. Nossa equipe procurou nas principais bases de pesquisas científicas e não encontrou nenhum trabalho com essa conclusão. A pesquisadora Marina Teles, especialista em desenvolvimento infantil, explica que o uso excessivo de telas <b>pode</b> prejudicar o sono e a concentração, o que <b>talvez</b> afete o desempenho escolar. “Mas não existe nenhuma pesquisa que mostre perda de 10 pontos de inteligência por ano. Esse número foi inventado”, afirma.<br><i>(Postagem, agência e pesquisadora fictícias, criadas para este simulado.)</i>`,
+ q:`Na checagem, as palavras destacadas “<b>pode</b>” e “<b>talvez</b>”, em contraste com “COMPROVARAM”, da postagem, mostram que:`,
+ o:[
+  [`a pesquisadora apresenta os efeitos das telas como possibilidades, com cautela, enquanto a postagem apresenta sua afirmação como certeza absoluta.`, ``],
+  [`a pesquisadora tem certeza de que o celular prejudica o sono de todas as crianças.`, `“Pode” e “talvez” indicam possibilidade, não certeza; e o texto não fala em “todas as crianças”.`],
+  [`a pesquisadora concorda com a postagem, mas usa uma linguagem mais educada.`, `Ela discorda do dado principal (“Esse número foi inventado”); a diferença não é só de educação, é de grau de certeza.`],
+  [`as duas falas expressam o mesmo grau de certeza, só que com palavras diferentes.`, `“Comprovaram” expressa certeza total; “pode” e “talvez” relativizam a afirmação.`],
+  [`“pode” indica permissão: a pesquisadora autoriza o uso do celular por até 3 horas.`, `“Poder” tem vários sentidos, mas aqui é possibilidade (“é possível que prejudique”), não permissão.`]
+ ], a:0,
+ e:`São <b>modalizadores</b>: palavras que mostram o grau de certeza de quem fala. Quem conhece a ciência costuma ser cauteloso (pode, talvez, é possível); a postagem falsa usa a certeza absoluta (COMPROVARAM) para convencer.`},
+
+/* 8 · p-inter */
+{t:'p-inter', d:1,
+ tt:`Texto 3`,
+ tx:`<b>Texto A</b><br>“Oh! que saudades que tenho<br>Da aurora da minha vida,<br>Da minha infância querida<br>Que os anos não trazem mais!”<br>(Casimiro de Abreu, “Meus oito anos”, em <i>As primaveras</i>, 1859)<br><br><b>Texto B</b> (publicado no mural da escola)<br><b>Meus oito por cento</b><br>Oh! que saudades que tenho<br>Da carga da bateria,<br>Dos cem por cento do dia<br>Que o cabo quebrado não traz mais!`,
+ q:`A relação do Texto B com o Texto A é de:`,
+ o:[
+  [`paráfrase, porque o Texto B diz a mesma coisa que o Texto A com outras palavras.`, `O sentido mudou completamente: a saudade da infância virou saudade da bateria cheia. Paráfrase mantém o sentido.`],
+  [`citação, porque o Texto B reproduz o poema entre aspas e indica o autor.`, `Só o primeiro verso é igual; os outros foram alterados, e o Texto B não cita o autor.`],
+  [`paródia, porque imita a estrutura (e até o título) do poema, mudando o sentido para fazer humor com a bateria do celular.`, ``],
+  [`epígrafe, porque o Texto B aparece no início de um livro de Casimiro de Abreu.`, `Epígrafe é um trecho de outro autor colocado no início de uma obra; não é o caso.`],
+  [`cópia sem modificações, porque o Texto B repete todos os versos do Texto A.`, `Apenas o primeiro verso foi mantido; os demais foram trocados de propósito.`]
+ ], a:2,
+ e:`O Texto B conserva a forma do original (o primeiro verso, a rima no 2º e no 3º versos, o fim “não traz mais” e até o título “Meus oito...”), mas troca a saudade da infância pela saudade da bateria carregada. Imitar e mudar o sentido com humor é <b>paródia</b>.`},
+
+/* 9 · p-fig */
+{t:'p-fig', d:2,
+ tt:`Texto 3`,
+ tx:`<b>Texto A</b><br>“Oh! que saudades que tenho<br>Da aurora da minha vida,<br>Da minha infância querida<br>Que os anos não trazem mais!”<br>(Casimiro de Abreu, “Meus oito anos”, em <i>As primaveras</i>, 1859)<br><br><b>Texto B</b> (publicado no mural da escola)<br><b>Meus oito por cento</b><br>Oh! que saudades que tenho<br>Da carga da bateria,<br>Dos cem por cento do dia<br>Que o cabo quebrado não traz mais!`,
+ q:`No Texto A, a expressão “aurora da minha vida” constitui uma:`,
+ o:[
+  [`hipérbole, porque exagera a saudade que o eu lírico sente.`, `Hipérbole é exagero intencional (“morri de rir”); “aurora” não exagera nada, ela substitui a palavra “infância”.`],
+  [`comparação, porque aproxima a vida de um dia por meio de um conectivo.`, `Não há conectivo comparativo (como, tal qual, feito). Sem conectivo, a aproximação é metáfora.`],
+  [`personificação, porque atribui características humanas à aurora.`, `A aurora não faz nada de humano no verso; ela apenas representa o começo da vida.`],
+  [`metáfora, porque a aurora, o começo do dia, representa a infância, o começo da vida.`, ``],
+  [`antítese, porque opõe a aurora aos anos que passam.`, `Antítese é a oposição de ideias contrárias (dia × noite) na mesma frase; “aurora” e “anos” não são opostos.`]
+ ], a:3,
+ e:`Aurora é o nascer do dia. O poeta aproxima o começo do dia do começo da vida, sem usar conectivo: “aurora da minha vida” = infância. Isso é <b>metáfora</b>. O verso seguinte confirma a leitura: “Da minha infância querida”.`},
+
+/* 10 · p-lit */
+{t:'p-lit', d:1,
+ tt:`Texto 4`,
+ tx:`<b>O vulcão</b><br>Faltavam dez minutos para a apresentação da feira de ciências quando Davi tropeçou no fio da extensão. O vulcão de gesso, que ele e Lia tinham levado três semanas para construir, rachou ao meio no chão do ginásio.<br>— Acabou — disse ele, sentando-se ao lado dos cacos. — A gente vai ter que desistir.<br>Lia olhou para a mesa vizinha. Ali estava a equipe de Otávio, a mesma que tinha rido do projeto deles na semana anterior. Otávio segurava um rolo de fita adesiva prateada e um tubo de cola.<br>Pedir ajuda logo para ele? Nem pensar. Mas o relógio do ginásio não esperava ninguém.<br>— Otávio, você me empresta a fita? — perguntou ela, sem conseguir olhar nos olhos dele.<br>Ele hesitou, olhou para os cacos e, em vez de responder, ajoelhou-se ao lado de Davi e começou a juntar as partes.<br>Quando a professora chegou à mesa, o vulcão tinha uma cicatriz prateada de um lado a outro. Lia, embora tremesse um pouco, explicou que, na natureza, as montanhas também se rompem e se refazem.<br>— Este foi o único vulcão da feira que passou por um terremoto de verdade — disse a professora, sorrindo.<br><i>(Conto escrito para este simulado.)</i>`,
+ q:`O conflito que movimenta o conto é:`,
+ o:[
+  [`o tempo que Lia e Davi levaram para construir o vulcão.`, `As três semanas de construção fazem parte da situação inicial, antes de surgir o problema.`],
+  [`a quebra do vulcão minutos antes da apresentação, que obriga Lia a decidir se pede ajuda à equipe rival.`, ``],
+  [`o elogio da professora ao vulcão consertado.`, `Esse é o desfecho, o momento em que o problema já foi resolvido.`],
+  [`o fato de a feira acontecer num ginásio cheio de fios.`, `O fio é só o que causa o tropeço; o texto não trata o ginásio como problema.`],
+  [`a vontade de Otávio de vencer a feira de ciências.`, `O texto não diz que Otávio queria vencer; ele, aliás, ajuda a consertar o trabalho dos colegas.`]
+ ], a:1,
+ e:`O conflito é o problema que dispara a ação: o vulcão racha a dez minutos da apresentação. A tensão aumenta porque a única ajuda à mão é a da equipe que tinha rido do projeto. O clímax é o pedido de Lia; o desfecho, a fala da professora.`},
+
+/* 11 · p-lit */
+{t:'p-lit', d:3,
+ tt:`Texto 4`,
+ tx:`<b>O vulcão</b><br>Faltavam dez minutos para a apresentação da feira de ciências quando Davi tropeçou no fio da extensão. O vulcão de gesso, que ele e Lia tinham levado três semanas para construir, rachou ao meio no chão do ginásio.<br>— Acabou — disse ele, sentando-se ao lado dos cacos. — A gente vai ter que desistir.<br>Lia olhou para a mesa vizinha. Ali estava a equipe de Otávio, a mesma que tinha rido do projeto deles na semana anterior. Otávio segurava um rolo de fita adesiva prateada e um tubo de cola.<br>Pedir ajuda logo para ele? Nem pensar. Mas o relógio do ginásio não esperava ninguém.<br>— Otávio, você me empresta a fita? — perguntou ela, sem conseguir olhar nos olhos dele.<br>Ele hesitou, olhou para os cacos e, em vez de responder, ajoelhou-se ao lado de Davi e começou a juntar as partes.<br>Quando a professora chegou à mesa, o vulcão tinha uma cicatriz prateada de um lado a outro. Lia, embora tremesse um pouco, explicou que, na natureza, as montanhas também se rompem e se refazem.<br>— Este foi o único vulcão da feira que passou por um terremoto de verdade — disse a professora, sorrindo.<br><i>(Conto escrito para este simulado.)</i>`,
+ q:`No trecho “Pedir ajuda logo para ele? Nem pensar.”, ocorre:`,
+ o:[
+  [`discurso direto, com a fala de Lia dirigida a Davi.`, `Não há travessão nem verbo que introduza fala; Lia não diz isso em voz alta a ninguém.`],
+  [`discurso indireto, pois o narrador relata o que Lia disse usando a palavra “que”.`, `No discurso indireto, a fala vem introduzida por verbo de dizer + “que” (“Lia disse que...”), o que não acontece aqui.`],
+  [`a voz de um narrador em 1ª pessoa, que participa da história.`, `O narrador é de 3ª pessoa (“Lia olhou”, “disse ele”); ele não é personagem.`],
+  [`o pensamento de Davi, que não queria pedir ajuda a Otávio.`, `Quem olha para a mesa de Otávio e depois pede a fita é Lia; o pensamento é dela.`],
+  [`discurso indireto livre: o pensamento de Lia aparece misturado à voz do narrador, sem travessão nem verbo de dizer.`, ``]
+ ], a:4,
+ e:`O narrador está contando a cena em 3ª pessoa e, de repente, “entra” a voz interior de Lia, com pergunta e exclamação típicas de quem pensa (“Nem pensar.”), sem aviso. Esse é o <b>discurso indireto livre</b>. Repare que logo depois ela faz o contrário do que pensou, o que mostra o tamanho do conflito.`},
+
+/* 12 · p-conj */
+{t:'p-conj', d:2,
+ tt:`Texto 4`,
+ tx:`<b>O vulcão</b><br>Faltavam dez minutos para a apresentação da feira de ciências quando Davi tropeçou no fio da extensão. O vulcão de gesso, que ele e Lia tinham levado três semanas para construir, rachou ao meio no chão do ginásio.<br>— Acabou — disse ele, sentando-se ao lado dos cacos. — A gente vai ter que desistir.<br>Lia olhou para a mesa vizinha. Ali estava a equipe de Otávio, a mesma que tinha rido do projeto deles na semana anterior. Otávio segurava um rolo de fita adesiva prateada e um tubo de cola.<br>Pedir ajuda logo para ele? Nem pensar. Mas o relógio do ginásio não esperava ninguém.<br>— Otávio, você me empresta a fita? — perguntou ela, sem conseguir olhar nos olhos dele.<br>Ele hesitou, olhou para os cacos e, em vez de responder, ajoelhou-se ao lado de Davi e começou a juntar as partes.<br>Quando a professora chegou à mesa, o vulcão tinha uma cicatriz prateada de um lado a outro. Lia, embora tremesse um pouco, explicou que, na natureza, as montanhas também se rompem e se refazem.<br>— Este foi o único vulcão da feira que passou por um terremoto de verdade — disse a professora, sorrindo.<br><i>(Conto escrito para este simulado.)</i>`,
+ q:`No trecho “Lia, <b>embora</b> tremesse um pouco, explicou que, na natureza, as montanhas também se rompem e se refazem”, a conjunção destacada pode ser substituída, sem alteração de sentido, por:`,
+ o:[
+  [`visto que`, `“Visto que” indica causa: diria que ela explicou <b>porque</b> tremia, o que não faz sentido.`],
+  [`contanto que`, `“Contanto que” indica condição, como se ela só explicasse se tremesse.`],
+  [`ainda que`, ``],
+  [`à medida que`, `“À medida que” indica proporção (quanto mais tremia, mais explicava), sentido que o texto não tem.`],
+  [`a fim de que`, `“A fim de que” indica finalidade, como se ela explicasse para tremer.`]
+ ], a:2,
+ e:`“Embora” é <b>concessiva</b>: apresenta um obstáculo (o nervosismo) que não impediu a ação (explicar). “Ainda que” tem o mesmo valor e também pede o verbo no subjuntivo: “ainda que tremesse um pouco”.`},
+
+/* 13 · p-adj */
+{t:'p-adj', d:3,
+ q:`Para o jornal da escola, cinco alunos escreveram frases sobre a feira de ciências. Assinale a frase em que o pronome relativo foi empregado de acordo com a norma-padrão.`,
+ o:[
+  [`“O projeto que eu mais gostei foi o do vulcão.”`, `Quem gosta, gosta <b>de</b> algo: o correto é “o projeto <b>de que</b> eu mais gostei”.`],
+  [`“A professora que todos confiam é a de Ciências.”`, `Quem confia, confia <b>em</b> alguém: “a professora <b>em quem</b> todos confiam”.`],
+  [`“O momento onde o vulcão rachou foi assustador.”`, `“Onde” só se usa para lugar físico. Para tempo: “o momento <b>em que</b> o vulcão rachou”.`],
+  [`“O tema de que trata o melhor trabalho é a reciclagem de água.”`, ``],
+  [`“O ginásio que a feira aconteceu estava lotado.”`, `Algo acontece <b>em</b> um lugar: “o ginásio <b>em que</b> (ou <b>onde</b>) a feira aconteceu”.`]
+ ], a:3,
+ e:`Truque: desfaça a oração adjetiva e veja a regência do verbo. “O melhor trabalho trata <b>do</b> tema” → tratar <b>de</b> → “o tema <b>de que</b> trata o melhor trabalho”. A preposição exigida pelo verbo vai para antes do pronome relativo.`},
+
+/* 14 · p-vl */
+{t:'p-vl', d:2,
+ q:`Leia a frase publicada no grupo dos pais: “Mesmo depois do aviso da diretora, a turma continuou <b>agitada</b>.” Sobre o termo destacado e o verbo “continuou”, é correto afirmar que são, respectivamente:`,
+ o:[
+  [`predicativo do sujeito; verbo de ligação que indica mudança de estado.`, `A função está certa, mas “continuar” não indica mudança: a turma <b>já estava</b> agitada e permaneceu assim. Mudança de estado seria “ficou”, “tornou-se”.`],
+  [`predicativo do sujeito; verbo de ligação que indica continuidade (permanência) de um estado.`, ``],
+  [`objeto direto; verbo transitivo direto.`, `“Agitada” não é algo que a turma “continuou” como ação sobre um objeto; é uma característica da própria turma.`],
+  [`adjunto adverbial de modo; verbo intransitivo.`, `“Agitada” concorda com “turma” (feminino singular), como um adjetivo; um advérbio não teria concordância.`],
+  [`adjunto adnominal; verbo de ligação que indica aparência.`, `Adjunto adnominal fica colado ao nome (“a turma agitada”); aqui o adjetivo vem ligado pelo verbo. E aparência seria “parecer”.`]
+ ], a:1,
+ e:`“Continuar” liga o sujeito (“a turma”) a um estado dele (“agitada”), que é o <b>predicativo do sujeito</b>. Cada verbo de ligação traz uma nuance: ser (permanente), estar (passageiro), ficar/tornar-se (mudança), parecer (aparência), <b>continuar/permanecer</b> (continuidade).`},
+
+/* 15 · p-form */
+{t:'p-form', d:1,
+ q:`Leia a legenda de uma foto de laboratório: “Depois de passarem anos sem água, os tardígrados foram <b>reidratados</b> e voltaram a se mexer.” O verbo “reidratar”, de onde vem a forma destacada, foi formado por:`,
+ o:[
+  [`derivação prefixal: o prefixo <i>re-</i> (de novo) foi acrescentado a “hidratar”.`, ``],
+  [`derivação sufixal: o sufixo <i>-ado</i> foi acrescentado a “reidratar”.`, `O <i>-ado</i> de “reidratados” é só a terminação do particípio (flexão do verbo); a pergunta é sobre a formação do verbo “reidratar”.`],
+  [`derivação parassintética, com prefixo e sufixo acrescentados ao mesmo tempo.`, `Existe “hidratar” sem o prefixo; logo, o prefixo foi acrescentado a uma palavra que já existia. Na parassíntese, sem um dos dois a palavra não existe (como “entardecer”).`],
+  [`composição por justaposição, juntando duas palavras sem alteração.`, `<i>Re-</i> é prefixo, não palavra independente; composição junta dois radicais.`],
+  [`derivação regressiva, pela redução de uma palavra maior.`, `Na regressiva a palavra encolhe (como “o combate”, de “combater”); aqui ela cresce com um prefixo.`]
+ ], a:0,
+ e:`Reidratar = <b>re-</b> (repetição) + hidratar → “hidratar de novo”. Repare na grafia: diante do prefixo, o <i>h</i> de “hidratar” cai e as palavras se juntam (reidratar, reaver, desumano).`}
+];
+
+/* SIMULADO C · Matemática (15 questões, na ordem da prova)
+   Formato: {t, d, q, o:[[texto, feedback]...5], a, e, tx?, tt?}  ·  ver SIMULADO_SPEC.md
+   Conferido em check_sim_c_mat.py */
+const SIM_C_MAT = [
+
+/* 1 · m-pct · d1 · B */
+{t:'m-pct', d:1, q:`Uma loja vende uma geladeira por R$ 1.200,00 à vista ou em 10 parcelas de R$ 132,00, sem entrada. Em relação ao preço à vista, quantos por cento a mais paga quem compra parcelado?`, o:[
+  [`cerca de 9,1%`, `Você dividiu a diferença (R$ 120,00) pelo total parcelado (R$ 1.320,00). A base da comparação é o preço à vista: 120 ÷ 1 200.`],
+  [`10%`, ``],
+  [`11%`, `Você comparou uma parcela (R$ 132,00) com o preço à vista. É preciso somar as 10 parcelas primeiro: 10 × 132 = 1 320.`],
+  [`12%`, `Você leu a diferença de R$ 120,00 como 12%. Mas R$ 120,00 seria 12% de R$ 1.000,00, não de R$ 1.200,00.`],
+  [`110%`, `1 320 ÷ 1 200 = 1,10 mostra que o parcelado é 110% DO preço à vista, ou seja, 10% A MAIS.`]
+ ], a:1, e:`Total parcelado: 10 × 132 = R$ 1.320,00.<br>Diferença: 1 320 − 1 200 = R$ 120,00.<br>Em relação ao preço à vista: [[120|1 200]] = 0,10 = <b>10%</b> a mais.`},
+
+/* 2 · m-frac · d2 · D */
+{t:'m-frac', d:2, q:`O prêmio de um concurso de redação foi dividido entre os três primeiros colocados. O 1º lugar recebeu [[1|3]] do prêmio; o 2º lugar recebeu [[2|5]] do que sobrou; e o 3º lugar recebeu o restante, que foi R$ 1.200,00. Qual era o valor total do prêmio?`, o:[
+  [`R$ 1.200,00`, `Esse é só o valor do 3º lugar. A pergunta pede o prêmio inteiro.`],
+  [`R$ 1.800,00`, `Você achou que os R$ 1.200,00 eram tudo o que sobrou depois do 1º lugar ([[2|3]] do prêmio). Mas o 2º lugar ainda tirou uma parte desse resto.`],
+  [`R$ 2.000,00`, `Você esqueceu o 1º lugar: considerou que R$ 1.200,00 eram [[3|5]] do prêmio inteiro. Na verdade, são [[3|5]] de [[2|3]] do prêmio.`],
+  [`R$ 3.000,00`, ``],
+  [`R$ 4.500,00`, `Você calculou os [[2|5]] do 2º lugar sobre o prêmio todo (1 − [[1|3]] − [[2|5]] = [[4|15]]). O texto diz “[[2|5]] do que sobrou”.`]
+ ], a:3, e:`Depois do 1º lugar, sobram [[2|3]] do prêmio.<br>O 2º leva [[2|5]] desse resto, então o 3º fica com [[3|5]] do resto: [[3|5]] × [[2|3]] = [[2|5]] do prêmio.<br>[[2|5]] do prêmio = R$ 1.200,00 → [[1|5]] = R$ 600,00 → prêmio = 5 × 600 = <b>R$ 3.000,00</b>.<br>Conferindo: 1º = 1 000; sobram 2 000; 2º = [[2|5]] × 2 000 = 800; 3º = 2 000 − 800 = 1 200. ✔`},
+
+/* 3 · m-cient · d1 · E */
+{t:'m-cient', d:1, q:`Um grão de arroz tem massa de aproximadamente 2 × 10<sup>−2</sup> grama. Quantos grãos de arroz há, aproximadamente, num pacote de 5 kg?`, o:[
+  [`4 × 10<sup>−6</sup>`, `Você dividiu ao contrário: a massa de UM grão pela massa do pacote. O certo é massa do pacote ÷ massa de um grão.`],
+  [`2,5 × 10<sup>1</sup>`, `Erro de sinal no expoente: na divisão, 10<sup>3</sup> ÷ 10<sup>−2</sup> = 10<sup>3 − (−2)</sup> = 10<sup>5</sup>, e não 10<sup>1</sup>.`],
+  [`1 × 10<sup>2</sup>`, `Você multiplicou (5 000 × 0,02 = 100). Para saber quantos grãos cabem, divide-se a massa total pela massa de um grão.`],
+  [`2,5 × 10<sup>2</sup>`, `Você esqueceu de passar 5 kg para gramas (5 ÷ 0,02 = 250). As duas massas precisam estar na mesma unidade.`],
+  [`2,5 × 10<sup>5</sup>`, ``]
+ ], a:4, e:`5 kg = 5 000 g = 5 × 10<sup>3</sup> g.<br>Número de grãos = [[5 × 10<sup>3</sup>|2 × 10<sup>−2</sup>]] = 2,5 × 10<sup>3 − (−2)</sup> = <b>2,5 × 10<sup>5</sup></b> (250 mil grãos).`},
+
+/* 4 · m-sist · d2 · A */
+{t:'m-sist', d:2, q:`O número da casa de Richard tem dois algarismos, e a soma deles é 11. Se os algarismos trocarem de lugar, o número obtido é 27 unidades maior que o número da casa. Qual é o número da casa?`, o:[
+  [`47`, ``],
+  [`56`, `A soma dos algarismos é 11, mas, trocando, 65 − 56 = 9, e não 27. Confira sempre as duas condições.`],
+  [`65`, `A soma é 11, mas trocando os algarismos o número diminui (65 → 56). O número invertido tem de ser MAIOR.`],
+  [`74`, `Esse é o número já com os algarismos trocados. A casa é o número menor, 47.`],
+  [`83`, `A soma é 11, mas 38 é menor que 83. A segunda condição não é atendida.`]
+ ], a:0, e:`Seja o número 10x + y (x = dezena, y = unidade).<br>x + y = 11<br>(10y + x) − (10x + y) = 27 → 9y − 9x = 27 → y − x = 3<br>Somando: 2y = 14 → y = 7 e x = 4.<br>A casa é a de número <b>47</b> (invertido: 74; 74 − 47 = 27 ✔).`},
+
+/* 5 · m-prod · d3 · C */
+{t:'m-prod', d:3, q:`Um terreno tem a forma de um quadrado. O dono comprou uma faixa de terra vizinha e cada lado do terreno aumentou 3 m, continuando quadrado. Com isso, a área aumentou 81 m<sup>2</sup>. Qual era o perímetro do terreno antes da ampliação?`, o:[
+  [`24 m`, `Você usou √{81} = 9 como lado novo e tirou 3 (lado 6). Mas 81 m<sup>2</sup> é só o AUMENTO de área, não a área do terreno novo.`],
+  [`36 m`, `Você usou √{81} = 9 como lado antigo. O aumento de área não é um quadrado sozinho: é (x + 3)<sup>2</sup> − x<sup>2</sup>.`],
+  [`48 m`, ``],
+  [`54 m`, `Você esqueceu o 9 do produto notável: (x + 3)<sup>2</sup> = x<sup>2</sup> + 6x + <b>9</b>. Ficou 6x = 81, x = 13,5.`],
+  [`60 m`, `Esse é o perímetro DEPOIS da ampliação (lado 15 m). A pergunta pede o de antes.`]
+ ], a:2, e:`Lado antigo: x. Lado novo: x + 3.<br>Aumento de área: (x + 3)<sup>2</sup> − x<sup>2</sup> = x<sup>2</sup> + 6x + 9 − x<sup>2</sup> = 6x + 9.<br>6x + 9 = 81 → 6x = 72 → x = 12 m.<br>Perímetro antes: 4 × 12 = <b>48 m</b>.<br>Conferindo: 15<sup>2</sup> − 12<sup>2</sup> = 225 − 144 = 81 ✔`},
+
+/* 6 · m-eq2 · d2 · A */
+{t:'m-eq2', d:2, q:`Num campeonato de futsal em turno único, cada time enfrenta cada um dos outros exatamente uma vez. Ao todo, foram disputados 28 jogos. Quantos jogos cada time disputou?`, o:[
+  [`7`, ``],
+  [`8`, `8 é o número de TIMES. Cada time enfrenta todos os outros, ou seja, 8 − 1 = 7 adversários.`],
+  [`14`, `Você só dividiu 28 por 2. É preciso descobrir primeiro quantos times há.`],
+  [`28`, `28 é o total de jogos do campeonato, não o número de jogos de cada time.`],
+  [`56`, `56 = 2 × 28 é o total de “participações” (cada jogo tem 2 times). Ainda falta dividir pelo número de times: 56 ÷ 8 = 7.`]
+ ], a:0, e:`Com n times, cada um joga n − 1 vezes e cada jogo é contado duas vezes: jogos = [[n(n − 1)|2]].<br>[[n(n − 1)|2]] = 28 → n<sup>2</sup> − n − 56 = 0.<br>Δ = 1 + 224 = 225 → n = [[1 ± 15|2]] → n = 8 (o −7 não serve).<br>São 8 times, então cada um disputou 8 − 1 = <b>7 jogos</b>.`},
+
+/* 7 · m-prop · d2 · C */
+{t:'m-prop', d:2, q:`Um ônibus faz a viagem entre duas cidades em 4 horas, com velocidade média de 90 km/h. Para fazer a mesma viagem em 3h20min, qual deveria ser a velocidade média?`, o:[
+  [`75 km/h`, `Você tratou velocidade e tempo como diretamente proporcionais. Para chegar mais rápido, a velocidade tem de AUMENTAR: são grandezas inversamente proporcionais.`],
+  [`105 km/h`, `O tempo diminuiu [[1|6]], mas a velocidade não aumenta [[1|6]]. Como são inversas, ela é multiplicada por [[6|5]], não por [[7|6]].`],
+  [`108 km/h`, ``],
+  [`112,5 km/h`, `Você usou 3h20min = 3,2 h. Mas 20 min = [[20|60]] h = [[1|3]] h, então 3h20min = [[10|3]] h.`],
+  [`120 km/h`, `Você usou só 3 horas e esqueceu os 20 minutos.`]
+ ], a:2, e:`Distância: 90 × 4 = 360 km.<br>3h20min = 3 + [[1|3]] = [[10|3]] h.<br>Velocidade = 360 ÷ [[10|3]] = 360 × [[3|10]] = <b>108 km/h</b>.<br>(Pela proporção inversa: o tempo passa a ser [[10|3]] ÷ 4 = [[5|6]] do original, então a velocidade é multiplicada por [[6|5]]: 90 × 1,2 = 108.)`},
+
+/* 8 · m-func · d1 · C */
+{t:'m-func', d:1, q:`Nos Estados Unidos, a temperatura é medida em graus Fahrenheit (°F). Para converter uma temperatura C, em graus Celsius, para F, em graus Fahrenheit, usa-se a função F = 1,8C + 32. Num dia em que os termômetros de São Paulo marcam 20 °C, quanto marcaria um termômetro em graus Fahrenheit?`, o:[
+  [`36 °F`, `Você calculou só 1,8 × 20 e esqueceu de somar 32.`],
+  [`52 °F`, `Você somou 20 + 32 e esqueceu de multiplicar o 20 por 1,8.`],
+  [`68 °F`, ``],
+  [`77,6 °F`, `Você multiplicou o 32 por 1,8 (20 + 1,8 × 32). Na função, o 1,8 multiplica a temperatura C.`],
+  [`93,6 °F`, `Você somou primeiro e multiplicou depois: (20 + 32) × 1,8. A multiplicação 1,8 × C vem antes da soma.`]
+ ], a:2, e:`Substitua C = 20 na função:<br>F = 1,8 × 20 + 32 = 36 + 32 = <b>68 °F</b>.`},
+
+/* 9 · m-ang · d2 · A */
+{t:'m-ang', d:2, q:`As ruas r e s são retas e paralelas, e r fica ao norte de s. Uma trilha sai do ponto A da rua r, vai em linha reta até o ponto P (entre as duas ruas, a leste de A e de B) e depois segue em linha reta até o ponto B da rua s, formando um “bico” apontado para o leste. O ângulo entre o trecho AP e a rua r, medido do lado leste de A, é de 40°. O ângulo entre o trecho PB e a rua s, medido do lado leste de B, é de 35°. Quanto mede o ângulo APB, no bico da trilha?`, o:[
+  [`75°`, ``],
+  [`105°`, `Esse é o suplemento de 75°. Pela paralela traçada por P, os ângulos 40° e 35° aparecem como alternos internos e se SOMAM no bico.`],
+  [`140°`, `Esse é o suplemento de 40° (o ângulo do outro lado de A). O bico é formado pelos dois trechos, não pela rua r.`],
+  [`145°`, `Esse é o suplemento de 35° (o ângulo do outro lado de B).`],
+  [`285°`, `Esse é o ângulo “por fora” do bico (360° − 75°). A pergunta pede o ângulo APB no bico.`]
+ ], a:0, e:`Trace por P uma reta paralela a r e s.<br>O ângulo entre AP e essa paralela é alterno interno do ângulo de 40° → 40°.<br>O ângulo entre PB e essa paralela é alterno interno do ângulo de 35° → 35°.<br>APB = 40° + 35° = <b>75°</b>.`},
+
+/* 10 · m-sem · d3 · C */
+{t:'m-sem', d:3, q:`Para a festa junina, dois postes verticais, de 6 m e de 3 m de altura, foram fincados a 10 m um do outro, num chão plano. Esticaram-se dois fios retos: um do topo do poste maior até o pé do poste menor, e outro do topo do poste menor até o pé do poste maior. A que altura do chão os dois fios se cruzam?`, o:[
+  [`1,5 m`, `Você tomou a metade do poste menor. A altura do cruzamento depende dos dois postes.`],
+  [`1,8 m`, `Você dividiu 6 × 3 = 18 pela distância (10 m). Na semelhança, a distância entre os postes se cancela: divide-se por 6 + 3.`],
+  [`2 m`, ``],
+  [`3 m`, `Você tomou a metade do poste maior. O cruzamento fica mais perto do chão, porque o poste menor “puxa” o fio para baixo.`],
+  [`4,5 m`, `Você fez a média das alturas (6 + 3) ÷ 2. O cruzamento fica abaixo do topo do poste menor, então não pode passar de 3 m.`]
+ ], a:2, e:`Seja h a altura do cruzamento e d a distância (no chão) do pé do poste maior até o ponto abaixo do cruzamento.<br>Fio que sai do topo do poste menor (3 m) e desce até o pé do maior: triângulos semelhantes → [[h|3]] = [[d|10]].<br>Fio que sai do topo do poste maior (6 m) e desce até o pé do menor: [[h|6]] = [[10 − d|10]].<br>Somando: [[h|3]] + [[h|6]] = [[d + 10 − d|10]] = 1 → [[3h|6]] = 1 → h = <b>2 m</b>.<br>(Atalho: h = [[6 × 3|6 + 3]] = [[18|9]] = 2. A distância de 10 m não interfere.)`},
+
+/* 11 · m-cart · d1 · B */
+{t:'m-cart', d:1, q:`No mapa quadriculado de um bairro, cada unidade dos eixos corresponde a 100 m. A escola está no ponto (2, 1) e a casa de Richard está no ponto (−4, 9). Qual é a distância, em linha reta, entre a escola e a casa?`, o:[
+  [`0,6 km`, `Você considerou só a diferença na horizontal (6 unidades). A distância em linha reta usa as duas diferenças (Pitágoras).`],
+  [`1 km`, ``],
+  [`1,4 km`, `Você somou 6 + 8 = 14 unidades: esse é o caminho andando pelas ruas do quadriculado, não em linha reta.`],
+  [`10 km`, `Você esqueceu de tirar a raiz: 6<sup>2</sup> + 8<sup>2</sup> = 100 é o QUADRADO da distância. Distância = √{100} = 10 unidades.`],
+  [`14 km`, `Você somou 6 + 8 (caminho pelas ruas) e ainda tomou cada unidade como 1 km. Cada unidade vale 100 m.`]
+ ], a:1, e:`Diferenças: Δx = −4 − 2 = −6; Δy = 9 − 1 = 8.<br>d = √{(−6)<sup>2</sup> + 8<sup>2</sup>} = √{36 + 64} = √{100} = 10 unidades.<br>10 × 100 m = 1 000 m = <b>1 km</b>.`},
+
+/* 12 · m-area · d3 · E */
+{t:'m-area', d:3, q:`Um jardim tem a forma de um quadrado ABCD de 20 m de lado. Em cada lado, marcou-se um ponto a 5 m de um dos vértices, sempre no mesmo sentido de giro: P em AB com AP = 5 m, Q em BC com BQ = 5 m, R em CD com CR = 5 m e S em DA com DS = 5 m. O quadrilátero PQRS será coberto de grama, e os quatro cantos triangulares que sobram receberão flores. Qual é a área coberta de grama?`, o:[
+  [`100 m<sup>2</sup>`, `Você imaginou um quadrado de lado 20 − 2 × 5 = 10 m, com lados paralelos aos do jardim. PQRS é um quadrado “girado”, bem maior.`],
+  [`150 m<sup>2</sup>`, `Essa é a área dos quatro cantos com flores (4 × [[5 × 15|2]]). A pergunta pede a grama.`],
+  [`200 m<sup>2</sup>`, `Metade do jardim só seria o resultado se os pontos fossem os pontos médios dos lados (a 10 m dos vértices).`],
+  [`225 m<sup>2</sup>`, `Você usou como lado de PQRS o cateto de 15 m. O lado de PQRS é a hipotenusa do triângulo de catetos 5 e 15.`],
+  [`250 m<sup>2</sup>`, ``]
+ ], a:4, e:`Cada canto é um triângulo retângulo de catetos 5 m e 15 m: área = [[5 × 15|2]] = 37,5 m<sup>2</sup>.<br>Quatro cantos: 4 × 37,5 = 150 m<sup>2</sup>.<br>Grama: 20<sup>2</sup> − 150 = 400 − 150 = <b>250 m<sup>2</sup></b>.<br>(Conferindo por Pitágoras: lado de PQRS<sup>2</sup> = 5<sup>2</sup> + 15<sup>2</sup> = 250.)`},
+
+/* 13 · m-unid · d1 · B */
+{t:'m-unid', d:1, q:`Uma torneira mal fechada desperdiça 5 mL de água por minuto. Quantos litros ela desperdiça em um dia inteiro (24 horas)?`, o:[
+  [`0,3 L`, `Esse é o desperdício de 1 hora (5 × 60 = 300 mL). Faltou multiplicar por 24.`],
+  [`7,2 L`, ``],
+  [`72 L`, `Você dividiu 7 200 mL por 100. Para passar de mL para L, divide-se por 1 000.`],
+  [`720 L`, `Você dividiu 7 200 mL por 10. Para passar de mL para L, divide-se por 1 000.`],
+  [`7 200 L`, `7 200 é o resultado em MILILITROS. Faltou converter para litros.`]
+ ], a:1, e:`1 dia = 24 × 60 = 1 440 minutos.<br>5 × 1 440 = 7 200 mL.<br>7 200 mL ÷ 1 000 = <b>7,2 L</b>.`},
+
+/* 14 · m-media · d2 · B */
+{t:'m-media', d:2, q:`Um professor calculou a média das notas dos 20 alunos de uma turma e obteve 6,5. Depois, percebeu que tinha lançado a nota de um aluno como 4,0, quando o certo era 9,0. Corrigido o erro, qual é a média da turma?`, o:[
+  [`6,25`, `Você subtraiu a correção. A nota certa (9,0) é MAIOR que a lançada (4,0), então a média tem de subir.`],
+  [`6,75`, ``],
+  [`6,95`, `Você somou a nota 9,0 à soma das notas, mas esqueceu de retirar o 4,0 lançado por engano.`],
+  [`7,00`, `Você dividiu a diferença de 5 pontos por 10. A turma tem 20 alunos: 5 ÷ 20 = 0,25.`],
+  [`11,50`, `Você somou os 5 pontos direto na média. A diferença tem de ser dividida entre os 20 alunos.`]
+ ], a:1, e:`Soma das notas lançadas: 20 × 6,5 = 130.<br>Corrigindo: 130 − 4 + 9 = 135.<br>Média correta: [[135|20]] = <b>6,75</b>.<br>(Atalho: a soma aumentou 5 pontos, e 5 ÷ 20 = 0,25 → 6,5 + 0,25 = 6,75.)`},
+
+/* 15 · m-prob · d3 · D */
+{t:'m-prob', d:3, q:`Numa gincana, cada aluno sorteia uma ficha de uma urna com 60 fichas numeradas de 1 a 60. Ganha um brinde quem tirar um número que seja múltiplo de 4 ou múltiplo de 6. Qual é a probabilidade de um aluno ganhar o brinde?`, o:[
+  [`[[1|12]]`, `Você contou só os números que são múltiplos de 4 E de 6 ao mesmo tempo (múltiplos de 12). O “ou” inclui os que são de pelo menos um tipo.`],
+  [`[[1|6]]`, `Você contou só os múltiplos de 6 (10 números). Faltaram os múltiplos de 4.`],
+  [`[[1|4]]`, `Você contou só os múltiplos de 4 (15 números). Faltaram os múltiplos de 6 que não são múltiplos de 4.`],
+  [`[[1|3]]`, ``],
+  [`[[5|12]]`, `Você somou 15 + 10 = 25, mas os múltiplos de 12 (12, 24, 36, 48, 60) foram contados duas vezes.`]
+ ], a:3, e:`Múltiplos de 4 de 1 a 60: 60 ÷ 4 = 15.<br>Múltiplos de 6: 60 ÷ 6 = 10.<br>Múltiplos de 4 e de 6 ao mesmo tempo (múltiplos de 12): 60 ÷ 12 = 5 → foram contados duas vezes.<br>Casos favoráveis: 15 + 10 − 5 = 20.<br>P = [[20|60]] = <b>[[1|3]]</b>.`}
+
+];
+
 
 ;
 
@@ -3389,7 +4422,7 @@ function order(id,n){const a=[...Array(n).keys()];let h=hash(id);for(let i=n-1;i
 
 /* ---------- jogador e pontos ---------- */
 let USERS=LS.get(P+':users')||{},CUR=LS.get(P+':cur');if(CUR&&!USERS[CUR])CUR=null;
-const blank=()=>({rev:{},tr:{},sol:{},tn:{},fc:{}});
+const blank=()=>({rev:{},tr:{},sol:{},tn:{},fc:{},sim:{},simrun:null});
 let S=CUR?Object.assign(blank(),USERS[CUR].s):blank();
 const sum=o=>Object.values(o).reduce((a,v)=>a+(+v||0),0);
 const trOk=()=>QS.filter(x=>S.tr[x.id]===x.q[2]).length;
@@ -3474,7 +4507,7 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>go(b
 function route(){const h=(location.hash||'#rev').slice(1);const [tab,arg]=h.split('/');
  const k=['rev','treino','cards','simu','placar'].includes(tab)?tab:'rev';setTab(k);document.body.classList.remove('focus');
  if(k==='rev'){if(arg==='folha')renderFolha();else if(arg&&T[arg])renderTopic(arg);else renderList()}
- else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else if(k==='cards')renderCards();else renderSoon(k);
+ else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else if(k==='cards')renderCards();else if(k==='simu')renderSimu();else renderSoon(k);
  try{window.scrollTo(0,0)}catch(e){}}
 addEventListener('hashchange',route);
 
@@ -3552,7 +4585,7 @@ let confirmReset=false;
 function renderPlacar(){const el=$('placar');const t=TOTAL(),p=pctOf(t);
  let h='<div class="card hero"><div><div class="big">'+t+'<small style="font-size:16px;color:var(--muted)"> / '+MAX()+' pts</small></div><div class="rk">'+patente(p)+'</div><small style="color:var(--muted)">'+p+'% da missão</small></div></div>';
  if(!CUR)h+='<p class="card" style="padding:14px">Entre com seu nome para salvar seus pontos. <button type="button" class="btn sm" id="plIn">Entrar</button></p>';
- h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'<div class="r" style="opacity:.6"><span>Simulado cronometrado</span><b>em breve</b></div></div>';
+ h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'</div>';
  h+='<div class="card heat"><h3>Mapa dos tópicos</h3>';
  Object.keys(AREAS).forEach(a=>{const A=AREAS[a];h+='<p style="margin:6px 0;font-weight:700;color:'+A.ac+'">'+A.n+'</p><div class="cells">'+A.tops.map(x=>{const s=stat(x);const lv=s.r&&s.ok===s.n?2:(s.r||s.ans)?1:0;return '<button type="button" class="cell r'+lv+'" title="'+esc(x.t)+'" aria-label="'+esc(x.t)+'" data-t="'+x.id+'"></button>'}).join('')+'</div>'});
  h+='<div class="hleg"><span><i></i>não começado</span><span><i style="background:var(--hl)"></i>em andamento</span><span><i style="background:var(--ok)"></i>revisado e teste 100%</span></div></div>';
@@ -3698,7 +4731,87 @@ function renderCardsEnd(){const el=$('cards');const missed=Object.keys(FS.miss);
  if($('fAgain'))$('fAgain').onclick=()=>fcStart(shuffle(missed));
  $('fNew').onclick=()=>{FS=null;renderCards();try{window.scrollTo(0,0)}catch(e){}};}
 
-window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id),fc:FC.map(c=>c.id)};
+/* ---------- SIMULADOS CRONOMETRADOS ---------- */
+const SIMS=[['A',SIM_A_POR,SIM_A_MAT],['B',SIM_B_POR,SIM_B_MAT],['C',SIM_C_POR,SIM_C_MAT]].map(([id,p,m])=>({id,n:'Simulado '+id,q:[...p,...m].map((x,i)=>Object.assign({},x,{area:i<15?'por':'mat'}))}));
+const SIMI={};SIMS.forEach(s=>SIMI[s.id]=s);
+const SIM_SECS=3*60*60;
+function simPts(){let p=0;SIMS.forEach(s=>{const r=S.sim&&S.sim[s.id];if(r&&r.runs&&r.runs.length)p+=r.runs[0].sc*10});return p}
+CATS.push(['sim','Simulados (1ª tentativa)',()=>SIMS.length*300,simPts]);
+let SIMV=null; // {id, run} quando vendo resultado
+let simConfirm=false,simTick=null;
+const fmtT=s=>{s=Math.max(0,Math.round(s));const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return (h?h+'h':'')+String(m).padStart(h?2:1,'0')+'min'+(h?'':' '+String(x).padStart(2,'0')+'s')};
+const clockT=s=>{s=Math.max(0,Math.floor(s));const h=Math.floor(s/3600),m=Math.floor(s%3600/60),x=s%60;return h+':'+String(m).padStart(2,'0')+':'+String(x).padStart(2,'0')};
+function simLeft(){const r=S.simrun;return r?SIM_SECS-(Date.now()-r.start)/1000:0}
+function renderSimu(){const run=S.simrun;document.body.classList.toggle('focus',!!run||!!SIMV);if(run){if(simLeft()<=0){simSubmit(true);return}renderSimQ()}else if(SIMV)renderSimRes();else renderSimList()}
+function ensureTick(){if(simTick)return;simTick=setInterval(()=>{if(!S.simrun){clearInterval(simTick);simTick=null;return}const left=simLeft();if(left<=0){simSubmit(true);return}const c=$('simClock');if(c){c.textContent=clockT(left);c.classList.toggle('warn',left<=1800);c.classList.toggle('crit',left<=600)}},1000)}
+if(S.simrun)ensureTick();
+
+function renderSimList(){const el=$('simu');
+ let h='<div class="card tcard"><h2 class="th" style="margin:0 0 6px">Simulados cronometrados</h2><p style="margin:0 0 8px;color:var(--muted)">Igual ao sábado: <b>30 questões</b> (15 de Português + 15 de Matemática), <b>3 horas</b>, sem correção até entregar. No fim: nota, tempo e diagnóstico dos tópicos.</p>'+
+ '<details class="tip" style="margin:6px 0 0"><summary style="cursor:pointer;font-weight:700">Como fazer como se fosse a prova de verdade</summary><ul style="margin:8px 0 0;padding-left:20px"><li>Separe <b>3 horas sem interrupção</b>, lápis, borracha e folha de rascunho.</li><li>Celular no silencioso, sem calculadora e sem consultar nada.</li><li>O relógio <b>não pausa</b>: se sair do app, ele continua correndo (como na prova).</li><li>Treine a estratégia: 1ª passada no que você sabe, marque as dúvidas ⚑ e volte depois.</li><li>Deixe 10 minutos no fim para revisar a folha de respostas.</li><li>Sugestão: <b>A</b> na terça ou quarta, <b>B</b> na quinta. O <b>C</b> é reserva para quem quiser mais um.</li></ul></details></div>';
+ SIMS.forEach(s=>{const r=S.sim&&S.sim[s.id];const runs=(r&&r.runs)||[];const best=runs.reduce((a,x)=>Math.max(a,x.sc),-1);const first=runs[0];
+  h+='<div class="card simcard"><div class="simh"><b>'+s.n+'</b>'+(first?'<span class="pill ok">feito</span>':'<span class="pill">não feito</span>')+'</div>';
+  if(first)h+='<div class="simst"><div><span>1ª tentativa</span><b>'+first.sc+'/30</b><small>nota '+(first.sc/3).toFixed(1).replace('.',',')+'</small></div><div><span>Português</span><b>'+first.por+'/15</b></div><div><span>Matemática</span><b>'+first.mat+'/15</b></div><div><span>Tempo</span><b>'+fmtT(first.t)+'</b></div></div>'+(runs.length>1?'<p class="simmini">Melhor: '+best+'/30 em '+runs.length+' tentativas</p>':'');
+  h+='<div class="simb">'+(first?'<button type="button" class="btn ghost" data-sv="'+s.id+'">Ver correção</button><button type="button" class="btn" data-ss="'+s.id+'">Refazer</button>':'<button type="button" class="btn big" style="margin:0" data-ss="'+s.id+'">Começar o '+s.n+' · 3h</button>')+'</div></div>'});
+ el.innerHTML=h;
+ el.querySelectorAll('[data-ss]').forEach(b=>b.onclick=()=>{if(!need())return;simConfirm=b.dataset.ss;renderSimStart()});
+ el.querySelectorAll('[data-sv]').forEach(b=>b.onclick=()=>{const r=S.sim[b.dataset.sv];SIMV={id:b.dataset.sv,run:r.runs[r.runs.length-1],ri:r.runs.length-1};renderSimu();try{window.scrollTo(0,0)}catch(e){}});}
+function renderSimStart(){const el=$('simu');const s=SIMI[simConfirm];const again=S.sim&&S.sim[s.id]&&S.sim[s.id].runs.length;
+ el.innerHTML='<div class="card tcard" style="text-align:center"><h2 class="th" style="margin:0 0 6px">'+s.n+'</h2><p style="font-size:44px;margin:4px 0;font-weight:800;font-family:var(--head)">3:00:00</p><p>30 questões · Português (1 a 15) e Matemática (16 a 30)</p><p style="color:var(--muted);font-size:15px">O relógio começa quando você tocar em <b>Iniciar</b> e não pausa.'+(again?' <b>Refazendo:</b> esta tentativa não soma pontos, mas entra no seu histórico.':' Os acertos da <b>1ª tentativa</b> valem 10 pontos cada.')+'</p><button type="button" class="btn big" id="simGo">Iniciar agora</button><button type="button" class="btn ghost" id="simBack" style="width:100%">Voltar</button></div>';
+ $('simGo').onclick=()=>{const before=TOTAL();S.simrun={id:s.id,start:Date.now(),ans:{},mark:{},cur:0};simConfirm=false;save(before);ensureTick();renderSimu();try{window.scrollTo(0,0)}catch(e){}};
+ $('simBack').onclick=()=>{simConfirm=false;renderSimList()};}
+
+function renderSimQ(){const el=$('simu');const r=S.simrun,s=SIMI[r.id],i=r.cur,x=s.q[i],A=AREAS[x.area];const left=simLeft();
+ const nAns=Object.keys(r.ans).length,prev=s.q[i-1];
+ let h='<div class="simbar"><span class="clock'+(left<=600?' crit':left<=1800?' warn':'')+'" id="simClock">'+clockT(left)+'</span><span class="sp">'+s.n+' · '+nAns+'/30 respondidas</span><button type="button" class="btn sm" id="simEnd">Entregar</button></div>';
+ h+='<article style="--ac:'+A.ac+';--abg:'+A.abg+'"><div class="tags" style="margin:12px 0 8px"><span class="tag">Questão '+(i+1)+'</span><span class="tag">'+A.n+'</span>'+(r.mark[i]?'<span class="tag" style="background:var(--hl);color:#3b2f00">⚑ dúvida</span>':'')+'</div>';
+ if(x.tx){const same=prev&&prev.tx===x.tx;h+='<details class="txt simtx"'+(same?'':' open')+'><summary><b>'+(x.tt||'Texto')+'</b>'+(same?' · mesmo texto da questão anterior (toque para ver)':'')+'</summary><div>'+fmt(x.tx).replace(/<table class="tb">/g,'<div class="tbw"><table class="tb">').replace(/<\/table>/g,'</table></div>')+'</div></details>'}
+ h+='<div class="qq big"><div class="qt">'+fmt(x.q)+'</div><div class="opts">';
+ x.o.forEach((o,oi)=>{h+='<button type="button" class="opt'+(r.ans[i]===oi?' sel':'')+'" data-o="'+oi+'"><span class="l">'+LETTERS[oi]+'</span><span>'+fmt(o[0])+'</span></button>'});
+ h+='</div></div><div class="simnav"><button type="button" class="btn ghost" id="simPrev"'+(i?'':' disabled')+'>←</button><button type="button" class="btn ghost" id="simMark">'+(r.mark[i]?'⚑ Tirar dúvida':'⚑ Marcar dúvida')+'</button><button type="button" class="btn" id="simNext">'+(i<29?'Próxima →':'Revisar folha')+'</button></div>';
+ h+='<div class="sheet"><p><b>Folha de respostas</b> · toque para ir</p><div class="cells2">'+s.q.map((q,k)=>'<button type="button" class="c2'+(k===i?' cur':'')+(r.ans[k]!=null?' an':'')+(r.mark[k]?' mk':'')+(k===15?' br':'')+'" data-go="'+k+'"><small>'+(k+1)+'</small>'+(r.ans[k]!=null?LETTERS[r.ans[k]]:'·')+'</button>').join('')+'</div><p class="leg2"><span><i class="an"></i>respondida</span><span><i class="mk"></i>dúvida</span><span>1–15 Português · 16–30 Matemática</span></p></div>';
+ if(simConfirm==='end'){const blank=30-nAns,mk=Object.keys(r.mark).length;h+='<div class="card endbox" id="endBox"><h3>Entregar o simulado?</h3><p>'+(blank?'<b>'+blank+' em branco.</b> Na prova, chute com estratégia: elimine as absurdas. ':'Todas respondidas. ')+(mk?mk+' marcada(s) como dúvida. ':'')+'Ainda faltam <b>'+fmtT(left)+'</b>.</p><div class="nav1"><button type="button" class="btn ghost" id="endNo">Continuar a prova</button><button type="button" class="btn" id="endYes" style="background:var(--red);border-color:var(--red)">Entregar agora</button></div><p style="text-align:center;margin:0"><button type="button" class="lnk" id="simAbort">Desistir sem salvar</button></p></div>'}
+ h+='</article>';el.innerHTML=h;
+ const go=k=>{r.cur=k;if(CUR){USERS[CUR].s=S;LS.set(P+':users',USERS)}renderSimQ();try{window.scrollTo(0,0)}catch(e){}};
+ el.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{const o=+b.dataset.o;if(r.ans[i]===o)delete r.ans[i];else r.ans[i]=o;if(CUR){USERS[CUR].s=S;LS.set(P+':users',USERS)}el.querySelectorAll('.opt').forEach(z=>z.classList.toggle('sel',r.ans[i]===+z.dataset.o));const c=el.querySelector('.c2.cur');if(c){c.classList.toggle('an',r.ans[i]!=null);c.lastChild.textContent=r.ans[i]!=null?LETTERS[r.ans[i]]:'·'}el.querySelector('.simbar .sp').textContent=s.n+' · '+Object.keys(r.ans).length+'/30 respondidas'});
+ $('simPrev').onclick=()=>{if(i)go(i-1)};$('simNext').onclick=()=>{if(i<29)go(i+1);else{const sh=el.querySelector('.sheet');if(sh)sh.scrollIntoView({behavior:'smooth'})}};
+ $('simMark').onclick=()=>{if(r.mark[i])delete r.mark[i];else r.mark[i]=1;go(i)};
+ el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(+b.dataset.go));
+ $('simEnd').onclick=()=>{simConfirm='end';renderSimQ();const e=$('endBox');if(e)e.scrollIntoView({behavior:'smooth',block:'center'})};
+ if($('endNo'))$('endNo').onclick=()=>{simConfirm=false;renderSimQ()};
+ if($('endYes'))$('endYes').onclick=()=>{simConfirm=false;simSubmit(false)};
+ if($('simAbort'))$('simAbort').onclick=()=>{if($('simAbort').dataset.sure){simConfirm=false;S.simrun=null;if(CUR){USERS[CUR].s=S;LS.set(P+':users',USERS)}renderSimu();return}$('simAbort').dataset.sure=1;$('simAbort').textContent='Toque de novo para confirmar: a tentativa será apagada'};}
+
+function simSubmit(auto){const r=S.simrun;if(!r)return;const s=SIMI[r.id];const before=TOTAL();
+ const ans=[];let por=0,mat=0;s.q.forEach((x,k)=>{const v=r.ans[k]!=null?r.ans[k]:null;ans.push(v);if(v===x.a){if(x.area==='por')por++;else mat++}});
+ const t=Math.min(SIM_SECS,(Date.now()-r.start)/1000);const run={ans,mark:Object.keys(r.mark).map(Number),t:Math.round(t),sc:por+mat,por,mat,date:Date.now(),auto:!!auto};
+ S.sim=S.sim||{};S.sim[r.id]=S.sim[r.id]||{runs:[]};S.sim[r.id].runs.push(run);S.simrun=null;
+ SIMV={id:r.id,run,ri:S.sim[r.id].runs.length-1,fresh:true};save(before);if(auto)toast('Tempo esgotado! Simulado entregue.');
+ if(!$('simu').hidden){renderSimu();try{window.scrollTo(0,0)}catch(e){}}}
+
+function renderSimRes(){const el=$('simu');const {id,run}=SIMV,s=SIMI[id];const nota=(run.sc/3).toFixed(1).replace('.',',');
+ const msg=run.sc>=27?'Nível bolsa 100%! 🏆':run.sc>=23?'Muito forte! Ajuste os detalhes abaixo. 💪':run.sc>=18?'Bom caminho. O diagnóstico mostra onde ganhar pontos.':'Ótimo treino para descobrir os pontos fracos. Revise os tópicos abaixo e refaça.';
+ const wrong={};s.q.forEach((x,k)=>{if(run.ans[k]!==x.a){wrong[x.t]=(wrong[x.t]||0)+1}});const wk=Object.keys(wrong).sort((a,b)=>wrong[b]-wrong[a]||T[b].star-T[a].star);
+ let h='<div class="crumb"><button type="button" id="resBack">← Simulados</button></div>';
+ h+='<div class="card score"><div class="big">'+run.sc+'<small>/30</small></div><div><div class="rk">nota '+nota+'</div><p style="margin:4px 0 0">'+msg+'</p></div></div>';
+ h+='<div class="sum"><div><span>Português</span><b>'+run.por+'/15</b></div><div><span>Matemática</span><b>'+run.mat+'/15</b></div><div><span>Tempo'+(run.auto?' (esgotou)':'')+'</span><b>'+fmtT(run.t)+'</b></div></div>';
+ if(wk.length){h+='<div class="card" style="padding:14px 16px;margin-bottom:14px"><h3 style="margin:0 0 6px;font:800 17px var(--head)">Diagnóstico: onde estão os pontos perdidos</h3><p style="margin:0 0 10px;font-size:14px;color:var(--muted)">Revise a teoria e depois treine o tópico.</p>';
+  wk.forEach(t=>{const A=AREAS[T[t].area];h+='<div class="diag" style="--ac:'+A.ac+'"><span class="dn">'+wrong[t]+' ✗</span><span class="dt">'+T[t].t+'<small>'+A.n+' · '+'★'.repeat(T[t].star)+'</small></span><button type="button" class="btn ghost sm" data-rv="'+t+'">Revisar</button><button type="button" class="btn sm" data-tr="'+t+'">Treinar</button></div>'});h+='</div>'}
+ h+='<h3 class="sec" style="--ac:var(--ink)">Gabarito comentado</h3><div class="glist">';
+ s.q.forEach((x,k)=>{const v=run.ans[k],ok=v===x.a;h+='<details class="gq '+(ok?'g':'b')+'"><summary><span class="gn">'+(k+1)+'</span><span class="gs">'+(ok?'✓':v==null?'em branco':'✗')+'</span><span class="gt">'+T[x.t].t+'</span><span class="ga">'+(v!=null?LETTERS[v]:'–')+' → <b>'+LETTERS[x.a]+'</b></span></summary><div class="gb">'+
+  (x.tx?'<details class="txt"><summary><b>'+(x.tt||'Texto')+'</b> (ver)</summary><div>'+fmt(x.tx).replace(/<table class="tb">/g,'<div class="tbw"><table class="tb">').replace(/<\/table>/g,'</table></div>')+'</div></details>':'')+
+  '<div class="qt" style="font-weight:700;margin-bottom:8px">'+fmt(x.q)+'</div><div class="opts">'+x.o.map((o,oi)=>'<div class="opt'+(oi===x.a?' right':oi===v?' wrong':'')+'"><span class="l">'+LETTERS[oi]+'</span><span>'+fmt(o[0])+'</span></div>').join('')+'</div>'+
+  (v!=null&&!ok?'<div class="why" style="margin-top:10px"><b>Por que a '+LETTERS[v]+' está errada:</b> '+fmt(x.o[v][1])+'</div>':'')+
+  '<div class="res" style="margin-top:10px"><b class="h">Resolução</b>'+fmt(x.e)+'</div>'+(MACETES[x.t]?'<div class="mac" style="--ac:'+AREAS[x.area].ac+'"><b class="h">Macete</b>'+fmt(MACETES[x.t])+'</div>':'')+'</div></details>'});
+ h+='</div><div class="nav1"><button type="button" class="btn ghost" id="resList">Voltar aos simulados</button><button type="button" class="btn" id="resRedo">Refazer o '+s.n+'</button></div>';
+ el.innerHTML=h;
+ const back=()=>{SIMV=null;renderSimu();try{window.scrollTo(0,0)}catch(e){}};
+ $('resBack').onclick=back;$('resList').onclick=back;
+ $('resRedo').onclick=()=>{SIMV=null;simConfirm=id;document.body.classList.remove('focus');renderSimStart()};
+ el.querySelectorAll('[data-rv]').forEach(b=>b.onclick=()=>{SIMV=null;go('rev/'+b.dataset.rv)});
+ el.querySelectorAll('[data-tr]').forEach(b=>b.onclick=()=>{SIMV=null;const t=b.dataset.tr;go('treino');setTimeout(()=>startSession(TQ.filter(q=>q.t===t).sort((p,q)=>p.d-q.d).map(q=>q.id),T[t].t),0)});}
+
+window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id),fc:FC.map(c=>c.id),sims:SIMS.map(s=>s.id),simA:SIMI.A.q.map(x=>x.a)};
 renderCount();
 renderBar();route();
 if(!CUR)setTimeout(openLogin,600);

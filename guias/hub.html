@@ -220,7 +220,7 @@ footer{color:var(--muted);font:400 12px "IBM Plex Mono",monospace;text-align:cen
           <h4>Missão Bolsa 100%</h4>
           <p class="desc">Revisão completa e treino estilo prova de Português e Matemática do 9º ano para o Desafio do Objetivo, com macetes e explicação de cada alternativa.</p>
           <div class="prog"><div class="row"><span id="p-objetivo-l">Progresso</span><b id="p-objetivo-v">0%</b></div><div class="bar"><i id="p-objetivo-b"></i></div></div>
-          <div class="meta"><span>Revisão · 186 questões · 468 flashcards</span><span id="m-objetivo">Patente: Candidato</span></div>
+          <div class="meta"><span>Revisão · treino · cards · 3 simulados</span><span id="m-objetivo">Patente: Candidato</span></div>
           <div class="act"><b id="a-objetivo">Começar a revisão</b><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
         </div>
       </a>
@@ -345,7 +345,7 @@ $('skipBtn').onclick=function(){enter()};
 $('portalBtn').onclick=function(){history.pushState(null,'',location.pathname);showPortal()};
 addEventListener('popstate',function(){if(/^#escola/.test(location.hash))showEscola();else showPortal()});
 
-var GUIAS=[{id:'objetivo',ls:'gobj',max:3776,ranks:[[0,'Candidato'],[10,'Inscrito'],[25,'Concorrente'],[40,'Classificado'],[55,'Aprovado'],[70,'Bolsista 50%'],[85,'Bolsista 80%'],[95,'Bolsa 100%']]},
+var GUIAS=[{id:'objetivo',ls:'gobj',max:4676,ranks:[[0,'Candidato'],[10,'Inscrito'],[25,'Concorrente'],[40,'Classificado'],[55,'Aprovado'],[70,'Bolsista 50%'],[85,'Bolsista 80%'],[95,'Bolsa 100%']]},
            {id:'geo3',ls:'ggeo3',max:1709,ranks:[[0,'Turista'],[10,'Mochileiro'],[25,'Explorador'],[40,'Navegador'],[55,'Cartógrafo'],[70,'Geógrafo'],[85,'Diplomata'],[95,'Embaixador']]},
            {id:'2gm',ls:'g2gm',max:1316,ranks:[[0,'Recruta'],[10,'Soldado'],[25,'Cabo'],[40,'Sargento'],[55,'Tenente'],[70,'Capitão'],[85,'Major'],[95,'General']]}];
 function ls(k){try{var v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}

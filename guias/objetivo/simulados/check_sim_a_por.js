@@ -1,0 +1,30 @@
+// Conferência de estrutura do Simulado A · Português
+const fs=require('fs'),vm=require('vm');
+const src=fs.readFileSync(__dirname+'/sim_a_por.js','utf8');
+const ctx={};vm.createContext(ctx);vm.runInContext(src+';this.S=SIM_A_POR;',ctx);
+const S=ctx.S, err=[];
+const valid=new Set(['p-impl','p-lit','p-sent','p-conj','p-arg','p-modal','p-coes','p-tira','p-pub','p-fig','p-adj','p-reg','p-conc']);
+const data=fs.readFileSync(__dirname+'/../data-por.js','utf8');
+if(S.length!==15)err.push('total '+S.length);
+const dc={1:0,2:0,3:0},lc=[0,0,0,0,0],tx={};
+S.forEach((x,i)=>{const n=i+1;
+ if(!data.includes(`id:'${x.t}'`))err.push(n+' tópico inexistente '+x.t);
+ if(!valid.has(x.t))err.push(n+' tópico fora do plano');
+ if(![1,2,3].includes(x.d))err.push(n+' d');else dc[x.d]++;
+ if(x.o.length!==5)err.push(n+' alternativas '+x.o.length);
+ if(!(Number.isInteger(x.a)&&x.a>=0&&x.a<=4))err.push(n+' a');else lc[x.a]++;
+ x.o.forEach((o,j)=>{if(o.length!==2)err.push(n+' par');if((o[1]==='')!==(j===x.a))err.push(n+' feedback alt '+j);if(!o[0].trim())err.push(n+' alt vazia')});
+ if(new Set(x.o.map(o=>o[0])).size!==5)err.push(n+' alternativas repetidas');
+ if(!x.e||!x.q)err.push(n+' q/e');
+ if(x.tx||x.tt){if(!x.tx||!x.tt)err.push(n+' tx/tt incompletos');else{if(tx[x.tt]&&tx[x.tt]!==x.tx)err.push(n+' tx diferente para '+x.tt);tx[x.tt]=x.tx;}}
+ if(/`|\$\{/.test(JSON.stringify(x)))err.push(n+' crase/${');
+});
+if(dc[1]!==5||dc[2]!==6||dc[3]!==4)err.push('dificuldade '+JSON.stringify(dc));
+lc.forEach((c,i)=>{if(c<2||c>4)err.push('letra '+'ABCDE'[i]+' = '+c)});
+const plan=['p-impl','p-lit','p-sent','p-conj','p-arg','p-arg','p-modal','p-coes','p-tira','p-tira','p-pub','p-fig','p-adj','p-reg','p-conc'];
+if(S.map(x=>x.t).join()!==plan.join())err.push('ordem dos tópicos');
+const tts=['Texto 1','Texto 1','Texto 1','Texto 1','Texto 2','Texto 2','Texto 2','Texto 2','Texto 3','Texto 3','Texto 4','Texto 4',undefined,undefined,undefined];
+S.forEach((x,i)=>{if(x.tt!==tts[i])err.push((i+1)+' tt '+x.tt)});
+S.forEach((x,i)=>console.log(String(i+1).padStart(2),x.t.padEnd(8),'d'+x.d,'ABCDE'[x.a],x.tt||'(avulsa)'));
+console.log('dificuldade',JSON.stringify(dc),'| letras',lc.map((c,i)=>'ABCDE'[i]+c).join(' '));
+console.log(err.length?'ERROS:\n'+err.join('\n'):'TUDO OK');process.exit(err.length?1:0);

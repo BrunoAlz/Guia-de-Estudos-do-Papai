@@ -4,8 +4,8 @@ import pathlib, re, json, subprocess, sys
 
 ROOT = pathlib.Path(__file__).resolve().parent.parent / "guias" / "objetivo"
 app = (ROOT / "app.html").read_text(encoding="utf-8")
-data = "\n".join((ROOT / f).read_text(encoding="utf-8") for f in ("data-mat.js", "data-por.js", "data-macetes.js") + tuple("treino/" + n + ".js" for n in ("tm1","tm2","tm3","tm45","tp1","tp2","tp3")) + tuple("cards/" + n + ".js" for n in ("cm1","cm2","cm3","cm45","cp1","cp2","cp3")))
-out = app.replace("/*__DATA__*/", data).replace("/*__TREINO__*/", (ROOT / "app-treino.js").read_text(encoding="utf-8")).replace("/*__CARDS__*/", (ROOT / "app-cards.js").read_text(encoding="utf-8"))
+data = "\n".join((ROOT / f).read_text(encoding="utf-8") for f in ("data-mat.js", "data-por.js", "data-macetes.js") + tuple("treino/" + n + ".js" for n in ("tm1","tm2","tm3","tm45","tp1","tp2","tp3")) + tuple("cards/" + n + ".js" for n in ("cm1","cm2","cm3","cm45","cp1","cp2","cp3")) + tuple("simulados/sim_" + n + ".js" for n in ("a_por","a_mat","b_por","b_mat","c_por","c_mat")))
+out = app.replace("/*__DATA__*/", data).replace("/*__TREINO__*/", (ROOT / "app-treino.js").read_text(encoding="utf-8")).replace("/*__CARDS__*/", (ROOT / "app-cards.js").read_text(encoding="utf-8")).replace("/*__SIMU__*/", (ROOT / "app-simu.js").read_text(encoding="utf-8"))
 dist = ROOT / "dist"
 dist.mkdir(exist_ok=True)
 (dist / "objetivo.html").write_text(out, encoding="utf-8")
@@ -29,7 +29,8 @@ const TQ=[...TREINO_M1,...TREINO_M2,...TREINO_M3,...TREINO_M45,...TREINO_P1,...T
 TQ.forEach((x,i)=>{if(!TOPS.find(t=>t.id===x.t))bad.push('treino topico '+x.t);if(x.o.length!==5)bad.push('treino '+i)});
 TOPS.forEach(t=>{if(!MACETES[t.id])bad.push('sem macete '+t.id)});
 const FC=[...CARDS_M1,...CARDS_M2,...CARDS_M3,...CARDS_M45,...CARDS_P1,...CARDS_P2,...CARDS_P3];FC.forEach((c,i)=>{if(!TOPS.find(t=>t.id===c.t)||!c.f||!c.b)bad.push('card '+i)});
-console.log(JSON.stringify({cards:FC.length,treino:TQ.length,max_total:TOPS.length*5+q*5+TQ.length*10+FC.length*2,topicos:TOPS.length, mat:TOP_MAT.length, por:TOP_POR.length, questoes:q, max:TOPS.length*5+q*5, bad}));
+const SM=[SIM_A_POR,SIM_A_MAT,SIM_B_POR,SIM_B_MAT,SIM_C_POR,SIM_C_MAT];SM.forEach((a,k)=>{if(a.length!==15)bad.push('sim '+k+' tem '+a.length);a.forEach((x,i)=>{if(!TOPS.find(t=>t.id===x.t)||x.o.length!==5||!(x.a>=0&&x.a<5))bad.push('sim '+k+':'+i)})});
+console.log(JSON.stringify({sim:SM.length*15,max_total2:TOPS.length*5+q*5+TQ.length*10+FC.length*2+900,cards:FC.length,treino:TQ.length,max_total:TOPS.length*5+q*5+TQ.length*10+FC.length*2,topicos:TOPS.length, mat:TOP_MAT.length, por:TOP_POR.length, questoes:q, max:TOPS.length*5+q*5, bad}));
 """
 (dist / "_probe.js").write_text(probe, encoding="utf-8")
 r = subprocess.run(["node", str(dist / "_probe.js")], capture_output=True, text=True)
