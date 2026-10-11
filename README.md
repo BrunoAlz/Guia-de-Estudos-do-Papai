@@ -11,7 +11,7 @@ Site: https://guia-de-estudos-do-papai.vercel.app
   (`submit_score`, `get_ranking`, `delete_score`, `name_available`).
 
 ## Missão Bolsa 100% (Prova do Objetivo)
-- Fonte: `guias/objetivo/app.html` (interface) + `data-mat.js` e `data-por.js` (conteúdo).
+- Fonte: `guias/objetivo/app.html` (interface) + `data-mat.js` e `data-por.js` (conteúdo) + `plus/*.js` (revisão turbinada: básico, jeitos espertos, passo a passo, exemplos extras, erros, resumo; `plus/kit.js` = Kit básico). Especificações em `*_SPEC.md`; conferências dos revisores em `review/`.
 - Montar: `python3 tools/build_objetivo.py` → `guias/objetivo/dist/objetivo.html` (confere sintaxe, gabaritos e calcula a pontuação máxima).
 - Testar: `python3 tools/test_objetivo.py guias/objetivo/dist/objetivo.html <pasta-prints>`.
 - Ao mudar o número de tópicos/questões, atualizar `max_points` em `guias` (id `objetivo`) e o `max` no `hub.html`.

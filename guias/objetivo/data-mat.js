@@ -54,9 +54,9 @@ const TOP_MAT = [
 
 {id:'m-reais', mod:'M1', star:2, t:'Números reais: racionais e irracionais', bncc:'EF09MA01 · EF09MA02 · EF08MA05',
  hook:'Todo número da reta é <b>real</b>. A pergunta é: ele pode ou não ser escrito como fração?',
- body:`<p><b>Racional</b> = pode ser escrito como fração [[a|b]] (com b ≠ 0). Entram aqui os inteiros, os decimais finitos (2,75) e as <b>dízimas periódicas</b> (0,333…).</p>
-<p><b>Irracional</b> = decimal <b>infinito e não periódico</b>: não tem fração. Exemplos: √{2} = 1,4142…, √{3}, √{5}, π = 3,14159…</p>
-<p>Atenção: √{9} = 3 e √{16} = 4 são <b>racionais</b>. Só é irracional a raiz que não dá exata.</p>
+ body:`<p><b>Racional</b> = pode ser escrito como fração [[a|b]] (com a e b inteiros e b ≠ 0). Entram aqui os inteiros, os decimais finitos (2,75) e as <b>dízimas periódicas</b> (0,333…).</p>
+<p><b>Irracional</b> = decimal <b>infinito e não periódico</b>: não pode ser escrito como fração de inteiros. Exemplos: √{2} = 1,4142…, √{3}, √{5}, π = 3,14159…</p>
+<p>Atenção: √{9} = 3 e √{16} = 4 são <b>racionais</b>. A raiz quadrada de um número natural só é irracional quando não dá exata.</p>
 <p>A diagonal de um quadrado de lado 1 mede √{2}: é um segmento de verdade cuja medida não é uma fração.</p>
 <p><b>Localizar na reta:</b> procure os quadrados perfeitos vizinhos. √{30}: 25 &lt; 30 &lt; 36, então 5 &lt; √{30} &lt; 6 (mais perto de 5, ≈ 5,48).</p>
 <p><b>Fração geratriz</b> de dízima simples: o período sobre tantos 9 quantos algarismos ele tiver. 0,272727… = [[27|99]] = [[3|11]].</p>
@@ -75,7 +75,7 @@ const TOP_MAT = [
 
 {id:'m-pot', mod:'M1', star:2, t:'Potências e raízes', bncc:'EF09MA03 · EF08MA01',
  hook:'As propriedades de potência economizam conta. Expoente negativo e fracionário são os favoritos do 9º ano.',
- body:`<p><b>Casos especiais:</b> a<sup>0</sup> = 1 · a<sup>1</sup> = a · a<sup>−n</sup> = [[1|a<sup>n</sup>]] (o negativo <b>inverte</b>, não deixa negativo).</p>
+ body:`<p><b>Casos especiais</b> (com a ≠ 0): a<sup>0</sup> = 1 · a<sup>1</sup> = a · a<sup>−n</sup> = [[1|a<sup>n</sup>]] (o negativo <b>inverte</b>, não deixa negativo).</p>
 <p><b>Propriedades:</b> a<sup>m</sup>·a<sup>n</sup> = a<sup>m+n</sup> · a<sup>m</sup>÷a<sup>n</sup> = a<sup>m−n</sup> · (a<sup>m</sup>)<sup>n</sup> = a<sup>m·n</sup> · (a·b)<sup>n</sup> = a<sup>n</sup>·b<sup>n</sup>.</p>
 <p><b>Expoente fracionário:</b> a<sup>m/n</sup> = raiz de índice n de a<sup>m</sup>. Ex.: 8<sup>2/3</sup> = (∛8)² = 2² = 4 · 25<sup>1/2</sup> = √{25} = 5.</p>
 <p><b>Sinais:</b> (−2)<sup>4</sup> = 16 · (−2)<sup>3</sup> = −8 · −2<sup>4</sup> = −16 (sem parênteses, só o 2 é elevado).</p>
@@ -115,11 +115,11 @@ const TOP_MAT = [
 
 {id:'m-mmc', mod:'M1', star:2, t:'Múltiplos, divisores, MMC e MDC', bncc:'EF07MA01',
  hook:'O difícil não é calcular: é perceber se o problema pede MMC ou MDC.',
- body:`<p><b>Critérios de divisibilidade:</b> por 2 (termina em par) · por 3 (soma dos algarismos divisível por 3) · por 5 (termina em 0 ou 5) · por 9 (soma divisível por 9) · por 10 (termina em 0).</p>
+ body:`<p><b>Critérios de divisibilidade:</b> por 2 (termina em algarismo par) · por 3 (soma dos algarismos divisível por 3) · por 5 (termina em 0 ou 5) · por 9 (soma divisível por 9) · por 10 (termina em 0).</p>
 <p><b>Número primo</b> tem exatamente dois divisores: 1 e ele mesmo (2, 3, 5, 7, 11, 13…). O 1 não é primo.</p>
 <p><b>MMC</b> (mínimo múltiplo comum): o menor número que é múltiplo de todos. Aparece em “<b>vão se encontrar de novo</b>”, “acontecem juntos outra vez”.</p>
 <p><b>MDC</b> (máximo divisor comum): o maior número que divide todos. Aparece em “<b>dividir em partes iguais do maior tamanho possível</b>”, “sem sobrar”.</p>
-<p>Na fatoração: MMC = todos os fatores com o <b>maior</b> expoente; MDC = só os fatores comuns com o <b>menor</b> expoente. E vale: MMC × MDC = a × b.</p>`,
+<p>Na fatoração: MMC = todos os fatores com o <b>maior</b> expoente; MDC = só os fatores comuns com o <b>menor</b> expoente. E, para dois números a e b, vale: MMC × MDC = a × b.</p>`,
  rule:`Encontro/repetição → <b>MMC</b><br>Dividir em partes iguais máximas → <b>MDC</b><br>MMC(a,b) × MDC(a,b) = a × b`,
  ex:[
   {q:'Dois ônibus saem juntos às 8h. Um passa a cada 12 min e o outro a cada 18 min. Quando saem juntos de novo?', s:['“Juntos de novo” → MMC.','12 = 2²·3 e 18 = 2·3² → MMC = 2²·3² = 36.','8h + 36 min.'], r:'8h36'},
@@ -323,7 +323,7 @@ const TOP_MAT = [
  trap:'Se o lado triplica, a área fica <b>9 vezes</b> maior (3²), e não 3 vezes. E compare sempre lados <b>correspondentes</b> (opostos ao mesmo ângulo).',
  qz:[
   ['Um prédio faz sombra de 15 m. No mesmo instante, uma vara de 2 m faz sombra de 3 m. A altura do prédio é:', ['10 m','22,5 m','20 m','7,5 m'], 0, '[[h|15]] = [[2|3]] → h = 10 m.'],
-  ['Duas figuras semelhantes têm razão 1 : 3. Se a menor tem 5 cm² de área, a maior tem:', ['15 cm²','45 cm²','30 cm²','125 cm²'], 1, 'Áreas na razão k² = 9: 5 × 9 = 45 cm².'],
+  ['Duas figuras semelhantes têm razão de semelhança (entre os lados) 1 : 3. Se a menor tem 5 cm² de área, a maior tem:', ['15 cm²','45 cm²','30 cm²','125 cm²'], 1, 'Áreas na razão k² = 9: 5 × 9 = 45 cm².'],
   ['Pelo Teorema de Tales, se [[3|5]] = [[6|x]], então x vale:', ['8','10','2,5','9'], 1, '3x = 30 → x = 10.']
  ]},
 
@@ -467,7 +467,7 @@ const TOP_MAT = [
 <p><b>Moda:</b> o valor que mais aparece (pode haver mais de uma ou nenhuma).</p>
 <p><b>Mediana:</b> o valor do meio depois de <b>ordenar</b>. Se a quantidade for par, é a média dos dois do meio.</p>
 <p><b>Amplitude:</b> maior − menor (mostra quanto os dados variam).</p>
-<p>A média é “puxada” por valores extremos; a mediana, não. Por isso salários são bem representados pela mediana.</p>`,
+<p>A média é “puxada” por valores extremos; a mediana, não. Por isso, em dados como salários, a mediana costuma representar melhor o grupo.</p>`,
  rule:`Média = [[soma|quantidade]] → soma = média × quantidade<br>Mediana: ordene e pegue o meio · Amplitude = maior − menor`,
  ex:[
   {q:'Prova (peso 2): nota 8. Trabalho (peso 1): nota 5. Média ponderada?', s:['[[8 × 2 + 5 × 1|2 + 1]] = [[21|3]].'], r:'7'},
@@ -504,7 +504,7 @@ const TOP_MAT = [
 <ul><li>3 camisetas e 4 calças → 3 × 4 = 12 combinações.</li><li>Senha de 3 algarismos <b>sem repetir</b>: 10 × 9 × 8 = 720.</li><li>Com repetição: 10 × 10 × 10 = 1 000.</li></ul>
 <p><b>Anagramas</b> (ordenar letras diferentes): 4 letras → 4 × 3 × 2 × 1 = 24.</p>
 <p><b>Quando a ordem não importa</b> (duplas, apertos de mão, partidas entre times), divida para não contar duas vezes: n pessoas → [[n(n − 1)|2]] apertos de mão.</p>`,
- rule:`Etapas: multiplique as opções · n objetos em fila: n! = n·(n − 1)·…·1<br>Ordem não importa (pares): [[n(n − 1)|2]]`,
+ rule:`Etapas: multiplique as opções · n objetos diferentes em fila: n! = n·(n − 1)·…·1<br>Ordem não importa (pares): [[n(n − 1)|2]]`,
  ex:[
   {q:'Quantos números de 3 algarismos distintos podem ser formados com 1, 2, 3, 4 e 5?', s:['Centena: 5 opções; dezena: 4; unidade: 3.','5 × 4 × 3.'], r:'60 números'},
   {q:'Num campeonato, 6 times jogam todos contra todos uma vez. Quantas partidas?', s:['6 × 5 = 30, mas A×B e B×A são o mesmo jogo.','30 ÷ 2 = 15.'], r:'15 partidas'}

@@ -22,7 +22,7 @@ const TREINO_P2 = [
   [`Logo que`, `“Logo que” indica tempo (assim que). A gincana não depende do momento em que a chuva começa.`],
   [`Para que`, `“Para que” indica finalidade: a gincana aconteceria com o objetivo de fazer chover, o que não faz sentido.`]
  ], a:0,
- e:`“Mesmo que” é conjunção <b>concessiva</b>: admite um obstáculo (a chuva) que <b>não impede</b> o fato principal (a gincana). A outra concessiva da lista é “ainda que” (também valem “embora” e “se bem que”). O verbo continua no subjuntivo: “Ainda que chova…”.`},
+ e:`“Mesmo que” é conjunção <b>concessiva</b>: admite um obstáculo (a chuva) que <b>não impede</b> o fato principal (a gincana). A outra concessiva da lista é “ainda que” (também valeria “embora”). O verbo continua no subjuntivo: “Ainda que chova…”.`},
 
 {t:'p-conj', d:2,
  q:`Leia a frase de uma reportagem esportiva do jornal da escola:<br><br>“O goleiro machucou a mão no aquecimento, <b>mas</b> defendeu dois pênaltis na final.”<br><br>Qual reescrita <b>mantém o sentido</b> da frase original e está de acordo com a <b>norma-padrão</b>?`,
@@ -137,7 +137,7 @@ const TREINO_P2 = [
  e:`Ninguém fica três séculos numa fila: é um <b>exagero intencional</b> (hipérbole). O efeito é mostrar a impaciência de Lucas e dar força à reclamação.`},
 
 {t:'p-fig', d:2,
- q:`Leia o trecho de uma crônica sobre a final do campeonato escolar:<br><br>“Quando a bola entrou no último minuto, <b>a arquibancada</b> gritou o nome do goleiro.”<br><br>Na expressão destacada, ocorre:`,
+ q:`Leia o trecho de uma crônica sobre a final do campeonato escolar:<br><br>“Quando o goleiro defendeu o pênalti no último minuto, <b>a arquibancada</b> gritou o nome dele.”<br><br>Na expressão destacada, ocorre:`,
  o:[
   [`antítese, porque o goleiro é oposto à arquibancada.`, `Não há ideias opostas colocadas lado a lado na frase.`],
   [`eufemismo, porque suaviza a comemoração da torcida.`, `Nada foi suavizado; a frase descreve uma comemoração animada.`],

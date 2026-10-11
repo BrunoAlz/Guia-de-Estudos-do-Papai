@@ -28,7 +28,7 @@ const SIM_B_MAT = [
   [`240`, `240 é o múltiplo comum de 6, 8 e 10, mas nessas divisões ele deixa resto 0. Faltou somar as 3 figurinhas que sobram.`],
   [`243`, ``],
   [`283`, `280 + 3 deixa resto 3 na divisão por 8 e por 10, mas 280 não é múltiplo de 6: 283 em montes de 6 deixa resto 1. Use o MMC dos três números.`]
- ], a:3, e:`Tirando as 3 que sobram, o resto é múltiplo de 6, de 8 e de 10 ao mesmo tempo, ou seja, múltiplo do MMC.<br>6 = 2 · 3 · 8 = 2³ · 10 = 2 · 5 → MMC = 2³ · 3 · 5 = 120.<br>Múltiplos de 120: 120, 240, 360… Somando 3: 123, 243, 363…<br>O único entre 200 e 300 é <b>243</b>.`},
+ ], a:3, e:`Tirando as 3 que sobram, o resto é múltiplo de 6, de 8 e de 10 ao mesmo tempo, ou seja, múltiplo do MMC.<br>6 = 2 · 3; 8 = 2³; 10 = 2 · 5 → MMC = 2³ · 3 · 5 = 120.<br>Múltiplos de 120: 120, 240, 360… Somando 3: 123, 243, 363…<br>O único entre 200 e 300 é <b>243</b>.`},
 
 /* 4 · m-eq1 */
 {t:'m-eq1', d:1, q:`Um estacionamento cobra R$ 15,00 pela primeira hora e R$ 6,00 por hora adicional, e só cobra horas inteiras. Ao retirar o carro, o pai de Richard pagou R$ 63,00. Por quantas horas o carro ficou estacionado?`, o:[

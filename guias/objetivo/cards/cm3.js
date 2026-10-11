@@ -17,7 +17,7 @@ const CARDS_M3 = [
  {t:'m-pol', k:'regra', f:`Fórmula da soma dos ângulos internos de um polígono de n lados?`, b:`<b>S<sub>i</sub> = (n − 2)·180°</b>. O polígono se divide em (n − 2) triângulos.`},
  {t:'m-pol', k:'regra', f:`Fórmula do número de diagonais de um polígono de n lados?`, b:`<b>d = [[n(n − 3)|2]]</b>. Divide por 2 porque cada diagonal seria contada duas vezes.`},
  {t:'m-pol', k:'regra', f:`Quanto somam os ângulos externos de qualquer polígono convexo?`, b:`<b>360°</b>, sempre (uma volta completa). No regular, cada externo = [[360°|n]].`},
- {t:'m-pol', k:'conceito', f:`O ângulo externo de um triângulo é igual a quê?`, b:`<b>À soma dos dois ângulos internos não vizinhos a ele.</b> Ex.: internos 50° e 60° → externo oposto = 110°.`},
+ {t:'m-pol', k:'conceito', f:`O ângulo externo de um triângulo é igual a quê?`, b:`<b>À soma dos dois ângulos internos não vizinhos a ele.</b> Ex.: internos 50° e 60° → externo do terceiro vértice = 110°.`},
  {t:'m-pol', k:'conta', f:`Soma dos ângulos internos de um pentágono?`, b:`<b>540°</b>. (5 − 2)·180 = 3·180 = 540.`},
  {t:'m-pol', k:'conta', f:`Cada ângulo externo de um decágono regular (10 lados) mede?`, b:`<b>36°</b>. 360 ÷ 10 = 36. (O interno é 180 − 36 = 144°.)`},
  {t:'m-pol', k:'conta', f:`Quantas diagonais tem um pentágono?`, b:`<b>5</b>. d = [[5·2|2]] = 5.`},

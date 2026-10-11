@@ -124,7 +124,7 @@ const SIM_A_MAT = [
 /* 14 · m-media · d1 */
 {t:'m-media', d:1, tx:`<p><b>Número de irmãos dos alunos do 9º ano B</b></p><table class="tb"><tr><th>Número de irmãos</th><th>Quantidade de alunos</th></tr><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>9</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>2</td></tr></table>`,
  q:`Considerando os dados da tabela, qual é a moda do número de irmãos dos alunos dessa turma?`, o:[
-  [`0`, `0 irmão foi a resposta de 5 alunos, que não é a mais frequente.`],
+  [`0`, `"0 irmãos" foi a resposta de 5 alunos, que não é a mais frequente.`],
   [`1`, ``],
   [`1,15`, `1,15 é a média de irmãos por aluno (23 irmãos ÷ 20 alunos), não a moda.`],
   [`2`, `2 irmãos foi a resposta de só 4 alunos.`],

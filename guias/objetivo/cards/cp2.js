@@ -17,8 +17,8 @@ const CARDS_P2 = [
 
 /* ---------- p-coes · Coesão referencial (12) ---------- */
  {t:'p-coes', k:'regra', f:`Como descobrir a que termo um pronome se refere?`, b:`<b>Troque o pronome pelo termo candidato</b> e veja se a frase faz sentido.<br>Volte sempre ao texto para conferir.`},
- {t:'p-coes', k:'regra', f:`Pela norma-padrão, o pronome relativo “<b>onde</b>” só deve ser usado para quê?`, b:`<b>Para lugar físico.</b><br>“A cidade <b>onde</b> nasci.” Para tempo ou situação, use “em que” ou “no qual”.`},
- {t:'p-coes', k:'pegadinha', f:`“Chegou o momento <b>onde</b> tudo mudou.” Está de acordo com a norma-padrão?`, b:`<b>Não!</b> Momento não é lugar físico.<br>Certo: “o momento <b>em que</b> tudo mudou”.`},
+ {t:'p-coes', k:'regra', f:`Pela norma-padrão, o pronome relativo “<b>onde</b>” só deve ser usado para quê?`, b:`<b>Para lugar.</b><br>“A cidade <b>onde</b> nasci.” Para tempo ou situação, use “em que” ou “no qual”.`},
+ {t:'p-coes', k:'pegadinha', f:`“Chegou o momento <b>onde</b> tudo mudou.” Está de acordo com a norma-padrão?`, b:`<b>Não!</b> Momento é tempo, não lugar.<br>Certo: “o momento <b>em que</b> tudo mudou”.`},
  {t:'p-coes', k:'pegadinha', f:`“Conheci o menino <b>cujo o</b> pai é piloto.” Está correto?`, b:`<b>Não!</b> “Cujo” indica posse e não vem seguido de artigo.<br>Certo: “o menino <b>cujo pai</b> é piloto”.`},
  {t:'p-coes', k:'conceito', f:`<b>Este</b> × <b>esse</b>: qual anuncia e qual retoma?`, b:`<b>“Este” anuncia</b> o que ainda vem; <b>“esse” retoma</b> o que já foi dito.<br>“Meu pedido é <b>este</b>: silêncio.” · “Silêncio: <b>esse</b> foi meu pedido.”`},
  {t:'p-coes', k:'conceito', f:`O que é um <b>hiperônimo</b> na coesão do texto?`, b:`<b>Uma palavra de sentido mais geral</b> que retoma outra mais específica.<br>“O cachorro latiu. O <b>animal</b> estava assustado.”`},

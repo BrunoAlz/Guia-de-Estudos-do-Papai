@@ -34,7 +34,7 @@ const MODS_POR = [
 const TOP_POR = [
 /* ============ P1 · LEITURA ============ */
 {id:'p-impl', mod:'P1', star:3, t:'Explícito, implícito e inferência', bncc:'EF69LP03 · SAEB', saeb:['D1','D3','D4','D6'],
- hook:'Metade das questões de Português pergunta o que o texto diz <b>sem dizer</b>. Inferir é concluir a partir de pistas, e não inventar.',
+ hook:'Boa parte das questões de Português pergunta o que o texto diz <b>sem dizer</b>. Inferir é concluir a partir de pistas, e não inventar.',
  body:`<p><b>Explícito:</b> está escrito com todas as letras. Para achar, volte ao texto e localize.</p>
 <p><b>Implícito:</b> não está escrito, mas o texto permite concluir. Há dois tipos:</p>
 <ul><li><b>Pressuposto</b>: uma palavra “carrega” a informação. “Lia <b>parou de</b> fumar” → ela fumava antes. “Ele <b>ainda</b> mora lá” → já morava. “Choveu <b>de novo</b>” → já tinha chovido.</li><li><b>Subentendido</b>: depende do contexto. “Nossa, que calor aqui dentro…” pode ser um pedido para abrir a janela.</li></ul>
@@ -66,7 +66,7 @@ const TOP_POR = [
  trap:'Não descreva a imagem: interprete. A pergunta quer saber o <b>efeito</b> (crítica, humor, ironia), não só o que aparece.',
  qz:[
   ['Charge: dentro de uma sala de aula, alunos assistem à aula de guarda-chuva aberto, com goteiras caindo do teto. Na parede, uma placa: “Escola reformada — obra concluída”. A charge critica:', ['a falta de guarda-chuvas nas escolas.','a má qualidade ou o abandono de obras em escolas públicas.','os alunos que não prestam atenção.','o excesso de chuva na cidade.'], 1, 'O contraste entre a placa (“obra concluída”) e as goteiras revela a crítica.'],
-  ['“Que ótimo! Meu celular descarregou bem na hora do jogo.” A palavra “ótimo” foi usada com sentido:', ['literal, mostrando alegria.','irônico, mostrando irritação.','técnico, sobre a bateria.','neutro, sem emoção.'], 1, 'O contexto (perder o jogo) mostra o sentido contrário: é ironia.'],
+  ['“Que ótimo! Meu celular descarregou bem na hora do jogo.” A palavra “ótimo” foi usada com sentido:', ['literal, mostrando alegria.','irônico, mostrando irritação.','técnico, sobre a bateria.','neutro, sem emoção.'], 1, 'O contexto (ficar sem celular bem na hora do jogo) mostra o sentido contrário: é ironia.'],
   ['Tirinha: (1) O professor pergunta: “Onde fica a Linha do Equador?” (2) Um aluno levanta a mão, confiante: “No mapa, professor!”. O humor vem de:', ['o aluno não saber o que é mapa.','o aluno responder de forma literal e inesperada.','o professor errar a pergunta.','a pergunta ser muito difícil.'], 1, 'O aluno dá uma resposta “certa”, mas não a esperada: quebra de expectativa.']
  ]},
 
@@ -149,7 +149,7 @@ const TOP_POR = [
  ex:[
   {q:'Passe para o discurso indireto: Ana disse: “Vou chegar tarde.”', s:['Tire as aspas, use “que” e ajuste o tempo verbal (vou chegar → chegaria).'], r:'Ana disse que chegaria tarde.'}
  ],
- trap:'No discurso indireto, o verbo e os pronomes mudam: “eu vou” vira “ela iria/chegaria”; “amanhã” pode virar “no dia seguinte”.',
+ trap:'No discurso indireto, o verbo e os pronomes mudam: “eu vou chegar” vira “ela iria chegar/chegaria”; “amanhã” pode virar “no dia seguinte”.',
  txt:`<b>Miniconto:</b> Tião guardou moedas por oito meses para comprar a bicicleta. Na véspera da compra, o cofrinho sumiu da prateleira. Revirou a casa inteira até encontrar o irmão caçula, todo orgulhoso, “alimentando” o porquinho de barro com balas.`,
  qz:[
   ['O conflito gerador do miniconto é:', ['Tião guardar dinheiro por oito meses.','o sumiço do cofrinho na véspera da compra.','o irmão gostar de balas.','a bicicleta ser cara.'], 1, 'É o problema que dispara a ação (a busca).'],
@@ -200,7 +200,7 @@ const TOP_POR = [
   ['“<b>Embora</b> estivesse cansado, Léo terminou a corrida.” A relação é de:', ['causa','concessão','conclusão','condição'], 1, 'O cansaço é admitido, mas não impede que ele termine: concessão.'],
   ['“O time jogou bem; <b>porém</b>, perdeu.” Sem mudar o sentido, “porém” pode ser trocado por:', ['portanto','contudo','porque','quando'], 1, 'Porém = contudo (oposição).'],
   ['“Choveu muito; o jogo foi, <b>pois</b>, adiado.” Aqui, “pois” indica:', ['causa','conclusão','tempo','finalidade'], 1, 'Deslocado para o meio da oração e entre vírgulas, “pois” = portanto (conclusão).'],
-  ['“<b>Caso</b> você chegue cedo, me avise.” A conjunção expressa:', ['condição','concessão','consequência','proporção'], 0, 'Caso = se (condição).']
+  ['“<b>Caso</b> você chegue cedo, avise-me.” A conjunção expressa:', ['condição','concessão','consequência','proporção'], 0, 'Caso = se (condição).']
  ]},
 
 {id:'p-coes', mod:'P2', star:3, t:'Coesão referencial: quem é quem no texto', bncc:'EF89LP29', saeb:['D2'],
@@ -290,7 +290,7 @@ const TOP_POR = [
  qz:[
   ['“Estudei bastante, <b>por isso fui bem na prova</b>.” A oração destacada é:', ['coordenada conclusiva','coordenada adversativa','subordinada causal','subordinada temporal'], 0, '“Por isso” = conclusão; as orações são independentes.'],
   ['“<b>Quando o sinal tocou</b>, todos saíram.” A oração destacada indica:', ['causa','tempo','condição','finalidade'], 1, '“Quando” introduz uma circunstância de tempo (subordinada adverbial temporal).'],
-  ['“Espero <b>que você venha</b>.” A oração destacada é:', ['subordinada adjetiva','subordinada substantiva','subordinada adverbial causal','coordenada aditiva'], 1, 'Funciona como objeto de “espero” (espero isto): substantiva.']
+  ['“Espero <b>que você venha</b>.” A oração destacada é:', ['subordinada adjetiva','subordinada substantiva','subordinada adverbial causal','coordenada aditiva'], 1, 'Funciona como objeto direto de “espero” (espero isto): substantiva objetiva direta.']
  ]},
 
 {id:'p-adj', mod:'P3', star:3, t:'Orações adjetivas restritivas e explicativas', bncc:'EF09LP09', saeb:['D17','D19'],
@@ -330,7 +330,7 @@ const TOP_POR = [
 <ul><li><b>assistir a</b> (ver): “Assisti <b>ao</b> jogo.” (coloquial: “assisti o jogo”)</li><li><b>ir a / chegar a</b>: “Cheguei <b>à</b> escola.” (coloquial: “cheguei na escola”)</li><li><b>preferir algo a outra coisa</b>: “Prefiro suco <b>a</b> refrigerante.” (sem “mais” e sem “do que”)</li><li><b>obedecer a</b>, <b>simpatizar com</b>, <b>gostar de</b>, <b>morar em</b>, <b>namorar alguém</b> (sem “com”)</li><li><b>esquecer algo</b> ou <b>esquecer-se de algo</b>; <b>lembrar algo</b> ou <b>lembrar-se de algo</b></li></ul>
 <p><b>Regência nominal:</b> acessível <b>a</b>, apto <b>a/para</b>, contrário <b>a</b>, orgulho <b>de</b>, respeito <b>a/por</b>.</p>
 <p><b>Crase</b> = preposição <b>a</b> + artigo <b>a</b> = <b>à</b>. Truque: troque a palavra feminina por uma masculina. Se aparecer “<b>ao</b>”, tem crase: “Vou <b>à</b> feira” → “Vou <b>ao</b> mercado”.</p>
-<p><b>Nunca há crase</b> antes de palavra masculina, de verbo (“começou a chover”) e da maioria dos pronomes (“a ela”, “a você”). Nas horas exatas: “às 10h” (mas “desde as 10h”, “após as 10h”).</p>`,
+<p><b>Não há crase</b> antes de verbo (“começou a chover”), de palavra masculina (regra geral) e da maioria dos pronomes (“a ela”, “a você”). Na indicação de horas: “às 10h” (mas “desde as 10h”, “após as 10h”).</p>`,
  rule:`assistir AO jogo · ir/chegar À escola · preferir X A Y<br>Crase: troque por masculino → deu “ao”? então é “à”`,
  ex:[],
  trap:'“Prefiro <b>mais</b> pizza <b>do que</b> lasanha” é comum na fala, mas a norma-padrão pede: “Prefiro pizza <b>a</b> lasanha”.',
@@ -372,8 +372,8 @@ const TOP_POR = [
 
 {id:'p-pont', mod:'P3', star:2, t:'Pontuação e efeitos de sentido', bncc:'EF69LP56', saeb:['D17'],
  hook:'Uma vírgula pode salvar vidas: “Vamos comer, crianças!” × “Vamos comer crianças!”.',
- body:`<p><b>Vírgula — use para separar:</b> itens de uma enumeração; o <b>vocativo</b> (“Pedro, venha cá”); o <b>aposto</b> (“Belém, capital do Pará, …”); expressões deslocadas no início (“Ontem à noite, …”); orações coordenadas; orações explicativas.</p>
-<p><b>Vírgula — nunca separe</b> o sujeito do verbo, nem o verbo do complemento: “Os alunos do 9º ano<s>,</s> viajaram.”</p>
+ body:`<p><b>Vírgula — use para separar:</b> itens de uma enumeração; o <b>vocativo</b> (“Pedro, venha cá”); o <b>aposto</b> (“Belém, capital do Pará, …”); expressões deslocadas no início (“Ontem à noite, …”); orações coordenadas (as ligadas por “mas”, “porém” etc.; antes de “e”, em geral, não se usa vírgula); orações explicativas.</p>
+<p><b>Vírgula — nunca separe</b> o sujeito do verbo, nem o verbo do complemento, com uma vírgula só: “Os alunos do 9º ano<s>,</s> viajaram.” (Um termo intercalado entre <b>duas</b> vírgulas pode aparecer: “Os alunos, cansados, viajaram.”)</p>
 <p><b>Outros sinais:</b></p>
 <ul><li><b>Reticências (…):</b> hesitação, suspense, ideia interrompida, ironia.</li><li><b>Exclamação (!):</b> emoção, surpresa, ordem.</li><li><b>Dois-pontos (:)</b> anunciam explicação, enumeração ou fala.</li><li><b>Aspas (“ ”):</b> citação, ironia, palavra estrangeira ou sentido especial.</li><li><b>Travessão (—):</b> fala de personagem ou destaque.</li><li><b>Parênteses:</b> informação extra.</li></ul>`,
  rule:`Sujeito , verbo → <b>nunca</b><br>Vocativo e aposto explicativo → <b>sempre</b> com vírgula`,
@@ -410,7 +410,7 @@ const TOP_POR = [
 <p><b>Acentuação:</b> proparoxítonas — todas (lâmpada, matemática). Oxítonas terminadas em a(s), e(s), o(s), em, ens (sofá, cafés, avô, também). Paroxítonas terminadas em l, n, r, x, ps, ã, ão, i, us, um, ditongo (fácil, açúcar, órfão, júri, história). Pelo Acordo Ortográfico: <b>ideia, heroico, voo, leem</b> (sem acento).</p>`,
  rule:`Parassíntese = prefixo + sufixo ao mesmo tempo<br>Proparoxítona: sempre acentuada · ideia, heroico, voo: sem acento`,
  ex:[],
- trap:'“Infelizmente” tem prefixo e sufixo, mas existe “infeliz” e “felizmente” sozinhos: não é parassíntese. Em “entardecer”, não existe “entarde” nem “tardecer”.',
+ trap:'“Infelizmente” tem prefixo e sufixo, mas existem “infeliz” e “felizmente” sozinhos: não é parassíntese. Em “entardecer”, não existe “entarde” nem “tardecer”.',
  qz:[
   ['A palavra “entardecer” é formada por:', ['composição por justaposição','derivação parassintética','derivação regressiva','aglutinação'], 1, 'Prefixo “en-” e sufixo “-ecer” entram juntos.'],
   ['Qual é um estrangeirismo já adaptado ao português?', ['delivery','show','futebol','mouse'], 2, 'Futebol vem do inglês “football”, com grafia aportuguesada.'],

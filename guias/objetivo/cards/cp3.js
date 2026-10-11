@@ -44,13 +44,13 @@ const CARDS_P3 = [
  {t:'p-reg', k:'pegadinha', f:`“Cheguei na escola cedo.” Como fica na norma-padrão?`, b:`<b>“Cheguei à escola cedo.”</b><br>Chegar e ir pedem a preposição “a”, não “em”.`},
  {t:'p-reg', k:'conceito', f:`O que é a crase?`, b:`<b>A fusão da preposição “a” com o artigo “a”, marcada pelo acento grave: à.</b><br>Vou a + a feira → vou <b>à</b> feira.`},
  {t:'p-reg', k:'exemplo', f:`Complete com “a” ou “à”: “Vou ___ feira.” Qual o truque para conferir?`, b:`<b>“Vou à feira.”</b><br>Truque: troque por uma palavra masculina. “Vou <b>ao</b> mercado” → deu “ao”, então tem crase.`},
- {t:'p-reg', k:'pegadinha', f:`“Começou à chover.” A crase está correta?`, b:`<b>Não!</b> Correto: “Começou a chover.”<br>Nunca há crase antes de verbo (nem antes de palavra masculina).`},
+ {t:'p-reg', k:'pegadinha', f:`“Começou à chover.” A crase está correta?`, b:`<b>Não!</b> Correto: “Começou a chover.”<br>Nunca há crase antes de verbo (nem, em regra, antes de palavra masculina).`},
  {t:'p-reg', k:'exemplo', f:`Complete: “A aula começa ___ 10h.”`, b:`<b>“às 10h”.</b><br>Hora exata leva crase. Mas: “desde as 10h”, “após as 10h”.`},
  {t:'p-reg', k:'exemplo', f:`Complete: “Vou ___ Bahia” e “Vou ___ Recife”.`, b:`<b>“Vou à Bahia” e “Vou a Recife”.</b><br>Macete: volto DA Bahia (crase há!); volto DE Recife (crase pra quê?).`},
 
 /* p-conc — Concordância (8) */
  {t:'p-conc', k:'conceito', f:`Concordância verbal × concordância nominal?`, b:`<b>Verbal: o verbo concorda com o sujeito. Nominal: o adjetivo concorda com o substantivo.</b><br>“Os alunos <b>chegaram</b>.” · “Casas <b>antigas</b>.”`},
- {t:'p-conc', k:'regra', f:`“Haver” no sentido de “existir” vai para o plural?`, b:`<b>Não: é impessoal, fica no singular.</b><br>“<b>Havia</b> muitos alunos no pátio.” (nunca “haviam”)`},
+ {t:'p-conc', k:'regra', f:`“Haver” no sentido de “existir” vai para o plural?`, b:`<b>Não: é impessoal, fica no singular.</b><br>“<b>Havia</b> muitos alunos no pátio.” (e não “haviam”)`},
  {t:'p-conc', k:'exemplo', f:`“Existia muitas pessoas na fila” ou “Existiam muitas pessoas na fila”?`, b:`<b>“Existiam”.</b><br>Diferente de “haver”, “existir” concorda com o sujeito “muitas pessoas”.`},
  {t:'p-conc', k:'regra', f:`“Faz dois anos” ou “Fazem dois anos”?`, b:`<b>“Faz dois anos.”</b><br>“Fazer” indicando tempo decorrido é impessoal: fica no singular.`},
  {t:'p-conc', k:'exemplo', f:`Complete: “______ três dias para as férias.” (Falta / Faltam)`, b:`<b>“Faltam”.</b><br>O sujeito é “três dias” (plural), mesmo vindo depois do verbo.`},
@@ -70,13 +70,13 @@ const CARDS_P3 = [
 
 /* p-pont — Pontuação (8) */
  {t:'p-pont', k:'regra', f:`Pode-se separar o sujeito do verbo com vírgula?`, b:`<b>Nunca.</b> Nem o verbo do complemento.<br>Errado: “Os alunos do 9º ano, viajaram.” Macete: sujeito e verbo são namorados. (Um aposto entre duas vírgulas pode ficar no meio.)`},
- {t:'p-pont', k:'exemplo', f:`“Pedro, venha cá.” O que a vírgula separa?`, b:`<b>O vocativo</b> (“Pedro”, a pessoa com quem se fala).<br>O vocativo sempre leva vírgula.`},
+ {t:'p-pont', k:'exemplo', f:`“Pedro, venha cá.” O que a vírgula separa?`, b:`<b>O vocativo</b> (“Pedro”, a pessoa com quem se fala).<br>O vocativo sempre fica isolado por pontuação, em geral a vírgula.`},
  {t:'p-pont', k:'exemplo', f:`“Belém, capital do Pará, recebe muitos turistas.” O que fica entre as vírgulas?`, b:`<b>Um aposto.</b><br>Ele explica quem é o termo anterior (Belém).`},
  {t:'p-pont', k:'pegadinha', f:`“Não, espere!” × “Não espere!”: a vírgula muda o sentido?`, b:`<b>Sim! Inverte o sentido.</b><br>“Não, espere!” pede que a pessoa espere; “Não espere!” pede que ela não espere.`},
  {t:'p-pont', k:'exemplo', f:`“Bem… acho que não vou à festa.” O que as reticências indicam?`, b:`<b>Hesitação.</b><br>As reticências também podem indicar suspense, ideia interrompida ou ironia.`},
  {t:'p-pont', k:'conceito', f:`Para que servem os dois-pontos (:)?`, b:`<b>Para anunciar uma explicação, uma enumeração ou uma fala.</b><br>“Comprei três frutas: maçã, pera e uva.”`},
  {t:'p-pont', k:'exemplo', f:`“Que dia ‘ótimo’: choveu e perdi o ônibus.” Que efeito as aspas criam em “ótimo”?`, b:`<b>Ironia.</b><br>A palavra é usada no sentido contrário: o dia foi ruim.`},
- {t:'p-pont', k:'regra', f:`“Ontem à noite, fomos ao cinema.” Por que há vírgula depois de “noite”?`, b:`<b>Porque a expressão de tempo foi deslocada para o início da frase.</b><br>Ordem direta: “Fomos ao cinema ontem à noite.”`},
+ {t:'p-pont', k:'regra', f:`“Ontem à noite, fomos ao cinema.” Por que há vírgula depois de “noite”?`, b:`<b>Porque a expressão de tempo foi deslocada para o início da frase.</b><br>Ordem direta: “Fomos ao cinema ontem à noite.” Com expressão curta assim, a vírgula é recomendada, mas opcional.`},
 
 /* p-var — Variação linguística (8) */
  {t:'p-var', k:'regra', f:`Quais são os quatro tipos de variação linguística?`, b:`<b>Regional, social (ou etária), situacional e histórica.</b><br>O critério não é certo × errado, e sim adequado × inadequado.`},

@@ -200,12 +200,12 @@ const TREINO_M2 = [
   [`10 km/h`, `Você arredondou 50 min para 1 h. A conta precisa ser exata.`]
  ], a:0, e:`50 min = [[50|60]] h = [[5|6]] h.<br>v = [[d|t]] = 10 ÷ [[5|6]] = 10 × [[6|5]] = 12 km/h.<br>(Ou por regra de três: 10 km em 50 min → 12 km em 60 min.)`},
 
-{t:'m-prop', d:3, q:`Um prêmio de R$ 1 500,00 será dividido entre dois funcionários em partes <b>inversamente</b> proporcionais ao número de faltas de cada um no ano: um faltou 2 vezes e o outro, 3 vezes. Quanto receberá o funcionário que faltou 2 vezes?`, o:[
+{t:'m-prop', d:3, q:`Um prêmio de R$ 1.500,00 será dividido entre dois funcionários em partes <b>inversamente</b> proporcionais ao número de faltas de cada um no ano: um faltou 2 vezes e o outro, 3 vezes. Quanto receberá o funcionário que faltou 2 vezes?`, o:[
   [`R$ 600,00`, `Você dividiu de forma diretamente proporcional (2 e 3). Inversa: quem falta menos ganha mais.`],
   [`R$ 750,00`, `Você dividiu igualmente. A divisão depende das faltas.`],
   [`R$ 900,00`, ``],
   [`R$ 500,00`, `Você dividiu 1 500 por 3 sem montar a proporção.`],
-  [`R$ 1 000,00`, `Você deu [[2|3]] do prêmio para quem faltou 2 vezes. As partes são proporcionais a [[1|2]] e [[1|3]], ou seja, 3 : 2.`]
+  [`R$ 1.000,00`, `Você deu [[2|3]] do prêmio para quem faltou 2 vezes. As partes são proporcionais a [[1|2]] e [[1|3]], ou seja, 3 : 2.`]
  ], a:2, e:`Inversamente proporcional a 2 e 3 = diretamente proporcional a [[1|2]] e [[1|3]].<br>Multiplicando por 6: proporcional a 3 e 2. Total de partes: 5.<br>1 500 ÷ 5 = 300 → quem faltou 2 vezes: 3 × 300 = 900; quem faltou 3 vezes: 2 × 300 = 600.`},
 
 /* ===================== m-func · Funções ===================== */

@@ -80,6 +80,7 @@ details.strat .in{padding:0 18px 14px}
 .seg{display:grid;grid-template-columns:1fr 1fr;gap:6px;background:var(--card);border:1px solid var(--line);padding:5px;border-radius:16px;margin-bottom:14px}
 .seg button{border:0;background:none;border-radius:12px;min-height:50px;font:800 16px var(--head);cursor:pointer;color:var(--muted);display:flex;align-items:center;justify-content:center;gap:8px}
 .seg button small{font:600 12px var(--serif)}
+.seg4{grid-template-columns:repeat(4,1fr)}.seg4 button{font-size:14px;min-height:42px;padding:0 4px}.seg4 button[aria-pressed="true"][data-a="all"]{background:var(--ink);color:var(--paper2)}.seg4 button[aria-pressed="true"][data-a="geral"]{background:var(--gold);color:#fff}
 .seg button[aria-pressed="true"][data-a="mat"]{background:var(--mat);color:#fff}
 .seg button[aria-pressed="true"][data-a="por"]{background:var(--por);color:#fff}
 .sum{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:18px}
@@ -302,6 +303,41 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
 /* macete, contagem e treino */
 .mac{position:relative;background:var(--card);border:2px dashed var(--ac,var(--gold));border-radius:12px;padding:12px 16px;margin:18px 0}
 .mac b.h{display:block;font:700 24px/1 var(--hand);color:var(--ac,var(--gold));margin-bottom:4px}
+/* revisão turbinada */
+[id^="s-"],.kits{scroll-margin-top:84px}
+.tnav{display:flex;flex-wrap:wrap;gap:6px;margin:4px 0 8px}
+.tnav button{border:1.5px solid var(--line);background:var(--card);color:var(--ink);border-radius:999px;padding:5px 12px;font:700 13px var(--head);cursor:pointer;min-height:34px}
+.tnav button:hover{border-color:var(--ac,var(--ink));color:var(--ac,var(--ink))}
+.basel{display:grid;gap:8px;grid-template-columns:minmax(0,1fr)}
+.bi,.jt,.jx{min-width:0;overflow-wrap:break-word}
+.bi{background:var(--card);border:1px solid var(--line);border-left:5px solid var(--ac);border-radius:10px;padding:10px 14px}
+.bi>b{display:block;font:800 16px/1.35 var(--head);margin-bottom:4px;color:var(--ink)}
+.bi>div{font-size:16px;line-height:1.6}
+.jlist{display:grid;gap:12px;grid-template-columns:minmax(0,1fr)}
+.jt{background:var(--card);border:2px solid var(--ac);border-radius:14px;padding:12px 16px;box-shadow:var(--shadow)}
+.jh{display:flex;align-items:center;gap:10px}
+.jh b{font:800 17px/1.3 var(--head)}
+.jn{flex:none;width:28px;height:28px;border-radius:50%;background:var(--ac);color:#fff;display:grid;place-items:center;font:800 14px var(--head)}
+.jt p{margin:8px 0}
+.jx{background:var(--abg);border-radius:10px;padding:10px 12px;font-size:16px;line-height:1.7}
+.jl{display:block;font:700 20px/1 var(--hand);color:var(--ac);margin-bottom:4px}
+.passo{counter-reset:p;list-style:none;padding:0;margin:0}
+.passo li{counter-increment:p;position:relative;padding:8px 12px 8px 46px;margin-bottom:6px;background:var(--card);border:1px solid var(--line);border-radius:10px}
+.passo li::before{content:counter(p);position:absolute;left:10px;top:8px;width:26px;height:26px;border-radius:8px;background:var(--ink);color:var(--paper2);display:grid;place-items:center;font:800 14px var(--head)}
+.erros{list-style:none;padding:0;margin:0}
+.erros li{background:var(--red-bg);border-left:4px solid var(--red);border-radius:8px;padding:8px 12px;margin-bottom:6px;font-size:16px}
+.resumo{background:var(--hl);color:#2b2200;border-radius:12px;padding:12px 16px 8px;margin:22px 0;box-shadow:0 10px 20px -14px rgba(0,0,0,.5)}
+.resumo b.h{display:block;font:700 26px/1 var(--hand);color:var(--red);margin-bottom:6px}
+.resumo ul{margin:0;padding-left:20px;font:700 16px/1.6 var(--serif)}
+.resumo li{margin-bottom:4px}
+.folha .frs{margin:6px 0 0;padding-left:18px;font-size:14px;line-height:1.5;color:var(--muted)}
+.kitBtn{display:grid;grid-template-columns:auto 1fr auto;align-items:center;gap:12px;width:100%;text-align:left;margin:0 0 16px;padding:14px 16px;border-radius:14px;border:2px solid var(--gold);background:var(--card);color:var(--ink);cursor:pointer;box-shadow:var(--shadow);font:inherit}
+.kitBtn .ki{font-size:30px}
+.kitBtn b{display:block;font:800 17px/1.3 var(--head)}
+.kitBtn small{display:block;color:var(--muted);font-size:14px;line-height:1.35;margin-top:2px}
+.kitBtn .ka{font:800 22px var(--head);color:var(--gold)}
+.kits .bi{border-left-color:var(--ac)}
+@media print{.bi,.jt{break-inside:avoid}}
 .count{display:flex;align-items:center;gap:12px;margin-top:12px;background:var(--red-bg);border:1.5px solid var(--red);border-radius:14px;padding:8px 14px;color:var(--ink);font-size:14px;line-height:1.25}
 .count>b{font:800 34px/1 var(--head);color:var(--red)}
 .count small{color:var(--muted)}
@@ -409,6 +445,7 @@ const slug=s=>s.toLowerCase().normalize('NFD').replace(/[̀-ͯ]/g,'').replace(/[
 /* ---------- dados ---------- */
 const AREAS={mat:{n:'Matemática',mods:MODS_MAT,tops:TOP_MAT,ac:'var(--mat)',abg:'var(--mat-bg)'},por:{n:'Português',mods:MODS_POR,tops:TOP_POR,ac:'var(--por)',abg:'var(--por-bg)'}};
 const TOPS=[...TOP_MAT,...TOP_POR];const T={};TOPS.forEach(t=>{t.area=t.id[0]==='m'?'mat':'por';T[t.id]=t});
+const PLUS=Object.assign({},PLUS_M1,PLUS_M2A,PLUS_M2B,PLUS_M3,PLUS_M45,PLUS_P1,PLUS_P2,PLUS_P3A,PLUS_P3B);
 const QS=[];TOPS.forEach(t=>(t.qz||[]).forEach((q,i)=>QS.push({id:t.id+':'+i,t:t.id,q})));
 const QN=QS.length;
 function hash(s){let h=2166136261;for(let i=0;i<s.length;i++){h^=s.charCodeAt(i);h=Math.imul(h,16777619)}return h>>>0}
@@ -476,8 +513,8 @@ paralelas:'<svg viewBox="0 0 320 200" role="img" aria-label="Duas paralelas r e 
  '<g stroke="none"><path d="M191 60 L209 60 A18 18 0 0 0 202.1 45.8Z" fill="var(--mat)" opacity=".85"/><path d="M191 60 L173 60 A18 18 0 0 0 179.9 74.2Z" fill="var(--mat)" opacity=".85"/><path d="M191 60 L173 60 A18 18 0 0 1 202.1 45.8Z" fill="var(--por)" opacity=".45"/><path d="M191 60 L209 60 A18 18 0 0 1 179.9 74.2Z" fill="var(--por)" opacity=".45"/>'+
  '<path d="M129 140 L147 140 A18 18 0 0 0 140.1 125.8Z" fill="var(--mat)" opacity=".85"/><path d="M129 140 L111 140 A18 18 0 0 0 117.9 154.2Z" fill="var(--mat)" opacity=".85"/><path d="M129 140 L111 140 A18 18 0 0 1 140.1 125.8Z" fill="var(--por)" opacity=".45"/><path d="M129 140 L147 140 A18 18 0 0 1 117.9 154.2Z" fill="var(--por)" opacity=".45"/></g>'+
  '<g font-family="Atkinson Hyperlegible,sans-serif" font-size="15" font-weight="700" fill="currentColor" text-anchor="middle"><text x="178" y="38">a</text><text x="220" y="52">b</text><text x="164" y="78">c</text><text x="206" y="92">d</text><text x="116" y="118">e</text><text x="158" y="132">f</text><text x="102" y="158">g</text><text x="144" y="172">h</text><text x="308" y="56">r</text><text x="308" y="136">s</text><text x="236" y="16">t</text></g></svg>',
-sombra:'<svg viewBox="0 0 320 170" role="img" aria-label="Poste e pessoa com suas sombras formando triângulos semelhantes"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M10 150H310"/><path d="M70 150V30" stroke-width="4"/><path d="M70 30 190 150" stroke-dasharray="5 4" stroke="var(--gold)"/><path d="M240 150V118" stroke-width="4"/><path d="M240 118 270 150" stroke-dasharray="5 4" stroke="var(--gold)"/></g><circle cx="240" cy="112" r="6" fill="currentColor"/><path d="M70 150h14v-14h-14" fill="none" stroke="currentColor"/><path d="M240 150h8v-8h-8" fill="none" stroke="currentColor"/>'+
- '<g font-family="Atkinson Hyperlegible,sans-serif" font-size="14" font-weight="700" fill="currentColor"><text x="40" y="95">h</text><text x="118" y="166">sombra 6 m</text><text x="200" y="138">1,6 m</text><text x="236" y="166">1,2 m</text></g><g fill="var(--gold)"><circle cx="300" cy="22" r="10"/></g></svg>',
+sombra:'<svg viewBox="0 0 320 170" role="img" aria-label="Poste e pessoa com suas sombras formando triângulos semelhantes; o sol fica à esquerda e as sombras caem para a direita"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M10 150H310"/><path d="M90 150V30" stroke-width="4"/><path d="M90 30 180 150" stroke-dasharray="5 4" stroke="var(--gold)"/><path d="M240 150V131" stroke-width="4"/><path d="M240 126 258 150" stroke-dasharray="5 4" stroke="var(--gold)"/></g><circle cx="240" cy="126" r="5" fill="currentColor"/><path d="M90 150h12v-12h-12" fill="none" stroke="currentColor"/><path d="M240 150h7v-7h-7" fill="none" stroke="currentColor"/>'+
+ '<g font-family="Atkinson Hyperlegible,sans-serif" font-size="14" font-weight="700" fill="currentColor"><text x="70" y="95">h</text><text x="104" y="166">sombra 6 m</text><text x="196" y="130">1,6 m</text><text x="236" y="166">1,2 m</text></g><g fill="var(--gold)"><circle cx="26" cy="22" r="10"/></g></svg>',
 pitagoras:'<svg viewBox="0 0 320 200" role="img" aria-label="Triângulo retângulo com hipotenusa a, catetos b e c, altura h e projeções m e n"><g fill="none" stroke="currentColor" stroke-width="2"><path d="M30 170 110 50 290 170Z"/><path d="M110 50V170" stroke-dasharray="5 4" stroke="var(--mat)"/><path d="M110 170h10v-10h-10" stroke="var(--mat)"/><path d="M103.3 60l9.4 6.3 6.3-9.4"/></g>'+
  '<g font-family="Atkinson Hyperlegible,sans-serif" font-size="15" font-weight="700" fill="currentColor" text-anchor="middle"><text x="60" y="104">c</text><text x="210" y="102">b</text><text x="160" y="192">a</text><text x="98" y="118" fill="var(--mat)">h</text><text x="70" y="160" fill="var(--por)">n</text><text x="200" y="160" fill="var(--por)">m</text><text x="110" y="40">A</text><text x="20" y="186">B</text><text x="300" y="186">C</text><text x="112" y="190" font-size="12">H</text></g></svg>',
 inscrito:'<svg viewBox="0 0 320 200" role="img" aria-label="Circunferência com ângulo central AOB e ângulo inscrito ACB olhando o mesmo arco"><circle cx="160" cy="105" r="80" fill="none" stroke="currentColor" stroke-width="2"/><path d="M108.6 166.3A80 80 0 0 0 211.4 166.3" fill="none" stroke="var(--red)" stroke-width="6" stroke-linecap="round"/><g fill="none" stroke-width="2"><path d="M108.6 166.3 160 105 211.4 166.3" stroke="var(--mat)"/><path d="M108.6 166.3 160 25 211.4 166.3" stroke="var(--por)"/></g><circle cx="160" cy="105" r="3.5" fill="currentColor"/>'+
@@ -500,7 +537,7 @@ function setTab(k){document.querySelectorAll('.tab').forEach(b=>b.setAttribute('
 document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>go(b.dataset.tab)));
 function route(){const h=(location.hash||'#rev').slice(1);const [tab,arg]=h.split('/');
  const k=['rev','treino','cards','simu','placar'].includes(tab)?tab:'rev';setTab(k);document.body.classList.remove('focus');
- if(k==='rev'){if(arg==='folha')renderFolha();else if(arg&&T[arg])renderTopic(arg);else renderList()}
+ if(k==='rev'){if(arg==='folha')renderFolha();else if(arg==='kit')renderKit();else if(arg&&T[arg])renderTopic(arg);else renderList()}
  else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else if(k==='cards')renderCards();else if(k==='simu')renderSimu();else renderSoon(k);
  try{window.scrollTo(0,0)}catch(e){}}
 addEventListener('hashchange',route);
@@ -510,6 +547,7 @@ function stat(t){const r=!!S.rev[t.id];const n=(t.qz||[]).length;let ok=0,ans=0;
 function renderList(){const A=AREAS[AREA];const el=$('rev');
  const tops=A.tops,done=tops.filter(t=>S.rev[t.id]).length,qn=tops.reduce((a,t)=>a+t.qz.length,0),qok=tops.reduce((a,t)=>a+stat(t).ok,0);
  let h='<details class="card strat"'+(LS.get(P+':stratSeen')?'':' open')+'><summary>🎯 '+ESTRATEGIA.t+'</summary><div class="in body">'+ESTRATEGIA.body+'</div></details>';
+ h+='<button type="button" class="kitBtn" id="kBtn"><span class="ki">🧰</span><span><b>Kit básico: o que não pode esquecer</b><small>Contas de cabeça, frações e %, fórmulas, números que caem sempre, regras de Português e estratégia de prova</small></span><span class="ka">→</span></button>';
  h+='<div class="seg" role="group" aria-label="Matéria">'+Object.keys(AREAS).map(a=>'<button type="button" data-a="'+a+'" aria-pressed="'+(a===AREA)+'">'+AREAS[a].n+' <small>'+AREAS[a].tops.length+' tópicos</small></button>').join('')+'</div>';
  h+='<div class="sum"><div><span>Revisados</span><b>'+done+'/'+tops.length+'</b></div><div><span>Testes certos</span><b>'+qok+'/'+qn+'</b></div><div><span>Pontos aqui</span><b>'+(done*5+qok*5)+'</b></div></div>';
  h+='<p class="leg">Prioridade: <b>★★★</b> quase certo de cair · <b>★★</b> provável · <b>★</b> revisão rápida</p>';
@@ -523,7 +561,7 @@ function renderList(){const A=AREAS[AREA];const el=$('rev');
  el.querySelector('details.strat').addEventListener('toggle',e=>{if(!e.target.open)LS.set(P+':stratSeen',1)});
  el.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{AREA=b.dataset.a;LS.set(P+':area',AREA);renderList()});
  el.querySelectorAll('.trow').forEach(b=>b.onclick=()=>go('rev/'+b.dataset.t));
- $('fBtn').onclick=()=>go('rev/folha');}
+ $('fBtn').onclick=()=>go('rev/folha');$('kBtn').onclick=()=>go('rev/kit');}
 
 /* ---------- página do tópico ---------- */
 function renderTopic(id){const t=T[id];AREA=t.area;LS.set(P+':area',AREA);const A=AREAS[t.area];const el=$('rev');const mod=A.mods.find(m=>m.id===t.mod);
@@ -531,17 +569,25 @@ function renderTopic(id){const t=T[id];AREA=t.area;LS.set(P+':area',AREA);const 
  let h='<article style="--ac:'+A.ac+';--abg:'+A.abg+'">';
  h+='<div class="crumb"><button type="button" id="bk">← '+A.n+' · '+mod.n+'</button></div>';
  h+='<h2 class="th">'+t.t+'</h2><div class="tags"><span class="tag star">'+'★'.repeat(t.star)+'</span><span class="tag">BNCC '+t.bncc.replace(' · SAEB','')+'</span>'+(t.saeb?t.saeb.map(d=>'<span class="tag" title="'+esc(SAEB[d])+'">SAEB '+d+'</span>').join(''):'')+'</div>';
+ const X=PLUS[t.id]||{};const nav=[['s-ent','Entenda'],X.base&&['s-base','O básico'],X.jeitos&&['s-jeitos','Jeitos espertos'],X.passo&&['s-passo','Passo a passo'],['s-ex','Exemplos'],X.erros&&['s-erros','Erros comuns'],X.resumo&&['s-res','Resumo'],['s-quiz','Teste rápido']].filter(Boolean);
  h+='<p class="hook">'+fmt(t.hook)+'</p>';
+ h+='<nav class="tnav noprint" aria-label="Nesta página">'+nav.map(([i,l])=>'<button type="button" data-j="'+i+'">'+l+'</button>').join('')+'</nav>';
  if(t.saeb)h+='<details class="tip"><summary style="cursor:pointer;font-weight:700">O que o SAEB cobra aqui</summary><ul style="margin:8px 0 0;padding-left:20px">'+t.saeb.map(d=>'<li><b>'+d+'</b>: '+SAEB[d]+'</li>').join('')+'</ul></details>';
- h+='<div class="sec">Entenda</div><div class="body">'+fmt(t.body).replace(/<table class="tb">/g,'<div class="tbw"><table class="tb">').replace(/<\/table>/g,'</table></div>')+'</div>';
+ h+='<div class="sec" id="s-ent">Entenda</div><div class="body">'+fmt(t.body).replace(/<table class="tb">/g,'<div class="tbw"><table class="tb">').replace(/<\/table>/g,'</table></div>')+'</div>';
  if(t.fig&&FIG[t.fig])h+='<figure>'+FIG[t.fig]+'<figcaption>'+fmt(FIGCAP[t.fig])+'</figcaption></figure>';
+ if(X.base){h+='<div class="sec" id="s-base">O básico que não pode esquecer</div><div class="basel">'+X.base.map(b=>'<div class="bi"><b>'+fmt(b[0])+'</b><div>'+tbw(fmt(b[1]))+'</div></div>').join('')+'</div>'}
  h+='<div class="rule"><span class="lb">Regra de ouro</span>'+fmt(t.rule)+'</div>';
  if(MACETES[t.id])h+='<div class="mac"><b class="h">Macete</b>'+fmt(MACETES[t.id])+'</div>';
- if(t.ex&&t.ex.length){h+='<div class="sec">Exemplos resolvidos</div><p style="margin:-2px 0 10px;font-size:14px;color:var(--muted)">Tente resolver antes de abrir a resolução.</p>';
-  t.ex.forEach((e,i)=>{const k=t.id+':'+i,open=!!S.sol[k];h+='<div class="ex"><div class="q" data-n="'+(i+1)+'">'+fmt(e.q)+'</div><div class="sol" '+(open?'':'hidden')+'><ol>'+e.s.map(x=>'<li>'+fmt(x)+'</li>').join('')+'</ol><span class="ans">Resposta: '+fmt(e.r)+'</span></div>'+(open?'':'<button type="button" class="btn ghost sm show" data-k="'+k+'">Tentei! Mostrar resolução</button>')+'</div>'})}
+ if(X.jeitos){h+='<div class="sec" id="s-jeitos">'+(t.area==='mat'?'Jeitos espertos de fazer a conta':'Jeitos espertos de reconhecer')+'</div><div class="jlist">'+X.jeitos.map((j,i)=>'<div class="jt"><div class="jh"><span class="jn">'+(i+1)+'</span><b>'+fmt(j.n)+'</b></div><p>'+fmt(j.c)+'</p><div class="jx"><span class="jl">Veja funcionando</span>'+tbw(fmt(j.ex))+'</div></div>').join('')+'</div>'}
+ if(X.passo){h+='<div class="sec" id="s-passo">Passo a passo para resolver</div><ol class="passo">'+X.passo.map(x=>'<li>'+fmt(x)+'</li>').join('')+'</ol>'}
+ const allEx=[...(t.ex||[]).map((e,i)=>[e,t.id+':'+i]),...(X.exs||[]).map((e,i)=>[e,t.id+':x'+i])];
+ if(allEx.length){h+='<div class="sec" id="s-ex">Exemplos resolvidos</div><p style="margin:-2px 0 10px;font-size:14px;color:var(--muted)">Tente resolver antes de abrir a resolução. Do mais fácil para o mais difícil.</p>';
+  allEx.forEach(([e,k],i)=>{const open=!!S.sol[k];h+='<div class="ex"><div class="q" data-n="'+(i+1)+'">'+tbw(fmt(e.q))+'</div><div class="sol" '+(open?'':'hidden')+'><ol>'+e.s.map(x=>'<li>'+tbw(fmt(x))+'</li>').join('')+'</ol><span class="ans">Resposta: '+fmt(e.r)+'</span></div>'+(open?'':'<button type="button" class="btn ghost sm show" data-k="'+k+'">Tentei! Mostrar resolução</button>')+'</div>'})}
+ if(X.erros){h+='<div class="sec" id="s-erros">Erros que tiram ponto</div><ul class="erros">'+X.erros.map(x=>'<li>'+fmt(x)+'</li>').join('')+'</ul>'}
  h+='<div class="trap"><b class="h">Pegadinha!</b>'+fmt(t.trap)+'</div>';
  if(t.tip)h+='<div class="tip"><b class="h">Dica de prova</b>'+fmt(t.tip)+'</div>';
- h+='<div class="sec">Teste rápido · +5 por acerto</div>';
+ if(X.resumo){h+='<div class="resumo" id="s-res"><b class="h">Resumo em 30 segundos</b><ul>'+X.resumo.map(x=>'<li>'+fmt(x)+'</li>').join('')+'</ul></div>'}
+ h+='<div class="sec" id="s-quiz">Teste rápido · +5 por acerto</div>';
  if(t.txt)h+='<div class="txt">'+fmt(t.txt)+'</div>';
  t.qz.forEach((q,i)=>{const qid=t.id+':'+i;const ord=order(qid,q[1].length);const v=S.tr[qid];const ans=v!=null;
   h+='<div class="qq" data-q="'+qid+'"><div class="qt"><span class="n">'+(i+1)+'.</span>'+fmt(q[0])+'</div><div class="opts">';
@@ -553,6 +599,7 @@ function renderTopic(id){const t=T[id];AREA=t.area;LS.set(P+':area',AREA);const 
  h+='<div class="nav">'+(prev?'<button type="button" class="btn ghost" data-go="'+prev.id+'">← Anterior<span>'+prev.t+'</span></button>':'<span></span>')+(next?'<button type="button" class="btn ghost" data-go="'+next.id+'">Próximo →<span>'+next.t+'</span></button>':'<button type="button" class="btn ghost" data-go="">Fim de '+A.n+' ✓<span>voltar à lista</span></button>')+'</div></article>';
  el.innerHTML=h;
  $('bk').onclick=()=>go('rev');
+ el.querySelectorAll('.tnav button').forEach(b=>b.onclick=()=>{const s=$(b.dataset.j);if(s)try{s.scrollIntoView({behavior:'smooth',block:'start'})}catch(e){s.scrollIntoView()}});
  el.querySelectorAll('.show').forEach(b=>b.onclick=()=>{S.sol[b.dataset.k]=1;if(CUR){USERS[CUR].s=S;LS.set(P+':users',USERS)}b.previousElementSibling.hidden=false;b.remove()});
  el.querySelectorAll('.qq').forEach(box=>{const qid=box.dataset.q,i=+qid.split(':')[1],q=t.qz[i];
   box.querySelectorAll('.opt').forEach(b=>b.onclick=()=>{if(!need())return;if(S.tr[qid]!=null)return;const before=TOTAL();S.tr[qid]=+b.dataset.o;save(before);
@@ -562,11 +609,24 @@ function renderTopic(id){const t=T[id];AREA=t.area;LS.set(P+':area',AREA);const 
  el.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>go(b.dataset.go?'rev/'+b.dataset.go:'rev'));}
 
 /* ---------- folha de revisão ---------- */
-function renderFolha(){const A=AREAS[AREA];let h='<div class="crumb noprint"><button type="button" id="bk">← Voltar para a lista</button></div><h2 class="th">Folha de revisão · '+A.n+'</h2><p style="color:var(--muted);margin-top:0">Todas as regras de ouro numa página só. Leia na véspera ou imprima.</p>';
+function renderFolha(){const A=AREAS[AREA];let h='<div class="crumb noprint"><button type="button" id="bk">← Voltar para a lista</button></div><h2 class="th">Folha de revisão · '+A.n+'</h2><p style="color:var(--muted);margin-top:0">Todas as regras de ouro e os resumos numa página só. Leia na véspera ou imprima.</p>';
  h+='<div class="seg noprint" role="group">'+Object.keys(AREAS).map(a=>'<button type="button" data-a="'+a+'" aria-pressed="'+(a===AREA)+'">'+AREAS[a].n+'</button>').join('')+'</div><div class="folha">';
- A.mods.forEach(m=>{h+='<div class="sec" style="--ac:'+A.ac+'">'+m.n+'</div>';A.tops.filter(t=>t.mod===m.id).forEach(t=>{h+='<div class="fi" style="--ac:'+A.ac+'"><b>'+t.t+'</b><div>'+fmt(t.rule)+'</div></div>'})});
+ A.mods.forEach(m=>{h+='<div class="sec" style="--ac:'+A.ac+'">'+m.n+'</div>';A.tops.filter(t=>t.mod===m.id).forEach(t=>{h+='<div class="fi" style="--ac:'+A.ac+'"><b>'+t.t+'</b><div>'+fmt(t.rule)+'</div>'+(PLUS[t.id]&&PLUS[t.id].resumo?'<ul class="frs">'+PLUS[t.id].resumo.map(x=>'<li>'+fmt(x)+'</li>').join('')+'</ul>':'')+'</div>'})});
  h+='</div><p class="noprint" style="text-align:center"><button type="button" class="btn ghost" onclick="print()">🖨️ Imprimir</button></p>';
  $('rev').innerHTML=h;$('bk').onclick=()=>go('rev');$('rev').querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{AREA=b.dataset.a;LS.set(P+':area',AREA);renderFolha()})}
+
+function tbw(x){return x.replace(/<table class="tb">/g,'<div class="tbw"><table class="tb">').replace(/<\/table>/g,'</table></div>')}
+/* ---------- kit básico ---------- */
+const KITA={all:'Tudo',mat:'Matemática',por:'Português',geral:'Prova'};
+function renderKit(){const f=LS.get(P+':kitf')||'all';let h='<div class="crumb noprint"><button type="button" id="bk">← Voltar para a lista</button></div><h2 class="th">🧰 Kit básico: o que não pode esquecer</h2><p style="color:var(--muted);margin-top:0">A base de tudo: '+KIT.reduce((a,s)=>a+s.it.length,0)+' itens com exemplo. Leia um bloco por dia e volte aqui sempre que travar numa conta simples.</p>';
+ h+='<div class="seg seg4 noprint" role="group">'+Object.keys(KITA).map(a=>'<button type="button" data-a="'+a+'" aria-pressed="'+(a===f)+'">'+KITA[a]+'</button>').join('')+'</div>';
+ h+='<nav class="tnav noprint">'+KIT.filter(s=>f==='all'||s.area===f).map(s=>'<button type="button" data-j="'+s.id+'">'+s.ic+' '+s.n+'</button>').join('')+'</nav>';
+ KIT.filter(s=>f==='all'||s.area===f).forEach(s=>{const ac=s.area==='por'?'var(--por)':s.area==='mat'?'var(--mat)':'var(--gold)';
+  h+='<section class="kits" id="'+s.id+'" style="--ac:'+ac+'"><div class="sec">'+s.ic+' '+s.n+'</div><div class="basel">'+s.it.map(it=>'<div class="bi"><b>'+fmt(it[0])+'</b><div>'+tbw(fmt(it[1]))+'</div></div>').join('')+'</div></section>'});
+ h+='<p class="noprint" style="text-align:center"><button type="button" class="btn ghost" onclick="print()">🖨️ Imprimir</button></p>';
+ const el=$('rev');el.innerHTML=h;$('bk').onclick=()=>go('rev');
+ el.querySelectorAll('.seg button').forEach(b=>b.onclick=()=>{LS.set(P+':kitf',b.dataset.a);renderKit()});
+ el.querySelectorAll('.tnav button').forEach(b=>b.onclick=()=>{const s=$(b.dataset.j);if(s)try{s.scrollIntoView({behavior:'smooth',block:'start'})}catch(e){s.scrollIntoView()}});}
 
 /* ---------- em breve ---------- */
 const SOON={treino:['Treino por tópico','Banco de questões no formato da prova, escolhendo matéria e tópico, com explicação de cada alternativa. Inclui questões no estilo OBMEP (Nível 2), Olimpíada de Língua Portuguesa e Vestibulinho Etec.'],

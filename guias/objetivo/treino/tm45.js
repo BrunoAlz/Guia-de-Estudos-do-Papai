@@ -141,7 +141,7 @@ const TREINO_M45 = [
 
 /* ===================== m-media (5) ===================== */
 {t:'m-media', d:1, q:`Nos 6 jogos de um campeonato, o time da escola marcou estes números de gols: 1, 0, 3, 1, 5 e 2. Qual foi a média de gols por jogo?`, o:[
-  [`2,4`, `Você dividiu 12 por 5, esquecendo o jogo em que o time fez 0 gol. Ele também conta: são 6 jogos.`],
+  [`2,4`, `Você dividiu 12 por 5, esquecendo o jogo em que o time não marcou gol (0). Ele também conta: são 6 jogos.`],
   [`2`, ``],
   [`12`, `12 é a soma dos gols. Para a média, ainda falta dividir pela quantidade de jogos.`],
   [`5`, `5 é a amplitude (5 − 0), que mede a variação, e não a média.`],
@@ -199,7 +199,7 @@ const TREINO_M45 = [
 
 {t:'m-prob', d:3, q:`Numa gaveta há 3 meias pretas e 2 meias brancas, todas do mesmo modelo. No escuro, Pedro pega 2 meias ao acaso, uma depois da outra, sem devolver. Qual é a probabilidade de as duas meias serem da mesma cor?`, o:[
   [`[[2|5]]`, ``],
-  [`[[3|10]]`, `[[3|10]] é só a chance de as duas serem pretas. Também é par se as duas forem brancas.`],
+  [`[[3|10]]`, `[[3|10]] é só a chance de as duas serem pretas. Também conta o caso de as duas serem brancas.`],
   [`[[13|25]]`, `Você calculou como se a primeira meia voltasse para a gaveta ([[9|25]] + [[4|25]]). Sem reposição, o total cai para 4 na segunda retirada.`],
   [`[[3|5]]`, `[[3|5]] é a chance de as meias serem de cores <b>diferentes</b>.`],
   [`[[1|10]]`, `[[1|10]] é só a chance de as duas serem brancas. Faltou somar o caso das duas pretas.`]

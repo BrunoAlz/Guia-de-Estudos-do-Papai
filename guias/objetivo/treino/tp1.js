@@ -65,7 +65,7 @@ const TREINO_P1 = [
 
 /* ================= p-tira · Tirinhas, charges e memes (5) ================= */
 {t:'p-tira', d:1,
- tx:`<b>Tirinha</b><br><b>Quadro 1:</b> Lucas entrega o boletim ao pai, com um sorriso sem graça.<br><b>Quadro 2:</b> Close no boletim: Matemática — nota 3,0.<br><b>Quadro 3:</b> O pai, de braços cruzados e sobrancelha erguida, diz: “Excelente! Continue assim que você vai longe!”`,
+ tx:`<b>Tirinha</b><br><b>Quadro 1:</b> Lucas entrega o boletim ao pai, com um sorriso sem graça.<br><b>Quadro 2:</b> Close no boletim: Matemática — nota 3,0.<br><b>Quadro 3:</b> O pai, de braços cruzados e sobrancelha erguida, diz: “Excelente! Continue assim, que você vai longe!”`,
  q:`Na fala do pai, no último quadro, as palavras “Excelente!” e “vai longe” foram usadas com sentido:`,
  o:[
   [`literal, pois o pai está orgulhoso da nota.`, `A nota 3,0, os braços cruzados e a sobrancelha erguida mostram que ele não está orgulhoso.`],

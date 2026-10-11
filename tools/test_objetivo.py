@@ -43,8 +43,11 @@ with sync_playwright() as p:
             pg.evaluate(f"location.hash='rev/{tid}'"); pg.wait_for_timeout(120)
             sw = pg.evaluate("document.documentElement.scrollWidth")
             if sw > cw: errs.append(f"{label}: rolagem horizontal em {tid} {sw}>{cw}")
-            if "[[" in pg.inner_text("#rev") or "√{" in pg.inner_text("#rev"):
+            tx = pg.inner_text("#rev")
+            if "[[" in tx or "√{" in tx or "undefined" in tx or "${" in tx or "<b>" in tx or "</" in tx:
                 errs.append(f"{label}: marcação não convertida em {tid}")
+            for sec in ("s-base", "s-jeitos", "s-passo", "s-erros", "s-res"):
+                if not pg.query_selector("#" + sec): errs.append(f"{label}: falta seção {sec} em {tid}")
         # interação em m-pit
         pg.evaluate("location.hash='rev/m-pit'"); pg.wait_for_timeout(300)
         pg.screenshot(path=str(out / f"{label}-2-topico.png"), full_page=False)
@@ -58,6 +61,18 @@ with sync_playwright() as p:
         if label == "cel": pg.screenshot(path=str(out / "cel-4-conj-full.png"), full_page=True)
         pg.evaluate("location.hash='rev/folha'"); pg.wait_for_timeout(300)
         pg.screenshot(path=str(out / f"{label}-5-folha.png"))
+        pg.evaluate("location.hash='rev/kit'"); pg.wait_for_timeout(400)
+        tx = pg.inner_text("#rev")
+        if "[[" in tx or "√{" in tx or "undefined" in tx or "</" in tx: errs.append(f"{label}: marcação no kit")
+        if pg.evaluate("document.querySelectorAll('.kits .bi').length") < 90: errs.append(f"{label}: kit incompleto")
+        sw = pg.evaluate("document.documentElement.scrollWidth")
+        if sw > cw: errs.append(f"{label}: rolagem horizontal no kit {sw}>{cw}")
+        pg.screenshot(path=str(out / f"{label}-6-kit.png"))
+        if label == "cel": pg.screenshot(path=str(out / "cel-6b-kit-full.png"), full_page=True)
+        pg.evaluate("location.hash='rev/m-pct'"); pg.wait_for_timeout(300)
+        pg.click(".tnav button >> text=Jeitos espertos"); pg.wait_for_timeout(700)
+        pg.screenshot(path=str(out / f"{label}-7-pct-jeitos.png"))
+        if label == "cel": pg.screenshot(path=str(out / "cel-7b-pct-full.png"), full_page=True)
         pg.evaluate("location.hash='placar'"); pg.wait_for_timeout(3500)
         pg.screenshot(path=str(out / f"{label}-6-placar.png"), full_page=True)
         pg.evaluate("location.hash='simu'"); pg.wait_for_timeout(200)

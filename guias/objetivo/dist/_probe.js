@@ -54,9 +54,9 @@ const TOP_MAT = [
 
 {id:'m-reais', mod:'M1', star:2, t:'Números reais: racionais e irracionais', bncc:'EF09MA01 · EF09MA02 · EF08MA05',
  hook:'Todo número da reta é <b>real</b>. A pergunta é: ele pode ou não ser escrito como fração?',
- body:`<p><b>Racional</b> = pode ser escrito como fração [[a|b]] (com b ≠ 0). Entram aqui os inteiros, os decimais finitos (2,75) e as <b>dízimas periódicas</b> (0,333…).</p>
-<p><b>Irracional</b> = decimal <b>infinito e não periódico</b>: não tem fração. Exemplos: √{2} = 1,4142…, √{3}, √{5}, π = 3,14159…</p>
-<p>Atenção: √{9} = 3 e √{16} = 4 são <b>racionais</b>. Só é irracional a raiz que não dá exata.</p>
+ body:`<p><b>Racional</b> = pode ser escrito como fração [[a|b]] (com a e b inteiros e b ≠ 0). Entram aqui os inteiros, os decimais finitos (2,75) e as <b>dízimas periódicas</b> (0,333…).</p>
+<p><b>Irracional</b> = decimal <b>infinito e não periódico</b>: não pode ser escrito como fração de inteiros. Exemplos: √{2} = 1,4142…, √{3}, √{5}, π = 3,14159…</p>
+<p>Atenção: √{9} = 3 e √{16} = 4 são <b>racionais</b>. A raiz quadrada de um número natural só é irracional quando não dá exata.</p>
 <p>A diagonal de um quadrado de lado 1 mede √{2}: é um segmento de verdade cuja medida não é uma fração.</p>
 <p><b>Localizar na reta:</b> procure os quadrados perfeitos vizinhos. √{30}: 25 &lt; 30 &lt; 36, então 5 &lt; √{30} &lt; 6 (mais perto de 5, ≈ 5,48).</p>
 <p><b>Fração geratriz</b> de dízima simples: o período sobre tantos 9 quantos algarismos ele tiver. 0,272727… = [[27|99]] = [[3|11]].</p>
@@ -75,7 +75,7 @@ const TOP_MAT = [
 
 {id:'m-pot', mod:'M1', star:2, t:'Potências e raízes', bncc:'EF09MA03 · EF08MA01',
  hook:'As propriedades de potência economizam conta. Expoente negativo e fracionário são os favoritos do 9º ano.',
- body:`<p><b>Casos especiais:</b> a<sup>0</sup> = 1 · a<sup>1</sup> = a · a<sup>−n</sup> = [[1|a<sup>n</sup>]] (o negativo <b>inverte</b>, não deixa negativo).</p>
+ body:`<p><b>Casos especiais</b> (com a ≠ 0): a<sup>0</sup> = 1 · a<sup>1</sup> = a · a<sup>−n</sup> = [[1|a<sup>n</sup>]] (o negativo <b>inverte</b>, não deixa negativo).</p>
 <p><b>Propriedades:</b> a<sup>m</sup>·a<sup>n</sup> = a<sup>m+n</sup> · a<sup>m</sup>÷a<sup>n</sup> = a<sup>m−n</sup> · (a<sup>m</sup>)<sup>n</sup> = a<sup>m·n</sup> · (a·b)<sup>n</sup> = a<sup>n</sup>·b<sup>n</sup>.</p>
 <p><b>Expoente fracionário:</b> a<sup>m/n</sup> = raiz de índice n de a<sup>m</sup>. Ex.: 8<sup>2/3</sup> = (∛8)² = 2² = 4 · 25<sup>1/2</sup> = √{25} = 5.</p>
 <p><b>Sinais:</b> (−2)<sup>4</sup> = 16 · (−2)<sup>3</sup> = −8 · −2<sup>4</sup> = −16 (sem parênteses, só o 2 é elevado).</p>
@@ -115,11 +115,11 @@ const TOP_MAT = [
 
 {id:'m-mmc', mod:'M1', star:2, t:'Múltiplos, divisores, MMC e MDC', bncc:'EF07MA01',
  hook:'O difícil não é calcular: é perceber se o problema pede MMC ou MDC.',
- body:`<p><b>Critérios de divisibilidade:</b> por 2 (termina em par) · por 3 (soma dos algarismos divisível por 3) · por 5 (termina em 0 ou 5) · por 9 (soma divisível por 9) · por 10 (termina em 0).</p>
+ body:`<p><b>Critérios de divisibilidade:</b> por 2 (termina em algarismo par) · por 3 (soma dos algarismos divisível por 3) · por 5 (termina em 0 ou 5) · por 9 (soma divisível por 9) · por 10 (termina em 0).</p>
 <p><b>Número primo</b> tem exatamente dois divisores: 1 e ele mesmo (2, 3, 5, 7, 11, 13…). O 1 não é primo.</p>
 <p><b>MMC</b> (mínimo múltiplo comum): o menor número que é múltiplo de todos. Aparece em “<b>vão se encontrar de novo</b>”, “acontecem juntos outra vez”.</p>
 <p><b>MDC</b> (máximo divisor comum): o maior número que divide todos. Aparece em “<b>dividir em partes iguais do maior tamanho possível</b>”, “sem sobrar”.</p>
-<p>Na fatoração: MMC = todos os fatores com o <b>maior</b> expoente; MDC = só os fatores comuns com o <b>menor</b> expoente. E vale: MMC × MDC = a × b.</p>`,
+<p>Na fatoração: MMC = todos os fatores com o <b>maior</b> expoente; MDC = só os fatores comuns com o <b>menor</b> expoente. E, para dois números a e b, vale: MMC × MDC = a × b.</p>`,
  rule:`Encontro/repetição → <b>MMC</b><br>Dividir em partes iguais máximas → <b>MDC</b><br>MMC(a,b) × MDC(a,b) = a × b`,
  ex:[
   {q:'Dois ônibus saem juntos às 8h. Um passa a cada 12 min e o outro a cada 18 min. Quando saem juntos de novo?', s:['“Juntos de novo” → MMC.','12 = 2²·3 e 18 = 2·3² → MMC = 2²·3² = 36.','8h + 36 min.'], r:'8h36'},
@@ -323,7 +323,7 @@ const TOP_MAT = [
  trap:'Se o lado triplica, a área fica <b>9 vezes</b> maior (3²), e não 3 vezes. E compare sempre lados <b>correspondentes</b> (opostos ao mesmo ângulo).',
  qz:[
   ['Um prédio faz sombra de 15 m. No mesmo instante, uma vara de 2 m faz sombra de 3 m. A altura do prédio é:', ['10 m','22,5 m','20 m','7,5 m'], 0, '[[h|15]] = [[2|3]] → h = 10 m.'],
-  ['Duas figuras semelhantes têm razão 1 : 3. Se a menor tem 5 cm² de área, a maior tem:', ['15 cm²','45 cm²','30 cm²','125 cm²'], 1, 'Áreas na razão k² = 9: 5 × 9 = 45 cm².'],
+  ['Duas figuras semelhantes têm razão de semelhança (entre os lados) 1 : 3. Se a menor tem 5 cm² de área, a maior tem:', ['15 cm²','45 cm²','30 cm²','125 cm²'], 1, 'Áreas na razão k² = 9: 5 × 9 = 45 cm².'],
   ['Pelo Teorema de Tales, se [[3|5]] = [[6|x]], então x vale:', ['8','10','2,5','9'], 1, '3x = 30 → x = 10.']
  ]},
 
@@ -467,7 +467,7 @@ const TOP_MAT = [
 <p><b>Moda:</b> o valor que mais aparece (pode haver mais de uma ou nenhuma).</p>
 <p><b>Mediana:</b> o valor do meio depois de <b>ordenar</b>. Se a quantidade for par, é a média dos dois do meio.</p>
 <p><b>Amplitude:</b> maior − menor (mostra quanto os dados variam).</p>
-<p>A média é “puxada” por valores extremos; a mediana, não. Por isso salários são bem representados pela mediana.</p>`,
+<p>A média é “puxada” por valores extremos; a mediana, não. Por isso, em dados como salários, a mediana costuma representar melhor o grupo.</p>`,
  rule:`Média = [[soma|quantidade]] → soma = média × quantidade<br>Mediana: ordene e pegue o meio · Amplitude = maior − menor`,
  ex:[
   {q:'Prova (peso 2): nota 8. Trabalho (peso 1): nota 5. Média ponderada?', s:['[[8 × 2 + 5 × 1|2 + 1]] = [[21|3]].'], r:'7'},
@@ -504,7 +504,7 @@ const TOP_MAT = [
 <ul><li>3 camisetas e 4 calças → 3 × 4 = 12 combinações.</li><li>Senha de 3 algarismos <b>sem repetir</b>: 10 × 9 × 8 = 720.</li><li>Com repetição: 10 × 10 × 10 = 1 000.</li></ul>
 <p><b>Anagramas</b> (ordenar letras diferentes): 4 letras → 4 × 3 × 2 × 1 = 24.</p>
 <p><b>Quando a ordem não importa</b> (duplas, apertos de mão, partidas entre times), divida para não contar duas vezes: n pessoas → [[n(n − 1)|2]] apertos de mão.</p>`,
- rule:`Etapas: multiplique as opções · n objetos em fila: n! = n·(n − 1)·…·1<br>Ordem não importa (pares): [[n(n − 1)|2]]`,
+ rule:`Etapas: multiplique as opções · n objetos diferentes em fila: n! = n·(n − 1)·…·1<br>Ordem não importa (pares): [[n(n − 1)|2]]`,
  ex:[
   {q:'Quantos números de 3 algarismos distintos podem ser formados com 1, 2, 3, 4 e 5?', s:['Centena: 5 opções; dezena: 4; unidade: 3.','5 × 4 × 3.'], r:'60 números'},
   {q:'Num campeonato, 6 times jogam todos contra todos uma vez. Quantas partidas?', s:['6 × 5 = 30, mas A×B e B×A são o mesmo jogo.','30 ÷ 2 = 15.'], r:'15 partidas'}
@@ -553,7 +553,7 @@ const MODS_POR = [
 const TOP_POR = [
 /* ============ P1 · LEITURA ============ */
 {id:'p-impl', mod:'P1', star:3, t:'Explícito, implícito e inferência', bncc:'EF69LP03 · SAEB', saeb:['D1','D3','D4','D6'],
- hook:'Metade das questões de Português pergunta o que o texto diz <b>sem dizer</b>. Inferir é concluir a partir de pistas, e não inventar.',
+ hook:'Boa parte das questões de Português pergunta o que o texto diz <b>sem dizer</b>. Inferir é concluir a partir de pistas, e não inventar.',
  body:`<p><b>Explícito:</b> está escrito com todas as letras. Para achar, volte ao texto e localize.</p>
 <p><b>Implícito:</b> não está escrito, mas o texto permite concluir. Há dois tipos:</p>
 <ul><li><b>Pressuposto</b>: uma palavra “carrega” a informação. “Lia <b>parou de</b> fumar” → ela fumava antes. “Ele <b>ainda</b> mora lá” → já morava. “Choveu <b>de novo</b>” → já tinha chovido.</li><li><b>Subentendido</b>: depende do contexto. “Nossa, que calor aqui dentro…” pode ser um pedido para abrir a janela.</li></ul>
@@ -585,7 +585,7 @@ const TOP_POR = [
  trap:'Não descreva a imagem: interprete. A pergunta quer saber o <b>efeito</b> (crítica, humor, ironia), não só o que aparece.',
  qz:[
   ['Charge: dentro de uma sala de aula, alunos assistem à aula de guarda-chuva aberto, com goteiras caindo do teto. Na parede, uma placa: “Escola reformada — obra concluída”. A charge critica:', ['a falta de guarda-chuvas nas escolas.','a má qualidade ou o abandono de obras em escolas públicas.','os alunos que não prestam atenção.','o excesso de chuva na cidade.'], 1, 'O contraste entre a placa (“obra concluída”) e as goteiras revela a crítica.'],
-  ['“Que ótimo! Meu celular descarregou bem na hora do jogo.” A palavra “ótimo” foi usada com sentido:', ['literal, mostrando alegria.','irônico, mostrando irritação.','técnico, sobre a bateria.','neutro, sem emoção.'], 1, 'O contexto (perder o jogo) mostra o sentido contrário: é ironia.'],
+  ['“Que ótimo! Meu celular descarregou bem na hora do jogo.” A palavra “ótimo” foi usada com sentido:', ['literal, mostrando alegria.','irônico, mostrando irritação.','técnico, sobre a bateria.','neutro, sem emoção.'], 1, 'O contexto (ficar sem celular bem na hora do jogo) mostra o sentido contrário: é ironia.'],
   ['Tirinha: (1) O professor pergunta: “Onde fica a Linha do Equador?” (2) Um aluno levanta a mão, confiante: “No mapa, professor!”. O humor vem de:', ['o aluno não saber o que é mapa.','o aluno responder de forma literal e inesperada.','o professor errar a pergunta.','a pergunta ser muito difícil.'], 1, 'O aluno dá uma resposta “certa”, mas não a esperada: quebra de expectativa.']
  ]},
 
@@ -668,7 +668,7 @@ const TOP_POR = [
  ex:[
   {q:'Passe para o discurso indireto: Ana disse: “Vou chegar tarde.”', s:['Tire as aspas, use “que” e ajuste o tempo verbal (vou chegar → chegaria).'], r:'Ana disse que chegaria tarde.'}
  ],
- trap:'No discurso indireto, o verbo e os pronomes mudam: “eu vou” vira “ela iria/chegaria”; “amanhã” pode virar “no dia seguinte”.',
+ trap:'No discurso indireto, o verbo e os pronomes mudam: “eu vou chegar” vira “ela iria chegar/chegaria”; “amanhã” pode virar “no dia seguinte”.',
  txt:`<b>Miniconto:</b> Tião guardou moedas por oito meses para comprar a bicicleta. Na véspera da compra, o cofrinho sumiu da prateleira. Revirou a casa inteira até encontrar o irmão caçula, todo orgulhoso, “alimentando” o porquinho de barro com balas.`,
  qz:[
   ['O conflito gerador do miniconto é:', ['Tião guardar dinheiro por oito meses.','o sumiço do cofrinho na véspera da compra.','o irmão gostar de balas.','a bicicleta ser cara.'], 1, 'É o problema que dispara a ação (a busca).'],
@@ -719,7 +719,7 @@ const TOP_POR = [
   ['“<b>Embora</b> estivesse cansado, Léo terminou a corrida.” A relação é de:', ['causa','concessão','conclusão','condição'], 1, 'O cansaço é admitido, mas não impede que ele termine: concessão.'],
   ['“O time jogou bem; <b>porém</b>, perdeu.” Sem mudar o sentido, “porém” pode ser trocado por:', ['portanto','contudo','porque','quando'], 1, 'Porém = contudo (oposição).'],
   ['“Choveu muito; o jogo foi, <b>pois</b>, adiado.” Aqui, “pois” indica:', ['causa','conclusão','tempo','finalidade'], 1, 'Deslocado para o meio da oração e entre vírgulas, “pois” = portanto (conclusão).'],
-  ['“<b>Caso</b> você chegue cedo, me avise.” A conjunção expressa:', ['condição','concessão','consequência','proporção'], 0, 'Caso = se (condição).']
+  ['“<b>Caso</b> você chegue cedo, avise-me.” A conjunção expressa:', ['condição','concessão','consequência','proporção'], 0, 'Caso = se (condição).']
  ]},
 
 {id:'p-coes', mod:'P2', star:3, t:'Coesão referencial: quem é quem no texto', bncc:'EF89LP29', saeb:['D2'],
@@ -809,7 +809,7 @@ const TOP_POR = [
  qz:[
   ['“Estudei bastante, <b>por isso fui bem na prova</b>.” A oração destacada é:', ['coordenada conclusiva','coordenada adversativa','subordinada causal','subordinada temporal'], 0, '“Por isso” = conclusão; as orações são independentes.'],
   ['“<b>Quando o sinal tocou</b>, todos saíram.” A oração destacada indica:', ['causa','tempo','condição','finalidade'], 1, '“Quando” introduz uma circunstância de tempo (subordinada adverbial temporal).'],
-  ['“Espero <b>que você venha</b>.” A oração destacada é:', ['subordinada adjetiva','subordinada substantiva','subordinada adverbial causal','coordenada aditiva'], 1, 'Funciona como objeto de “espero” (espero isto): substantiva.']
+  ['“Espero <b>que você venha</b>.” A oração destacada é:', ['subordinada adjetiva','subordinada substantiva','subordinada adverbial causal','coordenada aditiva'], 1, 'Funciona como objeto direto de “espero” (espero isto): substantiva objetiva direta.']
  ]},
 
 {id:'p-adj', mod:'P3', star:3, t:'Orações adjetivas restritivas e explicativas', bncc:'EF09LP09', saeb:['D17','D19'],
@@ -849,7 +849,7 @@ const TOP_POR = [
 <ul><li><b>assistir a</b> (ver): “Assisti <b>ao</b> jogo.” (coloquial: “assisti o jogo”)</li><li><b>ir a / chegar a</b>: “Cheguei <b>à</b> escola.” (coloquial: “cheguei na escola”)</li><li><b>preferir algo a outra coisa</b>: “Prefiro suco <b>a</b> refrigerante.” (sem “mais” e sem “do que”)</li><li><b>obedecer a</b>, <b>simpatizar com</b>, <b>gostar de</b>, <b>morar em</b>, <b>namorar alguém</b> (sem “com”)</li><li><b>esquecer algo</b> ou <b>esquecer-se de algo</b>; <b>lembrar algo</b> ou <b>lembrar-se de algo</b></li></ul>
 <p><b>Regência nominal:</b> acessível <b>a</b>, apto <b>a/para</b>, contrário <b>a</b>, orgulho <b>de</b>, respeito <b>a/por</b>.</p>
 <p><b>Crase</b> = preposição <b>a</b> + artigo <b>a</b> = <b>à</b>. Truque: troque a palavra feminina por uma masculina. Se aparecer “<b>ao</b>”, tem crase: “Vou <b>à</b> feira” → “Vou <b>ao</b> mercado”.</p>
-<p><b>Nunca há crase</b> antes de palavra masculina, de verbo (“começou a chover”) e da maioria dos pronomes (“a ela”, “a você”). Nas horas exatas: “às 10h” (mas “desde as 10h”, “após as 10h”).</p>`,
+<p><b>Não há crase</b> antes de verbo (“começou a chover”), de palavra masculina (regra geral) e da maioria dos pronomes (“a ela”, “a você”). Na indicação de horas: “às 10h” (mas “desde as 10h”, “após as 10h”).</p>`,
  rule:`assistir AO jogo · ir/chegar À escola · preferir X A Y<br>Crase: troque por masculino → deu “ao”? então é “à”`,
  ex:[],
  trap:'“Prefiro <b>mais</b> pizza <b>do que</b> lasanha” é comum na fala, mas a norma-padrão pede: “Prefiro pizza <b>a</b> lasanha”.',
@@ -891,8 +891,8 @@ const TOP_POR = [
 
 {id:'p-pont', mod:'P3', star:2, t:'Pontuação e efeitos de sentido', bncc:'EF69LP56', saeb:['D17'],
  hook:'Uma vírgula pode salvar vidas: “Vamos comer, crianças!” × “Vamos comer crianças!”.',
- body:`<p><b>Vírgula — use para separar:</b> itens de uma enumeração; o <b>vocativo</b> (“Pedro, venha cá”); o <b>aposto</b> (“Belém, capital do Pará, …”); expressões deslocadas no início (“Ontem à noite, …”); orações coordenadas; orações explicativas.</p>
-<p><b>Vírgula — nunca separe</b> o sujeito do verbo, nem o verbo do complemento: “Os alunos do 9º ano<s>,</s> viajaram.”</p>
+ body:`<p><b>Vírgula — use para separar:</b> itens de uma enumeração; o <b>vocativo</b> (“Pedro, venha cá”); o <b>aposto</b> (“Belém, capital do Pará, …”); expressões deslocadas no início (“Ontem à noite, …”); orações coordenadas (as ligadas por “mas”, “porém” etc.; antes de “e”, em geral, não se usa vírgula); orações explicativas.</p>
+<p><b>Vírgula — nunca separe</b> o sujeito do verbo, nem o verbo do complemento, com uma vírgula só: “Os alunos do 9º ano<s>,</s> viajaram.” (Um termo intercalado entre <b>duas</b> vírgulas pode aparecer: “Os alunos, cansados, viajaram.”)</p>
 <p><b>Outros sinais:</b></p>
 <ul><li><b>Reticências (…):</b> hesitação, suspense, ideia interrompida, ironia.</li><li><b>Exclamação (!):</b> emoção, surpresa, ordem.</li><li><b>Dois-pontos (:)</b> anunciam explicação, enumeração ou fala.</li><li><b>Aspas (“ ”):</b> citação, ironia, palavra estrangeira ou sentido especial.</li><li><b>Travessão (—):</b> fala de personagem ou destaque.</li><li><b>Parênteses:</b> informação extra.</li></ul>`,
  rule:`Sujeito , verbo → <b>nunca</b><br>Vocativo e aposto explicativo → <b>sempre</b> com vírgula`,
@@ -929,7 +929,7 @@ const TOP_POR = [
 <p><b>Acentuação:</b> proparoxítonas — todas (lâmpada, matemática). Oxítonas terminadas em a(s), e(s), o(s), em, ens (sofá, cafés, avô, também). Paroxítonas terminadas em l, n, r, x, ps, ã, ão, i, us, um, ditongo (fácil, açúcar, órfão, júri, história). Pelo Acordo Ortográfico: <b>ideia, heroico, voo, leem</b> (sem acento).</p>`,
  rule:`Parassíntese = prefixo + sufixo ao mesmo tempo<br>Proparoxítona: sempre acentuada · ideia, heroico, voo: sem acento`,
  ex:[],
- trap:'“Infelizmente” tem prefixo e sufixo, mas existe “infeliz” e “felizmente” sozinhos: não é parassíntese. Em “entardecer”, não existe “entarde” nem “tardecer”.',
+ trap:'“Infelizmente” tem prefixo e sufixo, mas existem “infeliz” e “felizmente” sozinhos: não é parassíntese. Em “entardecer”, não existe “entarde” nem “tardecer”.',
  qz:[
   ['A palavra “entardecer” é formada por:', ['composição por justaposição','derivação parassintética','derivação regressiva','aglutinação'], 1, 'Prefixo “en-” e sufixo “-ecer” entram juntos.'],
   ['Qual é um estrangeirismo já adaptado ao português?', ['delivery','show','futebol','mouse'], 2, 'Futebol vem do inglês “football”, com grafia aportuguesada.'],
@@ -963,14 +963,14 @@ const MACETES = {
 'm-frac':`Dividir fração é <b>“MIM”</b>: <b>M</b>antém a primeira, <b>I</b>nverte a segunda, <b>M</b>ultiplica.`,
 'm-reais':`<b>Irracional é “irritante”</b>: nunca acaba e nunca se repete (√2, √3, π). Se a raiz é exata (√9 = 3), é racional.`,
 'm-pot':`Expoente <b>negativo vira de cabeça para baixo</b> (2<sup>−3</sup> = [[1|8]]), não fica negativo. No expoente fracionário, <b>“quem está embaixo mora na raiz”</b>: 8<sup>2/3</sup> = (∛8)² = 4.`,
-'m-cient':`<b>Número grande, expoente positivo; número miudinho, expoente negativo.</b> Conte quantas casas a vírgula andou até sobrar um só algarismo antes dela.`,
-'m-mmc':`<b>MMC = “Mais à frente eles se encontram”</b> (é maior que os números). <b>MDC = “Divide em pedaços”</b> (é menor que os números).`,
+'m-cient':`<b>Número grande, expoente positivo; número miudinho, expoente negativo.</b> Conte quantas casas a vírgula andou até sobrar um só algarismo (diferente de zero) antes dela.`,
+'m-mmc':`<b>MMC = “Mais à frente eles se encontram”</b> (nunca é menor que os números). <b>MDC = “Divide em pedaços”</b> (nunca é maior que os números).`,
 'm-eq1':`<b>“Mudou de lado, muda de operação.”</b> Somando vira subtraindo; multiplicando vira dividindo.`,
 'm-sist':`<b>“Duas letras, duas equações”:</b> uma para a <b>quantidade</b>, outra para o <b>valor</b> (rodas, pontos, reais).`,
 'm-prod':`(a + b)² = <b>“quadrado do 1º, duas vezes o 1º pelo 2º, quadrado do 2º”</b>. E <b>soma vezes diferença dá diferença dos quadrados</b>: (a + b)(a − b) = a² − b².`,
-'m-eq2':`Δ = <b>“bê-dois menos quatro-a-cê”</b>. Δ positivo: duas raízes; Δ zero: uma; Δ negativo: <b>nenhuma real</b> (não existe raiz de número negativo).`,
+'m-eq2':`Δ = <b>“bê-dois menos quatro-a-cê”</b>. Δ positivo: duas raízes; Δ zero: uma; Δ negativo: <b>nenhuma real</b> (não existe raiz quadrada real de número negativo).`,
 'm-prop':`<b>Sobe-sobe = direta; sobe-desce = inversa.</b> Mais pedreiros → menos dias? Inversa: multiplica em linha (6 × 10 = 4 × x).`,
-'m-func':`Em y = ax + b: <b>a = “anda”</b> (quanto sobe a cada passo) e <b>b = “base”</b> (onde começa, quando x = 0).`,
+'m-func':`Em y = ax + b: <b>a = “anda”</b> (quanto sobe — ou desce, se for negativo — a cada passo) e <b>b = “base”</b> (onde começa, quando x = 0).`,
 'm-seq':`<b>Do 1º ao 20º são só 19 pulos</b>: a<sub>n</sub> = a<sub>1</sub> + (n − 1)·r.`,
 'm-ang':`Com paralelas, procure as letras: <b>“Z” = alternos</b> (iguais), <b>“F” = correspondentes</b> (iguais), <b>“U” = colaterais</b> (somam 180°).`,
 'm-pol':`Todo polígono de n lados vira <b>(n − 2) triângulos</b> → soma = (n − 2)·180°. Os ângulos <b>externos sempre somam 360°</b>, a volta completa.`,
@@ -979,7 +979,7 @@ const MACETES = {
 'm-circ':`O inscrito está <b>na borda, longe do centro: enxerga só a metade</b> do que o central enxerga.`,
 'm-cart':`<b>Primeiro corre, depois pula</b>: (x, y) = anda na horizontal, depois sobe ou desce.`,
 'm-area':`<b>Triângulo é meio retângulo</b> ([[b·h|2]]). Círculo: <b>“pi-erre-dois” é área</b> (πr²); <b>“dois-pi-erre” é a volta</b> (2πr).`,
-'m-vol':`<b>Volume = área da base × altura</b> (imagine pilhas de folhas). <b>1 dm³ = 1 litro</b>: uma caixinha de 10 cm × 10 cm × 10 cm é uma caixa de leite.`,
+'m-vol':`<b>Volume = área da base × altura</b> (imagine pilhas de folhas). <b>1 dm³ = 1 litro</b>: uma caixinha de 10 cm × 10 cm × 10 cm guarda o mesmo que uma caixa de leite de 1 litro.`,
 'm-unid':`Escada <b>km · hm · dam · m · dm · cm · mm</b>. Por degrau: <b>1 zero</b> no comprimento, <b>2 zeros</b> na área, <b>3 zeros</b> no volume. Hora é base 60: 0,5 h = 30 min.`,
 'm-graf':`<b>Pizza = parte do todo. Linha = tempo. Coluna = comparar.</b> E sempre pergunte: o eixo começa no zero?`,
 'm-media':`<b>MéDia → Divide</b> a soma. <b>MOda → a que está na MOda</b> (mais aparece). <b>MEDiana → a do MEio</b> (depois de ordenar).`,
@@ -1399,12 +1399,12 @@ const TREINO_M2 = [
   [`10 km/h`, `Você arredondou 50 min para 1 h. A conta precisa ser exata.`]
  ], a:0, e:`50 min = [[50|60]] h = [[5|6]] h.<br>v = [[d|t]] = 10 ÷ [[5|6]] = 10 × [[6|5]] = 12 km/h.<br>(Ou por regra de três: 10 km em 50 min → 12 km em 60 min.)`},
 
-{t:'m-prop', d:3, q:`Um prêmio de R$ 1 500,00 será dividido entre dois funcionários em partes <b>inversamente</b> proporcionais ao número de faltas de cada um no ano: um faltou 2 vezes e o outro, 3 vezes. Quanto receberá o funcionário que faltou 2 vezes?`, o:[
+{t:'m-prop', d:3, q:`Um prêmio de R$ 1.500,00 será dividido entre dois funcionários em partes <b>inversamente</b> proporcionais ao número de faltas de cada um no ano: um faltou 2 vezes e o outro, 3 vezes. Quanto receberá o funcionário que faltou 2 vezes?`, o:[
   [`R$ 600,00`, `Você dividiu de forma diretamente proporcional (2 e 3). Inversa: quem falta menos ganha mais.`],
   [`R$ 750,00`, `Você dividiu igualmente. A divisão depende das faltas.`],
   [`R$ 900,00`, ``],
   [`R$ 500,00`, `Você dividiu 1 500 por 3 sem montar a proporção.`],
-  [`R$ 1 000,00`, `Você deu [[2|3]] do prêmio para quem faltou 2 vezes. As partes são proporcionais a [[1|2]] e [[1|3]], ou seja, 3 : 2.`]
+  [`R$ 1.000,00`, `Você deu [[2|3]] do prêmio para quem faltou 2 vezes. As partes são proporcionais a [[1|2]] e [[1|3]], ou seja, 3 : 2.`]
  ], a:2, e:`Inversamente proporcional a 2 e 3 = diretamente proporcional a [[1|2]] e [[1|3]].<br>Multiplicando por 6: proporcional a 3 e 2. Total de partes: 5.<br>1 500 ÷ 5 = 300 → quem faltou 2 vezes: 3 × 300 = 900; quem faltou 3 vezes: 2 × 300 = 600.`},
 
 /* ===================== m-func · Funções ===================== */
@@ -1797,7 +1797,7 @@ const TREINO_M45 = [
 
 /* ===================== m-media (5) ===================== */
 {t:'m-media', d:1, q:`Nos 6 jogos de um campeonato, o time da escola marcou estes números de gols: 1, 0, 3, 1, 5 e 2. Qual foi a média de gols por jogo?`, o:[
-  [`2,4`, `Você dividiu 12 por 5, esquecendo o jogo em que o time fez 0 gol. Ele também conta: são 6 jogos.`],
+  [`2,4`, `Você dividiu 12 por 5, esquecendo o jogo em que o time não marcou gol (0). Ele também conta: são 6 jogos.`],
   [`2`, ``],
   [`12`, `12 é a soma dos gols. Para a média, ainda falta dividir pela quantidade de jogos.`],
   [`5`, `5 é a amplitude (5 − 0), que mede a variação, e não a média.`],
@@ -1855,7 +1855,7 @@ const TREINO_M45 = [
 
 {t:'m-prob', d:3, q:`Numa gaveta há 3 meias pretas e 2 meias brancas, todas do mesmo modelo. No escuro, Pedro pega 2 meias ao acaso, uma depois da outra, sem devolver. Qual é a probabilidade de as duas meias serem da mesma cor?`, o:[
   [`[[2|5]]`, ``],
-  [`[[3|10]]`, `[[3|10]] é só a chance de as duas serem pretas. Também é par se as duas forem brancas.`],
+  [`[[3|10]]`, `[[3|10]] é só a chance de as duas serem pretas. Também conta o caso de as duas serem brancas.`],
   [`[[13|25]]`, `Você calculou como se a primeira meia voltasse para a gaveta ([[9|25]] + [[4|25]]). Sem reposição, o total cai para 4 na segunda retirada.`],
   [`[[3|5]]`, `[[3|5]] é a chance de as meias serem de cores <b>diferentes</b>.`],
   [`[[1|10]]`, `[[1|10]] é só a chance de as duas serem brancas. Faltou somar o caso das duas pretas.`]
@@ -1955,7 +1955,7 @@ const TREINO_P1 = [
 
 /* ================= p-tira · Tirinhas, charges e memes (5) ================= */
 {t:'p-tira', d:1,
- tx:`<b>Tirinha</b><br><b>Quadro 1:</b> Lucas entrega o boletim ao pai, com um sorriso sem graça.<br><b>Quadro 2:</b> Close no boletim: Matemática — nota 3,0.<br><b>Quadro 3:</b> O pai, de braços cruzados e sobrancelha erguida, diz: “Excelente! Continue assim que você vai longe!”`,
+ tx:`<b>Tirinha</b><br><b>Quadro 1:</b> Lucas entrega o boletim ao pai, com um sorriso sem graça.<br><b>Quadro 2:</b> Close no boletim: Matemática — nota 3,0.<br><b>Quadro 3:</b> O pai, de braços cruzados e sobrancelha erguida, diz: “Excelente! Continue assim, que você vai longe!”`,
  q:`Na fala do pai, no último quadro, as palavras “Excelente!” e “vai longe” foram usadas com sentido:`,
  o:[
   [`literal, pois o pai está orgulhoso da nota.`, `A nota 3,0, os braços cruzados e a sobrancelha erguida mostram que ele não está orgulhoso.`],
@@ -2306,7 +2306,7 @@ const TREINO_P2 = [
   [`Logo que`, `“Logo que” indica tempo (assim que). A gincana não depende do momento em que a chuva começa.`],
   [`Para que`, `“Para que” indica finalidade: a gincana aconteceria com o objetivo de fazer chover, o que não faz sentido.`]
  ], a:0,
- e:`“Mesmo que” é conjunção <b>concessiva</b>: admite um obstáculo (a chuva) que <b>não impede</b> o fato principal (a gincana). A outra concessiva da lista é “ainda que” (também valem “embora” e “se bem que”). O verbo continua no subjuntivo: “Ainda que chova…”.`},
+ e:`“Mesmo que” é conjunção <b>concessiva</b>: admite um obstáculo (a chuva) que <b>não impede</b> o fato principal (a gincana). A outra concessiva da lista é “ainda que” (também valeria “embora”). O verbo continua no subjuntivo: “Ainda que chova…”.`},
 
 {t:'p-conj', d:2,
  q:`Leia a frase de uma reportagem esportiva do jornal da escola:<br><br>“O goleiro machucou a mão no aquecimento, <b>mas</b> defendeu dois pênaltis na final.”<br><br>Qual reescrita <b>mantém o sentido</b> da frase original e está de acordo com a <b>norma-padrão</b>?`,
@@ -2421,7 +2421,7 @@ const TREINO_P2 = [
  e:`Ninguém fica três séculos numa fila: é um <b>exagero intencional</b> (hipérbole). O efeito é mostrar a impaciência de Lucas e dar força à reclamação.`},
 
 {t:'p-fig', d:2,
- q:`Leia o trecho de uma crônica sobre a final do campeonato escolar:<br><br>“Quando a bola entrou no último minuto, <b>a arquibancada</b> gritou o nome do goleiro.”<br><br>Na expressão destacada, ocorre:`,
+ q:`Leia o trecho de uma crônica sobre a final do campeonato escolar:<br><br>“Quando o goleiro defendeu o pênalti no último minuto, <b>a arquibancada</b> gritou o nome dele.”<br><br>Na expressão destacada, ocorre:`,
  o:[
   [`antítese, porque o goleiro é oposto à arquibancada.`, `Não há ideias opostas colocadas lado a lado na frase.`],
   [`eufemismo, porque suaviza a comemoração da torcida.`, `Nada foi suavizado; a frase descreve uma comemoração animada.`],
@@ -2958,7 +2958,7 @@ const CARDS_M3 = [
  {t:'m-pol', k:'regra', f:`Fórmula da soma dos ângulos internos de um polígono de n lados?`, b:`<b>S<sub>i</sub> = (n − 2)·180°</b>. O polígono se divide em (n − 2) triângulos.`},
  {t:'m-pol', k:'regra', f:`Fórmula do número de diagonais de um polígono de n lados?`, b:`<b>d = [[n(n − 3)|2]]</b>. Divide por 2 porque cada diagonal seria contada duas vezes.`},
  {t:'m-pol', k:'regra', f:`Quanto somam os ângulos externos de qualquer polígono convexo?`, b:`<b>360°</b>, sempre (uma volta completa). No regular, cada externo = [[360°|n]].`},
- {t:'m-pol', k:'conceito', f:`O ângulo externo de um triângulo é igual a quê?`, b:`<b>À soma dos dois ângulos internos não vizinhos a ele.</b> Ex.: internos 50° e 60° → externo oposto = 110°.`},
+ {t:'m-pol', k:'conceito', f:`O ângulo externo de um triângulo é igual a quê?`, b:`<b>À soma dos dois ângulos internos não vizinhos a ele.</b> Ex.: internos 50° e 60° → externo do terceiro vértice = 110°.`},
  {t:'m-pol', k:'conta', f:`Soma dos ângulos internos de um pentágono?`, b:`<b>540°</b>. (5 − 2)·180 = 3·180 = 540.`},
  {t:'m-pol', k:'conta', f:`Cada ângulo externo de um decágono regular (10 lados) mede?`, b:`<b>36°</b>. 360 ÷ 10 = 36. (O interno é 180 − 36 = 144°.)`},
  {t:'m-pol', k:'conta', f:`Quantas diagonais tem um pentágono?`, b:`<b>5</b>. d = [[5·2|2]] = 5.`},
@@ -3217,8 +3217,8 @@ const CARDS_P2 = [
 
 /* ---------- p-coes · Coesão referencial (12) ---------- */
  {t:'p-coes', k:'regra', f:`Como descobrir a que termo um pronome se refere?`, b:`<b>Troque o pronome pelo termo candidato</b> e veja se a frase faz sentido.<br>Volte sempre ao texto para conferir.`},
- {t:'p-coes', k:'regra', f:`Pela norma-padrão, o pronome relativo “<b>onde</b>” só deve ser usado para quê?`, b:`<b>Para lugar físico.</b><br>“A cidade <b>onde</b> nasci.” Para tempo ou situação, use “em que” ou “no qual”.`},
- {t:'p-coes', k:'pegadinha', f:`“Chegou o momento <b>onde</b> tudo mudou.” Está de acordo com a norma-padrão?`, b:`<b>Não!</b> Momento não é lugar físico.<br>Certo: “o momento <b>em que</b> tudo mudou”.`},
+ {t:'p-coes', k:'regra', f:`Pela norma-padrão, o pronome relativo “<b>onde</b>” só deve ser usado para quê?`, b:`<b>Para lugar.</b><br>“A cidade <b>onde</b> nasci.” Para tempo ou situação, use “em que” ou “no qual”.`},
+ {t:'p-coes', k:'pegadinha', f:`“Chegou o momento <b>onde</b> tudo mudou.” Está de acordo com a norma-padrão?`, b:`<b>Não!</b> Momento é tempo, não lugar.<br>Certo: “o momento <b>em que</b> tudo mudou”.`},
  {t:'p-coes', k:'pegadinha', f:`“Conheci o menino <b>cujo o</b> pai é piloto.” Está correto?`, b:`<b>Não!</b> “Cujo” indica posse e não vem seguido de artigo.<br>Certo: “o menino <b>cujo pai</b> é piloto”.`},
  {t:'p-coes', k:'conceito', f:`<b>Este</b> × <b>esse</b>: qual anuncia e qual retoma?`, b:`<b>“Este” anuncia</b> o que ainda vem; <b>“esse” retoma</b> o que já foi dito.<br>“Meu pedido é <b>este</b>: silêncio.” · “Silêncio: <b>esse</b> foi meu pedido.”`},
  {t:'p-coes', k:'conceito', f:`O que é um <b>hiperônimo</b> na coesão do texto?`, b:`<b>Uma palavra de sentido mais geral</b> que retoma outra mais específica.<br>“O cachorro latiu. O <b>animal</b> estava assustado.”`},
@@ -3310,13 +3310,13 @@ const CARDS_P3 = [
  {t:'p-reg', k:'pegadinha', f:`“Cheguei na escola cedo.” Como fica na norma-padrão?`, b:`<b>“Cheguei à escola cedo.”</b><br>Chegar e ir pedem a preposição “a”, não “em”.`},
  {t:'p-reg', k:'conceito', f:`O que é a crase?`, b:`<b>A fusão da preposição “a” com o artigo “a”, marcada pelo acento grave: à.</b><br>Vou a + a feira → vou <b>à</b> feira.`},
  {t:'p-reg', k:'exemplo', f:`Complete com “a” ou “à”: “Vou ___ feira.” Qual o truque para conferir?`, b:`<b>“Vou à feira.”</b><br>Truque: troque por uma palavra masculina. “Vou <b>ao</b> mercado” → deu “ao”, então tem crase.`},
- {t:'p-reg', k:'pegadinha', f:`“Começou à chover.” A crase está correta?`, b:`<b>Não!</b> Correto: “Começou a chover.”<br>Nunca há crase antes de verbo (nem antes de palavra masculina).`},
+ {t:'p-reg', k:'pegadinha', f:`“Começou à chover.” A crase está correta?`, b:`<b>Não!</b> Correto: “Começou a chover.”<br>Nunca há crase antes de verbo (nem, em regra, antes de palavra masculina).`},
  {t:'p-reg', k:'exemplo', f:`Complete: “A aula começa ___ 10h.”`, b:`<b>“às 10h”.</b><br>Hora exata leva crase. Mas: “desde as 10h”, “após as 10h”.`},
  {t:'p-reg', k:'exemplo', f:`Complete: “Vou ___ Bahia” e “Vou ___ Recife”.`, b:`<b>“Vou à Bahia” e “Vou a Recife”.</b><br>Macete: volto DA Bahia (crase há!); volto DE Recife (crase pra quê?).`},
 
 /* p-conc — Concordância (8) */
  {t:'p-conc', k:'conceito', f:`Concordância verbal × concordância nominal?`, b:`<b>Verbal: o verbo concorda com o sujeito. Nominal: o adjetivo concorda com o substantivo.</b><br>“Os alunos <b>chegaram</b>.” · “Casas <b>antigas</b>.”`},
- {t:'p-conc', k:'regra', f:`“Haver” no sentido de “existir” vai para o plural?`, b:`<b>Não: é impessoal, fica no singular.</b><br>“<b>Havia</b> muitos alunos no pátio.” (nunca “haviam”)`},
+ {t:'p-conc', k:'regra', f:`“Haver” no sentido de “existir” vai para o plural?`, b:`<b>Não: é impessoal, fica no singular.</b><br>“<b>Havia</b> muitos alunos no pátio.” (e não “haviam”)`},
  {t:'p-conc', k:'exemplo', f:`“Existia muitas pessoas na fila” ou “Existiam muitas pessoas na fila”?`, b:`<b>“Existiam”.</b><br>Diferente de “haver”, “existir” concorda com o sujeito “muitas pessoas”.`},
  {t:'p-conc', k:'regra', f:`“Faz dois anos” ou “Fazem dois anos”?`, b:`<b>“Faz dois anos.”</b><br>“Fazer” indicando tempo decorrido é impessoal: fica no singular.`},
  {t:'p-conc', k:'exemplo', f:`Complete: “______ três dias para as férias.” (Falta / Faltam)`, b:`<b>“Faltam”.</b><br>O sujeito é “três dias” (plural), mesmo vindo depois do verbo.`},
@@ -3336,13 +3336,13 @@ const CARDS_P3 = [
 
 /* p-pont — Pontuação (8) */
  {t:'p-pont', k:'regra', f:`Pode-se separar o sujeito do verbo com vírgula?`, b:`<b>Nunca.</b> Nem o verbo do complemento.<br>Errado: “Os alunos do 9º ano, viajaram.” Macete: sujeito e verbo são namorados. (Um aposto entre duas vírgulas pode ficar no meio.)`},
- {t:'p-pont', k:'exemplo', f:`“Pedro, venha cá.” O que a vírgula separa?`, b:`<b>O vocativo</b> (“Pedro”, a pessoa com quem se fala).<br>O vocativo sempre leva vírgula.`},
+ {t:'p-pont', k:'exemplo', f:`“Pedro, venha cá.” O que a vírgula separa?`, b:`<b>O vocativo</b> (“Pedro”, a pessoa com quem se fala).<br>O vocativo sempre fica isolado por pontuação, em geral a vírgula.`},
  {t:'p-pont', k:'exemplo', f:`“Belém, capital do Pará, recebe muitos turistas.” O que fica entre as vírgulas?`, b:`<b>Um aposto.</b><br>Ele explica quem é o termo anterior (Belém).`},
  {t:'p-pont', k:'pegadinha', f:`“Não, espere!” × “Não espere!”: a vírgula muda o sentido?`, b:`<b>Sim! Inverte o sentido.</b><br>“Não, espere!” pede que a pessoa espere; “Não espere!” pede que ela não espere.`},
  {t:'p-pont', k:'exemplo', f:`“Bem… acho que não vou à festa.” O que as reticências indicam?`, b:`<b>Hesitação.</b><br>As reticências também podem indicar suspense, ideia interrompida ou ironia.`},
  {t:'p-pont', k:'conceito', f:`Para que servem os dois-pontos (:)?`, b:`<b>Para anunciar uma explicação, uma enumeração ou uma fala.</b><br>“Comprei três frutas: maçã, pera e uva.”`},
  {t:'p-pont', k:'exemplo', f:`“Que dia ‘ótimo’: choveu e perdi o ônibus.” Que efeito as aspas criam em “ótimo”?`, b:`<b>Ironia.</b><br>A palavra é usada no sentido contrário: o dia foi ruim.`},
- {t:'p-pont', k:'regra', f:`“Ontem à noite, fomos ao cinema.” Por que há vírgula depois de “noite”?`, b:`<b>Porque a expressão de tempo foi deslocada para o início da frase.</b><br>Ordem direta: “Fomos ao cinema ontem à noite.”`},
+ {t:'p-pont', k:'regra', f:`“Ontem à noite, fomos ao cinema.” Por que há vírgula depois de “noite”?`, b:`<b>Porque a expressão de tempo foi deslocada para o início da frase.</b><br>Ordem direta: “Fomos ao cinema ontem à noite.” Com expressão curta assim, a vírgula é recomendada, mas opcional.`},
 
 /* p-var — Variação linguística (8) */
  {t:'p-var', k:'regra', f:`Quais são os quatro tipos de variação linguística?`, b:`<b>Regional, social (ou etária), situacional e histórica.</b><br>O critério não é certo × errado, e sim adequado × inadequado.`},
@@ -3698,7 +3698,7 @@ const SIM_A_MAT = [
 /* 14 · m-media · d1 */
 {t:'m-media', d:1, tx:`<p><b>Número de irmãos dos alunos do 9º ano B</b></p><table class="tb"><tr><th>Número de irmãos</th><th>Quantidade de alunos</th></tr><tr><td>0</td><td>5</td></tr><tr><td>1</td><td>9</td></tr><tr><td>2</td><td>4</td></tr><tr><td>3</td><td>2</td></tr></table>`,
  q:`Considerando os dados da tabela, qual é a moda do número de irmãos dos alunos dessa turma?`, o:[
-  [`0`, `0 irmão foi a resposta de 5 alunos, que não é a mais frequente.`],
+  [`0`, `"0 irmãos" foi a resposta de 5 alunos, que não é a mais frequente.`],
   [`1`, ``],
   [`1,15`, `1,15 é a média de irmãos por aluno (23 irmãos ÷ 20 alunos), não a moda.`],
   [`2`, `2 irmãos foi a resposta de só 4 alunos.`],
@@ -3933,7 +3933,7 @@ const SIM_B_MAT = [
   [`240`, `240 é o múltiplo comum de 6, 8 e 10, mas nessas divisões ele deixa resto 0. Faltou somar as 3 figurinhas que sobram.`],
   [`243`, ``],
   [`283`, `280 + 3 deixa resto 3 na divisão por 8 e por 10, mas 280 não é múltiplo de 6: 283 em montes de 6 deixa resto 1. Use o MMC dos três números.`]
- ], a:3, e:`Tirando as 3 que sobram, o resto é múltiplo de 6, de 8 e de 10 ao mesmo tempo, ou seja, múltiplo do MMC.<br>6 = 2 · 3 · 8 = 2³ · 10 = 2 · 5 → MMC = 2³ · 3 · 5 = 120.<br>Múltiplos de 120: 120, 240, 360… Somando 3: 123, 243, 363…<br>O único entre 200 e 300 é <b>243</b>.`},
+ ], a:3, e:`Tirando as 3 que sobram, o resto é múltiplo de 6, de 8 e de 10 ao mesmo tempo, ou seja, múltiplo do MMC.<br>6 = 2 · 3; 8 = 2³; 10 = 2 · 5 → MMC = 2³ · 3 · 5 = 120.<br>Múltiplos de 120: 120, 240, 360… Somando 3: 123, 243, 363…<br>O único entre 200 e 300 é <b>243</b>.`},
 
 /* 4 · m-eq1 */
 {t:'m-eq1', d:1, q:`Um estacionamento cobra R$ 15,00 pela primeira hora e R$ 6,00 por hora adicional, e só cobra horas inteiras. Ao retirar o carro, o pai de Richard pagou R$ 63,00. Por quantas horas o carro ficou estacionado?`, o:[
@@ -4072,7 +4072,7 @@ const SIM_C_POR = [
   [`os cientistas.`, `Os cientistas são quem pratica a ação (o sujeito de “deixaram”); quem foi deixado exposto ao vácuo foram os animais.`],
   [`os lugares úmidos citados no primeiro parágrafo.`, `Lugares úmidos não foram levados ao espaço; o referente está bem mais perto, na mesma frase.`],
   [`o frio intenso e o calor forte.`, `Frio e calor são condições que o animal suporta, não o que foi enviado à órbita.`],
-  [`os músculos das patas gordinhas.`, `O texto não fala em músculos; as patas aparecem no primeiro parágrafo e não têm relação com essa frase.`],
+  [`os músculos das patas gordinhas.`, `O texto não fala em músculos; e as patas não foram enviadas ao espaço: quem foi enviado foram os animais (“alguns deles”).`],
   [`os tardígrados enviados à órbita (“alguns deles”).`, ``]
  ], a:4,
  e:`Pergunte ao verbo: os cientistas deixaram <b>quem</b> exposto ao vácuo? “Alguns deles”, isto é, os tardígrados que foram enviados à órbita. O pronome “os” retoma esse termo e evita repeti-lo.`},
@@ -4201,7 +4201,7 @@ const SIM_C_POR = [
   [`o pensamento de Davi, que não queria pedir ajuda a Otávio.`, `Quem olha para a mesa de Otávio e depois pede a fita é Lia; o pensamento é dela.`],
   [`discurso indireto livre: o pensamento de Lia aparece misturado à voz do narrador, sem travessão nem verbo de dizer.`, ``]
  ], a:4,
- e:`O narrador está contando a cena em 3ª pessoa e, de repente, “entra” a voz interior de Lia, com pergunta e exclamação típicas de quem pensa (“Nem pensar.”), sem aviso. Esse é o <b>discurso indireto livre</b>. Repare que logo depois ela faz o contrário do que pensou, o que mostra o tamanho do conflito.`},
+ e:`O narrador está contando a cena em 3ª pessoa e, de repente, “entra” a voz interior de Lia, com a pergunta e a resposta enfática típicas de quem pensa consigo mesmo (“Pedir ajuda logo para ele? Nem pensar.”), sem aviso. Esse é o <b>discurso indireto livre</b>. Repare que logo depois ela faz o contrário do que pensou, o que mostra o tamanho do conflito.`},
 
 /* 12 · p-conj */
 {t:'p-conj', d:2,
@@ -4223,7 +4223,7 @@ const SIM_C_POR = [
  o:[
   [`“O projeto que eu mais gostei foi o do vulcão.”`, `Quem gosta, gosta <b>de</b> algo: o correto é “o projeto <b>de que</b> eu mais gostei”.`],
   [`“A professora que todos confiam é a de Ciências.”`, `Quem confia, confia <b>em</b> alguém: “a professora <b>em quem</b> todos confiam”.`],
-  [`“O momento onde o vulcão rachou foi assustador.”`, `“Onde” só se usa para lugar físico. Para tempo: “o momento <b>em que</b> o vulcão rachou”.`],
+  [`“O momento onde o vulcão rachou foi assustador.”`, `“Onde” só se usa para lugar. Para tempo: “o momento <b>em que</b> o vulcão rachou”.`],
   [`“O tema de que trata o melhor trabalho é a reciclagem de água.”`, ``],
   [`“O ginásio que a feira aconteceu estava lotado.”`, `Algo acontece <b>em</b> um lugar: “o ginásio <b>em que</b> (ou <b>onde</b>) a feira aconteceu”.`]
  ], a:3,
@@ -4396,7 +4396,3268 @@ const SIM_C_MAT = [
 
 ];
 
-const TOPS=[...TOP_MAT,...TOP_POR];
+/* REVISÃO TURBINADA · MATEMÁTICA · M1 (Números e operações)
+   Tópicos: m-pct, m-frac, m-reais, m-pot, m-cient, m-mmc
+   Contas conferidas em plus/check_pm1.py */
+const PLUS_M1 = {
+ 'm-pct': {
+  base: [
+   [`Porcentagem = "por cem"`, `40% quer dizer 40 de cada 100 → [[40|100]] = 0,4. Se a sala tivesse 100 cadeiras, 40% seriam 40 cadeiras. Se tiver 50 cadeiras, 40% são 20 (metade de 40, porque o todo é metade de 100).`],
+   [`100% é o todo`, `100% de 75 = 75 (é tudo). 200% é o dobro (200% de 75 = 150) e 150% é "uma vez e meia": 150% de 40 = 40 + 20 = 60. Porcentagem pode passar de 100%!`],
+   [`De % para decimal: a vírgula anda 2 casas`, `Dividir por 100 = andar a vírgula 2 casas para a esquerda: 7% = 0,07 · 12,5% = 0,125 · 120% = 1,2. No caminho de volta, anda 2 casas para a direita: 0,3 = 30%.`],
+   [`Porcentagens que são frações famosas`, `50% = [[1|2]] · 25% = [[1|4]] · 75% = [[3|4]] · 20% = [[1|5]] · 10% = [[1|10]] · 12,5% = [[1|8]]. Ex.: 25% de uma pizza = [[1|4]] da pizza = 2 fatias de 8.`],
+   [`Toda porcentagem é "DE" alguma coisa`, `A palavra "de" mostra a <b>base</b> (o todo). 10% de 300 = 30, mas 10% de 30 = 3. Mesmo "10%", valores bem diferentes. Antes de calcular, pergunte: "por cento de quem?"`],
+   [`Fator multiplicador`, `É o número que transforma o valor antigo no novo de uma vez só. Aumento de 8% → você fica com 108% → × 1,08. Desconto de 8% → sobram 92% → × 0,92. Ex.: R$ 50 com aumento de 8% → 50 × 1,08 = R$ 54.`],
+   [`Variação percentual compara com o ANTIGO`, `Preço foi de R$ 40 para R$ 46: subiu 6 reais. Agora pergunte "6 é quantos % de 40?" → [[6|40]] = 0,15 = 15%. A base é sempre o valor de onde se partiu.`],
+   [`Achar o valor antes da mudança`, `Se depois de 20% de desconto o preço ficou R$ 64, então 80% do preço antigo é 64. Valor antigo = 64 ÷ 0,8 = R$ 80. Confira: 20% de 80 = 16 e 80 − 16 = 64. ✔`]
+  ],
+  jeitos: [
+   {n:`Decomposição pelos 10%`, c:`10% de qualquer número = anda a vírgula <b>uma</b> casa para a esquerda. 5% = metade de 10%. 1% = anda a vírgula <b>duas</b> casas. Depois monte o que precisa somando ou tirando pedaços.`,
+    ex:`30% de 70 → 10% = 7 → 3 × 7 = <b>21</b>.<br>15% de 260 → 10% = 26 e 5% = 13 (metade) → 26 + 13 = <b>39</b>.<br>9% de 300 → 10% = 30 e 1% = 3 → 30 − 3 = <b>27</b>.`},
+   {n:`Porcentagem que vira divisão`, c:`Algumas porcentagens são só uma divisão disfarçada: 50% = ÷ 2 (metade) · 25% = ÷ 4 (metade da metade) · 20% = ÷ 5 · 75% = ÷ 4 e × 3.`,
+    ex:`25% de 360 → 360 ÷ 2 = 180 → ÷ 2 = <b>90</b>.<br>20% de 85 → 85 ÷ 5 = <b>17</b> (ou 10% = 8,5 → dobro = 17).<br>75% de 48 → 48 ÷ 4 = 12 → 12 × 3 = <b>36</b>.`},
+   {n:`Troca-troca: x% de y = y% de x`, c:`Pode inverter os dois números que o resultado é o mesmo (porque [[x|100]] × y = [[y|100]] × x). Use quando um dos lados vira uma porcentagem fácil.`,
+    ex:`8% de 25 = 25% de 8 = 8 ÷ 4 = <b>2</b>.<br>16% de 50 = 50% de 16 = <b>8</b>.<br>4% de 75 = 75% de 4 = <b>3</b>.`},
+   {n:`Fator multiplicador (um passo só)`, c:`Aumento de i% → × (1 + [[i|100]]). Desconto de i% → × (1 − [[i|100]]). Se forem vários seguidos, multiplique os fatores. No fim, leia o fator: acima de 1 é aumento, abaixo de 1 é desconto.`,
+    ex:`R$ 60 com aumento de 5% → 60 × 1,05 = <b>R$ 63</b>.<br>Dois descontos de 10%: 0,9 × 0,9 = 0,81 → sobram 81% → desconto total de <b>19%</b>.<br>Fator 1,32 = aumento de <b>32%</b> · fator 0,75 = desconto de <b>25%</b>.`},
+   {n:`Variação: "quanto mudou sobre de onde saiu"`, c:`Faça a diferença e divida pelo valor ANTIGO. Se der uma fração famosa, você já sabe a porcentagem.`,
+    ex:`De 80 para 100: mudou 20 → [[20|80]] = [[1|4]] = <b>25% de aumento</b>.<br>De 100 para 80: mudou 20 → [[20|100]] = <b>20% de queda</b>. (Mesma diferença, base diferente, porcentagem diferente!)`},
+   {n:`Voltar ao preço antigo: divide pelo fator`, c:`Se o novo valor = antigo × fator, então antigo = novo ÷ fator. Nunca "tire a porcentagem" do valor novo.`,
+    ex:`Depois de aumento de 10%, custa R$ 77 → 77 ÷ 1,1 = <b>R$ 70</b>.<br>Depois de desconto de 30%, custa R$ 56 → 56 ÷ 0,7 = <b>R$ 80</b>.`}
+  ],
+  passo: [
+   `Leia e grife: é "x% DE", "aumento", "desconto", "quanto % variou" ou "quanto custava antes"?`,
+   `Ache a base: por cento de quem? Do total, do que sobrou, do preço antigo?`,
+   `Escolha a ferramenta: x% de → pedaços de 10%/5%/1%; aumento ou desconto → fator; variação → diferença ÷ antigo; valor antigo → divide pelo fator.`,
+   `Mais de uma porcentagem seguida? Multiplique os fatores, nunca some as porcentagens.`,
+   `Confira o bom senso: desconto tem que diminuir, aumento tem que crescer. Elimine alternativas absurdas.`
+  ],
+  exs: [
+   {q:`Num show com 1 200 pessoas, 15% ganharam uma camiseta. Quantas pessoas ganharam camiseta?`,
+    s:[`Uso a decomposição pelos 10%: 10% de 1 200 = 120 (andei a vírgula uma casa).`,`5% é metade de 10%: 60.`,`15% = 10% + 5% = 120 + 60 = 180.`],
+    r:`180 pessoas`},
+   {q:`Uma bermuda de R$ 120,00 subiu 15% e, no mês seguinte, teve desconto de 15%. Qual é o preço final? Voltou a R$ 120,00?`,
+    s:[`Primeiro o aumento: 15% de 120 = 12 + 6 = 18 → 120 + 18 = 138.`,`Agora o desconto é sobre 138 (o valor atual!): 10% = 13,80 e 5% = 6,90 → 15% = 20,70.`,`138 − 20,70 = 117,30. Pelo fator: 1,15 × 0,85 = 0,9775 → ficou 2,25% mais barato.`],
+    r:`R$ 117,30 · não volta ao preço inicial`},
+   {q:`Em janeiro, o quilo do tomate custava R$ 8,00. Em fevereiro subiu 25% e, em março, passou a custar R$ 9,00. Qual foi a variação de fevereiro para março? E de janeiro para março?`,
+    s:[`Fevereiro: 25% de 8 = 8 ÷ 4 = 2 → 8 + 2 = R$ 10,00.`,`Fevereiro → março: de 10 para 9, mudou 1. Base é o antigo (10): [[1|10]] = 10% de queda.`,`Janeiro → março: de 8 para 9, mudou 1. Base 8: [[1|8]] = 12,5% de aumento.`],
+    r:`Queda de 10% (fev → mar) · aumento de 12,5% (jan → mar)`}
+  ],
+  erros: [
+   `<b>Errado:</b> dois descontos seguidos de 10% dão 20% de desconto. <b>Certo:</b> 0,9 × 0,9 = 0,81 → o desconto total é 19%.`,
+   `<b>Errado:</b> de R$ 80 para R$ 100, aumento de [[20|100]] = 20%. <b>Certo:</b> divida pelo valor antigo: [[20|80]] = 25%.`,
+   `<b>Errado:</b> "após 20% de desconto pagou R$ 64; o preço era 64 + 20% de 64 = R$ 76,80". <b>Certo:</b> 64 ÷ 0,8 = R$ 80.`,
+   `<b>Errado:</b> 5% = 0,5 e desconto de 8% = × 0,8. <b>Certo:</b> 5% = 0,05 (duas casas!) e desconto de 8% = × 0,92.`
+  ],
+  resumo: [
+   `10% → vírgula 1 casa · 1% → 2 casas · 5% = metade de 10%`,
+   `50% = ÷2 · 25% = ÷4 · 20% = ÷5 · 75% = ÷4 × 3`,
+   `x% de y = y% de x (8% de 25 = 25% de 8 = 2)`,
+   `Aumento i% → × (1 + i%) · desconto → × (1 − i%) · seguidos → multiplica`,
+   `Variação = (novo − antigo) ÷ ANTIGO`,
+   `Preço de antes = preço novo ÷ fator`
+  ]
+ },
+
+ 'm-frac': {
+  base: [
+   [`O que a fração diz`, `Em [[3|5]], o de baixo (<b>denominador</b>) diz em quantas partes iguais o inteiro foi cortado; o de cima (<b>numerador</b>) diz quantas partes você pegou. Pizza de 8 fatias, comi 3 → comi [[3|8]].`],
+   [`Fração é uma divisão`, `O traço da fração é um "÷". [[3|4]] = 3 ÷ 4 = 0,75. [[9|3]] = 9 ÷ 3 = 3. Por isso o denominador nunca pode ser zero.`],
+   [`Frações equivalentes`, `Multiplicar ou dividir em cima e embaixo pelo MESMO número não muda o valor: [[1|2]] = [[2|4]] = [[5|10]] = [[50|100]]. É assim que simplificamos e igualamos denominadores.`],
+   [`Fração maior que 1 (imprópria) e número misto`, `[[7|4]] = 7 ÷ 4 = 1 inteiro e sobram 3 quartos → 1 [[3|4]] = 1,75. Quando o de cima é maior que o de baixo, a fração passa de 1 inteiro.`],
+   [`Decimal vira fração pela casa decimal`, `Leia o decimal em voz alta: 0,35 = "trinta e cinco centésimos" = [[35|100]] = [[7|20]]. 0,125 = "cento e vinte e cinco milésimos" = [[125|1000]] = [[1|8]].`],
+   [`Fração de uma quantidade`, `[[2|5]] de 45: divido 45 em 5 partes (45 ÷ 5 = 9) e pego 2 delas (2 × 9 = 18). Primeiro divide pelo de baixo, depois multiplica pelo de cima.`],
+   [`O inverso de um número`, `Inverter é trocar de lugar o de cima com o de baixo: o inverso de [[2|3]] é [[3|2]]; o inverso de 5 (= [[5|1]]) é [[1|5]]. Um número vezes o seu inverso dá sempre 1.`],
+   [`O inteiro também é fração`, `1 = [[5|5]] = [[8|8]]. Isso ajuda no "quanto sobrou": comeu [[3|8]] → sobrou [[8|8]] − [[3|8]] = [[5|8]].`]
+  ],
+  jeitos: [
+   {n:`Tabela das frações famosas`, c:`Decore esta tabela: ela transforma fração em decimal e em porcentagem sem fazer conta. Para as outras, multiplique a "fração-unidade": [[3|8]] = 3 × [[1|8]].`,
+    ex:`<table class="tb"><tr><th>Fração</th><th>Decimal</th><th>%</th></tr><tr><td>[[1|2]]</td><td>0,5</td><td>50%</td></tr><tr><td>[[1|4]]</td><td>0,25</td><td>25%</td></tr><tr><td>[[3|4]]</td><td>0,75</td><td>75%</td></tr><tr><td>[[1|5]]</td><td>0,2</td><td>20%</td></tr><tr><td>[[1|8]]</td><td>0,125</td><td>12,5%</td></tr><tr><td>[[1|3]]</td><td>0,333…</td><td>≈ 33,3%</td></tr><tr><td>[[2|3]]</td><td>0,666…</td><td>≈ 66,7%</td></tr></table>[[3|8]] = 3 × 0,125 = <b>0,375 = 37,5%</b>.<br>[[2|5]] = 2 × 0,2 = <b>0,4 = 40%</b>.<br>0,6 = 3 × 0,2 = <b>[[3|5]]</b>.`},
+   {n:`Simplifica ANTES de multiplicar (corta cruzado)`, c:`Na multiplicação, qualquer número de cima pode ser simplificado com qualquer número de baixo, mesmo em frações diferentes. Os números ficam pequenos e a conta fica de cabeça.`,
+    ex:`[[4|9]] × [[15|8]] → 4 com 8 (÷ 4): fica 1 e 2; 15 com 9 (÷ 3): fica 5 e 3 → [[1|3]] × [[5|2]] = <b>[[5|6]]</b>.<br>[[14|15]] × [[25|21]] → 14 com 21 (÷ 7): 2 e 3; 25 com 15 (÷ 5): 5 e 3 → [[2|3]] × [[5|3]] = <b>[[10|9]]</b>.`},
+   {n:`Soma pelo MMC: "divide pelo de baixo, multiplica pelo de cima"`, c:`Ache o MMC dos denominadores: ele vira o novo denominador. Para cada fração, divida o MMC pelo denominador antigo e multiplique o resultado pelo numerador.`,
+    ex:`[[5|6]] + [[3|8]] → MMC(6, 8) = 24 → 24 ÷ 6 × 5 = 20 e 24 ÷ 8 × 3 = 9 → [[20|24]] + [[9|24]] = <b>[[29|24]]</b>.<br>[[7|10]] − [[2|15]] → MMC = 30 → [[21|30]] − [[4|30]] = <b>[[17|30]]</b>.`},
+   {n:`Dividir = multiplicar pelo inverso ("quantos cabem?")`, c:`Mantém a primeira, inverte a segunda e multiplica. Pense: "quantas vezes a segunda cabe na primeira?". Dividir por [[1|3]] é o mesmo que multiplicar por 3.`,
+    ex:`[[3|4]] ÷ [[3|8]] = [[3|4]] × [[8|3]] = <b>2</b> (cabem 2 pedaços de [[3|8]] em [[3|4]]).<br>5 ÷ [[1|3]] = 5 × 3 = <b>15</b>.<br>[[2|5]] ÷ 4 = [[2|5]] × [[1|4]] = [[2|20]] = <b>[[1|10]]</b>.`},
+   {n:`Comparar por produto cruzado`, c:`Para comparar [[a|b]] com [[c|d]], multiplique em X: compare a × d (lado esquerdo) com c × b (lado direito). O lado com o produto maior tem a fração maior.`,
+    ex:`[[5|7]] ou [[7|10]]? 5 × 10 = 50 e 7 × 7 = 49 → 50 &gt; 49 → <b>[[5|7]] é maior</b>.<br>[[4|9]] ou [[5|11]]? 4 × 11 = 44 e 5 × 9 = 45 → <b>[[5|11]] é maior</b>.`},
+   {n:`Ache o valor de UMA parte`, c:`Quando a questão dá quanto vale um pedaço da fração e pede o todo: divida pelo numerador para achar 1 parte, depois multiplique pelo denominador.`,
+    ex:`[[3|5]] de um número é 24 → [[1|5]] vale 24 ÷ 3 = 8 → o todo ([[5|5]]) vale 8 × 5 = <b>40</b>.<br>[[2|7]] de x = 18 → [[1|7]] = 9 → x = 9 × 7 = <b>63</b>.`}
+  ],
+  passo: [
+   `Identifique o tipo: conta direta, "fração DE", "do que sobrou" ou "uma parte vale tanto, ache o todo".`,
+   `Grife a base de cada fração: é do total ou do que sobrou?`,
+   `Simplifique tudo o que der antes de fazer qualquer conta.`,
+   `Soma ou subtração → MMC · multiplicação → corta cruzado · divisão → inverte a segunda.`,
+   `Para comparar ou estimar: decimal da tabela famosa ou produto cruzado.`,
+   `Responda ao que foi pedido (fração, quantidade ou o que sobrou) e simplifique o resultado.`
+  ],
+  exs: [
+   {q:`Quanto vale [[2|3]] + [[5|6]] − [[3|4]]?`,
+    s:[`Denominadores 3, 6 e 4 → MMC = 12.`,`12 ÷ 3 × 2 = 8 · 12 ÷ 6 × 5 = 10 · 12 ÷ 4 × 3 = 9.`,`[[8|12]] + [[10|12]] − [[9|12]] = [[9|12]] → simplifico por 3 → [[3|4]].`],
+    r:`[[3|4]]`},
+   {q:`Calcule ([[8|15]] × [[25|12]]) ÷ [[10|9]].`,
+    s:[`Primeiro o parêntese, cortando cruzado: 8 com 12 (÷ 4) → 2 e 3; 25 com 15 (÷ 5) → 5 e 3.`,`Fica [[2|3]] × [[5|3]] = [[10|9]].`,`Agora [[10|9]] ÷ [[10|9]]: um número dividido por ele mesmo dá 1 (ou: [[10|9]] × [[9|10]] = 1).`],
+    r:`1`},
+   {q:`Numa excursão, [[3|8]] dos alunos são do 8º ano, [[2|5]] são do 9º ano e os 18 restantes são do 7º ano. Quantos alunos foram à excursão?`,
+    s:[`Somo as frações conhecidas: MMC(8, 5) = 40 → [[15|40]] + [[16|40]] = [[31|40]].`,`O que falta: [[40|40]] − [[31|40]] = [[9|40]]. Esses [[9|40]] são os 18 alunos.`,`Valor de uma parte: [[1|40]] = 18 ÷ 9 = 2 → total = 40 × 2 = 80.`,`Confiro: 30 do 8º + 32 do 9º + 18 do 7º = 80. ✔`],
+    r:`80 alunos`}
+  ],
+  erros: [
+   `<b>Errado:</b> [[2|3]] + [[1|5]] = [[3|8]] (somou em cima e embaixo). <b>Certo:</b> [[10|15]] + [[3|15]] = [[13|15]].`,
+   `<b>Errado:</b> em [[2|3]] ÷ [[4|5]], inverter a primeira. <b>Certo:</b> mantém a primeira e inverte a segunda: [[2|3]] × [[5|4]] = [[10|12]] = [[5|6]].`,
+   `<b>Errado:</b> em [[2 + 5|5]], "cortar o 5" e dar 2. <b>Certo:</b> só se corta o que está multiplicando; aqui é [[7|5]].`,
+   `<b>Errado:</b> achar que [[1|8]] é maior que [[1|4]] porque 8 &gt; 4. <b>Certo:</b> mais partes = pedaços menores: [[1|8]] = 0,125 &lt; 0,25 = [[1|4]].`,
+   `<b>Errado:</b> 0,3 = [[1|3]]. <b>Certo:</b> 0,3 = [[3|10]]; já [[1|3]] = 0,333…`
+  ],
+  resumo: [
+   `[[1|2]] = 0,5 · [[1|4]] = 0,25 · [[3|4]] = 0,75 · [[1|5]] = 0,2 · [[1|8]] = 0,125 · [[1|3]] = 0,333…`,
+   `Somar → MMC · multiplicar → corta cruzado antes`,
+   `Dividir → mantém, inverte a segunda, multiplica`,
+   `Comparar → produto em X`,
+   `"Do que sobrou" → a base mudou!`,
+   `Parte vale tanto → ÷ numerador × denominador`
+  ]
+ },
+
+ 'm-reais': {
+  base: [
+   [`Naturais (ℕ)`, `Os números de contar: 0, 1, 2, 3, 4… Não têm negativos nem vírgula. Ex.: o número de alunos de uma sala.`],
+   [`Inteiros (ℤ)`, `Os naturais mais os negativos: …, −3, −2, −1, 0, 1, 2, 3… Ex.: temperatura de −5 °C, saldo de −20 reais.`],
+   [`Racionais (ℚ)`, `Todo número que dá para escrever como fração de inteiros (com denominador diferente de 0). Entram os inteiros (−3 = [[−3|1]]), os decimais finitos (0,75 = [[3|4]]) e as dízimas periódicas (0,333… = [[1|3]]).`],
+   [`Dízima periódica e período`, `É um decimal infinito em que um bloco se repete para sempre. Esse bloco é o <b>período</b>. Em 0,454545… o período é 45. Em 2,1777… a parte "1" não se repete e o período é 7.`],
+   [`Irracionais`, `Decimais infinitos que <b>não</b> repetem bloco nenhum. Não existe fração para eles. Exemplos: √{2} = 1,41421…, √{3}, √{5}, π = 3,14159…, e 0,1010010001… (os zeros vão aumentando, nunca repete).`],
+   [`Reais (ℝ)`, `Racionais + irracionais = todos os pontos da reta numérica. Ordem dos conjuntos: ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ, e os irracionais são a parte de ℝ que fica fora de ℚ.`],
+   [`Raiz exata x raiz não exata`, `Se o número natural dentro da raiz é um quadrado perfeito (1, 4, 9, 16, 25, 36, 49, 64, 81, 100…), a raiz é exata e o número é racional: √{64} = 8. Se não é (2, 3, 5, 20…), a raiz é irracional: √{20} fica entre 4 e 5.`],
+   [`Aproximações que valem ouro`, `√{2} ≈ 1,41 · √{3} ≈ 1,73 · √{5} ≈ 2,24 · π ≈ 3,14. Com elas você estima e ordena sem calculadora. Ex.: 2√{3} ≈ 2 × 1,73 = 3,46.`]
+  ],
+  jeitos: [
+   {n:`Teste da fração`, c:`Para classificar, pergunte só uma coisa: "consigo escrever como fração de inteiros?". Simplifique o número antes: muita coisa que parece irracional é racional disfarçado.`,
+    ex:`0,8 = [[8|10]] = [[4|5]] → <b>racional</b>.<br>√{49} = 7 → <b>racional</b>.<br>√{0,25} = 0,5 = [[1|2]] → <b>racional</b> (raiz de decimal também pode ser exata!).`},
+   {n:`Sanduíche de quadrados perfeitos`, c:`Para localizar uma raiz, ache os quadrados perfeitos logo abaixo e logo acima. A raiz fica entre as raízes deles e mais perto da raiz do quadrado perfeito de que o número estiver mais próximo. Para afinar, teste uma casa decimal ao quadrado.`,
+    ex:`√{60}: 49 &lt; 60 &lt; 64 → entre 7 e 8, mais perto de 8 (60 está a 4 de 64 e a 11 de 49).<br>Afinando: 7,7<sup>2</sup> = 59,29 e 7,8<sup>2</sup> = 60,84 → <b>√{60} está entre 7,7 e 7,8</b>.`},
+   {n:`Dízima simples: "período sobre noves"`, c:`Se a dízima começa a repetir logo depois da vírgula, a fração é o período sobre tantos 9 quantos algarismos ele tiver. Se tiver parte inteira, some no final.`,
+    ex:`0,777… = <b>[[7|9]]</b>.<br>0,151515… = [[15|99]] = <b>[[5|33]]</b>.<br>2,333… = 2 + [[3|9]] = 2 + [[1|3]] = <b>[[7|3]]</b>.`},
+   {n:`Dízima composta: "× 10 e subtrai"`, c:`Chame a dízima de x. Multiplique por 10, 100… até ter duas versões com a MESMA parte que se repete depois da vírgula. Subtraia uma da outra: a parte infinita some.`,
+    ex:`x = 0,8333… → 10x = 8,333… e 100x = 83,333…<br>100x − 10x = 83,333… − 8,333… → 90x = 75 → x = [[75|90]] = <b>[[5|6]]</b>.`},
+   {n:`Irracional com irracional pode dar racional`, c:`Multiplicar, dividir ou subtrair irracionais às vezes dá um número "bonito". Junte tudo debaixo de uma raiz só e veja se vira quadrado perfeito.`,
+    ex:`√{3} × √{12} = √{36} = <b>6</b> (racional).<br>√{8} ÷ √{2} = √{4} = <b>2</b> (racional).<br>π − π = <b>0</b> (racional).`},
+   {n:`Para comparar raízes: eleve ao quadrado`, c:`Se os números são positivos, quem tem o quadrado maior é o maior. Assim você compara sem tirar raiz nenhuma.`,
+    ex:`3√{2} ou 2√{5}? (3√{2})<sup>2</sup> = 9 × 2 = 18 e (2√{5})<sup>2</sup> = 4 × 5 = 20 → <b>2√{5} é maior</b>.<br>2,8 ou √{8}? 2,8<sup>2</sup> = 7,84 &lt; 8 → <b>√{8} é maior</b>.`}
+  ],
+  passo: [
+   `Simplifique cada número primeiro: a raiz é exata? O decimal acaba? Repete?`,
+   `Classifique com o teste da fração: dá para escrever como fração de inteiros → racional; raiz não exata ou π → irracional.`,
+   `Para localizar uma raiz, faça o sanduíche de quadrados perfeitos.`,
+   `Para ordenar, passe tudo para decimal aproximado ou eleve ao quadrado.`,
+   `Dízima → fração: simples = período sobre noves; composta = "× 10 e subtrai".`,
+   `Afirmação com "sempre" ou "nunca"? Procure um contraexemplo.`
+  ],
+  exs: [
+   {q:`Classifique cada número em racional ou irracional: √{36}, √{12}, 0,1010010001…, [[−2|3]] e 1,050505…`,
+    s:[`√{36} = 6 → racional.`,`√{12}: 12 não é quadrado perfeito (está entre 9 e 16) → irracional.`,`0,1010010001…: infinito e a quantidade de zeros sempre aumenta, não repete bloco → irracional.`,`[[−2|3]] já é fração → racional. 1,050505… repete "05" → dízima periódica → racional.`],
+    r:`Racionais: √{36}, [[−2|3]], 1,0505… · Irracionais: √{12}, 0,1010010001…`},
+   {q:`Qual é a fração geratriz de 1,2444…?`,
+    s:[`Separo a parte inteira: 1,2444… = 1 + 0,2444…`,`x = 0,2444… → 10x = 2,444… e 100x = 24,444…`,`100x − 10x = 22 → 90x = 22 → x = [[22|90]] = [[11|45]].`,`Junto o 1: 1 + [[11|45]] = [[45|45]] + [[11|45]] = [[56|45]].`],
+    r:`[[56|45]]`},
+   {q:`Coloque em ordem crescente: √{13}, 2√{3}, 3,7 e [[11|3]].`,
+    s:[`Todos são positivos, então comparo os quadrados.`,`(√{13})<sup>2</sup> = 13 · (2√{3})<sup>2</sup> = 4 × 3 = 12 · 3,7<sup>2</sup> = 13,69 · ([[11|3]])<sup>2</sup> = [[121|9]] ≈ 13,44.`,`Ordem dos quadrados: 12 &lt; 13 &lt; 13,44 &lt; 13,69.`],
+    r:`2√{3} &lt; √{13} &lt; [[11|3]] &lt; 3,7`}
+  ],
+  erros: [
+   `<b>Errado:</b> "toda raiz é irracional". <b>Certo:</b> √{81} = 9 e √{0,04} = 0,2 são racionais. Só a raiz não exata é irracional.`,
+   `<b>Errado:</b> "tem infinitas casas, então é irracional". <b>Certo:</b> se repete um bloco, é racional: 0,4545… = [[45|99]] = [[5|11]].`,
+   `<b>Errado:</b> √{9 + 16} = √{9} + √{16} = 3 + 4 = 7. <b>Certo:</b> √{9 + 16} = √{25} = 5. Raiz não se separa na soma.`,
+   `<b>Errado:</b> 0,2555… = [[25|99]]. <b>Certo:</b> é dízima composta: [[25 − 2|90]] = [[23|90]].`
+  ],
+  resumo: [
+   `ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ`,
+   `Racional = vira fração (inclui dízima periódica)`,
+   `Irracional = infinito SEM repetir (√ não exata, π)`,
+   `Raiz entre inteiros → sanduíche de quadrados perfeitos`,
+   `0,ababab… = [[ab|99]] · composta → "× 10 e subtrai"`,
+   `Comparar raízes → eleve ao quadrado`
+  ]
+ },
+
+ 'm-pot': {
+  base: [
+   [`Potência é multiplicação repetida`, `2<sup>5</sup> = 2 × 2 × 2 × 2 × 2 = 32. O 2 é a <b>base</b> (quem se repete) e o 5 é o <b>expoente</b> (quantas vezes). Não é 2 × 5 = 10!`],
+   [`Quadrado e cubo`, `"Ao quadrado" é expoente 2 (área de um quadrado: 7<sup>2</sup> = 49). "Ao cubo" é expoente 3 (volume de um cubo: 3<sup>3</sup> = 27).`],
+   [`Raiz é o caminho de volta`, `√{49} = 7 porque 7<sup>2</sup> = 49. ∛{64} = 4 porque 4<sup>3</sup> = 64. A raiz pergunta: "que número, elevado a esse índice, dá isso?"`],
+   [`Potências de 10`, `10<sup>n</sup> = 1 seguido de n zeros: 10<sup>4</sup> = 10 000. 10<sup>−n</sup> = vírgula com n casas: 10<sup>−3</sup> = 0,001.`],
+   [`Sinal da base negativa`, `Expoente par → resultado positivo; ímpar → negativo. (−1)<sup>100</sup> = 1 · (−1)<sup>7</sup> = −1 · (−3)<sup>3</sup> = −27. Sem parênteses, o sinal fica de fora: −3<sup>2</sup> = −9.`],
+   [`Por que a<sup>0</sup> = 1`, `2<sup>3</sup> ÷ 2<sup>3</sup> = 2<sup>3−3</sup> = 2<sup>0</sup>. Mas 8 ÷ 8 = 1. Então 2<sup>0</sup> = 1. Vale para qualquer base diferente de zero: 1 000<sup>0</sup> = 1.`],
+   [`Expoente negativo inverte`, `5<sup>−2</sup> = [[1|5<sup>2</sup>]] = [[1|25]]. Se a base já é fração, é só virar: ([[2|3]])<sup>−2</sup> = ([[3|2]])<sup>2</sup> = [[9|4]].`],
+   [`Potência de fração e de decimal`, `Eleva o de cima e o de baixo: ([[3|4]])<sup>2</sup> = [[9|16]]. No decimal, as casas se multiplicam: 0,3<sup>2</sup> = 0,09 (2 casas) e 0,2<sup>3</sup> = 0,008 (3 casas).`]
+  ],
+  jeitos: [
+   {n:`Tabela de potências e quadrados perfeitos`, c:`Saber essa tabela de cor resolve metade das questões de raiz e potência. Leia nas duas direções: 13<sup>2</sup> = 169 e √{169} = 13.`,
+    ex:`<table class="tb"><tr><th>n</th><th>n<sup>2</sup></th><th>n</th><th>n<sup>2</sup></th><th>n</th><th>n<sup>2</sup></th></tr><tr><td>1</td><td>1</td><td>6</td><td>36</td><td>11</td><td>121</td></tr><tr><td>2</td><td>4</td><td>7</td><td>49</td><td>12</td><td>144</td></tr><tr><td>3</td><td>9</td><td>8</td><td>64</td><td>13</td><td>169</td></tr><tr><td>4</td><td>16</td><td>9</td><td>81</td><td>14</td><td>196</td></tr><tr><td>5</td><td>25</td><td>10</td><td>100</td><td>15</td><td>225</td></tr></table>Potências de 2: 2, 4, 8, 16, 32, 64, 128, 256, 512, <b>1 024</b> (2<sup>10</sup>).<br>Potências de 3: 3, 9, 27, 81, <b>243</b> · de 5: 5, 25, 125, <b>625</b> · cubos: 1, 8, 27, 64, 125, <b>216</b>.`},
+   {n:`Propriedades: "mesma base, mexe só no expoente"`, c:`Multiplicação de mesma base → <b>soma</b> os expoentes. Divisão → <b>subtrai</b>. Potência de potência → <b>multiplica</b>. A base nunca muda.`,
+    ex:`3<sup>4</sup> · 3<sup>2</sup> = 3<sup>6</sup> = <b>729</b>.<br>5<sup>7</sup> ÷ 5<sup>5</sup> = 5<sup>2</sup> = <b>25</b>.<br>(2<sup>3</sup>)<sup>2</sup> = 2<sup>6</sup> = <b>64</b>.`},
+   {n:`Iguale as bases (ou os expoentes)`, c:`Bases diferentes? Escreva todas como potência do mesmo número (4 = 2<sup>2</sup>, 8 = 2<sup>3</sup>, 9 = 3<sup>2</sup>, 27 = 3<sup>3</sup>). Expoentes iguais? Multiplique as bases: a<sup>n</sup> · b<sup>n</sup> = (a · b)<sup>n</sup>.`,
+    ex:`4<sup>3</sup> · 8 = 2<sup>6</sup> · 2<sup>3</sup> = 2<sup>9</sup> = <b>512</b>.<br>9<sup>2</sup> ÷ 27 = 3<sup>4</sup> ÷ 3<sup>3</sup> = <b>3</b>.<br>2<sup>5</sup> · 5<sup>5</sup> = 10<sup>5</sup> = <b>100 000</b>.`},
+   {n:`A escada do expoente (zero e negativo)`, c:`Cada degrau que o expoente desce, você divide pela base. Descendo de 2<sup>3</sup>: 8, 4, 2, 1, [[1|2]], [[1|4]]… Por isso 2<sup>0</sup> = 1 e 2<sup>−2</sup> = [[1|4]].`,
+    ex:`10<sup>−2</sup> = [[1|100]] = <b>0,01</b>.<br>([[1|2]])<sup>−3</sup> = 2<sup>3</sup> = <b>8</b>.<br>0,2<sup>−1</sup> = ([[1|5]])<sup>−1</sup> = <b>5</b>.`},
+   {n:`Raiz por fatoração: divide o expoente pelo índice`, c:`Fatore o número em primos. Na raiz quadrada, divida cada expoente por 2 (na cúbica, por 3). O que não dividir certinho fica dentro da raiz.`,
+    ex:`√{324} = √{2<sup>2</sup> · 3<sup>4</sup>} = 2 · 3<sup>2</sup> = <b>18</b>.<br>∛{216} = ∛{2<sup>3</sup> · 3<sup>3</sup>} = 2 · 3 = <b>6</b>.<br>√{180} = √{2<sup>2</sup> · 3<sup>2</sup> · 5} = 2 · 3 · √{5} = <b>6√{5}</b>.`},
+   {n:`Raiz exata pelo último algarismo`, c:`Para raiz de quadrado perfeito grande: o último algarismo diz como a raiz termina (…1 → 1 ou 9; …4 → 2 ou 8; …5 → 5; …6 → 4 ou 6; …9 → 3 ou 7). As dezenas você acha pelo sanduíche (40<sup>2</sup> = 1 600, 50<sup>2</sup> = 2 500).`,
+    ex:`√{2 209}: termina em 9 → 3 ou 7. Entre 40<sup>2</sup> e 50<sup>2</sup> → 43 ou 47. Como 45<sup>2</sup> = 2 025 é menor que 2 209 → <b>47</b>.<br>√{1 764}: termina em 4 → 2 ou 8. 40<sup>2</sup> = 1 600 e 45<sup>2</sup> = 2 025 → <b>42</b>.`},
+   {n:`Quadrado de número terminado em 5`, c:`Pegue o que vem antes do 5, multiplique pelo seu sucessor e escreva 25 no final.`,
+    ex:`35<sup>2</sup> → 3 × 4 = 12 → <b>1 225</b>.<br>65<sup>2</sup> → 6 × 7 = 42 → <b>4 225</b>.`}
+  ],
+  passo: [
+   `Resolva sinais e parênteses: (−a)<sup>n</sup> é diferente de −a<sup>n</sup>.`,
+   `Expoente zero → 1. Expoente negativo → inverta a base e deixe o expoente positivo.`,
+   `Bases diferentes? Reescreva como potências da mesma base (2, 3, 5 ou 10).`,
+   `Aplique as propriedades: multiplica soma, divide subtrai, potência de potência multiplica.`,
+   `Raiz: fatore e divida os expoentes pelo índice; o que sobra fica dentro.`,
+   `Só no final transforme em número e confira com a tabela.`
+  ],
+  exs: [
+   {q:`Calcule (−2)<sup>3</sup> + 3<sup>2</sup> − 4<sup>0</sup> + 2<sup>−1</sup>.`,
+    s:[`(−2)<sup>3</sup>: base negativa com expoente ímpar → −8.`,`3<sup>2</sup> = 9 · 4<sup>0</sup> = 1 · 2<sup>−1</sup> = [[1|2]] (inverte).`,`−8 + 9 − 1 + [[1|2]] = 0 + [[1|2]] = [[1|2]].`],
+    r:`[[1|2]]`},
+   {q:`Quanto vale (8<sup>2</sup> · 4<sup>3</sup>) ÷ 2<sup>10</sup>?`,
+    s:[`Uso o macete de igualar as bases: 8 = 2<sup>3</sup> e 4 = 2<sup>2</sup>.`,`8<sup>2</sup> = (2<sup>3</sup>)<sup>2</sup> = 2<sup>6</sup> e 4<sup>3</sup> = (2<sup>2</sup>)<sup>3</sup> = 2<sup>6</sup>.`,`2<sup>6</sup> · 2<sup>6</sup> = 2<sup>12</sup>. Depois 2<sup>12</sup> ÷ 2<sup>10</sup> = 2<sup>2</sup> = 4.`],
+    r:`4`},
+   {q:`Quantos algarismos tem o número 5<sup>10</sup> · 2<sup>12</sup>?`,
+    s:[`Calcular tudo seria enorme. Uso o macete do "mesmo expoente": separo 2<sup>12</sup> = 2<sup>10</sup> · 2<sup>2</sup>.`,`5<sup>10</sup> · 2<sup>10</sup> = (5 · 2)<sup>10</sup> = 10<sup>10</sup>.`,`Sobra 2<sup>2</sup> = 4 → o número é 4 · 10<sup>10</sup> = 4 seguido de 10 zeros.`,`1 + 10 = 11 algarismos.`],
+    r:`11 algarismos`}
+  ],
+  erros: [
+   `<b>Errado:</b> 3<sup>4</sup> = 3 × 4 = 12. <b>Certo:</b> 3 × 3 × 3 × 3 = 81.`,
+   `<b>Errado:</b> 2<sup>3</sup> · 2<sup>4</sup> = 4<sup>7</sup> (multiplicou as bases). <b>Certo:</b> a base fica: 2<sup>7</sup> = 128.`,
+   `<b>Errado:</b> 5<sup>−2</sup> = −25. <b>Certo:</b> 5<sup>−2</sup> = [[1|25]] (positivo e pequeno).`,
+   `<b>Errado:</b> 2<sup>3</sup> + 2<sup>3</sup> = 2<sup>6</sup>. <b>Certo:</b> soma não tem propriedade: 8 + 8 = 16 = 2<sup>4</sup>.`,
+   `<b>Errado:</b> √{16} = ±4. <b>Certo:</b> √{16} = 4. Quem tem duas respostas é a equação x<sup>2</sup> = 16 (x = 4 ou x = −4).`
+  ],
+  resumo: [
+   `a<sup>0</sup> = 1 · a<sup>−n</sup> = [[1|a<sup>n</sup>]] (inverte, não fica negativo)`,
+   `Mesma base: × → soma · ÷ → subtrai · potência de potência → multiplica`,
+   `Mesmo expoente: 2<sup>n</sup> · 5<sup>n</sup> = 10<sup>n</sup>`,
+   `Base negativa: par → +, ímpar → −`,
+   `Raiz: fatora e divide o expoente pelo índice`,
+   `Quadrados até 15<sup>2</sup> = 225 e 2<sup>10</sup> = 1 024 de cor`
+  ]
+ },
+
+ 'm-cient': {
+  base: [
+   [`A forma certa: a × 10<sup>n</sup>`, `O número da frente (a) tem que ter <b>um só algarismo, diferente de zero, antes da vírgula</b>: 1 ≤ a &lt; 10. 7,2 × 10<sup>6</sup> está certo; 72 × 10<sup>5</sup> e 0,72 × 10<sup>7</sup> valem o mesmo, mas não estão em notação científica.`],
+   [`Potências de 10 positivas`, `10<sup>1</sup> = 10 · 10<sup>2</sup> = 100 · 10<sup>3</sup> = mil · 10<sup>6</sup> = milhão · 10<sup>9</sup> = bilhão. O expoente é o número de zeros.`],
+   [`Potências de 10 negativas`, `10<sup>−1</sup> = 0,1 (décimo) · 10<sup>−2</sup> = 0,01 (centésimo) · 10<sup>−3</sup> = 0,001 (milésimo) · 10<sup>−6</sup> = 0,000001 (milionésimo). O expoente diz quantas casas depois da vírgula.`],
+   [`Multiplicar por 10<sup>n</sup> = mover a vírgula`, `Expoente positivo → a vírgula vai para a direita (o número cresce): 3,4 × 10<sup>3</sup> = 3 400. Expoente negativo → vai para a esquerda: 3,4 × 10<sup>−3</sup> = 0,0034.`],
+   [`Prefixos das unidades`, `<table class="tb"><tr><th>Prefixo</th><th>Vale</th><th>Exemplo</th></tr><tr><td>giga (G)</td><td>10<sup>9</sup></td><td>1 GB = 10<sup>9</sup> bytes</td></tr><tr><td>mega (M)</td><td>10<sup>6</sup></td><td>1 MW = 10<sup>6</sup> W</td></tr><tr><td>quilo (k)</td><td>10<sup>3</sup></td><td>1 km = 10<sup>3</sup> m</td></tr><tr><td>mili (m)</td><td>10<sup>−3</sup></td><td>1 mm = 10<sup>−3</sup> m</td></tr><tr><td>micro (µ)</td><td>10<sup>−6</sup></td><td>1 µm = 10<sup>−6</sup> m</td></tr><tr><td>nano (n)</td><td>10<sup>−9</sup></td><td>1 nm = 10<sup>−9</sup> m</td></tr></table>`],
+   [`Comparar números em notação científica`, `Primeiro olhe o expoente: o maior expoente vence (se os dois estiverem na forma certa). 4 × 10<sup>8</sup> &gt; 9 × 10<sup>7</sup>, porque 10<sup>8</sup> é 10 vezes 10<sup>7</sup>. Expoentes iguais? Aí compare os números da frente.`],
+   [`Milhão e bilhão em palavras`, `2,3 milhões = 2,3 × 10<sup>6</sup> = 2 300 000. 45 bilhões = 45 × 10<sup>9</sup> = 4,5 × 10<sup>10</sup>. Notícias usam muito isso!`]
+  ],
+  jeitos: [
+   {n:`Conte as casas da vírgula`, c:`Ande com a vírgula até ficar um só algarismo (diferente de zero) antes dela. O número de casas é o expoente: número grande → positivo; número miudinho → negativo.`,
+    ex:`52 000 000 → 5,2 (a vírgula andou 7 casas para a esquerda) → <b>5,2 × 10<sup>7</sup></b>.<br>0,00009 → 9 (andou 5 casas para a direita) → <b>9 × 10<sup>−5</sup></b>.`},
+   {n:`Gangorra: o que um perde, o outro ganha`, c:`Ao ajustar, se o número da frente fica 10 vezes menor, o expoente sobe 1 (e vice-versa). Assim o valor não muda.`,
+    ex:`45 × 10<sup>3</sup> = <b>4,5 × 10<sup>4</sup></b> (frente ÷ 10, expoente + 1).<br>0,6 × 10<sup>−2</sup> = <b>6 × 10<sup>−3</sup></b> (frente × 10, expoente − 1).<br>350 × 10<sup>−8</sup> = <b>3,5 × 10<sup>−6</sup></b> (frente ÷ 100, expoente + 2).`},
+   {n:`Separa: números com números, potências com potências`, c:`Na multiplicação, multiplique os números da frente e <b>some</b> os expoentes. Na divisão, divida os números e <b>subtraia</b> os expoentes. No fim, use a gangorra para ajustar.`,
+    ex:`(2,5 × 10<sup>4</sup>) × (4 × 10<sup>−7</sup>) = 10 × 10<sup>−3</sup> = <b>1 × 10<sup>−2</sup></b>.<br>(9 × 10<sup>5</sup>) ÷ (3 × 10<sup>−2</sup>) = 3 × 10<sup>5 − (−2)</sup> = <b>3 × 10<sup>7</sup></b>.`},
+   {n:`Soma: iguale os expoentes antes`, c:`Só dá para somar os números da frente se as potências forem iguais (como somar "laranjas com laranjas"). Use a gangorra para igualar.`,
+    ex:`3 × 10<sup>5</sup> + 2 × 10<sup>4</sup> = 30 × 10<sup>4</sup> + 2 × 10<sup>4</sup> = 32 × 10<sup>4</sup> = <b>3,2 × 10<sup>5</sup></b>.`},
+   {n:`Palavra vira potência`, c:`Troque a palavra pela potência: mil = 10<sup>3</sup>, milhão = 10<sup>6</sup>, bilhão = 10<sup>9</sup>. Depois ajuste a frente.`,
+    ex:`1,8 bilhão = <b>1,8 × 10<sup>9</sup></b>.<br>250 mil = 250 × 10<sup>3</sup> = <b>2,5 × 10<sup>5</sup></b>.`},
+   {n:`Trocar unidade = trocar o prefixo pela potência`, c:`Substitua o prefixo pela potência de 10 que ele vale e faça a conta com as potências.`,
+    ex:`3 km = 3 × 10<sup>3</sup> m = <b>3 000 m</b>.<br>5 µm em mm: 5 × 10<sup>−6</sup> m e 1 mm = 10<sup>−3</sup> m → 5 × 10<sup>−6</sup> ÷ 10<sup>−3</sup> = <b>5 × 10<sup>−3</sup> mm</b>.`}
+  ],
+  passo: [
+   `Grife números e unidades. Se as unidades forem diferentes, converta para a mesma.`,
+   `Escreva cada número como a × 10<sup>n</sup> (palavras como "milhão" viram potência).`,
+   `Multiplicação ou divisão: números com números, potências com potências (soma ou subtrai expoentes).`,
+   `Soma ou subtração: iguale os expoentes antes.`,
+   `Ajuste o resultado para 1 ≤ a &lt; 10 usando a gangorra.`,
+   `Confira o bom senso: coisa enorme → expoente positivo; coisa minúscula → negativo.`
+  ],
+  exs: [
+   {q:`Uma bactéria mede 0,000002 m. Escreva essa medida em notação científica e com o prefixo adequado.`,
+    s:[`Conto as casas: a vírgula anda 6 casas para a direita até o 2.`,`Número pequeno → expoente negativo: 2 × 10<sup>−6</sup> m.`,`10<sup>−6</sup> é o micro (µ) → 2 µm.`],
+    r:`2 × 10<sup>−6</sup> m = 2 µm`},
+   {q:`O coração de uma pessoa bate cerca de 1 × 10<sup>5</sup> vezes por dia. Quantas vezes, aproximadamente, ele bate em um ano de 365 dias?`,
+    s:[`Escrevo 365 em notação científica: 3,65 × 10<sup>2</sup>.`,`Multiplico separando: (1 × 3,65) × 10<sup>5 + 2</sup> = 3,65 × 10<sup>7</sup>.`,`Isso é 36 500 000, uns 36 milhões e meio de batidas.`],
+    r:`3,65 × 10<sup>7</sup> batidas`},
+   {q:`O Brasil tem cerca de 2,1 × 10<sup>8</sup> habitantes, e cada pessoa produz em média 1,2 kg de lixo por dia. Quantas toneladas de lixo são produzidas por dia, aproximadamente? (1 t = 10<sup>3</sup> kg)`,
+    s:[`Total em kg: (2,1 × 10<sup>8</sup>) × 1,2 = 2,52 × 10<sup>8</sup> kg (2,1 × 1,2 = 2,52).`,`Para toneladas, divido por 10<sup>3</sup>: 2,52 × 10<sup>8 − 3</sup> = 2,52 × 10<sup>5</sup> t.`,`Isso é 252 000 toneladas por dia.`],
+    r:`2,52 × 10<sup>5</sup> t (252 mil toneladas)`}
+  ],
+  erros: [
+   `<b>Errado:</b> 0,0005 = 5 × 10<sup>4</sup>. <b>Certo:</b> número menor que 1 tem expoente negativo: 5 × 10<sup>−4</sup>.`,
+   `<b>Errado:</b> (3 × 10<sup>4</sup>) × (2 × 10<sup>5</sup>) = 6 × 10<sup>20</sup>. <b>Certo:</b> some os expoentes: 6 × 10<sup>9</sup>.`,
+   `<b>Errado:</b> 2 × 10<sup>3</sup> + 3 × 10<sup>3</sup> = 5 × 10<sup>6</sup>. <b>Certo:</b> com potências iguais, só some a frente: 5 × 10<sup>3</sup>.`,
+   `<b>Errado:</b> ajustar 23 × 10<sup>4</sup> para 2,3 × 10<sup>3</sup>. <b>Certo:</b> a frente diminuiu, o expoente sobe: 2,3 × 10<sup>5</sup>.`,
+   `<b>Errado:</b> achar que 10<sup>−3</sup> é um número negativo. <b>Certo:</b> 10<sup>−3</sup> = 0,001, positivo e pequeno.`
+  ],
+  resumo: [
+   `Forma: a × 10<sup>n</sup>, com 1 ≤ a &lt; 10`,
+   `Grande → expoente +; miudinho → expoente −`,
+   `Gangorra: frente ÷ 10 ↔ expoente + 1`,
+   `× soma expoentes · ÷ subtrai · + iguala antes`,
+   `k 10<sup>3</sup> · M 10<sup>6</sup> · G 10<sup>9</sup> · m 10<sup>−3</sup> · µ 10<sup>−6</sup> · n 10<sup>−9</sup>`
+  ]
+ },
+
+ 'm-mmc': {
+  base: [
+   [`Múltiplo`, `É o resultado da tabuada de um número. Múltiplos de 6: 0, 6, 12, 18, 24, 30… São infinitos.`],
+   [`Divisor`, `É quem divide o número sem deixar resto. Divisores de 12: 1, 2, 3, 4, 6 e 12. São poucos (finitos), e o maior é o próprio número.`],
+   [`Três frases que dizem a mesma coisa`, `"36 é divisível por 4" = "4 é divisor de 36" = "36 é múltiplo de 4". Todas querem dizer que 36 ÷ 4 dá exato (9).`],
+   [`Número primo`, `Tem exatamente dois divisores: 1 e ele mesmo. Primos até 30: 2, 3, 5, 7, 11, 13, 17, 19, 23, 29. O 2 é o único primo par, e o 1 não é primo (só tem um divisor).`],
+   [`Fatoração (decomposição em primos)`, `Todo número maior que 1 pode ser escrito como multiplicação de primos, de um jeito só. 60 = 2 · 2 · 3 · 5 = 2<sup>2</sup> · 3 · 5. É a "impressão digital" do número.`],
+   [`MMC e MDC: quem é maior?`, `O MMC é o menor múltiplo em comum (fica maior ou igual ao maior número). O MDC é o maior divisor em comum (fica menor ou igual ao menor número). MMC(4, 6) = 12 e MDC(4, 6) = 2.`],
+   [`Primos entre si`, `Quando o MDC é 1, não há fator em comum. Aí o MMC é o produto: MMC(8, 9) = 72 e MDC(8, 9) = 1.`],
+   [`Um divide o outro`, `Se o menor divide o maior, o MMC é o maior e o MDC é o menor: MMC(5, 20) = 20 e MDC(5, 20) = 5.`]
+  ],
+  jeitos: [
+   {n:`Critérios do fim: 2, 4, 5 e 10`, c:`Olhe só o final do número. Por 2: termina em par (0, 2, 4, 6, 8). Por 5: termina em 0 ou 5. Por 10: termina em 0. Por 4: os <b>dois últimos algarismos</b> formam um número divisível por 4 (ou terminam em 00).`,
+    ex:`3 470 → termina em 0 → <b>divisível por 2, 5 e 10</b>.<br>1 316 → dois últimos: 16, e 16 ÷ 4 = 4 → <b>divisível por 4</b>.<br>3 418 → dois últimos: 18, que não é múltiplo de 4 → <b>não é divisível por 4</b> (mesmo sendo par).`},
+   {n:`Critérios da soma: 3 e 9`, c:`Some os algarismos. Se a soma for múltiplo de 3, o número é divisível por 3; se for múltiplo de 9, é divisível por 9. Se a soma ainda for grande, some de novo.`,
+    ex:`4 128 → 4 + 1 + 2 + 8 = 15 → <b>divisível por 3</b>, mas não por 9.<br>7 362 → 7 + 3 + 6 + 2 = 18 → <b>divisível por 3 e por 9</b> (7 362 ÷ 9 = 818).`},
+   {n:`Critério do 6: "2 e 3 ao mesmo tempo"`, c:`Para ser divisível por 6, o número precisa passar nos DOIS testes: ser par e ter soma dos algarismos múltipla de 3.`,
+    ex:`2 514 → é par e 2 + 5 + 1 + 4 = 12 → <b>divisível por 6</b> (2 514 ÷ 6 = 419).<br>1 215 → soma 9, mas é ímpar → <b>não é divisível por 6</b>.`},
+   {n:`Fatoração simultânea (o "varal")`, c:`Coloque os números lado a lado e divida todos pelos primos (2, 3, 5…), baixando quem não divide. Marque (*) o primo que dividiu TODOS de uma vez. MMC = produto de todos os primos usados; MDC = produto só dos marcados.`,
+    ex:`<table class="tb"><tr><th>12</th><th>18</th><th>30</th><th>primo</th></tr><tr><td>6</td><td>9</td><td>15</td><td>2 *</td></tr><tr><td>3</td><td>9</td><td>15</td><td>2</td></tr><tr><td>1</td><td>3</td><td>5</td><td>3 *</td></tr><tr><td>1</td><td>1</td><td>5</td><td>3</td></tr><tr><td>1</td><td>1</td><td>1</td><td>5</td></tr></table>MMC = 2 · 2 · 3 · 3 · 5 = <b>180</b> · MDC = 2 · 3 = <b>6</b> (só os marcados).`},
+   {n:`MMC rápido: múltiplos do maior`, c:`Para dois números pequenos, vá escrevendo a tabuada do MAIOR e pare no primeiro que o menor também divide.`,
+    ex:`MMC(8, 12): 12 (8 não divide), 24 (8 divide!) → <b>24</b>.<br>MMC(15, 20): 20, 40, 60 → 15 divide 60 → <b>60</b>.`},
+   {n:`Atalho MMC × MDC = a × b`, c:`Para dois números, se você já tem um dos dois (MMC ou MDC), o outro sai por divisão.`,
+    ex:`MDC(18, 24) = 6 → MMC = 18 × 24 ÷ 6 = 432 ÷ 6 = <b>72</b>.`}
+  ],
+  passo: [
+   `Leia o verbo: "encontrar de novo", "coincidir", "próxima vez juntos" → MMC. "Dividir", "repartir", "maior tamanho possível", "sem sobra" → MDC.`,
+   `Fatore os números (de preferência na fatoração simultânea).`,
+   `MMC → todos os primos usados. MDC → só os que dividiram todos ao mesmo tempo.`,
+   `Responda à pergunta de verdade: horário (some ao início), quantidade de pedaços ou kits (divida cada número pelo MDC).`,
+   `Confira: o MMC tem que ser múltiplo de todos; o MDC tem que dividir todos.`
+  ],
+  exs: [
+   {q:`Qual destes números é divisível ao mesmo tempo por 2, 3, 4, 5, 6, 9 e 10: 4 410, 1 254, 3 105 ou 2 340?`,
+    s:[`Por 10 elimino rápido: tem que terminar em 0. Sobram 4 410 e 2 340.`,`Teste do 4 (dois últimos): 4 410 → 10 não é múltiplo de 4 ✘. 2 340 → 40 ÷ 4 = 10 ✔.`,`Teste da soma em 2 340: 2 + 3 + 4 + 0 = 9 → divisível por 3 e por 9; sendo par, também por 6.`],
+    r:`2 340`},
+   {q:`Lia toma o remédio A a cada 6 horas e o remédio B a cada 8 horas. Ela tomou os dois juntos às 7h de segunda-feira. Quando vai tomá-los juntos de novo?`,
+    s:[`"Juntos de novo" → MMC.`,`Múltiplos do maior (8): 8, 16, 24 → 6 divide 24. MMC = 24 horas.`,`24 horas depois de 7h de segunda é 7h de terça.`],
+    r:`Às 7h de terça-feira`},
+   {q:`Um terreno retangular mede 84 m por 120 m. Ele será cercado com estacas igualmente espaçadas, com a maior distância possível entre elas e uma estaca em cada canto. Quantas estacas serão usadas?`,
+    s:[`"Maior distância possível" e tem que caber certinho nos dois lados → MDC(84, 120).`,`84 = 2<sup>2</sup> · 3 · 7 e 120 = 2<sup>3</sup> · 3 · 5 → comuns com menor expoente: 2<sup>2</sup> · 3 = 12 m.`,`Perímetro: 2 × (84 + 120) = 408 m. Numa cerca fechada, nº de estacas = nº de espaços = 408 ÷ 12 = 34.`],
+    r:`34 estacas (espaçadas de 12 m)`}
+  ],
+  erros: [
+   `<b>Errado:</b> usar MMC num problema de "dividir em grupos iguais do maior tamanho". <b>Certo:</b> dividir/repartir é MDC; o MMC é para "encontrar de novo".`,
+   `<b>Errado:</b> parar no MDC quando a pergunta é "quantos pedaços". <b>Certo:</b> depois do MDC, divida cada quantidade por ele e some.`,
+   `<b>Errado:</b> "18 é par, então é divisível por 4". <b>Certo:</b> o teste do 4 olha os dois últimos algarismos: 18 não é múltiplo de 4 (mas 116 é, pois 16 é).`,
+   `<b>Errado:</b> "15 é divisível por 3, então é divisível por 6". <b>Certo:</b> para o 6, precisa ser par E divisível por 3.`,
+   `<b>Errado:</b> o 1 e o 9 são primos. <b>Certo:</b> o 1 tem só um divisor e 9 = 3 × 3. O menor primo é o 2.`
+  ],
+  resumo: [
+   `Fim: 2 → par · 5 → 0 ou 5 · 10 → 0 · 4 → dois últimos`,
+   `Soma dos algarismos: 3 e 9 · 6 = par + soma múltipla de 3`,
+   `Encontrar de novo → MMC · dividir sem sobra → MDC`,
+   `Varal: MMC = todos os primos · MDC = só os que dividiram todos`,
+   `Dois números: MMC × MDC = a × b`
+  ]
+ }
+};
+
+/* REVISÃO TURBINADA · Matemática · M2 (parte A)
+   m-eq1 · m-sist · m-prod
+   Contas conferidas por plus/check_pm2a.py */
+const PLUS_M2A = {
+
+/* ===================== m-eq1 · Equação do 1º grau e problemas ===================== */
+'m-eq1': {
+ base: [
+  [`Regra de sinais na soma e subtração`, `Sinais <b>iguais</b>: soma e repete o sinal. Sinais <b>diferentes</b>: subtrai e fica o sinal do “mais forte” (o de maior valor sem sinal). Pense em dinheiro: dívida + dívida = dívida maior.<br>−3 − 5 = <b>−8</b> · −7 + 10 = <b>3</b> · 4 − 9 = <b>−5</b>`],
+  [`Regra de sinais na multiplicação e divisão`, `Sinais iguais → <b>+</b>. Sinais diferentes → <b>−</b>.<br>(+)·(+) = + · (−)·(−) = + · (+)·(−) = − · (−)·(+) = −<br>(−3)·(−4) = <b>12</b> · (−2)·5 = <b>−10</b> · (−12) ÷ (−3) = <b>4</b>`],
+  [`O que é a solução (raiz) de uma equação`, `É o número que, colocado no lugar do x, deixa a igualdade <b>verdadeira</b>. Em 2x + 1 = 7, a solução é 3, porque 2·3 + 1 = 7. Se colocar 4: 2·4 + 1 = 9 ≠ 7, não serve.`],
+  [`“Passar para o outro lado” = operação inversa nos DOIS lados`, `Ninguém “passa” nada: você faz a operação contrária <b>dos dois lados</b> da balança, e por isso parece que o número pulou e trocou de operação. Inversas: + ↔ − e × ↔ ÷.<br>x + 5 = 12 → tiro 5 dos dois lados → x = <b>7</b>.<br>3x = 18 → divido os dois lados por 3 → x = <b>6</b>.`],
+  [`Distributiva: o número de fora multiplica TODOS de dentro`, `3(x − 4) = 3x − 12.<br>Com sinal de menos, o sinal entra junto: −2(x + 5) = −2x − 10 e −(x − 4) = −x + 4 (o menos na frente troca todos os sinais de dentro).`],
+  [`Juntar termos semelhantes`, `Só se juntam “iguais com iguais”: x com x, número com número. O x sozinho vale <b>1x</b>.<br>5x − 2x + x = <b>4x</b> · 7 + 3x − 2 = <b>3x + 5</b>`],
+  [`x com sinal de menos no final`, `Se chegar em −x = 6, multiplique os dois lados por −1: x = <b>−6</b>. Em −3x = 12, divida por −3: x = <b>−4</b> (sinais diferentes dão negativo).`],
+  [`Dicionário português → matemática`, `<table class="tb"><tr><td>o dobro / o triplo de um número</td><td>2x / 3x</td></tr><tr><td>a metade / a quarta parte</td><td>[[x|2]] / [[x|4]]</td></tr><tr><td>consecutivos</td><td>x, x + 1, x + 2</td></tr><tr><td>pares (ou ímpares) consecutivos</td><td>x, x + 2, x + 4</td></tr><tr><td>A excede B em 7</td><td>A = B + 7 (ou A − B = 7)</td></tr><tr><td>o triplo de um número, diminuído de 4</td><td>3x − 4</td></tr><tr><td>o triplo da diferença entre um número e 4</td><td>3(x − 4)</td></tr></table>`]
+ ],
+ jeitos: [
+  {n:`A balança`, c:`Imagine os dois lados numa balança em equilíbrio. Tudo o que você tirar, somar, multiplicar ou dividir de um lado, faz igual do outro. Primeiro some com o x de um lado, depois com o número.`,
+   ex:`5x − 3 = 2x + 12<br>Tiro 2x dos dois lados: 3x − 3 = 12.<br>Somo 3 dos dois lados: 3x = 15.<br>Divido os dois lados por 3: x = <b>5</b>.`},
+  {n:`Desfazer de trás para frente`, c:`Em “pensei num número…”, faça o caminho de volta, do fim para o começo, usando as operações inversas. Nem precisa montar equação.`,
+   ex:`“Pensei num número, multipliquei por 3, somei 7 e deu 34.”<br>Volta: 34 − 7 = 27 → 27 ÷ 3 = <b>9</b>. Confere: 9·3 + 7 = 34. ✔`},
+  {n:`Testar as alternativas`, c:`Na prova de múltipla escolha, você pode colocar cada alternativa no lugar do x e ver qual deixa os dois lados iguais. Comece pela do meio ou pela mais “redonda”.`,
+   ex:`2(x + 4) = 5x − 7, alternativas 3, 5 ou 7?<br>x = 3: 2·7 = 14 e 15 − 7 = 8 ✗<br>x = 5: 2·9 = 18 e 25 − 7 = 18 ✔ → <b>x = 5</b>.`},
+  {n:`Barra de pedaços (frações do todo)`, c:`Quando o problema fala em “gastei [[2|5]]” e “sobrou tanto”, desenhe uma barra dividida em partes iguais. Descubra quanto vale UMA parte e multiplique.`,
+   ex:`Gastei [[2|5]] da mesada e sobraram R$ 60.<br>Barra com 5 partes: gastei 2, sobraram 3 partes = 60.<br>1 parte = 60 ÷ 3 = 20 → mesada = 5 × 20 = <b>R$ 100</b>.`},
+  {n:`Consecutivos: ache o do meio`, c:`Numa quantidade ímpar de números consecutivos, a soma = quantidade × número do meio. Então divida a soma pela quantidade e já ache o meio.`,
+   ex:`3 consecutivos somam 57 → meio = 57 ÷ 3 = 19 → <b>18, 19 e 20</b>.<br>5 consecutivos somam 115 → meio = 115 ÷ 5 = 23 → <b>21, 22, 23, 24 e 25</b>.`},
+  {n:`Idades: a diferença nunca muda`, c:`O tempo passa igual para todo mundo, então a diferença de idade entre duas pessoas é sempre a mesma. Use isso para montar a equação com uma letra só.`,
+   ex:`Pai tem 40, filho tem 10 (diferença 30). Quando o pai terá o triplo da idade do filho?<br>Pai = 3F e Pai − F = 30 → 3F − F = 30 → 2F = 30 → F = 15.<br>O filho terá 15 anos, ou seja, daqui a <b>5 anos</b> (pai com 45 = 3 × 15 ✔).`}
+ ],
+ passo: [
+  `Leia e diga em voz baixa: “x é ___” (o que estou procurando).`,
+  `Traduza o texto com o dicionário (dobro, metade, excede, consecutivos) e monte a equação.`,
+  `Tire parênteses (distributiva, cuidado com o sinal) e frações (multiplique tudo pelo MMC).`,
+  `Balança: x para um lado, números para o outro, fazendo a operação inversa dos dois lados.`,
+  `Divida pelo número que acompanha o x.`,
+  `Confira colocando o valor no enunciado e responda o que foi PERGUNTADO.`
+ ],
+ exs: [
+  {q:`Resolva 7 − 2(x − 3) = x + 1.`,
+   s:[`Primeiro a distributiva com o −2: −2·x = −2x e −2·(−3) = +6. Fica 7 − 2x + 6 = x + 1.`,
+      `Junto os números: 13 − 2x = x + 1.`,
+      `Balança: somo 2x dos dois lados → 13 = 3x + 1. Tiro 1 dos dois lados → 12 = 3x.`,
+      `Divido por 3: x = 4. Confiro: 7 − 2·(4 − 3) = 5 e 4 + 1 = 5. ✔`],
+   r:`x = 4`},
+  {q:`Um número excede outro em 12 unidades, e a soma dos dois é 86. Qual é o maior número?`,
+   s:[`“Excede em 12” → o maior é o menor + 12. Chamo o menor de x e o maior de x + 12.`,
+      `Soma: x + x + 12 = 86 → 2x + 12 = 86.`,
+      `Tiro 12 dos dois lados: 2x = 74 → x = 37 (o menor).`,
+      `O maior é 37 + 12 = 49. Confiro: 37 + 49 = 86 ✔ e 49 − 37 = 12 ✔.`],
+   r:`49`},
+  {q:`Richard leu [[1|4]] de um livro no sábado e, no domingo, leu [[1|3]] do que restava. Ainda faltam 90 páginas. Quantas páginas tem o livro?`,
+   s:[`Uso a barra: divido o livro em 4 partes. No sábado leu 1 parte; restaram 3 partes.`,
+      `No domingo leu [[1|3]] dessas 3 partes = 1 parte. Faltam 2 partes.`,
+      `2 partes = 90 páginas → 1 parte = 45 → livro = 4 × 45 = 180.`,
+      `Com equação: x − [[x|4]] − [[x|4]] = 90 → [[x|2]] = 90 → x = 180. Confiro: 45 no sábado, 45 no domingo, faltam 90. ✔`],
+   r:`180 páginas`}
+ ],
+ erros: [
+  `<b>Errado:</b> −2(x − 3) = −2x − 6. <b>Certo:</b> −2·(−3) = +6, então −2x + 6. Menos com menos dá mais.`,
+  `<b>Errado:</b> 2x + 3 = 11 → 2x = 11 (o 3 “sumiu”). <b>Certo:</b> tirar 3 dos dois lados → 2x = 8 → x = 4.`,
+  `<b>Errado:</b> −x = 8 → x = 8. <b>Certo:</b> multiplicando por −1 dos dois lados, x = −8.`,
+  `<b>Errado:</b> “A excede B em 7” → B = A + 7. <b>Certo:</b> A é o maior, então A = B + 7.`,
+  `<b>Errado:</b> −5 − 3 = −2. <b>Certo:</b> sinais iguais somam e repetem o sinal: −8.`
+ ],
+ resumo: [
+  `Sinais: iguais → +, diferentes → − (na × e ÷).`,
+  `“Passar para o outro lado” = operação inversa dos DOIS lados.`,
+  `−(…) troca todos os sinais de dentro.`,
+  `Excede em 7 → A = B + 7 · consecutivos → x, x + 1, x + 2.`,
+  `Travou? Teste as alternativas ou desfaça de trás para frente.`,
+  `Sempre confira pondo o valor de volta.`
+ ]
+},
+
+/* ===================== m-sist · Sistemas de equações do 1º grau ===================== */
+'m-sist': {
+ base: [
+  [`O que é a solução de um sistema`, `É o <b>par</b> de valores (x, y) que funciona nas <b>duas</b> equações ao mesmo tempo.<br>x + y = 10 e x − y = 4: o par (7, 3) serve nas duas (7 + 3 = 10 e 7 − 3 = 4). O par (6, 4) serve só na primeira (6 − 4 = 2), então não é solução.`],
+  [`Por que precisa de duas equações`, `Com uma só, existem infinitas respostas: x + y = 10 aceita 1 e 9, 2 e 8, 3 e 7… A segunda equação “trava” e deixa só um par.`],
+  [`Somar duas equações`, `Soma esquerda com esquerda e direita com direita. Termos opostos (+y e −y) se anulam.<br>(x + y) + (x − y) = 10 + 4 → 2x = 14.`],
+  [`Subtrair duas equações (cuidado com o sinal)`, `Subtrair é trocar todos os sinais da equação de baixo e somar.<br>3x + 2y = 12 e x + 2y = 8 → (3x + 2y) − (x + 2y) = 12 − 8 → 2x = 4 → x = 2. Daí 2 + 2y = 8 → y = 3.`],
+  [`Pode multiplicar uma equação INTEIRA`, `Multiplicando todos os termos pelo mesmo número, a equação continua valendo (a balança continua equilibrada).<br>x + y = 5 vezes 2 → 2x + 2y = <b>10</b> (o 5 também dobra!).`],
+  [`Isolar uma letra`, `Deixe uma letra sozinha usando a operação inversa nos dois lados.<br>x + y = 20 → y = 20 − x.<br>2x − y = 1 → y = 2x − 1.`],
+  [`Substituir SEMPRE com parênteses`, `Ao trocar a letra pela expressão, coloque parênteses e faça a distributiva.<br>y = 20 − x em 3x + 2y: 3x + 2(20 − x) = 3x + 40 − 2x = x + 40.<br>Com menos na frente: x − (20 − x) = x − 20 + x = 2x − 20.`],
+  [`Montar as duas equações`, `Em problemas, quase sempre: uma equação para a <b>quantidade</b> (quantos objetos ao todo) e outra para o <b>valor</b> (reais, rodas, pontos, patas). “Juntos” → soma; “a diferença” → subtração.`]
+ ],
+ jeitos: [
+  {n:`Escolha do método em 3 segundos`, c:`Olhe o sistema antes de começar. Letra já sozinha (y = … ou x = …) → <b>substituição</b>. Mesmo número na frente da mesma letra: sinais opostos → <b>some</b>; sinais iguais → <b>subtraia</b>. Nenhum caso → multiplique uma equação para criar opostos e some.`,
+   ex:`y = 3x e x + y = 24 → substituição: x + 3x = 24 → x = 6, y = <b>18</b>.<br>2x + y = 13 e x − y = 2 → +y e −y: some → 3x = 15 → x = <b>5</b>, y = 3.<br>x + 3y = 11 e x + y = 5 → os dois têm +x: subtraia → 2y = 6 → y = <b>3</b>, x = 2.`},
+  {n:`Soma e diferença`, c:`Se você sabe a soma S e a diferença D de dois números: maior = [[S + D|2]] e menor = [[S − D|2]]. Resolve na hora, sem montar nada.`,
+   ex:`Soma 50, diferença 8 → maior = 58 ÷ 2 = <b>29</b>, menor = 42 ÷ 2 = <b>21</b>.<br>Dois irmãos somam 40 anos e um tem 6 a mais → <b>23</b> e <b>17</b>.`},
+  {n:`Suponha que todos são do mesmo tipo`, c:`Em problema de “quantidade e valor”, finja que todos são do tipo mais barato. Veja quanto faltou e divida pelo que cada troca acrescenta.`,
+   ex:`25 animais entre galinhas e coelhos, com 70 patas.<br>Se todos fossem galinhas: 25 × 2 = 50 patas. Faltam 70 − 50 = 20.<br>Cada galinha trocada por coelho dá +2 patas → 20 ÷ 2 = <b>10 coelhos</b> e 15 galinhas. Confere: 40 + 30 = 70. ✔`},
+  {n:`Olhe a pergunta antes: às vezes nem precisa de x e y`, c:`Se a pergunta é x + y (ou outra combinação), tente somar ou subtrair as equações inteiras. Quando os números aparecem “cruzados”, somar tudo dá a resposta direta.`,
+   ex:`2x + y = 17 e x + 2y = 16. Quanto vale x + y?<br>Somando tudo: 3x + 3y = 33 → x + y = <b>11</b>.<br>(Se quiser cada um: subtraindo, x − y = 1 → x = 6 e y = 5.)`},
+  {n:`Teste as alternativas nas DUAS equações`, c:`Se as alternativas dão o par (x, y), coloque cada par nas duas equações. Só vale se funcionar nas duas.`,
+   ex:`x + y = 14 e 3x − y = 10.<br>Par (7, 7): 7 + 7 = 14 ✔, mas 21 − 7 = 14 ✗.<br>Par (6, 8): 6 + 8 = 14 ✔ e 18 − 8 = 10 ✔ → <b>x = 6 e y = 8</b>.`}
+ ],
+ passo: [
+  `Dê nome às letras: “x = número de ___, y = número de ___”.`,
+  `Monte uma equação para a quantidade e outra para o valor (ou o que o texto der).`,
+  `Escolha o método: letra sozinha → substituição; letras que se cancelam → adição.`,
+  `Ache a primeira letra e volte numa equação para achar a segunda.`,
+  `Confira o par nas DUAS equações.`,
+  `Responda o que foi perguntado (x, y, a soma, o produto…).`
+ ],
+ exs: [
+  {q:`Numa sala há 32 alunos, e o número de meninas é o triplo do número de meninos. Quantas meninas há na sala?`,
+   s:[`Nomeio: a = meninos, m = meninas. Equações: a + m = 32 e m = 3a.`,
+      `O m já está sozinho → substituição: a + 3a = 32 → 4a = 32 → a = 8.`,
+      `Volto: m = 3 × 8 = 24. Confiro: 8 + 24 = 32 ✔ e 24 é o triplo de 8 ✔.`,
+      `A pergunta é meninas: 24 (e não 8!).`],
+   r:`24 meninas`},
+  {q:`Resolva o sistema 3x + 2y = 16 e 5x − 4y = 12.`,
+   s:[`Nenhuma letra sozinha. Olho o y: +2y e −4y. Se eu multiplicar a primeira por 2, vira +4y, oposto do −4y.`,
+      `Primeira × 2: 6x + 4y = 32 (o 16 também dobra!).`,
+      `Somo com a segunda: 6x + 5x + 4y − 4y = 32 + 12 → 11x = 44 → x = 4.`,
+      `Volto na primeira: 3·4 + 2y = 16 → 2y = 4 → y = 2. Confiro na segunda: 20 − 8 = 12 ✔.`],
+   r:`x = 4 e y = 2`},
+  {q:`Um cofrinho tem 40 moedas, umas de R$ 0,50 e outras de R$ 0,25, totalizando R$ 14,00. Quantas moedas de R$ 0,50 há?`,
+   s:[`Nomeio: c = moedas de 0,50 e v = moedas de 0,25. Quantidade: c + v = 40. Valor: 0,50c + 0,25v = 14.`,
+      `Para sumir com a vírgula, multiplico a de valor por 4: 2c + v = 56.`,
+      `Subtraio a de quantidade: (2c + v) − (c + v) = 56 − 40 → c = 16.`,
+      `Confiro pelo macete da suposição: se as 40 fossem de 0,25, daria R$ 10,00. Faltam R$ 4,00, e cada troca por 0,50 soma R$ 0,25 → 4 ÷ 0,25 = 16. ✔ (16 × 0,50 = 8 e 24 × 0,25 = 6; 8 + 6 = 14.)`],
+   r:`16 moedas de R$ 0,50`}
+ ],
+ erros: [
+  `<b>Errado:</b> (3x + 2y) − (x − 2y) = 2x. <b>Certo:</b> o menos troca os dois sinais: 3x + 2y − x + 2y = 2x + 4y.`,
+  `<b>Errado:</b> multiplicar x + y = 5 por 3 e escrever 3x + 3y = 5. <b>Certo:</b> todos os termos: 3x + 3y = 15.`,
+  `<b>Errado:</b> trocar y por 5 − x em 2x − y e escrever 2x − 5 − x. <b>Certo:</b> com parênteses: 2x − (5 − x) = 2x − 5 + x = 3x − 5.`,
+  `<b>Errado:</b> “30 veículos e 100 rodas” → c + m = 100. <b>Certo:</b> c + m = 30 (quantidade) e 4c + 2m = 100 (rodas).`
+ ],
+ resumo: [
+  `Solução = par que funciona nas DUAS equações.`,
+  `Letra sozinha → substituição · letras opostas → some.`,
+  `Multiplicou a equação? TODOS os termos, inclusive o resultado.`,
+  `Substituiu? Use parênteses.`,
+  `Soma S e diferença D → maior = (S + D) ÷ 2.`,
+  `Quantidade + valor · suponha todos iguais e corrija.`
+ ]
+},
+
+/* ===================== m-prod · Produtos notáveis e fatoração ===================== */
+'m-prod': {
+ base: [
+  [`Quadrado é vezes ele mesmo (não vezes 2)`, `a² = a · a. Então 5² = 25 (não 10).<br>(2x)² = 2x · 2x = <b>4x²</b>, mas 2x² = 2 · x · x (só o x está ao quadrado).<br>(−3)² = 9, mas −3² = −9 (o menos fica de fora).`],
+  [`Quadrados de 11 a 20 (decore!)`, `<table class="tb"><tr><td>11² = 121</td><td>12² = 144</td><td>13² = 169</td><td>14² = 196</td><td>15² = 225</td></tr><tr><td>16² = 256</td><td>17² = 289</td><td>18² = 324</td><td>19² = 361</td><td>20² = 400</td></tr></table>Eles ajudam a reconhecer quadrados perfeitos como 169 = 13² e 324 = 18².`],
+  [`Multiplicar termos com letra`, `Multiplique os números e junte as letras: x · x = x², 3x · 2x = <b>6x²</b>, 2 · x · 5 = <b>10x</b>.`],
+  [`Distributiva dupla (“chuveirinho”)`, `Cada termo do 1º parênteses multiplica cada termo do 2º.<br>(x + 2)(x + 3) = x² + 3x + 2x + 6 = <b>x² + 5x + 6</b>.<br>Os produtos notáveis são só “chuveirinhos” que aparecem tanto que viraram fórmula.`],
+  [`O quadradinho geométrico de (a + b)²`, `(a + b)² é a área de um quadrado de lado a + b. Corte em 4 pedaços:<table class="tb"><tr><td>a²</td><td>ab</td></tr><tr><td>ab</td><td>b²</td></tr></table>Somando: a² + ab + ab + b² = a² + <b>2ab</b> + b². Os dois retângulos ab são o “2ab” que todo mundo esquece!<br>Ex.: (x + 3)² = x² + 3x + 3x + 9 = x² + 6x + 9.`],
+  [`Fatorar = escrever como multiplicação`, `<b>Fator comum:</b> procure o maior número que divide todos e a letra que aparece em todos (com o menor expoente). Coloque “em evidência” e divida cada termo por ele.<br>4x² + 6x = <b>2x(2x + 3)</b>. Confira fazendo a distributiva de volta: 2x · 2x + 2x · 3 = 4x² + 6x ✔.`],
+  [`Reconhecer a diferença de quadrados`, `Dois quadrados separados por <b>menos</b>: vira (soma)·(diferença) das raízes.<br>x² − 81 = (x + 9)(x − 9) · 4x² − 1 = (2x + 1)(2x − 1).<br>Atenção: soma de quadrados (x² + 9) <b>não</b> fatora assim.`],
+  [`Reconhecer o trinômio quadrado perfeito`, `Três termos em que as pontas são quadrados e o meio é 2 × (raiz de uma ponta) × (raiz da outra).<br>x² − 10x + 25: pontas x² e 5², meio 2·x·5 = 10x ✔ → <b>(x − 5)²</b> (o sinal do meio vai para dentro).<br>x² + 5x + 9: o meio deveria ser 2·x·3 = 6x ✗ → não é quadrado perfeito.`]
+ ],
+ jeitos: [
+  {n:`Quadrado “perto da dezena redonda”`, c:`Quebre o número em dezena redonda ± um pedacinho e use (a + b)² ou (a − b)²: quadrado da dezena, 2 vezes a dezena pelo pedacinho, quadrado do pedacinho.`,
+   ex:`21² = (20 + 1)² = 400 + 40 + 1 = <b>441</b>.<br>19² = (20 − 1)² = 400 − 40 + 1 = <b>361</b>.<br>52² = (50 + 2)² = 2 500 + 200 + 4 = <b>2 704</b>.`},
+  {n:`Vizinhos do meio: (a − b)(a + b)`, c:`Se os dois números estão à mesma distância de um número redondo, o produto é (meio)² − (distância)².`,
+   ex:`49 × 51 = 50² − 1² = 2 500 − 1 = <b>2 499</b>.<br>47 × 53 = 50² − 3² = 2 500 − 9 = <b>2 491</b>.<br>18 × 22 = 20² − 2² = 400 − 4 = <b>396</b>.`},
+  {n:`Terminado em 5 ao quadrado`, c:`Pegue o que vem antes do 5, multiplique pelo seu sucessor e escreva 25 no final. (Vem de (10a + 5)² = 100a(a + 1) + 25.)`,
+   ex:`35²: 3 × 4 = 12 → <b>1 225</b>.<br>65²: 6 × 7 = 42 → <b>4 225</b>.<br>85²: 8 × 9 = 72 → <b>7 225</b>.`},
+  {n:`Diferença de quadrados ao contrário`, c:`Viu “número² − número²”? Não calcule os quadrados: faça (soma) × (diferença).`,
+   ex:`37² − 33² = (37 + 33)(37 − 33) = 70 × 4 = <b>280</b>.<br>55² − 45² = 100 × 10 = <b>1 000</b>.`},
+  {n:`Fator comum para fazer conta`, c:`Quando o mesmo número aparece multiplicando em duas parcelas, coloque-o em evidência e some o resto primeiro. Muitas vezes sai um número redondo.`,
+   ex:`17 × 23 + 17 × 77 = 17 × (23 + 77) = 17 × 100 = <b>1 700</b>.<br>9 × 48 − 9 × 38 = 9 × 10 = <b>90</b>.`},
+  {n:`Teste do meio (é quadrado perfeito?)`, c:`Tire a raiz das pontas e multiplique por 2. Se der o termo do meio, fatore direto como (raiz ± raiz)².`,
+   ex:`x² + 14x + 49: raízes x e 7 → 2·x·7 = 14x ✔ → <b>(x + 7)²</b>.<br>4x² − 12x + 9: raízes 2x e 3 → 2·2x·3 = 12x ✔ → <b>(2x − 3)²</b>.`},
+  {n:`Prova real com um número`, c:`Na dúvida se desenvolveu certo, troque x por 1 (ou 2) nos dois lados. Se der diferente, está errado. Se der igual, é bom sinal (para mais segurança, teste também outro valor).`,
+   ex:`(x + 3)² = x² + 9? Com x = 1: 4² = 16, mas 1 + 9 = 10 ✗.<br>(x + 3)² = x² + 6x + 9? Com x = 1: 16 e 1 + 6 + 9 = 16 ✔ → <b>esta é a certa</b>.`}
+ ],
+ passo: [
+  `Identifique o que pedem: desenvolver (abrir), fatorar (fechar) ou calcular/simplificar.`,
+  `Para fatorar, SEMPRE tente primeiro o fator comum.`,
+  `Depois veja: são 2 termos com menos? → diferença de quadrados. São 3 termos? → teste do meio.`,
+  `Em frações, fatore em cima e embaixo e corte só fatores (coisas multiplicando) iguais.`,
+  `Em contas grandes, procure (a ± b)², (a + b)(a − b) ou um fator comum escondido.`,
+  `Confira com a prova real (x = 1) ou fazendo a distributiva de volta.`
+ ],
+ exs: [
+  {q:`Fatore completamente 3x² − 12.`,
+   s:[`Primeiro o fator comum: 3 divide 3 e 12 → 3(x² − 4).`,
+      `Dentro sobraram dois quadrados com menos: x² − 2² → diferença de quadrados.`,
+      `Fica 3(x + 2)(x − 2).`,
+      `Prova real com x = 1: 3 − 12 = −9 e 3 · 3 · (−1) = −9 ✔.`],
+   r:`3(x + 2)(x − 2)`},
+  {q:`Sem calculadora, calcule 99² + 2 · 99 + 1.`,
+   s:[`Fazer 99² na mão dá trabalho. Olho o formato: a² + 2·a·1 + 1², com a = 99.`,
+      `É um trinômio quadrado perfeito: (99 + 1)².`,
+      `(99 + 1)² = 100² = 10 000.`],
+   r:`10 000`},
+  {q:`Calcule 2 024² − 2 023 × 2 025.`,
+   s:[`Não vou fazer essas contas enormes! Percebo que 2 023 e 2 025 são vizinhos do 2 024 (um a menos e um a mais).`,
+      `Uso (a − 1)(a + 1) = a² − 1 com a = 2 024: 2 023 × 2 025 = 2 024² − 1.`,
+      `Então: 2 024² − (2 024² − 1) = 2 024² − 2 024² + 1 = 1 (o menos troca o sinal do −1).`],
+   r:`1`}
+ ],
+ erros: [
+  `<b>Errado:</b> (x − 3)² = x² − 9. <b>Certo:</b> x² − 6x + 9 (faltou o 2ab, e o 9 é positivo).`,
+  `<b>Errado:</b> (3x)² = 3x². <b>Certo:</b> o 3 também vai ao quadrado: 9x².`,
+  `<b>Errado:</b> (x + 5)² = x² + 5x + 25. <b>Certo:</b> o meio é 2·x·5 = 10x → x² + 10x + 25.`,
+  `<b>Errado:</b> 6x² + 9x = 3(2x² + 3x) como resposta final. <b>Certo:</b> o x também é comum: 3x(2x + 3).`,
+  `<b>Errado:</b> x² + 16 = (x + 4)(x − 4). <b>Certo:</b> (x + 4)(x − 4) = x² − 16; soma de quadrados não vira esse produto.`
+ ],
+ resumo: [
+  `(a ± b)² = a² ± 2ab + b² → não esqueça o 2ab (os 2 retângulos do quadradinho).`,
+  `(a + b)(a − b) = a² − b² → 49 × 51 = 2 500 − 1 = 2 499.`,
+  `21² = 400 + 40 + 1 = 441 · 35² = 3 × 4 e 25 → 1 225.`,
+  `Fatorar: 1º fator comum, depois diferença de quadrados ou teste do meio.`,
+  `Dúvida? Prova real com x = 1.`
+ ]
+}
+
+};
+
+/* REVISÃO TURBINADA · M2 (parte B): m-eq2 · m-prop · m-func · m-seq
+   Contas conferidas em plus/check_pm2b.py */
+const PLUS_M2B = {
+
+/* ===================== m-eq2 · Equação do 2º grau ===================== */
+'m-eq2': {
+ base: [
+  [`Raiz = o número que "zera" a equação`, `Raiz (ou solução) é o valor que, colocado no lugar do x, deixa o lado esquerdo igual a 0. Teste em x<sup>2</sup> − 4x + 3 = 0:<br>x = 1 → 1 − 4 + 3 = <b>0</b> ✔ (é raiz).<br>x = 2 → 4 − 8 + 3 = −1 ✘ (não é raiz).`],
+  [`Primeiro: tudo de um lado, 0 do outro`, `Só dá para ler a, b e c com a equação na forma ax<sup>2</sup> + bx + c = 0. Se vier x<sup>2</sup> = 3x + 10, passe os termos para a esquerda trocando o sinal: x<sup>2</sup> − 3x − 10 = 0.`],
+  [`a, b e c levam o sinal junto`, `<b>a</b> é o número do x<sup>2</sup>, <b>b</b> é o número do x e <b>c</b> é o número sozinho — <b>com o sinal que está na frente</b>.<br>2x<sup>2</sup> − 7x − 4 = 0 → a = 2, <b>b = −7</b>, <b>c = −4</b>.<br>−x<sup>2</sup> + 6x = 0 → a = −1, b = 6, c = 0.<br>x<sup>2</sup> sozinho tem a = 1 (o 1 fica "escondido").`],
+  [`Termo faltando vale ZERO`, `Se não aparece termo com x, então b = 0. Se não aparece número sozinho, c = 0.<br>x<sup>2</sup> − 25 = 0 → a = 1, <b>b = 0</b>, c = −25.<br>3x<sup>2</sup> + 12x = 0 → a = 3, b = 12, <b>c = 0</b>.<br>Essas são as <b>incompletas</b>: resolvem-se sem Bhaskara.`],
+  [`Sinais dentro do Δ`, `Δ = b<sup>2</sup> − 4·a·c.<br>• <b>b<sup>2</sup> nunca é negativo</b>: (−7)<sup>2</sup> = (−7)·(−7) = +49.<br>• No −4ac, conte os sinais: se a e c têm sinais <b>diferentes</b>, o −4ac vira <b>soma</b>.<br>Em 2x<sup>2</sup> − 7x − 4 = 0: Δ = 49 − 4·2·(−4) = 49 + 32 = <b>81</b>.`],
+  [`Quadrados perfeitos (para tirar √{Δ} de cabeça)`, `<table class="tb"><tr><td>1<sup>2</sup>=1</td><td>2<sup>2</sup>=4</td><td>3<sup>2</sup>=9</td><td>4<sup>2</sup>=16</td><td>5<sup>2</sup>=25</td></tr><tr><td>6<sup>2</sup>=36</td><td>7<sup>2</sup>=49</td><td>8<sup>2</sup>=64</td><td>9<sup>2</sup>=81</td><td>10<sup>2</sup>=100</td></tr><tr><td>11<sup>2</sup>=121</td><td>12<sup>2</sup>=144</td><td>13<sup>2</sup>=169</td><td>14<sup>2</sup>=196</td><td>15<sup>2</sup>=225</td></tr><tr><td>16<sup>2</sup>=256</td><td>17<sup>2</sup>=289</td><td>18<sup>2</sup>=324</td><td>19<sup>2</sup>=361</td><td>20<sup>2</sup>=400</td></tr></table>Dica: quadrado de número terminado em 5 → multiplique o que vem antes do 5 pelo seu sucessor e ponha 25 no fim: 15<sup>2</sup> → 1 × 2 = 2 → <b>225</b>.`],
+  [`O que o Δ "conta" para você`, `O Δ é o detetive: ele diz <b>quantas</b> raízes existem antes de você calcular.<br>• Δ é quadrado perfeito (1, 4, 9, 16…) → raízes "redondinhas" (inteiras ou frações).<br>• Δ positivo mas não quadrado perfeito → raízes com raiz quadrada: x<sup>2</sup> − 2x − 1 = 0 tem Δ = 4 + 4 = 8 e x = 1 ± √{2}.<br>• Δ negativo → pare: não existe raiz real.`],
+  [`Produto zero: o segredo das incompletas`, `Se A × B = 0, então <b>A = 0 ou B = 0</b> (não tem outro jeito de um produto dar zero).<br>x(x − 6) = 0 → x = 0 ou x − 6 = 0 → x = 6.`],
+  [`Por que aparecem DUAS raízes`, `Número positivo e negativo têm o mesmo quadrado: 7<sup>2</sup> = 49 e (−7)<sup>2</sup> = 49. Por isso x<sup>2</sup> = 49 dá x = <b>±7</b>. Em Bhaskara, o ± faz isso: uma conta com <b>+</b>, outra com <b>−</b>.`]
+ ],
+ jeitos: [
+  {n:`Soma e produto de cabeça`, c:`Com a = 1, as raízes são dois números que <b>somam −b</b> e <b>multiplicam c</b>. Comece pelo produto: liste os pares que dão c e veja qual par dá a soma.`,
+   ex:`x<sup>2</sup> − 9x + 20 = 0 → soma 9, produto 20 → pares de 20: 1·20, 2·10, <b>4·5</b> → 4 + 5 = 9 → raízes <b>4 e 5</b>.`},
+  {n:`O sinal do produto entrega os sinais`, c:`P positivo → as duas raízes têm o <b>mesmo sinal</b> (o sinal da soma). P negativo → sinais <b>opostos</b>, e a maior (sem sinal) fica com o sinal da soma.`,
+   ex:`x<sup>2</sup> + 8x + 15 = 0 → S = −8, P = 15 (positivo) → as duas negativas: <b>−3 e −5</b>.<br>x<sup>2</sup> − 4x − 21 = 0 → S = 4, P = −21 (negativo) → 7 e 3 com sinais opostos, o 7 positivo: <b>7 e −3</b>.`},
+  {n:`Divida tudo antes de começar`, c:`Se a, b e c têm um divisor comum, divida a equação inteira por ele. As raízes não mudam e os números ficam pequenos.`,
+   ex:`3x<sup>2</sup> − 24x + 36 = 0 → ÷3 → x<sup>2</sup> − 8x + 12 = 0 → soma 8, produto 12 → <b>2 e 6</b>.`},
+  {n:`Incompleta? Sem Bhaskara!`, c:`Sem c: x em evidência (uma raiz é sempre 0). Sem b: isole o x<sup>2</sup> e tire a raiz com ±. Se o x<sup>2</sup> der negativo, não há raiz real.`,
+   ex:`5x<sup>2</sup> − 20x = 0 → 5x(x − 4) = 0 → <b>0 e 4</b>.<br>2x<sup>2</sup> − 50 = 0 → x<sup>2</sup> = 25 → <b>5 e −5</b>.<br>x<sup>2</sup> + 9 = 0 → x<sup>2</sup> = −9 → <b>sem raiz real</b>.`},
+  {n:`Teste as alternativas`, c:`Na prova as respostas estão ali! Coloque cada alternativa no lugar do x: a que der 0 é raiz. Muitas vezes é mais rápido que resolver.`,
+   ex:`"Uma raiz de x<sup>2</sup> − 3x − 28 = 0 é: 4, −7 ou 7?" → x = 4: 16 − 12 − 28 = −24 ✘. x = −7: 49 + 21 − 28 = 42 ✘. x = 7: 49 − 21 − 28 = 0 ✔ → <b>7</b>.`},
+  {n:`Achou uma raiz? A outra sai da soma`, c:`Descobriu uma raiz testando? A outra é S menos ela, com S = [[−b|a]]. Confira com o produto P = [[c|a]].`,
+   ex:`2x<sup>2</sup> − 3x − 2 = 0 → teste x = 2: 8 − 6 − 2 = 0 ✔. S = [[3|2]] → outra = [[3|2]] − 2 = <b>−[[1|2]]</b>. Confere: 2 × (−[[1|2]]) = −1 = [[c|a]] = [[−2|2]] ✔.`},
+  {n:`Só quer saber QUANTAS raízes? Pare no Δ`, c:`Se a pergunta é "tem raiz real?", "quantas raízes?" ou "raízes iguais?", calcule só o Δ e responda.`,
+   ex:`x<sup>2</sup> + 10x + 25 = 0 → Δ = 100 − 100 = 0 → <b>uma raiz só (dupla)</b>: x = [[−10|2]] = −5.<br>x<sup>2</sup> − x + 3 = 0 → Δ = 1 − 12 = −11 → <b>nenhuma raiz real</b>.`}
+ ],
+ passo: [
+  `Arrume: tudo de um lado, = 0 do outro.`,
+  `Escreva a, b e c <b>com sinal</b> (termo faltando = 0). Dá para dividir tudo por algum número? Divida.`,
+  `Incompleta (b = 0 ou c = 0)? Use evidência ou isole o x<sup>2</sup>.`,
+  `Completa com a = 1? Tente soma e produto. Não saiu? Δ = b<sup>2</sup> − 4ac e depois x = [[−b ± √{Δ}|2a]].`,
+  `Confira uma raiz na equação e, se for problema de medida/idade/quantidade, descarte a negativa.`
+ ],
+ exs: [
+  {q:`Resolva 7x<sup>2</sup> + 21x = 0.`, s:[`Primeiro eu vejo: não tem número sozinho → c = 0, é incompleta. Nada de Bhaskara.`,`Coloco 7x em evidência: 7x(x + 3) = 0.`,`Produto zero: 7x = 0 → x = 0; ou x + 3 = 0 → x = −3.`], r:`S = {0, −3}`},
+  {q:`Resolva 2x<sup>2</sup> − 5x − 3 = 0.`, s:[`a = 2, b = −5, c = −3. Como a ≠ 1, vou de Bhaskara.`,`Δ = (−5)<sup>2</sup> − 4·2·(−3) = 25 + 24 = 49 → √{49} = 7.`,`−b = +5. x = [[5 ± 7|4]] → [[12|4]] = 3 ou [[−2|4]] = −[[1|2]].`,`Confiro com a soma: 3 + (−[[1|2]]) = [[5|2]] = [[−b|a]] ✔.`], r:`S = {3, −[[1|2]]}`},
+  {q:`O produto de dois números inteiros positivos e consecutivos é 132. Qual é a soma deles?`, s:[`Chamo os números de x e x + 1: x(x + 1) = 132 → x<sup>2</sup> + x − 132 = 0.`,`Macete: consecutivos multiplicando 132 ficam perto de √{132}, que está entre 11 e 12. Testo 11 × 12 = 132 ✔.`,`(Pela soma e produto: raízes 11 e −12; como são positivos, x = 11.)`,`Números 11 e 12 → soma 23.`], r:`23`}
+ ],
+ erros: [
+  `<b>Errado:</b> em x<sup>2</sup> − 5x + 4 = 0, fazer b<sup>2</sup> = −25. <b>Certo:</b> b<sup>2</sup> = (−5)<sup>2</sup> = +25 → Δ = 25 − 16 = 9.`,
+  `<b>Errado:</b> com b = −8, escrever −b = −8. <b>Certo:</b> −b = −(−8) = <b>+8</b>.`,
+  `<b>Errado:</b> dividir só a raiz por 2a: [[6 ± 2|2]] = 6 ± 1. <b>Certo:</b> o traço da fração divide TUDO: [[6 + 2|2]] = 4 e [[6 − 2|2]] = 2.`,
+  `<b>Errado:</b> em x<sup>2</sup> = 5x, "cortar" o x e achar só x = 5. <b>Certo:</b> x<sup>2</sup> − 5x = 0 → x(x − 5) = 0 → x = 0 <b>ou</b> x = 5. Dividir por x apaga a raiz 0.`,
+  `<b>Errado:</b> x<sup>2</sup> = 36 → x = 6 e pronto. <b>Certo:</b> x = 6 ou x = −6 (só descarte o −6 se o problema for de medida).`
+ ],
+ resumo: [
+  `Raiz = número que zera a equação.`,
+  `a, b, c com sinal; termo faltando = 0.`,
+  `Incompleta → evidência ou isola x<sup>2</sup> (±).`,
+  `Δ = b<sup>2</sup> − 4ac: + duas · 0 uma · − nenhuma.`,
+  `x = [[−b ± √{Δ}|2a]] · S = [[−b|a]] · P = [[c|a]].`,
+  `Na dúvida: teste as alternativas.`
+ ]
+},
+
+/* ===================== m-prop · Razão, proporção, regra de três, escalas ===================== */
+'m-prop': {
+ base: [
+  [`Razão = comparação por divisão (a ordem importa)`, `"Para cada 3 meninas há 2 meninos" → razão meninas para meninos = [[3|2]]. Já a razão meninos para meninas é [[2|3]]. Trocou a ordem, trocou a razão!`],
+  [`Parte × todo`, `Com 3 meninas para 2 meninos, cada "grupinho" tem 3 + 2 = 5 alunos. Então as meninas são [[3|5]] da turma (e não [[3|2]]). Numa turma de 30: [[3|5]] de 30 = <b>18 meninas</b>.`],
+  [`Proporção e produto cruzado`, `Proporção é igualdade de razões. Para achar o termo que falta, multiplique em "X":<br>[[3|4]] = [[x|20]] → 4·x = 3·20 → 4x = 60 → x = <b>15</b>.`],
+  [`Diretamente proporcional: andam juntas`, `Se uma é multiplicada por 2, 3, 10…, a outra também. A <b>divisão</b> entre elas é sempre a mesma.<br>2 kg custam R$ 14 → cada kg R$ 7 → 5 kg custam R$ 35. ([[14|2]] = [[35|5]] = 7.)`],
+  [`Inversamente proporcional: uma sobe, a outra desce`, `Se uma dobra, a outra cai pela metade. O <b>produto</b> entre elas é sempre o mesmo.<br>A 60 km/h, uma viagem leva 3 h; a 90 km/h leva 2 h. (60 × 3 = 90 × 2 = 180, a distância.)`],
+  [`Escala: corte os zeros do centímetro`, `1 m = 100 cm e 1 km = 100 000 cm (5 zeros).<br>Escala <b>1 : 100 000</b> → 1 cm no mapa = 100 000 cm = <b>1 km</b>.<br>1 : 25 000 → 1 cm = 25 000 cm = 250 m.<br>1 : 50 (planta) → 1 cm = 50 cm = 0,5 m.`],
+  [`Velocidade média e as horas "quebradas"`, `v = [[distância|tempo]], d = v × t e t = [[d|v]].<br>Minutos em horas: divida por 60. 15 min = 0,25 h · 30 min = 0,5 h · 45 min = 0,75 h · 12 min = 0,2 h · 20 min = [[1|3]] h.`],
+  [`Divisão proporcional: cada parte vale quanto?`, `Some as partes, divida o total por essa soma e multiplique.<br><b>Inversamente</b> proporcional a 3 e 6 → use [[1|3]] e [[1|6]]; multiplicando ambos por 6 ficam 2 e 1 → o que tem MENOS recebe MAIS.`]
+ ],
+ jeitos: [
+  {n:`"Mais → mais?" e as setas`, c:`Monte duas colunas e ponha uma seta na coluna do x. Pergunte: "se esta aumenta, a outra aumenta?". Sim → seta no mesmo sentido (direta, multiplica cruzado). Não → seta invertida (inversa, multiplica em linha).`,
+   ex:`5 kg custam R$ 40; 8 kg? Mais kg → mais R$ → direta: 5x = 8 × 40 = 320 → x = <b>R$ 64</b>.<br>8 máquinas levam 12 h; e 6 máquinas? Menos máquinas → mais horas → inversa: 8 × 12 = 6 × x → 96 = 6x → x = <b>16 h</b>.`},
+  {n:`Passa pelo 1 (redução à unidade)`, c:`Descubra quanto vale para 1 e depois multiplique. Funciona até em inversa: "1 pintor sozinho leva quanto?"`,
+   ex:`7 canetas custam R$ 21 → 1 caneta = R$ 3 → 10 canetas = <b>R$ 30</b>.<br>4 pintores levam 9 dias → 1 pintor levaria 36 dias → 6 pintores levam 36 ÷ 6 = <b>6 dias</b>.`},
+  {n:`Ache o fator e aplique`, c:`Veja quantas vezes um número "virou" o outro (×1,5, ×3, ÷2…) e faça o mesmo do outro lado (na direta) ou o contrário (na inversa).`,
+   ex:`12 litros → 300 km. Com 18 litros? 18 = 12 × 1,5 → 300 × 1,5 = <b>450 km</b>.`},
+  {n:`Escala em km: corte 5 zeros`, c:`Na escala 1 : N, corte 5 zeros de N e você tem quantos km vale 1 cm.`,
+   ex:`1 : 250 000 → 1 cm = 2,5 km → 6 cm = 6 × 2,5 = <b>15 km</b>.<br>1 : 2 000 000 → 1 cm = 20 km.`},
+  {n:`Composta: tudo comparado com a coluna do x`, c:`Na regra de três composta, compare <b>cada</b> grandeza só com a do x (as outras ficam "paradas"). Direta: multiplique pela fração "nova/antiga"; inversa: pela "antiga/nova". Outro jeito: calcule o trabalho de 1 pessoa em 1 dia.`,
+   ex:`4 costureiras fazem 120 camisas em 6 dias. Em quantos dias 6 costureiras fazem 180 camisas?<br>Mais camisas → mais dias (direta: × [[180|120]]). Mais costureiras → menos dias (inversa: × [[4|6]]).<br>x = 6 × [[180|120]] × [[4|6]] = 6 × 1,5 × [[2|3]] = <b>6 dias</b>.<br>Conferindo pela unidade: 120 ÷ (4 × 6) = 5 camisas por costureira por dia → 180 ÷ (6 × 5) = 6 ✔.`},
+  {n:`Velocidade "por minuto"`, c:`Se o tempo está em minutos, ache quanto anda por minuto e multiplique por 60.`,
+   ex:`72 km em 1h12 (72 min) → 1 km por minuto → 60 km por hora = <b>60 km/h</b>.<br>(Ou: 1h12 = 1,2 h → 72 ÷ 1,2 = 60.)`}
+ ],
+ passo: [
+  `Identifique as grandezas e organize em colunas, com as <b>mesmas unidades</b> (h com h, cm com cm).`,
+  `Para cada grandeza, pergunte "mais → mais?": direta ou inversa.`,
+  `Direta: multiplica cruzado. Inversa: multiplica em linha (o produto é constante).`,
+  `Escala ou velocidade? Use a fórmula ([[desenho|real]], [[d|t]]) e converta as unidades no fim.`,
+  `Confira o bom senso: mais trabalhadores devem dar MENOS dias; mais produtos, MAIS dinheiro.`
+ ],
+ exs: [
+  {q:`Num mapa de escala 1 : 300 000, duas cidades estão a 4,5 cm uma da outra. Qual a distância real?`, s:[`Uso o macete de cortar 5 zeros: 300 000 cm = 3 km. Então 1 cm do mapa vale 3 km.`,`4,5 cm → 4,5 × 3 = 13,5 km.`], r:`13,5 km`},
+  {q:`De bicicleta, a 18 km/h, Lucas vai à escola em 40 minutos. Se fosse a pé, a 6 km/h, quanto tempo levaria?`, s:[`Mais velocidade → menos tempo: inversa (o produto é a distância, que não muda).`,`18 × 40 = 6 × x → 720 = 6x → x = 120 min.`,`Conferindo: a velocidade caiu para [[1|3]] (18 ÷ 3 = 6), então o tempo triplica: 40 × 3 = 120 min = 2 h.`], r:`2 horas`},
+  {q:`8 jardineiros aparam 2 400 m<sup>2</sup> de gramado em 3 horas. Quantos jardineiros são necessários para aparar 3 600 m<sup>2</sup> em 2 horas, no mesmo ritmo?`, s:[`Passo pelo 1: cada jardineiro apara 2 400 ÷ (8 × 3) = 100 m<sup>2</sup> por hora.`,`Em 2 horas, cada um apara 200 m<sup>2</sup>. Para 3 600 m<sup>2</sup>: 3 600 ÷ 200 = 18.`,`Conferindo pelas setas: mais área → mais jardineiros (× [[3600|2400]] = × 1,5); menos horas → mais jardineiros (× [[3|2]] = × 1,5). 8 × 1,5 × 1,5 = 18 ✔.`], r:`18 jardineiros`}
+ ],
+ erros: [
+  `<b>Errado:</b> 3 pintores levam 12 dias, então 6 pintores levam 24 dias. <b>Certo:</b> mais pintores → menos dias (inversa): 3 × 12 = 6 × x → <b>6 dias</b>.`,
+  `<b>Errado:</b> 1h20 = 1,2 h. <b>Certo:</b> 20 min = [[20|60]] = [[1|3]] h, então 1h20 = 1 + [[1|3]] = [[4|3]] h. (1,2 h é 1h12!)`,
+  `<b>Errado:</b> 3 meninas para 2 meninos → meninas são [[3|2]] da turma. <b>Certo:</b> parte sobre o todo: [[3|3 + 2]] = [[3|5]].`,
+  `<b>Errado:</b> ida a 60 km/h e volta a 40 km/h → média 50 km/h. <b>Certo:</b> use distância total ÷ tempo total. Se cada trecho tem 120 km: 2 h + 3 h = 5 h; 240 ÷ 5 = <b>48 km/h</b>.`,
+  `<b>Errado:</b> escala 1 : 50 000 e 2 cm → "100 000 km". <b>Certo:</b> 2 × 50 000 = 100 000 <b>cm</b> = 1 km. Sempre veja a unidade!`
+ ],
+ resumo: [
+  `Razão = divisão (ordem importa); proporção = razões iguais → produto cruzado.`,
+  `"Mais → mais?" Sim: direta (cruzado). Não: inversa (em linha).`,
+  `Escala 1 : 100 000 → 1 cm = 1 km (corte 5 zeros).`,
+  `v = [[d|t]]; minutos ÷ 60 (1h30 = 1,5 h; 1h20 = [[4|3]] h).`,
+  `Composta: compare cada grandeza com a do x.`,
+  `Divisão proporcional: total ÷ soma das partes.`
+ ]
+},
+
+/* ===================== m-func · Funções e valor numérico ===================== */
+'m-func': {
+ base: [
+  [`Função = máquina de entrada e saída`, `Você coloca um x, a regra trabalha e sai um único y. Em f(x) = 2x + 1, colocando 4 sai 2 × 4 + 1 = 9. Escrevemos <b>f(4) = 9</b> (lê-se "f de 4 é 9").`],
+  [`f(número) = troque x pelo número`, `f(5) NÃO é "f vezes 5". É "o valor da função quando x = 5". Em f(x) = x<sup>2</sup> − 2x: f(5) = 25 − 10 = <b>15</b>.`],
+  [`Sempre entre parênteses`, `Ao trocar x por um número, coloque-o entre parênteses — principalmente se for negativo.<br>f(x) = x<sup>2</sup> − 2x, f(−3) = (−3)<sup>2</sup> − 2·(−3) = 9 + 6 = <b>15</b>.`],
+  [`Potência de negativo`, `(−2)<sup>2</sup> = (−2)·(−2) = <b>4</b>, mas −2<sup>2</sup> = −(2·2) = <b>−4</b>. E (−2)<sup>3</sup> = −8 (expoente ímpar mantém o sinal).`],
+  [`Quem é o a e quem é o b`, `Em f(x) = ax + b, <b>a é o número que multiplica o x</b> e <b>b é o número sozinho</b> — não importa a ordem em que aparecem.<br>f(x) = 7 − 3x → a = −3 e b = 7.`],
+  [`a = taxa de variação ("quanto cresce por unidade")`, `É quanto o y muda quando x aumenta 1. Sempre tem cara de "por": reais <b>por</b> km, litros <b>por</b> minuto.<br>Eletricista: R$ 45 <b>por</b> hora → a = 45.`],
+  [`b = valor inicial ("quando x = 0")`, `É o y quando x = 0: f(0) = b. É o valor fixo, a taxa, a bandeirada; no gráfico, é onde a reta corta o eixo y.<br>f(x) = 45x + 70 → f(0) = 70.`],
+  [`Crescente, decrescente, constante`, `a &gt; 0 → sobe (f(x) = 2x + 1). a &lt; 0 → desce (vela queimando, caixa esvaziando). a = 0 → reta horizontal, y sempre igual (f(x) = 5).`],
+  [`Dado o y, achar o x`, `Se a questão dá o resultado e pergunta o x, iguale e resolva a equação.<br>f(x) = 3x − 4 e f(x) = 20 → 3x − 4 = 20 → 3x = 24 → x = <b>8</b>. Se y = 0, o x achado é o <b>zero da função</b> (onde a reta corta o eixo x).`]
+ ],
+ jeitos: [
+  {n:`Parênteses salva-vidas`, c:`Antes de calcular, reescreva a expressão trocando cada x por "( )" e só depois coloque o número dentro. Faça primeiro a potência, depois as multiplicações, por último somas e subtrações.`,
+   ex:`f(x) = 3x<sup>2</sup> − x, f(−1) → 3·( )<sup>2</sup> − ( ) → 3·(−1)<sup>2</sup> − (−1) = 3·1 + 1 = <b>4</b>.`},
+  {n:`a = quanto y andou ÷ quanto x andou`, c:`Se os x da tabela pulam de 1 em 1, o a é a diferença dos y. Se pulam mais, divida a variação de y pela variação de x.`,
+   ex:`Tabela: x = 2 → y = 11; x = 5 → y = 20. a = [[20 − 11|5 − 2]] = [[9|3]] = 3. Depois o b: 11 = 3·2 + b → b = 5. Lei: <b>f(x) = 3x + 5</b>.`},
+  {n:`Volte até o x = 0`, c:`Numa tabela que pula de 1 em 1, "ande para trás" até x = 0: o y que aparece ali é o b.`,
+   ex:`x = 1, 2, 3 e y = 6, 10, 14 → sobe 4 (a = 4). Voltando para x = 0: 6 − 4 = 2 (b = 2). Lei: <b>y = 4x + 2</b>.`},
+  {n:`Traduza o texto: "fixo" = b, "por" = a`, c:`Em problemas, procure as palavras: fixo, taxa, inicial, bandeirada → b. Por hora, por km, a cada → a.`,
+   ex:`Eletricista: R$ 70 de visita + R$ 45 por hora → f(x) = 45x + 70.<br>3 horas → 45 × 3 + 70 = 135 + 70 = <b>R$ 205</b>.`},
+  {n:`Teste a lei em dois pontos`, c:`Para escolher entre alternativas, teste a lei em dois pontos da tabela (o x = 0 é o mais rápido). A que acertar os dois é a certa.`,
+   ex:`Pontos (0, −2) e (3, 4). y = x + 1? Em x = 0 dá 1 ✘. y = 2x − 2? Em x = 0 dá −2 ✔; em x = 3 dá 4 ✔ → <b>y = 2x − 2</b>.`},
+  {n:`Quando dois planos empatam? Iguale`, c:`Para comparar dois preços, iguale as funções: o x encontrado é o ponto de empate. De um lado dele um plano é melhor; do outro, o outro.`,
+   ex:`Plano A: 20 + 2x. Plano B: 50 + 0,5x. 20 + 2x = 50 + 0,5x → 1,5x = 30 → x = <b>20</b>. Abaixo de 20 unidades, A é mais barato.`}
+ ],
+ passo: [
+  `Descubra quem é o x (o que você escolhe: km, horas, meses) e quem é o y (o que resulta: preço, volume).`,
+  `Pediu f(número)? Substitua com parênteses e faça as contas na ordem certa.`,
+  `Precisa montar a lei? b = valor fixo/inicial (x = 0); a = quanto muda por unidade.`,
+  `Deu o y e pediu o x? Iguale e resolva a equação.`,
+  `Confira a lei com um ponto do enunciado ou da tabela.`
+ ],
+ exs: [
+  {q:`Dada f(x) = −2x<sup>2</sup> + 5x − 1, calcule f(−1).`, s:[`Primeiro eu troco cada x por parênteses: −2·(−1)<sup>2</sup> + 5·(−1) − 1.`,`Potência primeiro: (−1)<sup>2</sup> = 1 → −2·1 = −2.`,`Depois: 5·(−1) = −5. Soma: −2 − 5 − 1 = −8.`], r:`f(−1) = −8`},
+  {q:`Uma piscina inflável está sendo enchida. A tabela mostra o volume V (litros) no tempo t (minutos): t = 0, 5, 10, 15 → V = 20, 35, 50, 65. Em quanto tempo ela terá 80 litros?`, s:[`Valor inicial: em t = 0 já há 20 L → b = 20.`,`A cada 5 min entram 15 L → a = [[15|5]] = 3 L por minuto.`,`Lei: V = 3t + 20. Confiro: t = 10 → 30 + 20 = 50 ✔.`,`80 = 3t + 20 → 3t = 60 → t = 20.`], r:`20 minutos`},
+  {q:`Locadora A: R$ 100 fixos + R$ 0,80 por km. Locadora B: R$ 40 fixos + R$ 1,20 por km. A partir de quantos km a locadora A fica mais barata?`, s:[`Monto as leis: A(x) = 0,8x + 100 e B(x) = 1,2x + 40.`,`Igualo para achar o empate: 0,8x + 100 = 1,2x + 40 → 60 = 0,4x → x = 150 km.`,`Testo um ponto depois: 200 km → A = 160 + 100 = 260; B = 240 + 40 = 280. A é mais barata ✔.`], r:`Acima de 150 km`}
+ ],
+ erros: [
+  `<b>Errado:</b> para x = −3, x<sup>2</sup> = −9. <b>Certo:</b> (−3)<sup>2</sup> = +9. Use parênteses sempre.`,
+  `<b>Errado:</b> em f(x) = 5 + 2x, achar que a = 5 só porque vem primeiro. <b>Certo:</b> a é quem multiplica o x → a = 2, b = 5.`,
+  `<b>Errado:</b> tabela x = 0, 2, 4 e y = 1, 7, 13 → a = 6. <b>Certo:</b> y subiu 6 enquanto x subiu 2 → a = [[6|2]] = 3. Lei: y = 3x + 1.`,
+  `<b>Errado:</b> f(2) = 2·f. <b>Certo:</b> f(2) é o valor da função com x = 2 (troque o x por 2).`,
+  `<b>Errado:</b> se 10 km custam R$ 30 num táxi com bandeirada, 20 km custam R$ 60. <b>Certo:</b> só dobra se b = 0. Monte a lei e calcule.`
+ ],
+ resumo: [
+  `f(5) = troque x por 5 (com parênteses).`,
+  `(−3)<sup>2</sup> = 9, mas −3<sup>2</sup> = −9.`,
+  `f(x) = ax + b: a = "por unidade", b = valor em x = 0.`,
+  `a = [[variação de y|variação de x]].`,
+  `a &gt; 0 sobe · a &lt; 0 desce.`,
+  `Deu o y? Iguale e resolva.`
+ ]
+},
+
+/* ===================== m-seq · Sequências e regularidades ===================== */
+'m-seq': {
+ base: [
+  [`Posição × valor`, `Numa sequência, cada termo tem uma <b>posição</b> (1º, 2º, 3º…) e um <b>valor</b>. a<sub>5</sub> é "o termo da posição 5". Em 4, 11, 18, 25: a<sub>1</sub> = 4 e a<sub>3</sub> = 18.`],
+  [`Primeiro teste: as diferenças`, `Subtraia cada termo do anterior. Se a diferença é sempre a mesma, é uma <b>PA</b> (progressão aritmética), e essa diferença é a <b>razão r</b>.<br>4, 11, 18, 25 → diferenças 7, 7, 7 → r = 7.`],
+  [`Razão negativa = sequência descendo`, `30, 26, 22, 18… → cada um menos o anterior: 26 − 30 = −4. Então <b>r = −4</b> (e não 4).`],
+  [`Segundo teste: as divisões`, `Se a diferença muda, tente dividir vizinhos. Divisão constante → <b>PG</b> (progressão geométrica).<br>5, 15, 45, 135 → ×3. · 64, 32, 16, 8 → ÷2 (multiplica por [[1|2]]).`],
+  [`Termo geral da PA, explicado`, `Para chegar ao termo n, você parte do a<sub>1</sub> e dá (n − 1) pulos de tamanho r.<br>12º termo de 4, 11, 18… → 4 + 11 × 7 = 4 + 77 = <b>81</b>.`],
+  [`Diferenças que crescem: olhe os quadrados`, `1, 4, 9, 16, 25 são os quadrados (n<sup>2</sup>); as diferenças são 3, 5, 7, 9 (crescem de 2 em 2). Se a sequência for 2, 5, 10, 17, 26, compare com os quadrados: é <b>n<sup>2</sup> + 1</b>.`],
+  [`Sequência que se repete = use o resto`, `Se o padrão tem um ciclo de tamanho k, divida a posição por k e olhe o <b>resto</b>.<br>Hoje é segunda. Daqui a 100 dias? 100 = 14 × 7 + 2 → anda 2 dias além das semanas completas → <b>quarta-feira</b>.`],
+  [`Figuras: vire tabela`, `Conte o que pede (palitos, bolinhas, quadradinhos) nas figuras 1, 2, 3 e monte uma tabela "figura n → quantidade". Aí é só achar o padrão dos números.`]
+ ],
+ jeitos: [
+  {n:`Fórmula relâmpago: r·n + "termo zero"`, c:`Numa PA, a lei é sempre r·n + (a<sub>1</sub> − r). O "termo zero" é o que viria ANTES do 1º termo.`,
+   ex:`5, 8, 11, 14… → r = 3; antes do 5 viria 2 → a<sub>n</sub> = 3n + 2.<br>a<sub>30</sub> = 3 × 30 + 2 = <b>92</b>.`},
+  {n:`Conte os pulos entre dois termos`, c:`Entre a<sub>3</sub> e a<sub>8</sub> há 8 − 3 = 5 pulos. Se você conhece dois termos, a diferença deles dividida pelos pulos é a razão.`,
+   ex:`a<sub>3</sub> = 10 e a<sub>8</sub> = 30 → 5 pulos valem 20 → r = 4. Voltando 2 pulos do a<sub>3</sub>: a<sub>1</sub> = 10 − 8 = <b>2</b>.`},
+  {n:`"Que posição tem esse valor?"`, c:`Iguale a fórmula ao valor e resolva. Ou: (valor − a<sub>1</sub>) ÷ r = número de pulos; some 1 para ter a posição.`,
+   ex:`7, 11, 15, … O 203 aparece? (203 − 7) ÷ 4 = 49 pulos → posição 49 + 1 = <b>50ª</b>.<br>Pela fórmula: 4n + 3 = 203 → n = 50 ✔.`},
+  {n:`Figuras: "o que já tem + o que entra"`, c:`Veja quanto entra a cada figura nova (é o r) e quanto sobra fixo. Lei = (o que entra) × n + (o que sobra).`,
+   ex:`Casinhas de palitos lado a lado (quadrado + telhado triangular, dividindo a parede): 1 casa = 6 palitos, 2 casas = 11, 3 casas = 16. Entram 5 por casa; 6 − 5 = 1 fixo → 5n + 1.<br>10 casas → 5 × 10 + 1 = <b>51 palitos</b>.`},
+  {n:`Confira a fórmula em n = 1 e n = 2`, c:`Depois de montar a lei, teste nas duas primeiras figuras ou termos. Se bater nas duas, pode confiar.`,
+   ex:`Lei 5n + 1 → n = 1: 6 ✔; n = 2: 11 ✔ → <b>lei confirmada</b>.<br>Lei 6n (chute errado) → n = 1: 6 ✔, mas n = 2: 12 ✘ (são 11) → <b>descartada</b>.`}
+ ],
+ passo: [
+  `Escreva os termos com as posições embaixo (1, 2, 3…).`,
+  `Calcule as diferenças. Constantes → PA. Não? Tente divisões (PG), quadrados ou "soma dos anteriores".`,
+  `PA: a<sub>n</sub> = a<sub>1</sub> + (n − 1)·r, ou r·n + (termo zero).`,
+  `Figuras: conte 1, 2, 3, faça a tabela e ache a lei. Ciclos: use o resto da divisão.`,
+  `Teste a lei em n = 1 e n = 2 antes de calcular o termo pedido.`
+ ],
+ exs: [
+  {q:`Qual é o 15º termo da sequência 50, 46, 42, 38, …?`, s:[`Primeiro as diferenças: 46 − 50 = −4. A sequência desce → r = −4.`,`Do 1º ao 15º são 14 pulos: a<sub>15</sub> = 50 + 14 × (−4) = 50 − 56.`], r:`−6`},
+  {q:`Na figura n, um quadrado de n × n lajotas brancas é cercado por uma moldura de lajotas pretas. A figura 1 tem 8 pretas, a figura 2 tem 12 e a figura 3 tem 16. Quantas lajotas pretas tem a figura 10?`, s:[`Faço a tabela: 8, 12, 16 → entram 4 pretas por figura (r = 4).`,`Termo zero: 8 − 4 = 4 → lei 4n + 4. Confiro: n = 2 → 12 ✔.`,`Outro jeito de ver: a moldura tem 4 lados de n lajotas + 4 cantos = 4n + 4.`,`Figura 10: 4 × 10 + 4 = 44.`], r:`44 lajotas pretas`},
+  {q:`Numa progressão aritmética, a<sub>4</sub> = 17 e a<sub>9</sub> = 42. Qual é o 20º termo?`, s:[`Conto os pulos: de a<sub>4</sub> até a<sub>9</sub> são 5 pulos, que valem 42 − 17 = 25 → r = 5.`,`Volto do a<sub>4</sub> até o a<sub>1</sub> (3 pulos): a<sub>1</sub> = 17 − 15 = 2.`,`a<sub>20</sub> = 2 + 19 × 5 = 2 + 95 = 97. (Conferindo pela fórmula relâmpago: 5n − 3 → 5 × 4 − 3 = 17 ✔.)`], r:`97`}
+ ],
+ erros: [
+  `<b>Errado:</b> 2, 4, 8, … → "soma 2, o próximo é 10". <b>Certo:</b> confira MAIS de uma diferença: as diferenças 2 e 4 não se repetem. É ×2 → o próximo é <b>16</b>.`,
+  `<b>Errado:</b> em 30, 26, 22, usar r = 4 na fórmula. <b>Certo:</b> a sequência desce, então r = <b>−4</b>.`,
+  `<b>Errado:</b> confundir posição e valor: "qual é o termo 50?" com "em que posição está o 50?". <b>Certo:</b> leia o que é dado: a posição (n) ou o valor (a<sub>n</sub>).`,
+  `<b>Errado:</b> casinha de 6 palitos → 10 casinhas = 10 × 6 = 60. <b>Certo:</b> as casas dividem paredes; só entram 5 por casa → 5 × 10 + 1 = <b>51</b>.`,
+  `<b>Errado:</b> hoje é segunda; daqui a 100 dias, contar hoje como dia 1. <b>Certo:</b> o resto 2 significa andar 2 dias a partir de hoje → quarta-feira.`
+ ],
+ resumo: [
+  `Diferenças iguais → PA (r). Divisões iguais → PG.`,
+  `a<sub>n</sub> = a<sub>1</sub> + (n − 1)·r = r·n + termo zero.`,
+  `Do a<sub>3</sub> ao a<sub>8</sub>: 5 pulos.`,
+  `Figuras: tabela → o que entra × n + o que sobra.`,
+  `Ciclo → resto da divisão.`,
+  `Teste em n = 1 e n = 2.`
+ ]
+}
+
+};
+
+/* REVISÃO TURBINADA · Matemática · M3 (Geometria)
+   m-ang · m-pol · m-sem · m-pit · m-circ · m-cart
+   Contas conferidas em plus/check_pm3.py */
+const PLUS_M3 = {
+ 'm-ang': {
+  base: [
+   [`O que é um ângulo`, `É a "abertura" entre duas semirretas que saem do mesmo ponto (o <b>vértice</b>). Medimos em graus: volta completa = 360°, meia-volta = 180°, um quarto de volta = 90° (o canto do caderno). Ex.: às 3 h em ponto, os ponteiros do relógio formam 90°.`],
+   [`Os 4 tipos de ângulo`, `<b>Agudo</b>: menor que 90° (ponta fina, ex.: 45°). <b>Reto</b>: exatamente 90° (no desenho vem com um quadradinho). <b>Obtuso</b>: entre 90° e 180° (aberto, ex.: 120°). <b>Raso</b>: 180° (vira uma reta).`],
+   [`Complementar (90°) × suplementar (180°)`, `Macete: <b>C vem antes de S</b> no alfabeto, e <b>90 vem antes de 180</b>. Complementares → somam 90° (C de "Canto"); suplementares → somam 180° (S de "Segue reto"). Ex.: 30° e 60° são complementares; 30° e 150° são suplementares.`],
+   [`"Complemento de x" e "suplemento de x"`, `É <b>quanto falta</b>: complemento = 90° − x; suplemento = 180° − x. Ex.: complemento de 25° = 65°; suplemento de 25° = 155°. Só ângulos menores que 90° têm complemento.`],
+   [`Opostos pelo vértice (OPV)`, `Quando duas retas se cruzam, nascem 4 ângulos: os que ficam "de frente" (um de costas para o outro) são <b>iguais</b>; os vizinhos <b>somam 180°</b>. Ex.: se um mede 35°, os quatro são 35°, 145°, 35° e 145° (total 360°).`],
+   [`Ângulos lado a lado numa reta e em volta de um ponto`, `Ângulos encostados que formam uma reta somam <b>180°</b>; ângulos que dão a volta inteira num ponto somam <b>360°</b>. Ex.: numa reta há ângulos de 50°, 70° e x → x = 180 − 120 = 60°.`],
+   [`Bissetriz`, `É a semirreta que corta o ângulo <b>exatamente ao meio</b>. Ex.: a bissetriz de 84° forma dois ângulos de 42°.`],
+   [`Transversal e paralelas`, `<b>Paralelas</b> nunca se encontram (como os trilhos do trem). A <b>transversal</b> é a reta que corta as duas. Nos 8 ângulos que aparecem, só há 2 medidas (se a transversal não for perpendicular; se for, os 8 medem 90°): os agudos são todos iguais, os obtusos também. Ex.: se um agudo mede 65°, todos os obtusos medem 180 − 65 = 115°.`]
+  ],
+  jeitos: [
+   {n:`Pinte de duas cores`, c:`Com paralelas e transversal, pinte os agudos de azul e os obtusos de vermelho. <b>Mesma cor = iguais. Cores diferentes = somam 180°.</b> Nem precisa lembrar os nomes (alternos, correspondentes…).`,
+    ex:`Um agudo mede 3x + 10° e um obtuso mede 5x + 10°. Cores diferentes → 3x + 10 + 5x + 10 = 180 → 8x = 160 → x = 20.<br>Ângulos: 3 · 20 + 10 = <b>70°</b> e 5 · 20 + 10 = <b>110°</b> (70 + 110 = 180 ✓).`},
+   {n:`Conte "quanto falta" em degraus`, c:`Para complemento ou suplemento de cabeça, suba até uma dezena redonda e depois até 90 ou 180.`,
+    ex:`Complemento de 37°: de 37 até 40 são 3; de 40 até 90 são 50 → 3 + 50 = <b>53°</b>.<br>Suplemento de 128°: de 128 até 130 são 2; de 130 até 180 são 50 → <b>52°</b>.`},
+   {n:`Suplemento = complemento + 90`, c:`Para o mesmo ângulo, o suplemento é <b>sempre 90° maior</b> que o complemento (180 − x e 90 − x diferem em 90). Isso resolve muito problema de frase.`,
+    ex:`Complemento de 25° = 65°; suplemento = 65 + 90 = <b>155°</b>.<br>"O suplemento é o triplo do complemento": chame o complemento de C. Então C + 90 = 3C → 2C = 90 → C = 45 → o ângulo é 90 − 45 = <b>45°</b>.`},
+   {n:`Traduza a frase para x`, c:`"Complemento de x" → (90 − x); "suplemento" → (180 − x); "o dobro" → 2·; "a metade" → ÷ 2; "é" → =. Escreva com parênteses e só depois resolva.`,
+    ex:`"Um ângulo é o dobro do seu complemento": x = 2 · (90 − x) → x = 180 − 2x → 3x = 180 → x = <b>60°</b>. Confere: complemento 30°, e 60 = 2 · 30 ✓.`},
+   {n:`O "bico" entre paralelas`, c:`Se um ângulo tem o vértice entre duas paralelas (formato de bico/seta), trace uma terceira paralela passando pelo bico. Ela divide o bico em dois alternos internos: <b>bico = soma dos dois ângulos das paralelas</b>.`,
+    ex:`O bico faz 35° com a reta de cima e 50° com a reta de baixo → bico = 35 + 50 = <b>85°</b>.`}
+  ],
+  passo: [
+   `<b>Desenhe a figura</b> (ou copie a da prova) e escreva em cima de cada ângulo o que você já sabe.`,
+   `Descubra a relação: são <b>iguais</b> (OPV, mesma cor nas paralelas) ou <b>somam</b> 90°, 180° ou 360°?`,
+   `Monte a equação: "iguais" → expressão = expressão; "somam" → expressão + expressão = total.`,
+   `Resolva e ache x.`,
+   `<b>Releia a pergunta</b>: ela quer x ou o ângulo? Substitua x e confira se as medidas fazem sentido (agudo &lt; 90°, obtuso > 90°).`
+  ],
+  exs: [
+   {q:`Duas retas se cruzam. Dois ângulos opostos pelo vértice medem 5x − 20° e 3x + 30°. Quanto medem os quatro ângulos formados?`,
+    s:[`Primeiro eu lembro: opostos pelo vértice são iguais. Então 5x − 20 = 3x + 30.`,`Passo os x para um lado e os números para o outro: 5x − 3x = 30 + 20 → 2x = 50 → x = 25.`,`Cada um desses dois ângulos: 5 · 25 − 20 = 105°.`,`Os outros dois são vizinhos deles, então somam 180° com eles: 180 − 105 = 75°.`,`Confiro: 105 + 75 + 105 + 75 = 360° ✓.`],
+    r:`105°, 75°, 105° e 75°`},
+   {q:`Duas paralelas são cortadas por uma transversal. Um dos ângulos agudos mede x + 40° e um dos obtusos mede 3x. Quanto mede cada um?`,
+    s:[`Uso o macete das duas cores: agudo e obtuso têm cores diferentes, então somam 180°.`,`x + 40 + 3x = 180 → 4x = 140 → x = 35.`,`Agudo: 35 + 40 = 75°. Obtuso: 3 · 35 = 105°.`,`Confiro: 75 + 105 = 180 ✓, e 75 é agudo, 105 é obtuso ✓.`],
+    r:`75° e 105°`},
+   {q:`O dobro do complemento de um ângulo, somado com a metade do suplemento desse mesmo ângulo, dá 150°. Quanto mede o ângulo?`,
+    s:[`Traduzo a frase: dobro do complemento = 2 · (90 − x); metade do suplemento = [[180 − x|2]].`,`Equação: 2 · (90 − x) + [[180 − x|2]] = 150.`,`Multiplico tudo por 2 para sumir a fração: 4 · (90 − x) + 180 − x = 300 → 360 − 4x + 180 − x = 300.`,`540 − 5x = 300 → 5x = 240 → x = 48.`,`Confiro: complemento 42° (dobro 84°); suplemento 132° (metade 66°); 84 + 66 = 150 ✓.`],
+    r:`48°`}
+  ],
+  erros: [
+   `<b>Errado:</b> complemento de 40° = 140°. <b>Certo:</b> complemento = 90 − 40 = 50°; 140° é o <b>suplemento</b>.`,
+   `<b>Errado:</b> achar x = 20 e marcar "20°" como resposta. <b>Certo:</b> substituir x na expressão do ângulo (ex.: 3 · 20 + 10 = 70°).`,
+   `<b>Errado:</b> dizer que dois ângulos vizinhos (lado a lado numa reta) são iguais. <b>Certo:</b> vizinhos somam 180°; iguais são os opostos pelo vértice.`,
+   `<b>Errado:</b> usar "alternos são iguais" quando as retas NÃO são paralelas. <b>Certo:</b> essas regras só valem se o enunciado garante que as retas são paralelas.`,
+   `<b>Errado:</b> supor que um ângulo é reto porque "parece". <b>Certo:</b> só é 90° se tiver o quadradinho ou se o enunciado disser.`
+  ],
+  resumo: [
+   `Agudo &lt; 90° · reto = 90° · obtuso entre 90° e 180° · raso = 180°.`,
+   `C antes de S, 90 antes de 180 → complementar 90°, suplementar 180°.`,
+   `Retas cruzadas: OPV iguais, vizinhos somam 180°.`,
+   `Paralelas: mesma cor (agudo-agudo) = iguais; cores diferentes = 180°.`,
+   `Bico entre paralelas = soma dos dois ângulos.`,
+   `Achou x? Substitua e responda o que foi pedido.`
+  ]
+ },
+
+ 'm-pol': {
+  base: [
+   [`Nomes dos polígonos`, `Polígono é uma figura fechada só com lados retos. <table class="tb"><tr><td>3 triângulo</td><td>4 quadrilátero</td><td>5 pentágono</td></tr><tr><td>6 hexágono</td><td>7 heptágono</td><td>8 octógono</td></tr><tr><td>9 eneágono</td><td>10 decágono</td><td>12 dodecágono</td></tr></table>Dica: "hexa" = 6 (hexacampeão), "octo" = 8 (polvo = octopus, 8 braços).`],
+   [`Por que o triângulo soma 180°`, `Recorte as três pontas de um triângulo de papel e encoste uma na outra: elas formam uma <b>reta</b>, ou seja, 180°. Ex.: ângulos de 50° e 60° → o terceiro é 180 − 110 = 70°.`],
+   [`Por que S = (n − 2) · 180°`, `De um vértice só, trace todas as diagonais: o polígono vira <b>n − 2 triângulos</b> (os dois vizinhos não geram diagonal). Cada triângulo vale 180°. Ex.: pentágono → 5 − 2 = 3 triângulos → 3 · 180 = 540°.`],
+   [`Ângulo externo`, `Prolongue um lado para fora: o ângulo entre o prolongamento e o lado vizinho é o <b>externo</b>. Interno + externo = 180° (formam uma reta). No triângulo, o externo = soma dos <b>dois internos que não encostam nele</b>. Ex.: internos 50° e 60° → externo no terceiro vértice = 110° (o interno ali é 70°, e 180 − 70 = 110 ✓).`],
+   [`Externos somam sempre 360°`, `Imagine dar a volta no quarteirão: em cada esquina você vira um ângulo externo e, no fim, deu <b>uma volta completa</b> = 360°. Vale para qualquer polígono convexo. Ex.: hexágono regular → cada externo = 360 ÷ 6 = 60°, cada interno = 120°.`],
+   [`Diagonais: de onde vem [[n(n − 3)|2]]`, `Diagonal liga dois vértices <b>não vizinhos</b>. De cada vértice saem n − 3 diagonais (não vai para ele mesmo nem para os 2 vizinhos). n · (n − 3) conta cada diagonal duas vezes (uma de cada ponta), por isso ÷ 2. Ex.: heptágono → [[7 · 4|2]] = 14 diagonais.`],
+   [`Tipos de triângulo`, `Pelos lados: <b>equilátero</b> (3 iguais, ângulos de 60°), <b>isósceles</b> (2 iguais; os ângulos da base são iguais), <b>escaleno</b> (todos diferentes). Pelos ângulos: <b>acutângulo</b> (3 agudos), <b>retângulo</b> (um de 90°), <b>obtusângulo</b> (um obtuso). Ex.: isósceles com ângulos da base de 65° → vértice = 180 − 130 = 50°.`],
+   [`Nem todo trio de lados forma triângulo`, `Cada lado tem de ser <b>menor que a soma dos outros dois</b>. Basta testar o maior. Ex.: 3, 4 e 8 → 3 + 4 = 7, que é menor que 8 → não fecha triângulo. Já 3, 4 e 6 forma (7 > 6).`],
+   [`Polígono regular`, `Regular = todos os lados iguais <b>e</b> todos os ângulos iguais. Cada externo = [[360|n]]; cada interno = 180 − externo. Ex.: octógono regular → externo 360 ÷ 8 = 45°, interno 180 − 45 = 135°.`]
+  ],
+  jeitos: [
+   {n:`Comece pelo externo`, c:`Em polígono regular, ache primeiro o externo (360 ÷ n) e depois o interno (180 − externo). É bem mais rápido que (n − 2) · 180 ÷ n. E funciona ao contrário: do interno, ache o externo e depois n = 360 ÷ externo.`,
+    ex:`Decágono regular: externo = 360 ÷ 10 = 36° → interno = 180 − 36 = <b>144°</b>.<br>Interno de 156° → externo = 24° → n = 360 ÷ 24 = <b>15 lados</b>.`},
+   {n:`A escadinha de 180`, c:`Cada lado a mais soma 180° na soma dos internos: 3 → 180, 4 → 360, 5 → 540, 6 → 720, 7 → 900, 8 → 1 080. Se a questão dá a soma, divida por 180 e some 2.`,
+    ex:`Soma 1 260° → 1 260 ÷ 180 = 126 ÷ 18 = 7 → n − 2 = 7 → n = <b>9 lados</b> (eneágono).`},
+   {n:`Externo do triângulo = "os dois de longe"`, c:`O ângulo externo de um triângulo é a soma dos dois internos que ficam longe dele. Não precisa achar o terceiro interno.`,
+    ex:`Internos de 45° e 75° → externo no outro vértice = 45 + 75 = <b>120°</b>.<br>Externo de 140° e um interno de longe de 60° → o outro interno de longe = 140 − 60 = <b>80°</b>.`},
+   {n:`Diagonais: "tire 3, multiplique, corte ao meio"`, c:`Faça n − 3, multiplique por n e divida por 2. Truque: divida por 2 <b>antes</b> o número que for par, para a conta ficar pequena.`,
+    ex:`Decágono: 10 · 7 ÷ 2 = 5 · 7 = <b>35</b>.<br>Polígono de 20 lados: 20 · 17 ÷ 2 = 10 · 17 = <b>170</b>.`},
+   {n:`Isósceles: tira e divide`, c:`Sabendo o ângulo do vértice (o diferente), tire de 180 e divida por 2 para cada ângulo da base. Sabendo o da base, dobre e tire de 180.`,
+    ex:`Vértice 50° → (180 − 50) ÷ 2 = <b>65°</b> cada um na base.<br>Base 72° → vértice = 180 − 144 = <b>36°</b>.`}
+  ],
+  passo: [
+   `<b>Desenhe a figura</b> e marque os ângulos e lados conhecidos (e os iguais, se for isósceles ou regular).`,
+   `Pergunte: é triângulo (soma 180°) ou polígono de n lados (soma (n − 2) · 180°)?`,
+   `Se for regular, comece pelo externo: 360 ÷ n.`,
+   `Se pedir diagonais: [[n(n − 3)|2]], lembrando do ÷ 2.`,
+   `Confira: interno + externo = 180° e todos os ângulos de um triângulo somam 180°.`
+  ],
+  exs: [
+   {q:`Os ângulos internos de um triângulo medem x, 2x e 3x. Quanto mede cada um? Que tipo de triângulo é?`,
+    s:[`Primeiro eu lembro: os três ângulos de um triângulo somam 180°.`,`x + 2x + 3x = 180 → 6x = 180 → x = 30.`,`Ângulos: 30°, 60° e 90°.`,`Tem um ângulo de 90° → é um triângulo retângulo.`],
+    r:`30°, 60° e 90° (triângulo retângulo)`},
+   {q:`Num polígono regular, cada ângulo interno é o triplo do ângulo externo. Quantos lados ele tem e quantas diagonais?`,
+    s:[`Uso o fato de que interno + externo = 180°. Se o externo é e, o interno é 3e.`,`3e + e = 180 → 4e = 180 → e = 45°.`,`Começo pelo externo: n = 360 ÷ 45 = 8 lados (octógono).`,`Diagonais: 8 · 5 ÷ 2 = 4 · 5 = 20.`],
+    r:`8 lados e 20 diagonais`},
+   {q:`Um polígono convexo tem o número de diagonais igual ao dobro do número de lados. Qual é a soma dos seus ângulos internos?`,
+    s:[`Traduzo: [[n(n − 3)|2]] = 2n.`,`Multiplico por 2: n(n − 3) = 4n. Como n não é zero, divido os dois lados por n: n − 3 = 4 → n = 7.`,`Confiro: heptágono tem 7 · 4 ÷ 2 = 14 diagonais, e 14 = 2 · 7 ✓.`,`Soma dos internos: (7 − 2) · 180 = 5 · 180 = 900°.`],
+    r:`900°`}
+  ],
+  erros: [
+   `<b>Errado:</b> diagonais do hexágono = 6 · 3 = 18. <b>Certo:</b> dividir por 2 → 9.`,
+   `<b>Errado:</b> soma dos internos = n · 180°. <b>Certo:</b> (n − 2) · 180° (o pentágono tem 540°, e não 900°).`,
+   `<b>Errado:</b> achar que a soma dos externos cresce com o número de lados. <b>Certo:</b> é sempre 360°.`,
+   `<b>Errado:</b> confundir interno com externo (ex.: dizer que o externo do hexágono regular é 120°). <b>Certo:</b> externo 60°, interno 120°.`,
+   `<b>Errado:</b> aceitar qualquer trio de medidas como triângulo. <b>Certo:</b> o maior lado tem de ser menor que a soma dos outros dois.`
+  ],
+  resumo: [
+   `Triângulo: 180° · polígono: (n − 2) · 180°.`,
+   `Externos: sempre 360° → regular: externo = 360 ÷ n.`,
+   `Interno + externo = 180°.`,
+   `Externo do triângulo = soma dos dois internos de longe.`,
+   `Diagonais = n · (n − 3) ÷ 2.`,
+   `Isósceles: ângulos da base iguais.`
+  ]
+ },
+
+ 'm-sem': {
+  base: [
+   [`Semelhante × congruente`, `<b>Semelhante</b> = mesma forma, tamanho pode mudar (como dar zoom numa foto). <b>Congruente</b> = mesma forma e mesmo tamanho (razão 1). Ex.: uma foto de 10 cm × 15 cm ampliada para 20 cm × 30 cm é semelhante à original.`],
+   [`Lados correspondentes`, `São os lados que ficam <b>de frente para o mesmo ângulo</b> nos dois triângulos. Só se compara lado com seu correspondente. Ex.: se nos dois triângulos o lado oposto ao ângulo de 40° mede 3 e 6, esses dois são correspondentes.`],
+   [`Razão de semelhança k`, `k = lado do grande ÷ lado correspondente do pequeno. É o "fator de zoom". Ex.: lados correspondentes 4 cm e 10 cm → k = [[10|4]] = 2,5 (o grande é 2,5 vezes o pequeno).`],
+   [`Por que "AA basta"`, `Se dois ângulos são iguais, o terceiro também é, porque todos somam 180°. Ex.: um triângulo com 50° e 60° tem o terceiro de 70°; outro com 50° e 70° tem o terceiro de 60°. Mesmos ângulos → semelhantes.`],
+   [`Perímetro × k, área × k²`, `O perímetro é um comprimento, então vai × k. A área é comprimento × comprimento, então vai × k × k = k². Ex.: quadrado de lado 3 → área 9; quadrado de lado 6 (k = 2) → área 36 = 4 · 9.`],
+   [`Paralela a um lado gera triângulo semelhante`, `Uma reta paralela a um lado de um triângulo "corta" um triângulo menor semelhante ao grande (ângulos iguais por serem correspondentes). Ex.: DE ∥ BC, AD = 2 e AB = 6 → k = [[2|6]] = [[1|3]]; se BC = 12, então DE = 4.`],
+   [`Teorema de Tales`, `Retas paralelas cortadas por duas transversais: os pedaços de uma transversal são proporcionais aos pedaços correspondentes da outra. Ex.: numa transversal, 2 e 3; na outra, 4 e x → [[2|3]] = [[4|x]] → x = 6.`],
+   [`Proporção: o "multiplicar cruzado"`, `Se [[a|b]] = [[c|d]], então a · d = b · c. Ex.: [[3|x]] = [[6|10]] → 6x = 30 → x = 5.`]
+  ],
+  jeitos: [
+   {n:`Ache o k e multiplique`, c:`Em vez de montar uma proporção para cada lado, ache o k uma vez só (grande ÷ pequeno) e multiplique todos os lados do pequeno por ele.`,
+    ex:`Triângulo de lados 4, 6 e 8; num semelhante, o lado correspondente ao 4 mede 10 → k = 2,5.<br>Outros lados: 6 · 2,5 = <b>15</b> e 8 · 2,5 = <b>20</b>. Perímetro: 18 · 2,5 = <b>45</b> (10 + 15 + 20 = 45 ✓).`},
+   {n:`Separe os triângulos`, c:`Quando um triângulo está dentro do outro, desenhe os dois <b>separados</b>, lado a lado, na mesma posição. Assim você não erra o lado do grande, que muitas vezes é a <b>soma</b> de dois pedaços.`,
+    ex:`DE ∥ BC, AD = 3, DB = 6, DE = 5. O lado do grande é AB = 3 + 6 = 9 (não 6!).<br>k = 9 ÷ 3 = 3 → BC = 5 · 3 = <b>15</b>.`},
+   {n:`Tabela pequeno × grande`, c:`Monte uma tabelinha: uma coluna para o objeto pequeno, outra para o grande; uma linha para altura, outra para sombra. A mesma "conta de zoom" vale nas duas linhas.`,
+    ex:`Muro de 3 m faz sombra de 4,5 m; árvore faz sombra de 12 m.<br>Sombra = 1,5 × altura (4,5 ÷ 3 = 1,5) → altura da árvore = 12 ÷ 1,5 = <b>8 m</b>.`},
+   {n:`k² na área (e voltar com a raiz)`, c:`Se os lados mudam k vezes, a área muda k² vezes. Se a questão dá a razão das áreas, tire a raiz para achar k.`,
+    ex:`Planta na escala 1 : 100 (k = 100): 6 cm² no papel → 6 · 10 000 = 60 000 cm² = <b>6 m²</b> no real.<br>A área ficou 25 vezes maior → k = √{25} = <b>5</b> (lados 5 vezes maiores).`},
+   {n:`Tales pelo total`, c:`Se a questão dá o total da outra transversal, some os pedaços conhecidos, ache o k (total ÷ total) e multiplique cada pedaço.`,
+    ex:`Pedaços 2, 3 e 5 numa transversal (total 10); a outra tem total 30 → k = 3.<br>Pedaços da outra: <b>6, 9 e 15</b> (6 + 9 + 15 = 30 ✓).`}
+  ],
+  passo: [
+   `<b>Desenhe a figura</b> e marque os ângulos iguais (ângulo reto, ângulo comum, paralelas).`,
+   `Justifique a semelhança (quase sempre AA) ou veja se é caso de Tales (paralelas e duas transversais).`,
+   `Separe os triângulos e alinhe os lados correspondentes (opostos aos mesmos ângulos).`,
+   `Ache k = grande ÷ pequeno (ou monte a proporção).`,
+   `Lado e perímetro → × k. Área → × k². Confira se o resultado é maior ou menor do que devia.`
+  ],
+  exs: [
+   {q:`Dois triângulos são semelhantes. Os lados do menor medem 5 cm, 7 cm e 9 cm. O maior lado do triângulo maior mede 27 cm. Qual é o perímetro do triângulo maior?`,
+    s:[`Primeiro eu emparelho: o maior lado do grande corresponde ao maior lado do pequeno, 9 cm.`,`k = 27 ÷ 9 = 3.`,`Uso o atalho do perímetro: perímetro do pequeno = 5 + 7 + 9 = 21 → do grande = 21 · 3 = 63 cm.`],
+    r:`63 cm`},
+   {q:`Para medir um prédio, Lia coloca um espelho no chão. Ela fica a 2 m do espelho, e seus olhos estão a 1,6 m do chão. O espelho está a 30 m da base do prédio, e ela vê o topo do prédio refletido no espelho. Qual é a altura do prédio?`,
+    s:[`<b>Desenho</b>: dois triângulos retângulos com o vértice no espelho. O raio de luz bate e volta com o mesmo ângulo, e os dois têm ângulo reto → semelhantes (AA).`,`Tabela: pequeno (Lia): altura 1,6, chão 2. Grande (prédio): altura h, chão 30.`,`k = 30 ÷ 2 = 15 → h = 1,6 · 15 = 24.`],
+    r:`24 m`},
+   {q:`No triângulo ABC, o segmento DE é paralelo a BC, com D em AB e E em AC. Sabe-se que AD = 4 cm, DB = 6 cm e que a área do triângulo ADE é 8 cm². Qual é a área do triângulo ABC? E a do trapézio DBCE?`,
+    s:[`DE ∥ BC → ADE e ABC são semelhantes.`,`Separo os triângulos: o lado do grande é AB = 4 + 6 = 10, não 6.`,`k = 10 ÷ 4 = 2,5 → áreas na razão k² = 2,5 · 2,5 = 6,25.`,`Área de ABC = 8 · 6,25 = 50 cm².`,`Trapézio = grande − pequeno = 50 − 8 = 42 cm².`],
+    r:`50 cm² (e o trapézio, 42 cm²)`}
+  ],
+  erros: [
+   `<b>Errado:</b> dividir lados que não se correspondem (o maior de um pelo menor do outro). <b>Certo:</b> compare lados de frente para o mesmo ângulo.`,
+   `<b>Errado:</b> com DE ∥ BC, usar DB como lado do grande. <b>Certo:</b> o lado do grande é AB = AD + DB.`,
+   `<b>Errado:</b> lado dobrou → área dobrou. <b>Certo:</b> área × k² → quadruplica.`,
+   `<b>Errado:</b> na sombra, montar [[altura|sombra]] de um com [[sombra|altura]] do outro. <b>Certo:</b> mantenha a mesma ordem nas duas frações.`
+  ],
+  resumo: [
+   `Semelhantes: ângulos iguais, lados proporcionais.`,
+   `AA basta (o terceiro ângulo vem de graça).`,
+   `k = grande ÷ pequeno · lado e perímetro × k · área × k².`,
+   `Paralela a um lado → triângulo menor semelhante; lado grande = soma dos pedaços.`,
+   `Tales: paralelas → pedaços proporcionais.`
+  ]
+ },
+
+ 'm-pit': {
+  base: [
+   [`Triângulo retângulo, hipotenusa e catetos`, `Triângulo retângulo tem um ângulo de 90° (o quadradinho). Os dois lados que formam o "L" do quadradinho são os <b>catetos</b>. O lado de frente para o quadradinho, que não encosta nele, é a <b>hipotenusa</b>: sempre o maior lado. Ex.: no triângulo 6, 8, 10, a hipotenusa é 10.`],
+   [`Quadrados de 1 a 20 (decore!)`, `<table class="tb"><tr><td>1² = 1</td><td>2² = 4</td><td>3² = 9</td><td>4² = 16</td><td>5² = 25</td></tr><tr><td>6² = 36</td><td>7² = 49</td><td>8² = 64</td><td>9² = 81</td><td>10² = 100</td></tr><tr><td>11² = 121</td><td>12² = 144</td><td>13² = 169</td><td>14² = 196</td><td>15² = 225</td></tr><tr><td>16² = 256</td><td>17² = 289</td><td>18² = 324</td><td>19² = 361</td><td>20² = 400</td></tr></table>`],
+   [`Raiz quadrada é a volta do quadrado`, `√{144} = 12 porque 12² = 144. Se não for exata, fica entre dois inteiros: √{50} está entre 7 (49) e 8 (64), bem perto de 7. Vale decorar: √{2} ≈ 1,41 e √{3} ≈ 1,73.`],
+   [`Pitágoras com áreas`, `Desenhe um quadrado sobre cada lado: a área do quadrado da hipotenusa = soma das áreas dos quadrados dos catetos. Ex.: 3-4-5 → 9 + 16 = 25.`],
+   [`Achar hipotenusa × achar cateto`, `Quer a <b>hipotenusa</b> (a maior)? <b>Some</b> os quadrados e tire a raiz. Quer um <b>cateto</b>? <b>Subtraia</b>: hipotenusa² − outro cateto². Ex.: catetos 9 e 12 → 81 + 144 = 225 → 15. Hipotenusa 10 e cateto 8 → 100 − 64 = 36 → 6.`],
+   [`Ternos pitagóricos`, `Trios inteiros que já "fecham" Pitágoras: <b>3-4-5</b>, <b>5-12-13</b>, <b>8-15-17</b>, <b>7-24-25</b>. Multiplicando o trio todo pelo mesmo número, continua valendo: 6-8-10, 9-12-15, 12-16-20, 15-20-25, 10-24-26, 16-30-34.`],
+   [`Diagonal do quadrado: ℓ√{2}`, `A diagonal divide o quadrado em dois triângulos retângulos com catetos ℓ e ℓ: d² = ℓ² + ℓ² = 2ℓ² → d = ℓ√{2}. Ex.: lado 5 → d = 5√{2} ≈ 5 · 1,41 = 7,05.`],
+   [`Altura do equilátero: [[ℓ√{3}|2]]`, `A altura cai no meio da base, formando um triângulo retângulo com hipotenusa ℓ e cateto [[ℓ|2]]: h² = ℓ² − [[ℓ²|4]] = [[3ℓ²|4]] → h = [[ℓ√{3}|2]]. Ex.: lado 6 → h = 3√{3} ≈ 5,19.`],
+   [`Relações métricas (com a altura h)`, `A altura h relativa à hipotenusa a divide em m (encostado no cateto b) e n (encostado no cateto c), com a = m + n. Então: h² = m · n · b² = a · m · c² = a · n · a · h = b · c. Ex.: no 3-4-5 (a = 5, b = 4, c = 3): m = [[16|5]] = 3,2; n = [[9|5]] = 1,8; h = [[12|5]] = 2,4. Confere: 2,4² = 5,76 = 3,2 · 1,8 ✓.`]
+  ],
+  jeitos: [
+   {n:`Encolha o triângulo`, c:`Se os lados têm um fator comum, divida por ele, reconheça o terno e multiplique de volta. Conta grande vira conta pequena.`,
+    ex:`Catetos 30 e 40 → ÷ 10 → 3 e 4 → hipotenusa 5 → × 10 = <b>50</b>.<br>Catetos 20 e 48 → ÷ 4 → 5 e 12 → 13 → × 4 = <b>52</b>.`},
+   {n:`Reconheça o terno disfarçado`, c:`Antes de fazer conta, olhe se os números são um terno multiplicado. Vale também quando falta um cateto.`,
+    ex:`Hipotenusa 26 e cateto 10 → é o 5-12-13 vezes 2 → outro cateto = <b>24</b>.<br>Hipotenusa 34 e cateto 16 → é o 8-15-17 vezes 2 → outro cateto = <b>30</b>.`},
+   {n:`Cateto pela diferença de quadrados`, c:`a² − b² = (a − b) · (a + b). Quando a hipotenusa e o cateto são números próximos, fica muito fácil.`,
+    ex:`Hipotenusa 25, cateto 24: (25 − 24) · (25 + 24) = 1 · 49 = 49 → <b>7</b>.<br>Hipotenusa 41, cateto 40: 1 · 81 = 81 → <b>9</b>.<br>Hipotenusa 17, cateto 15: 2 · 32 = 64 → <b>8</b>.`},
+   {n:`Quadrado de número terminado em 5`, c:`Pegue o número sem o 5, multiplique pelo seguinte e escreva 25 no final.`,
+    ex:`15² → 1 · 2 = 2 → <b>225</b>.<br>25² → 2 · 3 = 6 → <b>625</b>.<br>35² → 3 · 4 = 12 → <b>1 225</b>.`},
+   {n:`Altura relativa à hipotenusa = [[b · c|a]]`, c:`Como a · h = b · c (as duas contas dão o dobro da área), a altura é catetos multiplicados ÷ hipotenusa.`,
+    ex:`Catetos 9 e 12 → hipotenusa 15 (3-4-5 × 3) → h = [[9 · 12|15]] = [[108|15]] = <b>7,2</b>.`},
+   {n:`Estime e elimine`, c:`A hipotenusa é maior que cada cateto e menor que a soma deles. Um quadrado perfeito nunca termina em 2, 3, 7 ou 8. Use isso para cortar alternativas.`,
+    ex:`Catetos 6 e 8: a resposta está entre 8 e 14 → corta "5" e "14"; é <b>10</b>.<br>√{200}: 14² = 196, então √{200} ≈ <b>14,1</b>.`}
+  ],
+  passo: [
+   `<b>Desenhe a figura</b> e marque o quadradinho do ângulo reto.`,
+   `Ache a <b>hipotenusa</b>: o lado de frente para o quadradinho.`,
+   `Olhe se é um terno conhecido (ou um múltiplo). Se for, a resposta sai sem conta.`,
+   `Senão: quer hipotenusa → soma os quadrados; quer cateto → subtrai. Tire a raiz no final.`,
+   `Se aparecer altura relativa à hipotenusa ou projeções, use h² = m · n, b² = a · m, c² = a · n ou a · h = b · c.`,
+   `Confira: a hipotenusa tem de ser o maior lado.`
+  ],
+  exs: [
+   {q:`Um terreno retangular mede 24 m por 7 m. Uma cerca reta vai ligar dois cantos opostos. Quanto mede a cerca?`,
+    s:[`<b>Desenho</b>: a cerca é a diagonal; ela forma um triângulo retângulo com os lados 24 e 7 (catetos).`,`Reconheço o terno 7-24-25 → hipotenusa 25.`,`Se não lembrasse: 49 + 576 = 625 = 25².`],
+    r:`25 m`},
+   {q:`A diagonal de um quadrado mede 10 cm. Qual é a área desse quadrado?`,
+    s:[`Primeiro eu desenho: a diagonal é a hipotenusa de um triângulo com dois catetos iguais ao lado ℓ.`,`Pitágoras: ℓ² + ℓ² = 10² → 2ℓ² = 100 → ℓ² = 50.`,`Sacada: a área do quadrado É ℓ². Nem preciso achar o lado!`],
+    r:`50 cm²`},
+   {q:`Num triângulo retângulo, a altura relativa à hipotenusa mede 12 cm e divide a hipotenusa em dois pedaços; um deles (m) mede 16 cm. Quanto medem a hipotenusa e os dois catetos?`,
+    s:[`Uso h² = m · n: 144 = 16 · n → n = 9.`,`Hipotenusa: a = m + n = 16 + 9 = 25.`,`Cateto do lado de m: b² = a · m = 25 · 16 = 400 → b = 20.`,`Cateto do lado de n: c² = a · n = 25 · 9 = 225 → c = 15.`,`Confiro: 15-20-25 é o 3-4-5 vezes 5 ✓, e a · h = 25 · 12 = 300 = b · c = 20 · 15 ✓.`],
+    r:`Hipotenusa 25 cm; catetos 20 cm e 15 cm`}
+  ],
+  erros: [
+   `<b>Errado:</b> hipotenusa 13 e cateto 5 → 169 + 25. <b>Certo:</b> para cateto, subtrai: 169 − 25 = 144 → 12.`,
+   `<b>Errado:</b> √{9 + 16} = 3 + 4 = 7. <b>Certo:</b> √{25} = 5 (não dá para "separar" a raiz de uma soma).`,
+   `<b>Errado:</b> parar no 169 e marcar 169. <b>Certo:</b> falta a raiz: √{169} = 13.`,
+   `<b>Errado:</b> usar como hipotenusa o lado que "está deitado". <b>Certo:</b> hipotenusa é sempre a oposta ao ângulo reto (e a maior).`,
+   `<b>Errado:</b> h = m · n. <b>Certo:</b> h² = m · n (com m = 4 e n = 9, h = 6, e não 36).`
+  ],
+  resumo: [
+   `a² = b² + c² · hipotenusa = maior, de frente para o ângulo de 90°.`,
+   `Hipotenusa → soma · cateto → subtrai · raiz no final.`,
+   `Ternos: 3-4-5, 5-12-13, 8-15-17, 7-24-25 (e múltiplos).`,
+   `Quadrado: d = ℓ√{2} · equilátero: h = [[ℓ√{3}|2]].`,
+   `h² = m·n · b² = a·m · c² = a·n · a·h = b·c.`
+  ]
+ },
+
+ 'm-circ': {
+  base: [
+   [`Circunferência × círculo`, `<b>Circunferência</b> é só a linha da borda (o aro de um pneu). <b>Círculo</b> é a região inteira, com "recheio" (a pizza). Comprimento é da circunferência; área é do círculo.`],
+   [`Raio, diâmetro e corda`, `<b>Raio</b>: do centro até a borda. <b>Diâmetro</b>: atravessa passando pelo centro = 2 raios. <b>Corda</b>: qualquer segmento ligando dois pontos da borda; o diâmetro é a maior corda. Ex.: raio 7 cm → diâmetro 14 cm.`],
+   [`A volta inteira vale 360°`, `Os arcos se medem em graus, como os ângulos. Ex.: o relógio tem 12 horas na volta → cada hora corresponde a 360 ÷ 12 = 30°.`],
+   [`Ângulo central = arco`, `Vértice <b>no centro</b>. Ele mede exatamente o arco que "abraça". Ex.: pizza em 6 fatias iguais → cada fatia tem ângulo central e arco de 360 ÷ 6 = 60°.`],
+   [`Ângulo inscrito = metade do arco`, `Vértice <b>na borda</b>, com os dois lados sendo cordas. Mede a metade do arco que fica "dentro" da abertura dele. Ex.: arco de 140° → inscrito de 70°.`],
+   [`Inscritos no mesmo arco são iguais`, `Como pessoas sentadas na mesma arquibancada olhando o palco: todos os inscritos que olham o mesmo arco têm a mesma medida. Ex.: se um deles mede 35°, todos medem 35°.`],
+   [`Semicírculo → 90°`, `Se o inscrito olha um <b>diâmetro</b>, o arco é 180° → inscrito = 90°. Todo triângulo com um lado sendo diâmetro e o outro vértice na borda é <b>retângulo</b>. Ex.: nesse triângulo, se um ângulo agudo mede 25°, o outro mede 90 − 25 = 65°.`],
+   [`Comprimento C = 2πr`, `π ≈ 3,14 é "quantas vezes o diâmetro cabe na volta": um pouco mais de 3. Por isso C = π · d = 2πr. Ex.: diâmetro 10 cm → C ≈ 3,14 · 10 = 31,4 cm.`],
+   [`Comprimento de um arco`, `É a fração da volta: arco de α° = [[α|360]] · 2πr. Ex.: arco de 90° (um quarto) num círculo de raio 10 cm → [[1|4]] · 62,8 = 15,7 cm (π ≈ 3,14).`]
+  ],
+  jeitos: [
+   {n:`O centro vê o dobro`, c:`Quem está no centro (central) vê o arco inteiro; quem está na borda (inscrito) vê só a metade. Para ir da borda ao centro, dobre; do centro à borda, divida por 2.`,
+    ex:`Inscrito de 40° → central = <b>80°</b> → arco = <b>80°</b>.<br>Arco de 110° → inscrito = <b>55°</b>.`},
+   {n:`Dois raios = triângulo isósceles`, c:`Ligando o centro a dois pontos da borda, você ganha dois lados iguais (raios). Os ângulos da base desse triângulo são iguais.`,
+    ex:`Ângulo central de 100° → cada ângulo da base = (180 − 100) ÷ 2 = <b>40°</b>.`},
+   {n:`Fração da volta`, c:`Para arco em centímetros, transforme o ângulo em fração de 360 (simplificando) e aplique na volta inteira.`,
+    ex:`Arco de 60° com r = 6 (π ≈ 3): volta = 2 · 3 · 6 = 36; 60° é [[1|6]] da volta → 36 ÷ 6 = <b>6</b>.<br>Arco de 45° com r = 4 (π ≈ 3,14): volta = 25,12; 45° é [[1|8]] → <b>3,14</b>.`},
+   {n:`Viu diâmetro? Põe o quadradinho`, c:`Triângulo inscrito com um lado no diâmetro tem 90° no vértice oposto. Marque o quadradinho e use Pitágoras.`,
+    ex:`Diâmetro 10 e um lado 6 → o outro lado é cateto: 100 − 36 = 64 → <b>8</b> (o 3-4-5 vezes 2).`},
+   {n:`Quadrilátero inscrito: opostos somam 180°`, c:`Num quadrilátero com os 4 vértices na circunferência, dois ângulos opostos olham, juntos, a volta inteira (360°). Como cada um é metade do seu arco, somam 180°.`,
+    ex:`Um ângulo mede 110° → o oposto mede 180 − 110 = <b>70°</b>.`},
+   {n:`Voltas da roda`, c:`Uma volta da roda anda exatamente um comprimento C. Distância = voltas × C, e voltas = distância ÷ C. Cuidado com as unidades!`,
+    ex:`Roda de raio 0,5 m (π ≈ 3): C = 2 · 3 · 0,5 = 3 m; 200 voltas = <b>600 m</b>.<br>Percorreu 1,2 km = 1 200 m → 1 200 ÷ 3 = <b>400 voltas</b>.`}
+  ],
+  passo: [
+   `<b>Desenhe a figura</b>: marque o centro O e veja onde está o vértice do ângulo (no centro ou na borda?).`,
+   `Ache o arco que o ângulo "olha" (o que fica dentro da abertura).`,
+   `Central = arco; inscrito = metade do arco.`,
+   `Tem diâmetro como lado? Ângulo de 90° → Pitágoras ou soma 180° no triângulo.`,
+   `Se pedir comprimento: C = 2πr (atenção: raio, não diâmetro) e use o π que o enunciado mandar.`
+  ],
+  exs: [
+   {q:`Qual é o menor ângulo formado pelos ponteiros de um relógio às 4 h em ponto?`,
+    s:[`Primeiro eu lembro: 12 horas dão a volta de 360°, então cada hora vale 30°.`,`Às 4 h, o ponteiro grande está no 12 e o pequeno no 4: são 4 "horas" de distância.`,`4 · 30 = 120°.`],
+    r:`120°`},
+   {q:`O quadrilátero ABCD tem os quatro vértices sobre uma circunferência. Os ângulos dos vértices A e C (opostos) medem 3x + 10° e 2x + 20°. Quanto mede cada um?`,
+    s:[`Uso o macete: em quadrilátero inscrito, ângulos opostos somam 180°.`,`3x + 10 + 2x + 20 = 180 → 5x + 30 = 180 → 5x = 150 → x = 30.`,`A = 3 · 30 + 10 = 100°; C = 2 · 30 + 20 = 80°.`,`Confiro: 100 + 80 = 180 ✓.`],
+    r:`A = 100° e C = 80°`},
+   {q:`Um triângulo ABC está inscrito numa circunferência de raio 5 cm, e o lado AB é um diâmetro. Sabendo que AC = 8 cm, calcule BC, a área do triângulo e o comprimento da circunferência (π ≈ 3,14).`,
+    s:[`<b>Desenho</b>: AB é diâmetro → AB = 2 · 5 = 10 cm, e o ângulo em C é 90°.`,`AB é a hipotenusa. Cateto que falta: 100 − 64 = 36 → BC = 6 cm (terno 6-8-10).`,`Área do triângulo retângulo = cateto × cateto ÷ 2 = 6 · 8 ÷ 2 = 24 cm².`,`Comprimento: C = 2 · 3,14 · 5 = 31,4 cm.`],
+    r:`BC = 6 cm, área 24 cm² e C = 31,4 cm`}
+  ],
+  erros: [
+   `<b>Errado:</b> inscrito = dobro do arco. <b>Certo:</b> inscrito = metade; quem é o dobro do inscrito é o central.`,
+   `<b>Errado:</b> comprimento = πr². <b>Certo:</b> comprimento = 2πr; πr² é a área do círculo.`,
+   `<b>Errado:</b> colocar o diâmetro no lugar do r em 2πr (dá o dobro). <b>Certo:</b> C = 2πr = π · d.`,
+   `<b>Errado:</b> tratar como central um ângulo com vértice na borda. <b>Certo:</b> olhe onde está o vértice: centro → central; borda → inscrito.`
+  ],
+  resumo: [
+   `Diâmetro = 2 raios · volta = 360°.`,
+   `Central = arco · inscrito = metade do arco.`,
+   `Inscrito no diâmetro = 90° → Pitágoras.`,
+   `Quadrilátero inscrito: opostos somam 180°.`,
+   `C = 2πr · arco = fração da volta.`
+  ]
+ },
+
+ 'm-cart': {
+  base: [
+   [`Os eixos e a origem`, `O <b>eixo x</b> é a reta horizontal (deitada); o <b>eixo y</b> é a vertical (em pé). Eles se cruzam na <b>origem</b> (0, 0). Para a direita e para cima: positivo; para a esquerda e para baixo: negativo.`],
+   [`Ler um ponto (x, y)`, `x vem antes de y no alfabeto e no par: primeiro ande na horizontal (x), depois na vertical (y), sempre saindo da origem. Ex.: (3, −2) → 3 para a direita e 2 para baixo.`],
+   [`Os quatro quadrantes`, `Numerados no sentido anti-horário, começando em cima à direita: <table class="tb"><tr><td>2º (−, +)</td><td>1º (+, +)</td></tr><tr><td>3º (−, −)</td><td>4º (+, −)</td></tr></table>Ex.: (−5, 2) está no 2º quadrante.`],
+   [`Ponto em cima de um eixo`, `Se uma coordenada é zero, o ponto fica <b>sobre um eixo</b> e não pertence a nenhum quadrante. Ex.: (5, 0) está no eixo x; (0, −3) está no eixo y.`],
+   [`Distância na mesma linha`, `Mesma altura (mesmo y)? A distância é a diferença dos x. Mesma coluna (mesmo x)? Diferença dos y. Ex.: (−2, 4) e (5, 4) → de −2 até 5 são 7 unidades (2 até o zero + 5 depois dele).`],
+   [`Ponto médio = média`, `O meio do caminho tem como coordenadas a média dos x e a média dos y. Ex.: (1, 3) e (9, 7) → ([[1 + 9|2]], [[3 + 7|2]]) = (5, 5).`],
+   [`Distância = Pitágoras`, `Ligue os dois pontos e desenhe o "degrau": a parte horizontal (Δx) e a vertical (Δy) são os catetos; a distância é a hipotenusa. Ex.: (2, −1) e (5, 3) → Δx = 3, Δy = 4 → d = 5.`],
+   [`Simetria nos eixos`, `Refletir no eixo x troca o sinal do y; refletir no eixo y troca o sinal do x. Ex.: o simétrico de (3, 4) em relação ao eixo x é (3, −4); em relação ao eixo y é (−3, 4).`]
+  ],
+  jeitos: [
+   {n:`Rascunho de quadradinhos`, c:`Desenhe os eixos rapidinho, marque os pontos e complete o triângulo retângulo. Contar quadradinhos evita erro de sinal.`,
+    ex:`A(1, 1) e B(4, 5): do A ande 3 para a direita e 4 para cima → catetos 3 e 4 → distância <b>5</b>.`},
+   {n:`Atravessou o zero? Some os pedaços`, c:`Quando um ponto tem coordenada negativa e o outro positiva, a diferença é a soma das distâncias até o zero (ou "maior menos menor" com cuidado no sinal).`,
+    ex:`De x = −3 até x = 4: 3 + 4 = <b>7</b> (= 4 − (−3)).<br>De y = −6 até y = −1: os dois são negativos → 6 − 1 = <b>5</b>.`},
+   {n:`Ponto médio = meio passo`, c:`Em vez de somar e dividir, veja quanto anda de um ponto ao outro e dê só a metade do passo.`,
+    ex:`A(2, 1) e B(10, 7): Δx = 8 → metade 4 → 2 + 4 = 6; Δy = 6 → metade 3 → 1 + 3 = 4 → M = <b>(6, 4)</b>.`},
+   {n:`Achar a outra ponta: repita o passo`, c:`Se conhece uma ponta A e o ponto médio M, o passo de A até M é igual ao passo de M até B.`,
+    ex:`A(1, 2) e M(4, 5): o passo é +3 em x e +3 em y → B = (4 + 3, 5 + 3) = <b>(7, 8)</b>.`},
+   {n:`Terno na distância`, c:`Achou Δx e Δy? Veja se formam um terno (ou múltiplo) antes de elevar ao quadrado.`,
+    ex:`Δx = 5, Δy = 12 → <b>13</b>.<br>Δx = 9, Δy = 12 → 3-4-5 vezes 3 → <b>15</b>.`}
+  ],
+  passo: [
+   `<b>Desenhe</b> os eixos e marque os pontos (x primeiro, y depois).`,
+   `Quadrante? Olhe só os sinais de x e de y.`,
+   `Ponto médio? Média dos x e média dos y (ou meio passo).`,
+   `Distância? Ache Δx e Δy (cuidado ao atravessar o zero), desenhe o triângulo e use Pitágoras ou um terno.`,
+   `Confira no desenho se a resposta faz sentido (o ponto médio fica entre os dois; a distância é maior que Δx e que Δy).`
+  ],
+  exs: [
+   {q:`Em que quadrante está o ponto P(−6, −8)? Qual é a distância de P até a origem?`,
+    s:[`Sinais: x negativo e y negativo → 3º quadrante.`,`Da origem até P: anda 6 na horizontal e 8 na vertical → catetos 6 e 8.`,`Reconheço o 6-8-10 (3-4-5 vezes 2) → distância 10.`],
+    r:`3º quadrante; distância 10`},
+   {q:`Os pontos A(1, 1), B(7, 1) e C(7, 9) são vértices de um triângulo. Qual é o perímetro e a área desse triângulo?`,
+    s:[`<b>Desenho</b>: A e B têm o mesmo y → AB é horizontal: 7 − 1 = 6. B e C têm o mesmo x → BC é vertical: 9 − 1 = 8.`,`Horizontal com vertical → ângulo reto em B. AC é a hipotenusa: 6-8-10 → AC = 10.`,`Perímetro = 6 + 8 + 10 = 24.`,`Área = 6 · 8 ÷ 2 = 24.`],
+    r:`Perímetro 24 e área 24 (unidades de comprimento e de área)`},
+   {q:`Dados A(−2, 3) e B(4, −5), encontre o ponto médio M do segmento AB e a medida de AM.`,
+    s:[`Ponto médio: ([[−2 + 4|2]], [[3 + (−5)|2]]) = ([[2|2]], [[−2|2]]) = (1, −1).`,`Para AM, posso achar AB e dividir por 2: Δx = 4 − (−2) = 6; Δy = 3 − (−5) = 8 → AB = 10 (6-8-10).`,`AM = metade de AB = 5.`,`Confiro direto: de A(−2, 3) a M(1, −1) → Δx = 3, Δy = 4 → 5 ✓.`],
+    r:`M(1, −1) e AM = 5`}
+  ],
+  erros: [
+   `<b>Errado:</b> marcar (2, 5) subindo 2 e andando 5. <b>Certo:</b> primeiro x (horizontal), depois y: 2 para a direita, 5 para cima.`,
+   `<b>Errado:</b> distância de x = −3 até x = 5 é 2. <b>Certo:</b> é 5 − (−3) = 8.`,
+   `<b>Errado:</b> distância = Δx + Δy (6 + 8 = 14). <b>Certo:</b> é a hipotenusa: √{36 + 64} = 10.`,
+   `<b>Errado:</b> ponto médio = (x<sub>2</sub> − x<sub>1</sub>) ÷ 2. <b>Certo:</b> é a média: (x<sub>1</sub> + x<sub>2</sub>) ÷ 2.`,
+   `<b>Errado:</b> dizer que (0, 4) está no 1º quadrante. <b>Certo:</b> está sobre o eixo y, em nenhum quadrante.`
+  ],
+  resumo: [
+   `(x, y): primeiro anda, depois sobe/desce.`,
+   `Quadrantes anti-horário: 1º (+,+) · 2º (−,+) · 3º (−,−) · 4º (+,−).`,
+   `Ponto médio = média dos x, média dos y.`,
+   `Distância = Pitágoras com Δx e Δy.`,
+   `Atravessou o zero → some as partes.`
+  ]
+ }
+};
+
+/* REVISÃO TURBINADA · Matemática · M4 (Grandezas e medidas) e M5 (Estatística, probabilidade e contagem)
+   Contas conferidas por plus/check_pm45.py */
+const PLUS_M45 = {
+
+/* ============================== m-area ============================== */
+'m-area': {
+ base: [
+  [`Perímetro × área`, `<b>Perímetro</b> é o tamanho da volta: some os lados (resposta em cm, m…). <b>Área</b> é quantos quadradinhos de 1 × 1 cabem dentro (resposta em cm², m²…). Retângulo 5 cm × 3 cm: perímetro = 5 + 3 + 5 + 3 = 16 cm; área = 15 quadradinhos = 15 cm².`],
+  [`Por que retângulo é base × altura`, `Os quadradinhos formam fileiras: 3 fileiras de 5 quadradinhos = 3 × 5 = 15. Multiplicar é só um jeito rápido de contar fileiras iguais.`],
+  [`Altura é sempre "em pé" (forma 90° com a base)`, `A altura é a distância reta entre a base e o lado oposto, como um prumo. O lado inclinado <b>não</b> é a altura. Num paralelogramo de base 8, lado inclinado 5 e altura 4, a área é 8 × 4 = 32 (e não 8 × 5 = 40).`],
+  [`Paralelogramo vira retângulo`, `Corte o triângulo de uma ponta e cole na outra ponta: aparece um retângulo com a <b>mesma base e a mesma altura</b>. Por isso a área do paralelogramo também é base × altura. Base 9, altura 4 → 36.`],
+  [`Triângulo = metade`, `Dois triângulos iguais, um girado, se encaixam e formam um paralelogramo. Então o triângulo é <b>metade</b> de base × altura. Base 7 e altura 6 → [[7 × 6|2]] = [[42|2]] = 21.`],
+  [`Trapézio = média das bases × altura`, `Encaixe dois trapézios iguais (um de cabeça para baixo): forma um paralelogramo de base B + b. O trapézio é metade dele: [[(B + b)|2]] × h. E [[B + b|2]] é a <b>média</b> das bases, a "largura média" do trapézio. Bases 12 e 8, altura 5 → média 10 → 10 × 5 = 50.`],
+  [`Círculo: o que é o π`, `π ≈ 3,14 é quantas vezes o diâmetro cabe na volta do círculo (um pouco mais de 3 vezes). Volta (comprimento) = 2πr. Área = πr²: dá para imaginar "um pouco mais que 3 quadrados de lado r". Raio 10 → área ≈ 3,14 × 100 = 314; volta ≈ 2 × 3,14 × 10 = 62,8.`],
+  [`Quadrados que você precisa saber de cor`, `11² = 121 · 12² = 144 · 13² = 169 · 14² = 196 · 15² = 225 · 20² = 400 · 25² = 625. Eles aparecem em área de quadrado e em πr² o tempo todo.`]
+ ],
+ jeitos: [
+  {n:`Cortar ou subtrair`, c:`Figura esquisita? Ou você <b>corta</b> em pedaços conhecidos e soma, ou completa até um retângulo grande e <b>subtrai</b> o que sobra. Escolha o caminho com menos contas; se der tempo, faça os dois para conferir.`,
+   ex:`Figura em L: retângulo de 10 × 8 sem um canto de 4 × 3.<br>Subtraindo: 10 × 8 − 4 × 3 = 80 − 12 = <b>68</b>.<br>Cortando: parte de baixo 10 × 5 = 50; parte de cima 6 × 3 = 18 → 50 + 18 = <b>68</b>. Bateu!`},
+  {n:`Trapézio pela média das bases`, c:`Em vez de decorar [[(B + b) × h|2]], faça a média das bases primeiro (fica um número só) e multiplique pela altura.`,
+   ex:`Bases 15 e 9, altura 6 → média [[15 + 9|2]] = 12 → 12 × 6 = <b>72</b>.<br>Bases 7 e 5, altura 10 → média 6 → 6 × 10 = <b>60</b>.`},
+  {n:`Divida por 2 antes`, c:`No triângulo, corte pela metade o número que for par <b>antes</b> de multiplicar. A conta fica pequena.`,
+   ex:`Base 14, altura 9 → 7 × 9 = <b>63</b>.<br>Base 25, altura 8 → 25 × 4 = <b>100</b>.`},
+  {n:`Lado × k → área × k²`, c:`Se todas as medidas de uma figura são multiplicadas por k, a área fica multiplicada por k × k. Dobrou o lado → área ×4. Triplicou → ×9. Lado pela metade → área ÷4. Vale para círculo também (com o raio).`,
+   ex:`Quadrado de lado 6: área 36. Lado 12 (dobro): área 144 = 4 × 36.<br>Círculo de raio 3: 9π. Raio 6: 36π, que é <b>4 vezes</b> mais.<br>Triângulo de área 10 com base e altura triplicadas: 10 × 9 = <b>90</b>.`},
+  {n:`π só no final (×3,14 = ×3 + ×0,14)`, c:`Calcule tudo deixando o π "guardado" (ex.: 25π) e só no fim troque pelo valor que a prova mandar. Para multiplicar por 3,14 de cabeça: multiplique por 3, depois por 0,14, e some.`,
+   ex:`Raio 20 → 400π → 400 × 3 = 1 200 e 400 × 0,14 = 56 → <b>1 256</b>.<br>Semicírculo de raio 4 → [[16π|2]] = 8π → 8 × 3,14 = 24 + 1,12 = <b>25,12</b>.`},
+  {n:`Mesmo perímetro, áreas diferentes`, c:`Perímetro igual <b>não</b> significa área igual. Com uma cerca de tamanho fixo, a maior área retangular é a do <b>quadrado</b>.`,
+   ex:`Perímetro 20 (base + altura = 10): 1 × 9 = 9 · 4 × 6 = 24 · 5 × 5 = <b>25</b> (o maior).`}
+ ],
+ passo: [
+  `Desenhe a figura (ou rabisque em cima da dela) e escreva as medidas.`,
+  `Pergunte: é a volta (perímetro) ou o espaço de dentro (área)?`,
+  `Figura composta? Decida: cortar e somar, ou subtrair o buraco.`,
+  `Confira se é raio ou diâmetro e se a altura está "em pé".`,
+  `Deixe tudo na mesma unidade antes de multiplicar.`,
+  `Responda com a unidade certa (cm ou cm²) e veja se o tamanho faz sentido.`
+ ],
+ exs: [
+  {q:`Um paralelogramo tem base 12 cm, lados inclinados de 7 cm e altura 5 cm. Qual é sua área e qual é seu perímetro?`,
+   s:[`Primeiro eu separo: área usa base × altura "em pé"; perímetro soma os lados.`,`Área: 12 × 5 = 60 cm² (o 7 não entra, ele é inclinado).`,`Perímetro: 12 + 7 + 12 + 7 = 2 × 19 = 38 cm.`],
+   r:`Área 60 cm² e perímetro 38 cm`},
+  {q:`Uma bandeira retangular mede 60 cm × 40 cm. Nela há um triângulo azul com um lado ocupando todo o lado esquerdo (40 cm) e o vértice oposto no meio do lado direito. Qual é a área da parte que não é azul?`,
+   s:[`Desenho: o triângulo tem base 40 (o lado esquerdo) e altura 60 (a distância até o lado direito).`,`Triângulo: [[40 × 60|2]] = 20 × 60 = 1 200 cm² (dividi por 2 antes).`,`Retângulo inteiro: 60 × 40 = 2 400 cm².`,`Parte não azul: 2 400 − 1 200 = 1 200 cm². Repare: o triângulo é exatamente metade do retângulo!`],
+   r:`1 200 cm²`},
+  {q:`Uma pizzaria vende pizza grande de 30 cm de diâmetro por R$ 36,00 e pizza brotinho de 15 cm de diâmetro por R$ 12,00. Qual compensa mais?`,
+   s:[`O diâmetro da grande é o dobro do da brotinho. Uso o macete: medida ×2 → área ×4.`,`Então uma grande tem a mesma quantidade de pizza que 4 brotinhos.`,`4 brotinhos custam 4 × 12 = R$ 48,00; a grande custa R$ 36,00.`,`Quem pensa "o dobro do tamanho vale o dobro do preço" erra: a grande compensa muito mais.`],
+   r:`A grande (equivale a 4 brotinhos, que custariam R$ 48,00)`}
+ ],
+ erros: [
+  `<b>Errado:</b> usar o lado inclinado como altura (8 × 5 no paralelogramo). <b>Certo:</b> altura é a medida "em pé", a 90° da base.`,
+  `<b>Errado:</b> lado dobrou → área dobrou. <b>Certo:</b> área fica 4 vezes maior (2 × 2).`,
+  `<b>Errado:</b> esquecer o ÷ 2 do triângulo ou do trapézio. <b>Certo:</b> triângulo é metade; trapézio usa a média das bases.`,
+  `<b>Errado:</b> responder área em cm ou perímetro em cm². <b>Certo:</b> volta → cm; espaço de dentro → cm².`,
+  `<b>Errado:</b> usar 2πr para área. <b>Certo:</b> πr² é área; 2πr é a volta.`
+ ],
+ resumo: [
+  `Perímetro = volta (cm) · área = quadradinhos (cm²).`,
+  `Paralelogramo = retângulo "torto" → b × h.`,
+  `Triângulo = metade · trapézio = média das bases × h.`,
+  `Círculo: πr² área · 2πr volta.`,
+  `Composta: corte e some, ou subtraia o buraco.`,
+  `Lado ×2 → área ×4 · lado ×3 → área ×9.`
+ ]
+},
+
+/* ============================== m-vol ============================== */
+'m-vol': {
+ base: [
+  [`Volume = cubinhos que cabem`, `Volume mede quantos cubinhos de 1 × 1 × 1 cabem dentro, em unidades cúbicas (cm³, m³). Caixa de 4 × 3 × 2: o chão tem 4 × 3 = 12 cubinhos; são 2 andares → 24 cm³.`],
+  [`Área da base × altura`, `Vale para qualquer prisma e para o cilindro: a base é uma "folha" e a altura diz quantas folhas empilhamos. Prisma de base triangular com base 6 e altura 4 no triângulo (área [[6 × 4|2]] = 12) e comprimento 10 → 12 × 10 = 120.`],
+  [`Cubos de 1 a 10`, `1 · 8 · 27 · 64 · 125 · 216 · 343 · 512 · 729 · 1 000. Cubo de aresta 5 → 5 × 5 × 5 = 125.`],
+  [`1 dm³ = 1 L`, `1 dm = 10 cm. Uma caixa de 10 cm × 10 cm × 10 cm tem 1 000 cm³ e cabe exatamente 1 litro (o mesmo que uma caixa de leite de 1 litro).`],
+  [`1 cm³ = 1 mL`, `Um cubinho de 1 cm de lado (do tamanho de um dado pequeno) guarda 1 mL. Uma seringa de 5 mL tem 5 cm³.`],
+  [`1 m³ = 1 000 L`, `Um cubo de 1 m de lado tem 10 dm em cada direção: 10 × 10 × 10 = 1 000 dm³ = 1 000 litros. Uma caixa-d’água de 1 m³ é bem grande!`],
+  [`Volume × capacidade`, `Volume é o espaço que um objeto ocupa (cm³, m³). Capacidade é quanto cabe dentro de um recipiente (L, mL). Elas se ligam pelas pontes acima: dm³ ↔ L, cm³ ↔ mL.`]
+ ],
+ jeitos: [
+  {n:`Tudo em dm = resposta em litros`, c:`Antes de multiplicar, passe as medidas para dm (cm ÷ 10; m × 10). O resultado já sai em dm³, ou seja, em litros. Nada de converter números gigantes no final.`,
+   ex:`Caixa 80 cm × 50 cm × 30 cm → 8 × 5 × 3 = <b>120 L</b>.<br>Tanque 2 m × 1 m × 0,5 m → 20 × 10 × 5 = <b>1 000 L</b>.`},
+  {n:`Aresta × k → volume × k³`, c:`Se todas as medidas são multiplicadas por k, o volume fica k × k × k vezes maior. Dobrou → ×8. Triplicou → ×27. Pela metade → ÷8.`,
+   ex:`Cubo de aresta 2 cm: 8 cm³. Aresta 6 cm (triplo): 216 cm³ = 27 × 8.<br>Caixa de 40 L com todas as medidas pela metade → 40 ÷ 8 = <b>5 L</b>.`},
+  {n:`Só a parte que importa`, c:`Para "quanto falta encher" ou "quanto de água tem", use a área da base × a altura <b>daquela parte</b>, não do recipiente inteiro.`,
+   ex:`Caixa com base 2 m × 1,5 m e 1 m de altura, com água até 0,6 m. Falta: 2 × 1,5 × 0,4 = 1,2 m³ = <b>1 200 L</b>.`},
+  {n:`Multiplique em ordem esperta`, c:`A multiplicação pode ser feita em qualquer ordem. Junte primeiro os pares que dão número redondo: 25 × 4 = 100, 5 × 2 = 10, 0,5 × 2 = 1.`,
+   ex:`25 × 13 × 4 = 100 × 13 = <b>1 300</b>.<br>Cilindro com π ≈ 3, r = 5, h = 4: 3 × 25 × 4 = 3 × 100 = <b>300</b>.`},
+  {n:`Vazão: volume ÷ tempo`, c:`Vazão diz quantos litros passam por minuto. Tempo para encher = volume ÷ vazão. Deixe volume e vazão na mesma unidade (litros).`,
+   ex:`Tanque de 600 L, torneira de 20 L/min → 600 ÷ 20 = <b>30 min</b>.`}
+ ],
+ passo: [
+  `Identifique a forma: caixa, cubo, prisma ou cilindro.`,
+  `Calcule a área da base (retângulo, triângulo ou círculo).`,
+  `Multiplique pela altura (só a parte cheia, se for o caso).`,
+  `Coloque tudo na mesma unidade; se der, use dm para sair em litros.`,
+  `Converta no final: m³ × 1 000 = L · cm³ ÷ 1 000 = L · cm³ = mL.`
+ ],
+ exs: [
+  {q:`Uma rampa de concreto tem a forma de um prisma: a face lateral é um triângulo retângulo com 3 m de comprimento e 1 m de altura, e a rampa tem 2 m de largura. Quantos m³ de concreto foram usados?`,
+   s:[`Primeiro eu vejo qual é a "folha" que se repete: o triângulo lateral.`,`Área do triângulo: [[3 × 1|2]] = 1,5 m².`,`Empilho essa folha ao longo da largura: 1,5 × 2 = 3 m³.`],
+   r:`3 m³`},
+  {q:`Um copo cilíndrico tem 6 cm de diâmetro e 10 cm de altura. Com uma jarra de 1,8 L de suco, quantos copos ficam completamente cheios? (Use π ≈ 3.)`,
+   s:[`Diâmetro 6 → raio 3.`,`Volume do copo: 3 × 3² × 10 = 3 × 9 × 10 = 270 cm³ = 270 mL.`,`Jarra: 1,8 L = 1 800 mL.`,`1 800 ÷ 270 ≈ 6,7. Estimo: 6 × 270 = 1 620 (cabe); 7 × 270 = 1 890 (passa de 1 800).`],
+   r:`6 copos cheios`},
+  {q:`Um cubo de 10 cm de aresta está cheio de água. Toda essa água é despejada num recipiente em forma de paralelepípedo, com base de 25 cm × 8 cm. Que altura a água atinge?`,
+   s:[`Volume da água: 10³ = 1 000 cm³ (1 litro).`,`No recipiente, volume = área da base × altura → 1 000 = 25 × 8 × h.`,`25 × 8 = 200 → h = 1 000 ÷ 200 = 5 cm.`],
+   r:`5 cm`}
+ ],
+ erros: [
+  `<b>Errado:</b> multiplicar 2 m × 50 cm × 30 cm misturando unidades. <b>Certo:</b> converta tudo antes (20 dm × 5 dm × 3 dm = 300 L).`,
+  `<b>Errado:</b> 1 m³ = 100 L. <b>Certo:</b> 1 m³ = 1 000 L (10 × 10 × 10 dm³).`,
+  `<b>Errado:</b> aresta dobrou → volume ×2 ou ×4. <b>Certo:</b> ×8 (2 × 2 × 2).`,
+  `<b>Errado:</b> usar o diâmetro na fórmula πr²h. <b>Certo:</b> divida o diâmetro por 2 antes.`
+ ],
+ resumo: [
+  `V = área da base × altura (pilha de folhas).`,
+  `Cubo a³ · caixa c × l × a · cilindro πr²h.`,
+  `1 dm³ = 1 L · 1 m³ = 1 000 L · 1 cm³ = 1 mL.`,
+  `Medidas em dm → resposta direto em litros.`,
+  `Aresta ×2 → volume ×8.`
+ ]
+},
+
+/* ============================== m-unid ============================== */
+'m-unid': {
+ base: [
+  [`Os prefixos dizem o tamanho`, `<b>quilo</b> = 1 000 · <b>hecto</b> = 100 · <b>deca</b> = 10 · <b>deci</b> = décimo · <b>centi</b> = centésimo · <b>mili</b> = milésimo. Igual ao dinheiro: 100 centavos = 1 real, e 100 centímetros = 1 metro.`],
+  [`Descer multiplica, subir divide`, `Indo de uma unidade grande para uma pequena (m → cm), o número <b>aumenta</b>, porque cabem mais pedaços: 3,7 m = 370 cm. Indo da pequena para a grande, diminui: 450 cm = 4,5 m.`],
+  [`Por que área é ×100 por degrau`, `1 m² é um quadrado de 1 m × 1 m = 10 dm × 10 dm = 100 dm². Cada degrau conta duas vezes (comprimento e largura). 3 m² = 300 dm² = 30 000 cm².`],
+  [`Por que volume é ×1 000 por degrau`, `1 dm³ = 10 cm × 10 cm × 10 cm = 1 000 cm³. São três direções, então três zeros por degrau. 2 m³ = 2 000 dm³ = 2 000 000 cm³.`],
+  [`Litro e grama também têm escada`, `Capacidade: L → dL → cL → mL (×10 por degrau) e 1 L = 1 000 mL. Massa: 1 kg = 1 000 g; 1 t = 1 000 kg. 2,5 kg = 2 500 g.`],
+  [`Tempo é base 60, não base 10`, `1 h = 60 min · 1 min = 60 s · 1 h = 3 600 s. Por isso a vírgula da hora <b>não</b> é minuto: 0,5 h = 30 min; 0,25 h = 15 min; 0,75 h = 45 min; 1,2 h = 72 min = 1h12min.`],
+  [`Minutos para horas: divide por 60`, `90 min = [[90|60]] h = 1,5 h. 20 min = [[20|60]] = [[1|3]] de hora. 45 min = [[3|4]] de hora = 0,75 h.`]
+ ],
+ jeitos: [
+  {n:`Conte degraus × zeros`, c:`Conte quantos degraus separam as unidades e multiplique pelo "tamanho do passo": 1 casa (comprimento), 2 casas (área), 3 casas (volume). Ande a vírgula esse tanto de casas.`,
+   ex:`2,5 km → m: 3 degraus × 1 casa = 3 casas → <b>2 500 m</b>.<br>0,04 m² → cm²: 2 degraus × 2 casas = 4 casas → <b>400 cm²</b>.<br>5 000 cm³ → dm³: 1 degrau × 3 casas → <b>5 dm³</b> (5 L).`},
+  {n:`0,1 h = 6 min`, c:`Cada décimo de hora vale 6 minutos. Com uma casa decimal, multiplique o algarismo depois da vírgula por 6.`,
+   ex:`0,7 h → 7 × 6 = <b>42 min</b>.<br>1,2 h → 1 h e 2 × 6 = 12 min → 1h12min = <b>72 min</b>.<br>2,35 h → 0,3 h = 18 min e 0,05 h = 3 min → <b>2h21min</b>.`},
+  {n:`Minutos ÷ 6 = décimos de hora`, c:`O caminho contrário: divida os minutos por 6 e você tem os décimos de hora.`,
+   ex:`36 min → 36 ÷ 6 = 6 → <b>0,6 h</b>.<br>1h24min → 24 ÷ 6 = 4 → <b>1,4 h</b>.`},
+  {n:`Troque a unidade pelo que ela vale`, c:`Escreva o valor da unidade no lugar dela e faça a conta. Serve para qualquer conversão, inclusive velocidade.`,
+   ex:`3 h em segundos: 3 × 3 600 = <b>10 800 s</b>.<br>54 km/h = [[54 000 m|3 600 s]] = <b>15 m/s</b> (o mesmo que 54 ÷ 3,6).`},
+  {n:`Relógio: complete a hora cheia`, c:`Para somar horários, primeiro complete até a próxima hora cheia e depois some o resto. Para achar duração, faça o mesmo caminho.`,
+   ex:`8h45 + 1h50: 8h45 + 15 min = 9h00; sobra 1h35 → <b>10h35</b>.<br>Das 9h50 às 11h20: 10 min até 10h + 1h20 = <b>1h30min</b>.`}
+ ],
+ passo: [
+  `Escreva a escada da grandeza (comprimento, área, volume, massa, capacidade ou tempo).`,
+  `Veja se vai descer (multiplica) ou subir (divide).`,
+  `Conte os degraus e o tamanho do passo (1, 2 ou 3 casas).`,
+  `Tempo? Lembre: base 60, nada de "andar vírgula".`,
+  `Confira: unidade menor → número maior.`
+ ],
+ exs: [
+  {q:`Uma receita pede 0,75 L de leite. Quantos copos de 250 mL são necessários?`,
+   s:[`Primeiro passo tudo para mL: 0,75 L = 750 mL (L → mL anda 3 casas).`,`750 ÷ 250 = 3.`],
+   r:`3 copos`},
+  {q:`Pedro correu 10 km em 50 minutos, num ritmo constante. Qual foi sua velocidade média em km/h?`,
+   s:[`Penso no mais simples: 10 km em 50 min é 1 km a cada 5 min.`,`Em 60 min (1 hora) ele faria 60 ÷ 5 = 12 km.`,`Conferindo pela fórmula: 50 min = [[5|6]] h → 10 ÷ [[5|6]] = 10 × [[6|5]] = 12.`],
+   r:`12 km/h`},
+  {q:`Quantos azulejos quadrados de 20 cm de lado são necessários para cobrir uma parede de 3 m por 2,4 m?`,
+   s:[`Primeiro tudo em cm: 3 m = 300 cm; 2,4 m = 240 cm.`,`Jeito 1 (fileiras): 300 ÷ 20 = 15 azulejos na largura; 240 ÷ 20 = 12 na altura → 15 × 12 = 180.`,`Jeito 2 (áreas): parede 300 × 240 = 72 000 cm²; azulejo 20 × 20 = 400 cm² → 72 000 ÷ 400 = 180. Bateu!`],
+   r:`180 azulejos`}
+ ],
+ erros: [
+  `<b>Errado:</b> 1 m² = 100 cm². <b>Certo:</b> 1 m² = 10 000 cm² (área anda 2 casas por degrau).`,
+  `<b>Errado:</b> 1,2 h = 1h20min. <b>Certo:</b> 0,2 × 60 = 12 → 1h12min.`,
+  `<b>Errado:</b> 2h40min = 2,4 h. <b>Certo:</b> 40 ÷ 60 = [[2|3]] ≈ 0,67 → 2h40min ≈ 2,67 h.`,
+  `<b>Errado:</b> multiplicar medidas em unidades diferentes (0,2 km × 150 m). <b>Certo:</b> converta antes de multiplicar.`
+ ],
+ resumo: [
+  `km hm dam m dm cm mm: desce ×, sobe ÷.`,
+  `Comprimento 1 casa · área 2 · volume 3 por degrau.`,
+  `1 L = 1 000 mL · 1 kg = 1 000 g.`,
+  `Hora é base 60: 0,1 h = 6 min · 0,5 h = 30 min.`,
+  `1,2 h = 72 min · km/h ÷ 3,6 = m/s.`
+ ]
+},
+
+/* ============================== m-graf ============================== */
+'m-graf': {
+ base: [
+  [`Título e fonte`, `O título diz <b>do que</b> são os dados e <b>quando</b>. A fonte diz quem pesquisou. Muitas questões só exigem ler o título com atenção ("vendas em milhares", "em %").`],
+  [`Os dois eixos`, `O eixo horizontal costuma ter as categorias ou o tempo; o vertical, os valores. Leia a unidade: se o eixo diz "em milhares", uma barra no 35 vale 35 000.`],
+  [`A escala (quanto vale cada risco)`, `Veja de quanto em quanto o eixo pula. Se marca 0, 10, 20, 30…, cada risco vale 10, e uma barra no meio entre 30 e 40 vale 35.`],
+  [`A legenda`, `Quando há duas ou mais cores, a legenda diz o que cada cor representa (ex.: azul = meninos, laranja = meninas). Responder olhando a cor errada é erro de leitura, não de conta.`],
+  [`Eixo que não começa no zero`, `Se o eixo começa em 50, as barras mostram só o pedaço acima de 50. Barras de 60 e 80 aparecem com alturas 10 e 30: parece o triplo, mas 80 é só [[80|60]] ≈ 1,33 vez 60. Compare os <b>números</b>, nunca o desenho.`],
+  [`Setores: % × 360°`, `O círculo todo (360°) é 100%. Então 1% = 3,6° e 10% = 36°. Setor de 30% → 3 × 36 = 108°.`],
+  [`Tabela de dupla entrada`, `Cada número está no cruzamento de uma linha com uma coluna. Para responder, ache a linha <b>e</b> a coluna certas; para totais, some a linha ou a coluna inteira.`],
+  [`Variação: quanto e quantos %`, `De 200 para 250: aumentou 50 (variação absoluta) e [[50|200]] = 25% (variação percentual, sempre sobre o valor de <b>antes</b>).`]
+ ],
+ jeitos: [
+  {n:`10% = 36°`, c:`Guarde só isso e monte o resto: 5% = 18°, 1% = 3,6°. Para voltar de grau para %, divida por 3,6 (ou veja quantos 36° cabem).`,
+   ex:`15% → 36 + 18 = <b>54°</b>.<br>45° → 45 ÷ 360 = [[1|8]] = <b>12,5%</b>.`},
+  {n:`Pizza em frações`, c:`Muitos ângulos são frações fáceis do círculo: 180° = [[1|2]] · 120° = [[1|3]] · 90° = [[1|4]] · 60° = [[1|6]] · 45° = [[1|8]] · 30° = [[1|12]]. Achou a fração? Aplique no total.`,
+   ex:`Setor de 60° numa pesquisa com 420 pessoas → [[1|6]] de 420 = <b>70 pessoas</b>.<br>Total de 360 pessoas: cada grau é 1 pessoa! Setor de 90° → <b>90 pessoas</b>.`},
+  {n:`Some para achar o que falta`, c:`As partes de uma pizza somam 100% (ou 360°); as linhas de uma tabela somam o total. Se falta uma fatia, é o que sobra.`,
+   ex:`Fatias de 35%, 25% e 20% → a quarta é 100 − 80 = <b>20%</b>.<br>Setores de 150° e 90° → os outros somam 360 − 240 = <b>120°</b>.`},
+  {n:`"Quanto a mais", "quantas vezes" ou "quantos %"?`, c:`"Quanto a mais" → subtraia. "Quantas vezes" → divida. "Quantos por cento aumentou" → diferença ÷ valor de antes.`,
+   ex:`De 120 para 150: <b>+30</b>; 150 ÷ 120 = <b>1,25 vez</b>; [[30|120]] = [[1|4]] = <b>25%</b> de aumento.`},
+  {n:`Eixo cortado: some o início`, c:`Quando o eixo não começa no zero, o valor real é o início do eixo + a altura que você vê. Depois compare os valores reais.`,
+   ex:`Eixo começa em 50; barras com altura 10 e 30 → valores 60 e 80. A diferença real é 20, e 80 não é o triplo de 60 (é <b>[[4|3]]</b> de 60).`}
+ ],
+ passo: [
+  `Leia título, unidade e fonte (em %? em milhares?).`,
+  `Leia os eixos e descubra quanto vale cada risco; confira se começa no zero.`,
+  `Veja a legenda: qual cor/linha é qual.`,
+  `Grife o que a pergunta quer: valor, diferença, quantas vezes ou porcentagem.`,
+  `Faça a conta com os números (não com o tamanho do desenho).`,
+  `Confira: a resposta é coerente com o gráfico?`
+ ],
+ exs: [
+  {q:`Numa pesquisa com 360 alunos sobre como vão à escola, o setor "bicicleta" mede 90° e o setor "ônibus" mede 150°. Quantos alunos a mais vão de ônibus do que de bicicleta?`,
+   s:[`Uso o macete: o total é 360 e o círculo tem 360°, então cada grau vale 1 aluno.`,`Bicicleta: 90 alunos. Ônibus: 150 alunos.`,`"Quantos a mais" → subtrai: 150 − 90 = 60.`],
+   r:`60 alunos`},
+  {q:`Lucro de uma cantina (em reais): janeiro 800, fevereiro 1 000, março 900, abril 1 350. Em qual passagem de um mês para o seguinte houve o maior aumento percentual, e de quanto foi?`,
+   s:[`Calculo cada variação sobre o mês de antes.`,`Jan → fev: +200 sobre 800 = [[1|4]] = 25%.`,`Fev → mar: −100 (caiu) sobre 1 000 = −10%.`,`Mar → abr: +450 sobre 900 = [[1|2]] = 50%.`],
+   r:`De março para abril, aumento de 50%`},
+  {q:`Numa turma de 40 alunos, 60% são meninas. Entre as meninas, 25% usam óculos; entre os meninos, 75% usam óculos. Que porcentagem da turma usa óculos?`,
+   s:[`Monto a tabela de dupla entrada com números, não com porcentagens.`,`Meninas: 60% de 40 = 24 → 25% de 24 = 6 usam óculos.`,`Meninos: 40 − 24 = 16 → 75% de 16 = 12 usam óculos.`,`Total com óculos: 6 + 12 = 18 → [[18|40]] = 45%.`,`Repare: não é a média de 25% e 75% (50%), porque os grupos têm tamanhos diferentes.`],
+   r:`45%`}
+ ],
+ erros: [
+  `<b>Errado:</b> comparar a altura das barras num eixo que começa em 50. <b>Certo:</b> some o início do eixo e compare os valores.`,
+  `<b>Errado:</b> ler "35" num eixo "em milhares" como 35. <b>Certo:</b> 35 mil = 35 000.`,
+  `<b>Errado:</b> calcular a variação percentual sobre o valor novo. <b>Certo:</b> divida a diferença pelo valor de antes.`,
+  `<b>Errado:</b> tirar a média de porcentagens de grupos de tamanhos diferentes. <b>Certo:</b> transforme em quantidades, some, e só depois divida pelo total.`
+ ],
+ resumo: [
+  `Título → unidade → eixos → legenda → pergunta.`,
+  `Eixo começa no zero? Se não, cuidado!`,
+  `Setor: 10% = 36° · 90° = [[1|4]] · 120° = [[1|3]].`,
+  `A mais → subtrai · vezes → divide · % → diferença ÷ antes.`,
+  `Pizza soma 100% = 360°.`
+ ]
+},
+
+/* ============================== m-media ============================== */
+'m-media': {
+ base: [
+  [`Média = "dividir igualmente"`, `A média é o valor que cada um teria se tudo fosse repartido igualmente. Três amigos com 2, 5 e 8 balas: juntando, 15 balas; repartindo, cada um fica com 5. A média é 5.`],
+  [`Soma = média × quantidade`, `Se você sabe a média e quantos são, sabe a soma. Média 7 em 6 provas → soma 42. Isso resolve quase toda questão de "quanto falta" ou "quem saiu".`],
+  [`Peso = quantas vezes conta`, `Na média ponderada, peso 3 significa que a nota conta como se aparecesse 3 vezes. Nota 7 (peso 3) e nota 4 (peso 1) é como 7, 7, 7, 4 → [[25|4]] = 6,25.`],
+  [`Mediana: a posição do meio`, `Ordene! Com n valores e n ímpar, a mediana está na posição [[n + 1|2]]: com 7 valores, é o 4º. Com n par, é a média do par do meio: com 10 valores, média do 5º e do 6º.`],
+  [`Moda: o valor campeão`, `É o valor que mais se repete. Numa tabela de frequências, a moda é o <b>valor</b> com maior frequência, e não a maior frequência. Se o valor 3 aparece 12 vezes (o máximo), a moda é 3, e não 12.`],
+  [`Amplitude: o tamanho da variação`, `Maior − menor. Temperaturas de 14° a 31° → amplitude 31 − 14 = 17°. Amplitude grande = dados espalhados.`],
+  [`Média sofre com extremos`, `Um valor muito alto ou muito baixo puxa a média, mas quase não mexe na mediana. 1, 2, 3, 4, 90: média [[100|5]] = 20; mediana 3. Qual representa melhor? A mediana.`]
+ ],
+ jeitos: [
+  {n:`Acerto em relação a um valor`, c:`Escolha um valor "redondo" perto dos dados, anote quanto cada um passa (+) ou falta (−), some os acertos e divida pela quantidade. Média = valor escolhido + (soma dos acertos ÷ quantidade). Contas pequenas, sem somar números grandes.`,
+   ex:`87, 92, 85, 90, 96 → base 90: −3, +2, −5, 0, +6 → soma 0 → média <b>90</b>.<br>7,5; 8; 6,5; 9 → base 8: −0,5; 0; −1,5; +1 → soma −1 → −1 ÷ 4 = −0,25 → média <b>7,75</b>.`},
+  {n:`Quanto falta`, c:`Nota que falta = soma necessária − soma que já tem. Pelo jeito dos acertos: a nova nota precisa compensar o que ficou faltando.`,
+   ex:`Média 6 em 4 provas; já tem 5, 7 e 4. Soma necessária 4 × 6 = 24; tem 16 → falta <b>8</b>.<br>Pelos acertos: −1, +1, −2 = −2 → a última precisa ser 6 + 2 = <b>8</b>.`},
+  {n:`Peso = repetir a nota`, c:`Se os pesos são pequenos, escreva cada nota tantas vezes quanto o peso e faça uma média comum. Fica claro e evita esquecer de dividir pela soma dos pesos.`,
+   ex:`8 (peso 2) e 6 (peso 3) → 8, 8, 6, 6, 6 → [[34|5]] = <b>6,8</b>.`},
+  {n:`Mediana em tabela: vá acumulando`, c:`Numa tabela de frequências, some as frequências de cima para baixo até passar da posição do meio. O valor onde você "passou" é a mediana.`,
+   ex:`Nota 5: 3 alunos · nota 6: 4 · nota 7: 6 · nota 8: 2 (15 alunos). Meio = 8º aluno. Acumulado: 3, 7, 13 → o 8º está na nota <b>7</b>. Moda também 7 (6 alunos).`},
+  {n:`Entrou um valor: reparta a diferença`, c:`Quando entra um valor novo, a diferença dele para a média antiga é repartida entre todos (agora com um a mais).`,
+   ex:`9 alunos com média 6; chega um aluno com nota 10. Ele está 4 acima da média, repartido por 10 → +0,4 → nova média <b>6,4</b>.<br>Conferindo: [[54 + 10|10]] = [[64|10]] = 6,4.`}
+ ],
+ passo: [
+  `Identifique o que pede: média, ponderada, mediana, moda ou amplitude.`,
+  `Mediana? <b>Ordene primeiro</b> e ache a posição do meio.`,
+  `Média? Pense em "soma = média × quantidade".`,
+  `Ponderada? Multiplique cada valor pelo peso e divida pela soma dos pesos.`,
+  `Use o acerto em relação a um valor para contas mais leves.`,
+  `Confira: a média fica entre o menor e o maior valor?`
+ ],
+ exs: [
+  {q:`As idades dos 7 jogadores de um time de vôlei são 13, 14, 14, 15, 13, 14 e 15. Calcule a média, a mediana, a moda e a amplitude.`,
+   s:[`Média pelo acerto em relação a 14: −1, 0, 0, +1, −1, 0, +1 → soma 0 → média 14.`,`Ordeno: 13, 13, 14, 14, 14, 15, 15. São 7 valores → o 4º é o meio → mediana 14.`,`Moda: o 14 aparece 3 vezes → 14.`,`Amplitude: 15 − 13 = 2.`],
+   r:`Média 14, mediana 14, moda 14 e amplitude 2`},
+  {q:`Em Matemática, a prova tem peso 4, o simulado peso 3 e a lista de exercícios peso 3. Lia tirou 7 na prova, 9 no simulado e 6 na lista. Qual é sua média?`,
+   s:[`Multiplico cada nota pelo peso: 7 × 4 = 28; 9 × 3 = 27; 6 × 3 = 18.`,`Somo: 28 + 27 + 18 = 73. Soma dos pesos: 4 + 3 + 3 = 10.`,`Média = [[73|10]] = 7,3. (Dividir por 10 é só andar a vírgula!)`],
+   r:`7,3`},
+  {q:`Uma lista tem 5 números inteiros. A média é 10, a mediana é 9 e a moda é 8 (só o 8 é moda). Qual é o maior valor que o maior desses números pode ter?`,
+   s:[`Soma = 5 × 10 = 50. Ordenados: a, b, 9, d, e (a mediana é o 3º).`,`Para o 8 ser moda, ele aparece pelo menos 2 vezes, e só cabe antes do 9: a = b = 8.`,`Para o último ser o maior possível, o 4º deve ser o menor possível. Se fosse 9, o 9 apareceria 2 vezes e empataria com o 8 na moda. Então d = 10.`,`e = 50 − 8 − 8 − 9 − 10 = 15. Lista: 8, 8, 9, 10, 15.`],
+   r:`15`}
+ ],
+ erros: [
+  `<b>Errado:</b> achar a mediana sem ordenar. <b>Certo:</b> ordene e depois pegue o meio.`,
+  `<b>Errado:</b> na ponderada, dividir pela quantidade de notas. <b>Certo:</b> divida pela soma dos pesos.`,
+  `<b>Errado:</b> dizer que a moda é a maior frequência da tabela (ex.: "12"). <b>Certo:</b> a moda é o valor que tem essa frequência.`,
+  `<b>Errado:</b> com quantidade par, pegar só um valor do meio. <b>Certo:</b> faça a média dos dois do meio.`
+ ],
+ resumo: [
+  `Média = soma ÷ quantidade → soma = média × quantidade.`,
+  `Ponderada: soma de (valor × peso) ÷ soma dos pesos.`,
+  `Mediana: ORDENE · par → média dos dois do meio.`,
+  `Moda = mais aparece · amplitude = maior − menor.`,
+  `Atalho: escolha um valor e some os acertos (+/−).`
+ ]
+},
+
+/* ============================== m-prob ============================== */
+'m-prob': {
+ base: [
+  [`Espaço amostral e evento`, `<b>Espaço amostral</b> é a lista de tudo o que pode acontecer. <b>Evento</b> é a parte que você quer. Dado: espaço {1, 2, 3, 4, 5, 6}; evento "sair maior que 4" = {5, 6}.`],
+  [`P = favoráveis ÷ possíveis`, `Com resultados igualmente prováveis, P = [[favoráveis|possíveis]]. "Sair maior que 4" no dado: [[2|6]] = [[1|3]]. Sempre simplifique a fração no final.`],
+  [`Entre 0 e 1 (ou 0% e 100%)`, `0 = impossível (sair 7 num dado). 1 = certo (sair número menor que 7). Para virar %: [[1|4]] = 25%; [[3|5]] = 60%. Se deu maior que 1, errou a conta.`],
+  [`Complementar: 1 − P`, `"Não acontecer" = 1 − "acontecer". Se a chance de acertar é [[2|5]], a de errar é [[3|5]].`],
+  [`Dois dados = 36 pares`, `Cada dado tem 6 faces: 6 × 6 = 36 resultados. (2, 5) e (5, 2) são resultados <b>diferentes</b> (pense num dado azul e outro vermelho).`],
+  [`"E" multiplica (independentes)`, `Se um resultado não muda o outro (moeda e dado, dois dados, sorteio com reposição), a chance de acontecer um <b>e</b> outro é o produto. Duas caras em duas moedas: [[1|2]] × [[1|2]] = [[1|4]].`],
+  [`"Ou" soma (quando não acontecem juntos)`, `Se os casos não podem acontecer ao mesmo tempo, some. Dado: sair 1 <b>ou</b> 6 → [[1|6]] + [[1|6]] = [[2|6]] = [[1|3]].`]
+ ],
+ jeitos: [
+  {n:`Tabela dos 2 dados`, c:`Monte a tabela 6 × 6 com as somas. Somas iguais ficam em diagonais. O 7 é o mais comum (6 casos); a partir dele, cada passo para cima ou para baixo perde 1 caso: soma 6 ou 8 → 5 casos; 5 ou 9 → 4; 4 ou 10 → 3; 3 ou 11 → 2; 2 ou 12 → 1.`,
+   ex:`<table class="tb"><tr><th>+</th><th>1</th><th>2</th><th>3</th><th>4</th><th>5</th><th>6</th></tr><tr><th>1</th><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td></tr><tr><th>2</th><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td></tr><tr><th>3</th><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td></tr><tr><th>4</th><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr><tr><th>5</th><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td></tr><tr><th>6</th><td>7</td><td>8</td><td>9</td><td>10</td><td>11</td><td>12</td></tr></table>Soma 8: 5 casos → <b>[[5|36]]</b>. Soma 4: 3 casos → [[3|36]] = <b>[[1|12]]</b>.`},
+  {n:`Pelo menos um = 1 − nenhum`, c:`"Pelo menos um" tem muitos casos; "nenhum" costuma ter um só. Calcule o nenhum e tire de 1.`,
+   ex:`3 moedas, pelo menos uma cara: nenhuma cara = KKK = [[1|8]] → 1 − [[1|8]] = <b>[[7|8]]</b>.<br>2 dados, pelo menos um 6: nenhum 6 = [[5|6]] × [[5|6]] = [[25|36]] → 1 − [[25|36]] = <b>[[11|36]]</b>.`},
+  {n:`"E" multiplica, "ou" soma`, c:`Leia a frase procurando o conectivo. "Isso <b>e</b> aquilo" (em sequência) → multiplique. "Isso <b>ou</b> aquilo" (casos separados) → some.`,
+   ex:`Moeda e dado, cara <b>e</b> número par: [[1|2]] × [[3|6]] = <b>[[1|4]]</b>.<br>Dois dados, soma 2 <b>ou</b> soma 12: [[1|36]] + [[1|36]] = <b>[[1|18]]</b>.`},
+  {n:`Liste quando é pequeno`, c:`Com poucas etapas, escreva todos os casos de forma organizada (ou numa árvore). É rápido e evita esquecer ordem.`,
+   ex:`Família com 3 filhos, chance de exatamente 2 meninas (A = menina, O = menino): AAO, AOA, OAA → 3 casos em 2 × 2 × 2 = 8 → <b>[[3|8]]</b>.`},
+  {n:`Conte o que é mais fácil`, c:`Às vezes é mais rápido contar quem <b>não</b> serve e tirar do total.`,
+   ex:`Número de 1 a 50 que <b>não</b> é múltiplo de 5: múltiplos de 5 são 10 → [[10|50]] = [[1|5]] → 1 − [[1|5]] = <b>[[4|5]]</b>.`}
+ ],
+ passo: [
+  `Escreva (ou imagine) o espaço amostral e conte os possíveis.`,
+  `Grife o evento: o que exatamente eu quero?`,
+  `Uma etapa? Favoráveis ÷ possíveis. Várias? "E" multiplica, "ou" soma.`,
+  `Com ou sem reposição? Sem: tire 1 do total na segunda etapa.`,
+  `"Pelo menos um"? Use 1 − nenhum.`,
+  `Simplifique e confira: está entre 0 e 1?`
+ ],
+ exs: [
+  {q:`Numa caixa há 12 cartões numerados de 1 a 12. Sorteando um cartão, qual é a probabilidade de sair um número maior que 8?`,
+   s:[`Possíveis: 12.`,`Favoráveis: 9, 10, 11, 12 → 4.`,`P = [[4|12]] = [[1|3]].`],
+   r:`[[1|3]]`},
+  {q:`Lançam-se dois dados comuns. Qual é a probabilidade de o produto dos números ser par?`,
+   s:[`Contar os pares dá trabalho. Penso no contrário: quando o produto é ímpar?`,`Só quando os dois números são ímpares: [[3|6]] × [[3|6]] = [[1|4]].`,`Produto par = 1 − [[1|4]] = [[3|4]].`],
+   r:`[[3|4]]`},
+  {q:`Um semáforo fica verde 40% do tempo. No caminho para a escola, Ana passa por dois semáforos que funcionam de forma independente. Qual é a probabilidade de ela pegar pelo menos um sinal verde?`,
+   s:[`"Pelo menos um" → uso 1 − nenhum.`,`Não verde em um semáforo: 100% − 40% = 60% = 0,6.`,`Nenhum verde nos dois ("e" multiplica): 0,6 × 0,6 = 0,36.`,`Pelo menos um verde: 1 − 0,36 = 0,64 = 64%.`],
+   r:`0,64 = 64%`}
+ ],
+ erros: [
+  `<b>Errado:</b> 2 moedas → "pelo menos uma cara" = [[1|2]] + [[1|2]] = 1. <b>Certo:</b> 1 − [[1|4]] = [[3|4]] (some só casos que não acontecem juntos).`,
+  `<b>Errado:</b> 2 dados têm 11 resultados (somas de 2 a 12). <b>Certo:</b> são 36 pares; as somas não têm a mesma chance.`,
+  `<b>Errado:</b> contar (2, 5) e (5, 2) como um caso só. <b>Certo:</b> são dois casos diferentes.`,
+  `<b>Errado:</b> resposta maior que 1. <b>Certo:</b> probabilidade fica sempre entre 0 e 1 — se passou, refaça.`
+ ],
+ resumo: [
+  `P = [[favoráveis|possíveis]] · entre 0 e 1.`,
+  `Não acontecer = 1 − P.`,
+  `"E" multiplica · "ou" soma.`,
+  `Pelo menos um = 1 − nenhum.`,
+  `2 dados = 36 · soma 7 é a campeã (6 casos).`
+ ]
+},
+
+/* ============================== m-cont ============================== */
+'m-cont': {
+ base: [
+  [`Princípio multiplicativo`, `Se uma escolha acontece em etapas, multiplique as opções de cada etapa. Sorvete com 3 sabores e 2 coberturas: 3 × 2 = 6 (cada sabor combina com cada cobertura).`],
+  [`"Ou" soma`, `Se você escolhe um caminho <b>ou</b> outro (não os dois), some. Ir à escola por 3 linhas de ônibus ou 2 de metrô: 3 + 2 = 5 maneiras.`],
+  [`Com ou sem repetição`, `Com repetição, cada etapa tem todas as opções: senha de 2 algarismos → 10 × 10 = 100. Sem repetição, cada etapa tem uma a menos: 10 × 9 = 90.`],
+  [`Fatorial (n!)`, `n! = n × (n − 1) × … × 1 é o número de jeitos de colocar n coisas diferentes em fila. 3! = 6 · 4! = 24 · 5! = 120 · 6! = 720.`],
+  [`A ordem importa?`, `Troque a ordem e pergunte: mudou alguma coisa? Fila, senha, pódio, presidente e vice → <b>muda</b> (ordem importa). Dupla, trio, grupo, aperto de mão → <b>não muda</b> (divida as repetições).`],
+  [`Anagramas`, `Anagrama é qualquer reordenação das letras de uma palavra (com sentido ou não). Com letras todas diferentes, é n!: BOLA → 4! = 24.`],
+  [`Restrição vem primeiro`, `Se alguma posição tem regra (não começa com 0, termina em par…), preencha essa posição primeiro. Números de 3 algarismos: a centena não pode ser 0 → 9 × 10 × 10 = 900.`]
+ ],
+ jeitos: [
+  {n:`Tracinhos`, c:`Desenhe um tracinho para cada etapa, escreva em cima quantas opções sobram naquela etapa e multiplique.`,
+   ex:`Pódio (1º, 2º, 3º) com 8 corredores: _8_ _7_ _6_ → 8 × 7 × 6 = <b>336</b>.`},
+  {n:`Comece pelo tracinho exigente`, c:`Preencha primeiro a posição com restrição; depois as livres, descontando o que já foi usado.`,
+   ex:`Números pares de 3 algarismos distintos usando 1, 2, 3, 4, 5: unidade 2 opções (2 ou 4); centena 4; dezena 3 → 4 × 3 × 2 = <b>24</b>.`},
+  {n:`Ordem não importa: divida`, c:`Conte como se a ordem importasse e depois divida pelo número de ordens de cada grupo: dupla ÷ 2; trio ÷ 6 (3 × 2 × 1).`,
+   ex:`Apertos de mão entre 10 pessoas: [[10 × 9|2]] = <b>45</b>.<br>Trios entre 5 pessoas: [[5 × 4 × 3|3 × 2 × 1]] = [[60|6]] = <b>10</b>.`},
+  {n:`Letra repetida: divida`, c:`Num anagrama, trocar duas letras iguais de lugar não cria palavra nova. Calcule como se fossem diferentes e divida pelo fatorial de quantas vezes cada letra se repete.`,
+   ex:`BOLO: [[4!|2!]] = [[24|2]] = <b>12</b>.<br>ARARA (3 A e 2 R): [[5!|3! × 2!]] = [[120|12]] = <b>10</b>.`},
+  {n:`Total − os que não servem`, c:`Quando a condição é "pelo menos um", conte tudo e tire os que não têm nenhum.`,
+   ex:`Senhas de 4 algarismos com pelo menos um algarismo repetido: total 10 000; sem nenhuma repetição 10 × 9 × 8 × 7 = 5 040 → 10 000 − 5 040 = <b>4 960</b>.`}
+ ],
+ passo: [
+  `Descubra as etapas da escolha e desenhe um tracinho para cada uma.`,
+  `Pergunte: pode repetir? E a ordem importa?`,
+  `Preencha primeiro os tracinhos com restrição.`,
+  `Multiplique ("e") ou some ("ou", casos separados).`,
+  `Ordem não importa ou letras repetidas? Divida.`,
+  `Com números pequenos, liste alguns casos para conferir.`
+ ],
+ exs: [
+  {q:`De quantas maneiras 5 amigos podem formar uma fila para comprar ingresso?`,
+   s:[`Fila: a ordem importa e ninguém repete.`,`Tracinhos: _5_ _4_ _3_ _2_ _1_ → 5! = 120.`],
+   r:`120 maneiras`},
+  {q:`Quantos números ímpares de 4 algarismos distintos podemos formar com os algarismos 0, 1, 2, 3, 4 e 5?`,
+   s:[`Duas restrições: a unidade é ímpar e o primeiro algarismo não pode ser 0. Começo por elas.`,`Unidade: 1, 3 ou 5 → 3 opções.`,`Milhar: não pode ser 0 nem o algarismo da unidade → 6 − 2 = 4 opções.`,`Centena: sobram 4 algarismos (agora o 0 pode) → 4. Dezena: 3.`,`Total: 3 × 4 × 4 × 3 = 144.`],
+   r:`144 números`},
+  {q:`Numa turma de 7 alunos, quantas comissões de 3 alunos podem ser formadas? E se a comissão tiver cargos (presidente, vice e secretário)?`,
+   s:[`Com cargos, a ordem importa: _7_ _6_ _5_ → 7 × 6 × 5 = 210.`,`Sem cargos, a ordem não importa: cada trio foi contado 3 × 2 × 1 = 6 vezes.`,`210 ÷ 6 = 35.`],
+   r:`35 comissões sem cargos e 210 com cargos`}
+ ],
+ erros: [
+  `<b>Errado:</b> somar as opções das etapas (3 + 4). <b>Certo:</b> etapas em sequência ("e") multiplicam (3 × 4).`,
+  `<b>Errado:</b> contar duplas ou apertos de mão sem dividir por 2. <b>Certo:</b> A com B = B com A → divida.`,
+  `<b>Errado:</b> começar pelos tracinhos livres e deixar a restrição para o fim. <b>Certo:</b> restrição primeiro.`,
+  `<b>Errado:</b> anagramas de BOLO = 24. <b>Certo:</b> o O se repete → 24 ÷ 2 = 12.`
+ ],
+ resumo: [
+  `Um tracinho por etapa e multiplica.`,
+  `Repetir? 10 × 10 · não repetir? 10 × 9.`,
+  `Ordem importa → não divide · não importa → divide.`,
+  `Anagrama = n! (letra repetida → divide).`,
+  `Apertos de mão: [[n(n − 1)|2]].`
+ ]
+}
+
+};
+
+/* REVISÃO TURBINADA · PORTUGUÊS · P1 (Leitura e interpretação)
+   Textos de exemplo escritos para este guia, exceto os trechos em domínio público com autoria indicada
+   (Machado de Assis, Gonçalves Dias, fábula atribuída a Esopo, provérbios populares). */
+const PLUS_P1 = {
+
+/* ===================== p-impl · Explícito, implícito e inferência ===================== */
+'p-impl': {
+ base: [
+  [`Explícito = está escrito`, `A informação aparece com todas as letras. Você só precisa <b>localizar</b>. Ex.: “A feira abre às 8h.” Pergunta: “Que horas a feira abre?” → está lá, é só copiar com os olhos.`],
+  [`Implícito = não está escrito, mas dá para concluir`, `O texto deixa pistas e você junta as peças. Ex.: “Cheguei encharcado na escola.” Não diz “choveu”, mas permite concluir que quem fala pegou chuva (ou caiu na água!) no caminho.`],
+  [`Inferência = pista + raciocínio`, `Inferir é tirar uma conclusão <b>apoiada</b> em algo do texto. Fórmula: <b>pista do texto + lógica = conclusão</b>. Sem pista, não é inferência: é chute.`],
+  [`Palavras que “escondem” informação (pressupostos)`, `Algumas palavras trazem uma informação extra embutida: <b>deixou de</b>, <b>começou a</b>, <b>voltou a</b>, <b>continua</b>, <b>ainda</b>, <b>já</b>, <b>outra vez</b>, <b>também</b>, <b>até</b>. Ex.: “<b>Até</b> o diretor dançou na festa” → outras pessoas dançaram e não se esperava que ele dançasse.`],
+  [`Subentendido = recado nas entrelinhas`, `Quem fala quer dizer algo sem dizer. Ex.: o amigo olha seu pacote de biscoito e comenta: “Eu nem almocei hoje…” → ele está pedindo um biscoito.`],
+  [`Assunto × tema`, `<b>Assunto</b> = do que o texto fala (um cachorro que fugiu). <b>Tema</b> = a ideia maior que ele discute (a lealdade entre bichos e pessoas). O tema responde: “o que o texto quer que eu pense sobre isso?”.`],
+  [`Sentido de palavra pelo contexto`, `Uma mesma palavra muda de sentido conforme a frase. “O ônibus estava <b>lotado</b>” (cheio) × “O professor foi <b>lotado</b> em outra escola” (designado para trabalhar lá). Quem decide é a frase em volta.`],
+  [`Os 3 jeitos de uma alternativa errar`, `<b>Extrapola</b> (vai além do texto), <b>reduz</b> (pega só um detalhe e chama de ideia central) ou <b>contradiz</b> (diz o contrário do texto). Quase toda alternativa errada cai num desses três.`]
+ ],
+ jeitos: [
+  {n:`Enunciado primeiro, texto depois`, c:`Antes de ler o texto, leia a pergunta (e passe o olho nas alternativas). Assim você lê sabendo o que procurar, como quem entra no mercado com a lista na mão.`,
+   ex:`Pergunta: “Por que a loja fechou mais cedo?” → já sei que preciso caçar uma <b>causa</b>. Leio o texto e paro em “<b>por causa da</b> falta de luz”. Resposta: <b>a falta de luz</b>.`},
+  {n:`Prove com o dedo`, c:`Para cada alternativa, coloque o dedo na linha do texto que a comprova. Achou a linha? Fica. Não achou? Risca. A resposta certa sempre tem “endereço” no texto.`,
+   ex:`Texto: “Rita estudou a semana toda e tirou 9.”<br>Alternativa “Rita é a melhor aluna da sala” → não há linha que prove → <b>risca</b>.<br>Alternativa “Rita se preparou para a prova” → linha “estudou a semana toda” → <b>fica</b>.`},
+  {n:`Alarme das palavras absolutas`, c:`<b>Sempre, nunca, todos, nenhum, só, apenas, totalmente, qualquer</b>: quando aparecem na alternativa e NÃO no texto, quase sempre ela está extrapolando. Acenda o alarme e confira.`,
+   ex:`Texto: “Muitos alunos preferem estudar à noite.”<br>Alternativa: “<b>Todos</b> os alunos estudam à noite.” → o texto diz “muitos”, não “todos” → <b>extrapola, risca</b>.`},
+  {n:`Caça à palavra-gatilho`, c:`Em questão de “pressupõe” ou “deixa implícito”, procure a palavrinha que carrega o recado escondido (deixou de, ainda, voltou a, até, finalmente…). A resposta é o que essa palavra obriga a ser verdade.`,
+   ex:`“O time <b>ainda</b> não marcou neste campeonato.” → “ainda” indica que se espera que marque. Implícito: <b>há expectativa de que o time marque gols</b>.<br>“Ana <b>deixou de</b> roer unha.” → <b>antes ela roía</b>.`},
+  {n:`A frase vizinha explica a palavra`, c:`Para descobrir o sentido de uma palavra, leia a frase de antes e a de depois. O texto quase sempre “traduz” a palavra logo ao lado, com um exemplo ou uma consequência.`,
+   ex:`“O discurso do prefeito foi <b>prolixo</b>: falou por duas horas e não disse nada de novo.” → a frase depois dos dois-pontos explica: <b>prolixo = que fala demais, cansativo, sem ir ao ponto</b>.`},
+  {n:`Tema em uma frase`, c:`Para achar o tema, complete: “O texto quer mostrar que…”. Use a última frase ou o último parágrafo, onde o autor costuma “fechar” a ideia. Depois escolha a alternativa mais parecida com a sua frase.`,
+   ex:`Texto sobre uma avó que ensina o neto a plantar e termina com “Quem planta aprende a esperar”. → “O texto quer mostrar que <b>cuidar de algo ensina paciência</b>.” Esse é o tema, não “plantar tomates”.`}
+ ],
+ passo: [
+  `Leia a pergunta primeiro e grife o que ela pede: localizar, inferir, sentido de palavra ou tema.`,
+  `Leia o texto inteiro uma vez, com calma, procurando aquilo que a pergunta pediu.`,
+  `Antes de olhar as alternativas, tente responder com suas palavras.`,
+  `Teste cada alternativa com o “prove com o dedo”: tem linha no texto que sustente?`,
+  `Risque as que extrapolam (palavras absolutas), reduzem (só um detalhe) ou contradizem o texto.`,
+  `Fique com a que tem pista no texto, mesmo que pareça “simples” demais.`
+ ],
+ exs: [
+  {q:`“Desde que o novo zelador chegou, o elevador do prédio <b>deixou de</b> quebrar toda semana.” O que essa frase pressupõe?`,
+   s:[`Primeiro eu caço a palavra-gatilho: “deixou de”.`,`Só deixa de fazer algo quem fazia antes. Então, antes do novo zelador, o elevador quebrava toda semana.`,`Cuidado para não inventar: a frase não diz que o zelador consertou o elevador com as próprias mãos. Fico só com o que a palavra garante.`],
+   r:`Que, antes da chegada do novo zelador, o elevador quebrava toda semana.`},
+  {q:`<b>Texto:</b> “Antes de o ônibus da excursão sair, a professora conferiu a lista de nomes três vezes. Na volta, contou os alunos de novo, um por um, na porta da escola.”<br>Pode-se inferir que a professora:<br>(a) não confiava nos alunos.<br>(b) estava preocupada em não deixar nenhum aluno para trás.<br>(c) sempre erra quando faz contas.<br>(d) já tinha perdido um aluno em outra excursão.`,
+   s:[`Li a pergunta antes: “inferir” → preciso de uma conclusão com pista.`,`Pistas: conferiu a lista três vezes, contou de novo, um por um. Isso mostra cuidado com a presença de todos.`,`(a) Desconfiança? Nenhuma linha fala que os alunos aprontam → risca. (c) Tem “sempre” → alarme! E o texto não fala de erro → risca. (d) Inventa um passado que o texto não conta; o “de novo” se refere à contagem, não a outra excursão → risca.`,`Sobra (b), que tem pista no texto.`],
+   r:`(b) estava preocupada em não deixar nenhum aluno para trás.`},
+  {q:`<b>Texto:</b> “Seu Joaquim conserta guarda-chuvas há quarenta anos numa portinha da Rua Direita. Os clientes estão cada vez mais raros: um guarda-chuva novo custa quase o mesmo que o conserto. Mesmo assim, ele abre a loja às oito em ponto. ‘Coisa boa não se joga fora’, repete, enquanto troca uma vareta.”<br>O tema do texto é:<br>(a) o preço dos guarda-chuvas.<br>(b) o horário de uma loja.<br>(c) a resistência de um ofício antigo diante do hábito de jogar fora e comprar outro.<br>(d) a falência de todo o comércio das cidades.`,
+   s:[`Uso o “tema em uma frase”: “O texto quer mostrar que… seu Joaquim continua consertando, mesmo com pouca gente consertando as coisas hoje em dia”.`,`A fala final é a chave: “Coisa boa não se joga fora” contrasta com “um guarda-chuva novo custa quase o mesmo”.`,`(a) e (b) são detalhes → <b>reduzem</b>. (d) tem “todo” e fala de todas as cidades → <b>extrapola</b>.`,`A (c) é a mais ampla e tem apoio no texto inteiro.`],
+   r:`(c) a resistência de um ofício antigo diante do hábito de jogar fora e comprar outro.`}
+ ],
+ erros: [
+  `<b>Errado:</b> escolher a alternativa que você acha verdadeira na vida real. <b>Certo:</b> escolher a que o TEXTO sustenta, mesmo que você pense diferente.`,
+  `<b>Errado:</b> marcar como tema o assunto do primeiro parágrafo. <b>Certo:</b> procurar a ideia que amarra o texto todo (geralmente fechada no final).`,
+  `<b>Errado:</b> achar o sentido de uma palavra “pelo dicionário da cabeça”. <b>Certo:</b> ler a frase vizinha e testar qual sentido combina com o contexto.`,
+  `<b>Errado:</b> aceitar “todos”, “sempre”, “nunca” sem conferir. <b>Certo:</b> verificar se o texto diz exatamente isso; se disser “muitos” ou “às vezes”, a alternativa extrapola.`,
+  `<b>Errado:</b> ler a alternativa pela metade e marcar porque o começo está certo. <b>Certo:</b> ler até o fim: muitas erram só na última parte.`
+ ],
+ resumo: [
+  `Pergunta primeiro → texto depois.`,
+  `Inferência = pista + lógica (sem pista = chute).`,
+  `Palavra-gatilho: deixou de, ainda, voltou a, até → informação escondida.`,
+  `Sempre/nunca/todos na alternativa → alarme de extrapolação.`,
+  `Tema = “o texto quer mostrar que…” (maior que o assunto).`,
+  `Alternativa errada: extrapola, reduz ou contradiz.`
+ ]
+},
+
+/* ===================== p-tira · Tirinhas, charges e memes ===================== */
+'p-tira': {
+ base: [
+  [`Linguagem verbal + não verbal`, `<b>Verbal</b> = palavras (falas, legendas, placas). <b>Não verbal</b> = imagem (desenho, cores, gestos, rosto). Nas tirinhas e charges, o sentido só aparece quando você junta as duas. Ex.: a fala “Tudo bem!” + um rosto chorando = não está nada bem.`],
+  [`Como se lê uma tirinha`, `Os quadros seguem a ordem da leitura: da esquerda para a direita, de cima para baixo. Entre um quadro e outro pode passar tempo. Os primeiros quadros <b>preparam</b>; o último <b>surpreende</b>.`],
+  [`O formato do balão fala`, `Contorno liso = fala normal. Nuvem com bolinhas = <b>pensamento</b>. Contorno em zigue-zague = <b>grito</b> ou som de aparelho. Contorno tracejado = <b>cochicho</b>. Letras grandes e grossas = voz alta ou emoção forte.`],
+  [`Onomatopeia`, `Palavra que imita um som: <i>toc-toc</i> (porta), <i>bum!</i> (explosão), <i>zzz</i> (sono), <i>atchim!</i> (espirro). Ajuda a entender o que acontece na cena sem precisar de fala.`],
+  [`Charge × cartum`, `<b>Charge</b> comenta um fato do momento (uma eleição, uma obra atrasada, um aumento de preço): ela “envelhece”. <b>Cartum</b> critica um comportamento humano que vale em qualquer época (pressa, vaidade, vício no celular).`],
+  [`Quebra de expectativa`, `O texto faz você esperar uma coisa e entrega outra. Ex.: o menino promete “Vou estudar a tarde toda!” e, no último quadro, está dormindo em cima do livro. O riso nasce dessa surpresa.`],
+  [`Ironia × mentira`, `Na <b>ironia</b>, quem fala QUER que você perceba o sentido contrário (o contexto mostra). Na <b>mentira</b>, quem fala quer que você acredite. “Que pontualidade!”, dito a quem chegou uma hora atrasado, é ironia.`],
+  [`Literal × figurado`, `<b>Literal</b> = sentido “ao pé da letra”. <b>Figurado</b> = sentido criado por comparação. “Pisar na bola” literal = pisar numa bola; figurado = errar. Muitas tirinhas fazem graça com um personagem que entende ao pé da letra.`]
+ ],
+ jeitos: [
+  {n:`Esperava × aconteceu`, c:`Escreva mentalmente duas linhas: “O que eu esperava depois dos primeiros quadros” e “O que aconteceu no último”. O humor (e a resposta) está na diferença entre as duas.`,
+   ex:`Q1: o cachorro olha triste para o dono, que come um sanduíche. Q2: o dono, com pena, dá um pedaço ao cachorro. Q3: o gato, escondido, aparece com uma plaquinha: “Funcionou! Minha vez!”<br>Esperava: o cachorro estava triste mesmo. Aconteceu: era um <b>plano combinado</b> dos bichos. Graça = a surpresa.`},
+  {n:`Palavra + imagem = sentido`, c:`Leia a fala sozinha e pergunte “o que ela diz?”. Depois olhe a imagem e pergunte “o que ela mostra?”. Se uma desmente a outra, achou a ironia ou a crítica.`,
+   ex:`Fala: “Nossa cidade cuida bem das árvores!”. Imagem: uma única árvore, seca, cercada de concreto.<br>Fala diz “cuida bem”; imagem mostra descuido → <b>crítica irônica ao abandono das áreas verdes</b>.`},
+  {n:`Detetive do corpo`, c:`Rostos, gestos e postura são “falas sem palavras”. Sobrancelha erguida, braços cruzados, gota de suor, olhos arregalados contam o que o personagem sente de verdade.`,
+   ex:`O aluno diz “Estou supertranquilo para a prova!” enquanto roe as unhas e tem gotas de suor na testa.<br>A imagem desmente a fala → ele está <b>nervoso</b>; a frase é um disfarce.`},
+  {n:`Qual é a notícia por trás?`, c:`Na charge, pergunte: “Que problema real da sociedade está sendo criticado?”. O alvo nunca é o objeto desenhado em si (o guarda-chuva, o ônibus), mas a situação que ele representa.`,
+   ex:`Charge: uma fila enorme na porta de um posto de saúde, que dá a volta no quarteirão e termina num esqueleto sentado.<br>O esqueleto não é o assunto: é exagero para mostrar <b>a demora no atendimento da saúde pública</b>.`},
+  {n:`Teste do ao pé da letra`, c:`Se o humor parece “sem sentido”, procure uma expressão figurada que algum personagem entendeu literalmente (ou o contrário). Leia a expressão dos dois jeitos.`,
+   ex:`A mãe diz: “Filho, <b>dá uma mão</b> aqui na cozinha!”. No quadro seguinte, o filho estende só a mão pela porta, sem sair do videogame.<br>“Dar uma mão” = ajudar (figurado); ele fez o literal → <b>humor pelo duplo sentido</b>.`}
+ ],
+ passo: [
+  `Leia a pergunta: ela quer o humor, a crítica, a ironia ou um detalhe da imagem?`,
+  `Leia os quadros em ordem e descreva para você mesmo o que acontece em cada um.`,
+  `Junte palavra + imagem: alguma desmente a outra? Algum rosto ou gesto muda o sentido da fala?`,
+  `Compare o que você esperava com o que aconteceu no último quadro.`,
+  `Na charge, diga qual problema real está sendo criticado.`,
+  `Escolha a alternativa que explica o EFEITO (humor, crítica, ironia), e não a que só descreve a imagem.`
+ ],
+ exs: [
+  {q:`<b>Tirinha:</b> Q1: o pai abre a caixa de um armário para montar, com dezenas de peças espalhadas e um manual na mão. Q2: o pai, suado, diz: “Ninguém precisa de manual!”. Q3: o armário está montado, e o pai olha, desconfiado, para três parafusos e uma porta que sobraram no chão.<br>O humor do último quadro depende principalmente:`,
+   s:[`Primeiro eu faço o “esperava × aconteceu”: depois do Q2, espero que ele monte tudo certinho, sem manual.`,`No Q3 não há fala nenhuma: a graça está na <b>imagem</b> das peças que sobraram.`,`Peças sobrando = o armário foi montado errado. A confiança do Q2 é desmentida pela imagem do Q3.`],
+   r:`Da imagem das peças que sobraram, que revela que o pai montou o armário errado, contrariando a confiança da fala anterior.`},
+  {q:`<b>Charge:</b> num terreno de terra cheio de poças e entulho, crianças jogam bola com traves feitas de chinelos. Ao fundo, um estádio gigante e moderno exibe a faixa: “Arena Nova — 80 mil lugares — ingressos a partir de R$ 300”.<br>Qual é a crítica da charge?`,
+   s:[`Uso o “qual é a notícia por trás?”: o alvo não é a bola nem o estádio em si.`,`Junto palavra + imagem: a faixa mostra luxo e preço alto; a frente da cena mostra crianças sem um campo digno.`,`O contraste entre os dois planos (fundo rico × frente pobre) é a crítica.`],
+   r:`A desigualdade: há dinheiro para grandes arenas caras, mas faltam espaços de esporte e lazer para crianças pobres.`},
+  {q:`<b>Tirinha:</b> Q1: no intervalo do jogo, o técnico diz aos jogadores: “Estamos ganhando de 1 a 0. Agora, <b>segurem o resultado</b>!”. Q2: os jogadores se olham, confusos. Q3: todos os jogadores aparecem pendurados no placar eletrônico, agarrando-o com as duas mãos.<br>O humor da tirinha é construído:`,
+   s:[`Uso o “teste do ao pé da letra”: qual expressão tem dois sentidos?`,`“Segurar o resultado”, no futebol, é figurado: defender-se para manter a vantagem.`,`No Q3, os jogadores entendem literalmente e seguram o placar com as mãos. O Q2 (rostos confusos) prepara essa leitura errada.`],
+   r:`Pela interpretação literal de uma expressão figurada (“segurar o resultado”), mostrada na imagem do último quadro.`}
+ ],
+ erros: [
+  `<b>Errado:</b> responder descrevendo o desenho (“aparecem crianças jogando bola”). <b>Certo:</b> dizer o efeito: o que aquilo critica ou por que é engraçado.`,
+  `<b>Errado:</b> ler só as falas e ignorar a imagem. <b>Certo:</b> olhar rostos, gestos, objetos e placas: muitas vezes a resposta está só no desenho.`,
+  `<b>Errado:</b> levar a fala irônica a sério (“o pai elogiou a nota”). <b>Certo:</b> conferir se o contexto mostra o contrário do que foi dito.`,
+  `<b>Errado:</b> achar que a charge critica o objeto desenhado (o ônibus, a placa). <b>Certo:</b> identificar a situação real que o objeto representa.`
+ ],
+ resumo: [
+  `Palavra + imagem juntas = sentido.`,
+  `Primeiros quadros preparam, último surpreende.`,
+  `Humor = esperava × aconteceu.`,
+  `Ironia = fala × contexto em lados opostos.`,
+  `Charge → fato atual; cartum → comportamento de sempre.`,
+  `Responda o EFEITO, não descreva o desenho.`
+ ]
+},
+
+/* ===================== p-arg · Texto argumentativo ===================== */
+'p-arg': {
+ base: [
+  [`Para que serve um texto argumentativo`, `Para <b>convencer</b>. Ele não só informa: toma partido. Ex.: “Os parques deveriam abrir à noite” é uma posição; o texto inteiro trabalha para você concordar com ela.`],
+  [`Tese = a ideia defendida`, `É a opinião central, aquela que o autor quer que você aceite no final. Costuma ser uma frase que alguém poderia discutir: “A escola deve ter horta”, “Videogame pode ensinar”.`],
+  [`Argumento = a razão para acreditar`, `Responde à pergunta “por quê?” feita à tese. Tese: “A escola deve ter horta.” Por quê? “Porque os alunos aprendem de onde vem o alimento” → argumento.`],
+  [`Estrutura em 3 partes`, `<b>Introdução</b> (apresenta o tema e, muitas vezes, a tese) → <b>desenvolvimento</b> (argumentos) → <b>conclusão</b> (retoma a tese ou propõe uma solução).`],
+  [`Contra-argumento: a voz do “outro lado”`, `O autor mostra o que pensa quem discorda e depois responde. Isso deixa o texto mais forte, porque mostra que ele pensou nas objeções. Ex.: “Alguns dizem que a horta dá trabalho; no entanto, os próprios alunos podem cuidar dela.”`],
+  [`Conectivos são placas de trânsito`, `<b>Portanto, logo, por isso, assim</b> → vem a conclusão (muitas vezes a tese). <b>Pois, porque, já que</b> → vem a justificativa. <b>Mas, porém, no entanto, contudo</b> → vem a oposição (e, muitas vezes, depois deles vem a opinião do autor). <b>Além disso, também</b> → vem mais um argumento.`],
+  [`Onde mora o texto argumentativo`, `Artigo de opinião, editorial, carta do leitor, resenha crítica, debate, post de opinião. Em comum: alguém defendendo um ponto de vista.`]
+ ],
+ jeitos: [
+  {n:`Caça à tese nas pontas`, c:`Procure a tese no 1º e no último parágrafo. Pistas: “portanto”, “por isso”, “é preciso”, “deve”, “deveria”, “é fundamental”. Se aparecer nas duas pontas, com palavras diferentes, é ela mesma.`,
+   ex:`Início: “Ler por prazer deveria fazer parte do horário escolar.” Final: “Por isso, reservar 20 minutos diários para leitura livre é um investimento.” → a mesma ideia nas duas pontas → <b>tese: a escola deve reservar tempo para a leitura livre</b>.`},
+  {n:`Teste do “por quê?”`, c:`Pegue a alternativa candidata a tese e pergunte “por quê?”. Se o resto do texto responde, ela é a tese. Se ela própria é uma resposta a outro “por quê?”, é argumento.`,
+   ex:`“A cidade deve criar ciclovias.” Por quê? → “porque reduzem a poluição” e “porque diminuem o trânsito”. A primeira é a <b>tese</b>; as outras duas são <b>argumentos</b>.`},
+  {n:`Teste do “porque” no meio`, c:`Junte duas frases do texto com “porque”: [tese] PORQUE [argumento]. Se a frase fica natural, você descobriu quem é quem. Se ficar estranha, inverta.`,
+   ex:`“Devemos dormir 8 horas PORQUE o sono organiza a memória.” → natural. <b>Tese</b>: dormir 8 horas; <b>argumento</b>: o sono organiza a memória.<br>Ao contrário (“O sono organiza a memória PORQUE devemos dormir 8 horas”) fica sem sentido.`},
+  {n:`Etiqueta pelo sinal`, c:`Descubra o tipo de argumento por uma marca na frase: <b>números/%</b> → dados; <b>“segundo…”, “de acordo com…”</b> → autoridade; <b>“veja o caso de…”</b> → exemplo; <b>“se… então…”</b> → causa e consequência; <b>“assim como…”</b> → comparação.`,
+   ex:`“De acordo com a Organização Mundial da Saúde…” → <b>autoridade</b>.<br>“Em 2024, 62% dos entrevistados…” → <b>dados</b>.<br>“Se a praça não tiver luz, ninguém vai usá-la à noite.” → <b>causa e consequência</b>.`},
+  {n:`Depois do “mas” mora o autor`, c:`Em “É verdade que X, <b>mas</b> Y”, o X é a concessão (o autor cede um pouquinho) e o Y é o que ele realmente defende. Na dúvida sobre a posição do autor, leia o que vem depois do “mas”.`,
+   ex:`“É claro que o uniforme custa caro, <b>mas</b> ele protege os alunos na rua.” → a posição do autor é <b>a favor do uniforme</b>; o preço alto é só a objeção que ele reconhece.`},
+  {n:`Reforça, enfraquece ou nada?`, c:`Em questões de “qual frase reforçaria (ou enfraqueceria) a tese”, coloque a frase depois da tese e pergunte: “isso me dá mais vontade de concordar, menos vontade, ou não muda nada?”.`,
+   ex:`Tese: “A escola deve ter horta.”<br>“Alunos que cultivam hortas comem mais verduras.” → <b>reforça</b>.<br>“As hortas atraem pragas para o pátio.” → <b>enfraquece</b>.<br>“O pátio é pintado de azul.” → <b>não muda nada</b>.`}
+ ],
+ passo: [
+  `Leia a pergunta: ela quer a tese, o tipo de argumento, a função de um trecho ou o que reforça/enfraquece?`,
+  `Leia o 1º e o último parágrafo com atenção redobrada: é ali que a tese costuma aparecer.`,
+  `Grife os conectivos (portanto, mas, além disso, porque) e veja que papel cada trecho cumpre.`,
+  `Use o teste do “por quê?” para separar tese de argumento.`,
+  `Para o tipo de argumento, procure a marca na frase (número, “segundo”, caso concreto, “se… então”, “assim como”).`,
+  `Elimine a alternativa que traz a opinião CONTRÁRIA como se fosse a do autor.`
+ ],
+ exs: [
+  {q:`<b>Recreio sem bola?</b><br>“A direção da escola proibiu o futebol no recreio depois que uma janela foi quebrada. A decisão é compreensível, mas resolve o problema errado. Segundo pediatras, correr no intervalo melhora a atenção nas aulas seguintes. Além disso, a quadra fica vazia durante o recreio, enquanto o pátio, cheio de janelas, lota. Portanto, em vez de proibir a bola, a escola deveria levar o jogo para a quadra.”<br>Qual é a tese do texto?`,
+   s:[`Uso a “caça à tese nas pontas”: o 1º período só conta o fato (a proibição). A tese aparece no fim, depois do “Portanto”.`,`Confiro com o teste do “por quê?”: “A escola deveria levar o jogo para a quadra.” Por quê? → porque correr melhora a atenção; porque a quadra fica vazia. O resto do texto responde. É a tese!`],
+   r:`Em vez de proibir o futebol, a escola deveria transferir o jogo do pátio para a quadra.`},
+  {q:`No mesmo texto, qual é a função do trecho “A decisão é compreensível, mas resolve o problema errado”?`,
+   s:[`Aplico o “depois do ‘mas’ mora o autor”.`,`Antes do “mas”: “A decisão é compreensível” → o autor reconhece que a direção teve um motivo (concessão).`,`Depois do “mas”: “resolve o problema errado” → é a crítica dele (refutação).`],
+   r:`Fazer uma concessão (reconhecer o motivo da direção) e, em seguida, refutar a decisão, mostrando que ela não ataca o problema certo.`},
+  {q:`Qual destas frases, se acrescentada ao texto, <b>enfraqueceria</b> a tese do autor?<br>(a) Alunos que se movimentam no recreio voltam mais calmos para a sala.<br>(b) A quadra da escola fica ao lado da sala dos professores.<br>(c) A quadra está interditada por risco de desabamento do telhado.<br>(d) Outras escolas do bairro também têm quadra.`,
+   s:[`Uso o “reforça, enfraquece ou nada?”, lembrando que a tese é levar o jogo para a quadra.`,`(a) dá mais um motivo para manter o futebol → <b>reforça</b>. (b) e (d) são informações que não mudam a decisão → <b>nada</b>.`,`(c) Se a quadra não pode ser usada, a solução do autor fica impossível → <b>enfraquece</b>.`],
+   r:`(c) A quadra está interditada por risco de desabamento do telhado.`}
+ ],
+ erros: [
+  `<b>Errado:</b> marcar como tese um dado ou exemplo do texto (“a quadra fica vazia”). <b>Certo:</b> a tese é a ideia que esses dados sustentam.`,
+  `<b>Errado:</b> marcar como posição principal do autor o que vem antes do “mas” (“a decisão é compreensível”). <b>Certo:</b> isso é só uma concessão; o que ele defende vem depois do “mas”.`,
+  `<b>Errado:</b> achar que mostrar o lado contrário enfraquece o texto. <b>Certo:</b> o contra-argumento, quando rebatido, deixa a argumentação mais forte.`,
+  `<b>Errado:</b> confundir “segundo pediatras” (autoridade) com exemplo. <b>Certo:</b> exemplo é um caso concreto; autoridade é a voz de quem entende do assunto.`
+ ],
+ resumo: [
+  `Tese = O QUE o autor defende · Argumento = POR QUÊ.`,
+  `Tese nas pontas: 1º e último parágrafo (portanto, deve, é preciso).`,
+  `[tese] PORQUE [argumento] → teste rápido.`,
+  `Número = dados · “segundo” = autoridade · caso = exemplo.`,
+  `“É verdade que… mas…” → a opinião do autor vem depois do “mas”.`
+ ]
+},
+
+/* ===================== p-pub · Publicidade, propaganda e persuasão ===================== */
+'p-pub': {
+ base: [
+  [`Persuadir = levar alguém a agir`, `Todo anúncio quer uma <b>ação</b> do leitor: comprar, doar, votar, vacinar, economizar água. Ex.: “Desligue a torneira enquanto escova os dentes” quer que você mude um hábito.`],
+  [`Quem paga diz muito`, `Anúncio assinado por loja ou marca → quer <b>vender</b> (publicidade). Assinado por governo, ONG ou campanha → quer <b>mudar comportamento ou ideia</b> (propaganda/campanha). Olhe o nome no canto do anúncio.`],
+  [`O que é o modo imperativo`, `É o modo do verbo usado para <b>ordenar, pedir, convidar ou aconselhar</b>: compre, venha, experimente, doe. Também existe o imperativo negativo: <b>não jogue</b>, <b>não perca</b>. Num anúncio, ele “empurra” o leitor para a ação.`],
+  [`Público-alvo`, `É para quem o anúncio foi feito. As palavras e imagens entregam: gíria e skate → adolescentes; “seu bebê” → pais; “aposentado” → idosos. Ex.: “Volta às aulas com estilo!” fala com estudantes.`],
+  [`Interlocutor direto: o “você”`, `Anúncios conversam com o leitor (“você merece”, “sua família”). Isso cria proximidade, como se a mensagem fosse só para você.`],
+  [`Slogan`, `Frase curta e marcante que acompanha a marca ou a campanha. Usa rima, ritmo, repetição ou duplo sentido para grudar na memória. Ex.: “Pão Bom: de manhã, de tarde, de montão.”`],
+  [`Tipos de apelo`, `<b>Emoção</b> (família, medo, saudade, alegria), <b>autoridade</b> (médico, atleta, especialista), <b>pertencimento</b> (“todo mundo já tem”), <b>urgência</b> (“só hoje”), <b>exclusividade</b> (“para poucos”), <b>humor</b>.`],
+  [`Imagem também argumenta`, `Cores, fotos e tipos de letra reforçam a mensagem. Verde e folhas sugerem natureza; um sorriso sugere satisfação; letras enormes em vermelho sugerem urgência.`]
+ ],
+ jeitos: [
+  {n:`A pergunta-mestra: o que ele quer que eu FAÇA?`, c:`Antes de qualquer coisa, responda numa frase: “Este texto quer que eu…”. A resposta é a finalidade, e ela elimina metade das alternativas.`,
+   ex:`“Sua garrafinha reutilizável evita 150 copos descartáveis por ano. Leve a sua.” → quer que eu <b>use garrafinha reutilizável</b> (mudar hábito), não que eu compre copos.`},
+  {n:`Circule os verbos-ordem`, c:`Passe o olho caçando verbos no imperativo (afirmativo e negativo). Eles mostram a ação desejada e, muitas vezes, são o próprio recurso de persuasão pedido na questão.`,
+   ex:`“<b>Venha</b> conhecer. <b>Prove</b> sem compromisso. <b>Não perca</b>!” → três imperativos → efeito: <b>chamar o leitor à ação imediata</b>.`},
+  {n:`Retrato falado do público`, c:`Liste as palavras e imagens “típicas de alguém” (gírias, objetos, situações). Elas desenham o público-alvo.`,
+   ex:`“Chegou o lanche que cabe na lancheira e no recreio! Seu filho vai pedir bis.” → “lancheira”, “recreio”, “seu filho” → público: <b>pais de crianças em idade escolar</b>.`},
+  {n:`Caça ao duplo sentido`, c:`Procure a palavra do slogan que pode ser lida de dois jeitos: um ligado ao produto e outro a uma ideia boa. Esse trocadilho é um recurso clássico.`,
+   ex:`Ótica Foco: “<b>Enxergue</b> o seu futuro.” → enxergar com os olhos (óculos) + enxergar o futuro (ter perspectiva) → <b>duplo sentido</b>.`},
+  {n:`Quem assina?`, c:`Olhe o nome no fim do anúncio. Marca ou loja → publicidade (vender). Governo, ONG, instituição → propaganda/campanha (conscientizar). Isso resolve na hora as questões de finalidade.`,
+   ex:`“Cada gota conta. Feche a torneira.” — <i>Companhia de Saneamento do Estado</i> → órgão público, não vende nada aqui → <b>campanha de conscientização</b>.`}
+ ],
+ passo: [
+  `Faça a pergunta-mestra: o que esse texto quer que eu faça?`,
+  `Veja quem assina: empresa (vender) ou instituição (conscientizar)?`,
+  `Circule os verbos no imperativo e as palavras que falam com “você”.`,
+  `Descubra o público-alvo pelas palavras e pela imagem.`,
+  `Identifique o apelo (emoção, autoridade, urgência, pertencimento, humor) e algum duplo sentido no slogan.`,
+  `Escolha a alternativa que explica o EFEITO do recurso, não só o nome dele.`
+ ],
+ exs: [
+  {q:`<b>Anúncio:</b> “Bicicletaria Pedal Livre. <b>Deixe o trânsito para trás.</b>”<br>Que recursos de persuasão aparecem no slogan?`,
+   s:[`Primeiro circulo o verbo-ordem: “Deixe” → imperativo, chamando o leitor à ação.`,`Depois caço o duplo sentido em “deixar para trás”: literal = passar os carros parados, pedalando; figurado = livrar-se do problema do trânsito.`,`Os dois sentidos favorecem a bicicleta.`],
+   r:`Verbo no imperativo (“Deixe”) e duplo sentido em “deixar para trás” (ultrapassar os carros e livrar-se do trânsito).`},
+  {q:`<b>Cartaz:</b> foto de uma tartaruga marinha presa num saco plástico. Texto: “Para você, é só um saquinho. Para ela, é o fim.” Assinatura: <i>Instituto Mar Limpo</i>.<br>Qual é a finalidade e o principal apelo do cartaz?`,
+   s:[`Uso o “quem assina?”: um instituto, não uma loja → é campanha, não vende produto.`,`Pergunta-mestra: quer que eu… <b>pare de jogar plástico no ambiente</b> / use menos sacos plásticos.`,`O apelo: a foto da tartaruga e o contraste “para você / para ela” e “só um saquinho / o fim” mexem com a emoção (culpa e compaixão).`],
+   r:`Finalidade: conscientizar sobre o descarte de plástico. Apelo: emoção, reforçado pela imagem e pelo contraste entre “só um saquinho” e “o fim”.`},
+  {q:`<b>Anúncio:</b> “Todo mundo da sua turma já tem. E você? <b>Fone Pulso</b> — o som de quem está por dentro.”<br>Qual estratégia de persuasão o anúncio usa e a quem ele se dirige?`,
+   s:[`Retrato falado do público: “sua turma” → adolescentes, estudantes.`,`O apelo é de <b>pertencimento</b>: “todo mundo já tem” faz o leitor sentir que vai ficar de fora.`,`Ainda tem duplo sentido: “estar por dentro” = estar atualizado e, também, o fone que fica dentro da orelha.`],
+   r:`Apelo ao pertencimento (pressão do grupo), dirigido a adolescentes, com duplo sentido em “estar por dentro”.`}
+ ],
+ erros: [
+  `<b>Errado:</b> dizer que uma campanha de vacinação quer “vender vacina”. <b>Certo:</b> ela quer mudar um comportamento (levar as pessoas a se vacinarem).`,
+  `<b>Errado:</b> apontar só o nome do recurso (“imperativo”). <b>Certo:</b> dizer para que ele serve (“chamar o leitor à ação”).`,
+  `<b>Errado:</b> ignorar a imagem e a assinatura. <b>Certo:</b> elas revelam a finalidade e o público tanto quanto as palavras.`,
+  `<b>Errado:</b> achar que todo anúncio com “você” é dirigido a qualquer pessoa. <b>Certo:</b> procure as pistas (gírias, objetos, situações) que mostram o público específico.`
+ ],
+ resumo: [
+  `Pergunta-mestra: o que ele quer que eu FAÇA?`,
+  `Marca assina → vende · instituição assina → conscientiza.`,
+  `Imperativo (compre, doe, não perca) = chamado à ação.`,
+  `Apelos: emoção, autoridade, urgência, pertencimento, humor.`,
+  `Slogan esperto = duplo sentido + rima + ritmo.`
+ ]
+},
+
+/* ===================== p-gen · Gêneros jornalísticos e fato × opinião ===================== */
+'p-gen': {
+ base: [
+  [`Fato = dá para conferir`, `Um fato pode ser comprovado com documento, medida, registro ou testemunha. Ex.: “A ponte tem 300 metros.” Basta medir.`],
+  [`Opinião = julgamento de alguém`, `É a avaliação pessoal, e outra pessoa pode discordar. Ex.: “A ponte é linda.” Não há régua para “linda”.`],
+  [`Marcas de opinião`, `<b>Adjetivos de avaliação</b> (ótimo, péssimo, vergonhoso, incrível); <b>advérbios</b> (infelizmente, felizmente, lamentavelmente); <b>verbos de opinião</b> (acho, creio, penso, considero); <b>verbos de dever</b> (deve, deveria, é preciso); exclamações e ironia.`],
+  [`Manchete, linha fina e lide`, `<b>Manchete</b> = título principal da notícia. <b>Linha fina</b> = frase logo abaixo, que completa a manchete. <b>Lide</b> = 1º parágrafo, que resume o fato respondendo: o quê, quem, quando, onde, como e por quê.`],
+  [`Notícia e reportagem`, `<b>Notícia</b>: fato recente, curto, linguagem objetiva, 3ª pessoa. <b>Reportagem</b>: vai mais fundo num tema, ouve várias fontes, traz dados, pode ter boxes e gráficos.`],
+  [`Textos de opinião no jornal`, `<b>Artigo de opinião</b>: assinado por uma pessoa. <b>Editorial</b>: opinião do próprio jornal, sem assinatura individual. <b>Carta do leitor</b>: o leitor opina ou reclama. <b>Crônica</b>: olhar pessoal e leve sobre o dia a dia.`],
+  [`Fala entre aspas = voz de outra pessoa`, `Quando a notícia escreve “Foi um susto”, disse a moradora, a opinião é da <b>moradora</b>, não do jornalista. O jornalista só registrou a fala (e isso é um fato: ela disse isso).`],
+  [`Enfoque: o mesmo fato, olhares diferentes`, `A escolha das palavras mostra a posição do veículo. “Prefeitura entrega escola” × “Prefeitura <b>finalmente</b> entrega escola” → o “finalmente” destaca a demora.`]
+ ],
+ jeitos: [
+  {n:`Teste da régua`, c:`Pergunte: “Dá para conferir isso com régua, relógio, documento, foto ou contagem?”. Se dá, é fato. Se depende do gosto de quem fala, é opinião.`,
+   ex:`“O show durou 3 horas.” → relógio confere → <b>fato</b>.<br>“O show foi longo demais.” → “demais” para quem? → <b>opinião</b>.`},
+  {n:`Caça às marcas de opinião`, c:`Varra a frase atrás de adjetivos que avaliam, advérbios como “infelizmente” e verbos como “acho”, “deveria”. Uma única marca dessas já transforma a frase em opinião.`,
+   ex:`“<b>Infelizmente</b>, a biblioteca fechou às 17h.” → o horário é fato, mas “infelizmente” acrescenta um julgamento → a frase expressa <b>opinião</b> sobre o fato.`},
+  {n:`Teste do “alguém discordaria?”`, c:`Imagine uma pessoa razoável discordando da frase. Se é possível discordar sem ser maluco, é opinião. Se discordar seria só errar a informação, é fato.`,
+   ex:`“O novo uniforme é mais bonito.” → alguém pode achar o antigo mais bonito → <b>opinião</b>.<br>“O novo uniforme é azul.” → discordar seria errar → <b>fato</b>.`},
+  {n:`Checklist das 6 perguntas`, c:`Para o lide, anote ao lado do 1º parágrafo: QUÊ, QUEM, QUANDO, ONDE, COMO, POR QUÊ, e risque cada uma que encontrar. A que sobrar é a resposta da questão “qual não é respondida”.`,
+   ex:`“Ontem à noite (quando), um caminhão de frutas (quem) tombou (o quê) na rodovia estadual (onde) depois de frear bruscamente (como) para desviar de um buraco (por quê).” → as 6 encontradas → <b>lide completo</b>.`},
+  {n:`Gênero pela finalidade + assinatura`, c:`Informar um fato novo → notícia. Aprofundar com várias fontes → reportagem. Opinar com nome do autor → artigo. Opinar em nome do jornal → editorial. Contar o cotidiano com olhar pessoal → crônica.`,
+   ex:`Texto na página 2, título “Nossa posição”, sem nome de autor, criticando o preço da passagem → opina em nome do jornal → <b>editorial</b>.`}
+ ],
+ passo: [
+  `Leia a pergunta: ela quer fato/opinião, lide, gênero ou enfoque?`,
+  `Para fato × opinião, aplique o teste da régua e procure as marcas de opinião.`,
+  `Para o lide, faça o checklist das 6 perguntas no 1º parágrafo.`,
+  `Para o gênero, pergunte qual é a finalidade (informar ou opinar) e quem assina.`,
+  `Lembre: fala entre aspas é a voz do entrevistado, não do jornalista.`,
+  `Compare as palavras escolhidas quando houver dois textos sobre o mesmo fato.`
+ ],
+ exs: [
+  {q:`Classifique cada frase como fato ou opinião:<br>I. O festival reuniu 12 bandas no domingo.<br>II. Infelizmente, o som estava baixo demais.<br>III. Segundo a organização, 5 mil pessoas compareceram.<br>IV. O evento deveria acontecer todo mês.`,
+   s:[`I → teste da régua: dá para contar as bandas → fato.`,`II → caço as marcas: “infelizmente” e “baixo demais” → opinião.`,`III → é fato: a organização informou um número que pode ser conferido. O “segundo” só indica a fonte.`,`IV → “deveria” é verbo de dever, uma proposta → opinião.`],
+   r:`I fato · II opinião · III fato · IV opinião.`},
+  {q:`<b>Notícia:</b> “Um cachorro caramelo invadiu o campo durante a final do campeonato amador do bairro, na tarde de ontem, no estádio municipal. Correndo atrás da bola, o animal interrompeu a partida por dez minutos. Segundo o juiz, o portão lateral tinha ficado aberto.”<br>Que trecho responde à pergunta “por quê?” (por que o cachorro conseguiu entrar)?`,
+   s:[`Faço o checklist: quê = invadiu o campo e interrompeu o jogo; quem = um cachorro caramelo; quando = tarde de ontem; onde = estádio municipal; como = correndo atrás da bola.`,`Sobra o “por quê?”: o motivo de ele ter entrado aparece na fala atribuída ao juiz.`],
+   r:`“O portão lateral tinha ficado aberto.”`},
+  {q:`<b>Duas manchetes sobre o mesmo fato:</b><br>Jornal A: “Escola Municipal do Jardim Sol é reaberta após reforma”.<br>Jornal B: “Depois de três anos e duas promessas, Jardim Sol finalmente tem sua escola de volta”.<br>O que diferencia as duas?`,
+   s:[`Fato comum: a escola foi reaberta depois de uma reforma.`,`Jornal A: só informa, sem marcas de opinião → enfoque mais neutro.`,`Jornal B: “três anos e duas promessas” e “finalmente” destacam a demora e as promessas não cumpridas → enfoque crítico.`],
+   r:`A manchete A informa de forma neutra; a B, pela escolha das palavras (“finalmente”, “duas promessas”), critica a demora da obra.`}
+ ],
+ erros: [
+  `<b>Errado:</b> achar que número é sempre fato. <b>Certo:</b> “Apenas 2 mil pessoas, um fracasso” mistura dado (2 mil) com opinião (“apenas”, “fracasso”).`,
+  `<b>Errado:</b> dizer que uma notícia com fala entre aspas virou texto de opinião. <b>Certo:</b> a opinião é do entrevistado; a notícia continua informando.`,
+  `<b>Errado:</b> confundir editorial com artigo de opinião. <b>Certo:</b> editorial = voz do jornal, sem autor individual; artigo = assinado por alguém.`,
+  `<b>Errado:</b> achar que uma informação errada vira opinião. <b>Certo:</b> “A ponte tem 900 metros” (quando tem 300) é um dado falso, mas não é opinião: dá para conferir e desmentir com uma medida.`
+ ],
+ resumo: [
+  `Fato = dá para conferir · Opinião = dá para discordar.`,
+  `Marcas de opinião: adjetivo que avalia, infelizmente, acho, deveria.`,
+  `Lide = quê, quem, quando, onde, como, por quê.`,
+  `Artigo tem autor · editorial é a voz do jornal.`,
+  `Aspas = opinião do entrevistado, não do jornalista.`
+ ]
+},
+
+/* ===================== p-fake · Fake news ===================== */
+'p-fake': {
+ base: [
+  [`O que é fake news`, `É uma informação <b>falsa</b> feita para parecer notícia de verdade, com o objetivo de enganar (para ganhar cliques, dinheiro ou influenciar opiniões). Ex.: um “alerta” inventado com cara de reportagem.`],
+  [`Desinformação nem sempre é mentira inteira`, `Também desinforma: foto verdadeira com legenda falsa, notícia antiga como se fosse nova, número verdadeiro cortado do contexto. Ex.: vídeo de uma enchente de 2015 postado como “agora”.`],
+  [`Por que ela se espalha tão rápido`, `Porque mexe com <b>emoções fortes</b>: medo, raiva, espanto. Quem sente isso compartilha antes de pensar. Ex.: “URGENTE: vão cancelar as férias!” dá vontade de avisar todo mundo.`],
+  [`Fonte confiável`, `É a que pode ser identificada e cobrada: tem nome, endereço, responsável, histórico. Um portal de notícias conhecido, um órgão oficial, uma universidade. “Um amigo de um primo que é médico” não é fonte.`],
+  [`Caça-cliques`, `Título exagerado que promete algo chocante para você clicar (“Você não vai acreditar no que aconteceu!”). Nem todo caça-cliques é falso, mas é sinal de alerta.`],
+  [`Agência de checagem`, `Equipe de jornalistas que investiga boatos e diz se são verdadeiros, falsos ou enganosos, mostrando as provas. Ferramenta ótima antes de compartilhar.`],
+  [`Sátira`, `Texto de humor que inventa notícias de propósito, num site conhecido por isso. Não é fake news enquanto o leitor sabe que é piada; vira problema quando circula sem esse aviso e alguém acredita.`]
+ ],
+ jeitos: [
+  {n:`Termômetro da emoção`, c:`Se a mensagem te deixa com muito medo, raiva ou espanto, acenda o alerta: emoção forte é o “combustível” da fake news. Respire e confira antes de acreditar.`,
+   ex:`“ABSURDO!!! Escolas vão proibir o recreio a partir de segunda!!!” → muita indignação, caixa alta e exclamações → <b>pare e verifique</b> antes de repassar.`},
+  {n:`Fonte com nome e sobrenome`, c:`Procure quem disse: nome da pessoa, da instituição, do estudo. Expressões vagas como “cientistas afirmam”, “especialistas garantem”, “um médico disse” sem nome são sinal de alerta.`,
+   ex:`“Cientistas confirmam que água gelada causa gripe.” → quais cientistas? que estudo? → <b>fonte vaga = alerta</b>.`},
+  {n:`Leitura lateral`, c:`Em vez de ler a mensagem várias vezes, abra outra aba e procure o mesmo assunto em veículos conhecidos e agências de checagem. Se nenhum fala disso, desconfie.`,
+   ex:`Mensagem: “Prefeitura vai dar celular grátis a todos os alunos.” → procuro no site da prefeitura e em jornais → nada encontrado → <b>provavelmente falso</b>.`},
+  {n:`Raio X do link`, c:`Confira o endereço do site letra por letra. Sites falsos imitam nomes famosos trocando letras, acrescentando hífens ou terminações estranhas.`,
+   ex:`Jornal verdadeiro: <i>jornalvalesereno.com.br</i>. Link recebido: <i>jornal-vale-sereno.news.co</i> → hífens e terminação diferente → <b>imitação</b>.`},
+  {n:`Na prova: escolha a atitude prudente`, c:`Em questões sobre “atitude adequada”, a resposta certa é quase sempre a que manda <b>verificar</b> (fonte, data, outros veículos). Elimine “compartilhar logo”, “acreditar porque muitos compartilharam” e “acreditar porque veio de alguém da família”.`,
+   ex:`Alternativas: compartilhar para avisar / confiar porque tem 10 mil curtidas / <b>conferir em sites confiáveis antes de repassar</b> / responder com opinião. → fico com a terceira.`}
+ ],
+ passo: [
+  `Leia a pergunta: ela quer os sinais de alerta, a atitude correta ou o tipo de problema (falso, antigo, fora de contexto, sátira)?`,
+  `Meça o termômetro da emoção: caixa alta, “!!!”, “URGENTE”, “compartilhe”.`,
+  `Procure fonte com nome, autor e data. Vago ou ausente = alerta.`,
+  `Confira o link e se a data e o lugar batem com o que a mensagem diz.`,
+  `Na dúvida entre alternativas, fique com a que manda verificar antes de compartilhar.`
+ ],
+ exs: [
+  {q:`<b>Mensagem:</b> “Cientistas confirmam: comer 3 bananas por dia faz você crescer 5 cm em um mês!!! Os médicos não querem que você saiba. COMPARTILHE!”<br>Aponte os sinais de que ela pode ser falsa.`,
+   s:[`Termômetro da emoção: exclamações em série e “COMPARTILHE” em caixa alta → alerta.`,`Fonte com nome? “Cientistas confirmam” → quais? Nenhum nome, nenhum estudo → alerta.`,`A promessa é exagerada (5 cm em um mês) e a frase “os médicos não querem que você saiba” tenta fazer você desconfiar justamente de quem entende do assunto.`],
+   r:`Fonte vaga, ausência de autor e de dados, promessa exagerada, tom sensacionalista e pedido de compartilhamento.`},
+  {q:`Você recebe uma notícia com o link <i>jornal-vale-sereno.news.co</i>, mas o jornal da sua cidade é o <i>jornalvalesereno.com.br</i>. A notícia não tem nome de autor. O que esses detalhes indicam e o que fazer?`,
+   s:[`Uso o raio X do link: os hífens e a terminação “.news.co” não são do jornal verdadeiro → é uma imitação.`,`Sem autor, ninguém se responsabiliza pelo conteúdo → outro alerta.`,`Faço a leitura lateral: procuro a mesma notícia no site verdadeiro do jornal.`],
+   r:`Indicam que o site imita o jornal verdadeiro; antes de acreditar, é preciso procurar a notícia no site oficial e em outros veículos confiáveis.`},
+  {q:`Um vídeo mostra um tubarão nadando numa avenida alagada, com a legenda “Enchente na Avenida Beira-Rio, HOJE!”. Uma busca mostra que o vídeo é uma montagem que circula há anos, com legendas de cidades diferentes. Que tipo de desinformação é essa e qual seria a melhor forma de descobrir?`,
+   s:[`O vídeo é falso (montagem) E foi reaproveitado com novas legendas → descontextualização de lugar e de data.`,`O jeito de descobrir: busca reversa de imagem (procurar de onde o vídeo veio) e consulta a agências de checagem.`],
+   r:`Conteúdo manipulado e descontextualizado (reaproveitado com lugar e data falsos). Descobre-se com busca reversa de imagem e consulta a agências de checagem.`}
+ ],
+ erros: [
+  `<b>Errado:</b> “Tem milhares de compartilhamentos, então é verdade.” <b>Certo:</b> número de compartilhamentos não prova nada; mentira também viraliza.`,
+  `<b>Errado:</b> “A notícia é verdadeira, então não há problema em repassar.” <b>Certo:</b> notícia verdadeira e antiga, apresentada como nova, também desinforma.`,
+  `<b>Errado:</b> confiar porque veio de alguém conhecido. <b>Certo:</b> quem repassa pode ter sido enganado; confira a origem, não o mensageiro.`,
+  `<b>Errado:</b> chamar toda sátira de fake news. <b>Certo:</b> sátira é humor assumido; o problema é quando circula sem contexto e alguém acredita.`
+ ],
+ resumo: [
+  `Emoção forte → pare e confira.`,
+  `Fonte com nome · autor · data · link verdadeiro.`,
+  `Leitura lateral: procure em outros veículos.`,
+  `Verdade antiga como nova = desinformação.`,
+  `Na prova: a atitude certa é VERIFICAR antes de compartilhar.`
+ ]
+},
+
+/* ===================== p-lit · Narrativa e poema ===================== */
+'p-lit': {
+ base: [
+  [`Autor × narrador`, `O <b>autor</b> é a pessoa real que escreveu. O <b>narrador</b> é a voz que conta a história dentro do texto. Uma escritora adulta pode criar um narrador que é um menino de 10 anos ou até um gato.`],
+  [`Narrador em 1ª pessoa`, `Usa <b>eu/nós</b> fora das falas e participa da história. Pode ser o protagonista (“Eu perdi o ônibus e…”) ou uma testemunha que conta a história de outro (“Eu vi quando meu vizinho…”).`],
+  [`Narrador em 3ª pessoa`, `Conta de fora (<b>ele/ela/eles</b>). <b>Observador</b>: só relata o que se vê e se ouve, como uma câmera. <b>Onisciente</b>: sabe o que os personagens pensam e sentem por dentro.`],
+  [`Personagens`, `<b>Protagonista</b> = personagem principal. <b>Antagonista</b> = quem se opõe a ele (pode ser uma pessoa, um bicho ou até a natureza). <b>Secundárias</b> = ajudam a história a andar.`],
+  [`Tempo e espaço`, `<b>Espaço</b> = onde acontece. <b>Tempo cronológico</b> = o do relógio e do calendário, em ordem (“às 7h”, “no dia seguinte”). <b>Tempo psicológico</b> = como o personagem sente o tempo (“aquele minuto durou uma eternidade”) ou lembranças fora de ordem.`],
+  [`Enredo em 4 momentos`, `<b>Situação inicial</b> (tudo calmo) → <b>conflito</b> (algo dá errado) → <b>clímax</b> (ponto de maior tensão) → <b>desfecho</b> (como termina). Ex.: festa preparada → bolo cai → todos tentam salvar a festa → acabam comendo o bolo de colher, rindo.`],
+  [`Verbos de dizer`, `Disse, perguntou, respondeu, gritou, sussurrou, prometeu, pediu: são os verbos que introduzem a fala dos personagens. Ajudam a reconhecer o discurso direto e o indireto.`],
+  [`Poema: verso, estrofe e eu lírico`, `<b>Verso</b> = cada linha do poema. <b>Estrofe</b> = grupo de versos. <b>Rima</b> = repetição de som no fim dos versos. <b>Eu lírico</b> = a voz que fala no poema, que pode ser bem diferente do poeta.`]
+ ],
+ jeitos: [
+  {n:`Teste do “eu” fora das aspas`, c:`Procure “eu, me, meu, nós” no texto do NARRADOR, fora dos travessões e aspas. Se aparece → 1ª pessoa. Se só aparece dentro das falas dos personagens → 3ª pessoa.`,
+   ex:`“— Eu não vou! — gritou Pedro. A mãe suspirou e fechou a porta.” → o “eu” está dentro da fala de Pedro; o narrador usa “gritou Pedro”, “a mãe suspirou” → <b>3ª pessoa</b>.`},
+  {n:`Teste do pensamento`, c:`Num texto em 3ª pessoa, pergunte: o narrador conta o que o personagem pensa ou sente por dentro, sem ele dizer em voz alta? Se sim → onisciente. Se só mostra ações e falas → observador.`,
+   ex:`“Lia entregou o presente. <b>Torcia, em silêncio, para que ninguém percebesse que era usado.</b>” → o narrador revela o que Lia deseja em silêncio → <b>onisciente</b>.`},
+  {n:`O que dá errado?`, c:`Para achar o conflito, pergunte: “O que o personagem quer e o que atrapalha?”. O conflito é o obstáculo, não o desejo nem o final.`,
+   ex:`Marcos quer apresentar o trabalho, mas o pen drive não abre a 5 minutos da apresentação.<br>Desejo: apresentar. Obstáculo: <b>o pen drive que não abre → conflito</b>.`},
+  {n:`Raio X do discurso`, c:`Travessão ou aspas com a fala exata → <b>direto</b>. Verbo de dizer + “que” ou “se” → <b>indireto</b>. Pensamento do personagem misturado à frase do narrador, sem aviso → <b>indireto livre</b>.`,
+   ex:`“Rui perguntou <b>se</b> o jogo já tinha começado.” → indireto.<br>“Rui olhou o relógio. <b>Atrasado de novo, que droga!</b> Correu para o ponto.” → indireto livre.`},
+  {n:`Tabela da conversão para o indireto`, c:`Ao passar do direto para o indireto, tudo “se afasta” um passo:<br><table class="tb"><tr><td>eu / meu</td><td>ele / seu (dele)</td></tr><tr><td>vou fazer / farei</td><td>iria fazer / faria</td></tr><tr><td>fiz</td><td>tinha feito</td></tr><tr><td>aqui / este</td><td>ali / aquele</td></tr><tr><td>hoje / amanhã</td><td>naquele dia / no dia seguinte</td></tr><tr><td>Faça! (imperativo)</td><td>que fizesse</td></tr></table>`,
+   ex:`“— Fiz a lição hoje — disse Tiago.” → Tiago disse que <b>tinha feito</b> a lição <b>naquele dia</b>.`}
+ ],
+ passo: [
+  `Leia a pergunta: ela quer foco narrativo, conflito, tipo de discurso, elementos (tempo/espaço/personagem) ou algo do poema?`,
+  `Para o foco, faça o teste do “eu” fora das aspas; se for 3ª pessoa, faça o teste do pensamento.`,
+  `Para o conflito, pergunte o que o personagem quer e o que atrapalha.`,
+  `Para o discurso, procure travessão/aspas (direto), verbo de dizer + “que/se” (indireto) ou pensamento sem aviso (indireto livre).`,
+  `Na conversão para o indireto, use a tabela: pessoa, tempo do verbo, lugar e dia se “afastam”.`,
+  `No poema, separe poeta de eu lírico e conte versos e estrofes com calma.`
+ ],
+ exs: [
+  {q:`“Algum tempo hesitei se devia abrir estas memórias pelo princípio ou pelo fim, isto é, se poria em primeiro lugar o meu nascimento ou a minha morte.” (Machado de Assis, <i>Memórias Póstumas de Brás Cubas</i>, 1881)<br>Qual é o foco narrativo do trecho?`,
+   s:[`Faço o teste do “eu” fora das aspas: não há aspas de personagem; o próprio narrador diz “hesitei”, “estas memórias”, “o meu nascimento”, “a minha morte”.`,`Verbo e pronomes em 1ª pessoa no texto do narrador → 1ª pessoa.`,`E ele conta a própria vida (até a própria morte!): é o protagonista da história.`],
+   r:`1ª pessoa: narrador-personagem (protagonista que conta as próprias memórias).`},
+  {q:`“Marta sorriu para a tia e agradeceu o suéter de lã. Por dentro, contava os dias para o verão e calculava quantos domingos teria de usar aquilo nas visitas.”<br>Qual é o tipo de narrador?`,
+   s:[`Teste do “eu”: não aparece → 3ª pessoa (“Marta sorriu”).`,`Teste do pensamento: “Por dentro, contava os dias… e calculava…” → o narrador sabe o que Marta pensa sem ela falar.`,`Ainda tem um contraste: por fora sorri, por dentro não gostou. Só um narrador onisciente mostra isso.`],
+   r:`Narrador em 3ª pessoa, onisciente (conhece os pensamentos de Marta).`},
+  {q:`Passe para o discurso indireto: “— Feche a janela, Lia! — pediu a mãe.”`,
+   s:[`Raio X: travessão + fala exata → está no direto.`,`Uso a tabela: verbo de dizer (“pediu”) + “que”. O imperativo “Feche” vira “que fechasse”.`,`Lia, que era chamada (vocativo), passa a ser a pessoa a quem a mãe pede: “pediu a Lia”.`],
+   r:`A mãe pediu a Lia que fechasse a janela.`}
+ ],
+ erros: [
+  `<b>Errado:</b> achar que o narrador é sempre o autor. <b>Certo:</b> o narrador é uma voz criada; Machado de Assis não morreu antes de escrever Brás Cubas.`,
+  `<b>Errado:</b> dizer que é 1ª pessoa porque há “eu” dentro de uma fala com travessão. <b>Certo:</b> só conta o “eu” do narrador, fora das falas.`,
+  `<b>Errado:</b> apontar o desfecho ou o desejo do personagem como conflito. <b>Certo:</b> conflito é o problema que atrapalha e faz a história andar.`,
+  `<b>Errado:</b> passar para o indireto só tirando as aspas (“Ela disse que vou chegar amanhã”). <b>Certo:</b> ajustar pessoa, tempo e dia: “Ela disse que chegaria no dia seguinte”.`
+ ],
+ resumo: [
+  `“Eu” fora das falas → 1ª pessoa.`,
+  `3ª pessoa + sabe o que pensam → onisciente; só mostra → observador.`,
+  `Conflito = o que atrapalha o desejo do personagem.`,
+  `Direto: travessão · Indireto: disse que · Livre: pensamento sem aviso.`,
+  `Indireto: eu→ele, vou→iria, aqui→ali, amanhã→no dia seguinte.`,
+  `Poema: verso = linha, estrofe = grupo, eu lírico ≠ poeta.`
+ ]
+},
+
+/* ===================== p-inter · Intertextualidade ===================== */
+'p-inter': {
+ base: [
+  [`Intertextualidade = texto que conversa com texto`, `Acontece quando um texto retoma outro, já conhecido: copiando, imitando, lembrando ou brincando com ele. Ex.: um anúncio que diz “Era uma vez um preço baixo…” conversa com os contos de fadas.`],
+  [`Texto-fonte`, `É o texto original, o que está sendo retomado. Para entender a conversa, você precisa reconhecer o texto-fonte; por isso, quanto mais você lê, mais fácil fica.`],
+  [`Paródia`, `Imita um texto famoso (forma, ritmo, palavras) mas <b>muda o sentido</b>, para criticar ou fazer rir. Ex.: “Minha terra tem palmeiras” vira “Minha rua tem buracos”.`],
+  [`Paráfrase`, `Diz a mesma coisa com outras palavras, <b>sem mudar o sentido</b>. Ex.: “Quem espera sempre alcança” → “Quem tem paciência consegue o que deseja”.`],
+  [`Citação`, `Reproduz o trecho exatamente, entre aspas, e indica de quem é. Ex.: Como escreveu Gonçalves Dias, “Minha terra tem palmeiras, / Onde canta o Sabiá”.`],
+  [`Alusão (referência)`, `Apenas lembra o outro texto, de passagem, sem copiar nem dizer a fonte. Quem conhece o original percebe. Ex.: chamar alguém de “a Cinderela da festa” (saiu correndo à meia-noite).`],
+  [`Epígrafe`, `Trecho de outro autor colocado no começo de um livro, capítulo ou poema, separado do texto, para anunciar o tom ou o tema da obra.`],
+  [`Clássicos bastante retomados (domínio público)`, `“Canção do Exílio” (Gonçalves Dias, 1843); fábulas como “A cigarra e a formiga” (atribuída a Esopo); “Ser ou não ser, eis a questão” (Shakespeare, <i>Hamlet</i>); contos de fadas; provérbios populares.`]
+ ],
+ jeitos: [
+  {n:`Ouça o eco da forma`, c:`Se um verso, um slogan ou uma frase tem um ritmo “familiar”, pare e pergunte: de onde conheço isso? A estrutura repetida (mesmo número de sílabas, mesma ordem de palavras) denuncia o texto-fonte.`,
+   ex:`“Água mole em celular duro, tanto cai até que quebra.” → mesmo ritmo e estrutura de “Água mole em pedra dura, tanto bate até que fura” → <b>texto-fonte: o provérbio</b>.`},
+  {n:`Mesmo sentido ou outro sentido?`, c:`Compare a mensagem do texto novo com a do original. Mesma ideia, outras palavras → <b>paráfrase</b>. Mesma forma, ideia mudada (zoeira, crítica, inversão) → <b>paródia</b>.`,
+   ex:`Original: “Quem com ferro fere, com ferro será ferido.”<br>A: “Quem faz mal aos outros acaba recebendo o mesmo mal.” → <b>paráfrase</b>.<br>B: “Quem com spoiler fere, com spoiler será ferido.” → muda o assunto para fazer humor → <b>paródia</b>.`},
+  {n:`Aspas + nome = citação`, c:`Tem o trecho exato entre aspas e o nome do autor? É citação. Só lembra o outro texto, sem aspas nem fonte? É alusão. Fica sozinho no começo da obra, separado? É epígrafe.`,
+   ex:`Como escreveu Shakespeare em <i>Hamlet</i>: “Ser ou não ser, eis a questão.” → <b>citação</b>.<br>“Prova surpresa? Estudar ou não estudar, eis a questão.” → <b>alusão</b> (só lembra a fala).`},
+  {n:`Por que ele chamou esse texto?`, c:`Depois de achar a referência, pergunte qual EFEITO ela cria: humor, crítica, chamar atenção (anúncios adoram), dar autoridade ao argumento ou emocionar. As questões costumam pedir esse efeito.`,
+   ex:`Anúncio de imobiliária: “Sua casa tem palmeiras, onde canta o sabiá?” → retoma a “Canção do Exílio” para associar o imóvel à <b>beleza e ao orgulho da terra natal</b> e chamar atenção do leitor.`}
+ ],
+ passo: [
+  `Leia a pergunta: ela quer o texto-fonte, o tipo de relação ou o efeito da retomada?`,
+  `Procure o eco: palavras, ritmo ou estrutura que lembram um texto famoso.`,
+  `Compare os sentidos: o novo texto mantém (paráfrase) ou muda (paródia) a mensagem?`,
+  `Confira a forma: aspas + autor (citação), só lembrança (alusão), trecho no começo da obra (epígrafe).`,
+  `Explique o efeito: humor, crítica, autoridade ou chamar a atenção.`
+ ],
+ exs: [
+  {q:`Provérbio: “Água mole em pedra dura, tanto bate até que fura.” Classifique as reescritas:<br>A. “Quem insiste com paciência acaba vencendo a resistência.”<br>B. “Celular velho em tomada frouxa, tanto cai até que quebra.”`,
+   s:[`Uso o “mesmo sentido ou outro sentido?”.`,`A: diz que a persistência vence a dificuldade, exatamente a ideia do provérbio, com outras palavras → paráfrase.`,`B: copia o ritmo e a estrutura, mas fala de um celular que cai e quebra; o sentido muda para fazer humor → paródia.`],
+   r:`A é paráfrase; B é paródia.`},
+  {q:`Em qual trecho há <b>citação</b>?<br>(a) “Minha rua tem buracos onde canta o pneu.”<br>(b) Como escreveu Gonçalves Dias em 1843: “Minha terra tem palmeiras, / Onde canta o Sabiá”.<br>(c) “Ela é a Cinderela da turma: some antes da meia-noite.”<br>(d) “Estudar ou não estudar, eis a questão.”`,
+   s:[`Aplico o “aspas + nome = citação”.`,`(a) imita e muda o sentido → paródia. (c) e (d) só lembram outros textos, sem reproduzir o trecho exato nem indicar o autor → alusão.`,`(b) traz o trecho exato entre aspas e o nome do autor → citação.`],
+   r:`(b)`},
+  {q:`<b>Cartum:</b> no verão, a formiga carrega folhas sob o sol, enquanto a cigarra, deitada numa espreguiçadeira, grava vídeos com o celular. Legenda: “No inverno, a cigarra tinha 2 milhões de seguidores e patrocínio, e foi a formiga quem bateu à porta dela pedindo ajuda.”<br>Que relação o cartum estabelece com a fábula “A cigarra e a formiga” e com que efeito?`,
+   s:[`Ouço o eco: cigarra que se diverte no verão, formiga que trabalha, inverno, pedir ajuda → texto-fonte: a fábula atribuída a Esopo.`,`Na fábula, quem passa necessidade no inverno e pede ajuda é a cigarra. No cartum, isso se inverte: a formiga é quem pede.`,`A forma é mantida e o sentido é invertido → paródia. Efeito: humor e crítica a um mundo em que a fama na internet pode render mais que o trabalho tradicional.`],
+   r:`É uma paródia: retoma a fábula e inverte a moral, criando humor e criticando a valorização da fama nas redes sociais.`}
+ ],
+ erros: [
+  `<b>Errado:</b> chamar de paráfrase todo texto parecido com o original. <b>Certo:</b> se o sentido mudou (humor, crítica, inversão), é paródia.`,
+  `<b>Errado:</b> achar que paródia é sempre engraçada. <b>Certo:</b> ela também pode ser séria, quando usa o original para criticar algo.`,
+  `<b>Errado:</b> confundir citação com alusão. <b>Certo:</b> citação tem o trecho exato com aspas e autor; alusão só lembra o original.`,
+  `<b>Errado:</b> parar em “é intertextualidade” e não explicar o efeito. <b>Certo:</b> dizer para que serve a retomada (rir, criticar, convencer, chamar atenção).`
+ ],
+ resumo: [
+  `Intertextualidade = um texto conversando com outro.`,
+  `Paródia = mesma forma, sentido mudado (ri ou critica).`,
+  `Paráfrase = mesmo sentido, outras palavras.`,
+  `Citação = aspas + autor · Alusão = só lembra · Epígrafe = no começo da obra.`,
+  `Achou a referência? Diga o EFEITO.`
+ ]
+}
+
+};
+
+/* REVISÃO TURBINADA · Português · P2 (Sentido, coesão e argumentação)
+   Exemplos escritos para este guia, exceto os trechos de autores clássicos em domínio público,
+   sempre com a autoria indicada (Camões, Machado de Assis, Cruz e Sousa). */
+const PLUS_P2 = {
+
+/* ======================================================================
+   p-conj · Conjunções e relações de sentido
+   ====================================================================== */
+'p-conj': {
+ base: [
+  [`O que é conjunção (ou conectivo)`, `É a palavra que <b>liga</b> duas orações ou dois termos e, ao ligar, diz <b>qual é a relação</b> entre eles. Ex.: “Treinei, <b>mas</b> perdi” (uma ideia contraria a outra) × “Treinei, <b>por isso</b> ganhei” (uma ideia é resultado da outra). As orações são as mesmas; só o conectivo mudou o sentido.`],
+  [`O que é oração`, `Oração é cada trecho organizado em torno de um verbo. “Choveu / e o jogo parou” = 2 verbos → 2 orações. Para achar a relação, primeiro separe as duas orações; depois pergunte: “o que uma faz com a outra?”.`],
+  [`A tabela grande das relações`, `<table class="tb"><tr><th>Relação</th><th>Pergunta que ela responde</th><th>Conectivos</th><th>Exemplo</th></tr>
+<tr><td>Adição</td><td>E tem mais?</td><td>e, nem (= e não), não só… mas também, além disso</td><td>Não só lavou a louça, <b>mas também</b> secou.</td></tr>
+<tr><td>Oposição</td><td>Mas o que contraria?</td><td>mas, porém, contudo, todavia, entretanto, no entanto</td><td>O bolo cresceu; <b>contudo</b>, ficou cru por dentro.</td></tr>
+<tr><td>Causa</td><td>Por quê? (o motivo)</td><td>porque, já que, visto que, uma vez que, como (no início)</td><td><b>Visto que</b> faltou luz, a aula acabou cedo.</td></tr>
+<tr><td>Consequência</td><td>E aí, o que resultou?</td><td>tão… que, tanto… que, tal… que, de modo que, de forma que</td><td>Riu <b>tanto que</b> perdeu o fôlego.</td></tr>
+<tr><td>Conclusão</td><td>Então, o que se conclui?</td><td>logo, portanto, por isso, assim, então, pois (deslocado)</td><td>Ele tem febre; <b>logo</b>, não vai ao treino.</td></tr>
+<tr><td>Explicação</td><td>Por que eu digo isso?</td><td>pois, porque, que (depois de ordem, pedido ou opinião)</td><td>Leve o casaco, <b>pois</b> a noite esfria.</td></tr>
+<tr><td>Condição</td><td>Em que caso?</td><td>se, caso, desde que (+ subjuntivo), contanto que, a menos que</td><td><b>Contanto que</b> termine a lição, pode jogar.</td></tr>
+<tr><td>Concessão</td><td>Apesar de quê?</td><td>embora, ainda que, mesmo que, se bem que, apesar de que</td><td><b>Ainda que</b> estivesse com sono, leu o capítulo.</td></tr>
+<tr><td>Finalidade</td><td>Para quê? (o objetivo)</td><td>para que, a fim de que, para (+ infinitivo)</td><td>Falou baixo <b>para que</b> o bebê não acordasse.</td></tr>
+<tr><td>Tempo</td><td>Quando?</td><td>quando, enquanto, assim que, logo que, depois que, desde que (+ indicativo), sempre que</td><td><b>Assim que</b> o sinal tocou, todos saíram.</td></tr>
+<tr><td>Comparação</td><td>Parecido com quê? Mais ou menos que quê?</td><td>como, assim como, tal qual, mais… (do) que, menos… (do) que</td><td>Corre <b>mais do que</b> o irmão.</td></tr>
+<tr><td>Conformidade</td><td>De acordo com quê?</td><td>conforme, segundo, como (= conforme), consoante</td><td><b>Segundo</b> o técnico explicou, o jogo começa às 9h.</td></tr>
+<tr><td>Proporção</td><td>Uma coisa cresce junto com outra?</td><td>à medida que, à proporção que, quanto mais… (mais/menos)</td><td><b>Quanto mais</b> leio, <b>mais</b> palavras conheço.</td></tr></table>`],
+  [`Causa × consequência: as duas pontas da mesma corda`, `“Choveu muito” (causa) → “a rua alagou” (consequência). O conectivo diz em qual ponta você está: “A rua alagou <b>porque</b> choveu muito” (o “porque” abre a CAUSA) × “Choveu <b>tanto que</b> a rua alagou” (o “que” abre a CONSEQUÊNCIA). Mesma história, ponta diferente.`],
+  [`Causa × explicação`, `Na <b>causa</b>, a oração dá o motivo do FATO: “O chão está molhado <b>porque</b> choveu” (a chuva molhou o chão). Na <b>explicação</b>, ela justifica o que a pessoa DISSE, ordenou ou concluiu: “Choveu, <b>pois</b> o chão está molhado” (o chão molhado não faz chover; ele é a prova de que choveu). Dica: depois de ordem ou pedido (“Corra, <b>que</b> o ônibus vai sair”), é explicação.`],
+  [`Oposição × concessão: o obstáculo que não impede`, `As duas mostram ideias que “brigam”. Na <b>oposição</b> (mas, porém), a ideia mais forte vem depois do conectivo. Na <b>concessão</b> (embora, ainda que), o conectivo abre a ideia FRACA, o obstáculo admitido, e a principal fica na outra oração. “Estava cansado, <b>mas</b> terminou” = “<b>Embora</b> estivesse cansado, terminou”.`],
+  [`Modo subjuntivo (pré-requisito)`, `É o modo do verbo para dúvida, hipótese, desejo: “que eu <b>esteja</b>”, “se eu <b>estivesse</b>”, “quando eu <b>estiver</b>”. As concessivas (embora, ainda que, mesmo que) e “caso” pedem subjuntivo: “Embora <b>esteja</b> frio…” (e nunca “embora está”). “Caso <b>chova</b>…” (e nunca “caso chover”).`],
+  [`Um conectivo, vários sentidos`, `Alguns conectivos “trocam de roupa” conforme a frase:<br>• <b>como</b>: causa (“<b>Como</b> era tarde, saí”), comparação (“forte <b>como</b> um touro”), conformidade (“fiz <b>como</b> mandaram”).<br>• <b>desde que</b>: condição (“Vou, <b>desde que</b> você <b>vá</b>”, subjuntivo) × tempo (“<b>Desde que</b> <b>mudou</b>, está feliz”, indicativo).<br>• <b>pois</b>: no início da oração = causa/explicação; deslocado, entre vírgulas = conclusão.`]
+ ],
+ jeitos: [
+  {n:`O teste da substituição pelo “chefe da família”`,
+   c:`Cada relação tem um conectivo “chefe”, o mais fácil de reconhecer. Troque o conectivo da prova pelo chefe de cada família: aquele que mantém o sentido é a resposta.<br>Chefes: adição → <b>e</b> · oposição → <b>mas</b> · concessão → <b>embora</b> · causa → <b>porque</b> · conclusão → <b>portanto</b> · consequência → <b>tão… que</b> · condição → <b>se</b> · finalidade → <b>para que</b> · tempo → <b>quando</b> · proporção → <b>à medida que</b> · conformidade → <b>conforme</b> · comparação → <b>como</b>.`,
+   ex:`“<b>Uma vez que</b> o filme acabou tarde, dormimos no sofá.” Testo: “<b>Porque</b> o filme acabou tarde…” → mantém! → <b>causa</b>.<br>“<b>Conquanto</b> fosse difícil, a prova foi justa.” Palavra desconhecida? Testo: “<b>Embora</b> fosse difícil…” → encaixa perfeitamente → <b>concessão</b>.`},
+  {n:`O teste do “mas” (oposição ou concessão?)`,
+   c:`Se você conseguir reescrever a frase com “mas” sem mudar a ideia, existe uma contradição entre as partes. Aí olhe o conectivo original: se ele abre o obstáculo que não impede (embora, mesmo que), é concessão; se ele abre a ideia vencedora (porém, contudo), é oposição.`,
+   ex:`“<b>Mesmo que</b> o ingresso esteja caro, vou ao show.” → “O ingresso está caro, <b>mas</b> vou ao show.” Funciona, e “mesmo que” abre o obstáculo → <b>concessão</b>.<br>“Estudou o ano todo; <b>todavia</b>, ficou nervoso.” → “Estudou o ano todo, <b>mas</b> ficou nervoso.” “Todavia” abre a ideia vencedora → <b>oposição</b>.`},
+  {n:`A pergunta da relação`,
+   c:`Pergunte à oração principal a pergunta da tabela: <b>Por quê?</b> (causa) · <b>Para quê?</b> (finalidade) · <b>Quando?</b> (tempo) · <b>Em que caso?</b> (condição) · <b>Apesar de quê?</b> (concessão) · <b>E o resultado?</b> (consequência). A oração com o conectivo responde a uma delas.`,
+   ex:`“Desligou o celular <b>a fim de que</b> ninguém o interrompesse.” Desligou PARA QUÊ? → para ninguém interromper → <b>finalidade</b>.<br>“<b>Sempre que</b> chove, o portão emperra.” O portão emperra QUANDO? → sempre que chove → <b>tempo</b>.`},
+  {n:`O teste da seta (causa → efeito)`,
+   c:`Desenhe uma seta do que vem ANTES na realidade para o que vem DEPOIS. Se o conectivo está na ponta de trás da seta, é causa; se está na ponta da frente, é consequência ou conclusão.`,
+   ex:`“O pneu furou, <b>de modo que</b> chegamos atrasados.” Seta: pneu furou → atraso. “De modo que” abre o atraso (a ponta da frente) → <b>consequência</b>.<br>“Chegamos atrasados <b>porque</b> o pneu furou.” “Porque” abre o pneu furado (a ponta de trás) → <b>causa</b>.`},
+  {n:`O teste do verbo (subjuntivo ou indicativo?)`,
+   c:`Quando o conectivo tem dois sentidos (como “desde que”), olhe o verbo. Subjuntivo (vá, fosse, estiver) costuma indicar hipótese: condição, concessão, finalidade. Indicativo (vai, foi, está) indica fato: tempo, causa.`,
+   ex:`“Empresto a bicicleta, <b>desde que</b> você a <b>devolva</b> amanhã.” “Devolva” = subjuntivo, hipótese → <b>condição</b> (= se você devolver).<br>“<b>Desde que</b> <b>entrou</b> no time, treina todo dia.” “Entrou” = indicativo, fato → <b>tempo</b> (= a partir do momento em que).`},
+  {n:`O teste da posição do “pois”`,
+   c:`“Pois” no início da oração = <b>porque</b> (causa/explicação). “Pois” depois do verbo, entre vírgulas = <b>portanto</b> (conclusão). Troque e confira.`,
+   ex:`“Feche a janela, <b>pois</b> vai ventar.” → “Feche a janela, <b>porque</b> vai ventar” → explicação.<br>“O prazo acabou ontem. Não aceitaremos, <b>pois</b>, trabalhos atrasados.” → “Não aceitaremos, <b>portanto</b>, trabalhos atrasados” → <b>conclusão</b>.`}
+ ],
+ passo: [
+  `Ache o conectivo destacado e separe as duas ideias que ele liga (quem vem antes, quem vem depois).`,
+  `Conte a “história” das duas ideias com suas palavras: uma é motivo, resultado, obstáculo, objetivo, momento?`,
+  `Faça o teste da substituição: troque pelo “chefe” de cada família até achar o que mantém o sentido.`,
+  `Se o conectivo for “como”, “pois” ou “desde que”, olhe a posição e o modo do verbo antes de decidir.`,
+  `Em questão de reescrita: confira se o novo conectivo mantém a relação E se o verbo foi ajustado (embora + subjuntivo).`
+ ],
+ exs: [
+  {q:`“Os ingressos acabaram em dez minutos, <b>de forma que</b> muitos fãs ficaram de fora.” A expressão destacada pode ser trocada, sem mudar o sentido, por: (a) porque (b) de modo que (c) embora (d) para que`,
+   s:[`Primeiro eu conto a história: os ingressos acabaram → por isso muita gente ficou de fora. A segunda parte é o RESULTADO.`,
+      `Uso o teste da seta: ingressos acabaram → fãs de fora. “De forma que” abre a ponta da frente = consequência.`,
+      `Procuro outro conectivo de consequência nas alternativas: “de modo que”. “Porque” inverteria a seta (os fãs ficarem de fora não causa o fim dos ingressos).`],
+   r:`(b) de modo que — relação de consequência.`},
+  {q:`“<b>Desde que</b> a cantina passou a vender frutas, o consumo de refrigerante caiu.” Qual a relação?`,
+   s:[`“Desde que” tem dois sentidos possíveis (condição ou tempo), então olho o verbo.`,
+      `“Passou” está no indicativo: é um fato que já aconteceu, não uma hipótese.`,
+      `Teste da substituição: “<b>A partir do momento em que</b> a cantina passou a vender frutas…” mantém o sentido. “<b>Se</b> a cantina passou…” fica estranho.`],
+   r:`Tempo (= a partir do momento em que).`},
+  {q:`Reescreva sem mudar o sentido, começando por “Embora”: “O time perdeu o primeiro jogo; no entanto, chegou à final.”`,
+   s:[`Primeiro eu vejo a relação: “no entanto” = mas → oposição. Perder o primeiro jogo é o obstáculo; chegar à final é o resultado que venceu.`,
+      `Na concessão, “embora” abre o OBSTÁCULO, não o resultado. Então: “Embora + perder o primeiro jogo”.`,
+      `Ajusto o verbo para o subjuntivo: “perdeu” → “tenha perdido”.`,
+      `Confiro: “Embora tenha perdido o primeiro jogo, o time chegou à final.” Mesmo sentido, norma-padrão.`],
+   r:`“Embora tenha perdido o primeiro jogo, o time chegou à final.”`}
+ ],
+ erros: [
+  `<b>Errado:</b> usar indicativo depois de “embora”: “Embora estava cansado, terminou a prova.” <b>Certo:</b> “Embora <b>estivesse</b> cansado…” — concessiva pede subjuntivo.`,
+  `<b>Errado:</b> colocar “embora” na ideia vencedora: “Estudou pouco, embora tenha passado.” (inverte o sentido) <b>Certo:</b> “<b>Embora</b> tenha estudado pouco, passou.” — “embora” abre o obstáculo.`,
+  `<b>Errado:</b> marcar “causa” para “tão… que”. <b>Certo:</b> “tão… que” abre o RESULTADO → consequência (“Correu <b>tão</b> rápido <b>que</b> tropeçou”).`,
+  `<b>Errado:</b> ler todo “como” como comparação. <b>Certo:</b> no início da frase, com sentido de “já que”, é causa (“<b>Como</b> faltou água, adiaram a aula”).`,
+  `<b>Errado:</b> confundir “mas” com “mais”. <b>Certo:</b> “mas” = oposição (= porém); “mais” = quantidade (o contrário de “menos”).`
+ ],
+ resumo: [
+  `Troque pelo “chefe”: mas · embora · porque · portanto · se · para que · quando.`,
+  `Mas = porém = contudo = todavia = no entanto.`,
+  `Embora / ainda que / mesmo que → obstáculo que NÃO impede + subjuntivo.`,
+  `Causa (porque) = ponta de trás da seta; consequência (tão… que) = ponta da frente.`,
+  `“Pois” no início = porque; “pois” entre vírgulas, depois do verbo = portanto.`,
+  `“Desde que” + subjuntivo = condição; + indicativo = tempo.`
+ ]
+},
+
+/* ======================================================================
+   p-coes · Coesão referencial
+   ====================================================================== */
+'p-coes': {
+ base: [
+  [`Coesão: a “cola” do texto`, `Coesão é o conjunto de recursos que ligam as frases, para o texto não virar uma lista solta. Na coesão <b>referencial</b>, uma palavra aponta para outra já citada (ou que ainda vai aparecer), para não repetir. Ex.: “A girafa abaixou o pescoço. <b>Ela</b> queria beber água.” → “Ela” aponta para “a girafa”.`],
+  [`Referente: o “dono” da palavra`, `O termo que um pronome retoma é chamado de <b>referente</b>. Toda pergunta de coesão na prova é, no fundo: “Quem é o referente?”. Em “Comprei tênis novos e já <b>os</b> sujei”, o referente de “os” é “tênis novos”.`],
+  [`Pronomes que retomam`, `<table class="tb"><tr><th>Tipo</th><th>Exemplos</th><th>Em ação</th></tr>
+<tr><td>Pessoais</td><td>ele, ela, eles, o, a, lhe, -lo, -la</td><td>Vi o filme e adorei-<b>o</b>.</td></tr>
+<tr><td>Possessivos</td><td>seu, sua, dele, dela</td><td>Ana trouxe <b>sua</b> flauta.</td></tr>
+<tr><td>Demonstrativos</td><td>este, esse, aquele, isso, isto, o (= aquilo)</td><td>Ninguém ligou. <b>Isso</b> me preocupou.</td></tr>
+<tr><td>Relativos</td><td>que, quem, o qual, cujo, onde</td><td>A ponte <b>que</b> caiu era antiga.</td></tr></table>`],
+  [`Elipse: a palavra que some (e todo mundo entende)`, `Elipse é omitir um termo que o leitor recupera sozinho. “O cachorro latiu a noite toda. Ø Só parou de manhã.” Quem parou? O cachorro, que não precisou ser repetido. Na prova, a pergunta pode ser “qual é o sujeito de ‘parou’?” — a resposta está na frase anterior.`],
+  [`Sinônimos, hiperônimos e expressões que “apelidam”`, `• <b>Sinônimo</b>: palavra de sentido parecido (“o carro… o automóvel”).<br>• <b>Hiperônimo</b>: palavra mais GERAL que engloba a outra (“a rosa… a flor”; “o tubarão… o animal”). O contrário, a palavra mais específica, é o <b>hipônimo</b>.<br>• <b>Expressão que caracteriza</b>: “Santos Dumont… <b>o inventor brasileiro</b>… <b>o pai da aviação</b>”. Essas expressões ainda acrescentam informação sobre o referente.`],
+  [`Anáfora × catáfora`, `<b>Anáfora</b> retoma algo que JÁ apareceu (olha para trás): “Lia ganhou o prêmio. <b>Ela</b> chorou.” <b>Catáfora</b> anuncia algo que AINDA vai aparecer (olha para a frente): “Só quero <b>isto</b>: que você volte cedo.” Por isso, “este/isto” costuma anunciar, e “esse/isso” costuma retomar.`],
+  [`Pronome relativo: retoma E abre oração`, `O relativo substitui o termo anterior dentro de uma nova oração. Teste: desfaça em duas frases. “O livro <b>que</b> perdi era da biblioteca” = “Perdi <b>o livro</b>. O livro era da biblioteca.” Com “cujo”: “A aluna <b>cujo</b> caderno sumiu” = “O caderno <b>da aluna</b> sumiu” (cujo = posse, concorda com a coisa possuída: cujo caderno, cuja mochila, cujos livros).`]
+ ],
+ jeitos: [
+  {n:`Pergunte “a quem?” e substitua`,
+   c:`Pare no pronome e pergunte: “a quem (ou a quê) ele se refere?”. Pegue o candidato e coloque no lugar do pronome. Se a frase faz sentido e conta a mesma história, achou o referente.`,
+   ex:`“Os bombeiros resgataram o gato do telhado e <b>o</b> entregaram à dona.” Candidatos: telhado ou gato? Substituo: “entregaram <b>o telhado</b> à dona” (absurdo) × “entregaram <b>o gato</b> à dona” (faz sentido) → referente: <b>o gato</b>.`},
+  {n:`Filtro do gênero e do número`,
+   c:`Antes de pensar no sentido, elimine candidatos que não concordam com o pronome: “ela” é feminino singular; “eles” é masculino plural. Isso costuma derrubar metade das alternativas em segundos.`,
+   ex:`“As meninas encontraram o professor na feira. <b>Eles</b> conversaram muito.” “Eles” (masculino plural) não pode ser só “as meninas” nem só “o professor” → é <b>o grupo todo</b> (meninas + professor; masculino plural engloba os dois).`},
+  {n:`O teste de quem pode fazer a ação`,
+   c:`Olhe o verbo ligado ao pronome e pergunte: qual dos candidatos consegue fazer (ou sofrer) essa ação? Coisas não falam; animais não assinam contratos.`,
+   ex:`“O menino jogou a pedra na lagoa, e <b>ela</b> afundou na hora.” Candidatos femininos: “a pedra” e “a lagoa”. A lagoa não afunda; quem afunda é a pedra → referente: <b>a pedra</b>.`},
+  {n:`“Isso” pode valer uma frase inteira`,
+   c:`Os demonstrativos neutros (isso, isto, aquilo, o) podem retomar uma IDEIA inteira, não só uma palavra. Se nenhuma palavra sozinha encaixa, procure o fato que veio antes.`,
+   ex:`“O ônibus quebrou na estrada e os passageiros esperaram três horas. <b>Isso</b> gerou muitas reclamações.” Não foi “a estrada” nem “as horas”: foi <b>a quebra do ônibus e a longa espera</b>.`},
+  {n:`Desmonte o relativo em duas frases`,
+   c:`Para saber a quem “que”, “onde”, “cujo” ou “o qual” se refere, divida o período em duas frases, repetindo o candidato. A versão que faz sentido revela o referente — e mostra se o relativo foi bem usado.`,
+   ex:`“Visitei a casa do escritor <b>onde</b> ele escreveu seus livros.” → “Ele escreveu seus livros <b>na casa</b>” (lugar físico, ok) → referente: <b>a casa</b>.<br>“A pintora <b>cujas</b> telas vimos é mineira.” → “Vimos <b>as telas da pintora</b>” → “cujas” liga a pintora (dona) às telas (coisa possuída).`}
+ ],
+ passo: [
+  `Sublinhe o pronome (ou a expressão) que a questão destaca.`,
+  `Volte no texto e liste os candidatos a referente (às vezes ele está depois, quando é catáfora).`,
+  `Corte quem não concorda em gênero e número.`,
+  `Substitua o pronome por cada candidato que sobrou e veja qual mantém o sentido (e quem pode fazer a ação).`,
+  `Se nenhuma palavra sozinha serve, procure uma ideia inteira (comum com isso, isto, o).`
+ ],
+ exs: [
+  {q:`“A coruja-buraqueira vive em campos abertos. A <b>ave</b>, que costuma cavar tocas no chão, fica ativa também durante o dia.” Que recurso de coesão é “a ave”?`,
+   s:[`Primeiro eu pergunto: “a ave” se refere a quem? Substituo: “A coruja-buraqueira, que costuma cavar tocas…” → faz sentido.`,
+      `Agora vejo a relação entre as palavras: “ave” é uma palavra mais geral — toda coruja é ave, mas nem toda ave é coruja.`,
+      `Palavra mais geral que retoma a mais específica = hiperônimo.`],
+   r:`Hiperônimo (“a ave” retoma “a coruja-buraqueira”).`},
+  {q:`“Paula ligou para Renata porque <b>ela</b> tinha esquecido a chave de casa.” Por que a frase é ambígua? Reescreva-a deixando claro que quem esqueceu a chave foi Renata.`,
+   s:[`Faço o filtro de gênero: Paula e Renata são femininas e singulares. O filtro não elimina ninguém.`,
+      `Faço o teste da ação: as duas podem ter esquecido a chave. O sentido também não decide → a frase é ambígua.`,
+      `Para resolver, troco o pronome por algo que só sirva para Renata: o próprio nome ou uma reorganização da frase.`],
+   r:`“Ela” pode ser Paula ou Renata. Uma solução: “Renata tinha esquecido a chave de casa, por isso Paula ligou para ela.”`},
+  {q:`“Meu avô me deixou <b>esta</b> recomendação: nunca durma brigado com ninguém. <b>Essa</b> frase eu levo comigo até hoje.” Explique a diferença de uso entre “esta” e “essa”.`,
+   s:[`Primeiro eu olho a direção de cada pronome: “esta” vem ANTES da recomendação, ou seja, anuncia o que vai ser dito (catáfora).`,
+      `“Essa” aparece DEPOIS da recomendação e a retoma (anáfora).`,
+      `Confiro com a regra: este/isto anuncia; esse/isso retoma.`],
+   r:`“Esta” anuncia a recomendação que ainda vai aparecer; “essa” retoma a frase já dita.`}
+ ],
+ erros: [
+  `<b>Errado:</b> escolher sempre a palavra mais próxima do pronome. <b>Certo:</b> o referente pode estar longe; teste pela substituição e pelo sentido.`,
+  `<b>Errado:</b> “A empresa cujo o dono viajou.” <b>Certo:</b> “A empresa <b>cujo dono</b> viajou.” — depois de “cujo” não vem artigo.`,
+  `<b>Errado:</b> “Foi uma época onde tudo era mais barato.” <b>Certo:</b> “uma época <b>em que</b> (na qual) tudo era mais barato.” — “onde” só para lugar físico.`,
+  `<b>Errado:</b> “O menino que eu gosto.” <b>Certo:</b> “O menino <b>de que</b> (de quem) eu gosto.” — quem gosta, gosta DE algo; a preposição vai antes do relativo.`,
+  `<b>Errado:</b> achar que “isso” sempre retoma uma palavra. <b>Certo:</b> muitas vezes retoma uma ideia inteira (um fato, uma decisão).`
+ ],
+ resumo: [
+  `Pergunte “a quem?” → substitua → confira o sentido.`,
+  `Filtro rápido: gênero e número do pronome.`,
+  `Retomam sem repetir: pronome · elipse · sinônimo · hiperônimo (ave ⊃ coruja).`,
+  `Este/isto anuncia → · ← esse/isso retoma.`,
+  `Onde = lugar físico · cujo = posse, sem artigo.`
+ ]
+},
+
+/* ======================================================================
+   p-fig · Figuras de linguagem
+   ====================================================================== */
+'p-fig': {
+ base: [
+  [`Figura de linguagem: quando a palavra sai do “modo dicionário”`, `É um uso especial da linguagem para dar ênfase, beleza, humor ou emoção. Quase todas usam o sentido <b>figurado</b> (conotativo). Ex.: “Minha mochila pesa uma tonelada” — ninguém mediu; é um jeito expressivo de reclamar do peso.`],
+  [`A tabela com o macete de cada figura`, `<table class="tb"><tr><th>Figura</th><th>Macete</th><th>Exemplo</th></tr>
+<tr><td>Comparação</td><td>Tem “como”, “feito”, “tal qual”, “parece”</td><td>Dormiu <b>feito</b> uma pedra.</td></tr>
+<tr><td>Metáfora</td><td>Comparação sem conectivo: “A é B”</td><td>Aquele lateral é um <b>foguete</b>.</td></tr>
+<tr><td>Metonímia</td><td>Troca por um VIZINHO de verdade (autor/obra, lugar/pessoas, recipiente/conteúdo, parte/todo)</td><td>A <b>escola inteira</b> aplaudiu. (as pessoas da escola)</td></tr>
+<tr><td>Hipérbole</td><td>HIPER exagero: impossível de ser literal</td><td>Chorei um <b>oceano</b>.</td></tr>
+<tr><td>Eufemismo</td><td>Almofada: amacia o que é duro</td><td>Ele <b>não foi muito feliz</b> na prova. (foi mal)</td></tr>
+<tr><td>Ironia</td><td>Diz o contrário; o contexto “entrega”</td><td>Que dia lindo para um piquenique! (debaixo de temporal)</td></tr>
+<tr><td>Personificação</td><td>Coisa ou bicho fazendo coisa de GENTE</td><td>O velho relógio <b>resmungava</b> as horas.</td></tr>
+<tr><td>Antítese</td><td>Opostos LADO A LADO, cada um no seu canto</td><td>Uns <b>chegam</b>, outros <b>partem</b>.</td></tr>
+<tr><td>Paradoxo</td><td>Opostos GRUDADOS na mesma coisa: parece impossível</td><td>“É um <b>contentamento descontente</b>” (Camões).</td></tr>
+<tr><td>Onomatopeia</td><td>A palavra É o som</td><td>O balão fez <b>pou!</b></td></tr>
+<tr><td>Aliteração</td><td>Repete CONSOANTE (som)</td><td>“<b>V</b>ozes <b>v</b>eladas, <b>v</b>eludosas <b>v</b>ozes” (Cruz e Sousa).</td></tr>
+<tr><td>Assonância</td><td>Repete VOGAL (som)</td><td>A v<b>a</b>c<b>a</b> m<b>a</b>lh<b>a</b>d<b>a</b> m<b>a</b>stig<b>a</b> <b>a</b> p<b>a</b>lh<b>a</b>.</td></tr>
+<tr><td>Gradação</td><td>Escadinha: ideias que sobem (ou descem) de intensidade</td><td>Tropeçou, cambaleou, despencou.</td></tr>
+<tr><td>Pleonasmo</td><td>Repetição de ideia: de propósito (reforço) ou por erro (vício)</td><td>Vi <b>com meus próprios olhos</b>. (reforço)</td></tr></table>`],
+  [`Metáfora × comparação, de perto`, `As duas aproximam duas coisas por uma semelhança. A <b>comparação</b> mostra a “ponte” (como, feito, tal qual, parecer): “Seus olhos brilhavam <b>como</b> faróis.” A <b>metáfora</b> tira a ponte e funde as coisas: “Seus olhos eram <b>faróis</b>.” Clássico: Machado de Assis, em <i>Dom Casmurro</i>, descreve os olhos de Capitu como “<b>olhos de ressaca</b>” — metáfora: atraem e puxam como o mar.`],
+  [`Metonímia: a troca por proximidade`, `A metonímia troca uma palavra por outra que tem ligação REAL com ela:<br>• autor pela obra: “Estou lendo <b>Machado</b>.”<br>• recipiente pelo conteúdo: “Comeu <b>um prato</b> de arroz.”<br>• lugar pelas pessoas: “<b>O estádio</b> vaiou o juiz.”<br>• parte pelo todo: “Não tinha <b>um teto</b> onde morar.” (teto = casa)<br>Na metáfora a ligação é de SEMELHANÇA (parece); na metonímia, de VIZINHANÇA (está junto).`],
+  [`Ironia × eufemismo × hipérbole: as três “mexem” na intensidade`, `• <b>Hipérbole</b> AUMENTA: “Esperei uma eternidade.”<br>• <b>Eufemismo</b> DIMINUI para suavizar: “Ele está <b>acima do peso</b>” (em vez de algo grosseiro).<br>• <b>Ironia</b> INVERTE: “Que pontual!” para quem chegou uma hora atrasado.<br>Pergunta-chave: o autor está exagerando, amaciando ou dizendo o contrário?`],
+  [`Antítese × paradoxo, de perto`, `Na <b>antítese</b>, os opostos ficam em lados diferentes, sem contradição: “De dia trabalha, de noite estuda.” No <b>paradoxo</b>, os opostos se aplicam à MESMA coisa ao mesmo tempo, e a frase parece impossível: “Sentia-se <b>sozinho no meio da multidão</b>.” (estar sozinho e cercado de gente ao mesmo tempo).`],
+  [`Pleonasmo: reforço ou erro?`, `É repetir uma ideia já contida na outra palavra. Se a repetição serve para dar ênfase, é figura (<b>pleonasmo literário</b>): “Sonhei um sonho bonito.” Se é só descuido, é <b>pleonasmo vicioso</b> e deve ser evitado: “subir para cima”, “entrar para dentro”, “elo de ligação”, “há anos atrás”.`],
+  [`Sons: onomatopeia, aliteração e assonância`, `As três trabalham com o SOM. A <b>onomatopeia</b> é uma palavra que imita um som (“au-au”, “tique-taque”, “zum-zum”). A <b>aliteração</b> repete sons de consoantes em várias palavras (“o <b>r</b>onco <b>r</b>ouco do <b>r</b>io”). A <b>assonância</b> repete sons de vogais (“s<b>o</b>l, s<b>o</b>m, s<b>o</b>n<b>o</b>”). Macete: aLiteração = Letra consoante; Assonância = A, E, I, O, U.`]
+ ],
+ jeitos: [
+  {n:`O teste do “como”`,
+   c:`Procure o conectivo de comparação (como, feito, tal qual, assim como, parecer). Tem? Comparação. Não tem, mas há uma coisa sendo chamada de outra (“A é B”)? Metáfora.`,
+   ex:`“A sala de aula virou uma <b>sauna</b>.” Não há “como”; a sala é chamada de sauna → <b>metáfora</b>.<br>“A sala estava quente <b>feito</b> uma sauna.” Há “feito” → <b>comparação</b>.`},
+  {n:`O teste do “parece ou está junto?”`,
+   c:`Quando uma palavra está no lugar de outra, pergunte: elas se PARECEM (metáfora) ou estão JUNTAS na vida real (metonímia: o autor e sua obra, o copo e a água, o lugar e as pessoas)?`,
+   ex:`“<b>O Brasil</b> parou para ver a final.” País e torcedores estão juntos (lugar pelas pessoas) → <b>metonímia</b>.<br>“Meu irmão é um <b>poço</b> de paciência.” Paciência não está num poço; há só a ideia de “muito, fundo” → <b>metáfora</b>.`},
+  {n:`O termômetro da intensidade`,
+   c:`Compare a frase com a versão “normal”. Ficou MAIOR que a realidade? Hipérbole. Ficou mais SUAVE? Eufemismo. Ficou o CONTRÁRIO, e o contexto mostra isso? Ironia.`,
+   ex:`“Ele <b>pegou emprestado</b> meu lanche sem pedir.” Versão normal: “roubou meu lanche” → a frase amacia → <b>eufemismo</b> (se o tom for de deboche, pode ter ironia junto: leia o contexto).<br>“Tenho <b>uma montanha</b> de lição.” Maior que a realidade → <b>hipérbole</b>.`},
+  {n:`O teste da mesma coisa (antítese ou paradoxo?)`,
+   c:`Achou opostos? Pergunte: os dois se referem à MESMA coisa, ao mesmo tempo? Se sim, é paradoxo (soa impossível). Se cada um fica no seu canto (dois momentos, duas pessoas, dois lugares), é antítese.`,
+   ex:`“Nos treinos era <b>lento</b>; nos jogos, <b>veloz</b>.” Opostos em momentos diferentes → <b>antítese</b>.<br>“Naquele dia, sentia uma <b>alegria triste</b>.” Alegria e tristeza na MESMA emoção, ao mesmo tempo → <b>paradoxo</b>.`},
+  {n:`Leia em voz alta (figuras de som)`,
+   c:`Para aliteração e assonância, leia a frase em voz alta (ou mentalmente bem devagar) e escute o que se repete. Consoante repetida → aliteração. Vogal repetida → assonância. Palavra que É um barulho → onomatopeia.`,
+   ex:`“O <b>t</b>ambor <b>t</b>roava, <b>t</b>enso e <b>t</b>eimoso.” Repete o som de T → <b>aliteração</b>.<br>“Bum! A porta bateu com o vento.” “Bum” imita o som → <b>onomatopeia</b>.`},
+  {n:`A escadinha (gradação)`,
+   c:`Viu uma sequência de três ou mais palavras do mesmo tipo? Verifique se elas sobem (ou descem) de força, como degraus. Se sobem, é gradação.`,
+   ex:`“Primeiro ele <b>sorriu</b>, depois <b>riu</b>, por fim <b>gargalhou</b>.” Cada verbo é mais intenso que o anterior → <b>gradação</b> (crescente).`}
+ ],
+ passo: [
+  `Leia o trecho destacado e pergunte: está em sentido literal ou figurado?`,
+  `Tem “como/feito/tal qual”? → comparação. Não tem, mas “A é B”? → metáfora.`,
+  `Troca de palavras? Parece (metáfora) ou está junto (metonímia)?`,
+  `Mexe na intensidade? Aumenta (hipérbole), amacia (eufemismo) ou inverte (ironia)?`,
+  `Há opostos? Na mesma coisa (paradoxo) ou lado a lado (antítese)? Há som repetido ou imitado? (aliteração, assonância, onomatopeia)`,
+  `Por fim, pense no EFEITO: a prova costuma perguntar para que a figura foi usada (ênfase, humor, crítica, beleza).`
+ ],
+ exs: [
+  {q:`“Quando o professor anunciou prova surpresa, <b>a sala inteira</b> suspirou.” A figura de linguagem é:`,
+   s:[`Primeiro eu pergunto: a sala (as paredes, as carteiras) suspirou? Não: quem suspirou foram os alunos.`,
+      `Então “a sala” está no lugar de “os alunos”. Uso o teste: elas se parecem ou estão juntas? Estão juntas — os alunos estão DENTRO da sala.`,
+      `Troca por vizinhança (lugar pelas pessoas) = metonímia. Não é personificação, porque o texto não quer que imaginemos a sala como um ser vivo.`],
+   r:`Metonímia (o lugar pelas pessoas que estão nele).`},
+  {q:`“Com aquele professor era assim: odiávamos as provas dele e adorávamos as aulas.” Há antítese ou paradoxo no trecho “odiávamos as provas dele e adorávamos as aulas”?`,
+   s:[`Acho os opostos: odiar × adorar.`,
+      `Aplico o teste da mesma coisa: odiar se refere às PROVAS; adorar se refere às AULAS. Cada oposto está no seu canto.`,
+      `Como não há contradição (é possível odiar uma coisa e adorar outra), não é paradoxo.`],
+   r:`Antítese (opostos lado a lado, aplicados a coisas diferentes).`},
+  {q:`Na frase “Recebi um aviso de que o meu celular ‘descansaria’ por uns dias — ou seja, foi confiscado pela coordenação”, a palavra “descansaria” é exemplo de qual figura e com que efeito?`,
+   s:[`Comparo com a versão “normal”: “o celular será confiscado”.`,
+      `A palavra escolhida deixa a notícia mais leve, menos dura. No termômetro, isso é AMACIAR → eufemismo.`,
+      `Observo também o efeito: o autor brinca com a situação, suavizando-a com humor (o “ou seja” revela o sentido verdadeiro).`,
+      `Atenção: o celular “descansar” também dá ao objeto uma ação de gente (personificação), mas ela está a serviço da figura principal: amaciar a notícia.`],
+   r:`Eufemismo: suaviza o fato desagradável (o confisco), com efeito de humor.`}
+ ],
+ erros: [
+  `<b>Errado:</b> chamar de metáfora qualquer frase com “como”. <b>Certo:</b> com conectivo é <b>comparação</b>; metáfora não tem conectivo.`,
+  `<b>Errado:</b> marcar personificação em “O estádio vaiou o juiz”. <b>Certo:</b> é <b>metonímia</b> (lugar pelas pessoas); quem vaiou foram os torcedores.`,
+  `<b>Errado:</b> chamar de paradoxo qualquer par de opostos. <b>Certo:</b> só é paradoxo quando os opostos se aplicam à mesma coisa; lado a lado é <b>antítese</b>.`,
+  `<b>Errado:</b> trocar aliteração por assonância. <b>Certo:</b> aLiteração = consoantes; Assonância = vogais (A, E, I, O, U).`,
+  `<b>Errado:</b> achar que todo pleonasmo é erro. <b>Certo:</b> “Vi com meus próprios olhos” é reforço intencional (figura); “subir para cima” é vício.`
+ ],
+ resumo: [
+  `Com “como” = comparação · sem = metáfora.`,
+  `Parece = metáfora · está junto = metonímia.`,
+  `Aumenta = hipérbole · amacia = eufemismo · inverte = ironia.`,
+  `Opostos lado a lado = antítese · na mesma coisa = paradoxo.`,
+  `aLiteração = consoante · Assonância = vogal · onomatopeia = o próprio som.`,
+  `Escadinha = gradação · repetição de ideia = pleonasmo.`
+ ]
+},
+
+/* ======================================================================
+   p-sent · Denotação, conotação, polissemia e ambiguidade
+   ====================================================================== */
+'p-sent': {
+ base: [
+  [`Sentido literal e sentido figurado`, `<b>Denotação</b> é o sentido “de dicionário”, o primeiro, concreto: “O <b>gelo</b> derreteu no copo.” <b>Conotação</b> é o sentido figurado, criado pelo contexto: “Ela me deu um <b>gelo</b> a semana toda” (= me ignorou). A palavra é a mesma; o contexto decide.`],
+  [`Contexto: o juiz que decide o sentido`, `Contexto é tudo o que está em volta da palavra: a frase, o texto, a situação, o gênero (notícia, tirinha, anúncio). Na prova, NUNCA responda pela palavra isolada; leia a frase inteira. “Ele é uma <b>fera</b>” pode ser elogio (fera em matemática = muito bom) ou crítica (ficou uma fera = muito bravo).`],
+  [`Polissemia: uma palavra, vários sentidos aparentados`, `Polissemia é quando a MESMA palavra tem vários sentidos ligados por uma ideia comum. “<b>Linha</b>” de costura, linha de ônibus, linha do telefone, linha de raciocínio — todas guardam a ideia de “fio, sequência”. “<b>Pé</b>” de gente, pé da mesa, pé de alface, pé da montanha: todos guardam a ideia de “base, parte de baixo”.`],
+  [`Homônimos: som ou grafia iguais, sentidos diferentes`, `• <b>Homófonos</b> (mesmo som, grafia diferente): cela (prisão) × sela (do cavalo); conserto (reparo) × concerto (apresentação musical); sessão × seção × cessão.<br>• <b>Homógrafos</b> (mesma grafia, som diferente): o <b>governo</b> (ô) × eu <b>governo</b> (ó); o <b>jogo</b> (ô) × eu <b>jogo</b> (ó).`],
+  [`Parônimos: parecidos, mas diferentes`, `São palavras de grafia e som PARECIDOS (não iguais) e sentidos diferentes: comprimento × cumprimento · descrição × discrição · eminente × iminente · tráfego × tráfico · ratificar (confirmar) × retificar (corrigir) · mandado (ordem judicial) × mandato (período de um cargo).`],
+  [`Ambiguidade: quando a frase pode ser lida de dois jeitos`, `As causas mais comuns na prova:<br>• <b>pronome</b> com dois candidatos: “O pai disse ao filho que <b>seu</b> time perdeu” (time de quem?);<br>• <b>posição</b> de um termo: “Vi o acidente <b>do ônibus</b>” (eu estava no ônibus ou o ônibus se acidentou?);<br>• <b>palavra polissêmica</b>: “O banco está quebrado” (o assento ou a instituição financeira?).`],
+  [`Ambiguidade: defeito ou recurso?`, `Depende da intenção e do gênero. Em notícia, aviso, manual ou redação, é <b>defeito</b> (o leitor pode entender errado). Em piada, tirinha, anúncio ou poema, costuma ser <b>recurso</b> proposital para criar humor ou chamar atenção.`]
+ ],
+ jeitos: [
+  {n:`O teste do “é de verdade?”`,
+   c:`Pergunte se aquilo pode acontecer literalmente, no mundo real. Pode? Denotação. Não pode, e a palavra está “emprestando” uma ideia? Conotação.`,
+   ex:`“O <b>peso</b> da mochila machucou meu ombro.” A mochila pesa de verdade → <b>denotação</b>.<br>“Ele carrega o <b>peso</b> da culpa.” Culpa não tem quilos → <b>conotação</b> (peso = sofrimento, preocupação).`},
+  {n:`Troque por um sinônimo`,
+   c:`Para descobrir qual sentido de uma palavra polissêmica foi usado, troque por um sinônimo que caiba naquele contexto. O sinônimo que encaixa revela o sentido.`,
+   ex:`“O médico <b>receitou</b> repouso.” → “indicou” encaixa.<br>“Ela <b>tirou</b> 10 na prova.” → “obteve” encaixa; “arrancou” não.<br>“Ele <b>tirou</b> o casaco.” → “despiu” encaixa. Mesmo verbo, sentidos diferentes: <b>polissemia</b>.`},
+  {n:`Desenhe as duas cenas`,
+   c:`Para saber se uma frase é ambígua, tente imaginar (ou rabiscar) duas cenas diferentes para ela. Se conseguir, é ambígua. Depois, procure a palavra culpada: geralmente um pronome ou um termo mal posicionado.`,
+   ex:`“Encontrei a vizinha com o cachorro <b>de chapéu</b>.” Cena 1: a vizinha de chapéu. Cena 2: o cachorro de chapéu → <b>ambígua</b>. Culpado: a posição de “de chapéu”. Correção: “Encontrei a vizinha, que estava de chapéu, com o cachorro.”`},
+  {n:`A palavra-gancho dos parônimos e homônimos`,
+   c:`Ligue cada palavra a uma “parente” fácil que dá a grafia certa.`,
+   ex:`com<b>pri</b>mento ← com<b>pri</b>do (medida) · <b>cum</b>primento ← <b>cum</b>primentar (saudação).<br><b>ce</b>ssão ← <b>ce</b>der · con<b>s</b>erto ← con<b>s</b>ertar (reparo) · con<b>c</b>erto ← <b>c</b>oncertista (música).<br><b>i</b>minente ← <b>i</b>mediato (já vai acontecer) · <b>e</b>minente ← <b>e</b>levado (importante).<br>dis<b>cri</b>ção ← dis<b>cre</b>to · des<b>cri</b>ção ← des<b>cre</b>ver.`},
+  {n:`Pergunte pelo gênero do texto`,
+   c:`Quando a prova perguntar se a ambiguidade é falha ou recurso, olhe ONDE a frase está. Texto que quer informar com precisão → falha. Texto que quer divertir ou chamar atenção → recurso.`,
+   ex:`Placa de rua: “Proibido estacionar carros de visitantes azuis.” → falha (o aviso precisa ser claro).<br>Anúncio de uma ótica: “Aqui, você vai ver o que é qualidade.” → recurso (“ver” = enxergar e “ver” = comprovar).`}
+ ],
+ passo: [
+  `Leia a frase inteira (e o texto, se houver) antes de olhar a palavra destacada.`,
+  `Pergunte: “é de verdade?” → literal (denotação) ou figurado (conotação).`,
+  `Se a palavra tem vários sentidos, troque por um sinônimo que caiba no contexto.`,
+  `Se a questão fala em duplo sentido, desenhe as duas cenas e ache a palavra culpada.`,
+  `Decida pelo gênero: ambiguidade em texto informativo é falha; em humor ou propaganda, recurso.`
+ ],
+ exs: [
+  {q:`Em qual frase a palavra “raiz” está em sentido <b>denotativo</b>? (a) Precisamos atacar a raiz do problema. (b) A raiz da mandioca é comestível. (c) Ele criou raízes naquela cidade. (d) Ela nunca esquece suas raízes nordestinas.`,
+   s:[`Uso o teste do “é de verdade?” em cada uma.`,
+      `(a) Problema não tem raiz de planta → figurado. (c) Pessoa não cria raízes no chão → figurado (= se fixou). (d) Raízes = origem → figurado.`,
+      `(b) A mandioca é uma planta e tem raiz de verdade → literal.`],
+   r:`(b) — denotação.`},
+  {q:`Explique o duplo sentido do aviso de uma academia: “Venha <b>pegar pesado</b> com a gente!”.`,
+   s:[`Desenho as duas cenas: na primeira, a pessoa levanta pesos de verdade; na segunda, “pegar pesado” significa “se esforçar muito”.`,
+      `Os dois sentidos combinam com uma academia, então o duplo sentido é proposital.`,
+      `Gênero: anúncio → ambiguidade como recurso para chamar atenção.`],
+   r:`“Pegar pesado” = levantar pesos (literal) e se esforçar muito (figurado); a ambiguidade é recurso do anúncio.`},
+  {q:`“O diretor conversou com o aluno <b>em sua sala</b>.” A frase é ambígua? Se for, reescreva deixando claro que a sala é do aluno (a sala de aula da turma dele).`,
+   s:[`Desenho as cenas: “sua sala” pode ser a sala do diretor ou a sala do aluno. Duas cenas → ambígua.`,
+      `Culpado: o possessivo “sua”, que serve para os dois.`,
+      `Troco “sua” por algo que só sirva para o aluno. “Na sala dele” ainda confundiria (dele = do diretor?). Melhor reorganizar a frase e nomear o lugar.`],
+   r:`Sim. Reescrita possível: “O diretor foi até a sala de aula do aluno e conversou com ele lá.”`}
+ ],
+ erros: [
+  `<b>Errado:</b> responder pelo sentido mais comum da palavra, sem ler a frase. <b>Certo:</b> o contexto decide o sentido.`,
+  `<b>Errado:</b> “O cumprimento da quadra é de 28 metros.” <b>Certo:</b> “O <b>comprimento</b>…” (de comprido). Cumprimento é saudação ou ato de cumprir.`,
+  `<b>Errado:</b> “O tráfico na rodovia está intenso.” <b>Certo:</b> “O <b>tráfego</b>…” — tráfego é trânsito; tráfico é comércio ilegal.`,
+  `<b>Errado:</b> achar que toda ambiguidade é erro. <b>Certo:</b> em tirinhas e anúncios ela costuma ser proposital (recurso).`
+ ],
+ resumo: [
+  `DENOtação = Dicionário · CONOtação = COm imaginação.`,
+  `“É de verdade?” sim = literal · não = figurado.`,
+  `Polissemia = 1 palavra, vários sentidos (linha, pé, tirar).`,
+  `Comprido → comprimento · cumprimentar → cumprimento · imediato → iminente.`,
+  `Ambiguidade: desenhe 2 cenas · ache o culpado (pronome ou posição).`,
+  `Falha em notícia/aviso · recurso em piada/anúncio.`
+ ]
+},
+
+/* ======================================================================
+   p-modal · Modalização e operadores argumentativos
+   ====================================================================== */
+'p-modal': {
+ base: [
+  [`O que é modalizar`, `Modalizar é deixar marcas, no texto, do que o autor PENSA sobre o que diz: se tem certeza, se duvida, se acha bom ou ruim, se é obrigatório. Compare: “A ponte <b>caiu</b>” (só informa) × “<b>Infelizmente</b>, a ponte caiu” (o autor lamenta) × “A ponte <b>talvez</b> caia” (o autor não tem certeza).`],
+  [`O termômetro da certeza`, `<table class="tb"><tr><th>Grau</th><th>Palavras</th></tr>
+<tr><td>Certeza total</td><td>certamente, sem dúvida, com certeza, evidentemente, é claro que, é fato que</td></tr>
+<tr><td>Alta probabilidade</td><td>provavelmente, ao que tudo indica, é provável que</td></tr>
+<tr><td>Possibilidade</td><td>talvez, possivelmente, pode ser que, é possível que</td></tr>
+<tr><td>Obrigação/necessidade</td><td>é preciso, é necessário, deve-se, é obrigatório, tem de</td></tr></table>`],
+  [`Avaliação: o autor dá nota`, `Advérbios e adjetivos também opinam: <b>felizmente</b>, <b>infelizmente</b>, <b>lamentavelmente</b>, <b>curiosamente</b>; “uma decisão <b>corajosa</b>” × “uma decisão <b>irresponsável</b>” (o mesmo fato, julgado de jeitos opostos). Se troca o adjetivo e muda a opinião, ele é modalizador de avaliação.`],
+  [`O verbo “dever” e o “poder” têm duas caras`, `• “Você <b>deve</b> usar capacete” = obrigação.<br>• “<b>Deve</b> chover à tarde” = probabilidade (= provavelmente vai chover).<br>• “Você <b>pode</b> sair” = permissão.<br>• “<b>Pode</b> faltar luz” = possibilidade.<br>O contexto diz qual é.`],
+  [`Futuro do pretérito e aspas: “não fui eu que disse”`, `Em notícias, o futuro do pretérito (“o prefeito <b>teria recebido</b> o dinheiro”) mostra que a informação <b>não está confirmada</b>: o jornal se protege. As <b>aspas</b> em uma palavra (o “especialista”) também podem indicar que o autor desconfia ou discorda do termo.`],
+  [`Operadores argumentativos: as setas do texto`, `São palavras que orientam o leitor para uma conclusão:<br>• <b>até, inclusive, mesmo</b> → o argumento mais forte ou inesperado;<br>• <b>apenas, só, somente</b> → restrição (“é pouco”);<br>• <b>quase</b> → aproxima do limite (“falta pouco”);<br>• <b>ainda</b> → continuidade ou expectativa (“ainda não chegou” = esperava-se que chegasse);<br>• <b>já</b> → algo aconteceu antes do esperado;<br>• <b>aliás, além disso, também</b> → acréscimo;<br>• <b>ou seja, isto é</b> → explicação/reformulação;<br>• <b>afinal, enfim</b> → fechamento.`],
+  [`O “mas” decide quem ganha`, `Num período com “mas”, o argumento que vale para a conclusão é o que vem <b>depois</b> dele. “O hotel é caro, <b>mas</b> é limpíssimo” → indica que vale a pena. “O hotel é limpíssimo, <b>mas</b> é caro” → indica que não vale. Mesmas informações, conclusões opostas.`]
+ ],
+ jeitos: [
+  {n:`Tire a palavrinha e compare`,
+   c:`Apague o modalizador ou operador e leia a frase sem ele. O que se perdeu é exatamente o papel dele: certeza, dúvida, opinião, surpresa, restrição.`,
+   ex:`“<b>Só</b> três alunos fizeram a tarefa.” Sem “só”: “Três alunos fizeram a tarefa” (apenas informa). Com “só”: o autor acha POUCO → <b>restrição</b> (crítica).`},
+  {n:`O mesmo número, duas setas`,
+   c:`Operadores como “apenas” e “quase” podem apontar o MESMO fato para conclusões opostas. Pergunte: o autor quer que eu ache isso muito ou pouco?`,
+   ex:`Fato: 48% dos alunos passaram.<br>“<b>Apenas</b> 48% dos alunos passaram.” → seta para baixo: o autor acha POUCO (crítica).<br>“<b>Quase</b> 50% dos alunos passaram.” → seta para cima: o autor destaca que chegou PERTO da metade (valoriza).`},
+  {n:`O teste do “e, por incrível que pareça,”`,
+   c:`Para conferir se “até”, “inclusive” ou “mesmo” marcam o argumento mais forte, troque por “e, por incrível que pareça,”. Se encaixa, é isso.`,
+   ex:`“Todos ajudaram na mudança, <b>até</b> o caçula de quatro anos.” → “…e, por incrível que pareça, o caçula de quatro anos” → encaixa → “até” traz o caso <b>mais surpreendente</b>, reforçando que todos ajudaram mesmo.`},
+  {n:`Termômetro da certeza (troca de grau)`,
+   c:`Quando a questão pergunta se uma troca “mantém o sentido”, posicione as duas palavras no termômetro. Se estão em graus diferentes (talvez × certamente), o sentido muda.`,
+   ex:`“<b>Possivelmente</b> a excursão será cancelada.” Trocar por “<b>Certamente</b>” → de possibilidade para certeza → <b>muda o sentido</b>.<br>Trocar por “<b>Talvez</b> a excursão seja cancelada” → mesmo grau → <b>mantém</b> (com o verbo no subjuntivo).`},
+  {n:`O detetive do verbo de fala`,
+   c:`Em notícia, olhe o verbo que introduz a fala ou o tempo verbal. Ele mostra se o jornalista acredita, duvida ou só registra.`,
+   ex:`“O atleta <b>garantiu</b> que vai se recuperar” → fala com convicção.<br>“O atleta <b>alegou</b> que estava machucado” → disse sem provar.<br>“O atleta <b>teria se machucado</b> no treino” → informação não confirmada (futuro do pretérito).`}
+ ],
+ passo: [
+  `Ache a palavra destacada e leia a frase sem ela: o que mudou?`,
+  `Classifique: certeza, dúvida, obrigação, avaliação (modalizador) ou direção do argumento (operador)?`,
+  `Se é troca de palavras, use o termômetro: as duas estão no mesmo grau?`,
+  `Em notícia, observe verbos de fala (alegou, admitiu, revelou) e o futuro do pretérito (teria, seria).`,
+  `Com “mas”, procure a conclusão do autor no que vem DEPOIS dele.`
+ ],
+ exs: [
+  {q:`“<b>Lamentavelmente</b>, a biblioteca do bairro fechará às 17h a partir de segunda.” O que a palavra destacada revela?`,
+   s:[`Tiro a palavra: “A biblioteca do bairro fechará às 17h…” → só informa.`,
+      `Com “lamentavelmente”, aparece um sentimento do autor: ele acha a notícia ruim.`,
+      `Isso é modalizador de avaliação (negativa), e não de dúvida ou de tempo.`],
+   r:`Avaliação negativa do autor (ele lamenta a mudança).`},
+  {q:`Compare: (I) “O celular é leve, mas a bateria dura pouco.” (II) “A bateria dura pouco, mas o celular é leve.” Em qual delas o autor tende a recomendar o celular?`,
+   s:[`Uso a regra do “mas”: o argumento que vale é o que vem DEPOIS dele.`,
+      `Em (I), depois do “mas” vem um defeito (bateria dura pouco) → o autor tende a não recomendar.`,
+      `Em (II), depois do “mas” vem uma qualidade (é leve) → o autor tende a recomendar.`],
+   r:`Em (II).`},
+  {q:`Numa notícia: “Segundo testemunhas, o motorista <b>estaria</b> acima da velocidade permitida.” Por que o jornal usou “estaria”, e não “estava”?`,
+   s:[`Primeiro eu identifico o tempo verbal: “estaria” é futuro do pretérito.`,
+      `Em notícias, esse tempo indica que a informação não foi confirmada; o jornal apenas reproduz o que dizem as testemunhas (“segundo testemunhas” reforça isso).`,
+      `Se usasse “estava”, o jornal afirmaria o fato como certo e assumiria a responsabilidade por ele.`],
+   r:`Para mostrar que a informação não está confirmada: o jornal não assume a acusação como verdade.`}
+ ],
+ erros: [
+  `<b>Errado:</b> achar que “provavelmente” e “certamente” são sinônimos. <b>Certo:</b> estão em graus diferentes do termômetro (probabilidade × certeza).`,
+  `<b>Errado:</b> ler todo “até” como limite (“até as 5h”). <b>Certo:</b> em “até o diretor veio”, ele marca o caso mais surpreendente (= inclusive).`,
+  `<b>Errado:</b> ler todo “deve” como obrigação. <b>Certo:</b> “Deve chover hoje” = provavelmente vai chover (probabilidade).`,
+  `<b>Errado:</b> tratar “alegou”, “admitiu” e “afirmou” como iguais. <b>Certo:</b> alegou = sem prova; admitiu = reconheceu algo negativo; afirmou = neutro.`
+ ],
+ resumo: [
+  `Termômetro: certamente > provavelmente > talvez.`,
+  `Até/inclusive = argumento mais forte · só/apenas = é pouco.`,
+  `Com “mas”, vale o que vem DEPOIS.`,
+  `“Teria/seria” em notícia = não confirmado.`,
+  `Alegou = sem prova · admitiu = reconheceu algo ruim.`,
+  `Tire a palavra e compare: o que sumiu é o papel dela.`
+ ]
+}
+
+};
+
+/* REVISÃO TURBINADA · P3 (parte A): período composto, orações adjetivas, verbos de ligação, regência e crase */
+const PLUS_P3A = {
+
+/* ================= p-per · Período composto ================= */
+'p-per': {
+ base: [
+  [`O que é verbo`, `É a palavra que muda conforme o <b>tempo</b> (passado, presente, futuro) e a <b>pessoa</b> (eu, ele, nós). Indica ação, estado ou fenômeno da natureza.<br>Teste rápido: dá para dizer “ontem eu ___” ou “amanhã ele ___”? Então é verbo. Ex.: corri, estudaremos, choveu, parece.`],
+  [`Locução verbal = um verbo só`, `Locução é um <b>auxiliar</b> (ir, estar, ter, poder, dever, querer…) + um verbo principal no infinitivo, gerúndio ou particípio. Juntos, valem por <b>um</b> verbo.<br>Ex.: “<b>vou viajar</b>”, “<b>estava dormindo</b>”, “<b>tinha saído</b>”, “<b>pode chover</b>” → cada uma conta como 1.`],
+  [`Cada verbo = uma oração`, `Oração é o pedaço da frase organizado em volta de um verbo. Então: <b>conte os verbos e você saberá quantas orações há</b>.<br>Ex.: “Acordei, lavei o rosto e desci.” → acordei · lavei · desci = <b>3 orações</b>.`],
+  [`Sujeito × predicado`, `<b>Sujeito</b> é de quem se fala. Para achá-lo, pergunte <b>“quem?”</b> ou <b>“o quê?”</b> ao verbo. <b>Predicado</b> é tudo o que se diz do sujeito.<br>Ex.: “Os vizinhos do 3º andar <b>reclamaram</b> do barulho.” Quem reclamou? <b>os vizinhos do 3º andar</b> (sujeito). O sujeito pode vir depois do verbo: “<b>Chegaram</b> as notas.” O que chegou? <b>as notas</b>.`],
+  [`Conjunção: a placa de trânsito da frase`, `Conjunção é a palavra que <b>liga orações</b> e mostra a relação entre elas: e, mas, ou, porque, quando, se, embora, portanto…<br>Mudar a conjunção muda o sentido: “Estudei <b>e</b> passei” (soma) × “Estudei, <b>mas</b> não passei” (oposição).`],
+  [`Coordenadas: cada uma anda sozinha`, `São orações independentes: se você colocar um ponto final entre elas, as duas continuam com sentido completo.<br><b>Assindéticas</b> = sem conjunção (só vírgula): “Cheguei, vi, venci.” <b>Sindéticas</b> = com conjunção. Tipos: <b>aditiva</b> (e, nem) · <b>adversativa</b> (mas, porém, contudo, todavia, entretanto) · <b>alternativa</b> (ou… ou, ora… ora) · <b>conclusiva</b> (logo, portanto, por isso) · <b>explicativa</b> (pois, porque — geralmente depois de uma ordem ou opinião: “Leve o casaco, <b>pois</b> vai esfriar”).`],
+  [`Subordinadas: precisam da principal`, `Sozinha, a subordinada fica “pendurada”: “<b>Quando o ônibus chegou</b>.” → incompleta! Ela depende de outra oração, a <b>principal</b>: “Quando o ônibus chegou, <b>entramos</b>.”<br>São três famílias, com nome de classe de palavra: <b>substantiva</b> (vale por um substantivo: “isso”), <b>adjetiva</b> (vale por um adjetivo), <b>adverbial</b> (vale por um advérbio: circunstância).`],
+  [`Adjunto adverbial: a circunstância`, `Adjunto adverbial é o termo que diz <b>quando, onde, como, por quê</b>… Ex.: “Saímos <b>cedo</b>.” (quando?)<br>A oração adverbial faz o mesmo papel, só que com verbo: “Saímos <b>assim que o sol nasceu</b>.” (quando?) → ela é um adjunto adverbial “em forma de oração”.`],
+  [`Mapa das conjunções adverbiais`, `<table class="tb"><tr><td><b>causa</b></td><td>porque, já que, visto que, como (no início)</td></tr><tr><td><b>tempo</b></td><td>quando, enquanto, assim que, logo que</td></tr><tr><td><b>condição</b></td><td>se, caso, desde que (+ subjuntivo)</td></tr><tr><td><b>concessão</b></td><td>embora, ainda que, mesmo que</td></tr><tr><td><b>finalidade</b></td><td>para que, a fim de que</td></tr><tr><td><b>consequência</b></td><td>tão… que, tanto… que</td></tr><tr><td><b>comparação</b></td><td>como, mais… (do) que</td></tr><tr><td><b>conformidade</b></td><td>conforme, segundo, como (= conforme)</td></tr><tr><td><b>proporção</b></td><td>à medida que, quanto mais… mais</td></tr></table>`]
+ ],
+ jeitos: [
+  {n:`Circule os verbos`, c:`Antes de qualquer coisa, circule todos os verbos (locução verbal = um círculo só). O número de círculos é o número de orações. Isso evita metade dos erros de classificação.`,
+   ex:`“Quando abri a mochila, percebi que tinha esquecido o estojo.” → abri · percebi · tinha esquecido → <b>3 orações</b>.`},
+  {n:`Teste do ponto final`, c:`Troque a vírgula ou a conjunção por um ponto final. Os dois pedaços fazem sentido sozinhos? <b>Coordenadas</b>. Um deles ficou “pendurado”? <b>Subordinada</b>.`,
+   ex:`“Fiz a lição e fui jogar.” → “Fiz a lição. Fui jogar.” Os dois funcionam → <b>coordenadas</b>.<br>“Se eu fizer a lição, vou jogar.” → “Se eu fizer a lição.” Ficou incompleto → <b>subordinada</b> (condicional).`},
+  {n:`Teste do ISSO (substantiva)`, c:`Troque a oração inteira por <b>“isso”</b>. Se a frase continua de pé, a oração é <b>substantiva</b> (ela ocupa o lugar de um substantivo: sujeito ou complemento).`,
+   ex:`“Ninguém sabia <i>que a prova tinha mudado de sala</i>.” → “Ninguém sabia <b>isso</b>.” ✔ → <b>substantiva</b>.<br>“É necessário <i>que todos cheguem cedo</i>.” → “<b>Isso</b> é necessário.” ✔ → <b>substantiva</b>.`},
+  {n:`Teste do ADJETIVO (adjetiva)`, c:`Troque a oração por um <b>adjetivo</b>. Se der certo, a oração é <b>adjetiva</b>: ela caracteriza o substantivo que vem antes.`,
+   ex:`“Árvore <i>que dá frutos</i>” → “árvore <b>frutífera</b>” ✔ → <b>adjetiva</b>.<br>“Aluno <i>que falta muito</i>” → “aluno <b>faltoso</b>” ✔ → <b>adjetiva</b>.`},
+  {n:`Teste do ADVÉRBIO (adverbial)`, c:`Pergunte à oração: responde <b>quando? por quê? em que condição? apesar de quê? para quê? com que resultado?</b> Se responde, é <b>adverbial</b> — e a pergunta já diz o tipo.`,
+   ex:`“Saímos <i>assim que a chuva parou</i>.” → Quando saímos? → <b>adverbial temporal</b> (= “saímos depois”).<br>“Fechei a janela <i>para que o gato não fugisse</i>.” → Para quê? → <b>adverbial final</b> (finalidade).`},
+  {n:`Troque pela conjunção “famosa”`, c:`Na dúvida sobre a relação, troque a conjunção pela mais conhecida de cada tipo: <b>mas</b> (oposição), <b>porque</b> (causa), <b>quando</b> (tempo), <b>se</b> (condição), <b>embora</b> (concessão), <b>portanto</b> (conclusão). Se o sentido não muda, achou.`,
+   ex:`“Estava com febre; <b>contudo</b>, foi à aula.” → “Estava com febre, <b>mas</b> foi à aula.” ✔ → <b>adversativa</b>.<br>“<b>Como</b> chovia, ficamos em casa.” → “<b>Porque</b> chovia, ficamos em casa.” ✔ → <b>causa</b>.`}
+ ],
+ passo: [
+  `Circule os verbos e conte as orações (locução verbal = 1).`,
+  `Grife a palavra que liga as orações (conjunção ou pronome relativo).`,
+  `Faça o teste do ponto final: independente → coordenada; “pendurada” → subordinada.`,
+  `Se for subordinada: vira “isso”? substantiva · vira adjetivo? adjetiva · responde quando/por quê/se…? adverbial.`,
+  `Descubra a relação de sentido trocando pela conjunção “famosa” (mas, porque, quando, se, embora, portanto).`,
+  `Nas reescritas, confira se a nova conjunção mantém a MESMA relação e se o fato continua real (não virou hipótese).`
+ ],
+ exs: [
+  {q:`Quantas orações há no período abaixo? Classifique as que não são a principal.<br>“O técnico queria que o time atacasse mais, mas os jogadores estavam exaustos.”`,
+   s:[`Primeiro eu circulo os verbos: <b>queria</b> · <b>atacasse</b> · <b>estavam</b> → 3 verbos, então 3 orações.`,
+      `“que o time atacasse mais”: faço o teste do ISSO → “O técnico queria <b>isso</b>.” ✔ → subordinada <b>substantiva objetiva direta</b> (completa “queria”).`,
+      `“mas os jogadores estavam exaustos”: teste do ponto final → “Os jogadores estavam exaustos.” faz sentido sozinha → coordenada; “mas” = oposição → <b>sindética adversativa</b>.`],
+   r:`3 orações: “que o time atacasse mais” = subordinada substantiva objetiva direta; “mas os jogadores estavam exaustos” = coordenada sindética adversativa.`},
+  {q:`Compare:<br>(I) “Falei baixo <b>para que</b> o bebê não acordasse.”<br>(II) “Falei <b>tão</b> baixo <b>que</b> o bebê não acordou.”<br>Que relação de sentido cada oração destacada expressa?`,
+   s:[`Em (I), pergunto: “falei baixo para quê?” → para o bebê não acordar. É o <b>objetivo</b> de quem falou → <b>finalidade</b>. Repare: a frase não garante que o bebê ficou dormindo.`,
+      `Em (II), o “tão… que” mostra o <b>resultado</b> de falar baixo: o bebê, de fato, não acordou → <b>consequência</b>.`,
+      `Macete: finalidade = intenção (antes do fato); consequência = resultado (depois do fato).`],
+   r:`(I) finalidade (para que); (II) consequência (tão… que).`},
+  {q:`Classifique todas as orações:<br>“Quando a professora avisou que a prova seria adiada, os alunos que não tinham estudado comemoraram.”`,
+   s:[`Circulo os verbos: <b>avisou</b> · <b>seria adiada</b> (locução = 1) · <b>tinham estudado</b> (locução = 1) · <b>comemoraram</b> → 4 orações.`,
+      `Procuro a principal (a que fica de pé sozinha): “os alunos… <b>comemoraram</b>.”`,
+      `“Quando a professora avisou” → responde “quando?” → <b>adverbial temporal</b>.`,
+      `“que a prova seria adiada” → “avisou <b>isso</b>” ✔ → <b>substantiva</b>.`,
+      `“que não tinham estudado” → “o qual” funciona (os alunos <i>os quais</i> não tinham estudado) e vira adjetivo (“os alunos <b>despreparados</b>”) → <b>adjetiva</b> (restritiva, sem vírgula).`],
+   r:`Principal: “os alunos comemoraram”; temporal: “Quando a professora avisou”; substantiva: “que a prova seria adiada”; adjetiva restritiva: “que não tinham estudado”.`}
+ ],
+ erros: [
+  `<b>Errado:</b> contar “vou estudar” ou “estava chovendo” como duas orações. <b>Certo:</b> locução verbal é um verbo só → uma oração.`,
+  `<b>Errado:</b> achar que todo “que” abre oração adjetiva. <b>Certo:</b> só é adjetiva se o “que” virar “o qual”. Se a oração virar “isso”, é substantiva; se vier depois de “tão/tanto”, é consecutiva.`,
+  `<b>Errado:</b> confundir “para que” com “tão… que”. <b>Certo:</b> “para que” = finalidade (intenção); “tão… que” = consequência (resultado).`,
+  `<b>Errado:</b> achar que “como” é sempre comparação. <b>Certo:</b> “<b>Como</b> chovia, ficamos em casa” = causa; “Fiz <b>como</b> você mandou” = conformidade; “Corre <b>como</b> um raio” = comparação.`,
+  `<b>Errado:</b> trocar “embora” por “porque” numa reescrita. <b>Certo:</b> concessão (obstáculo que não impede) é o contrário de causa (motivo que provoca).`
+ ],
+ resumo: [
+  `Conte os verbos → conte as orações (locução = 1).`,
+  `Ponto final não estraga? → coordenada (e · mas · ou · logo · pois).`,
+  `Ficou pendurada? → subordinada: “isso” = substantiva · adjetivo = adjetiva · advérbio = adverbial.`,
+  `Relação: troque por mas / porque / quando / se / embora / portanto.`,
+  `Para que = intenção · tão… que = resultado.`
+ ]
+},
+
+/* ================= p-adj · Orações adjetivas ================= */
+'p-adj': {
+ base: [
+  [`Substantivo × adjetivo`, `<b>Substantivo</b> dá nome: aluno, cidade, cachorro. <b>Adjetivo</b> dá característica ao substantivo: aluno <b>atento</b>, cidade <b>grande</b>.<br>A oração adjetiva tem esse nome porque faz o papel de um adjetivo: “cachorro <b>que late muito</b>” = “cachorro <b>barulhento</b>”.`],
+  [`Adjunto adnominal`, `É o termo que fica “colado” no substantivo para caracterizá-lo ou determiná-lo: artigos, adjetivos, expressões como “de ouro”.<br>Ex.: “<b>O</b> anel <b>de ouro</b>”. A oração adjetiva funciona como um adjunto adnominal com verbo: “o anel <b>que ganhei</b>”.`],
+  [`Pronome relativo: o “gancho”`, `É a palavra que <b>retoma um nome dito antes</b> e abre a oração adjetiva. Os principais: <b>que</b>, <b>o qual</b> (a qual, os quais, as quais), <b>quem</b> (para pessoas, depois de preposição), <b>onde</b> (só lugar), <b>cujo</b> (posse).<br>Ex.: “A cidade <b>onde</b> nasci” = “a cidade <b>na qual</b> nasci”.`],
+  [`Antecedente: quem é retomado`, `É o nome que o pronome relativo retoma. Achar o antecedente diz <b>a quem a informação se refere</b>.<br>Ex.: “O bolo <b>que</b> a vó fez sumiu.” O que a vó fez? <b>o bolo</b> → antecedente = bolo.`],
+  [`Os três “que” mais cobrados`, `<b>Pronome relativo</b>: retoma um nome e vira “o qual” → abre oração adjetiva (“a música <b>que</b> ouvi”).<br><b>Conjunção integrante</b>: não retoma nada; a oração vira “isso” → substantiva (“Sei <b>que</b> ele vem”).<br><b>Parte do “tão… que”</b>: consequência (“Riu tanto <b>que</b> chorou”).`],
+  [`Restritiva = filtro`, `Sem vírgula, a oração faz parte da identificação: <b>separa</b> um pedaço do grupo, como um filtro. Sem ela, você não sabe de quais se fala.<br>Ex.: “Os ônibus <b>que saem depois das 22h</b> param no terminal.” → só esses ônibus.`],
+  [`Explicativa = comentário extra`, `Entre vírgulas, a oração funciona como um <b>parêntese</b>: acrescenta um dado sobre o grupo <b>inteiro</b> ou sobre um ser único. Pode ser retirada sem mudar de quem se fala.<br>Ex.: “Brasília, <b>que foi inaugurada em 1960</b>, é a capital do país.”`],
+  [`Relativo com preposição`, `Se o verbo da oração adjetiva pede preposição, ela vem <b>antes</b> do relativo, na norma-padrão.<br>Ex.: precisar <b>de</b> → “o livro <b>de que</b> preciso”; confiar <b>em</b> → “a amiga <b>em quem</b> confio”; gostar <b>de</b> → “o time <b>de que</b> gosto”.`]
+ ],
+ jeitos: [
+  {n:`Teste do “o qual”`, c:`Troque o “que” por <b>o qual / a qual / os quais / as quais</b> (concordando com o nome de antes). Funcionou? É pronome relativo e a oração é <b>adjetiva</b>. Não funcionou? Procure outro tipo.`,
+   ex:`“A bicicleta <b>que</b> ganhei” → “a bicicleta <b>a qual</b> ganhei” ✔ → adjetiva.<br>“Sei <b>que</b> ganhei” → “sei o qual ganhei” ✘ → não é adjetiva (é substantiva: “sei <b>isso</b>”).`},
+  {n:`Teste da tesoura`, c:`Corte a oração adjetiva e releia. O grupo de quem se fala <b>continua o mesmo</b>? Explicativa (vírgulas). O grupo <b>aumentou</b> (passou a falar de todos)? Restritiva (sem vírgulas).`,
+   ex:`“Os ônibus que saem depois das 22h param no terminal.” ✂ “Os ônibus param no terminal.” → agora são todos os ônibus: o grupo mudou → <b>restritiva</b>.<br>“A Lua, que gira em torno da Terra, não tem luz própria.” ✂ “A Lua não tem luz própria.” → a mesma Lua → <b>explicativa</b>.`},
+  {n:`Pergunta “TODOS ou SÓ ALGUNS?”`, c:`Pergunte: a característica vale para <b>todos</b> do grupo? Use vírgulas. Vale <b>só para alguns</b>? Sem vírgulas.`,
+   ex:`“As baleias, que são mamíferos, respiram ar.” → todas as baleias são mamíferos → <b>explicativa</b>.<br>“As baleias que encalharam na praia foram resgatadas.” → só algumas encalharam → <b>restritiva</b>.`},
+  {n:`Teste do “ser único”`, c:`O nome é <b>único</b> no mundo ou na situação (nome próprio, “meu pai”, “a capital do Brasil”, “o Sol”)? Não há o que filtrar → a oração tem de ser <b>explicativa</b>, com vírgulas.`,
+   ex:`“Machado de Assis, que foi o primeiro presidente da Academia Brasileira de Letras, escreveu <i>Dom Casmurro</i>.” → só existe um Machado de Assis → <b>vírgulas obrigatórias</b>.`},
+  {n:`Caça ao antecedente`, c:`Pergunte “quem?” ou “o quê?” ao verbo da oração adjetiva. Se houver <b>dois candidatos</b>, a frase é ambígua; troque “que” por “o qual” / “a qual” para deixar claro.`,
+   ex:`“Encontrei o primo da Bia que mora em Natal.” Quem mora em Natal? O primo ou a Bia? → <b>ambígua</b>.<br>Solução: “o primo da Bia, <b>o qual</b> mora em Natal” (o primo) ou “o primo da Bia, <b>a qual</b> mora em Natal” (a Bia).`}
+ ],
+ passo: [
+  `Ache o pronome relativo (que = o qual, onde, cujo, quem).`,
+  `Ache o antecedente: o que esse relativo está retomando?`,
+  `Olhe a pontuação: tem vírgulas abrindo e fechando a oração?`,
+  `Pergunte “todos ou só alguns?” e faça o teste da tesoura.`,
+  `Nas alternativas, procure “todos / informação extra” (explicativa) ou “apenas parte / separa um grupo” (restritiva).`
+ ],
+ exs: [
+  {q:`Pontue de acordo com a norma-padrão: “A Lua que gira em torno da Terra não tem luz própria.”`,
+   s:[`Primeiro eu acho o relativo: “que” = “a qual” ✔ → oração adjetiva “que gira em torno da Terra”.`,
+      `Uso o teste do ser único: só existe uma Lua da Terra. Não há o que filtrar → explicativa.`,
+      `Explicativa vai <b>entre</b> vírgulas: uma antes do “que” e outra no fim da oração.`],
+   r:`“A Lua, que gira em torno da Terra, não tem luz própria.”`},
+  {q:`Compare:<br>(I) “Os brasileiros que gostam de futebol assistiram à final.”<br>(II) “Os brasileiros, que gostam de futebol, assistiram à final.”<br>Qual delas faz uma <b>generalização</b> sobre os brasileiros?`,
+   s:[`Pergunto “todos ou só alguns?”.`,
+      `Em (I), sem vírgulas: a oração filtra — só os brasileiros que gostam de futebol assistiram. Fica entendido que há brasileiros que não gostam.`,
+      `Em (II), com vírgulas: o teste da tesoura dá “Os brasileiros assistiram à final” — todos. E a oração diz que <b>todos</b> gostam de futebol.`],
+   r:`A (II): as vírgulas atribuem o gosto por futebol a todos os brasileiros, o que é uma generalização.`},
+  {q:`Junte as duas frases em uma só, usando pronome relativo, na norma-padrão:<br>“A professora elogiou o aluno. O pai do aluno é bombeiro.”`,
+   s:[`O ponto em comum é “o aluno”; na 2ª frase há ideia de <b>posse</b> (o pai <b>do</b> aluno).`,
+      `Posse pede o relativo <b>cujo</b>, que concorda com a coisa possuída: pai (masculino singular) → <b>cujo</b>.`,
+      `Depois de “cujo” não entra artigo: “cujo pai”, nunca “cujo o pai”.`,
+      `Como a oração identifica qual aluno foi elogiado, ela é restritiva → sem vírgula.`],
+   r:`“A professora elogiou o aluno cujo pai é bombeiro.”`}
+ ],
+ erros: [
+  `<b>Errado:</b> “A Lua, que gira em torno da Terra não tem luz própria.” <b>Certo:</b> a explicativa abre <b>e fecha</b> com vírgula: “…da Terra, não tem…”.`,
+  `<b>Errado:</b> achar que a vírgula é só uma pausa para respirar. <b>Certo:</b> ela muda quem está incluído (todos × só alguns).`,
+  `<b>Errado:</b> chamar de explicativa porque a oração “explica algo”. <b>Certo:</b> o critério é: vale para todos / ser único / pode ser retirada → explicativa.`,
+  `<b>Errado:</b> “O livro que eu preciso está esgotado.” <b>Certo:</b> precisar <b>de</b> → “O livro <b>de que</b> preciso está esgotado.”`,
+  `<b>Errado:</b> tratar o “que” de “Sei que ele vem” como relativo. <b>Certo:</b> não vira “o qual”; a oração vira “isso” → substantiva.`
+ ],
+ resumo: [
+  `Adjetiva = começa com relativo (que = o qual) e vale por um adjetivo.`,
+  `Sem vírgula = filtro = só alguns (restritiva).`,
+  `Entre vírgulas = parêntese = todos / ser único (explicativa).`,
+  `Tesoura: tirou e o grupo mudou → restritiva.`,
+  `cujo = posse, concorda com o possuído, sem artigo depois.`
+ ]
+},
+
+/* ================= p-vl · Verbos de ligação ================= */
+'p-vl': {
+ base: [
+  [`Verbo de ação × verbo de ligação`, `<b>Ação</b>: o sujeito faz alguma coisa (correr, comprar, escrever). <b>Ligação</b>: ninguém faz nada; o verbo só <b>liga</b> o sujeito a um estado ou qualidade.<br>Ex.: “Lia <b>correu</b> 5 km.” (ação) × “Lia <b>está</b> cansada.” (ligação)`],
+  [`Ache o sujeito primeiro`, `Pergunte “quem?” ou “o quê?” ao verbo.<br>Ex.: “A sala ficou silenciosa.” O que ficou silencioso? <b>a sala</b> → sujeito. Só depois de achar o sujeito você consegue ver se o resto é uma característica <b>dele</b>.`],
+  [`Predicativo do sujeito`, `É a característica que o verbo de ligação “entrega” ao sujeito. Pode ser adjetivo (que <b>concorda com o sujeito</b>) ou substantivo.<br>Ex.: “As meninas estão <b>cansadas</b>.” · “Meu tio é <b>médico</b>.” (médico = o próprio tio)`],
+  [`Os oito da lista`, `<b>ser, estar, parecer, permanecer, ficar, continuar, andar, virar</b> (e também tornar-se). Só são de ligação quando, depois deles, vem uma característica do sujeito.<br>Ex.: “O pão <b>continua</b> quentinho.” ✔ · “O pão <b>continua</b> no forno.” ✘ (lugar)`],
+  [`Adjunto adverbial: lugar, tempo, modo`, `Adjunto adverbial responde <b>onde? quando? como?</b> Ele não é característica do sujeito.<br>Ex.: “Ele ficou <b>em casa</b>” (onde?) → não há predicativo → “ficar”, aqui, não é de ligação.`],
+  [`Predicativo × objeto direto`, `<b>Objeto direto</b> é <b>outra coisa</b>, que recebe a ação: “Ana comprou <b>um vestido</b>” (Ana ≠ vestido).<br><b>Predicativo</b> é <b>o próprio sujeito</b> descrito: “Ana é <b>uma ótima atleta</b>” (Ana = ótima atleta).`],
+  [`Predicado nominal × predicado verbal`, `<b>Nominal</b>: verbo de ligação + predicativo; o mais importante é a característica. “O bolo ficou <b>pronto</b>.”<br><b>Verbal</b>: o mais importante é a ação do verbo. “O bolo <b>ficou</b> na geladeira.”`]
+ ],
+ jeitos: [
+  {n:`Teste do “é”`, c:`Troque o verbo por <b>“é”</b> (ou “ser”). Se a frase continua fazendo sentido — mesmo mudando a nuance —, o que vem depois é característica → verbo de <b>ligação</b>. Se ficar absurdo, é verbo de ação.`,
+   ex:`“Ana <b>anda</b> preocupada.” → “Ana <b>é</b> preocupada.” ✔ (nuance muda, mas funciona) → ligação.<br>“Ana <b>anda</b> pela praça.” → “Ana é pela praça.” ✘ → ação.<br>“Pedro <b>virou</b> goleiro.” → “Pedro <b>é</b> goleiro.” ✔ → ligação.`},
+  {n:`Teste da concordância`, c:`Passe o sujeito para o plural ou para o feminino. Se a palavra depois do verbo <b>muda junto</b>, é característica do sujeito (predicativo). Se não muda, é lugar, tempo ou objeto.`,
+   ex:`“O menino continua <b>quieto</b>.” → “As meninas continuam <b>quietas</b>.” → mudou → <b>predicativo</b> → ligação.<br>“O menino continua <b>em casa</b>.” → “As meninas continuam <b>em casa</b>.” → não mudou → não é ligação.`},
+  {n:`O que vem depois? (três caminhos)`, c:`Olhe a palavra depois do verbo: <b>característica</b> do sujeito → ligação; <b>coisa que recebe a ação</b> → objeto (ação); <b>lugar/tempo/direção</b> → adjunto adverbial (ação).`,
+   ex:`“Ele <b>virou</b> campeão.” → característica → <b>ligação</b>.<br>“Ele <b>virou</b> a página.” → coisa que recebe a ação → <b>ação</b> (objeto).<br>“Ele <b>virou</b> à direita.” → direção → <b>ação</b> (adjunto adverbial).`},
+  {n:`Linha do tempo do verbo`, c:`Cada verbo de ligação conta uma “história” sobre o antes e o depois. As questões adoram perguntar o que fica <b>pressuposto</b> (subentendido).<br><b>continuar/permanecer</b> → já era assim antes · <b>ficar/virar</b> → antes não era · <b>andar</b> → tem sido assim ultimamente · <b>parecer</b> → é o que aparenta.`,
+   ex:`“A rua <b>continua</b> esburacada.” → pressuposto: <b>já estava</b> esburacada antes.<br>“O terreno <b>virou</b> praça.” → pressuposto: <b>antes não era</b> praça.`},
+  {n:`Predicativo pode ser substantivo`, c:`Não espere só adjetivo: profissão, cargo ou função também podem ser característica do sujeito. Use o “sinal de igual”: sujeito = predicativo?`,
+   ex:`“Meu primo virou <b>chef</b>.” → meu primo = chef ✔ → predicativo → ligação.<br>“Meu primo viu <b>um chef</b>.” → meu primo ≠ chef → objeto direto → ação.`}
+ ],
+ passo: [
+  `Ache o verbo e pergunte “quem?” para achar o sujeito.`,
+  `Olhe o que vem depois do verbo: característica, coisa ou lugar/tempo?`,
+  `Confirme com o teste do “é” e o teste da concordância.`,
+  `Se for de ligação, identifique a nuance: permanente, passageiro, mudança, aparência, continuidade ou frequência.`,
+  `Se a questão pede o que está subentendido, use a linha do tempo do verbo (antes × depois).`
+ ],
+ exs: [
+  {q:`Em “As crianças permaneceram caladas durante o filme”, identifique o sujeito, o verbo de ligação, o predicativo e a circunstância.`,
+   s:[`Primeiro pergunto “quem permaneceu?” → <b>as crianças</b> (sujeito).`,
+      `Teste do “é”: “As crianças são caladas” ✔ → “permaneceram” é de ligação.`,
+      `Teste da concordância: “O menino permaneceu <b>calado</b>” → “caladas” acompanha o sujeito → predicativo.`,
+      `“durante o filme” responde “quando?” e não muda com o sujeito → adjunto adverbial de tempo.`],
+   r:`Sujeito: as crianças · verbo de ligação: permaneceram · predicativo: caladas · adjunto adverbial de tempo: durante o filme.`},
+  {q:`Que informação fica subentendida em cada frase?<br>(I) “O time <b>continua</b> invicto.”<br>(II) “O antigo cinema <b>virou</b> uma igreja.”`,
+   s:[`Uso a linha do tempo do verbo.`,
+      `(I) “continuar” = não mudou → o time <b>já estava</b> invicto antes (e segue assim).`,
+      `(II) “virar” = mudança de estado → o prédio <b>antes não era</b> igreja (era cinema).`],
+   r:`(I) O time já estava invicto antes. (II) Antes, o prédio era um cinema e não uma igreja.`},
+  {q:`Em quais frases o verbo destacado é de ligação?<br>I. “O garoto <b>virou</b> a página.”<br>II. “O garoto <b>virou</b> um ótimo leitor.”<br>III. “Os dias <b>andam</b> corridos.”<br>IV. “Os turistas <b>andam</b> pela orla.”`,
+   s:[`I: depois vem “a página”, coisa que recebe a ação. Teste do “é”: “O garoto é a página” ✘ → ação.`,
+      `II: “O garoto é um ótimo leitor” ✔; garoto = leitor → predicativo → <b>ligação</b>.`,
+      `III: “Os dias são corridos” ✔; concordância: “a semana anda corrid<b>a</b>” → muda junto → <b>ligação</b> (estado frequente).`,
+      `IV: “pela orla” = lugar; “Os turistas são pela orla” ✘ → ação de andar.`],
+   r:`Apenas em II e III.`}
+ ],
+ erros: [
+  `<b>Errado:</b> achar que “ficar”, “andar” ou “continuar” são sempre de ligação. <b>Certo:</b> só quando vem característica: “ficou <b>feliz</b>” ✔ × “ficou <b>no clube</b>” ✘.`,
+  `<b>Errado:</b> confundir predicativo com objeto, analisando “Ele parece um atleta” como “Ele viu um atleta”. <b>Certo:</b> no 1º, ele = atleta (predicativo); no 2º, ele ≠ atleta (objeto).`,
+  `<b>Errado:</b> “As portas ficaram aberto.” <b>Certo:</b> o predicativo concorda com o sujeito: “As portas ficaram <b>abertas</b>.”`,
+  `<b>Errado:</b> achar que trocar “está” por “é” “dá no mesmo”. <b>Certo:</b> a prova cobra a nuance: “é” = permanente; “está” = passageiro.`
+ ],
+ resumo: [
+  `Ser · estar · parecer · permanecer · ficar · continuar · andar · virar.`,
+  `Depois vem característica do sujeito? → ligação + predicativo.`,
+  `Teste: troque por “é” · passe o sujeito para o plural/feminino.`,
+  `Lugar/tempo depois → não é ligação.`,
+  `continua = já era · virou/ficou = não era · anda = ultimamente.`
+ ]
+},
+
+/* ================= p-reg · Regência e crase ================= */
+'p-reg': {
+ base: [
+  [`Regência: quem manda, pede`, `Alguns verbos e nomes <b>exigem</b> uma preposição para se ligar ao complemento. Regência é saber qual.<br>Ex.: quem gosta, gosta <b>de</b> algo; quem mora, mora <b>em</b> algum lugar; quem obedece, obedece <b>a</b> alguém.`],
+  [`Preposição`, `Palavra que <b>liga</b> dois termos e <b>nunca varia</b>: a, de, em, com, para, por, sem, sobre…<br>Ex.: “andar <b>a</b> pé”, “copo <b>de</b> vidro”. Antes de palavra masculina, o “a” sozinho é só preposição (o artigo seria “o”): “a cavalo”, “a lápis”.`],
+  [`Artigo`, `Palavra que vem antes do substantivo e <b>varia</b> com ele: o, a, os, as.<br>Ex.: “<b>a</b> escola” → “<b>o</b> colégio” → “<b>as</b> escolas”. Se o “a” vira “o” quando você troca por masculino, ele é artigo.`],
+  [`Os três “a” (e o relativo)`, `<b>Artigo</b>: “<b>A</b> bola sumiu.” (vira “o”: o chinelo sumiu) · <b>Preposição</b>: “Fui <b>a</b> pé.” (não varia) · <b>Pronome</b>: “Eu <b>a</b> vi.” (= vi a menina; substitui um nome).<br>E o <b>pronome relativo</b> retoma um nome e abre oração: “a escola <b>que</b> escolhi” (= a qual). Crase só junta <b>preposição + artigo</b>.`],
+  [`Objeto direto × objeto indireto`, `Pergunte: o verbo <b>pede preposição</b> para ligar o complemento?<br>Não pede → <b>objeto direto</b>: “Comprei <b>um livro</b>.” · Pede → <b>objeto indireto</b>: “Gosto <b>de livros</b>.” · “Obedeço <b>aos</b> pais.”`],
+  [`Crase = a + a (duas condições)`, `Só há crase quando <b>as duas coisas</b> acontecem juntas:<br>① a palavra de antes <b>pede a preposição “a”</b> (ir a, chegar a, obedecer a, referir-se a…);<br>② a palavra de depois é <b>feminina e aceita o artigo “a”</b>.<br>Ex.: “Cheguei” (pede <b>a</b>) + “<b>a</b> escola” = cheguei <b>à</b> escola.`],
+  [`Verbos mais cobrados`, `<table class="tb"><tr><td><b>assistir a</b></td><td>= ver: assisti <b>ao</b> filme</td></tr><tr><td><b>visar a</b></td><td>= ter como objetivo: visa <b>ao</b> título</td></tr><tr><td><b>aspirar a</b></td><td>= desejar: aspira <b>ao</b> cargo</td></tr><tr><td><b>obedecer a</b></td><td>obedeça <b>às</b> regras</td></tr><tr><td><b>preferir X a Y</b></td><td>prefiro praia <b>a</b> campo</td></tr><tr><td><b>ir a / chegar a</b></td><td>fui <b>ao</b> clube, cheguei <b>à</b> praça</td></tr><tr><td><b>morar em</b></td><td>moro <b>em</b> Santos</td></tr><tr><td><b>gostar de</b></td><td>gosto <b>de</b> xadrez</td></tr><tr><td><b>esquecer</b> / <b>esquecer-se de</b></td><td>esqueci <b>o</b> nome · esqueci-<b>me do</b> nome</td></tr></table>`],
+  [`O sentido muda a regência`, `O mesmo verbo pode pedir preposição em um sentido e não em outro.<br>“O médico <b>assistiu o</b> paciente” (= ajudou, sem preposição) × “<b>Assisti ao</b> jogo” (= vi).<br>“<b>Aspirei o</b> ar puro” (= inspirei) × “<b>Aspiro ao</b> cargo” (= desejo).<br>“O atirador <b>visou o</b> alvo” (= mirou) × “O plano <b>visa ao</b> lucro” (= tem como objetivo).`],
+  [`Crase obrigatória: horas e “à moda de”`, `<b>Horas</b> (hora marcada): “às 9h”, “à 1h” (uma hora), “das 8h às 12h”.<br><b>“À moda de”</b> (mesmo escondido e mesmo antes de masculino): “bife <b>à</b> milanesa”, “bacalhau <b>à</b> Gomes de Sá”.<br><b>Expressões femininas</b> de tempo e modo: <b>à</b> noite, <b>às</b> vezes, <b>às</b> pressas.`]
+ ],
+ jeitos: [
+  {n:`Troque por masculino (“ao”)`, c:`Troque a palavra feminina por uma masculina do mesmo tipo. Apareceu <b>“ao”</b>? Então no feminino é <b>“à”</b>. Apareceu só “o” ou só “a”? Sem crase.`,
+   ex:`“Fui ___ padaria.” → “Fui <b>ao</b> mercado.” → <b>à</b> padaria.<br>“Comprei ___ bolsa.” → “Comprei <b>o</b> chapéu.” (só artigo) → <b>a</b> bolsa, sem crase.`},
+  {n:`Vou A, volto DA`, c:`Para nomes de lugar, monte a frase com “voltar de”. Se você diz “volto <b>da</b>”, há crase em “vou <b>à</b>”. Se diz “volto <b>de</b>”, não há.`,
+   ex:`“Vou ___ Argentina.” → volto <b>da</b> Argentina → vou <b>à</b> Argentina.<br>“Vou ___ Lisboa.” → volto <b>de</b> Lisboa → vou <b>a</b> Lisboa.`},
+  {n:`Pergunte ao verbo: pede preposição?`, c:`Monte a frase com “algo” ou “alguém”: “quem obedece, obedece <b>a</b> algo”; “quem mora, mora <b>em</b> algum lugar”. Se a preposição pedida é “a” e vem palavra feminina com artigo, tem crase.`,
+   ex:`“Os motoristas devem obedecer ___ sinalização.” → obedecer <b>a</b> + <b>a</b> sinalização → <b>à</b> sinalização (confira: “ao semáforo”).<br>“Os motoristas devem respeitar ___ sinalização.” → respeitar algo (não pede preposição) → <b>a</b> sinalização.`},
+  {n:`Os 4 proibidos`, c:`Antes de pensar, cheque a lista onde não há crase: antes de <b>verbo</b>, de <b>palavra masculina</b> (fora o caso de “à moda de”), de <b>pronome pessoal</b> (ela, mim, nós…) ou de <b>“você”</b> e <b>entre palavras repetidas</b>.`,
+   ex:`“Começou <b>a</b> nevar.” (verbo) · “Fomos <b>a</b> pé.” (masculino) · “Entreguei o bilhete <b>a</b> ela.” (pronome) · “Ficaram frente <b>a</b> frente.” (repetidas)`},
+  {n:`Hora certa e “à moda de”`, c:`Para horas, troque por <b>“meio-dia”</b>: se fica “ao meio-dia”, a hora leva crase. Para pratos e estilos, se cabe “à moda de”, há crase mesmo antes de masculino.`,
+   ex:`“Chego ___ 10h.” → “Chego <b>ao</b> meio-dia.” → <b>às</b> 10h.<br>“Desde ___ 10h.” → “desde <b>o</b> meio-dia” → desde <b>as</b> 10h, sem crase.<br>“Bacalhau ___ Gomes de Sá” = bacalhau à moda de Gomes de Sá → <b>à</b> Gomes de Sá.`}
+ ],
+ passo: [
+  `Descubra quem “manda”: a palavra de antes pede preposição? Qual? (monte a frase com “algo”).`,
+  `Cheque os 4 proibidos: verbo, masculino, pronome pessoal ou “você”, palavras repetidas.`,
+  `Se a palavra depois é feminina, faça o teste do masculino (“ao”) ou do “volto da”.`,
+  `Lembre os casos obrigatórios: horas (“às 10h”), “à moda de”, à noite / às vezes / às pressas.`,
+  `Em questões de regência, compare com a tabela (assistir a, visar a, aspirar a, obedecer a, preferir X a Y, chegar a, morar em, gostar de).`,
+  `Desconfie de alternativas com “mais… do que” (preferir), “chegar em” e “assistir o” (= ver).`
+ ],
+ exs: [
+  {q:`Em qual frase o acento grave (crase) está correto?<br>(a) “Fiquei cara à cara com o goleiro.”<br>(b) “Mandei uma mensagem à você.”<br>(c) “Amanhã vamos à praia.”<br>(d) “Ele saiu à correr.”`,
+   s:[`Primeiro eu checo os 4 proibidos: (a) palavras repetidas ✘ · (b) pronome “você” ✘ · (d) verbo “correr” ✘.`,
+      `Sobra (c). Confirmo com o masculino: “vamos <b>ao</b> clube” → apareceu “ao” → “vamos <b>à</b> praia” ✔.`],
+   r:`(c) “Amanhã vamos à praia.”`},
+  {q:`Reescreva na norma-padrão:<br>“O time aspira o título e visa a vaga na final; antes do jogo, os atletas assistiram o vídeo do adversário.”`,
+   s:[`“aspirar” no sentido de desejar pede “a” → aspira <b>a</b> + <b>o</b> título = <b>ao</b> título.`,
+      `“visar” no sentido de ter como objetivo pede “a” → visa <b>a</b> + <b>a</b> vaga = <b>à</b> vaga (teste: “visa <b>ao</b> título”).`,
+      `“assistir” no sentido de ver pede “a” → assistiram <b>a</b> + <b>o</b> vídeo = <b>ao</b> vídeo.`],
+   r:`“O time aspira ao título e visa à vaga na final; antes do jogo, os atletas assistiram ao vídeo do adversário.”`},
+  {q:`Complete o cardápio de acordo com a norma-padrão:<br>“Filé ___ parmegiana: servido de terça ___ domingo, das 18h ___ 23h. Pedidos ___ partir de hoje.”`,
+   s:[`1ª lacuna: cabe “à moda” (filé à moda parmegiana) → <b>à</b>.`,
+      `2ª lacuna: “domingo” é masculino, e antes de masculino não há crase. Além disso, começou com “de” (sem artigo), fecha com “a” (sem artigo) → <b>a</b>.`,
+      `3ª lacuna: começou com “das” (de + as) → fecha com “às” (a + as) → <b>às</b> 23h.`,
+      `4ª lacuna: “partir” é verbo → proibido → <b>a</b>.`],
+   r:`à — a — às — a`}
+ ],
+ erros: [
+  `<b>Errado:</b> “Fui à pé.” <b>Certo:</b> “Fui <b>a</b> pé.” → “pé” é masculino; ali só há preposição.`,
+  `<b>Errado:</b> “Refiro-me à você.” <b>Certo:</b> “Refiro-me <b>a</b> você.” → “você” (pronome de tratamento) não aceita artigo.`,
+  `<b>Errado:</b> “O expediente vai das 8h as 17h.” <b>Certo:</b> “das 8h <b>às</b> 17h” (das → às). Sem artigo no início, sem crase no fim: “de 8h a 17h”.`,
+  `<b>Errado:</b> “Esqueci do nome dela.” <b>Certo (norma-padrão):</b> “Esqueci <b>o</b> nome dela” ou “Esqueci-<b>me do</b> nome dela”. Com “de”, o pronome “me” é obrigatório.`,
+  `<b>Errado:</b> “Cheguei no colégio às 7h.” <b>Certo:</b> chegar <b>a</b> → “Cheguei <b>ao</b> colégio às 7h.” (E “Moro <b>na</b> rua tal”: morar pede <b>em</b>.)`
+ ],
+ resumo: [
+  `Crase = preposição a + artigo a.`,
+  `Troque por masculino: deu “ao”? → “à”.`,
+  `Vou A, volto DA → crase; volto DE → sem crase.`,
+  `Sem crase: verbo · masculino (fora “à moda de”) · ela/você/mim · cara a cara.`,
+  `Com crase: às 10h (hora marcada) · à moda de · à noite, às vezes.`,
+  `assistir a · visar a · aspirar a · obedecer a · preferir X a Y · morar em · gostar de.`
+ ]
+}
+
+};
+
+const PLUS_P3B = {
+ 'p-conc': {
+  base: [
+   [`O que é sujeito`, `É o termo de quem se fala, aquele com quem o verbo “combina”. Para achá-lo, pergunte <b>quem?</b> ou <b>o quê?</b> ao verbo: “As luzes apagaram.” → O que apagou? <b>as luzes</b> (plural) → verbo no plural.`],
+   [`Sujeito posposto (depois do verbo)`, `O sujeito nem sempre vem antes. “Ainda <b>restam</b> duas fatias de bolo.” → O que resta? <b>duas fatias</b>. Ponha na ordem direta (“duas fatias restam”) e o plural fica óbvio.`],
+   [`Verbo impessoal = oração sem sujeito`, `Alguns verbos não têm sujeito nenhum. Sem sujeito, não há com quem concordar: o verbo fica na <b>3ª pessoa do singular</b>. Os dois mais cobrados: <b>haver</b> (= existir) e <b>fazer</b> (= tempo que passou).`],
+   [`Haver = existir / acontecer`, `“<b>Houve</b> duas brigas no jogo.” “<b>Havia</b> cinco pessoas na sala.” O que vem depois (“duas brigas”) é <b>objeto</b>, não sujeito. Já o verbo <b>existir</b> é comum e concorda: “<b>Existiam</b> cinco pessoas.”`],
+   [`Fazer indicando tempo decorrido`, `“<b>Faz</b> três semanas que choveu.” “<b>Fazia</b> dez anos que não se viam.” Sempre singular, em qualquer tempo verbal.`],
+   [`“A maioria de”, “grande parte de”`, `Com coletivo partitivo + plural, a norma aceita os dois: “A maioria dos jogadores <b>treinou</b>” (concorda com “maioria”) ou “<b>treinaram</b>” (concorda com “jogadores”). Na prova, as duas formas estão certas.`],
+   [`Sujeito composto`, `Dois ou mais núcleos <b>antes</b> do verbo → plural: “O diretor e a coordenadora <b>chegaram</b>.” Se um dos núcleos é “eu”, vai para a 1ª do plural: “Eu e minha irmã <b>viajamos</b>.”`],
+   [`Concordância nominal: palavras que mudam`, `Adjetivo combina com o substantivo em gênero e número: “<b>anexo</b>” e “<b>incluso</b>” variam (“a nota anexa”, “os documentos inclusos”); “<b>bastante</b>” varia quando significa “muitos” (“bastantes livros”).`],
+   [`Palavras que NÃO mudam (advérbios)`, `Advérbio não tem plural nem feminino. “<b>Meio</b>” = um pouco: “Elas estavam <b>meio</b> cansadas.” “<b>Bastante</b>” = muito, ao lado de adjetivo: “Elas estavam <b>bastante</b> cansadas.” “<b>Em anexo</b>” também não varia: “Seguem em anexo as notas.”`]
+  ],
+  jeitos: [
+   {n:`Ordem direta`, c:`Sempre que o verbo vier primeiro, reescreva a frase começando pelo sujeito. Se soar estranho no singular, é plural.`,
+    ex:`“______ (Chegou/Chegaram) as encomendas.” → “As encomendas chegaram” → <b>Chegaram</b>.<br>“Ainda ______ (sobra/sobram) duas cadeiras.” → “Duas cadeiras sobram” → <b>sobram</b>.`},
+   {n:`Teste do “existir”`, c:`Troque “haver” por “existir”. Se a troca faz sentido, “haver” é impessoal e fica no singular — mas “existir” vai para o plural.`,
+    ex:`“______ muitos erros na prova.” → dá para dizer “existiam muitos erros”? Sim → com haver: <b>Havia</b> muitos erros.<br>Com locução: “Pode ______ atrasos.” → <b>Pode haver</b> atrasos (o auxiliar também fica no singular). Com existir: “Podem existir atrasos.”`},
+   {n:`Teste do “já se passaram”`, c:`Se “fazer” pode ser trocado por “já se passaram / já se passou”, ele indica tempo decorrido: singular.`,
+    ex:`“______ cinco anos que me mudei.” → “Já se passaram cinco anos…” → <b>Faz</b> cinco anos.<br>“______ duas horas que espero.” → <b>Faz</b> duas horas.`},
+   {n:`Troca por “um pouco” ou “muito”`, c:`Para “meio”: se cabe “um pouco”, não varia; se cabe “metade”, varia. Para “bastante”: troque por “muito”; se precisar virar “muitos/muitas”, use “bastantes”.`,
+    ex:`“Ela comeu ______ pizza.” → metade da pizza → <b>meia</b>.<br>“Eles são ______ simpáticos.” → muito simpáticos → <b>bastante</b>.<br>“Há ______ motivos.” → muitos motivos → <b>bastantes</b>.`},
+   {n:`Teste do artigo (é proibido / é proibida)`, c:`Olhe o substantivo: se ele tem artigo (a, o, as, os) ou outra palavra que o determine, a expressão concorda; sem artigo, fica “proibido”, “necessário”, “bom” no masculino singular.`,
+    ex:`“É ______ entrada de animais.” (sem artigo) → <b>proibido</b>.<br>“É ______ a entrada de animais.” (com “a”) → <b>proibida</b>.<br>“Água é ______.” → <b>bom</b>. “A água está ______.” → <b>boa</b>.`},
+   {n:`“Anexo” é como “junto”`, c:`“Anexo” funciona como um adjetivo: combina com o que vem anexado. Já “em anexo” é expressão fixa e não muda.`,
+    ex:`“Seguem ______ as listas.” → as listas → <b>anexas</b>.<br>“Envio ______ o boletim.” → o boletim → <b>anexo</b> (ou “em anexo”).`}
+  ],
+  passo: [
+   `Ache o verbo da lacuna ou da frase.`,
+   `Pergunte <b>quem? / o quê?</b> ao verbo e reescreva em ordem direta para achar o sujeito.`,
+   `Se o verbo for <b>haver</b> (= existir) ou <b>fazer</b> (= tempo), esqueça o “sujeito”: fica no singular, inclusive o auxiliar da locução.`,
+   `Na concordância nominal, descubra se a palavra é adjetivo (varia) ou advérbio (não varia) com as trocas “um pouco/metade” e “muito/muitos”.`,
+   `Releia a frase inteira com a forma escolhida: o som tem que “bater” com o sujeito.`
+  ],
+  exs: [
+   {q:`Complete conforme a norma-padrão: “Para terminar o projeto, ainda ______ (resta/restam) duas etapas.”`,
+    s:[`Primeiro eu acho o verbo: “restar”.`, `Pergunto: o que resta? → “duas etapas”. É o sujeito, só que está depois do verbo.`, `Ordem direta: “duas etapas restam”. Plural.`],
+    r:`<b>restam</b>`},
+   {q:`Qual frase segue a norma-padrão? (A) “Devem haver vagas no turno da tarde.” (B) “Deve haver vagas no turno da tarde.”`,
+    s:[`Uso o teste do “existir”: “devem existir vagas” faz sentido → “haver” aqui é impessoal.`, `Verbo impessoal não tem sujeito; na locução, o auxiliar (“dever”) acompanha o principal e também fica no singular.`, `Conferência: com “existir” seria “Devem existir vagas” (aí sim plural, porque “vagas” é sujeito de existir).`],
+    r:`<b>(B) Deve haver vagas</b>`},
+   {q:`Analise as frases: I. “Os atletas ficaram bastante cansados.” II. “Seguem em anexo as fotos da feira.” III. “É proibida a entrada de bicicletas.” IV. “Ela comprou bastante canetas.” Quais estão de acordo com a norma-padrão?`,
+    s:[`I: troco “bastante” por “muito”: “muito cansados” → não precisa virar “muitos” → advérbio, não varia. Certa.`, `II: “em anexo” é expressão fixa, não varia. Certa.`, `III: “entrada” tem o artigo “a” → “proibida” concorda. Certa.`, `IV: troco por “muito”: “muitas canetas” → precisa de plural → deveria ser “bastantes canetas”. Errada.`],
+    r:`<b>I, II e III</b>`}
+  ],
+  erros: [
+   `<b>Errado:</b> “Haviam muitas pessoas na festa.” <b>Certo:</b> “Havia muitas pessoas na festa.” (haver = existir é impessoal)`,
+   `<b>Errado:</b> achar que “Os alunos haviam saído” está errado. <b>Certo:</b> está certo! Aqui “haver” é auxiliar (= tinham saído) e concorda com o sujeito “os alunos”.`,
+   `<b>Errado:</b> “Vão fazer dois anos que mudamos.” <b>Certo:</b> “Vai fazer dois anos que mudamos.” (o auxiliar de “fazer” impessoal fica no singular)`,
+   `<b>Errado:</b> “Falta só três exercícios.” <b>Certo:</b> “Faltam só três exercícios.” (sujeito depois do verbo também manda)`,
+   `<b>Errado:</b> “Elas estavam meias nervosas.” <b>Certo:</b> “Elas estavam meio nervosas.” (meio = um pouco, advérbio)`
+  ],
+  resumo: [
+   `Verbo × sujeito: pergunte “quem?” e ponha em ordem direta.`,
+   `Haver (= existir) e fazer (= tempo) → singular, até na locução (“deve haver”).`,
+   `Existir, faltar, sobrar, restar → concordam com o sujeito.`,
+   `“A maioria dos alunos” → verbo no singular ou no plural.`,
+   `Meio = um pouco → não varia · bastante = muitos → varia · anexo varia, “em anexo” não.`,
+   `É proibido entrada · É proibida <b>a</b> entrada.`
+  ]
+ },
+
+ 'p-col': {
+  base: [
+   [`O que é pronome oblíquo átono`, `São as palavrinhas que ficam “grudadas” no verbo: <b>me, te, se, o, a, lhe, nos, vos, os, as, lhes</b>. “Ela <b>me</b> ligou.” → o “me” completa o verbo “ligou”.`],
+   [`Os três lugares possíveis`, `Antes do verbo = <b>próclise</b> (pró = antes). Depois, com hífen = <b>ênclise</b>. No meio do verbo = <b>mesóclise</b> (meso = meio). “Não <b>se</b> mexa.” · “Mexa-<b>se</b>.” · “Mexer-<b>se</b>-á.”`],
+   [`Norma-padrão × fala do dia a dia`, `No Brasil, falamos “Me empresta?”. Na fala informal, isso é natural. A prova pede a <b>norma-padrão</b>, usada em textos formais: aí valem as regras abaixo.`],
+   [`Regra 1: início de frase → ênclise`, `Na norma-padrão, frase não começa com pronome oblíquo. “<b>Te</b> vejo amanhã.” → “Vejo-<b>te</b> amanhã.” · “<b>Me</b> explique.” → “Explique-<b>me</b>.”`],
+   [`Regra 2: palavra atrativa → próclise`, `Algumas palavras “puxam” o pronome para antes do verbo. Ganham da ênclise sempre. “Ninguém <b>se</b> machucou.” “Já <b>lhe</b> respondi.”`],
+   [`Lista das atrativas`, `<b>Negativas:</b> não, nunca, jamais, nem, ninguém, nada. <b>Advérbios:</b> sempre, já, ainda, aqui, talvez, também. <b>Pronomes relativos e interrogativos:</b> que, quem, onde, qual. <b>Indefinidos:</b> alguém, tudo, todos, algo. <b>Conjunções subordinativas:</b> quando, se, porque, embora, que.`],
+   [`Futuro: só reconhecer a mesóclise`, `Com verbo no futuro do presente (farei) ou do pretérito (faria) no início da frase, sem palavra atrativa, a norma-padrão usa mesóclise: “Contar-<b>te</b>-ei”, “Far-<b>se</b>-ia”. Nunca “contarei-te”. Com atrativa, volta a próclise: “Não <b>te</b> contarei.” Você só precisa reconhecer.`]
+  ],
+  jeitos: [
+   {n:`Caça ao ímã`, c:`Antes de tudo, olhe a palavra que vem logo antes do verbo. Se for negativa, advérbio, “que/quem”, indefinido ou conjunção como “quando/se”, o pronome vai para ANTES do verbo.`,
+    ex:`“Talvez ______ (o encontre / encontre-o) na festa.” → “talvez” é advérbio → <b>Talvez o encontre</b>.<br>“O livro que ______ (me deram / deram-me) é ótimo.” → “que” atrai → <b>que me deram</b>.`},
+   {n:`Teste da largada`, c:`O pronome está na primeira posição da frase (ou logo depois de ponto)? Na norma-padrão, isso não pode: mande-o para depois do verbo com hífen.`,
+    ex:`“Me chamaram para a festa.” → <b>Chamaram-me para a festa.</b><br>“Se aproximou devagar.” → <b>Aproximou-se devagar.</b>`},
+   {n:`Ímã ganha da largada`, c:`Se existir palavra atrativa, ela vence. Só use ênclise quando não houver ímã nenhum antes do verbo.`,
+    ex:`“Nunca ______ (se esqueça / esqueça-se) disso.” → “nunca” é ímã → <b>Nunca se esqueça</b>.<br>“______ (Se esqueça / Esqueça-se) disso.” → sem ímã, início de frase → <b>Esqueça-se</b>.`},
+   {n:`Radar do futuro`, c:`Verbo terminando em -rei, -rá, -remos, -ria, -ríamos com pronome “no meio”? É mesóclise. Não invente: só reconheça e saiba que, com atrativa, vira próclise.`,
+    ex:`“Dir-<b>lhe</b>-emos a verdade.” = diremos + lhe → <b>mesóclise</b>.<br>“Ninguém <b>lhe</b> dirá a verdade.” → “ninguém” atrai → <b>próclise</b>.`}
+  ],
+  passo: [
+   `Ache o verbo e o pronome oblíquo (me, te, se, o, a, lhe, nos…).`,
+   `Procure um “ímã” antes do verbo (negativa, advérbio, que/quem, indefinido, quando/se). Achou → próclise.`,
+   `Não achou ímã e o verbo abre a frase → ênclise com hífen.`,
+   `Verbo no futuro sem ímã → reconheça a mesóclise; nunca pendure o pronome no fim do futuro.`,
+   `Se a pergunta for sobre adequação, lembre: “Me passa…” é natural na fala informal; a norma-padrão vale para o texto formal.`
+  ],
+  exs: [
+   {q:`Reescreva na norma-padrão: “Te ligo depois da aula.”`,
+    s:[`Primeiro eu olho a largada: a frase começa com “te”. Na norma-padrão, não pode.`, `Procuro ímã antes do verbo: não há nada antes.`, `Então mando o pronome para depois, com hífen.`],
+    r:`<b>Ligo-te depois da aula.</b>`},
+   {q:`Coloque o pronome “se” na posição da norma-padrão: “Alguém machucou no recreio?”`,
+    s:[`O verbo é “machucou”; o pronome é “se”.`, `Antes do verbo está “alguém”, pronome indefinido: é ímã.`, `Ímã → próclise.`],
+    r:`<b>Alguém se machucou no recreio?</b>`},
+   {q:`Na frase “Far-se-á uma reunião com os pais”, que colocação aparece? Como ficaria a frase começando com “Não”?`,
+    s:[`O verbo é “fará” (futuro do presente) e o “se” está no meio: far- + se + -á → mesóclise.`, `Com “Não” no início, entra uma palavra atrativa, e o ímã ganha.`, `O pronome vai para antes do verbo, e o verbo volta inteiro: “fará”.`],
+    r:`<b>Mesóclise; “Não se fará uma reunião com os pais.”</b>`}
+  ],
+  erros: [
+   `<b>Errado:</b> “Nada abala-me.” <b>Certo:</b> “Nada me abala.” (“nada” é ímã)`,
+   `<b>Errado:</b> “Sempre lembro-me de você.” <b>Certo:</b> “Sempre me lembro de você.” (“sempre” atrai)`,
+   `<b>Errado:</b> “Contarei-te tudo.” <b>Certo:</b> “Contar-te-ei tudo.” (futuro não aceita ênclise; sem ímã, a norma-padrão usa mesóclise)`,
+   `<b>Errado:</b> achar que “Me liga mais tarde!” num bilhete a um amigo é um erro grave. <b>Certo:</b> é adequado ao registro informal; só não segue a norma-padrão.`
+  ],
+  resumo: [
+   `Próclise = antes · ênclise = depois (hífen) · mesóclise = meio.`,
+   `Começou a frase? → ênclise (Diga-me).`,
+   `Tem ímã? → próclise (Não me diga). Ímã sempre ganha.`,
+   `Ímãs: não, nunca, ninguém, já, sempre, que, quem, quando, se, tudo, alguém.`,
+   `Futuro sem ímã → mesóclise (Dir-te-ei). Nunca “direi-te”.`
+  ]
+ },
+
+ 'p-pont': {
+  base: [
+   [`Vírgula marca a ordem “bagunçada”`, `A ordem direta é: <b>sujeito + verbo + complemento + circunstância</b>. “Os alunos fizeram a prova pela manhã.” Na ordem direta, não há vírgula. Quando algo se intromete ou muda de lugar, a vírgula aparece.`],
+   [`Sujeito e verbo nunca se separam`, `“A irmã mais velha do Pedro<b>,</b> passou no vestibular” está errado, por maior que seja o sujeito. (Só pode haver vírgula entre eles se um termo estiver intercalado entre <b>duas</b> vírgulas: “Pedro, meu irmão, passou.”) O mesmo vale entre verbo e complemento: “Comprei<b>,</b> pão” está errado.`],
+   [`Vocativo`, `É o nome de quem é <b>chamado</b>. Sempre isolado por vírgula, esteja onde estiver: “<b>Professora,</b> posso sair?” · “Posso sair<b>, professora</b>?” · “Posso<b>, professora,</b> sair?”`],
+   [`Aposto`, `É uma explicação sobre o termo anterior, entre vírgulas: “Machado de Assis<b>, autor de Dom Casmurro,</b> nasceu no Rio.” Se tirar, a frase continua inteira.`],
+   [`Adjunto adverbial deslocado`, `Circunstâncias (tempo, lugar, modo) que saem do fim da frase e vão para o início ou o meio pedem vírgula: “<b>No sábado de manhã,</b> haverá prova.” Se a expressão for bem curta, a vírgula é opcional: “Hoje vou cedo.”`],
+   [`Vírgula antes de “mas”`, `Orações ligadas por <b>mas, porém, contudo</b> (oposição) são separadas por vírgula: “Estudei muito<b>, mas</b> fiquei nervoso.”`],
+   [`Ponto e vírgula (;)`, `Pausa maior que a vírgula e menor que o ponto. Usado para separar itens de enumeração que <b>já têm vírgulas dentro</b>, ou orações longas: “No 1º ano, estudei frações; no 2º, porcentagem.”`],
+   [`Dois-pontos (:)`, `Anunciam o que vem: <b>explicação</b> (“Ele faltou: estava doente.”), <b>enumeração</b> (“Leve três coisas: lápis, borracha e régua.”) ou <b>fala/citação</b> (“Ela disse: — Chega!”).`],
+   [`Reticências e exclamação: efeito de sentido`, `<b>Reticências</b> sugerem algo não dito: hesitação, suspense, insinuação, interrupção. “Se você soubesse…” · <b>Exclamação</b> mostra emoção forte: surpresa, alegria, raiva, ordem. “Que golaço!”`]
+  ],
+  jeitos: [
+   {n:`Teste do “quem fez?”`, c:`Pergunte quem fez a ação. A resposta inteira é o sujeito, e entre ela e o verbo não pode existir vírgula sozinha.`,
+    ex:`“O time de basquete da escola, venceu.” → Quem venceu? “O time de basquete da escola” → vírgula no meio dos dois → <b>errada</b>.`},
+   {n:`Teste do “ei, …!”`, c:`Dá para colocar “ei” ou “ó” antes da palavra e ela é a pessoa com quem se fala? Então é vocativo: vírgula obrigatória.`,
+    ex:`“Bom dia Carla!” → “Bom dia, ó Carla!” faz sentido → <b>“Bom dia, Carla!”</b><br>“Carla chegou.” → Carla não está sendo chamada, é sujeito → <b>sem vírgula</b>.`},
+   {n:`Teste do “que é”`, c:`Se dá para encaixar “que é / que são” antes do trecho, ele é aposto explicativo e vai entre vírgulas.`,
+    ex:`“O Amazonas, (que é) o maior estado do Brasil, tem muitos rios.” → <b>aposto</b>, entre vírgulas.`},
+   {n:`Teste da ordem direta`, c:`Leve a circunstância para o fim. Se ela estava no início ou no meio, foi deslocada: use vírgula (sem esquecer a segunda vírgula se ela estiver no meio).`,
+    ex:`“Os alunos, durante o intervalo, jogaram bola.” → ordem direta: “Os alunos jogaram bola durante o intervalo” → deslocada para o meio → <b>duas vírgulas</b> (entre elas, não “separa” o sujeito do verbo).`},
+   {n:`Vírgula dentro? Ponto e vírgula fora!`, c:`Numa lista em que algum item já tem vírgula, separe os itens maiores com ponto e vírgula para não virar confusão.`,
+    ex:`“Visitei Recife, em Pernambuco; Natal, no Rio Grande do Norte; e Salvador, na Bahia.” → cada item tem vírgula interna → <b>; entre os itens</b>.`}
+  ],
+  passo: [
+   `Ache o sujeito e o verbo. Há vírgula sozinha entre eles? Errado.`,
+   `Procure termos “intrometidos”: vocativo (quem é chamado), aposto (explicação) e circunstância deslocada. Eles vão entre vírgulas.`,
+   `Viu “mas/porém/contudo” ligando orações? Vírgula antes.`,
+   `Enumeração com vírgulas internas → ponto e vírgula. Anúncio de lista, explicação ou fala → dois-pontos.`,
+   `Se a pergunta for de efeito de sentido, pergunte “que emoção ou intenção esse sinal mostra?” (hesitação, ironia, surpresa…).`
+  ],
+  exs: [
+   {q:`Onde está o problema de pontuação? “A professora de Ciências do 9º ano, explicou a fotossíntese com um experimento.”`,
+    s:[`Primeiro pergunto quem explicou: “A professora de Ciências do 9º ano”. Esse é o sujeito.`, `A vírgula está entre o sujeito e o verbo “explicou”, sozinha.`, `Sujeito e verbo não se separam, então tiro a vírgula.`],
+    r:`<b>A vírgula depois de “ano” separa sujeito e verbo: deve ser retirada.</b>`},
+   {q:`Pontue a lista: “Na feira comprei frutas como maçã e banana legumes como cenoura e abobrinha e verduras.”`,
+    s:[`“Na feira” é circunstância deslocada para o início → vírgula depois dela.`, `Os itens “frutas, como maçã e banana” e “legumes, como cenoura e abobrinha” já têm vírgula dentro (o “como…” é uma explicação).`, `Uso o macete: vírgula dentro, ponto e vírgula fora.`],
+    r:`<b>Na feira, comprei frutas, como maçã e banana; legumes, como cenoura e abobrinha; e verduras.</b>`},
+   {q:`Explique cada sinal: “Pai, eu estudei muito, mas a prova estava difícil…”`,
+    s:[`“Pai” é quem está sendo chamado (teste do “ei, pai”) → vocativo, isolado por vírgula.`, `“mas” liga duas orações com oposição → vírgula antes.`, `As reticências no fim deixam algo no ar: o filho hesita em contar o resultado, insinua que não foi bem.`],
+    r:`<b>Vírgula do vocativo; vírgula antes de “mas”; reticências de hesitação/insinuação.</b>`}
+  ],
+  erros: [
+   `<b>Errado:</b> “Quem estudou toda a matéria, foi bem.” <b>Certo:</b> “Quem estudou toda a matéria foi bem.” (o sujeito é “quem estudou toda a matéria”)`,
+   `<b>Errado:</b> “Obrigado Ana!” <b>Certo:</b> “Obrigado, Ana!” (vocativo sempre com vírgula)`,
+   `<b>Errado:</b> “Salvador, capital da Bahia tem praias famosas.” <b>Certo:</b> “Salvador, capital da Bahia, tem praias famosas.” (aposto no meio fecha com a segunda vírgula)`,
+   `<b>Errado:</b> “Ele treinou mas perdeu.” <b>Certo:</b> “Ele treinou, mas perdeu.”`
+  ],
+  resumo: [
+   `Sujeito , verbo → nunca (vírgula sozinha). Verbo , complemento → nunca.`,
+   `Vocativo e aposto explicativo → sempre isolados por vírgula.`,
+   `Circunstância fora do lugar → vírgula · antes de “mas” → vírgula.`,
+   `; → lista com vírgulas internas · : → explicação, lista ou fala.`,
+   `… → hesitação, suspense, insinuação · ! → emoção, surpresa, ordem.`
+  ]
+ },
+
+ 'p-var': {
+  base: [
+   [`Língua varia o tempo todo`, `Toda língua viva tem variedades: o português de Recife, de Porto Alegre e de Lisboa é o mesmo idioma, com diferenças de sotaque, palavras e construções.`],
+   [`Variação regional (lugar)`, `Muda de região para região: “<b>oxente</b>” (Nordeste), “<b>bah</b>” (Sul), “<b>uai</b>” (Minas); “pipa”, “papagaio” e “raia” para o mesmo brinquedo.`],
+   [`Variação social (grupo)`, `Muda conforme o grupo: idade (gírias de jovens: “mó legal”), profissão (<b>jargão</b>: “o paciente está estável”, “o código deu bug”), escolaridade, comunidade.`],
+   [`Variação histórica (tempo)`, `A língua muda com os anos: “<b>pharmacia</b>” virou “farmácia”; “<b>assaz</b>” (= bastante) quase saiu de uso; gírias de uma época envelhecem.`],
+   [`Variação situacional (registro)`, `A mesma pessoa muda o jeito de falar conforme a situação: <b>formal</b> (entrevista, redação, e-mail ao diretor) ou <b>informal</b> (conversa, mensagem a amigo). Isso se chama <b>registro</b>.`],
+   [`Norma-padrão`, `É a variedade de referência para situações formais, descrita nas gramáticas. Você precisa dominá-la, mas ela é <b>uma</b> das variedades, não a “língua verdadeira”.`],
+   [`Adequado × “certo/errado”`, `Em vez de “certo ou errado”, pergunte: <b>esta forma combina com esta situação e com este interlocutor?</b> “E aí, firmeza?” é adequado entre amigos e inadequado numa redação de prova.`],
+   [`Preconceito linguístico`, `É julgar ou humilhar alguém pelo jeito de falar (sotaque, região, escolaridade). Ex.: chamar alguém de “burro” por dizer “nós vai”. Não confunda com <b>ensinar a norma-padrão</b>, que é útil e não é preconceito.`],
+   [`Gíria`, `Palavra ou expressão típica de um grupo e de uma época (“daora”, “top”, “cringe”). Mostra identidade e informalidade; costuma envelhecer rápido.`]
+  ],
+  jeitos: [
+   {n:`As quatro perguntas`, c:`Diante de uma marca de variação, pergunte: <b>Onde?</b> (regional) · <b>Quem?</b> (social) · <b>Quando?</b> (histórica) · <b>Em que situação?</b> (situacional).`,
+    ex:`“Uai, sô, cê vem?” → denuncia ONDE a pessoa vive → <b>regional</b>.<br>“O cliente quer um <i>deadline</i> para a entrega” numa reunião de empresa → grupo profissional → <b>social (jargão)</b>.`},
+   {n:`Grife a marca`, c:`A prova quase sempre pede a palavra que revela a variedade. Sublinhe gírias, regionalismos, formas de tratamento e palavras antigas antes de ler as alternativas.`,
+    ex:`“Vossa Excelência, solicito a palavra.” → marca: “Vossa Excelência” → situação <b>formal</b> (registro formal).`},
+   {n:`Troca do “errado” por “inadequado a…”`, c:`Se uma alternativa chama uma variedade de “errada” ou “feia”, desconfie. A resposta boa fala em adequação à situação ou ao interlocutor.`,
+    ex:`“O personagem caipira fala errado.” → melhor: “O personagem usa uma variedade rural, que <b>não segue a norma-padrão</b> e revela sua origem.”`},
+   {n:`Teste do julgamento`, c:`A atitude ridiculariza, exclui ou diminui a pessoa por causa da fala? É preconceito linguístico. Só orientar sobre a norma numa situação formal não é.`,
+    ex:`Imitar o sotaque do colega para a turma rir → <b>preconceito</b>.<br>O professor marcar “nós vai” na redação e explicar a forma padrão → <b>ensino da norma</b>, não preconceito.`}
+  ],
+  passo: [
+   `Leia o texto e grife as marcas: gírias, regionalismos, tratamento, palavras antigas, termos técnicos.`,
+   `Faça as quatro perguntas (onde? quem? quando? em que situação?) para dar o nome da variação.`,
+   `Observe quem fala e com quem fala: isso define o registro (formal × informal).`,
+   `Elimine alternativas que falam em “certo × errado” absoluto ou que zombam do falante.`,
+   `Escolha a que fala em adequação ao contexto e respeita a variedade.`
+  ],
+  exs: [
+   {q:`Numa visita a Recife, Júlia ouviu: “Oxente, que calor arretado!”. Que tipo de variação as palavras revelam?`,
+    s:[`Primeiro eu grifo as marcas: “oxente” e “arretado”.`, `Faço as perguntas: elas revelam ONDE a pessoa vive (são típicas do Nordeste).`, `Logo, é variação de lugar.`],
+    r:`<b>Variação regional.</b>`},
+   {q:`Um jogador escreveu no chat: “Deu lag, perdi o boss e meu save sumiu.” Que variação aparece, e esse texto seria adequado num relatório escolar?`,
+    s:[`Grifo as marcas: “lag”, “boss”, “save” — termos de quem joga videogame, muitos vindos do inglês.`, `Pergunta “quem?”: é a linguagem de um grupo (jogadores) → variação social, com jargão e estrangeirismos.`, `Adequação: no chat de jogo, perfeito; num relatório escolar formal, inadequado — melhor “o jogo travou e perdi o progresso salvo”.`],
+    r:`<b>Variação social (jargão de jogadores); adequada ao chat, inadequada ao relatório formal.</b>`},
+   {q:`Num conto, um personagem do interior diz “Esse probrema é sério”. Um leitor comentou: “O autor colocou o personagem para falar errado, que vergonha.” Qual é a melhor análise?`,
+    s:[`Grifo a marca: “probrema” (troca do “l” pelo “r”), comum em certas variedades, sobretudo rurais.`, `Uso o teste do julgamento: chamar de “vergonha” desvaloriza o jeito de falar de muita gente → preconceito linguístico.`, `Troco “errado” por “inadequado a…”: no conto, a fala é adequada, pois caracteriza o personagem; numa redação formal, a forma esperada seria “problema”.`],
+    r:`<b>A fala caracteriza a origem do personagem; não segue a norma-padrão, mas chamá-la de “vergonha” é preconceito linguístico.</b>`}
+  ],
+  erros: [
+   `<b>Errado:</b> “Gíria é português errado.” <b>Certo:</b> gíria é marca de um grupo e é adequada em situações informais.`,
+   `<b>Errado:</b> “Aprender a norma-padrão é preconceito.” <b>Certo:</b> preconceito é discriminar quem fala diferente; dominar a norma-padrão é necessário para situações formais.`,
+   `<b>Errado:</b> classificar “mandioca/aipim/macaxeira” como variação histórica. <b>Certo:</b> é regional (muda de lugar, não de época).`,
+   `<b>Errado:</b> achar que quem fala “Bom dia, senhor” ao diretor e “E aí, mano” ao amigo mudou de variedade regional. <b>Certo:</b> é variação situacional: a mesma pessoa adapta o registro ao interlocutor.`
+  ],
+  resumo: [
+   `Onde? regional · Quem? social · Quando? histórica · Situação? situacional.`,
+   `Critério: adequado × inadequado, nunca certo × errado absoluto.`,
+   `Norma-padrão = a variedade das situações formais.`,
+   `Preconceito linguístico = discriminar pelo jeito de falar.`,
+   `Grife a marca (gíria, regionalismo, tratamento) antes de responder.`
+  ]
+ },
+
+ 'p-form': {
+  base: [
+   [`Radical, prefixo e sufixo`, `O <b>radical</b> é a parte que carrega o sentido (<b>feliz</b>). O <b>prefixo</b> entra antes (<b>in</b>feliz); o <b>sufixo</b>, depois (feliz<b>mente</b>).`],
+   [`Derivação: nasce de UMA palavra`, `Prefixal (<b>des</b>fazer), sufixal (cant<b>or</b>), prefixal e sufixal (<b>des</b>igual<b>dade</b>: existem “desigual” e “igualdade”) e parassintética (<b>en</b>velh<b>ecer</b>: não existem “envelho” nem “velhecer”).`],
+   [`Derivação regressiva e imprópria`, `<b>Regressiva:</b> a palavra encolhe; em geral, um verbo vira substantivo de ação: buscar → <b>a busca</b>, chorar → <b>o choro</b>. <b>Imprópria:</b> a palavra não muda de forma, só de classe: “<b>o olhar</b> dela”, “um <b>sim</b> sincero”.`],
+   [`Composição: junta DOIS radicais`, `<b>Justaposição:</b> as palavras se unem sem perder nada (passatempo, couve-flor, segunda-feira). <b>Aglutinação:</b> uma delas perde som ou letra (aguardente = água + ardente; pontiagudo = ponta + agudo).`],
+   [`Estrangeirismos`, `Palavras de outras línguas. <b>Adaptadas</b> ganharam grafia portuguesa (xampu, sanduíche, estresse). <b>Não adaptadas</b> mantêm a original (online, delivery). Em texto formal, prefira a palavra portuguesa quando houver (“entrega” em vez de “delivery”).`],
+   [`Sílaba tônica`, `É a sílaba pronunciada com mais força. Conte de trás para frente: tônica na última = <b>oxítona</b> (ca-<b>fé</b>); na penúltima = <b>paroxítona</b> (<b>me</b>-sa); na antepenúltima = <b>proparoxítona</b> (<b>pás</b>-sa-ro).`],
+   [`Regras de acento (oxítonas e proparoxítonas)`, `<b>Proparoxítonas:</b> todas (ônibus, sábado). <b>Oxítonas:</b> terminadas em a(s), e(s), o(s), em, ens (maracujá, você, cipó, também, parabéns). <b>Monossílabos tônicos:</b> terminados em a(s), e(s), o(s) (pá, pé, mês, nó).`],
+   [`Regras de acento (paroxítonas)`, `Acentuadas quando terminam em <b>l, n, r, x, ps, ã(s), ão(s), i(s), us, um/uns, ditongo</b>: túnel, hífen, caráter, tórax, bíceps, ímã, órgão, táxi, vírus, álbum, série. Terminadas em a(s), e(s), o(s), em, ens: <b>sem acento</b> (casa, jovem, item, nuvens), a não ser que outra regra mande: ditongo final (sé-rie, his-tó-ria) ou hiato com i/u (sa-ú-de).`],
+   [`Hiatos com i e u`, `O <b>i</b> ou <b>u</b> tônico que forma sílaba sozinho (ou com s) depois de vogal leva acento: sa-<b>ú</b>-de, pa-<b>í</b>s, ba-<b>ú</b>, sa-<b>í</b>-da. Não leva se vier seguido de nh (ra-i-nha) ou de outra consoante na mesma sílaba que não seja s (ju-iz, ca-ir, ru-im).`]
+  ],
+  jeitos: [
+   {n:`Teste do tira-e-vê (parassíntese)`, c:`Tire só o prefixo; depois, só o sufixo. Se nenhuma das sobras existe, é parassintética. Se as duas existem, é prefixal e sufixal.`,
+    ex:`“emagrecer” → “emagro”? não. “magrecer”? não → <b>parassintética</b>.<br>“desigualdade” → “igualdade” existe, “desigual” existe → <b>prefixal e sufixal</b>.`},
+   {n:`Verbo encolhido = regressiva`, c:`Se o substantivo indica a AÇÃO do verbo e é “menor” que ele, é derivação regressiva.`,
+    ex:`ajudar → <b>a ajuda</b> · castigar → <b>o castigo</b> · pescar → <b>a pesca</b> → <b>regressiva</b>.`},
+   {n:`Artigo na frente = imprópria`, c:`Se uma palavra que não é substantivo (verbo, advérbio, adjetivo) aparece com artigo e vira “nome de coisa”, é derivação imprópria.`,
+    ex:`“<b>O jantar</b> esfriou.” (verbo → substantivo) · “Ele deu <b>um não</b> seco.” (advérbio → substantivo) → <b>imprópria</b>.`},
+   {n:`Perdeu pedaço? Aglutinou!`, c:`Separe a palavra composta nas duas originais. Se alguma perdeu letra ou som, é aglutinação; se ficaram inteiras, justaposição.`,
+    ex:`“pontapé” → ponta + pé, inteiras → <b>justaposição</b>.<br>“pontiagudo” → ponta + agudo, o “a” de ponta virou “i” → <b>aglutinação</b>.`},
+   {n:`Chame a palavra de longe`, c:`Para achar a sílaba tônica, fale a palavra como se chamasse alguém do outro lado da rua: a sílaba que “estica” é a tônica. Depois conte de trás para frente: 1 = oxítona, 2 = paroxítona, 3 = proparoxítona.`,
+    ex:`“ca-já!” estica no “já” → 1ª de trás → <b>oxítona</b> em a → cajá leva acento.<br>“ál-bum” estica no “ál” → 2ª de trás → <b>paroxítona</b> em um → leva acento.`},
+   {n:`Espelho das oxítonas`, c:`As paroxítonas fazem o contrário das oxítonas: oxítona em a, e, o, em, ens leva acento; paroxítona com essas terminações NÃO leva (exceto se terminar em ditongo, como “série”, ou tiver hiato com i/u, como “saúde”).`,
+    ex:`<b>armazém</b> (oxítona em em) leva × <b>jovem</b> (paroxítona em em) não leva.<br><b>cipó</b> (oxítona em o) leva × <b>caso</b> (paroxítona em o) não leva.`}
+  ],
+  passo: [
+   `Formação: separe a palavra em pedaços (prefixo, radical, sufixo, ou duas palavras).`,
+   `Um radical só → derivação (use tira-e-vê, verbo encolhido ou artigo na frente). Dois radicais → composição (perdeu pedaço? aglutinação).`,
+   `Estrangeirismo: a grafia ficou portuguesa? Adaptado. Ficou igual à original? Não adaptado.`,
+   `Acentuação: ache a sílaba tônica (chame de longe) e classifique contando de trás para frente.`,
+   `Aplique a regra da classe (proparoxítona = sempre; oxítona = a, e, o, em, ens; paroxítona = espelho) e confira se é caso de hiato com i/u.`
+  ],
+  exs: [
+   {q:`Classifique a formação das palavras destacadas: “<b>O cantar</b> dos pássaros me acordou”, “<b>pontapé</b>” e “<b>aguardente</b>”.`,
+    s:[`“O cantar”: “cantar” é verbo, mas aqui tem artigo e virou substantivo → uso o macete do artigo na frente → derivação imprópria.`, `“pontapé” → ponta + pé, as duas inteiras → justaposição.`, `“aguardente” → água + ardente, perdeu o “a” de água → aglutinação.`],
+    r:`<b>Imprópria · justaposição · aglutinação.</b>`},
+   {q:`“Entristecer” e “desigualdade”: qual delas é parassintética?`,
+    s:[`Faço o tira-e-vê em “entristecer”: “entriste”? não existe. “tristecer”? não existe. → parassintética.`, `Em “desigualdade”: “desigual” existe e “igualdade” existe → prefixal e sufixal.`],
+    r:`<b>Entristecer</b> (desigualdade é prefixal e sufixal).`},
+   {q:`Explique por que “saúde”, “fácil” e “você” têm acento, mas “juiz” e “item” não têm.`,
+    s:[`saúde: sa-ú-de, o “u” é tônico e forma sílaba sozinho depois de vogal → hiato → acento.`, `fácil: chamo de longe, estica no “fá” → paroxítona terminada em l → acento.`, `você: estica no “cê” → oxítona terminada em e → acento.`, `juiz: ju-iz, o “i” tônico está com “z” na mesma sílaba → sem acento.`, `item: estica no “i” → paroxítona terminada em em → espelho das oxítonas → sem acento.`],
+    r:`<b>Hiato com u sozinho; paroxítona em l; oxítona em e. “Juiz” tem z na sílaba do i; “item” é paroxítona em em.</b>`}
+  ],
+  erros: [
+   `<b>Errado:</b> “ítem”, “hífens”. <b>Certo:</b> “item”, “hifens” (paroxítonas terminadas em em/ens não levam acento; “hífen”, em n, leva).`,
+   `<b>Errado:</b> “raínha”, “juíz”. <b>Certo:</b> “rainha”, “juiz” (i seguido de nh ou de z na mesma sílaba).`,
+   `<b>Errado:</b> “O verbo combater virou o combate: derivação sufixal.” <b>Certo:</b> é regressiva: a palavra perdeu a terminação do verbo.`,
+   `<b>Errado:</b> “passatempo” é aglutinação. <b>Certo:</b> justaposição (passa + tempo, nada se perde).`,
+   `<b>Errado:</b> “ele tem / eles tem”. <b>Certo:</b> “ele tem / eles <b>têm</b>”; “ele vem / eles <b>vêm</b>” (o circunflexo marca o plural).`
+  ],
+  resumo: [
+   `Parassintética: tira o prefixo ou o sufixo → não existe. (envelhecer)`,
+   `Regressiva: verbo encolhe (buscar → busca) · Imprópria: muda a classe (o jantar).`,
+   `Justaposição: nada se perde (girassol) · Aglutinação: perde pedaço (planalto).`,
+   `Ache a tônica chamando de longe → conte de trás: 1 oxítona, 2 paroxítona, 3 proparoxítona.`,
+   `Proparoxítona: sempre · Oxítona: a, e, o, em, ens · Paroxítona: o espelho (l, n, r, x, ps, ã, ão, i, us, um, ditongo).`,
+   `Hiato: i/u sozinho na sílaba leva acento (saúde, país); rainha, juiz não.`
+  ]
+ }
+};
+
+/* Kit básico: o que não pode esquecer — cola de sobrevivência para o Desafio Objetivo (17/10, sem calculadora)
+   Formato: {id, n (nome), ic (ícone), area ('mat'|'por'|'geral'), it:[[título, explicação com exemplo em HTML], ...]}
+   Notação: [[a|b]] = fração · √{x} = raiz com barra · <sup> = expoente · tabelas com class="tb"
+   Todas as contas conferidas em plus/check_kit.py */
+const KIT = [
+
+/* ===================== 1. CONTAS DE CABEÇA ===================== */
+{id:'k-conta', n:'Contas de cabeça', ic:'🧮', area:'mat', it:[
+ [`Tabuada do 9 com os dedos`,
+  `Abra as duas mãos na mesa (10 dedos). Para 9 × 7, abaixe o <b>7º dedo</b> (contando da esquerda). Dedos à esquerda dele = dezenas (6), dedos à direita = unidades (3) → <b>63</b>.<br>Confere: os algarismos sempre somam 9 (6 + 3 = 9) e a dezena é "o número menos 1" (9 × 4 → 3 e 6 → <b>36</b>).`],
+ [`× 5 = × 10 e depois ÷ 2`,
+  `Multiplicar por 5 é o mesmo que multiplicar por 10 e pegar a metade.<br>48 × 5 → 480 ÷ 2 = <b>240</b>.<br>3,6 × 5 → 36 ÷ 2 = <b>18</b>.`],
+ [`÷ 5 = × 2 e depois ÷ 10`,
+  `Dividir por 5 é dobrar e andar a vírgula uma casa para a esquerda.<br>85 ÷ 5 → 170 ÷ 10 = <b>17</b>.<br>340 ÷ 5 → 680 ÷ 10 = <b>68</b>.`],
+ [`× 11 (número de 2 algarismos)`,
+  `Separe os dois algarismos e coloque a <b>soma</b> deles no meio.<br>34 × 11 → 3 _ 4, meio = 3 + 4 = 7 → <b>374</b>.<br>Se a soma passar de 9, "vai 1" para a esquerda: 78 × 11 → 7 _ 8, meio = 15 → 7+1 | 5 | 8 = <b>858</b>.`],
+ [`× 25 = × 100 e depois ÷ 4`,
+  `Porque 25 = [[100|4]] (quatro moedas de 25 centavos dão 1 real).<br>36 × 25 → 3600 ÷ 4 = <b>900</b>.<br>48 × 25 → 4800 ÷ 4 = <b>1200</b>.`],
+ [`× 99 e × 9: multiplique pelo redondo e tire 1 vez`,
+  `× 99 = × 100 menos uma vez o número. 23 × 99 → 2300 − 23 = <b>2277</b>.<br>× 9 = × 10 menos uma vez. 47 × 9 → 470 − 47 = <b>423</b>.`],
+ [`Decompor: troque por um número redondo`,
+  `7 × 38 = 7 × 40 − 7 × 2 = 280 − 14 = <b>266</b>.<br>6 × 53 = 6 × 50 + 6 × 3 = 300 + 18 = <b>318</b>.<br>Use o redondo mais perto e corrija a diferença.`],
+ [`Dobrar um e dividir o outro pela metade`,
+  `O resultado não muda, e a conta fica "redonda".<br>16 × 35 → 8 × 70 = <b>560</b>.<br>14 × 45 → 7 × 90 = <b>630</b>.`],
+ [`Quadrado de número terminado em 5`,
+  `Pegue o que vem antes do 5, multiplique pelo seguinte e cole <b>25</b> no fim.<br>35<sup>2</sup> → 3 × 4 = 12 → <b>1225</b>.<br>65<sup>2</sup> → 6 × 7 = 42 → <b>4225</b>.<br>85<sup>2</sup> → 8 × 9 = 72 → <b>7225</b>.`],
+ [`Somar e subtrair arredondando`,
+  `398 + 247 → 400 + 247 = 647, mas eu somei 2 a mais → 647 − 2 = <b>645</b>.<br>503 − 198 → 503 − 200 = 303, mas tirei 2 a mais → 303 + 2 = <b>305</b>.`],
+ [`× 4 e ÷ 4: dobro do dobro, metade da metade`,
+  `37 × 4 → dobro 74 → dobro <b>148</b>.<br>92 ÷ 4 → metade 46 → metade <b>23</b>.<br>Mesma ideia para × 8 (dobrar 3 vezes): 15 × 8 → 30 → 60 → <b>120</b>.`],
+ [`Divisão: simplifique antes de dividir`,
+  `Divida os dois números pelo mesmo valor: o resultado não muda.<br>840 ÷ 24 → (÷4 nos dois) 210 ÷ 6 = <b>35</b>.<br>Dividir por 0,5 = × 2 (7 ÷ 0,5 = <b>14</b>); dividir por 0,25 = × 4 (3 ÷ 0,25 = <b>12</b>).`]
+]},
+
+/* ===================== 2. SINAIS E ORDEM ===================== */
+{id:'k-sinal', n:'Sinais e ordem das operações', ic:'➖', area:'mat', it:[
+ [`Somar e subtrair com sinais (pense em dinheiro)`,
+  `Negativo = dívida, positivo = dinheiro no bolso.<br><b>Sinais iguais:</b> soma e mantém o sinal. −7 − 5 = <b>−12</b> (devo 7 e devo mais 5).<br><b>Sinais diferentes:</b> subtrai e fica o sinal do que tem o maior valor absoluto (o maior "sem o sinal"). −7 + 5 = <b>−2</b>; 9 − 13 = <b>−4</b>.`],
+ [`Multiplicar e dividir com sinais`,
+  `<b>Sinais iguais → +</b> · <b>sinais diferentes → −</b>.<br>(−3) × (−4) = <b>12</b> · (−20) ÷ 4 = <b>−5</b> · 6 × (−2) = <b>−12</b> · (−18) ÷ (−3) = <b>6</b>.`],
+ [`Vários fatores: conte os negativos`,
+  `Quantidade <b>par</b> de sinais de menos → resultado positivo; <b>ímpar</b> → negativo.<br>(−1) × (−2) × (−3) = <b>−6</b> (3 negativos).<br>(−2) × (−2) × (−5) × (−1) = <b>20</b> (4 negativos).`],
+ [`Menos antes do parêntese troca todos os sinais`,
+  `10 − (3 − 8) = 10 − 3 + 8 = <b>15</b>.<br>Confere pelo outro caminho: 3 − 8 = −5, e 10 − (−5) = 10 + 5 = 15. "Menos com menos dá mais."`],
+ [`Ordem das operações`,
+  `1º parênteses ( ) → colchetes [ ] → chaves { } (de dentro para fora)<br>2º potências e raízes<br>3º × e ÷ (na ordem em que aparecem)<br>4º + e − (na ordem em que aparecem)<br>Ex.: 2 + 3 × 4 = 2 + 12 = <b>14</b> (e não 20!).`],
+ [`× e ÷ (ou + e −) juntos: da esquerda para a direita`,
+  `Eles têm a mesma "força"; resolva na ordem em que aparecem.<br>24 ÷ 4 × 2 = 6 × 2 = <b>12</b> (e não 24 ÷ 8 = 3).<br>10 − 4 + 3 = 6 + 3 = <b>9</b> (e não 10 − 7 = 3).`],
+ [`Expressão completa, passo a passo`,
+  `5 + 2 × (8 − 3)<sup>2</sup> − √{16}<br>parêntese: 8 − 3 = 5 → 5 + 2 × 5<sup>2</sup> − √{16}<br>potência e raiz: 5<sup>2</sup> = 25, √{16} = 4 → 5 + 2 × 25 − 4<br>multiplicação: 2 × 25 = 50 → 5 + 50 − 4 = <b>51</b>.`],
+ [`De dentro para fora: ( ) → [ ] → { }`,
+  `20 − [4 + (6 − 2 × 5)]<br>dentro do ( ): 2 × 5 = 10, 6 − 10 = −4<br>dentro do [ ]: 4 + (−4) = 0<br>fim: 20 − 0 = <b>20</b>.`],
+ [`(−2)<sup>2</sup> NÃO é igual a −2<sup>2</sup>`,
+  `Com parênteses, o sinal entra na potência: (−2)<sup>2</sup> = (−2) × (−2) = <b>4</b>.<br>Sem parênteses, só o 2 é elevado: −2<sup>2</sup> = −(2 × 2) = <b>−4</b>.<br>Base negativa: expoente par → +, ímpar → −. (−3)<sup>3</sup> = <b>−27</b>; (−1)<sup>10</sup> = <b>1</b>.`],
+ [`Regras de potência que salvam tempo`,
+  `Qualquer número (≠ 0) elevado a 0 é 1: 7<sup>0</sup> = <b>1</b>. Elevado a 1 é ele mesmo: 7<sup>1</sup> = 7.<br>Mesma base multiplicando → <b>soma</b> os expoentes: 2<sup>3</sup> × 2<sup>2</sup> = 2<sup>5</sup> = <b>32</b>.<br>Mesma base dividindo → <b>subtrai</b>: 3<sup>5</sup> ÷ 3<sup>3</sup> = 3<sup>2</sup> = <b>9</b>.<br>Expoente negativo vira fração: 2<sup>−1</sup> = [[1|2]].`]
+]},
+
+/* ===================== 3. FRAÇÕES, DECIMAIS, % ===================== */
+{id:'k-frac', n:'Frações, decimais e porcentagens de cor', ic:'🍕', area:'mat', it:[
+ [`A tabela que você precisa saber de cor`,
+  `<table class="tb"><tr><th>Fração</th><th>Decimal</th><th>%</th></tr>
+<tr><td>[[1|2]]</td><td>0,5</td><td>50%</td></tr>
+<tr><td>[[1|4]]</td><td>0,25</td><td>25%</td></tr>
+<tr><td>[[3|4]]</td><td>0,75</td><td>75%</td></tr>
+<tr><td>[[1|5]]</td><td>0,2</td><td>20%</td></tr>
+<tr><td>[[2|5]]</td><td>0,4</td><td>40%</td></tr>
+<tr><td>[[1|8]]</td><td>0,125</td><td>12,5%</td></tr>
+<tr><td>[[1|10]]</td><td>0,1</td><td>10%</td></tr>
+<tr><td>[[1|3]]</td><td>0,333...</td><td>≈ 33,3%</td></tr>
+<tr><td>[[2|3]]</td><td>0,666...</td><td>≈ 66,7%</td></tr>
+<tr><td>[[1|20]]</td><td>0,05</td><td>5%</td></tr>
+<tr><td>[[1|25]]</td><td>0,04</td><td>4%</td></tr></table>
+Ex.: 25% de 360 = [[1|4]] de 360 = 360 ÷ 4 = <b>90</b>.`],
+ [`Porcentagem vira divisão simples`,
+  `Use a tabela ao contrário:<br>12,5% de 64 = [[1|8]] de 64 = <b>8</b> · 20% de 45 = 45 ÷ 5 = <b>9</b><br>75% de 48 = 48 ÷ 4 × 3 = <b>36</b> · 5% de 340 = 340 ÷ 20 = <b>17</b> · 4% de 75 = 75 ÷ 25 = <b>3</b>.`],
+ [`Simplificar: divida em cima e embaixo pelo mesmo número`,
+  `[[45|60]] → ÷ 15 nos dois → <b>[[3|4]]</b>.<br>Não achou o maior divisor? Vá aos poucos: [[48|72]] → ÷ 2 → [[24|36]] → ÷ 12 → <b>[[2|3]]</b>.`],
+ [`Somar e subtrair frações`,
+  `Mesmo denominador: soma só em cima. [[2|7]] + [[3|7]] = <b>[[5|7]]</b>.<br>Diferentes: iguale pelo MMC. [[1|4]] + [[1|6]] = [[3|12]] + [[2|12]] = <b>[[5|12]]</b>.<br>Nunca some os de baixo: [[1|2]] + [[1|3]] não é [[2|5]].`],
+ [`Atalho "borboleta" para somar duas frações`,
+  `[[a|b]] + [[c|d]] = [[a×d + b×c|b×d]]. Depois simplifique, se der.<br>[[2|3]] + [[1|5]] = [[2×5 + 3×1|3×5]] = <b>[[13|15]]</b>.<br>[[3|4]] − [[1|3]] = [[9 − 4|12]] = <b>[[5|12]]</b>.`],
+ [`Multiplicar: cima × cima, baixo × baixo (corte antes!)`,
+  `[[4|9]] × [[3|8]]: corte 4 com 8 (÷ 4) e 3 com 9 (÷ 3) → [[1|3]] × [[1|2]] = <b>[[1|6]]</b>.<br>Sem cortar daria [[12|72]], que também é [[1|6]], só que dá mais trabalho.`],
+ [`Dividir: mantém a primeira, inverte a segunda`,
+  `[[2|5]] ÷ [[4|15]] = [[2|5]] × [[15|4]] = [[30|20]] = <b>[[3|2]]</b>.<br>Número inteiro ÷ fração: 6 ÷ [[3|4]] = 6 × [[4|3]] = <b>8</b>.`],
+ [`Fração de uma quantidade: ÷ embaixo, × em cima`,
+  `[[2|3]] de 45 → 45 ÷ 3 = 15 → 15 × 2 = <b>30</b>.<br>[[5|8]] de 72 → 72 ÷ 8 = 9 → 9 × 5 = <b>45</b>.`],
+ [`Número misto ↔ fração imprópria`,
+  `2 e [[1|3]] → (2 × 3 + 1) sobre 3 = <b>[[7|3]]</b>.<br>[[17|5]] → 17 ÷ 5 = 3 e sobra 2 → <b>3 e [[2|5]]</b>.`],
+ [`Comparar frações: multiplicação cruzada`,
+  `Qual é maior, [[3|7]] ou [[4|9]]? Cruze: 3 × 9 = 27 e 4 × 7 = 28.<br>O lado do 28 é o da [[4|9]] → <b>[[4|9]] é maior</b>.`],
+ [`Multiplicar decimais: tire a vírgula e conte as casas`,
+  `0,3 × 0,2 → 3 × 2 = 6; são 2 casas no total → <b>0,06</b>.<br>1,5 × 0,4 → 15 × 4 = 60; 2 casas → 0,60 = <b>0,6</b>.<br>× 10, × 100, × 1000: a vírgula anda para a direita. 3,7 × 100 = <b>370</b>.`],
+ [`Dividir decimais: iguale as casas e apague a vírgula`,
+  `4,8 ÷ 0,12 → deixe as duas com 2 casas: 4,80 ÷ 0,12 → 480 ÷ 12 = <b>40</b>.<br>6 ÷ 0,5 → 60 ÷ 5 = <b>12</b>.<br>÷ 10, ÷ 100: a vírgula anda para a esquerda. 45 ÷ 100 = <b>0,45</b>.`]
+]},
+
+/* ===================== 4. NÚMEROS QUE CAEM SEMPRE ===================== */
+{id:'k-num', n:'Números que caem sempre', ic:'🔢', area:'mat', it:[
+ [`Quadrados de 1 a 20`,
+  `<table class="tb"><tr><th>n</th><td>1</td><td>2</td><td>3</td><td>4</td><td>5</td><td>6</td><td>7</td><td>8</td><td>9</td><td>10</td></tr>
+<tr><th>n<sup>2</sup></th><td>1</td><td>4</td><td>9</td><td>16</td><td>25</td><td>36</td><td>49</td><td>64</td><td>81</td><td>100</td></tr>
+<tr><th>n</th><td>11</td><td>12</td><td>13</td><td>14</td><td>15</td><td>16</td><td>17</td><td>18</td><td>19</td><td>20</td></tr>
+<tr><th>n<sup>2</sup></th><td>121</td><td>144</td><td>169</td><td>196</td><td>225</td><td>256</td><td>289</td><td>324</td><td>361</td><td>400</td></tr></table>
+Serve para raiz também: √{196} = <b>14</b>, √{289} = <b>17</b>.`],
+ [`Cubos de 1 a 10`,
+  `1 · 8 · 27 · 64 · 125 · 216 · 343 · 512 · 729 · 1000.<br>Ex.: um cubo de volume 343 cm<sup>3</sup> tem aresta <b>7 cm</b> (7 × 7 × 7 = 343).`],
+ [`Potências de 2 até 2<sup>10</sup>`,
+  `2 · 4 · 8 · 16 · 32 · 64 · 128 · 256 · 512 · 1024.<br>Cada uma é o dobro da anterior. 2<sup>10</sup> = <b>1024</b> (quase mil). Ex.: uma bactéria que dobra a cada hora vira <b>64</b> em 6 horas (2<sup>6</sup>).`],
+ [`√2, √3 e π aproximados`,
+  `√{2} ≈ <b>1,41</b> · √{3} ≈ <b>1,73</b> · π ≈ <b>3,14</b>.<br>Diagonal de um quadrado de lado 10 = 10√{2} ≈ <b>14,1</b>.<br>Altura de triângulo equilátero de lado 2 = √{3} ≈ <b>1,73</b>.`],
+ [`Estimar uma raiz que não é exata`,
+  `√{50}: 50 fica entre 49 (7<sup>2</sup>) e 64 (8<sup>2</sup>), bem perto do 49 → √{50} ≈ <b>7,1</b>.<br>√{90}: entre 81 e 100, quase no meio → ≈ <b>9,5</b>. Ótimo para eliminar alternativas.`],
+ [`Primos até 50`,
+  `2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47 (são 15).<br>O <b>1 não é primo</b> e o <b>2 é o único primo par</b>.<br>Pegadinhas que parecem primos mas não são: 51 = 3 × 17, 57 = 3 × 19, 91 = 7 × 13.`],
+ [`Divisível por 2, 5 e 10`,
+  `<b>2:</b> termina em algarismo par (0, 2, 4, 6, 8) → 3.578 é.<br><b>5:</b> termina em 0 ou 5 → 1.245 é.<br><b>10:</b> termina em 0 → 7.030 é.`],
+ [`Divisível por 3 e por 9: some os algarismos`,
+  `<b>3:</b> a soma dos algarismos é múltiplo de 3. <b>9:</b> a soma é múltiplo de 9.<br>4.317 → 4 + 3 + 1 + 7 = 15 → divisível por 3 (4.317 ÷ 3 = 1.439), mas <b>não</b> por 9.<br>5.427 → 5 + 4 + 2 + 7 = 18 → divisível por 9 (÷ 9 = 603).`],
+ [`Divisível por 4 e por 8: olhe o final`,
+  `<b>4:</b> os dois últimos algarismos formam múltiplo de 4. 1.716 → 16 ✔ (1.716 ÷ 4 = 429).<br><b>8:</b> os três últimos formam múltiplo de 8. 3.128 → 128 = 8 × 16 ✔ (3.128 ÷ 8 = 391).`],
+ [`Divisível por 6: por 2 E por 3 ao mesmo tempo`,
+  `2.334 → é par ✔ e 2 + 3 + 3 + 4 = 12 ✔ → divisível por 6 (2.334 ÷ 6 = 389).<br>2.335 → soma 13 e é ímpar → não é.`],
+ [`MMC e MDC pela fatoração`,
+  `12 = 2<sup>2</sup> × 3 e 18 = 2 × 3<sup>2</sup>.<br><b>MDC</b> (maior divisor comum): só os comuns, com o <b>menor</b> expoente → 2 × 3 = <b>6</b>.<br><b>MMC</b> (menor múltiplo comum): todos, com o <b>maior</b> expoente → 2<sup>2</sup> × 3<sup>2</sup> = <b>36</b>.<br>Ex.: ônibus que passam a cada 12 e 18 min voltam a sair juntos depois de <b>36 min</b> (MMC).`],
+ [`Potências de 10 e notação científica`,
+  `10<sup>3</sup> = 1000 (3 zeros) · 10<sup>−2</sup> = 0,01.<br>3,2 × 10<sup>4</sup> = <b>32.000</b> (vírgula anda 4 casas para a direita).<br>0,005 = <b>5 × 10<sup>−3</sup></b> (vírgula andou 3 casas para a direita).`]
+]},
+
+/* ===================== 5. GEOMETRIA E MEDIDAS ===================== */
+{id:'k-form', n:'Fórmulas de geometria e medidas', ic:'📐', area:'mat', it:[
+ [`Áreas e perímetro dos quadriláteros`,
+  `Quadrado l<sup>2</sup> · retângulo e paralelogramo b × h · losango [[D × d|2]] · trapézio [[(B + b) × h|2]].<br>Trapézio com bases 10 e 6, altura 4 → [[16 × 4|2]] = <b>32</b>. Losango de diagonais 8 e 6 → [[48|2]] = <b>24</b>.<br><b>Perímetro</b> = soma dos lados: retângulo 8 × 5 → 8 + 5 + 8 + 5 = <b>26</b>.`],
+ [`Área do triângulo`,
+  `A = [[b × h|2]] (a altura é perpendicular à base).<br>Base 12 e altura 5 → [[60|2]] = <b>30</b>.<br>Triângulo retângulo: os catetos são base e altura. Catetos 6 e 8 → [[48|2]] = <b>24</b>.`],
+ [`Círculo e circunferência`,
+  `Área: A = πr<sup>2</sup> · comprimento da circunferência: C = 2πr · diâmetro = 2r.<br>r = 3: A = 9π ≈ <b>28,26</b> e C = 6π ≈ <b>18,84</b>.<br>Cuidado: se o problema der o <b>diâmetro</b> 10, o raio é 5.`],
+ [`Volumes`,
+  `Cubo a<sup>3</sup> · paralelepípedo a × b × c · prisma e cilindro = área da base × altura · pirâmide e cone = [[1|3]] × base × altura.<br>Caixa 2 × 3 × 5 = <b>30</b>. Cilindro r = 2, h = 5 → π × 4 × 5 = 20π ≈ <b>62,8</b>.<br>Cone r = 3, h = 4 → [[1|3]] × 9π × 4 = <b>12π</b>.`],
+ [`Soma dos ângulos internos`,
+  `Triângulo <b>180°</b> · quadrilátero <b>360°</b> · polígono de n lados: (n − 2) × 180°.<br>Pentágono: 3 × 180 = <b>540°</b> (regular: cada um 108°).<br>Hexágono: 4 × 180 = <b>720°</b> (regular: cada um 120°).`],
+ [`Ângulos que você precisa reconhecer`,
+  `Reto 90° · raso 180° · volta 360°.<br><b>Complementares</b> somam 90°; <b>suplementares</b> somam 180°; <b>opostos pelo vértice</b> são iguais.<br>Complemento de 35° = <b>55°</b>; suplemento de 35° = <b>145°</b>.`],
+ [`Pitágoras: a<sup>2</sup> = b<sup>2</sup> + c<sup>2</sup>`,
+  `Só em triângulo retângulo. A <b>hipotenusa</b> (a) fica de frente para o ângulo de 90° e é o maior lado.<br>Catetos 6 e 8: 36 + 64 = 100 → hipotenusa <b>10</b>.<br>Hipotenusa 13 e cateto 5: 169 − 25 = 144 → outro cateto <b>12</b>.`],
+ [`Ternos pitagóricos (economizam a conta)`,
+  `<b>3-4-5 · 5-12-13 · 8-15-17 · 7-24-25</b> e seus múltiplos: 6-8-10, 9-12-15, 12-16-20, 10-24-26.<br>Catetos 9 e 12 → é o 3-4-5 vezes 3 → hipotenusa <b>15</b>.`],
+ [`Comprimento: km · hm · dam · m · dm · cm · mm`,
+  `Cada degrau para a direita: × 10. Para a esquerda: ÷ 10.<br>2,5 km = <b>2500 m</b> · 340 cm = <b>3,4 m</b> · 1 m = 100 cm = <b>1000 mm</b>.`],
+ [`Área: cada degrau vale × 100`,
+  `1 m<sup>2</sup> = 100 dm<sup>2</sup> = <b>10.000 cm<sup>2</sup></b> · 1 km<sup>2</sup> = 1.000.000 m<sup>2</sup> · 1 hectare = 10.000 m<sup>2</sup>.<br>3 m<sup>2</sup> = <b>30.000 cm<sup>2</sup></b> (e não 300!).`],
+ [`Volume e capacidade: 1 dm<sup>3</sup> = 1 L`,
+  `1 m<sup>3</sup> = 1000 dm<sup>3</sup> = <b>1000 L</b> · 1 cm<sup>3</sup> = 1 mL · 1 L = 1000 mL.<br>Caixa-d'água 2 m × 1 m × 1,5 m = 3 m<sup>3</sup> = <b>3000 L</b>.<br>250 mL = <b>0,25 L</b>.`],
+ [`Tempo: a base é 60, não 10!`,
+  `1 h = 60 min = 3600 s · 1 dia = 24 h.<br>2,5 h = 2 h + meia hora = <b>2 h 30 min</b> (e não 2 h 50!). 1,2 h = 1 h + 0,2 × 60 = <b>1 h 12 min</b>. 150 min = <b>2 h 30 min</b>.<br>A 90 km/h, em 20 min ([[1|3]] de hora) anda 90 ÷ 3 = <b>30 km</b>.`]
+]},
+
+/* ===================== 6. ÁLGEBRA DE BOLSO ===================== */
+{id:'k-alg', n:'Álgebra de bolso', ic:'🔤', area:'mat', it:[
+ [`Traduzir frases em equação`,
+  `dobro → 2x · triplo → 3x · metade → [[x|2]] · quadrado → x<sup>2</sup> · consecutivos → x e x + 1.<br>"o triplo de um número mais 5" → 3x + 5 · "o triplo da soma de um número com 5" → 3(x + 5).<br>Ex.: "o dobro de um número mais 7 é 31" → 2x + 7 = 31 → 2x = 24 → x = <b>12</b>.`],
+ [`Equação do 1º grau: o que passa para o outro lado inverte`,
+  `+ vira −, × vira ÷.<br>3x − 4 = 2x + 9 → 3x − 2x = 9 + 4 → x = <b>13</b>.<br>5(x − 2) = 3x + 4 → 5x − 10 = 3x + 4 → 2x = 14 → x = <b>7</b>.`],
+ [`Equação com frações: multiplique tudo pelo MMC`,
+  `[[x|2]] + [[x|3]] = 10 → multiplique tudo por 6 → 3x + 2x = 60 → 5x = 60 → x = <b>12</b>.<br>Confere: 6 + 4 = 10 ✔.`],
+ [`Quadrado da soma e da diferença`,
+  `(a + b)<sup>2</sup> = a<sup>2</sup> + 2ab + b<sup>2</sup> · (a − b)<sup>2</sup> = a<sup>2</sup> − 2ab + b<sup>2</sup> ("o quadrado do 1º, duas vezes o 1º pelo 2º, o quadrado do 2º").<br>(x + 3)<sup>2</sup> = x<sup>2</sup> + 6x + 9 · (x − 5)<sup>2</sup> = x<sup>2</sup> − 10x + 25.<br>Conta de cabeça: 51<sup>2</sup> = (50 + 1)<sup>2</sup> = 2500 + 100 + 1 = <b>2601</b>; 49<sup>2</sup> = (50 − 1)<sup>2</sup> = 2500 − 100 + 1 = <b>2401</b>.`],
+ [`Produto da soma pela diferença`,
+  `(a + b)(a − b) = a<sup>2</sup> − b<sup>2</sup>.<br>(x + 4)(x − 4) = x<sup>2</sup> − 16.<br>Conta de cabeça: 21 × 19 = (20 + 1)(20 − 1) = 400 − 1 = <b>399</b>; 103 × 97 = 10.000 − 9 = <b>9991</b>.`],
+ [`Fatorar = fazer o caminho de volta`,
+  `Fator comum: 6x<sup>2</sup> − 9x = <b>3x(2x − 3)</b>.<br>Diferença de quadrados: x<sup>2</sup> − 49 = <b>(x + 7)(x − 7)</b>.<br>Trinômio quadrado perfeito: x<sup>2</sup> + 10x + 25 = <b>(x + 5)<sup>2</sup></b>.`],
+ [`Bhaskara`,
+  `ax<sup>2</sup> + bx + c = 0 → Δ = b<sup>2</sup> − 4ac → x = [[−b ± √{Δ}|2a]].<br>x<sup>2</sup> − 5x + 6 = 0: Δ = 25 − 24 = 1 → x = [[5 ± 1|2]] → <b>3 e 2</b>.<br>Δ &gt; 0: duas raízes · Δ = 0: duas raízes iguais · Δ &lt; 0: nenhuma raiz real.`],
+ [`Bhaskara com b positivo e c negativo (atenção aos sinais)`,
+  `2x<sup>2</sup> + 3x − 2 = 0 → a = 2, b = 3, c = −2.<br>Δ = 3<sup>2</sup> − 4 × 2 × (−2) = 9 + 16 = 25 → x = [[−3 ± 5|4]] → <b>[[1|2]] e −2</b>.<br>Lembre: −4ac com c negativo vira <b>soma</b>.`],
+ [`Soma e produto das raízes`,
+  `Soma = [[−b|a]] · Produto = [[c|a]]. Com a = 1, procure dois números com essa soma e esse produto.<br>x<sup>2</sup> − 7x + 12 = 0 → soma 7, produto 12 → <b>3 e 4</b>.<br>x<sup>2</sup> + 2x − 15 = 0 → soma −2, produto −15 → <b>3 e −5</b>.`],
+ [`Equações do 2º grau incompletas (sem Bhaskara)`,
+  `Sem o b: x<sup>2</sup> − 36 = 0 → x<sup>2</sup> = 36 → x = <b>6 ou −6</b> (não esqueça o negativo!).<br>Sem o c: x<sup>2</sup> − 4x = 0 → x(x − 4) = 0 → x = <b>0 ou 4</b>.`],
+ [`Regra de três direta`,
+  `Um aumenta, o outro aumenta na mesma proporção. Multiplica cruzado.<br>3 kg custam R$ 12. Quanto custam 5 kg? 1 kg = 12 ÷ 3 = 4 → 5 × 4 = <b>R$ 20</b>.`],
+ [`Regra de três inversa`,
+  `Um aumenta, o outro <b>diminui</b> (mais gente → menos tempo; mais velocidade → menos tempo). Multiplica "em linha".<br>4 pedreiros fazem um muro em 12 dias. E 6 pedreiros? Trabalho total = 4 × 12 = 48 → 48 ÷ 6 = <b>8 dias</b>.`]
+]},
+
+/* ===================== 7. PORTUGUÊS ===================== */
+{id:'k-por', n:'Português: as 10 regras que mais caem', ic:'✍️', area:'por', it:[
+ [`1. Crase (à = a + a)`,
+  `Crase é a junção da preposição "a" com o artigo "a". <b>Teste:</b> troque a palavra feminina por uma masculina; se aparecer "ao", tem crase.<br>"Fui <b>à</b> escola" → "Fui <b>ao</b> colégio" ✔. "Comprei a bicicleta" → "Comprei o carro" (sem "ao") → sem crase.<br>Em regra, não há crase antes de palavra masculina, de verbo ("começou a chover") e de "ela/esta". Há crase na indicação de horas ("chego <b>às</b> 8 h") e em expressões femininas como <b>à</b> noite e <b>às</b> vezes.<br>Lugar: "vou <b>à</b> Bahia" (volto <b>da</b>) × "vou <b>a</b> Roma" (volto <b>de</b>).`],
+ [`2. Por que · porque · por quê · porquê`,
+  `<b>Por que</b> → pergunta (ou "pelo qual"): "<b>Por que</b> você faltou?"<br><b>Porque</b> → resposta, explicação (= pois): "Faltei <b>porque</b> estava doente."<br><b>Por quê</b> → no fim da frase (antes de ponto) ou sozinho: "Você faltou <b>por quê</b>?"<br><b>Porquê</b> → substantivo, vem com artigo (= o motivo): "Não sei <b>o porquê</b> da falta."`],
+ [`3. Mas × mais`,
+  `<b>Mas</b> = porém (oposição). <b>Mais</b> = contrário de menos.<br>Teste: dá para trocar por "porém"? Então é <b>mas</b>.<br>"Estudei, <b>mas</b> não fui bem" (porém ✔). "Quero <b>mais</b> tempo" (menos tempo ✔).`],
+ [`4. Mal × mau`,
+  `<b>Mal</b> é o contrário de <b>bem</b>; <b>mau</b> é o contrário de <b>bom</b>.<br>"Ele dormiu <b>mal</b>" (dormiu bem ✔). "Ele é um <b>mau</b> jogador" (bom jogador ✔).<br>"Mal" também pode ser "assim que": "<b>Mal</b> cheguei, começou a chover."`],
+ [`5. Há × a (tempo)`,
+  `<b>Há</b> → tempo que já passou (dá para trocar por "faz"): "Moro aqui <b>há</b> dez anos" (faz dez anos ✔).<br><b>A</b> → tempo futuro ou distância: "A prova será daqui <b>a</b> seis dias." "A escola fica <b>a</b> dois quilômetros."<br>Evite "há dez anos atrás": é repetição. Use "há dez anos" ou "dez anos atrás".`],
+ [`6. Onde × aonde`,
+  `<b>Onde</b> → lugar parado (estar, ficar, morar): "<b>Onde</b> você mora?"<br><b>Aonde</b> = a + onde → movimento, com verbos que pedem "a" (ir a, chegar a): "<b>Aonde</b> você vai?"<br>Teste: "vou <b>a</b> algum lugar" → aonde; "estou <b>em</b> algum lugar" → onde.`],
+ [`7. Verbo haver (= existir) fica no singular`,
+  `Com sentido de existir ou de tempo passado, "haver" é impessoal: não tem sujeito, fica no <b>singular</b>.<br>"<b>Havia</b> muitos alunos" (e não "haviam"). "<b>Houve</b> problemas." "<b>Deve haver</b> soluções" (o verbo que acompanha também fica no singular).<br>Já "existir" concorda: "<b>Existiam</b> muitos alunos."`],
+ [`8. Nunca separe sujeito e verbo com UMA vírgula`,
+  `Errado: "Os alunos do 9º ano<b>,</b> fizeram a prova." Certo: "Os alunos do 9º ano fizeram a prova."<br>Pode haver algo <b>entre duas vírgulas</b> no meio: "Os alunos, animados, fizeram a prova."<br>Vírgula obrigatória no vocativo (quem é chamado): "Richard, venha cá."`],
+ [`9. Acentuação básica`,
+  `<b>Proparoxítonas</b> (sílaba forte é a antepenúltima): todas têm acento → lâmpada, matemática, pássaro.<br><b>Oxítonas</b> (forte é a última): acento se terminam em a(s), e(s), o(s), em, ens → sofá, café, avô, também, parabéns.<br><b>Paroxítonas</b> (forte é a penúltima): acento se terminam em l, r, x, n, i(s), us, ã(s), ão(s), um, ps ou ditongo → fácil, açúcar, tórax, lápis, vírus, órfão, álbum, história.<br>Pelo Acordo Ortográfico, paroxítonas com "ei" e "oi" abertos perderam o acento: <b>ideia</b>, <b>heroico</b>, assembleia.`],
+ [`10. Conjunções-chave: que relação elas criam`,
+  `<table class="tb"><tr><th>Relação</th><th>Conjunções</th></tr>
+<tr><td>Adição</td><td>e, nem, não só... mas também</td></tr>
+<tr><td>Oposição (adversativa)</td><td>mas, porém, contudo, todavia, entretanto, no entanto</td></tr>
+<tr><td>Concessão</td><td>embora, ainda que, mesmo que, apesar de que</td></tr>
+<tr><td>Causa</td><td>porque, já que, visto que, uma vez que</td></tr>
+<tr><td>Conclusão</td><td>logo, portanto, por isso, então</td></tr>
+<tr><td>Consequência</td><td>tão... que, tanto... que, de modo que</td></tr>
+<tr><td>Condição</td><td>se, caso, desde que</td></tr>
+<tr><td>Finalidade</td><td>para que, a fim de que</td></tr>
+<tr><td>Tempo</td><td>quando, assim que, enquanto</td></tr>
+<tr><td>Conformidade</td><td>conforme, segundo, consoante</td></tr></table>
+Ex.: "<b>Embora</b> estivesse cansado, estudou" = concessão. Mesmo sentido com oposição: "Estava cansado, <b>mas</b> estudou."`]
+]},
+
+/* ===================== 8. ESTRATÉGIA DE PROVA ===================== */
+{id:'k-prova', n:'Estratégia de prova', ic:'🎯', area:'geral', it:[
+ [`Faça a conta do tempo`,
+  `3 h = 180 min para 30 questões → 180 ÷ 30 = <b>6 min por questão</b>.<br>Mire em 5 min: 30 × 5 = 150 min, e sobram <b>30 min</b> para revisar e passar o gabarito.<br>Checkpoints: com 1 h de prova, ~10 questões feitas; com 2 h, ~20.`],
+ [`Ordem de resolução: as fáceis primeiro`,
+  `1ª passada: resolva tudo o que você sabe na hora.<br>2ª passada: as que dão trabalho, mas você sabe o caminho.<br>3ª passada: as difíceis. Assim você garante os pontos certos antes de gastar tempo.`],
+ [`Pular e voltar (sem culpa)`,
+  `Travou por mais de 3 minutos sem avançar? Marque um "?" na questão e siga.<br>Muitas vezes, quando você volta, a ideia aparece. Ficar 15 min numa questão pode custar o tempo de duas ou três fáceis.`],
+ [`Leia o que a pergunta pede de verdade`,
+  `Grife a pergunta final: "o dobro", "a soma das raízes", "quanto falta", "INCORRETA", "EXCETO", e a unidade (cm ou m? min ou h?).<br>Ex.: você achou x = 4, mas a pergunta pede 2x + 1 → a resposta é <b>9</b>, não 4. A alternativa "4" estará lá para pegar quem não leu.`],
+ [`Elimine alternativas absurdas (estimando)`,
+  `48 × 21 com alternativas 908, 1008, 1208 e 10.008. Estime: 48 × 20 = 960, e a resposta tem de ser um pouco maior que isso → <b>1008</b>.<br>Na conta exata: 48 × 21 = 48 × 20 + 48 = 960 + 48 = 1008 ✔.`],
+ [`Na matemática, teste as alternativas`,
+  `Às vezes é mais rápido substituir do que resolver.<br>"x<sup>2</sup> − x = 12. Qual é o valor positivo de x? (a) 2 (b) 3 (c) 4 (d) 5 (e) 6"<br>Teste 4: 16 − 4 = 12 ✔ → <b>(c)</b>. Comece pelas alternativas do meio.`],
+ [`No Português, a resposta está no texto`,
+  `Leia a pergunta <b>antes</b> do texto: você já sabe o que procurar.<br>Volte ao trecho citado para confirmar; não responda pela sua opinião.<br>Desconfie de alternativas com "sempre", "nunca", "apenas", "todos": costumam exagerar o que o texto diz.`],
+ [`Arme a conta e confira com a operação inversa`,
+  `Mais de 2 passos? Escreva no rascunho, em um espaço separado para cada questão.<br>Confira com a inversa: achou 7 × 38 = 266? Teste 266 ÷ 7 = <b>38</b> ✔. Achou x = 7 em 5(x − 2) = 3x + 4? Substitua: 25 = 25 ✔.`],
+ [`Marque o gabarito com calma`,
+  `Passe para o gabarito a cada bloco de questões (por exemplo, a cada 10), sem deixar tudo para o fim.<br>Confira sempre: número da questão = número da linha. Um "pulo" de linha pode errar várias questões de uma vez.<br>Reserve uns <b>15 min</b> finais para conferir tudo.`],
+ [`Chute consciente`,
+  `Sem tempo ou sem ideia? Elimine o que tem certeza que está errado (por estimativa, unidade, sinal, sentido do texto) e escolha entre as que sobraram.<br>Com 5 alternativas, eliminar 2 faz a chance de acertar subir de 20% para <b>1 em 3</b> (cerca de 33%).<br>Confira nas instruções da prova se resposta errada desconta ponto; se não descontar, não deixe nenhuma em branco.`],
+ [`Cabeça e corpo também contam`,
+  `Na véspera: durma cedo, separe documento, lápis, caneta e borracha (confira nas instruções a cor de caneta pedida).<br>No dia: café da manhã, água e chegar com antecedência.<br>Bateu o nervoso? Respire fundo contando 4 segundos para entrar e 4 para sair, e volte para uma questão fácil.`]
+]}
+
+];
+
+const TOPS=[...TOP_MAT,...TOP_POR];const T0={};TOPS.forEach(t=>T0[t.id]=1);
 let q=0, bad=[];
 TOPS.forEach(t=>{(t.qz||[]).forEach((x,i)=>{q++; if(!(x[2]>=0 && x[2]<x[1].length)) bad.push(t.id+':'+i); if(new Set(x[1]).size!==x[1].length) bad.push('dup '+t.id+':'+i)});
  ['id','mod','t','hook','body','rule','trap','qz'].forEach(k=>{if(!t[k]) bad.push('falta '+k+' em '+t.id)})});
@@ -4406,4 +7667,5 @@ TQ.forEach((x,i)=>{if(!TOPS.find(t=>t.id===x.t))bad.push('treino topico '+x.t);i
 TOPS.forEach(t=>{if(!MACETES[t.id])bad.push('sem macete '+t.id)});
 const FC=[...CARDS_M1,...CARDS_M2,...CARDS_M3,...CARDS_M45,...CARDS_P1,...CARDS_P2,...CARDS_P3];FC.forEach((c,i)=>{if(!TOPS.find(t=>t.id===c.t)||!c.f||!c.b)bad.push('card '+i)});
 const SM=[SIM_A_POR,SIM_A_MAT,SIM_B_POR,SIM_B_MAT,SIM_C_POR,SIM_C_MAT];SM.forEach((a,k)=>{if(a.length!==15)bad.push('sim '+k+' tem '+a.length);a.forEach((x,i)=>{if(!TOPS.find(t=>t.id===x.t)||x.o.length!==5||!(x.a>=0&&x.a<5))bad.push('sim '+k+':'+i)})});
-console.log(JSON.stringify({sim:SM.length*15,max_total2:TOPS.length*5+q*5+TQ.length*10+FC.length*2+900,cards:FC.length,treino:TQ.length,max_total:TOPS.length*5+q*5+TQ.length*10+FC.length*2,topicos:TOPS.length, mat:TOP_MAT.length, por:TOP_POR.length, questoes:q, max:TOPS.length*5+q*5, bad}));
+const PL=Object.assign({},PLUS_M1,PLUS_M2A,PLUS_M2B,PLUS_M3,PLUS_M45,PLUS_P1,PLUS_P2,PLUS_P3A,PLUS_P3B);TOPS.forEach(t=>{const x=PL[t.id];if(!x)bad.push('sem plus '+t.id);else ['base','jeitos','passo','exs','erros','resumo'].forEach(k=>{if(!x[k]||!x[k].length)bad.push('plus '+t.id+' '+k)})});Object.keys(PL).forEach(k=>{if(!T0[k])bad.push('plus id '+k)});
+console.log(JSON.stringify({plus:Object.keys(PL).length,kit:KIT.reduce((a,s)=>a+s.it.length,0),sim:SM.length*15,max_total2:TOPS.length*5+q*5+TQ.length*10+FC.length*2+900,cards:FC.length,treino:TQ.length,max_total:TOPS.length*5+q*5+TQ.length*10+FC.length*2,topicos:TOPS.length, mat:TOP_MAT.length, por:TOP_POR.length, questoes:q, max:TOPS.length*5+q*5, bad}));

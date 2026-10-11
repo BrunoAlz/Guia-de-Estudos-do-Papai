@@ -25,7 +25,7 @@ const SIM_C_POR = [
   [`os cientistas.`, `Os cientistas são quem pratica a ação (o sujeito de “deixaram”); quem foi deixado exposto ao vácuo foram os animais.`],
   [`os lugares úmidos citados no primeiro parágrafo.`, `Lugares úmidos não foram levados ao espaço; o referente está bem mais perto, na mesma frase.`],
   [`o frio intenso e o calor forte.`, `Frio e calor são condições que o animal suporta, não o que foi enviado à órbita.`],
-  [`os músculos das patas gordinhas.`, `O texto não fala em músculos; as patas aparecem no primeiro parágrafo e não têm relação com essa frase.`],
+  [`os músculos das patas gordinhas.`, `O texto não fala em músculos; e as patas não foram enviadas ao espaço: quem foi enviado foram os animais (“alguns deles”).`],
   [`os tardígrados enviados à órbita (“alguns deles”).`, ``]
  ], a:4,
  e:`Pergunte ao verbo: os cientistas deixaram <b>quem</b> exposto ao vácuo? “Alguns deles”, isto é, os tardígrados que foram enviados à órbita. O pronome “os” retoma esse termo e evita repeti-lo.`},
@@ -154,7 +154,7 @@ const SIM_C_POR = [
   [`o pensamento de Davi, que não queria pedir ajuda a Otávio.`, `Quem olha para a mesa de Otávio e depois pede a fita é Lia; o pensamento é dela.`],
   [`discurso indireto livre: o pensamento de Lia aparece misturado à voz do narrador, sem travessão nem verbo de dizer.`, ``]
  ], a:4,
- e:`O narrador está contando a cena em 3ª pessoa e, de repente, “entra” a voz interior de Lia, com pergunta e exclamação típicas de quem pensa (“Nem pensar.”), sem aviso. Esse é o <b>discurso indireto livre</b>. Repare que logo depois ela faz o contrário do que pensou, o que mostra o tamanho do conflito.`},
+ e:`O narrador está contando a cena em 3ª pessoa e, de repente, “entra” a voz interior de Lia, com a pergunta e a resposta enfática típicas de quem pensa consigo mesmo (“Pedir ajuda logo para ele? Nem pensar.”), sem aviso. Esse é o <b>discurso indireto livre</b>. Repare que logo depois ela faz o contrário do que pensou, o que mostra o tamanho do conflito.`},
 
 /* 12 · p-conj */
 {t:'p-conj', d:2,
@@ -176,7 +176,7 @@ const SIM_C_POR = [
  o:[
   [`“O projeto que eu mais gostei foi o do vulcão.”`, `Quem gosta, gosta <b>de</b> algo: o correto é “o projeto <b>de que</b> eu mais gostei”.`],
   [`“A professora que todos confiam é a de Ciências.”`, `Quem confia, confia <b>em</b> alguém: “a professora <b>em quem</b> todos confiam”.`],
-  [`“O momento onde o vulcão rachou foi assustador.”`, `“Onde” só se usa para lugar físico. Para tempo: “o momento <b>em que</b> o vulcão rachou”.`],
+  [`“O momento onde o vulcão rachou foi assustador.”`, `“Onde” só se usa para lugar. Para tempo: “o momento <b>em que</b> o vulcão rachou”.`],
   [`“O tema de que trata o melhor trabalho é a reciclagem de água.”`, ``],
   [`“O ginásio que a feira aconteceu estava lotado.”`, `Algo acontece <b>em</b> um lugar: “o ginásio <b>em que</b> (ou <b>onde</b>) a feira aconteceu”.`]
  ], a:3,
