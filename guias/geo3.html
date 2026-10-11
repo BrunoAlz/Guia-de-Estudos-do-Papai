@@ -1,0 +1,1338 @@
+<!doctype html><html lang="pt-BR"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover"><meta name="theme-color" content="#1d5c6e"><style>:root{padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}body{margin:0;font:14px system-ui}img{max-width:100%}[hidden]{display:none!important}</style></head><body><title>Geografia 3º tri · Economia mundial e globalização</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=IM+Fell+English:ital@0;1&family=IM+Fell+English+SC&family=Caveat:wght@700&family=Barlow+Condensed:wght@500;600;700&family=IBM+Plex+Mono:wght@400;600&family=Source+Serif+4:opsz,wght@8..60,400;8..60,600&display=swap">
+<style>
+/* Layout: dossiê de arquivo de guerra; coluna de leitura de 820px, linha do tempo usa a página inteira com fatos alternando dos dois lados de uma espinha central */
+:root{
+  --bg:#e4e8e0; --paper:#f6f4ec; --ink:#14242f; --muted:#52606a; --line:#b7c3c3;
+  --accent:#1f5f8b; --accent-soft:#d5e6ef; --mark:#e0a33a; --ok:#2e7a52; --ok-soft:#d6ecdf; --bad:#b8462e; --bad-soft:#f3d9cf; --stamp:#b8462e;
+  --display:"Barlow Condensed","Arial Narrow",sans-serif; --stencil:"Fraunces",Georgia,serif; --type:"IBM Plex Mono","Courier New",monospace; --body:"Source Serif 4",Georgia,serif;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0e1a22; --paper:#152631; --ink:#e3ecef; --muted:#9db0ba; --line:#2c4352;
+  --accent:#7cc3e6; --accent-soft:#183847; --mark:#e7b257; --ok:#7fcf9f; --ok-soft:#173527; --bad:#ec8a72; --bad-soft:#3d2119; --stamp:#ec8a72; color-scheme:dark}}
+:root[data-theme="dark"]{
+  --bg:#0e1a22; --paper:#152631; --ink:#e3ecef; --muted:#9db0ba; --line:#2c4352;
+  --accent:#7cc3e6; --accent-soft:#183847; --mark:#e7b257; --ok:#7fcf9f; --ok-soft:#173527; --bad:#ec8a72; --bad-soft:#3d2119; --stamp:#ec8a72; color-scheme:dark}
+*{box-sizing:border-box} [hidden]{display:none!important}
+body{background:var(--bg);color:var(--ink);font:17px/1.6 var(--body)}
+.wrap{max-width:780px;margin:0 auto;padding-inline:16px;padding-block:28px 60px}
+.eyebrow{font:600 13px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--accent)}
+h1{font:800 clamp(30px,6vw,44px)/1.1 var(--display);margin:.2em 0 .3em;text-wrap:balance}
+h2{font:700 24px/1.2 var(--display);margin:0 0 .5em;text-wrap:balance}
+h3{font:700 18px/1.35 var(--display);margin:0 0 .3em;text-wrap:balance}
+.lede{color:var(--muted);max-width:62ch;margin:0}
+.sticky{position:sticky;top:env(safe-area-inset-top,0px);background:var(--bg);z-index:2;padding-block:10px;display:flex;flex-direction:column;gap:8px;margin-top:18px}
+.tabs,.chips{display:flex;gap:6px;flex-wrap:wrap}
+.tabs button{font:600 15px var(--display);border:1px solid var(--line);background:var(--paper);color:var(--ink);padding:9px 16px;border-radius:999px;cursor:pointer}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.chips button{font:600 13px var(--display);border:1px solid var(--line);background:transparent;color:var(--muted);padding:5px 12px;border-radius:999px;cursor:pointer}
+.chips button[aria-pressed="true"]{background:var(--accent-soft);border-color:var(--accent);color:var(--accent)}
+button:focus-visible,summary:focus-visible{outline:3px solid var(--mark);outline-offset:2px}
+section.panel{display:flex;flex-direction:column;gap:18px}
+.card{background:var(--paper);border:1px solid var(--line);border-radius:10px;padding:20px;min-width:0}
+p{margin:0 0 .8em;max-width:65ch} p:last-child{margin-bottom:0}
+mark{background:color-mix(in srgb,var(--mark) 45%,transparent);color:inherit;padding:0 2px}
+.chap-h{display:flex;align-items:baseline;gap:10px;flex-wrap:wrap;margin:6px 0 -6px}
+.chap-h .tag{font:700 13px var(--display);letter-spacing:.06em;text-transform:uppercase;color:var(--paper);background:var(--accent);padding:3px 10px;border-radius:4px}
+.chap-h h2{margin:0}
+details{border-top:1px solid var(--line);padding-block:12px}
+details:first-child{border-top:0;padding-top:0}
+details:last-child{padding-bottom:0}
+summary{cursor:pointer;font:600 16px/1.4 var(--display);list-style:none;display:grid;grid-template-columns:34px 1fr;gap:6px}
+summary::-webkit-details-marker{display:none}
+summary .n{color:var(--accent);font-variant-numeric:tabular-nums}
+details .ans{margin:10px 0 0 40px}
+details .ans ul{margin:.3em 0 .6em;padding-left:1.1em;display:grid;gap:4px}
+.check{font-size:14px;color:var(--muted);border-left:3px solid var(--mark);padding-left:10px;margin-top:8px}
+.timeline{list-style:none;margin:0;padding:0;display:grid;gap:10px}
+.timeline li{display:grid;grid-template-columns:70px 1fr;gap:12px;align-items:baseline}
+.timeline b{font:700 16px var(--display);color:var(--accent);font-variant-numeric:tabular-nums}
+.gloss{display:grid;gap:10px;margin:0}
+.gloss div{display:grid;grid-template-columns:150px 1fr;gap:12px}
+.gloss dt{font:700 16px var(--display)} .gloss dd{margin:0}
+ul.pts{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.note{font-size:14px;color:var(--muted)}
+.q{display:flex;flex-direction:column;gap:10px}
+.q .num{font:600 13px var(--display);color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.opts{display:grid;gap:8px}
+.opts button{text-align:left;font:16px/1.4 var(--body);padding:11px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer}
+.opts button:hover:not(:disabled){border-color:var(--accent)}
+.opts button.ok{background:var(--ok-soft);border-color:var(--ok)}
+.opts button.bad{background:var(--bad-soft);border-color:var(--bad)}
+.opts button:disabled{cursor:default}
+.why{font-size:15px;border-left:3px solid var(--accent);padding-left:12px;color:var(--muted)}
+.score{font:700 18px var(--display);display:flex;justify-content:space-between;align-items:center;gap:12px;flex-wrap:wrap}
+.btn{font:600 15px var(--display);padding:10px 18px;border-radius:8px;border:1px solid var(--accent);background:var(--accent);color:var(--paper);cursor:pointer}
+.btn.ghost{background:transparent;color:var(--accent)}
+.fc-stage{perspective:1200px}
+.flash{position:relative;width:100%;min-height:280px;cursor:pointer;transform-style:preserve-3d;transition:transform .5s;border:0;background:none;padding:0;font:inherit;color:inherit;display:block}
+.flash.flipped{transform:rotateY(180deg)}
+.face{position:absolute;inset:0;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:14px;padding:26px;display:flex;flex-direction:column;justify-content:center;align-items:center;text-align:center;gap:10px;border:1px solid var(--line);overflow:auto}
+.front{background:var(--paper)}
+.back{background:var(--accent-soft);transform:rotateY(180deg)}
+.face small{font:600 12px var(--display);letter-spacing:.08em;text-transform:uppercase;color:var(--muted)}
+.front .t{font:700 clamp(20px,4.5vw,26px)/1.25 var(--display);text-wrap:balance}
+.back .t{font-size:18px;line-height:1.5;max-width:52ch}
+.fc-bar{display:flex;justify-content:space-between;align-items:center;gap:10px;flex-wrap:wrap}
+.fc-bar .count{font:600 15px var(--display);color:var(--muted);font-variant-numeric:tabular-nums}
+.row{display:flex;gap:8px;flex-wrap:wrap}
+.btn.okb{background:var(--ok);border-color:var(--ok)} .btn.badb{background:var(--bad);border-color:var(--bad)}
+.modes{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:8px;margin-top:12px}
+.modes button{font:600 15px/1.3 var(--display);text-align:left;padding:12px 14px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer}
+.modes button small{display:block;font:400 13px var(--body);color:var(--muted);margin-top:2px}
+.modes button[aria-pressed="true"]{border-color:var(--accent);background:var(--accent-soft)}
+.ord{display:grid;gap:8px}
+.ord button{display:grid;grid-template-columns:32px 1fr;gap:8px;align-items:center;text-align:left;font:16px/1.4 var(--body);padding:10px 12px;border:1px solid var(--line);background:var(--bg);color:var(--ink);border-radius:8px;cursor:pointer}
+.ord .badge{font:700 15px var(--display);width:28px;height:28px;border-radius:50%;display:grid;place-items:center;border:1px dashed var(--line);color:var(--accent);font-variant-numeric:tabular-nums}
+.ord button.sel .badge{background:var(--accent);color:var(--paper);border:0}
+.ord button.ok{border-color:var(--ok);background:var(--ok-soft)} .ord button.bad{border-color:var(--bad);background:var(--bad-soft)}
+.ord .yr{font:600 13px var(--display);color:var(--muted);margin-left:6px}
+.tf{display:flex;gap:8px;flex-wrap:wrap}
+.match{display:grid;gap:12px}
+.match label{font:600 15px/1.4 var(--display);display:grid;gap:6px}
+.match select{font:15px var(--body);padding:9px;border-radius:8px;border:1px solid var(--line);background:var(--bg);color:var(--ink);width:100%;max-width:100%}
+.match select.ok{border-color:var(--ok);background:var(--ok-soft)} .match select.bad{border-color:var(--bad);background:var(--bad-soft)}
+.clues{margin:0;padding-left:1.2em;display:grid;gap:6px}
+.checklist{list-style:none;margin:8px 0 0;padding:0;display:grid;gap:6px}
+.checklist label{display:grid;grid-template-columns:22px 1fr;gap:8px;align-items:start;cursor:pointer}
+.checklist input{margin-top:5px;accent-color:var(--accent)}
+.err{font-size:17px;line-height:1.7;background:var(--bg);border-radius:8px;padding:12px 14px}
+.result{font:600 15px var(--display)}
+@media (prefers-reduced-motion:reduce){.flash{transition:none}}
+@media (max-width:520px){.gloss div,.timeline li{grid-template-columns:1fr;gap:2px} details .ans{margin-left:0}}
+
+/* ===== tema histórico ===== */
+body{background:var(--bg);background-image:radial-gradient(circle at 20% 10%,color-mix(in srgb,var(--paper) 55%,transparent),transparent 60%),url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='420' height='420' fill='none' stroke='%231f5f8b' stroke-opacity='.09'%3E%3Cpath d='M210 40c90 10 150 70 140 160s-80 150-170 140S30 260 40 170 120 30 210 40z'/%3E%3Cpath d='M210 80c65 7 105 52 98 115s-58 105-120 98-100-52-93-115 50-105 115-98z'/%3E%3Cpath d='M210 120c40 5 65 32 60 70s-35 64-74 60-62-32-58-70 32-64 72-60z'/%3E%3Cpath d='M212 160c16 2 26 13 24 28s-14 26-30 24-25-13-23-28 13-26 29-24z'/%3E%3C/svg%3E")}
+.wrap{max-width:1240px}
+header,section.panel:not(#linha){max-width:820px;margin-inline:auto;width:100%}
+.sticky{margin-inline:-16px;padding-inline:16px}
+.tabs,.chips{max-width:820px;margin-inline:auto;width:100%}
+#linha>.card,#linha>.note{max-width:820px;margin-inline:auto;width:100%}
+header{border:2px solid var(--ink);padding:22px 22px 20px;position:relative;background:var(--paper);box-shadow:4px 4px 0 var(--ink)}
+header .eyebrow{font:400 14px var(--type);letter-spacing:.04em;color:var(--muted);text-transform:none}
+h1{font:400 clamp(30px,6.4vw,52px)/1.05 var(--stencil);letter-spacing:.02em;text-transform:uppercase;margin:.25em 0 .35em}
+h2{font:700 24px/1.2 var(--display);text-transform:uppercase;letter-spacing:.03em}
+h3{font-family:var(--display);font-weight:600;letter-spacing:.01em}
+.lede{font-size:16px}
+.stamp{position:absolute;right:18px;top:16px;font:400 15px var(--stencil);color:var(--stamp);border:3px solid var(--stamp);padding:4px 10px;transform:rotate(-7deg);letter-spacing:.08em;opacity:.85;border-radius:4px}
+@media (max-width:560px){.stamp{position:static;display:inline-block;margin-bottom:8px}}
+.sticky{background:var(--bg);border-bottom:2px solid var(--ink)}
+.tabs button{font:600 14px var(--display);text-transform:uppercase;letter-spacing:.06em;border-radius:3px;border:1.5px solid var(--ink);background:var(--paper)}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent);color:var(--paper)}
+.chips button{font:400 13px var(--type);border-radius:3px}
+.card{border-radius:3px;border:1px solid var(--line);box-shadow:0 1px 0 var(--line),0 8px 18px -14px color-mix(in srgb,var(--ink) 60%,transparent)}
+.chap-h .tag{font:400 13px var(--stencil);border-radius:2px;background:var(--stamp)}
+summary{font-family:var(--display);font-weight:500;letter-spacing:.01em}
+summary .n{font-family:var(--type)}
+.btn{border-radius:3px;font:600 14px var(--display);text-transform:uppercase;letter-spacing:.06em}
+.opts button,.ord button,.modes button,.match select{border-radius:3px}
+.q .num,.face small,.fc-bar .count,.score,.result{font-family:var(--type);font-weight:400;letter-spacing:.02em;text-transform:none}
+.face{border-radius:4px}
+.front .t{font-family:var(--display);text-transform:uppercase;letter-spacing:.02em}
+.timeline b{font:400 16px var(--type)}
+.gloss dt{font-family:var(--display);font-weight:600}
+mark{background:color-mix(in srgb,var(--mark) 40%,transparent)}
+
+/* ===== linha do tempo em duas colunas ===== */
+.eras{display:flex;flex-wrap:wrap;gap:6px;margin-top:10px}
+.eras a{font:600 13px var(--display);text-transform:uppercase;letter-spacing:.05em;color:var(--ink);text-decoration:none;border:1.5px solid var(--ink);border-radius:3px;padding:6px 10px;background:var(--bg)}
+.eras a span{font:400 12px var(--type);color:var(--muted);margin-left:6px;text-transform:none}
+.legend{display:flex;gap:16px;flex-wrap:wrap;font:400 13px var(--type);color:var(--muted);margin-top:10px}
+.legend i{display:inline-block;width:12px;height:12px;border-radius:50%;margin-right:6px;vertical-align:-1px;border:3px solid var(--accent);background:var(--paper)}
+.legend i.b{border-color:var(--ok)} .legend i.k{background:var(--mark);border-color:var(--mark)}
+.tl{position:relative;display:flex;flex-direction:column;gap:0;padding-block:8px 30px}
+.tl::before{content:"";position:absolute;left:50%;top:0;bottom:0;width:4px;margin-left:-2px;background:repeating-linear-gradient(180deg,var(--ink) 0 14px,transparent 14px 22px);opacity:.55}
+.era{position:relative;z-index:1;align-self:center;text-align:center;max-width:620px;width:100%;margin:34px 0 26px;padding:18px 22px;background:var(--ink);color:var(--paper);border-radius:2px;scroll-margin-top:150px;box-shadow:5px 5px 0 var(--stamp)}
+.era .yrs{font:400 15px var(--type);color:var(--mark);letter-spacing:.06em}
+.era h2{font:400 clamp(24px,4vw,34px)/1.1 var(--stencil);color:var(--paper);margin:4px 0 8px;letter-spacing:.03em}
+.era p{margin:0 auto;font-size:15px;opacity:.9;max-width:52ch}
+.ev{position:relative;width:calc(50% - 44px);background:var(--paper);border:1px solid var(--line);border-radius:2px;padding:18px 20px;margin-top:-34px;box-shadow:0 10px 22px -16px color-mix(in srgb,var(--ink) 70%,transparent)}
+.era+.ev{margin-top:0}
+.ev.L{align-self:flex-start} .ev.R{align-self:flex-end}
+.ev::before{content:"";position:absolute;top:24px;width:16px;height:16px;border-radius:50%;background:var(--paper);border:4px solid var(--accent);z-index:1}
+.ev.L::before{right:-54px} .ev.R::before{left:-54px}
+.ev::after{content:"";position:absolute;top:31px;width:34px;height:2px;background:var(--line)}
+.ev.L::after{right:-36px} .ev.R::after{left:-36px}
+.ev.br{border-top:5px solid var(--ok)} .ev.br::before{border-color:var(--ok)}
+.ev.big::before{background:var(--mark);border-color:var(--mark);width:20px;height:20px;top:22px}
+.ev.L.big::before{right:-56px} .ev.R.big::before{left:-56px}
+.ev .when{display:flex;gap:8px;align-items:center;flex-wrap:wrap;justify-content:space-between}
+.ev .date{font:400 clamp(17px,2vw,21px)/1.1 var(--stencil);color:var(--accent);letter-spacing:.02em}
+.ev.br .date{color:var(--ok)}
+.ev .ct{font:400 11px var(--type);color:var(--stamp);border:1.5px solid var(--stamp);border-radius:2px;padding:1px 6px;transform:rotate(-2deg)}
+.ev h3{margin:8px 0 8px;font:700 21px/1.2 var(--display);text-transform:uppercase;letter-spacing:.02em}
+.ev p{font-size:16px;max-width:none}
+.ev .then{font-size:15px;color:var(--muted);border-top:1px dashed var(--line);padding-top:10px;margin-top:12px}
+.ev .then b{font:400 14px var(--type);color:var(--stamp)}
+.ev figure{margin:14px 0 6px;background:#f7f3e8;padding:8px 8px 10px;border:1px solid var(--line);box-shadow:0 6px 14px -10px rgba(0,0,0,.6)}
+.ev.L figure{transform:rotate(-.8deg)} .ev.R figure{transform:rotate(.8deg)}
+.ev figure img{display:block;width:100%;max-height:360px;object-fit:cover;filter:sepia(.35) contrast(1.05);background:var(--bg)}
+.ev figcaption{font:400 12.5px/1.45 var(--type);color:#4a4434;margin-top:8px}
+.ev figcaption i{display:block;opacity:.7;font-style:normal;margin-top:2px}
+@media (max-width:860px){
+  .tl::before{left:14px}
+  .era{align-self:stretch;text-align:left;margin:26px 0 16px 34px;width:auto}
+  .era p{margin:0}
+  .ev,.ev.L,.ev.R{width:auto;align-self:stretch;margin:0 0 16px 40px}
+  .era+.ev{margin-top:0}
+  .ev.L::before,.ev.R::before{left:-35px;right:auto} .ev.L.big::before,.ev.R.big::before{left:-37px;right:auto}
+  .ev.L::after,.ev.R::after{left:-20px;right:auto;width:20px}
+  .ev.L figure,.ev.R figure{transform:none}
+}
+
+/* ===== jogador, placar ===== */
+.player{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:14px;padding-top:12px;border-top:1px dashed var(--line);font:400 14px var(--type);color:var(--muted)}
+.player .pn{font:400 20px var(--stencil);color:var(--ink);letter-spacing:.03em}
+.player .pr b{color:var(--accent);font-size:16px}
+.btn.sm{padding:6px 12px;font-size:12.5px}
+.okmark{color:var(--ok);font-weight:700}
+.ans .rotb{margin-top:10px}
+.era-done{position:relative;z-index:1;align-self:center;margin:18px 0 6px}
+.era-done .btn{box-shadow:3px 3px 0 var(--ink)}
+.toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:translateX(-50%) rotate(-2deg);z-index:20;font:400 20px var(--stencil);color:var(--paper);background:var(--stamp);padding:10px 20px;border-radius:3px;box-shadow:4px 4px 0 var(--ink);letter-spacing:.04em}
+.modal{position:fixed;inset:0;z-index:30;background:color-mix(in srgb,var(--ink) 55%,transparent);display:grid;place-items:center;padding:16px}
+.mbox{position:relative;max-width:460px;width:100%;box-shadow:6px 6px 0 var(--ink);border:2px solid var(--ink);display:flex;flex-direction:column;gap:6px}
+.mbox h2{margin:0;padding-right:120px}
+@media (max-width:560px){.mbox h2{padding-right:0}}
+.mbox input{font:18px var(--body);padding:11px 12px;border:1.5px solid var(--ink);border-radius:3px;background:var(--bg);color:var(--ink);width:100%}
+.mbox input:focus{outline:3px solid var(--mark);outline-offset:1px}
+.loginErr{color:var(--bad);font-size:14px;min-height:1em;margin:0}
+.dash-hero{display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;border:2px solid var(--ink);box-shadow:5px 5px 0 var(--ink)}
+@media (max-width:560px){.dash-hero{grid-template-columns:1fr}}
+.dh-name{font:400 clamp(28px,6vw,42px)/1.05 var(--stencil);letter-spacing:.02em;margin:4px 0}
+.dh-rank{font:600 16px var(--display);text-transform:uppercase;letter-spacing:.05em;margin-bottom:10px}
+.dh-rank b{color:var(--stamp)}
+.dh-stats{display:flex;gap:12px}
+.dh-stats div{border:2px solid var(--ink);padding:10px 16px;text-align:center;min-width:104px;background:var(--bg)}
+.dh-stats b{display:block;font:400 34px/1 var(--stencil);color:var(--accent);font-variant-numeric:tabular-nums}
+.dh-stats span{font:400 12px var(--type);color:var(--muted)}
+.meter{height:14px;background:var(--bg);border:1.5px solid var(--ink);border-radius:2px;overflow:hidden;margin-bottom:6px}
+.meter span{display:block;height:100%;background:repeating-linear-gradient(45deg,var(--accent) 0 8px,color-mix(in srgb,var(--accent) 80%,var(--paper)) 8px 16px);transition:width .5s}
+.meter.sm{height:10px;border-width:1px}
+.bars{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:14px 22px}
+.bl{display:flex;justify-content:space-between;gap:8px;font:600 14px var(--display);text-transform:uppercase;letter-spacing:.03em;margin-bottom:4px}
+.bv{font:400 13px var(--type);color:var(--muted);text-transform:none;font-variant-numeric:tabular-nums}
+.chaps{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px}
+.chap{border:1.5px solid var(--line);border-top:6px solid var(--line);padding:10px 12px;display:grid;gap:2px;background:var(--bg)}
+.chap.good{border-top-color:var(--ok)} .chap.mid{border-top-color:var(--mark)} .chap.low{border-top-color:var(--bad)}
+.chap .cn{font:400 13px var(--type);color:var(--muted)} .chap b{font:400 30px/1.1 var(--stencil);font-variant-numeric:tabular-nums}
+.chap .cs{font-size:13px} .chap .ct2{font:500 12px var(--display);text-transform:uppercase;color:var(--muted);letter-spacing:.03em}
+.rank{list-style:none;margin:10px 0 0;padding:0;display:grid;gap:6px}
+.rank li{display:grid;grid-template-columns:42px 1fr auto auto;gap:10px;align-items:center;padding:9px 12px;border:1px solid var(--line);background:var(--bg)}
+.rank li.me{border:2px solid var(--accent);background:var(--accent-soft)}
+.rank .rp{font:400 17px var(--stencil);text-align:center}
+.rank .rn{font:600 16px var(--display);min-width:0;overflow-wrap:anywhere}
+.rank .rpat{font:400 12px var(--type);color:var(--stamp)}
+.rank .rt{font:400 16px var(--type);font-variant-numeric:tabular-nums}
+@media (max-width:480px){.rank li{grid-template-columns:34px 1fr auto}.rank .rpat{display:none}}
+.card.danger{border-color:color-mix(in srgb,var(--bad) 50%,var(--line))}
+
+/* ===== missões e relatório ===== */
+.miss .warn{border-left:4px solid var(--stamp);background:var(--bad-soft);padding:10px 12px;font-size:15px;max-width:none}
+.miss.done{border:2px solid var(--ok);box-shadow:4px 4px 0 var(--ok)}
+.mlist{display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:8px;margin:12px 0 16px}
+.mi{display:grid;grid-template-columns:26px 1fr auto;gap:8px;align-items:center;text-align:left;padding:9px 12px;border:1.5px solid var(--line);background:var(--bg);color:var(--ink);border-radius:3px;cursor:pointer;font:600 14px var(--display);text-transform:uppercase;letter-spacing:.03em}
+.mi .mk{width:22px;height:22px;border:2px solid var(--ink);display:grid;place-items:center;font-size:14px;color:var(--paper)}
+.mi.ok{border-color:var(--ok)} .mi.ok .mk{background:var(--ok);border-color:var(--ok)}
+.mi .mn{font:400 13px var(--type);color:var(--muted);font-variant-numeric:tabular-nums}
+.btn.big{width:100%;padding:14px;font-size:16px}
+.btn:disabled{opacity:.5;cursor:not-allowed;background:var(--line);border-color:var(--line);color:var(--ink)}
+.rep-modal{overflow:auto;place-items:start center;padding-block:20px}
+.rep{position:relative;width:100%;max-width:440px;background:#eef1ea;color:#221e15;border:3px solid #221e15;padding:22px 22px 18px;box-shadow:8px 8px 0 #221e15;background-image:repeating-linear-gradient(0deg,transparent 0 3px,rgba(34,30,21,.035) 3px 4px);overflow:hidden}
+.rep .meter{background:#d9e2df;border-color:#221e15}
+.rep .meter span{background:repeating-linear-gradient(45deg,#1f5f8b 0 8px,#2f7ea6 8px 16px)}
+.rep-top{display:flex;justify-content:space-between;font:400 13px var(--type);border-bottom:2px solid #221e15;padding-bottom:8px;text-transform:uppercase;letter-spacing:.06em}
+.rep-seal{position:absolute;right:14px;top:52px;font:400 17px/1.05 var(--stencil);color:#b8462e;border:4px double #b8462e;border-radius:6px;padding:8px 10px;text-align:center;transform:rotate(-12deg);opacity:.9;letter-spacing:.06em}
+.rep-sub{font:400 12.5px var(--type);color:#5f5846;margin-top:14px;padding-right:110px}
+.rep-name{font:400 clamp(28px,8vw,40px)/1.02 var(--stencil);margin:8px 0 2px;padding-right:96px;overflow-wrap:anywhere}
+.rep-date{font:400 13px var(--type);color:#5f5846}
+.rep-big{display:grid;grid-template-columns:repeat(2,1fr);gap:8px;margin:16px 0}
+.rep-big div{border:2px solid #221e15;padding:8px 6px;text-align:center;background:#f7f8f3}
+.rep-big b{display:block;font:400 21px/1.1 var(--stencil);color:#1f5f8b;overflow-wrap:anywhere}
+.rep-big span{font:400 11px var(--type);color:#5f5846}
+.rep-list{display:grid;gap:5px}
+.rep-row{display:grid;grid-template-columns:1fr 90px 40px;gap:8px;align-items:center;font:600 12.5px var(--display);text-transform:uppercase;letter-spacing:.02em}
+.rep-row .meter{margin:0}
+.rep-row b{font:400 13px var(--type);text-align:right;font-variant-numeric:tabular-nums}
+.rep-ch{display:grid;grid-template-columns:1fr 1fr;gap:8px;margin-top:14px}
+.rep-ch div{border:1.5px dashed #221e15;padding:8px 10px;display:grid}
+.rep-ch span{font:400 11px var(--type);color:#5f5846;text-transform:uppercase}
+.rep-ch b{font:400 20px var(--stencil)} .rep-ch div:last-child b{color:#b8462e}
+.rep-ch i{font:500 11.5px/1.3 var(--display);text-transform:uppercase;font-style:normal;color:#5f5846}
+.rep-foot{margin-top:14px;padding-top:10px;border-top:2px solid #221e15;font:400 12.5px var(--type);text-align:center}
+.rep-actions{justify-content:center;margin-top:16px}
+
+/* ===== app mobile: barra de abas embaixo, topo enxuto ===== */
+.tabs .ti{display:none}
+.tabs .ts{display:none}
+@media (max-width:700px){
+  .wrap{padding-block:12px calc(86px + env(safe-area-inset-bottom,0px))}
+  header{padding:14px 14px 12px;box-shadow:3px 3px 0 var(--ink)}
+  header .eyebrow{font-size:12px}
+  h1{font-size:26px;margin:.2em 0 .1em}
+  header .lede{display:none}
+  .stamp{font-size:12px;padding:2px 8px;border-width:2px}
+  .player{margin-top:8px;padding-top:8px;gap:8px}
+  .player .pn{font-size:17px}
+  .sticky{position:static;border-bottom:0;margin:10px 0 4px;padding:0;background:none}
+  .chips{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;-webkit-overflow-scrolling:touch;padding-bottom:2px}
+  .chips::-webkit-scrollbar{display:none}
+  .chips button{flex:none;padding:7px 12px;font-size:13px}
+  .tabs{position:fixed;left:0;right:0;bottom:0;z-index:15;display:grid;grid-template-columns:repeat(8,1fr);gap:0;max-width:none!important;margin:0!important;background:var(--ink);padding:6px 4px calc(6px + env(safe-area-inset-bottom,0px));box-shadow:0 -6px 18px -8px rgba(0,0,0,.5)}
+  .tabs button{border:0;background:none;color:color-mix(in srgb,var(--paper) 70%,transparent);display:flex;flex-direction:column;align-items:center;gap:3px;padding:6px 0 4px;font:600 10px/1 var(--display);letter-spacing:.02em;text-transform:uppercase;border-radius:6px;min-width:0}
+  .tabs button[aria-selected="true"]{background:var(--accent);color:var(--paper)}
+  .tabs .ti{display:block;width:22px;height:22px}
+  .tabs .ti svg{width:22px;height:22px;display:block;fill:none;stroke:currentColor;stroke-width:2;stroke-linecap:round;stroke-linejoin:round}
+  .tabs .tf{display:none} .tabs .ts{display:block;white-space:nowrap}
+  .eras{flex-wrap:nowrap;overflow-x:auto;scrollbar-width:none;padding-bottom:4px}
+  .eras::-webkit-scrollbar{display:none}
+  .eras a{flex:none}
+  .era{scroll-margin-top:12px}
+  .card{padding:16px}
+  .opts button,.ord button{padding:13px 14px;min-height:48px}
+  .fc-bar .btn{padding:12px 14px}
+  .flash{min-height:300px}
+  .toast{bottom:calc(84px + env(safe-area-inset-bottom,0px));font-size:17px}
+  .modal{z-index:40}
+}
+
+h1,.era h2,.dh-name,.rep-name,.player .pn{font-weight:800;text-transform:none;letter-spacing:-.01em}
+.stamp,.toast,.rep-seal,.chap-h .tag,.ev .date,.dh-stats b,.chap b,.rank .rp,.rep-big b,.rep-ch b{font-weight:700}
+table.mini{width:100%;border-collapse:collapse;font-size:15px;margin:.4em 0 .8em;display:block;overflow-x:auto}
+table.mini th,table.mini td{border:1px solid var(--line);padding:7px 9px;text-align:left;vertical-align:top}
+table.mini th{font:600 14px var(--display);background:var(--accent-soft);color:var(--accent)}
+details .ans ol{margin:.3em 0 .6em;padding-left:1.3em;display:grid;gap:4px}
+.br-hero{position:relative;overflow:hidden;border-left:6px solid #1f8a4c}
+.br-flag{position:absolute;right:-18px;top:-18px;width:120px;height:84px;background:#1f8a4c;opacity:.18}
+.br-flag::after{content:"";position:absolute;inset:12px 16px;background:#f2c230;clip-path:polygon(50% 0,100% 50%,50% 100%,0 50%)}
+.br-hero h2,.br-hero p{position:relative}
+.brl{display:grid;gap:12px;margin:12px 0 4px}
+.brl div{border-left:3px solid #1f8a4c;padding-left:12px}
+.brl dt{font:700 16px var(--display);color:var(--accent);text-transform:uppercase;letter-spacing:.03em}
+.brl dd{margin:2px 0 0}
+.brq{margin:18px 0 6px;font:700 17px var(--display);text-transform:uppercase;letter-spacing:.04em;color:var(--stamp)}
+@media (max-width:700px){.tabs .ts{font-size:9.5px;letter-spacing:0}}
+/* ===== tema EXPLORADOR (atlas antigo + diário de expedição) ===== */
+:root{
+  --bg:#e8dbb9; --paper:#f7efdb; --ink:#2b2116; --muted:#6a583f; --line:#c9b48a;
+  --accent:#1d5c6e; --accent-soft:#d3e3df; --mark:#c38a2b; --ok:#3a6b3a; --ok-soft:#dbe8d3; --bad:#a23b2a; --bad-soft:#f1d6cb; --stamp:#a23b2a;
+  --stencil:"IM Fell English",Georgia,serif; --sc:"IM Fell English SC",Georgia,serif; --hand:"Caveat","Segoe Print",cursive;
+}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){
+  --bg:#0f1a20; --paper:#17262e; --ink:#ecdfc2; --muted:#a99779; --line:#33495a;
+  --accent:#7fc1cf; --accent-soft:#163640; --mark:#dba548; --ok:#8cc58c; --ok-soft:#1b3322; --bad:#e58a70; --bad-soft:#3d221b; --stamp:#e58a70}}
+:root[data-theme="dark"]{
+  --bg:#0f1a20; --paper:#17262e; --ink:#ecdfc2; --muted:#a99779; --line:#33495a;
+  --accent:#7fc1cf; --accent-soft:#163640; --mark:#dba548; --ok:#8cc58c; --ok-soft:#1b3322; --bad:#e58a70; --bad-soft:#3d221b; --stamp:#e58a70}
+body{background-color:var(--bg);background-image:
+  radial-gradient(ellipse at 50% 0%,color-mix(in srgb,var(--paper) 70%,transparent),transparent 65%),
+  radial-gradient(ellipse at 50% 120%,color-mix(in srgb,var(--ink) 14%,transparent),transparent 60%),
+  repeating-linear-gradient(0deg,transparent 0 79px,color-mix(in srgb,var(--accent) 12%,transparent) 79px 80px),
+  repeating-linear-gradient(90deg,transparent 0 79px,color-mix(in srgb,var(--accent) 12%,transparent) 79px 80px);
+  background-attachment:fixed}
+/* cabeçalho = cartela de mapa antigo */
+header{border:3px double var(--ink);box-shadow:0 0 0 6px var(--paper),0 0 0 7px var(--line),6px 10px 24px -14px rgba(0,0,0,.6);background:var(--paper);overflow:hidden;padding-top:0}
+.hero-map{margin:0 -22px 14px;position:relative;height:150px;overflow:hidden;border-bottom:2px solid var(--ink)}
+.hero-map img{width:100%;height:100%;object-fit:cover;object-position:50% 45%;filter:sepia(.45) saturate(.9) contrast(1.05)}
+.hero-map figcaption{position:absolute;left:6px;bottom:4px;font:400 10px var(--type);color:#f7efdb;background:rgba(43,33,22,.65);padding:1px 6px}
+.rose{position:absolute;right:14px;top:96px;width:92px;height:92px;color:var(--ink);z-index:2;filter:drop-shadow(0 2px 2px rgba(0,0,0,.25))}
+.rose .rf{fill:var(--paper)} .rose .ra{fill:var(--stamp)} .rose .rb{fill:var(--ink)}
+header .eyebrow{font:400 13px var(--type);letter-spacing:.06em;color:var(--accent);padding-right:96px}
+h1{font:400 clamp(32px,6.6vw,56px)/1.02 var(--stencil);text-transform:none;letter-spacing:0;margin:.15em 0 .3em;padding-right:96px}
+h1 em{font-style:italic;color:var(--accent)}
+.lede{font-style:italic}
+.stamp{position:static;display:inline-block;transform:rotate(-4deg);border-radius:50%;border:3px double var(--stamp);font:400 13px/1.05 var(--sc);padding:10px 12px;text-align:center;margin:0 0 6px;letter-spacing:.06em}
+h2{font:400 26px/1.15 var(--sc);text-transform:none;letter-spacing:.02em}
+.card h2::before{content:"✦ ";color:var(--mark);font-size:.7em;vertical-align:.15em}
+.card{border:1px solid var(--line);border-radius:2px;background:var(--paper);background-image:linear-gradient(180deg,color-mix(in srgb,var(--paper) 0%,transparent),color-mix(in srgb,var(--line) 14%,transparent));box-shadow:0 1px 0 var(--line),0 10px 20px -16px rgba(0,0,0,.65)}
+.chap-h .tag{font:400 14px var(--sc);background:var(--accent);border-radius:2px;letter-spacing:.06em}
+.chap-h h2{font:400 26px/1.15 var(--stencil)}
+.chap-h h2::before{content:none}
+.tabs button[aria-selected="true"]{background:var(--accent);border-color:var(--accent)}
+/* linha do tempo = rota da expedição */
+.tl::before{background:repeating-linear-gradient(180deg,var(--stamp) 0 10px,transparent 10px 18px);opacity:.75;width:3px}
+.era{background:var(--accent);color:#f7efdb;border:3px double #f7efdb;outline:2px solid var(--accent);box-shadow:6px 6px 0 color-mix(in srgb,var(--ink) 35%,transparent);border-radius:4px}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]) .era{background:#1f4e5c}}
+:root[data-theme="dark"] .era{background:#1f4e5c}
+.era .yrs{color:#f2c97a;font-family:var(--type)}
+.era .yrs::before{content:"◈ ";}
+.era h2{font:400 clamp(26px,4.2vw,36px)/1.05 var(--stencil);color:#f7efdb;text-transform:none}
+.era p{color:#f7efdb}
+.ev{border-radius:3px}
+.ev::before{border-color:var(--stamp);border-width:3px;box-shadow:0 0 0 3px var(--paper)}
+.ev .date{font:400 clamp(19px,2.2vw,23px)/1.05 var(--stencil);color:var(--accent)}
+.ev h3{font:400 23px/1.15 var(--stencil);text-transform:none;letter-spacing:0}
+.ev .ct{border-radius:999px;transform:rotate(-3deg);border-style:double;border-width:3px;padding:1px 8px}
+.ev .then b,.toast{font-family:var(--hand)}
+.ev .then b{font-size:20px;font-weight:700}
+.ev .then{font-style:italic}
+.ev figure,.fig{background:#fbf6ea;border:1px solid var(--line);padding:8px 8px 10px;box-shadow:0 8px 16px -10px rgba(0,0,0,.6)}
+.fig{margin:12px 0;transform:rotate(-.5deg)}
+.fig img{display:block;width:100%;max-height:300px;object-fit:cover;filter:sepia(.25) contrast(1.04)}
+.ev figcaption,.fig figcaption{font:400 12.5px/1.45 var(--type);color:#4a3e2c;margin-top:8px}
+.fig figcaption i{display:block;opacity:.7;font-style:normal;margin-top:2px}
+.toast{font-size:24px;font-weight:700;background:var(--accent);border-radius:4px}
+.player .pn{font-family:var(--stencil)}
+.dh-name,.rep-name{font-family:var(--stencil)}
+.rep-seal{border-radius:50%;padding:14px 10px}
+summary .n{color:var(--stamp)}
+.okmark{color:var(--ok)}
+.brl dt,.brq{font-family:var(--sc);text-transform:none;letter-spacing:.03em;font-weight:400;font-size:18px}
+@media (max-width:700px){
+  .hero-map{height:96px} .rose{width:64px;height:64px;top:66px;right:10px}
+  header .eyebrow{padding-right:70px} h1{padding-right:0}
+  .tabs{background:#1b2a31}
+}
+</style>
+
+<div class="wrap">
+<header>
+  <figure class="hero-map"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/OrteliusWorldMap.jpeg?width=1200" alt="Mapa-múndi antigo de Abraham Ortelius, 1570"><figcaption>Abraham Ortelius, 1570 · domínio público</figcaption></figure><svg class="rose" viewBox="0 0 100 100" aria-hidden="true"><circle cx="50" cy="50" r="46" class="rf" stroke="currentColor" stroke-width="1.5"/><circle cx="50" cy="50" r="38" fill="none" stroke="currentColor" stroke-width=".8" stroke-dasharray="2 3"/><g class="rb"><path d="M50 50 44 44 50 14 56 44z" transform="rotate(45 50 50)"/><path d="M50 50 44 44 50 14 56 44z" transform="rotate(135 50 50)"/><path d="M50 50 44 44 50 14 56 44z" transform="rotate(225 50 50)"/><path d="M50 50 44 44 50 14 56 44z" transform="rotate(315 50 50)"/></g><path class="ra" d="M50 4 57 43 50 50 43 43z"/><path class="rf" stroke="currentColor" stroke-width="1" d="M50 96 57 57 50 50 43 57z"/><path class="rf" stroke="currentColor" stroke-width="1" d="M4 50 43 43 50 50 43 57z"/><path class="rf" stroke="currentColor" stroke-width="1" d="M96 50 57 43 50 50 57 57z"/><circle cx="50" cy="50" r="3.5" class="ra"/><text x="50" y="12" text-anchor="middle" font-size="9" fill="#f7efdb" font-family="Georgia">N</text></svg>
+  <div class="stamp">9º ano<br>GEO</div>
+  <div class="eyebrow">Diário de expedição · Geografia · 3º tri · Caps. 11, 13–16</div>
+  <h1>Expedição pela <em>economia mundial</em></h1>
+  <p class="lede">Uma viagem pelo mapa da globalização: da pobreza na Ásia ao mercado financeiro, sempre passando pelo Brasil. Cada atividade vale pontos: suba de Turista a Embaixador e dispute o ranking da turma.</p>
+  <div class="player" id="player"></div>
+</header>
+
+<div class="sticky">
+  <div class="tabs" role="tablist">
+    <button role="tab" aria-selected="true" data-tab="linha">Linha do tempo</button>
+    <button role="tab" aria-selected="false" data-tab="roteiro">Roteiro</button>
+    <button role="tab" aria-selected="false" data-tab="resumo">Resumo</button>
+    <button role="tab" aria-selected="false" data-tab="brasil">Brasil</button>
+    <button role="tab" aria-selected="false" data-tab="quiz">Quiz</button>
+    <button role="tab" aria-selected="false" data-tab="flash">Flashcards</button>
+    <button role="tab" aria-selected="false" data-tab="desafios">Desafios</button>
+    <button role="tab" aria-selected="false" data-tab="placar">Placar ★</button>
+  </div>
+  <div class="chips" id="chips" aria-label="Filtrar por capítulo"></div>
+</div>
+
+<section class="panel" id="roteiro" hidden></section>
+
+<section class="panel" id="linha">
+  <div class="card">
+    <h2>A rota da expedição</h2>
+    <p>Leia de cima para baixo, como um livro. Os fatos alternam de lado conforme o tempo passa, e cada um puxa o próximo: o “E então…” no fim mostra a ligação.</p>
+    <div class="legend"><span><i></i>Fato do mundo</span><span><i class="b"></i>Brasil</span><span><i class="k"></i>Fato-chave</span></div>
+    <div class="eras" id="eras"></div>
+  </div>
+  <div id="tl" class="tl"></div>
+  <p class="note">Fotos do Wikimedia Commons (domínio público ou licença CC BY-SA, com os créditos em cada foto).</p>
+</section>
+
+<section class="panel" id="resumo" hidden>
+  <div class="card">
+    <h2>Linha do tempo geral</h2>
+    <ol class="timeline">
+      <li><b>XV–XVIII</b><span>Capitalismo comercial: metrópole × colônia. Surgem os bancos modernos.</span></li>
+      <li><b>XVIII–XIX</b><span>Revoluções Industriais: nasce o centro industrializado e a periferia agroexportadora (antiga DIT).</span></li>
+      <li><b>1929</b><span>Crise da Bolsa de Nova York. Com a 2ª Guerra, a antiga DIT entra em crise.</span></li>
+      <li><b>1940–53</b><span>Brasil substitui importações: CSN (Volta Redonda, início dos anos 1940) e Petrobras (1953).</span></li>
+      <li><b>1944</b><span>Bretton Woods: padrão dólar-ouro, FMI e Banco Mundial.</span></li>
+      <li><b>1947</b><span>Plano Marshall. Independência da Índia (castas abolidas na lei).</span></li>
+      <li><b>1951</b><span>CECA (carvão e aço).</span></li>
+      <li><b>1957</b><span>Tratados de Roma: Mercado Comum Europeu e Euratom.</span></li>
+      <li><b>1967</b><span>ASEAN.</span></li>
+      <li><b>1979</b><span>China: política do filho único.</span></li>
+      <li><b>1991</b><span>Tratado de Assunção cria o Mercosul (Brasil, Argentina, Uruguai e Paraguai).</span></li>
+      <li><b>1992</b><span>Tratado de Maastricht cria a União Europeia (em vigor em 1993).</span></li>
+      <li><b>1994</b><span>Plano Real acaba com a hiperinflação no Brasil.</span></li>
+      <li><b>1989/93</b><span>APEC (criada em 1989; reuniões de presidentes desde 1993).</span></li>
+      <li><b>1995</b><span>Espaço Schengen.</span></li>
+      <li><b>1999</b><span>Euro nas operações financeiras; Banco Central Europeu.</span></li>
+      <li><b>2001</b><span>China entra na OMC.</span></li>
+      <li><b>2002</b><span>Notas e moedas de euro em circulação.</span></li>
+      <li><b>2008</b><span>Crise financeira mundial. Austrália reconhece atrocidades contra aborígenes.</span></li>
+      <li><b>2015</b><span>China libera o 2º filho (3 filhos em 2021).</span></li>
+      <li><b>2016</b><span>Referendo do Brexit: 52% sair. Saída oficial em 2020.</span></li>
+      <li><b>2024</b><span>Acordo Mercosul–UE.</span></li>
+    </ol>
+  </div>
+
+  <div class="card">
+    <h2>Tipos de bloco: do menos ao mais integrado</h2>
+    <table class="mini">
+      <tr><th>Tipo</th><th>O que acontece</th></tr>
+      <tr><td>Zona de livre-comércio</td><td>Tira as barreiras alfandegárias entre os membros.</td></tr>
+      <tr><td>União aduaneira</td><td>Mesmas regras de importação para todos os membros.</td></tr>
+      <tr><td>Mercado comum</td><td>+ livre circulação de pessoas, serviços e capitais.</td></tr>
+      <tr><td>União monetária</td><td>Mesma moeda e um banco central único.</td></tr>
+      <tr><td>União política</td><td>Leis comuns além da economia: direitos, imigração, segurança.</td></tr>
+    </table>
+    <p class="note">A União Europeia é o único bloco que chegou perto da união política.</p>
+  </div>
+
+  <div class="card">
+    <h2>Quem faz o quê na nova DIT</h2>
+    <table class="mini">
+      <tr><th>Desenvolvidos</th><th>Emergentes</th><th>Subdesenvolvidos</th></tr>
+      <tr><td>Bens duráveis de alta tecnologia. Sedes das multinacionais. Financiam (emprestam e investem).</td><td>Commodities. Filiais de multinacionais. Bens não duráveis de baixa/média tecnologia. Dívida externa.</td><td>Commodities (agroexportadores). Contraem empréstimos: dívida externa.</td></tr>
+    </table>
+    <p><b>Frase-chave:</b> <mark>descentralização da produção e centralização do comando</mark>.</p>
+  </div>
+
+  <div class="card">
+    <h2>Os 3 setores e o sistema financeiro</h2>
+    <table class="mini">
+      <tr><th>Setor</th><th>Função</th><th>Exemplo</th></tr>
+      <tr><td>Produtivo</td><td>Produz bens ou serviços</td><td>Fábrica de roupas, hotel</td></tr>
+      <tr><td>Comercial</td><td>Distribui o que outros produzem</td><td>Loja, cinema</td></tr>
+      <tr><td>Financeiro</td><td>Empresta e libera crédito</td><td>Bancos, bolsas</td></tr>
+    </table>
+    <p><b>Banco:</b> guarda e empresta. Lucra com <mark>juros</mark>. <b>Ação:</b> pedaço de empresa (dividendos ou valorização). <b>Título:</b> empréstimo a empresa ou governo, devolvido com juros.</p>
+  </div>
+
+  <div class="card">
+    <h2>Vocabulário</h2>
+    <dl class="gloss">
+      <div><dt>IDH</dt><dd>Qualidade de vida: renda, educação e expectativa de vida.</dd></div>
+      <div><dt>Gini</dt><dd>Desigualdade de renda: 0 = igual, 1 = desigualdade máxima.</dd></div>
+      <div><dt>PIB per capita</dt><dd>PIB ÷ população. Média que esconde a desigualdade.</dd></div>
+      <div><dt>Vulnerabilidade</dt><dd>Desastre natural + pobreza = grande impacto.</dd></div>
+      <div><dt>Castas</dt><dd>Divisão social hindu que impede a mobilidade social.</dd></div>
+      <div><dt>DIT</dt><dd>Divisão Internacional do Trabalho: o papel de cada país na economia mundial.</dd></div>
+      <div><dt>Substituição de importações</dt><dd>Fabricar no país o que antes se comprava de fora.</dd></div>
+      <div><dt>Commodities</dt><dd>Produtos primários negociados no mundo todo.</dd></div>
+      <div><dt>Transnacional</dt><dd>Empresa que atua em escala global, sem se prender a um país.</dd></div>
+      <div><dt>Multimodal</dt><dd>Transporte com 2 ou mais meios (navio, trem, caminhão).</dd></div>
+      <div><dt>Soberania</dt><dd>Direito do país de tomar as próprias decisões.</dd></div>
+      <div><dt>Schengen</dt><dd>Livre circulação de pessoas sem controle de fronteira.</dd></div>
+      <div><dt>Brexit</dt><dd><i>British</i> + <i>exit</i>: saída do Reino Unido da UE.</dd></div>
+      <div><dt>Plebiscito</dt><dd>Consulta em que o povo vota diretamente.</dd></div>
+      <div><dt>Norte × Sul</dt><dd>Divisão econômica e política, não pela linha do Equador.</dd></div>
+      <div><dt>P&amp;D</dt><dd>Pesquisa e Desenvolvimento.</dd></div>
+      <div><dt>Patente / royalty</dt><dd>Propriedade de uma invenção / pagamento pelo uso dela.</dd></div>
+      <div><dt>Fuga de cérebros</dt><dd>Pesquisadores saindo do país em busca de condições melhores.</dd></div>
+      <div><dt>Lastro</dt><dd>Reserva (ouro) que garante o valor do dinheiro.</dd></div>
+      <div><dt>Inflação</dt><dd>Perda do poder de compra; os preços sobem.</dd></div>
+      <div><dt>FMI</dt><dd>Empresta a países em crise exigindo cortes e abertura.</dd></div>
+      <div><dt>Neoliberalismo</dt><dd>Menos Estado, mais liberdade para os investidores.</dd></div>
+      <div><dt>Especulação</dt><dd>Apostar na alta sem base real; pode gerar bolha.</dd></div>
+      <div><dt>Paraíso fiscal</dt><dd>Sigilo e pouco imposto; facilita lavagem de dinheiro.</dd></div>
+    </dl>
+  </div>
+  <p class="note">Resumos escritos com nossas palavras. O livro Callis Geografia 9 e os slides da professora são a fonte principal.</p>
+</section>
+
+<section class="panel" id="brasil" hidden></section>
+
+<section class="panel" id="quiz" hidden>
+  <div class="card score"><span id="scoreTxt">Acertos: 0 de 0</span><span class="note">Cada acerto vale 10 pts. Para refazer, zere no Placar.</span></div>
+  <div id="quizList" style="display:flex;flex-direction:column;gap:18px"></div>
+</section>
+
+<section class="panel" id="flash" hidden>
+  <div class="fc-bar"><span class="count" id="fcCount"></span><div class="row"><button class="btn ghost" id="fcShuffle">Embaralhar</button><button class="btn ghost" id="fcAll">Rever os que errei</button></div></div>
+  <div class="fc-stage"><button class="flash" id="flashCard" aria-label="Virar card"><div class="face front"><small id="fcTag">Pergunta · toque para virar</small><div class="t" id="fcQ"></div></div><div class="face back"><small>Resposta</small><div class="t" id="fcA"></div></div></button></div>
+  <div class="fc-bar">
+    <button class="btn ghost" id="fcPrev">← Anterior</button>
+    <div class="row"><button class="btn badb" id="fcNo">Não sabia</button><button class="btn okb" id="fcYes">Sabia</button></div>
+    <button class="btn ghost" id="fcNext">Próximo →</button>
+  </div>
+  <p class="note" id="fcStat"></p>
+</section>
+
+<section class="panel" id="placar" hidden></section>
+
+<section class="panel" id="desafios" hidden>
+  <div class="card">
+    <h2>Desafios: sem decoreba</h2>
+    <p>Aqui as perguntas não são as do roteiro. Para acertar, é preciso entender a matéria, não lembrar a resposta pronta.</p>
+    <div class="modes" id="modes"></div>
+  </div>
+  <div id="dz" style="display:flex;flex-direction:column;gap:18px"></div>
+</section>
+<div class="toast" id="toast" hidden role="status"></div>
+<div class="modal rep-modal" id="report" hidden></div>
+<div class="modal" id="login" hidden>
+  <form class="card mbox" id="loginForm">
+    <div class="stamp">PASSAPORTE</div>
+    <h2>Quem é você, explorador(a)?</h2>
+    <p>Digite seu nome para salvar seus pontos e entrar no ranking. Use seu nome e sobrenome, do jeito que a turma te conhece.</p>
+    <label for="nameIn" class="q num">Seu nome</label>
+    <input id="nameIn" autocomplete="off" maxlength="30" placeholder="Nome e sobrenome">
+    <p class="loginErr" id="loginErr"></p>
+    <div class="row"><button class="btn" type="submit">Entrar</button><button class="btn ghost" type="button" id="loginClose">Agora não</button></div>
+    <div id="loginOld" hidden><p class="note" style="margin-top:14px">Ou continue como:</p><div class="row" id="loginList"></div></div>
+  </form>
+</div>
+</div>
+
+<script>
+const CH={11:"Pobreza e contrastes na Ásia e Oceania",13:"Globalização e a nova DIT",14:"União Europeia e blocos da Ásia",15:"Tecnologia, transnacionais e Norte × Sul",16:"Globalização do mercado financeiro"};
+
+/* ---------- ROTEIRO ---------- */
+const R={
+11:[
+ ["Por que existem tantos contrastes econômicos dentro do mesmo continente? (Ex.: Dhaka, em Bangladesh, × Palm Jumeirah, em Dubai)",
+  `<p>Porque cada país teve uma <b>história diferente</b>. Muitos foram <b>colônias europeias</b> e tiveram suas riquezas exploradas; depois da independência, ficaram com pouca indústria e com elites que não se esforçaram para diminuir a desigualdade. Outros acumularam riqueza por outros caminhos, como o <b>petróleo</b> (Dubai) ou a industrialização (Japão, Coreia do Sul).</p><p>Além disso, a renda é <b>concentrada</b>: poucos ricos e muitos pobres, até dentro do mesmo país. E a <b>natureza</b> pesa: monções, tufões e terremotos atingem com mais força quem já vive em condições precárias.</p>`],
+ ["O que medem o IDH, o Índice de Gini, o PIB e o PIB per capita?",
+  `<ul><li><b>IDH:</b> qualidade de vida, olhando <b>renda, educação e expectativa de vida</b>.</li><li><b>Gini:</b> o quanto a renda é <b>desigual</b>. Perto de 0 = mais igual; perto de 1 = mais desigual.</li><li><b>PIB:</b> o valor de tudo o que o país produz em um ano (o “tamanho” da economia).</li><li><b>PIB per capita:</b> o PIB dividido pelo número de habitantes. É uma média, então <b>não mostra como a riqueza está dividida</b>.</li></ul>`],
+ ["Quais fatores explicam por que alguns países da Ásia e Oceania têm IDH alto e outros têm alguns dos piores indicadores do mundo?",
+  `<ul><li><b>Questão histórica:</b> colonização, neocolonialismo e exploração das riquezas, que deixaram pouca indústria e pouco desenvolvimento interno.</li><li><b>Concentração de renda:</b> terras e meios de produção nas mãos de poucos.</li><li><b>Vulnerabilidade ambiental:</b> desastre + pobreza = grande impacto (monções na Índia e em Bangladesh; tufões nas ilhas do Pacífico; terremotos e tsunamis no Japão; desertos e falta de água no Oriente Médio e na Austrália).</li><li><b>Guerras e conflitos:</b> Afeganistão, Síria, Iêmen e Palestina têm os piores indicadores, com refugiados e economia destruída.</li><li><b>Discriminação étnica e social:</b> como a herança das castas na Índia.</li></ul>`],
+ ["Quais fenômenos naturais aumentam a vulnerabilidade do Sudeste Asiático e da Ásia Meridional?",
+  `<p>As <b>chuvas de monções</b>, que causam inundações (Bangladesh fica na foz dos rios Ganges e Bramaputra); as <b>tempestades tropicais e tufões</b> no litoral; e os <b>terremotos e tsunamis</b>, porque a região fica no encontro de placas tectônicas. Somados à pobreza e às moradias precárias, esses fenômenos geram a chamada <b>vulnerabilidade socioambiental</b>.</p>`],
+ ["Além da colonização, que outros fatores agravam a pobreza na Ásia?",
+  `<p>A <b>população muito grande</b> (exige emprego, moradia, saneamento e serviços que não acompanham o crescimento), os <b>fatores naturais</b> (monções, tufões, terremotos), as <b>guerras</b>, a <b>concentração de renda</b> e a <b>discriminação</b> de minorias, como as castas na Índia.</p>`],
+ ["O que é o sistema de castas e por que ele contradiz o capitalismo?",
+  `<p>É uma divisão social milenar ligada à <b>religião hindu</b>: cada pessoa nasce em uma casta, e ela definia o trabalho, o estudo e os bens que podia ter. Foi <b>abolido oficialmente com a independência (1947) e a nova Constituição</b>, mas ainda é praticado, porque existe há mais de 2 500 anos.</p><p><b>Contradição:</b> o capitalismo, ao menos em teoria, promete que qualquer um pode subir na vida pelo trabalho (<b>mobilidade social</b>). As castas <b>impedem</b> essa mudança e mantêm a pobreza de geração em geração.</p>`,"a figura das castas no capítulo 11"],
+ ["Como o governo australiano tem tratado a questão aborígene?",
+  `<p>Os aborígenes sofreram <b>genocídio e preconceito</b> desde a chegada dos britânicos (1788) e foram empurrados para o norte, para o deserto e para as periferias das cidades. Em <b>2008</b>, o governo reconheceu as atrocidades e começou a <b>devolver territórios</b>. Mas não houve pedido formal de desculpas com indenização, e a desigualdade continua: cerca de <b>1/4 dos presos</b> do país são aborígenes.</p>`],
+ ["Qual a contradição entre a prosperidade econômica da Ásia e a situação dos trabalhadores?",
+  `<p>A Ásia virou o principal território de negócios do mundo, mas boa parte dessa riqueza é feita com <b>mão de obra barata</b>, jornadas longas, <b>trabalho infantil</b> e até <b>trabalho semiescravo</b> em fábricas ligadas a grandes transnacionais (ex.: imigrantes de Mianmar limpando camarão na Tailândia). São “ilhas de tecnologia” cercadas de pobreza.</p>`],
+ ["Catar: qual a principal fonte de riqueza, quantos são os cidadãos e os estrangeiros, de onde vêm e onde vivem os trabalhadores?",
+  `<ul><li><b>Riqueza:</b> <b>gás natural</b> e petróleo.</li><li><b>População:</b> os cidadãos catarianos são minoria (algo perto de 300 mil); os estrangeiros são a grande maioria (mais de 2 milhões).</li><li><b>Origem e trabalho:</b> a maioria vem do <b>Sul da Ásia</b> (Índia, Nepal, Bangladesh, Paquistão) e trabalha na <b>construção civil</b> (como nas obras da Copa de 2022), em serviços e como empregados domésticos.</li><li><b>Moradia:</b> em <b>alojamentos lotados</b> nas áreas industriais, longe dos bairros ricos, com muita gente por quarto.</li></ul>`,"os números exatos do vídeo visto em sala"],
+ ["O Catar “eliminou a pobreza” segundo as estatísticas oficiais. Você concorda?",
+  `<p>Não totalmente. As estatísticas olham para os <b>cidadãos catarianos</b>, que são ricos. Mas a maioria das pessoas que vivem no país é de <b>trabalhadores estrangeiros</b>, com salários baixos, alojamentos lotados e poucos direitos. Eles ficam “fora da conta”. Ou seja, a pobreza existe, só não aparece nos números oficiais. Use exemplos do vídeo para justificar (mínimo de 6 linhas).</p>`],
+ ["Quais as causas e as consequências do grande crescimento populacional na Ásia de Monções?",
+  `<p><b>Causas:</b> alta natalidade, queda da mortalidade, melhorias na saúde, maior longevidade, pouco acesso a planejamento familiar e tradição de famílias numerosas.</p><p><b>Consequências:</b> urbanização acelerada, cidades superlotadas, desemprego e subemprego, pressão sobre os serviços públicos, falta de moradia e mais poluição.</p><p>Mais da <b>metade da população mundial</b> vive entre o Himalaia e os oceanos Índico e Pacífico. A <b>Índia</b> já passou a <b>China</b> como país mais populoso.</p>`],
+ ["Por que a China adotou a política do filho único e por que mudou?",
+  `<p><b>Adotou (1979):</b> para frear o crescimento da população, principalmente nas cidades.</p><p><b>Consequências:</b> mais abortos e abandono de meninas (no campo, preferiam meninos), <b>menos mulheres que homens</b>, queda da natalidade, menos jovens e <b>envelhecimento</b>.</p><p><b>Mudou:</b> faltava gente jovem para trabalhar. Em <b>2015</b> liberou o 2º filho e em <b>2021</b> até 3 filhos, com incentivos (creche, emprego garantido às mães). Mesmo assim, o hábito de ter um filho só continua.</p>`]
+],
+13:[
+ ["Por que a atual Divisão Internacional do Trabalho é mais complexa do que a divisão entre países industrializados e fornecedores de matérias-primas? (Revisão)",
+  `<p>Na <b>antiga DIT</b>, era simples: o <b>centro</b> industrializado vendia produtos industriais e a <b>periferia</b> vendia produtos primários.</p><p>Na <b>nova DIT</b>, as <b>etapas da produção ficam espalhadas por vários países</b> (produção fragmentada), comandadas pelas transnacionais. Um celular tem peças de vários países e é montado em outro. Além disso, a periferia se dividiu: há os <b>emergentes</b> (industrializados, como Brasil e China) e os que continuam só exportando produtos primários.</p>`],
+ ["Qual o papel das empresas transnacionais na Nova Divisão Internacional do Trabalho? (Revisão)",
+  `<p>São elas que organizam a nova DIT: <b>descentralizam a produção</b> (fábricas e fornecedores onde salários, impostos e regras são menores) e <b>centralizam o comando</b> (sede, gestão e pesquisa ficam nos países ricos). Assim reduzem custos, mas criam <b>dependência</b> nos países onde instalam filiais, e o lucro volta para a sede.</p>`],
+ ["A que se deve a desigualdade de desenvolvimento entre os países? (resposta da professora, ex. 1)",
+  `<p>A uma combinação de <b>fatores históricos e políticos</b> (quem se industrializou primeiro, colonização), da <b>disponibilidade desigual de matérias-primas</b> e dos <b>diferentes níveis de industrialização</b>. Também pesa o <b>meio técnico</b> (energia, estradas, comunicações), que é mal distribuído pelo mundo.</p>`],
+ ["Quais as características do centro e da periferia da economia mundial? (resposta da professora, ex. 2)",
+  `<p><b>Centro:</b> países desenvolvidos, PIB e PIB per capita altos, <b>sedes das multinacionais</b>, dos bancos e dos centros de tecnologia e decisão.</p><p><b>Periferia:</b> países subdesenvolvidos e emergentes, PIB per capita menor, pouca influência nas decisões globais. Têm indústrias, mas muitas são de empresas estrangeiras, e exportam mais matérias-primas e produtos de baixo valor agregado.</p>`],
+ ["Como se manifesta a dependência dos países subdesenvolvidos em relação aos desenvolvidos? (resposta da professora, ex. 3)",
+  `<ul><li>Exportam matérias-primas baratas e <b>importam</b> produtos de alta tecnologia caros.</li><li>Parte da indústria é de <b>multinacionais</b> estrangeiras, que mandam os lucros para a sede.</li><li><b>Dependência tecnológica</b>.</li><li><b>Empréstimos</b> e dívida externa: o centro ganha com os juros.</li></ul><p>O centro lucra duas vezes: com os <b>juros</b> e com os <b>lucros das multinacionais</b>.</p>`],
+ ["Por que a busca por reduzir custos afeta o trabalhador? (resposta da professora, ex. 7)",
+  `<p>Empresas querem lucro, e tudo o que diminui o lucro vira “custo”, inclusive <b>salário, segurança e condições de trabalho</b>. Por isso elas buscam lugares com salários baixos e regras fracas, terceirizam e até quarteirizam. A busca pelo lucro pode passar por cima da saúde, da segurança e da estabilidade do trabalhador.</p>`],
+ ["Explique a frase “descentralização da produção e centralização do comando”. (resposta da professora, ex. 9)",
+  `<p>As <b>sedes</b> das transnacionais ficam nos <b>países centrais</b>, onde estão a gestão e a pesquisa (P&D). Já as <b>fábricas</b> se espalham por países subdesenvolvidos e emergentes, onde impostos, salários e exigências ambientais e trabalhistas são menores. A produção fica espalhada; as decisões, concentradas.</p>`],
+ ["Quais as diferenças entre a industrialização pioneira e a tardia?",
+  `<table class="mini"><tr><th></th><th>Pioneira</th><th>Tardia (periférica)</th></tr><tr><td>Mercado</td><td>Mercado externo (vendia aos agroexportadores)</td><td>Mercado <b>interno</b>, bens simples</td></tr><tr><td>Tecnologia</td><td>Bens duráveis de alta tecnologia</td><td>Bens <b>não duráveis</b>; os duráveis com multinacionais</td></tr><tr><td>Dinheiro</td><td>Financiadores (emprestam e investem)</td><td><b>Estado</b> investe com empréstimos → <b>dívida externa</b></td></tr></table>`],
+ ["O que causou a crise da antiga DIT?",
+  `<p>A <b>crise de 1929</b> e a <b>2ª Guerra Mundial</b>. Os países centrais compraram menos matérias-primas, e alguns periféricos (como o Brasil) passaram a fabricar o que antes importavam: a <b>substituição de importações</b>. Veio o <b>nacional-desenvolvimentismo</b>: o Estado criou indústrias de base, como a <b>CSN</b> (Volta Redonda, governo Vargas, início dos anos 1940) e a <b>Petrobras (1953)</b>.</p>`],
+ ["Qual a importância dos contêineres para a globalização?",
+  `<p>O contêiner é uma caixa de aço de <b>tamanho padrão</b>. Ele passa do navio para o trem e para o caminhão de forma rápida, barata e mecanizada (<b>transporte multimodal</b>). Isso barateou o comércio mundial e permitiu espalhar a produção pelo planeta. Portos que não se adaptaram decaíram; o de <b>Xangai</b> é hoje o maior do mundo.</p>`],
+ ["O que diz Milton Santos sobre consumo e publicidade?",
+  `<p>Que hoje as grandes empresas <b>“produzem o consumidor antes de produzir o produto”</b>: primeiro criam o desejo com propaganda, depois vendem. Ele fala em <b>despotismo do consumo</b>. Por isso é importante diferenciar <b>consumo</b> (o necessário) de <b>consumismo</b> (desejo sem fim). Na aula das propagandas, a pergunta-chave era: <b>o que não aparece?</b> (trabalho mal pago, recursos naturais, lixo, como as roupas no Atacama).</p>`]
+],
+14:[
+ ["Qual é a principal finalidade da formação de um bloco econômico? (Revisão)",
+  `<p><b>Integrar as economias</b> dos países-membros: tirar barreiras comerciais, aumentar o comércio entre eles, ampliar o mercado consumidor e ganhar força para competir num mundo globalizado. Em troca, os países abrem mão de uma parte da sua <b>soberania</b>.</p>`],
+ ["Explique como funciona a União Europeia. (Revisão)",
+  `<p>É o bloco mais integrado do mundo, unindo os países nas áreas <b>econômica, política e social</b>:</p><ul><li><b>Mercado comum:</b> circulam livremente mercadorias, pessoas, serviços e capitais.</li><li><b>União monetária:</b> parte dos países usa o <b>euro</b>, controlado pelo <b>Banco Central Europeu</b> (Frankfurt).</li><li><b>União política:</b> o <b>Parlamento Europeu</b>, eleito pelos cidadãos, ajuda a fazer leis comuns (segurança, imigração, direitos).</li><li><b>Espaço Schengen:</b> livre circulação de pessoas sem controle nas fronteiras.</li></ul>`],
+ ["Quais são os tipos de bloco, do menor para o maior grau de integração?",
+  `<ol><li><b>Zona de livre-comércio:</b> tira as barreiras alfandegárias entre os membros.</li><li><b>União aduaneira:</b> regras de importação iguais para todos (frente ao resto do mundo).</li><li><b>Mercado comum:</b> + livre circulação de pessoas, serviços e capitais.</li><li><b>União monetária:</b> mesma moeda e banco central único.</li><li><b>União política:</b> leis comuns além da economia.</li></ol>`],
+ ["Qual a diferença entre zona de livre-comércio e mercado comum?",
+  `<p>Na <b>zona de livre-comércio</b>, só as <b>mercadorias</b> circulam sem impostos entre os membros. No <b>mercado comum</b>, além disso, circulam livremente <b>pessoas, serviços e capitais</b> (dá para morar e trabalhar em outro país do bloco).</p>`],
+ ["Como surgiu a União Europeia?",
+  `<ul><li><b>1947:</b> Plano Marshall (EUA) ajuda a reconstruir a Europa.</li><li><b>1950–1951:</b> Plano Schuman → <b>CECA</b>, Comunidade Europeia do Carvão e do Aço (França e Alemanha deixam de brigar por esses recursos).</li><li><b>1957:</b> <b>Tratados de Roma</b> → CEE / Mercado Comum Europeu e Euratom.</li><li><b>1992:</b> <b>Tratado de Maastricht</b> cria a <b>União Europeia</b> (em vigor em 1993): prevê a moeda única e fortalece o Parlamento Europeu.</li></ul><p class="check">Atenção: um slide diz “1953 – Tratado de Roma”, mas o tratado é de <b>1957</b>.</p>`],
+ ["Qual a razão econômica e política para a integração europeia nos anos 1950?",
+  `<p><b>Econômica:</b> reconstruir a Europa depois da 2ª Guerra e garantir <b>carvão e aço</b> (matérias-primas) para todos. <b>Política:</b> evitar novas guerras, unindo França e Alemanha, que disputavam a <b>Alsácia-Lorena</b>, e fortalecer a Europa na Guerra Fria.</p>`],
+ ["O que é a Zona do Euro? Todos os países da UE usam o euro?",
+  `<p>É o grupo de países da UE que usa o <b>euro</b>. Ele foi adotado nas operações financeiras em <b>1999</b>, e as notas e moedas entraram em circulação em <b>2002</b>. O <b>Banco Central Europeu</b> coordena a política monetária. <b>Nem todos usam:</b> a Dinamarca ficou fora por opção, e outros (como Suécia, Polônia e Hungria) ainda não aderiram. Alguns países de fora da UE usam o euro, como Montenegro e Kosovo.</p>`,"o mapa da Zona do Euro"],
+ ["O que é o Espaço Schengen?",
+  `<p>Área de países europeus com <b>livre circulação de pessoas</b>, sem controle de passaporte nas fronteiras, implantada a partir de <b>1995</b>. Não é igual à UE: há países da UE fora (a <b>Irlanda</b>) e países de fora da UE dentro (como <b>Suíça e Noruega</b>).</p>`,"o mapa do Espaço Schengen"],
+ ["Quais os benefícios e os problemas da entrada dos países do Leste Europeu na UE?",
+  `<p>No século XXI entraram <b>11 países ex-socialistas</b> (e mais 2 ilhas do Mediterrâneo). Para entrar, tiveram que controlar inflação, gastos e déficit público.</p><ul><li><b>Para o Leste:</b> investimentos, fábricas da Europa Ocidental e empregos.</li><li><b>Para os ricos:</b> mercado consumidor maior e mão de obra mais barata perto de casa.</li><li><b>Problema:</b> as diferenças continuam e aumentou a <b>migração do Leste para o Oeste</b>, o que gerou restrições à circulação.</li></ul>`],
+ ["O que significa Brexit e por que o Reino Unido entrou na UE?",
+  `<p><b>Brexit</b> = <i>British</i> + <i>exit</i>, a saída do Reino Unido da UE. O país entrou (em 1973, ainda na CEE) para ter acesso ao grande <b>mercado europeu</b>, vender mais e atrair investimentos. Mas manteve a <b>libra</b> e não entrou no Schengen.</p>`],
+ ["Quais motivos levaram o Reino Unido a sair? O que é plebiscito e qual sua importância?",
+  `<p><b>Motivos:</b> controlar a <b>imigração</b>, parar de pagar contribuições ao bloco, recuperar a soberania sobre as leis e fazer acordos comerciais próprios.</p><p><b>Plebiscito:</b> consulta em que o próprio povo vota diretamente sobre uma questão importante. (No Brasil, chama-se plebiscito quando o voto vem antes da decisão e referendo quando confirma uma decisão já tomada; a votação do Brexit costuma ser chamada pelos dois nomes.) <b>Importância:</b> foi o voto popular que decidiu a saída. Em <b>2016</b>, <b>52% votaram sair</b> e 48% ficar. A saída oficial foi em <b>2020</b>.</p><p><b>Mapa do voto:</b> Inglaterra (fora Londres) e País de Gales votaram sair; <b>Escócia, Irlanda do Norte e Londres</b> votaram ficar.</p>`,"o mapa do referendo na pág. 34"],
+ ["Quem votou pela saída e quem votou pela permanência? Quais as consequências? (lição de casa)",
+  `<p><b>Leave (sair):</b> em geral mais <b>velhos</b>, do <b>interior</b> e de cidades industriais em decadência, com menos escolaridade e renda menor. <b>Remain (ficar):</b> mais <b>jovens</b>, moradores de <b>Londres</b> e de cidades grandes, Escócia e Irlanda do Norte, com mais escolaridade.</p><p><b>Consequências:</b> economia prejudicada (menos investimento, comércio mais caro e burocrático), dificuldade para britânicos estudarem e trabalharem na UE, falta de trabalhadores e tensões políticas com a Escócia e a Irlanda do Norte.</p>`,"cite as fontes que você usar na pesquisa"],
+ ["Por que a relação China–África é chamada por alguns de “novo neocolonialismo”?",
+  `<p>Desde <b>2009</b> a China é o maior parceiro comercial e investidor da África. Ela compra terras, minas e petróleo (como em Angola) e vende produtos industrializados. A África fica parecida com a antiga colônia: exporta matérias-primas e depende dos produtos chineses.</p>`],
+ ["O que são a APEC e a ASEAN?",
+  `<p><b>ASEAN</b> (1967): países do <b>Sudeste Asiático</b> (Indonésia, Tailândia, Vietnã, Filipinas, Malásia, Cingapura etc.), com zona de livre-comércio desde 1992.</p><p><b>APEC</b> (criada em 1989; o livro destaca 1993, quando passou a ter reuniões de chefes de Estado): Ásia e Pacífico, com membros muito diferentes (EUA, China, Japão, Austrália, Rússia, México, Chile…). Quer ser zona de livre-comércio, mas tem dificuldade; virou um espaço de negociação entre <b>EUA e China</b>.</p>`]
+],
+15:[
+ ["Por que os países que investem mais em P&D tendem a ter mais poder econômico e tecnológico? (Revisão)",
+  `<p>Porque na <b>3ª Revolução Industrial</b> o poder vem do <b>domínio da tecnologia</b>. Quem pesquisa cria produtos novos, registra <b>patentes</b> e recebe <b>royalties</b> de quem quiser usar a invenção. A inovação é um ciclo: gera riqueza, que paga mais pesquisa. Quem não investe precisa comprar tecnologia pronta e perde cientistas (<b>fuga de cérebros</b>).</p>`],
+ ["Por que os países não vivenciam a globalização da mesma forma? (Revisão)",
+  `<p>Porque ela é <b>desigual</b>. O <b>Norte Global</b> concentra o poder econômico, político, tecnológico e financeiro: lá ficam as sedes, os centros de pesquisa e quem recebe royalties. O <b>Sul Global</b> participa menos das decisões, recebe as fábricas de baixo custo e exporta matérias-primas. Até o acesso à internet é desigual. Dentro de cada país, os mais ricos também ganham mais.</p>`],
+ ["O que são Norte e Sul Global? A linha do Equador é a divisa?",
+  `<p><b>Norte:</b> países ricos, que concentram o poder. <b>Sul:</b> países com menor participação nas decisões. <b>Não</b> é a linha do Equador: <b>Austrália e Nova Zelândia</b> estão no Hemisfério Sul e são Norte; vários países asiáticos do Hemisfério Norte são Sul. O <b>conflito Norte-Sul</b> é econômico e político (comércio, tecnologia, recursos), diferente do conflito Leste-Oeste da Guerra Fria.</p>`],
+ ["O que é o Coeficiente de Gini? Onde fica o Brasil?",
+  `<p>Mede como a renda está distribuída: <b>0 = igualdade máxima</b>, <b>1 = desigualdade máxima</b> (uma pessoa com tudo). O Brasil (cerca de <b>0,52</b>) está entre os <b>10 mais desiguais</b> do mundo; todos os mais desiguais que ele estão na África (África do Sul é o 1º). A Eslováquia é dos menos desiguais.</p>`,"o gráfico do Gini 1820–2000"],
+ ["O que aconteceu com a desigualdade mundial na globalização?",
+  `<p>De 1820 a 1970 a desigualdade entre países cresceu. A partir de 2000, <b>caiu entre os países</b> (China, Índia e outros emergentes cresceram), mas <b>aumentou dentro deles</b>, inclusive nos ricos: as fábricas mudaram para lugares de mão de obra barata e causaram desemprego nos EUA e na Europa. Os <b>10% mais ricos</b> foram os que mais ganharam.</p>`],
+ ["O que são patentes e royalties?",
+  `<p><b>Patente:</b> registro da <b>propriedade de uma invenção</b>, que dá o direito de uso exclusivo por um tempo (remédio, semente, peça eletrônica). <b>Royalties:</b> o <b>pagamento</b> feito para usar algo patenteado ou licenciado (tecnologia, música, filme, game). O recebimento de royalties se concentra no Norte: é um exemplo do poder do Norte sobre o Sul.</p>`],
+ ["O que é fuga de cérebros?",
+  `<p>É quando <b>pesquisadores e profissionais qualificados</b> vão trabalhar em outros países porque lá têm melhores salários e condições. Os gráficos da aula mostram que as bolsas de mestrado e doutorado no Brasil subiram bem menos que a inflação e perderam poder de compra. O país forma o cientista e outro país aproveita.</p>`],
+ ["Por que “multinacional” passou a ser chamada de “transnacional”? Por que a sede mostra poder?",
+  `<p>Porque essas empresas atuam em <b>escala global</b>, sem se prender a um território: pesquisam num país, fabricam em outro e vendem no mundo todo. A <b>sede</b> é onde ficam o comando, as decisões e o lucro; como as sedes se concentram no Norte, o poder também fica lá.</p>`],
+ ["Por que o acesso à internet é desigual?",
+  `<p>Principalmente pelo <b>nível de desenvolvimento</b>: a internet precisa de infraestrutura cara (<b>fixos</b>: fibra óptica, antenas, data centers), que é mal distribuída, então os <b>fluxos</b> também são desiguais. Os aparelhos são caros para os mais pobres. E mais da metade do conteúdo está em <b>inglês</b>, a língua de só cerca de 5% da população.</p>`],
+ ["Segundo Milton Santos, a globalização acabou com as fronteiras e com o Estado?",
+  `<p>Não. As fronteiras ficaram mais <b>porosas</b> para a informação e o dinheiro, mas o <b>Estado continua forte</b>: só ele faz as leis, e nem as transnacionais conseguem impor tudo sozinhas. Ele também chamou a globalização atual de “perversa” e defendia “uma outra globalização”, mais justa (documentário “O mundo global visto do lado de cá”).</p>`]
+],
+16:[
+ ["Por que os bancos cobram juros ao fazer empréstimos? (Revisão)",
+  `<p>Porque é assim que eles <b>lucram</b>. O banco pega o dinheiro depositado pelos clientes e o <b>empresta</b> a outros, cobrando <b>juros</b> (uma porcentagem a mais). Parte desses juros paga o rendimento de quem aplicou. Mais depósitos → mais empréstimos → mais juros → mais lucro. Os juros também cobrem o <b>risco</b> de a pessoa não pagar.</p>`],
+ ["O que é dinheiro e como se atribui valor a ele?",
+  `<p>Dinheiro é um <b>meio de troca</b> e de medida de valor. Antes havia o escambo; depois vieram sal, couro e <b>metais preciosos</b>. Com as cédulas, o valor passou a depender do <b>lastro</b>: no <b>padrão-ouro</b>, o Estado guardava ouro equivalente ao dinheiro emitido. Se emitisse mais do que tinha, vinha a <b>inflação</b> (perda do poder de compra). Só o Estado pode emitir dinheiro.</p>`],
+ ["O que foi a Conferência de Bretton Woods (1944)?",
+  `<p>Reunião no fim da 2ª Guerra para organizar o sistema financeiro. Trocou o padrão-ouro pelo <b>padrão dólar-ouro</b> (US$ 35 = 1 onça de ouro), e o <b>dólar virou a moeda internacional</b>, dando enorme vantagem aos EUA. Criou o <b>FMI</b> e o <b>Banco Mundial (Bird)</b>.</p>`],
+ ["Como funciona o FMI e o que ele tem a ver com o neoliberalismo?",
+  `<p>O FMI empresta a países em crise, mas impõe condições: <b>corte de gastos</b> (até em saúde e educação) e <b>abertura comercial e financeira</b> ao capital estrangeiro. Isso combina com o <b>neoliberalismo</b>: menos Estado e mais liberdade para os investidores. Crítica: protege mais os investidores do que os cidadãos.</p>`],
+ ["Quais são os setores da economia e como se relacionam?",
+  `<ul><li><b>Produtivo:</b> produz bens ou serviços (fábrica de roupas, hotel).</li><li><b>Comercial:</b> distribui o que outros produzem (loja, cinema).</li><li><b>Financeiro:</b> faz empréstimos e libera <b>crédito</b> para os outros dois e para o consumo (bancos, bolsas).</li></ul><p>O <b>Estado</b> paga suas contas com impostos e, quando não basta, pega empréstimos.</p>`],
+ ["Como funciona a Bolsa de Valores? O que são ações e títulos?",
+  `<p>É o espaço onde se negociam <b>ações</b>. A empresa vende ações (pedacinhos dela) para conseguir dinheiro e investir; o investidor vira sócio e ganha com <b>dividendos</b> (parte do lucro) ou com a <b>valorização</b>. <b>Títulos</b> são uma dívida: o investidor empresta a uma empresa ou ao governo e recebe juros. Comprar na expectativa de alta sem base real é <b>especulação</b>, que pode criar uma <b>bolha</b>.</p>`],
+ ["O que são títulos da dívida pública e por que deixam os governos dependentes?",
+  `<p>São uma forma de <b>emprestar dinheiro ao governo</b>: o Estado financia seus gastos e devolve com <b>juros</b>, influenciados pela taxa do Banco Central. São um investimento de baixo risco. Juros altos atraem investidores, mas encarecem a dívida (muito imposto vai para pagar juros); juros baixos afastam. Por isso os governos ficam <b>dependentes dos grandes investidores</b>.</p>`],
+ ["O que é o Banco Central e o que ele faz?",
+  `<p>Instituição do governo que <b>garante a estabilidade da moeda</b>, controla o crédito, fiscaliza os bancos, define a <b>taxa básica de juros</b>, emite dinheiro, guarda as reservas internacionais e faz as regras do sistema financeiro.</p>`],
+ ["Defina paraísos fiscais. Por que pessoas e empresas mandam dinheiro para lá? Por que isso é um problema?",
+  `<p><b>Definição:</b> territórios (países pequenos ou ilhas) que oferecem <b>sigilo</b> e <b>impostos baixos ou nenhum</b>.</p><p><b>Por quê:</b> pagar menos impostos e esconder quem é o dono do dinheiro e de onde ele veio.</p><p><b>Problema para os Estados:</b> perdem arrecadação (menos dinheiro para saúde, educação, segurança) e a prática facilita <b>lavagem de dinheiro, corrupção, crime organizado e evasão fiscal</b>.</p>`],
+ ["Como uma crise de crédito vira crise mundial (crise de 2008)?",
+  `<p><b>Crédito fácil → preços dos imóveis sobem → empréstimos de alto risco → juros sobem → as pessoas não conseguem pagar (inadimplência) → bancos quebram → impacto mundial.</b> Como o mercado financeiro é globalizado e funciona <b>24 horas</b>, o problema de um país se espalha rápido para todos.</p>`]
+]
+};
+
+/* ---------- QUIZ ---------- */
+const QUIZ=[
+ [11,"Qual indicador mede qualidade de vida olhando renda, educação e expectativa de vida?",["PIB","IDH","Gini","PIB per capita"],1,"O IDH combina renda, educação e expectativa de vida."],
+ [11,"Por que o PIB per capita pode enganar?",["Porque não conta a população","Porque é uma média e não mostra como a riqueza é dividida","Porque só vale para países ricos","Porque mede só a educação"],1,"É o PIB dividido pela população: um país pode ter média alta e muita desigualdade."],
+ [11,"Qual a principal causa histórica da pobreza em vários países da Ásia?",["O clima frio","A exploração colonial europeia","A falta de população","O uso do euro"],1,"A colonização destruiu sistemas produtivos e deixou pouca indústria."],
+ [11,"Bangladesh fica na foz de quais rios?",["Amazonas e Paraná","Ganges e Bramaputra","Tigre e Eufrates","Nilo e Congo"],1,"Ganges e Bramaputra, na região das monções, com inundações sazonais."],
+ [11,"Quais países da Ásia e Oceania têm desenvolvimento estendido a quase toda a população?",["Índia e China","Japão e Nova Zelândia","Bangladesh e Paquistão","Iêmen e Afeganistão"],1,"Japão e Nova Zelândia são as principais exceções."],
+ [11,"O sistema de castas está ligado a qual religião?",["Islamismo","Hinduísmo","Budismo","Cristianismo"],1,"Ao hinduísmo. Foi abolido oficialmente com a independência (1947) e a nova Constituição, mas ainda é praticado."],
+ [11,"Em que ano a China adotou a política do filho único?",["1949","1979","2001","2015"],1,"Em 1979. Em 2015 liberou o 2º filho e, em 2021, até 3."],
+ [11,"Uma consequência da política do filho único foi…",["mais mulheres que homens","menos mulheres que homens e envelhecimento","explosão da natalidade","fim da urbanização"],1,"A preferência por meninos e a queda da natalidade causaram desequilíbrio e envelhecimento."],
+ [11,"Qual país passou a China como o mais populoso do mundo?",["Indonésia","Índia","EUA","Bangladesh"],1,"A Índia."],
+ [11,"A principal riqueza do Catar é…",["café","gás natural e petróleo","soja","turismo de neve"],1,"Gás natural e petróleo. A maioria dos moradores é de trabalhadores estrangeiros."],
+ [13,"Na antiga DIT, a periferia era basicamente…",["exportadora de alta tecnologia","fornecedora de produtos primários","sede das multinacionais","financiadora dos países ricos"],1,"Centro industrializado × periferia agroexportadora."],
+ [13,"O que provocou a crise da antiga DIT?",["A Revolução Francesa","A crise de 1929 e a 2ª Guerra","O Brexit","A criação do euro"],1,"Os países centrais compraram menos, e a periferia começou a substituir importações."],
+ [13,"Na industrialização tardia, quem fabricava os bens duráveis (carros, eletrodomésticos)?",["Pequenas empresas locais","Multinacionais estrangeiras","Cooperativas","O FMI"],1,"Os bens duráveis ficaram com as multinacionais instaladas no país."],
+ [13,"CSN (Volta Redonda) e Petrobras são exemplos de…",["neoliberalismo","nacional-desenvolvimentismo","toyotismo","paraísos fiscais"],1,"O Estado criando indústrias de base."],
+ [13,"Qual frase resume a nova DIT?",["Centralização da produção e do comando","Descentralização da produção e centralização do comando","Fim das fronteiras e do Estado","Produção só no centro"],1,"Fábricas espalhadas, decisões concentradas nas sedes."],
+ [13,"Por que o contêiner foi tão importante?",["Porque é refrigerado","Porque tem tamanho padrão e troca rápido de transporte","Porque só serve para navio","Porque dispensa portos"],1,"Ele permite o transporte multimodal barato e rápido."],
+ [13,"O maior porto do mundo fica em…",["Santos","Xangai","Roterdã","Nova York"],1,"O porto de Xangai, na China."],
+ [13,"Terceirizar o que já foi terceirizado se chama…",["just in time","quarteirização","fordismo","escambo"],1,"Quarteirização, que dificulta fiscalizar o trabalho."],
+ [13,"Segundo Milton Santos, hoje as empresas…",["produzem o produto e depois buscam clientes","produzem o consumidor antes do produto","não usam publicidade","dependem só do Estado"],1,"A publicidade cria o desejo antes de o produto existir."],
+ [14,"Qual tipo de bloco tem moeda única controlada por um banco central?",["Zona de livre-comércio","União aduaneira","União monetária","Mercado comum"],2,"União monetária. Ex.: a Zona do Euro."],
+ [14,"No mercado comum, além das mercadorias, circulam livremente…",["só os carros","pessoas, serviços e capitais","apenas o petróleo","nada além das mercadorias"],1,"Essa é a diferença para a zona de livre-comércio."],
+ [14,"A CECA, primeira semente da UE, cuidava de…",["petróleo e gás","carvão e aço","café e açúcar","moedas e bancos"],1,"Comunidade Europeia do Carvão e do Aço."],
+ [14,"Qual tratado criou a União Europeia?",["Tratado de Roma","Tratado de Maastricht","Tratado de Versalhes","Tratado de Tordesilhas"],1,"Maastricht, assinado em 1992 e em vigor em 1993. (Roma, de 1957, criou o Mercado Comum Europeu.)"],
+ [14,"As notas e moedas de euro entraram em circulação em…",["1992","1999","2002","2016"],2,"Em 1999 o euro valia nas operações financeiras; em 2002 chegou às mãos das pessoas."],
+ [14,"O Espaço Schengen garante…",["moeda única","livre circulação de pessoas sem controle nas fronteiras","leis comuns de trânsito","o mesmo idioma"],1,"Desde 1995. A Irlanda (UE) fica fora; Suíça e Noruega (fora da UE) participam."],
+ [14,"No referendo do Brexit (2016), o resultado foi…",["70% ficar","52% sair e 48% ficar","50% a 50%","52% ficar"],1,"Venceu a saída por pouco. A saída oficial foi em 2020."],
+ [14,"Qual destas regiões votou para FICAR na UE?",["Interior da Inglaterra","País de Gales","Escócia","Todas votaram sair"],2,"Escócia, Irlanda do Norte e Londres votaram ficar."],
+ [14,"A ASEAN reúne países…",["da América do Sul","do Sudeste Asiático","da Europa","da África"],1,"Associação de Nações do Sudeste Asiático, de 1967."],
+ [14,"A China entrou na OMC em…",["1949","1979","2001","2020"],2,"Em 2001, e virou o “país-fábrica” do planeta."],
+ [15,"No Coeficiente de Gini, quanto mais perto de 1…",["mais igual","mais desigual","mais rico","mais populoso"],1,"1 = desigualdade máxima; 0 = igualdade máxima."],
+ [15,"Austrália e Nova Zelândia estão no Hemisfério Sul. No mapa Norte × Sul, elas são…",["Sul Global","Norte Global","Não entram","Semiperiferia"],1,"A divisão é econômica, não a linha do Equador."],
+ [15,"Pagamento feito pelo uso de uma tecnologia patenteada:",["Dividendo","Royalty","Imposto","Lastro"],1,"Royalties. Eles se concentram no Norte."],
+ [15,"“Fuga de cérebros” é…",["perda de memória","saída de pesquisadores qualificados para outros países","entrada de estrangeiros","fim das universidades"],1,"Eles vão em busca de salário e estrutura melhores."],
+ [15,"Na globalização recente, a desigualdade…",["caiu dentro e entre os países","caiu entre países, mas subiu dentro deles","subiu só na África","acabou"],1,"Os 10% mais ricos foram os maiores beneficiados."],
+ [15,"Qual o principal fator da desigualdade no acesso à internet?",["O clima","O nível de desenvolvimento econômico","O fuso horário","A religião"],1,"A infraestrutura é cara e mal distribuída."],
+ [15,"O conflito Norte-Sul é principalmente…",["uma guerra mundial","um embate econômico e político","uma disputa esportiva","um conflito religioso"],1,"Disputa sobre comércio, tecnologia e recursos, sem guerra."],
+ [16,"O padrão definido em Bretton Woods (1944) foi o…",["padrão-ouro puro","padrão dólar-ouro","padrão euro","escambo"],1,"US$ 35 = 1 onça de ouro. O dólar virou moeda internacional."],
+ [16,"Qual instituição foi criada em Bretton Woods para emprestar a países em crise?",["OMC","FMI","Banco Central Europeu","ASEAN"],1,"O FMI, junto com o Banco Mundial."],
+ [16,"Uma condição típica do FMI para emprestar é…",["aumentar gastos sociais","cortar gastos e abrir a economia","fechar o comércio","imprimir mais dinheiro"],1,"Corte de gastos e abertura comercial e financeira."],
+ [16,"Quando o governo emite mais dinheiro do que tem de lastro, ocorre…",["deflação","inflação","superávit","Brexit"],1,"A moeda perde poder de compra."],
+ [16,"Quem ganha dividendos?",["Quem tem ações de uma empresa","Quem paga impostos","Quem deve ao banco","O Banco Central"],0,"Dividendos são parte do lucro dividida entre os acionistas."],
+ [16,"Uma loja de roupas faz parte de qual setor?",["Produtivo","Comercial","Financeiro","Primário"],1,"Ela distribui o que outros produziram."],
+ [16,"Quem define a taxa básica de juros no Brasil?",["O FMI","O Banco Central","As lojas","A Bolsa"],1,"O Banco Central também fiscaliza bancos e emite dinheiro."],
+ [16,"Lavagem de dinheiro e evasão fiscal costumam estar ligadas a…",["blocos econômicos","paraísos fiscais","contêineres","royalties"],1,"Sigilo e falta de transparência sobre o dono do dinheiro."]
+];
+
+/* ---------- FLASHCARDS ---------- */
+const CARDS=[
+ [11,"IDH","Índice de Desenvolvimento Humano: renda + educação + expectativa de vida."],
+ [11,"PIB per capita","PIB dividido pela população. É uma média e não mostra a distribuição."],
+ [11,"Vulnerabilidade socioambiental","Desastre natural + pobreza = grande impacto. Ex.: monções em Bangladesh."],
+ [11,"Monções","Ventos que mudam de direção conforme a estação e trazem chuvas fortíssimas no verão do Sul e Sudeste da Ásia, causando inundações."],
+ [11,"Castas","Divisão social hindu que impede a mobilidade. Abolida oficialmente após a independência (1947), mas ainda praticada."],
+ [11,"Aborígenes","Povos originários da Austrália. Em 2008 o governo reconheceu as atrocidades e começou a devolver terras."],
+ [11,"Política do filho único","China, 1979. Freou a população, mas gerou menos mulheres e envelhecimento. Mudou em 2015 e 2021."],
+ [11,"Ilhas de tecnologia","Áreas modernas e ricas cercadas por bolsões de pobreza, como em várias cidades asiáticas."],
+ [11,"Trabalho infantil no mundo (dado do livro)","Cerca de 160 milhões de crianças; quase 9 em cada 10 casos na África, Ásia e Pacífico."],
+ [11,"Catar","Rico em gás e petróleo; a maioria dos moradores é de trabalhadores estrangeiros do Sul da Ásia."],
+ [13,"Divisão Internacional do Trabalho (DIT)","O papel que cada país tem na economia mundial: o que produz, vende e compra."],
+ [13,"Antiga DIT","Centro industrializado × periferia fornecedora de produtos primários."],
+ [13,"Nova DIT","Etapas da produção espalhadas por vários países, comandadas pelas transnacionais."],
+ [13,"Substituição de importações","Fabricar no país o que antes era importado. Ganhou força após 1929 e a 2ª Guerra."],
+ [13,"Keynesianismo","Estado intervém na economia com obras e bem-estar social para gerar emprego e consumo."],
+ [13,"Semiperiferia","Países emergentes: subdesenvolvidos, mas industrializados (Brasil, China, México)."],
+ [13,"Commodities","Produtos primários negociados no mundo todo: soja, minério, petróleo."],
+ [13,"Transporte multimodal","Usar 2 ou mais meios de transporte, como navio + trem + caminhão."],
+ [13,"Just in time","Produzir só o necessário, na hora certa (toyotismo). Leva à terceirização."],
+ [13,"Consumismo","Desejo de consumir além das necessidades, alimentado pela publicidade."],
+ [14,"Bloco econômico","Grupo de países que integram suas economias e tiram barreiras comerciais."],
+ [14,"Soberania","Direito de cada país tomar as próprias decisões. Nos blocos, parte dela é cedida."],
+ [14,"Barreiras não tarifárias","Cotas, licenças e exigências sanitárias que dificultam importações sem cobrar imposto."],
+ [14,"União aduaneira","Mesmas regras de importação para todos os membros frente ao resto do mundo."],
+ [14,"Tratado de Maastricht","Assinado em 1992 (em vigor em 1993): cria a União Europeia e prevê a moeda única."],
+ [14,"Banco Central Europeu","Sede em Frankfurt. Coordena a política monetária da Zona do Euro."],
+ [14,"Espaço Schengen","Livre circulação de pessoas sem controle de fronteira (desde 1995)."],
+ [14,"Brexit","Saída do Reino Unido da UE: referendo em 2016 (52% sair), saída em 2020."],
+ [14,"Plebiscito/referendo","Consulta em que o povo vota diretamente sobre uma questão. Foi assim que o Reino Unido decidiu o Brexit (2016)."],
+ [14,"APEC × ASEAN","APEC (1989; ganha força em 1993): Ásia-Pacífico, inclui EUA e China. ASEAN (1967): Sudeste Asiático."],
+ [15,"Norte Global","Países que concentram poder econômico, político, tecnológico e financeiro."],
+ [15,"Sul Global","Países com menor participação nas decisões da economia mundial."],
+ [15,"Coeficiente de Gini","Mede a desigualdade de renda: 0 = igualdade, 1 = desigualdade máxima. Brasil ≈ 0,52."],
+ [15,"P&D","Pesquisa e Desenvolvimento: investimento em criar novas tecnologias."],
+ [15,"Patente","Registro da propriedade de uma invenção, com uso exclusivo por um tempo."],
+ [15,"Royalties","Pagamento pelo uso de uma criação patenteada ou licenciada."],
+ [15,"Fuga de cérebros","Saída de pesquisadores e profissionais qualificados para outros países."],
+ [15,"Transnacional","Empresa que atua em escala global, sem se prender a um território."],
+ [15,"BRICS","Grupo de emergentes: Brasil, Rússia, Índia, China, África do Sul e novos membros."],
+ [16,"Lastro","Reserva (como ouro) que garante o valor do dinheiro emitido."],
+ [16,"Inflação","Perda do poder de compra da moeda; os preços sobem."],
+ [16,"Bretton Woods","1944: padrão dólar-ouro, criação do FMI e do Banco Mundial."],
+ [16,"FMI","Empresta a países em crise exigindo cortes de gastos e abertura econômica."],
+ [16,"Neoliberalismo","Menos intervenção do Estado e mais liberdade para os investidores."],
+ [16,"Ação","Pedaço de uma empresa. Rende dividendos ou valorização."],
+ [16,"Títulos da dívida pública","Empréstimo ao governo, que devolve com juros. Baixo risco."],
+ [16,"Especulação","Apostar na alta de preços sem base real. Pode gerar bolhas."],
+ [16,"Paraíso fiscal","Território com sigilo e poucos impostos; facilita lavagem de dinheiro e evasão fiscal."],
+ [16,"Crédito","Dinheiro liberado agora (ou compra) para pagar depois, com juros."]
+];
+
+const IMG={"conteiner":"https://commons.wikimedia.org/wiki/Special:FilePath/Container_ship_Hanjin_Taipei.jpg?width=640","porto":"https://commons.wikimedia.org/wiki/Special:FilePath/Yangshan_Port.jpg?width=640","bretton":"https://commons.wikimedia.org/wiki/Special:FilePath/Mount_Washington_Hotel,_Bretton_Woods,_NH.jpg?width=640","euro":"https://commons.wikimedia.org/wiki/Special:FilePath/Euro_coins_and_banknotes.jpg?width=640","dharavi":"https://commons.wikimedia.org/wiki/Special:FilePath/Dharavi_Slum_in_Mumbai.jpg?width=640","crise":"https://commons.wikimedia.org/wiki/Special:FilePath/Crowd_outside_nyse.jpg?width=640"};
+const PD="Wikimedia Commons (domínio público)";
+const ERAS=[
+ ["e1","séc. XV–XVIII","Capitalismo comercial","As Grandes Navegações ligam continentes. Metrópoles europeias ficam com o lucro; colônias fornecem matéria-prima."],
+ ["e2","séc. XVIII–XIX","Capitalismo industrial","A máquina muda tudo. Quem se industrializa primeiro vira centro; o resto vira periferia."],
+ ["e3","fim do XIX–1945","Capitalismo financeiro e crise","Bancos e grandes empresas crescem, até que a crise de 1929 e a 2ª Guerra abalam a velha divisão do mundo."],
+ ["e4","1945–1989","Reconstrução e blocos","O mundo se reorganiza: novas regras para o dinheiro, a Europa se une e a Ásia cresce rápido."],
+ ["e5","1990–2008","Globalização acelerada","Contêineres, internet e transnacionais espalham a produção. Surgem a UE, o euro e a China como fábrica do mundo."],
+ ["e6","2009–hoje","O mundo de hoje","Desigualdade dentro dos países, Brexit, China na África e novos acordos comerciais."]
+];
+// [era, data, cap, brasil, destaque, título, texto, "e então", imagem, legenda, crédito]
+const TL=[
+ ["e1","séc. XV",16,0,0,"Navegações e os primeiros bancos","As Grandes Navegações movimentam muito dinheiro, e surgem bancos modernos em cidades como Veneza e Florença. O nome “banco” vem da mesa onde os banqueiros trocavam moedas. Os metais preciosos viram moedas cunhadas.","Com o dinheiro circulando, as potências europeias montam impérios coloniais."],
+ ["e1","séc. XVI–XVIII",13,1,1,"Metrópole × colônia","Nasce a primeira divisão internacional do trabalho: a <b>colônia</b> (como o Brasil) manda matéria-prima, e a <b>metrópole</b> vende manufaturas. O lucro fica na Europa.","Quando a Inglaterra inventa as máquinas a vapor, essa divisão ganha outra cara."],
+ ["e2","séc. XVIII",13,0,1,"1ª Revolução Industrial","Começa no Reino Unido e depois chega a Alemanha, França, EUA e Japão. Esses países viram o <b>centro</b> da economia e ficam com a parte mais lucrativa: vender produtos industrializados.","O resto do mundo vira <b>periferia</b>, fornecendo produtos primários."],
+ ["e2","1788",11,0,0,"Os britânicos chegam à Austrália","Viviam ali cerca de 300 a 400 mil aborígenes, concentrados no sudeste fértil. Começa uma história de genocídio, expulsão para o deserto e preconceito.","A colonização europeia também se espalha pela Ásia, explorando suas riquezas."],
+ ["e2","séc. XIX",16,0,0,"Cédulas e padrão-ouro","A economia precisa de mais dinheiro, e surgem as cédulas de papel. Para valerem, o Estado guarda ouro como <b>lastro</b>: é o padrão-ouro. Se imprimir mais do que o ouro guardado, vem a <b>inflação</b>.","Nesse período também crescem as Bolsas de Valores, onde empresas vendem ações."],
+ ["e2","séc. XIX",11,0,0,"Neocolonialismo na Ásia","Potências europeias dominam grande parte da Ásia. Sistemas produtivos locais são destruídos e as riquezas vão para a Europa.","Essa herança explica boa parte da pobreza asiática até hoje."],
+ ["e3","1929",13,0,1,"Quebra da Bolsa de Nova York","A crise derruba a economia dos países ricos, que passam a comprar muito menos matérias-primas da periferia. A antiga DIT entra em crise.","Sem conseguir vender e importar, alguns países periféricos decidem fabricar o que compravam.","crise","Multidão em frente à Bolsa de Nova York, 1929.",PD],
+ ["e3","1930–1950",13,1,1,"Substituição de importações no Brasil","O Estado brasileiro cria indústrias de base: a <b>CSN</b>, em Volta Redonda (acordo com os EUA em 1940, fundada em 1941, no governo Vargas), e depois a <b>Petrobras (1953)</b>. É o <b>nacional-desenvolvimentismo</b>, financiado em boa parte com empréstimos externos.","Os empréstimos geram <b>dívida externa</b>, e os juros vão para os países ricos."],
+ ["e3","jul. 1944",16,0,1,"Conferência de Bretton Woods","No fim da 2ª Guerra, os EUA guardam a maior parte do ouro do mundo. Na conferência, o dólar vira a moeda internacional (<b>US$ 35 = 1 onça de ouro</b>), e são criados o <b>FMI</b> e o <b>Banco Mundial</b>.","Com regras novas para o dinheiro, começa a reconstrução da Europa e do Japão.","bretton","Hotel Mount Washington, em Bretton Woods (EUA), onde aconteceu a conferência.","w_lemay / Wikimedia Commons (CC BY-SA 2.0)"],
+ ["e4","1947",11,0,0,"Independência da Índia","A Índia se torna independente do Reino Unido, e a nova Constituição (em vigor em 1950) proíbe a discriminação por castas. Mas a tradição de mais de 2 500 anos continua viva.","No mesmo ano, os EUA lançam um plano para reconstruir a Europa."],
+ ["e4","1947",14,0,0,"Plano Marshall","Os EUA financiam a reconstrução da Europa Ocidental. Mas falta matéria-prima, e França e Alemanha ainda disputam o carvão e o ferro da Alsácia-Lorena.","A solução é dividir esses recursos em vez de brigar por eles."],
+ ["e4","pós-guerra",13,0,0,"Keynesianismo e Estado de bem-estar","Nos países ricos, o Estado faz grandes obras, gera empregos e garante direitos sociais para manter o consumo.","Em paralelo, a Europa começa a se integrar economicamente."],
+ ["e4","1950–1951",14,0,1,"Plano Schuman e a CECA","Seis países criam a <b>Comunidade Europeia do Carvão e do Aço</b>, sem impostos sobre esses produtos. É a primeira semente da União Europeia.","Dá tão certo que eles decidem ampliar a ideia para todo o comércio."],
+ ["e4","1957",14,0,1,"Tratados de Roma","Criam a <b>CEE</b> (o <b>Mercado Comum Europeu</b>) e a <b>Euratom</b>, para cooperar em energia nuclear. Mercadorias, pessoas e serviços passam a circular mais livremente.","Aos poucos o grupo cresce até a “Europa dos 12”."],
+ ["e4","1967",14,0,0,"Nasce a ASEAN","Países do Sudeste Asiático se unem para cooperar na região. Em 1992 viram zona de livre-comércio.","A Ásia começa a ganhar peso no comércio mundial."],
+ ["e4","1971",11,0,0,"Crise humanitária em Bangladesh","Um ciclone devastador (1970) e a guerra de independência contra o Paquistão (1971) levam a uma grande crise. George Harrison faz em Nova York um dos primeiros shows beneficentes da história. A pobreza atingia 71% da população.","Décadas depois, o país consegue reduzir a pobreza para 9,6% (2022)."],
+ ["e4","1979",11,0,1,"Política do filho único","A China limita as famílias das cidades a um filho para frear o crescimento da população.","O resultado vem depois: menos mulheres, menos jovens e uma população envelhecida."],
+ ["e4","anos 1970–80",13,0,0,"Contêineres e toyotismo","O contêiner barateia o transporte, e o toyotismo traz o <b>just in time</b> e a terceirização. Fica fácil espalhar as etapas da produção pelo mundo.","Nasce a <b>nova DIT</b>: produção descentralizada, comando centralizado.","conteiner","Navio porta-contêineres.","Photocapy / Wikimedia Commons (CC BY-SA 2.0)"],
+ ["e5","1992",14,0,1,"Tratado de Maastricht","Com o fim da Guerra Fria, os europeus assinam o tratado que cria a <b>União Europeia</b> (em vigor em 1993): prevê a moeda única, dá mais poder ao Parlamento Europeu (eleito pelo povo) e cria políticas comuns.","Nos anos seguintes, a Europa derruba suas fronteiras internas e cria a moeda única."],
+ ["e5","1989–1993",14,0,0,"APEC ganha força","Criada em 1989, a cooperação Ásia-Pacífico ganha reuniões de presidentes em 1993. Reúne membros muito diferentes, como EUA, China, Japão, Austrália e Chile. Difícil virar uma zona de livre-comércio de verdade.","Na mesma época, a América do Sul cria o seu próprio bloco."],
+ ["e5","1995",14,0,0,"Espaço Schengen","Começa a livre circulação de pessoas sem controle de passaporte entre vários países europeus. Nem todo país da UE participa, e alguns de fora participam.","O próximo passo é a moeda única."],
+ ["e5","1999–2002",14,0,1,"Nasce o euro","Em 1999, o euro passa a valer nas operações financeiras, sob o comando do <b>Banco Central Europeu</b>. Em 2002, notas e moedas chegam ao bolso das pessoas. Reino Unido, Dinamarca e Suécia ficam de fora.","A Zona do Euro vira uma das maiores economias do mundo. Enquanto isso, a China se prepara para mudar o comércio mundial.","euro","Moedas e notas de euro.",PD],
+ ["e5","2001",14,0,1,"China entra na OMC","A China vira o “país-fábrica” do planeta, exportando de brinquedos a aviões e importando matérias-primas. As transnacionais levam suas fábricas para lá.","O porto de Xangai se torna o maior do mundo.","porto","Porto de Yangshan, parte do porto de Xangai.",PD],
+ ["e5","2004–2013",14,0,0,"A UE cresce para o Leste","Entram 11 países ex-socialistas e 2 ilhas do Mediterrâneo. O Leste recebe fábricas e empregos; os ricos ganham mercado e mão de obra barata.","Aumenta a migração do Leste para o Oeste, e cresce o incômodo em alguns países."],
+ ["e5","2008",16,0,1,"Crise financeira mundial","Crédito fácil faz os preços dos imóveis subirem, os juros aumentam, as pessoas não conseguem pagar e os bancos quebram. Como o mercado é global e funciona 24 horas, a crise se espalha pelo mundo. Logo depois, a crise atinge a Europa, e a Grécia mergulha numa crise da dívida (a partir de 2010).","No mesmo ano, do outro lado do mundo, a Austrália encara seu passado."],
+ ["e5","2008",11,0,0,"Austrália reconhece as atrocidades","O governo reconhece a violência contra os aborígenes e começa a devolver territórios, mas sem indenização. Hoje 1/4 dos presos do país são aborígenes.","As desigualdades dentro dos países viram um tema central."],
+ ["e6","2009",14,0,0,"China vira o maior parceiro da África","Empresas chinesas compram terras, minas e petróleo e vendem industrializados. Alguns chamam isso de “novo neocolonialismo”.","A China, porém, enfrenta um problema em casa: a população envelhece."],
+ ["e6","2015",11,0,0,"Fim do filho único","A China libera o 2º filho e, em 2021, até 3, com incentivos. Mesmo assim, os nascimentos caem.","A Índia passa a China e vira o país mais populoso do mundo, com favelas como Dharavi ao lado de prédios de luxo.","dharavi","Dharavi, em Mumbai (Índia), uma das maiores favelas da Ásia.","Kounosu / Wikimedia Commons (CC BY-SA 3.0)"],
+ ["e6","jun. 2016",14,0,1,"Referendo do Brexit","52% dos votos são pela saída da UE. Os mais velhos e o interior da Inglaterra votam sair; jovens, Londres, Escócia e Irlanda do Norte votam ficar.","A saída oficial acontece em 2020, e a economia britânica sente o golpe."],
+ ["e6","2016–hoje",15,0,0,"Desigualdade dentro dos países ricos","Com as fábricas indo para lugares de mão de obra barata, cresce o desemprego nos EUA e na Europa. A insatisfação fortalece discursos contra imigrantes e o protecionismo.","Enquanto isso, o Sul Global tenta ganhar voz em grupos como o BRICS."],
+ ["e6","anos 2020",11,0,0,"160 milhões de crianças trabalhando","Segundo o Unicef (dado citado no livro), quase 9 em cada 10 casos estão na África, Ásia e Pacífico. Muitas trabalham em cadeias ligadas a grandes transnacionais.","É o lado da globalização que as propagandas não mostram."],
+ ["e6","dez. 2024",14,1,1,"Acordo Mercosul–UE","Depois de 25 anos, os blocos concluem a negociação de um acordo para reduzir tarifas e facilitar investimentos. O Brasil pode vender mais commodities, e produtos europeus ficam mais baratos. Os agricultores franceses são contra.","O mundo segue entre a integração dos blocos e a disputa China × EUA."]
+];
+
+/* ---------- DESAFIOS ---------- */
+const ORD=[
+ [13,"As fases do capitalismo",[["Capitalismo comercial","séc. XV–XVIII"],["Capitalismo industrial","séc. XVIII–XIX"],["Capitalismo financeiro","fim do séc. XIX"],["Crise de 1929","1929"],["Capitalismo informacional (globalização)","fim do séc. XX"]]],
+ [14,"A construção da União Europeia",[["Plano Marshall","1947"],["CECA","1951"],["Tratados de Roma","1957"],["Tratado de Maastricht","1992"],["Euro nas mãos das pessoas","2002"],["Saída do Reino Unido","2020"]]],
+ [16,"A história do dinheiro",[["Escambo (troca direta)","1º"],["Sal, couro e metais preciosos como moeda","2º"],["Cédulas com lastro em ouro (padrão-ouro)","séc. XIX"],["Padrão dólar-ouro","1944"],["Crise financeira mundial","2008"]]],
+ [11,"China e Ásia: população e pobreza",[["Crise humanitária em Bangladesh","1971"],["Política do filho único","1979"],["China libera o 2º filho","2015"],["China libera até 3 filhos","2021"],["Bangladesh com 9,6% de pobreza","2022"]]],
+ [14,"Blocos e acordos da Ásia e do mundo",[["ASEAN","1967"],["APEC","1989/1993"],["Espaço Schengen","1995"],["China entra na OMC","2001"],["Acordo Mercosul–UE","2024"]]]
+];
+const TF=[
+ [11,"O PIB per capita mostra como a riqueza está dividida entre as pessoas.",false,"É só uma média. Quem mostra a desigualdade é o Gini."],
+ [11,"O sistema de castas foi abolido oficialmente na Índia, mas continua sendo praticado.",true,"Abolido oficialmente após a independência (1947), mas enraizado há mais de 2 500 anos."],
+ [11,"A política do filho único deixou a China com mais mulheres do que homens.",false,"Foi o contrário: menos mulheres, pela preferência por meninos."],
+ [11,"Japão e Nova Zelândia são exceções, com desenvolvimento para quase toda a população.",true,"São as principais exceções da região."],
+ [13,"Na nova DIT, as sedes das transnacionais costumam ficar nos países periféricos.",false,"As sedes ficam no centro; as fábricas é que se espalham."],
+ [13,"Na industrialização tardia, o Estado teve papel forte e se endividou.",true,"Pegou empréstimos externos e gerou dívida externa."],
+ [13,"O contêiner facilitou o transporte multimodal.",true,"Tamanho padrão, troca rápida entre navio, trem e caminhão."],
+ [14,"Todos os países da União Europeia usam o euro.",false,"Dinamarca e outros não usam. Montenegro e Kosovo, de fora da UE, usam."],
+ [14,"Todos os países do Espaço Schengen fazem parte da UE.",false,"Suíça e Noruega participam sem ser da UE; a Irlanda é da UE e fica fora."],
+ [14,"A bandeira da UE tem 12 estrelas porque o bloco tem 12 países.",false,"As estrelas simbolizam unidade e harmonia, não o número de membros."],
+ [14,"No referendo de 2016, a Escócia votou para ficar na UE.",true,"62% dos escoceses votaram ficar."],
+ [15,"A linha do Equador é a fronteira entre Norte e Sul Global.",false,"A divisão é econômica: Austrália e Nova Zelândia são Norte."],
+ [15,"O Brasil está entre os 10 países mais desiguais do mundo pelo Gini.",true,"Gini ≈ 0,52; os mais desiguais que ele estão na África."],
+ [16,"Em Bretton Woods, o dólar virou a moeda de referência internacional.",true,"Padrão dólar-ouro: US$ 35 = 1 onça de ouro."],
+ [16,"Títulos da dívida pública são uma forma de o governo pegar dinheiro emprestado.",true,"Ele devolve com juros."],
+ [16,"Paraísos fiscais ajudam os Estados a arrecadar mais impostos.",false,"Eles fazem os Estados perderem arrecadação."]
+];
+const MATCH={
+ 11:[["Monções + moradias precárias","Inundações com grande impacto social"],["Política do filho único","Envelhecimento da população chinesa"],["Sistema de castas","Pouca mobilidade social"],["Colonização europeia","Pouca indústria e muita desigualdade após a independência"]],
+ 13:[["Crise de 1929 e 2ª Guerra","Substituição de importações na periferia"],["Industrialização com empréstimos","Dívida externa"],["Busca por custos baixos","Fábricas em países de salários menores"],["Contêiner padronizado","Comércio mundial mais barato e rápido"]],
+ 14:[["Disputa por carvão e ferro","Criação da CECA"],["Fim da Guerra Fria","Tratado de Maastricht"],["Entrada do Leste na UE","Migração do Leste para o Oeste"],["Brexit","Menos investimento e comércio mais caro no Reino Unido"]],
+ 15:[["Investimento em P&D","Patentes e royalties"],["Bolsas que perdem valor","Fuga de cérebros"],["Infraestrutura cara e mal distribuída","Acesso desigual à internet"],["Fábricas indo para a Ásia","Desemprego e insatisfação nos países ricos"]],
+ 16:[["Emitir dinheiro sem lastro","Inflação"],["Exigências do FMI","Corte de gastos sociais"],["Crédito fácil e inadimplência","Crise dos bancos em 2008"],["Sigilo dos paraísos fiscais","Lavagem de dinheiro e evasão fiscal"]]
+};
+const WHO=[
+ [11,["Sou um país do Sul da Ásia.","Fico na foz do Ganges e do Bramaputra.","Tenho uma das maiores densidades demográficas do mundo."],"Bangladesh"],
+ [11,["Sou um país pequeno do Golfo Pérsico.","Fiquei rico com gás natural.","A maior parte dos meus moradores é estrangeira."],"Catar"],
+ [11,["Sou um povo originário.","Vivia no sudeste do meu país, perto do Rio Murray.","Em 2008 o governo reconheceu as atrocidades contra mim."],"Aborígenes australianos"],
+ [13,["Sou uma caixa de aço.","Tenho tamanho padrão.","Passo do navio para o trem sem precisar abrir."],"Contêiner"],
+ [13,["Sou geógrafo brasileiro.","Defendi “uma outra globalização”.","Disse que as empresas produzem o consumidor antes do produto."],"Milton Santos"],
+ [14,["Sou um tratado.","Fui assinado em 1992.","Criei a União Europeia."],"Tratado de Maastricht"],
+ [14,["Sou uma instituição.","Minha sede fica em Frankfurt.","Cuido da moeda de vários países europeus."],"Banco Central Europeu"],
+ [14,["Sou um país asiático.","Entrei na OMC em 2001.","Sou o maior parceiro comercial da África."],"China"],
+ [15,["Sou um índice.","Vou de 0 a 1.","Quanto mais alto, mais desigual."],"Coeficiente de Gini"],
+ [16,["Nasci em 1944.","Empresto a países em crise.","Em troca, exijo corte de gastos."],"FMI"],
+ [16,["Sou um território.","Ofereço sigilo e pouco imposto.","Sou usado para lavar dinheiro."],"Paraíso fiscal"]
+];
+const THINK=[
+ [11,"Um país pode ter PIB alto e muita pobreza ao mesmo tempo? Explique com um exemplo da aula.",["Sim, porque o PIB não mostra a distribuição","Citou a concentração de renda (Gini alto)","Deu um exemplo: Catar, Índia, China ou Brasil","Citou um indicador melhor: IDH ou Gini"]],
+ [11,"Por que as inundações matam muito mais em Bangladesh do que matariam na Holanda?",["Desastre + pobreza = vulnerabilidade","Moradias precárias à beira dos rios","Falta de infraestrutura e de dinheiro para obras","Densidade demográfica altíssima"]],
+ [13,"Escolha um produto que você usa (celular, tênis, roupa) e mostre como ele explica a nova DIT.",["Peças ou etapas feitas em vários países","Sede da marca em país rico","Fábrica onde a mão de obra é barata","O lucro volta para a sede"]],
+ [13,"Na propaganda, o que “não aparece”? Responda pensando na cadeia consumo → resíduos.",["As condições de trabalho de quem produz","Os recursos naturais usados","O lixo gerado (ex.: roupas no Atacama)","A publicidade criando o desejo"]],
+ [14,"Por que um país aceita perder parte da soberania para entrar num bloco?",["Ganha um mercado consumidor maior","Vende sem impostos para os vizinhos","Atrai investimentos e empregos","Ganha força para negociar com o mundo"]],
+ [14,"O Brexit foi bom ou ruim para o Reino Unido? Defenda com argumentos.",["Deu uma opinião clara","Citou um argumento de quem queria sair (imigração, soberania, contribuições)","Citou uma consequência econômica (investimento, comércio)","Citou uma consequência social ou política (estudo, trabalho, Escócia)"]],
+ [15,"Quem se beneficia da globalização? Responda “visto do lado de cá”, como Milton Santos.",["Os países do Norte e as transnacionais","Os 10% mais ricos","O Sul recebe as fábricas de baixo custo e exporta matérias-primas","Citou royalties, P&D ou internet como exemplo"]],
+ [15,"Por que é ruim para o Brasil investir pouco em ciência?",["Depende de comprar tecnologia de fora","Paga royalties em vez de receber","Perde pesquisadores (fuga de cérebros)","Fica preso a exportar commodities"]],
+ [16,"Como uma decisão de juros nos EUA ou no Banco Central pode mudar a vida da sua família?",["Muda o preço das compras a prazo e dos empréstimos","Influencia a inflação e os preços","Afeta empregos e investimentos","O mercado é global e reage rápido"]],
+ [16,"Por que os paraísos fiscais são um problema para todos, e não só para quem tem dinheiro lá?",["O Estado perde impostos","Sobra menos dinheiro para saúde, educação e segurança","Facilitam corrupção e crime organizado","É difícil combater por causa da soberania desses territórios"]]
+];
+const ERR=[
+ [11,"A política do filho único foi criada na Índia em 2015 e deixou o país com mais mulheres do que homens.",["Foi na China, em 1979 (2015 foi quando ela terminou).","Deixou o país com menos mulheres do que homens."]],
+ [11,"O sistema de castas está ligado ao budismo e foi abolido oficialmente em 1979.",["Está ligado ao hinduísmo.","Foi abolido oficialmente após a independência, em 1947 (e pela Constituição)."]],
+ [13,"Na antiga DIT, a periferia vendia produtos de alta tecnologia, e a crise dela veio com o Brexit.",["A periferia vendia produtos primários.","A crise veio com 1929 e a 2ª Guerra."]],
+ [14,"O Tratado de Roma, de 1992, criou o euro, e o Reino Unido adotou a moeda em 2002.",["Quem criou a UE e a moeda única foi Maastricht (1992); Roma é de 1957.","O Reino Unido nunca adotou o euro: manteve a libra."]],
+ [14,"No Brexit, Londres e Escócia votaram sair, e a saída oficial foi no mesmo ano do referendo.",["Londres e Escócia votaram ficar.","O referendo foi em 2016 e a saída oficial em 2020."]],
+ [15,"No Gini, 0 significa desigualdade máxima, e o Brasil está entre os países menos desiguais.",["0 é igualdade máxima; 1 é desigualdade máxima.","O Brasil está entre os 10 mais desiguais."]],
+ [16,"Em Bretton Woods, em 1929, foi criado o euro como moeda internacional.",["Bretton Woods foi em 1944.","O dólar virou a moeda internacional (e foram criados FMI e Banco Mundial)."]],
+ [16,"O FMI empresta dinheiro exigindo que o país aumente os gastos e feche sua economia.",["Exige corte de gastos.","Exige abertura comercial e financeira."]]
+];
+const MODES=[["ord","Ordene os fatos","Linha do tempo"],["tf","Verdadeiro ou falso","E corrija o falso"],["match","Causa e consequência","Ligue os pares"],["who","Quem sou eu?","Pistas uma a uma"],["err","Ache os erros","2 erros por frase"],["think","Pense como geógrafo","Perguntas abertas"]];
+/* ---------- BRASIL ---------- */
+// BR[cap] = [introdução, [[conceito, como aparece no Brasil]], [[pergunta, resposta]]]
+const BR={
+11:["A desigualdade que o livro mostra na Ásia também existe aqui. Dá para usar o Brasil como exemplo em quase toda resposta do capítulo 11.",
+ [["Contrastes dentro da mesma cidade","Assim como Mumbai tem prédios de luxo ao lado da favela de Dharavi, São Paulo tem o Morumbi ao lado de Paraisópolis. É a mesma <b>segregação espacial</b>."],
+  ["Gini","O Brasil (cerca de <b>0,52</b>) está entre os <b>10 países mais desiguais</b> do mundo. Só países africanos são mais desiguais."],
+  ["PIB alto × pobreza","O Brasil tem uma das maiores economias do mundo, mas muita gente pobre: o PIB grande não garante que a riqueza seja bem dividida."],
+  ["Trabalho infantil","No Brasil também existe: cerca de <b>1,6 milhão</b> de crianças e adolescentes em trabalho infantil (IBGE, 2023)."],
+  ["Trabalho escravo moderno","Como os imigrantes de Mianmar na Tailândia, o Brasil resgata todos os anos pessoas em <b>trabalho análogo à escravidão</b> (mais de 3 mil em 2023), em fazendas, carvoarias, obras e oficinas de costura."],
+  ["Povos originários","Os aborígenes da Austrália lembram os <b>povos indígenas</b> do Brasil (cerca de 1,7 milhão no Censo 2022), que também perderam terras e lutam pela <b>demarcação</b> de seus territórios."],
+  ["Vulnerabilidade socioambiental","Desastre + pobreza = grande impacto também aqui: as <b>enchentes do Rio Grande do Sul (2024)</b> e os deslizamentos em encostas atingem mais quem mora em áreas de risco."],
+  ["Demografia","Ao contrário da Índia, o Brasil já tem <b>poucos filhos por mulher</b> (menos de 2) e está <b>envelhecendo</b>, um desafio parecido com o da China, mas sem política do filho único."]],
+ [["Dê um exemplo de contraste social no Brasil parecido com os da Ásia.","<p>Em São Paulo, o bairro rico do <b>Morumbi</b> fica ao lado da comunidade de <b>Paraisópolis</b>, como em Mumbai os prédios de Nariman Point ficam perto da favela de Dharavi. Mostra a concentração de renda e a segregação espacial.</p>"],
+  ["Por que o Brasil, com uma economia grande, ainda tem tanta pobreza?","<p>Porque a riqueza é muito <b>concentrada</b> (Gini ≈ 0,52, entre os 10 mais desiguais). Assim como na Ásia, a explicação é <b>histórica</b>: colonização, escravidão e terras nas mãos de poucos. O PIB per capita é uma média e esconde essa desigualdade.</p>"]]],
+13:["O Brasil passou por todas as fases da DIT: foi colônia, virou agroexportador, se industrializou tarde e hoje é um país emergente que exporta muitas commodities.",
+ [["Antiga DIT","Primeiro como <b>colônia</b> (açúcar, ouro) e depois como país <b>agroexportador</b>, principalmente de <b>café</b>, comprando produtos industrializados da Europa e dos EUA."],
+  ["Crise de 1929","O preço do café despencou. O Brasil passou a produzir aqui o que importava: a <b>substituição de importações</b>."],
+  ["Nacional-desenvolvimentismo","Governo Vargas: <b>CSN</b>, em Volta Redonda (início dos anos 1940), e <b>Petrobras (1953)</b>, a campanha do “O petróleo é nosso”. O Estado criou as indústrias de base."],
+  ["Industrialização tardia e multinacionais","No governo de <b>JK</b> (1956–1961), com o Plano de Metas, chegaram as <b>montadoras estrangeiras</b> de carros, principalmente no ABC Paulista. É o exemplo perfeito: os bens duráveis ficaram com as multinacionais."],
+  ["Dívida externa","A industrialização foi feita com muitos empréstimos. Nos anos 1980, a dívida explodiu e veio a “<b>década perdida</b>”, com crise, inflação e acordos com o FMI."],
+  ["Nova DIT","Hoje o Brasil é <b>semiperiferia</b> (emergente): tem filiais de transnacionais, como na <b>Zona Franca de Manaus</b> (eletrônicos e motos montados com incentivos fiscais), mas exporta principalmente <b>commodities</b>: soja, minério de ferro, petróleo e carne. Isso é a <b>reprimarização</b>."],
+  ["Exceção de alta tecnologia","A <b>Embraer</b>, fabricante brasileira de aviões, mostra que um país emergente também pode ter indústria de alta tecnologia."],
+  ["Portos e contêineres","O <b>Porto de Santos</b> é o mais movimentado da América Latina, e o que passa por ele (muita soja, açúcar e café saindo; industrializados chegando) mostra o papel do Brasil na DIT."],
+  ["Consumo e o que não aparece","Em 2011, fornecedores da <b>Zara</b> em São Paulo foram flagrados usando trabalhadores imigrantes (bolivianos) em condições análogas à escravidão. É o “que não aparece” na propaganda."]],
+ [["Explique como a industrialização brasileira foi “tardia”.","<p>Começou só no século XX, depois da crise de 1929, pela <b>substituição de importações</b>. O <b>Estado</b> criou as indústrias de base (CSN, Petrobras) com empréstimos, gerando <b>dívida externa</b>. Os bens duráveis, como carros, ficaram com <b>multinacionais estrangeiras</b> (governo JK). E a produção era voltada ao <b>mercado interno</b>.</p>"],
+  ["Qual a posição do Brasil na nova DIT? Dê exemplos.","<p>O Brasil é <b>semiperiferia/emergente</b>: é industrializado e tem filiais de transnacionais (montadoras, Zona Franca de Manaus), mas exporta principalmente <b>commodities</b> (soja, minério, petróleo) e depende de tecnologia de fora. O comando das grandes empresas fica no exterior.</p>"]]],
+14:["O Brasil também faz parte de um bloco econômico, o Mercosul, e acompanha de perto o que acontece na União Europeia e na Ásia.",
+ [["Mercosul","Criado pelo <b>Tratado de Assunção (1991)</b> com Brasil, Argentina, Uruguai e Paraguai (a Bolívia entrou depois, e a Venezuela está suspensa)."],
+  ["Tipo de bloco","O Mercosul é uma <b>união aduaneira</b> (incompleta): desde 1995 tem uma <b>Tarifa Externa Comum (TEC)</b>. Ainda não é mercado comum como a UE, e não tem moeda única."],
+  ["Mercosul × UE","O acordo concluído em 2024 interessa ao <b>agronegócio brasileiro</b> (vender mais commodities), mas os <b>agricultores franceses</b> são contra. Em troca, produtos europeus (remédios, carros) podem ficar mais baratos aqui."],
+  ["China","Desde <b>2009</b> a China é o <b>maior parceiro comercial do Brasil</b>: compra soja, minério e petróleo e vende industrializados. Parecido com a relação China–África."],
+  ["Brasileiros na Europa","Brasileiros não precisam de visto para turismo de até 90 dias no Espaço Schengen. Muitos brasileiros com cidadania europeia (italiana, portuguesa) usam a livre circulação para morar e trabalhar lá."]],
+ [["Compare o Mercosul com a União Europeia.","<p>Os dois são blocos econômicos, mas a <b>UE</b> é muito mais integrada: mercado comum, moeda única (euro) e Parlamento. O <b>Mercosul</b> é uma <b>união aduaneira</b> incompleta: tem tarifa externa comum, mas não tem livre circulação total nem moeda única.</p>"],
+  ["Por que o acordo Mercosul–UE interessa ao Brasil e preocupa a França?","<p>O Brasil quer vender mais <b>commodities agrícolas</b> para a Europa sem tantas tarifas. Os <b>agricultores franceses</b> temem a concorrência de produtos feitos com outros padrões ambientais e sanitários e mais baratos.</p>"]]],
+15:["No mapa Norte × Sul, o Brasil é Sul Global. Aqui aparecem quase todos os problemas do capítulo: pouca pesquisa, royalties, fuga de cérebros e desigualdade.",
+ [["Sul Global e BRICS","O Brasil é <b>fundador do BRICS</b>, grupo de emergentes que tenta dar mais voz ao Sul nas decisões mundiais. Em 2025, a cúpula foi no Rio de Janeiro."],
+  ["Investimento em P&D","O Brasil investe pouco mais de <b>1% do PIB</b> em pesquisa, e de forma irregular (“aos solavancos”). A China saiu de 0,5% para cerca de 2,5% em 30 anos."],
+  ["Fuga de cérebros","Os gráficos da aula mostram: de 2000 a 2024, as bolsas de mestrado e doutorado subiram bem menos que a inflação. A de doutorado (R$ 3.100) deveria valer cerca de R$ 4.796 se fosse corrigida. Muitos pesquisadores vão embora do país."],
+  ["Royalties","O Brasil <b>paga muito mais royalties do que recebe</b>: usa tecnologia criada no Norte (softwares, sementes, remédios, filmes)."],
+  ["Patentes e remédios genéricos","Desde a <b>Lei dos Genéricos (1999)</b>, quando a patente de um remédio vence, outras empresas podem fazer cópias mais baratas (a caixa com o “G” amarelo). Em <b>2007</b>, o Brasil quebrou a patente de um remédio contra a aids (licença compulsória) para baratear o tratamento."],
+  ["Internet","O acesso é desigual: maior nas cidades e regiões mais ricas, menor no campo e em partes do Norte e Nordeste. Mas o Brasil é o <b>2º mais preparado em cibersegurança nas Américas</b>, atrás só dos EUA (dado do livro)."]],
+ [["Por que o Brasil é considerado Sul Global, mesmo sendo uma grande economia?","<p>Porque tem <b>pouca participação no comando</b> da economia mundial: poucas sedes de transnacionais, pouco investimento em P&D, <b>paga mais royalties do que recebe</b>, exporta muitas commodities e tem enorme desigualdade interna (Gini ≈ 0,52).</p>"],
+  ["Explique a relação entre bolsas de pesquisa defasadas e fuga de cérebros no Brasil.","<p>Se as bolsas perdem valor para a inflação, o pesquisador ganha cada vez menos (o poder de compra da bolsa de doutorado caiu de 8,98 para 3,68 cestas básicas entre 2000 e 2024). Muitos vão para países que pagam melhor. O Brasil gasta para formar o cientista e outro país aproveita.</p>"]]],
+16:["O sistema financeiro está no dia a dia dos brasileiros: no Pix, nos juros do cartão, na inflação e na Bolsa.",
+ [["Inflação e Plano Real","Antes de 1994, o Brasil vivia a <b>hiperinflação</b> (mais de 2.000% em 1993): os preços mudavam quase todo dia. O <b>Plano Real (1994)</b> criou a nova moeda e controlou a inflação."],
+  ["Banco Central do Brasil","Define a <b>Selic</b> (taxa básica de juros) nas reuniões do <b>Copom</b>, fiscaliza os bancos, emite o real e criou o <b>Pix (2020)</b>."],
+  ["Títulos públicos","Pelo <b>Tesouro Direto</b>, qualquer pessoa pode comprar títulos da dívida pública e “emprestar” dinheiro ao governo, recebendo juros. Como o Brasil tem juros altos, uma grande parte do orçamento vai para pagar juros da dívida."],
+  ["Bolsa de Valores","A bolsa brasileira é a <b>B3</b>, em São Paulo. O <b>Museu da Bolsa (MUB3)</b>, perto da estação São Bento, mostrado na aula, conta essa história."],
+  ["Brasil e o FMI","O Brasil pegou empréstimos do FMI em várias crises (anos 1980, 1998, 2002), com exigência de corte de gastos. Em <b>2005</b>, quitou a dívida com o FMI."],
+  ["Juros no dia a dia","Juros do cartão de crédito e do cheque especial estão entre os mais altos do mundo: o banco lucra com os juros, e quem não paga em dia vê a dívida crescer rápido."]],
+ [["Como as decisões do Banco Central afetam a vida das famílias brasileiras?","<p>Quando o Banco Central <b>sobe a Selic</b>, os empréstimos e as compras a prazo ficam mais caros, o consumo cai e a inflação tende a diminuir. Quando <b>baixa</b>, o crédito fica mais barato e a economia tende a crescer, mas com risco de mais inflação.</p>"],
+  ["O que foi o Plano Real e por que tem a ver com o capítulo 16?","<p>Em <b>1994</b> o Brasil criou o real para acabar com a <b>hiperinflação</b>, a perda rápida do poder de compra da moeda. Mostra que o valor do dinheiro depende da <b>confiança</b> e do controle da emissão de moeda, como o capítulo explica com o lastro e o padrão-ouro.</p>"]]]
+};
+const BRQ=Object.values(BR).reduce((a,b)=>a+b[2].length,0);
+
+QUIZ.push(
+ [13,"No governo JK (1956–1961), os bens duráveis, como carros, passaram a ser produzidos no Brasil principalmente por…",["empresas estatais","montadoras multinacionais estrangeiras","cooperativas rurais","o FMI"],1,"Montadoras estrangeiras se instalaram, sobretudo no ABC Paulista."],
+ [13,"Hoje, o que o Brasil mais exporta?",["Aviões e chips","Commodities como soja, minério de ferro e petróleo","Carros elétricos","Softwares"],1,"Por isso se fala em reprimarização da pauta de exportações."],
+ [14,"O Mercosul foi criado em 1991 pelo…",["Tratado de Maastricht","Tratado de Assunção","Tratado de Roma","Plano Marshall"],1,"Brasil, Argentina, Uruguai e Paraguai."],
+ [14,"O Mercosul é, hoje, principalmente uma…",["união monetária","união aduaneira (incompleta)","união política","zona sem nenhuma regra"],1,"Tem Tarifa Externa Comum desde 1995, mas não tem moeda única."],
+ [14,"Desde 2009, o maior parceiro comercial do Brasil é…",["os EUA","a China","a Argentina","o Japão"],1,"A China compra soja, minério e petróleo e vende industrializados."],
+ [15,"Os remédios genéricos (com o “G” amarelo) podem ser fabricados quando…",["a patente do remédio original vence","o FMI autoriza","o remédio sai de moda","o Mercosul decide"],0,"Lei dos Genéricos, de 1999."],
+ [15,"Em relação aos royalties, o Brasil…",["recebe muito mais do que paga","paga muito mais do que recebe","não paga royalties","só recebe da China"],1,"Usa muita tecnologia criada no Norte."],
+ [16,"A taxa básica de juros do Brasil se chama…",["IPCA","Selic","Pix","Real"],1,"Definida pelo Copom, do Banco Central."],
+ [16,"O Plano Real (1994) foi criado para…",["acabar com a hiperinflação","sair do Mercosul","criar o Pix","entrar na União Europeia"],0,"Antes dele, a inflação passava de 2.000% ao ano."]
+);
+CARDS.push(
+ [11,"Brasil: contraste social","Morumbi × Paraisópolis (SP): luxo ao lado da comunidade, como em Mumbai."],
+ [13,"Brasil na antiga DIT","Colônia (açúcar, ouro) e depois agroexportador de café."],
+ [13,"Governo JK e as montadoras","Plano de Metas (1956–1961): multinacionais de carros no ABC Paulista. Bens duráveis com as multinacionais."],
+ [13,"Década perdida","Anos 1980 no Brasil: dívida externa enorme, crise e inflação."],
+ [13,"Reprimarização","Brasil voltando a depender da exportação de produtos primários (soja, minério, petróleo)."],
+ [14,"Mercosul","Tratado de Assunção (1991). União aduaneira incompleta, com Tarifa Externa Comum."],
+ [15,"Lei dos Genéricos","1999: remédios copiados mais baratos depois que a patente vence."],
+ [16,"Plano Real","1994: nova moeda que acabou com a hiperinflação no Brasil."],
+ [16,"Selic e Copom","Selic é a taxa básica de juros; o Copom, do Banco Central, decide o valor."],
+ [16,"Tesouro Direto","Jeito de qualquer pessoa comprar títulos da dívida pública do Brasil."]
+);
+TF.push(
+ [13,"A Petrobras e a CSN são exemplos de indústrias de base criadas pelo Estado brasileiro.",true,"Fazem parte do nacional-desenvolvimentismo."],
+ [14,"O Mercosul tem moeda única, como o euro.",false,"Não tem. É uma união aduaneira incompleta."],
+ [15,"O Brasil recebe mais royalties do que paga.",false,"Paga muito mais do que recebe."],
+ [16,"Quem define a Selic é o Copom, do Banco Central.",true,"E isso muda os juros de empréstimos e compras a prazo."]
+);
+MATCH[13].push(["Montadoras estrangeiras no governo JK","Carros feitos no Brasil por multinacionais"]);
+ORD.push([13,"O Brasil na economia mundial",[["Brasil colônia exporta açúcar","séc. XVI–XVII"],["Brasil agroexportador de café","séc. XIX"],["CSN e Petrobras","1940–1953"],["Montadoras no governo JK","1956–1961"],["Década perdida","anos 1980"],["Plano Real","1994"],["China vira maior parceira","2009"]]]);
+WHO.push([13,["Sou uma empresa estatal brasileira.","Nasci em 1953, no governo Vargas.","Minha campanha dizia: “O petróleo é nosso”."],"Petrobras"],[14,["Sou um bloco econômico.","Nasci em 1991, em Assunção.","Tenho uma Tarifa Externa Comum."],"Mercosul"]);
+ERR.push([16,"O Plano Real, de 1986, acabou com a deflação, e quem define a Selic é o FMI.",["O Plano Real é de 1994.","Acabou com a hiperinflação, e quem define a Selic é o Copom, do Banco Central."]]);
+TL.push(
+ ["e3","1929–1930",13,1,0,"Crise do café no Brasil","Com a crise de 1929, o preço do café despenca. O Brasil, que dependia dele, começa a produzir aqui o que antes importava.","É o começo da industrialização por substituição de importações."],
+ ["e4","1956–1961",13,1,1,"JK e as montadoras","O Plano de Metas de Juscelino Kubitschek atrai montadoras estrangeiras, principalmente para o ABC Paulista. Os bens duráveis ficam com as multinacionais, como descreve a industrialização tardia.","Para crescer rápido, o país se endivida cada vez mais."],
+ ["e4","anos 1980",13,1,0,"A década perdida","A dívida externa brasileira explode, a inflação dispara e o país recorre ao FMI, que exige cortes de gastos.","A solução para a inflação só vem nos anos 1990."],
+ ["e5","1991",14,1,1,"Tratado de Assunção: nasce o Mercosul","Brasil, Argentina, Uruguai e Paraguai criam o Mercosul. Em 1995 ele ganha uma Tarifa Externa Comum e vira uma união aduaneira (incompleta).","No ano seguinte, os europeus dão um passo bem maior na integração."],
+ ["e5","1994",16,1,1,"Plano Real","O Brasil cria uma nova moeda, o real, e acaba com a hiperinflação, que passava de 2.000% ao ano. Mostra que o valor do dinheiro depende da confiança.","Mesmo assim, o país ainda precisaria do FMI em outras crises."],
+ ["e5","1999",15,1,0,"Lei dos Genéricos","Remédios com patente vencida podem ser copiados e vendidos mais baratos. Em 2007, o Brasil quebrou a patente de um remédio contra a aids para baratear o tratamento.","Patentes mostram como a tecnologia dá poder a quem a cria."],
+ ["e5","2005",16,1,0,"Brasil quita a dívida com o FMI","Depois de pegar empréstimos em várias crises, o Brasil paga tudo o que devia ao Fundo.","Três anos depois, uma crise financeira abala o mundo inteiro."],
+ ["e6","2009",14,1,1,"China, maior parceira do Brasil","A China passa os EUA como maior parceira comercial do Brasil: compra soja, minério e petróleo e vende industrializados.","O Brasil reforça seu papel de exportador de commodities: a reprimarização."],
+ ["e6","2020",16,1,0,"Nasce o Pix","O Banco Central do Brasil cria o Pix, que faz transferências na hora e de graça para pessoas.","Mostra como a tecnologia mudou o sistema financeiro no dia a dia."],
+ ["e6","maio 2024",11,1,0,"Enchentes no Rio Grande do Sul","Chuvas extremas inundam cidades inteiras. Como nas monções da Ásia, quem mora em áreas de risco e tem menos renda sofre mais: é a vulnerabilidade socioambiental.","Desastre + pobreza = grande impacto, aqui e lá."]
+);
+/* ordem cronológica dentro de cada era */
+const KEY={"Crise do café no Brasil":1929.5,"JK e as montadoras":1957.5,"Lei dos Genéricos":1998.9,"China, maior parceira do Brasil":2008.9,"Enchentes no Rio Grande do Sul":2024.4,"Acordo Mercosul–UE":2024.9};
+const yr=(d,t)=>{if(KEY[t])return KEY[t];const m=String(d).match(/\d{4}/);if(m)return +m[0];const c=String(d).match(/séc\. ([XVI]+)/);if(c)return {XV:1450,XVI:1550,XVIII:1750,XIX:1850}[c[1]]||1500;if(/pós-guerra/.test(d))return 1948;if(/anos 2020/.test(d))return 2023;return 9999;};
+TL.sort((a,b)=>{const ea=ERAS.findIndex(e=>e[0]===a[0]),eb=ERAS.findIndex(e=>e[0]===b[0]);return ea-eb||yr(a[1],a[5])-yr(b[1],b[5]);});
+/* agrupar por capítulo (ordem estável) */
+[QUIZ,CARDS,TF,WHO,ERR,ORD].forEach(a=>a.sort((x,y)=>x[0]-y[0]));
+
+/* ---------- IMAGENS (Wikimedia Commons, livres) ---------- */
+const FP=f=>'https://commons.wikimedia.org/wiki/Special:FilePath/'+encodeURIComponent(f).replace(/%2C/g,',')+'?width=640';
+const TLIMG={
+ "Navegações e os primeiros bancos":["Portuguese Carracks off a Rocky Coast (cropped).jpg","Naus portuguesas, pintura do século XVI.","Círculo de Joachim Patinir · domínio público"],
+ "1ª Revolução Industrial":["Power loom weaving. Wellcome L0011293.jpg","Tear mecânico numa fábrica inglesa do século XIX.","Wellcome Collection (CC BY 4.0)"],
+ "Os britânicos chegam à Austrália":["River Murray(GN05748).jpg","Rio Murray, no sudeste da Austrália, região fértil onde viviam muitos aborígenes.","Frank Hurley (CC0)"],
+ "Crise do café no Brasil":["Johann Jacob Steinmann - Plantação de café.jpg","Fazenda de café no Brasil, século XIX.","Friedrich Salathé, a partir de J. J. Steinmann · domínio público"],
+ "Substituição de importações no Brasil":["Construção da Companhia Siderúrgica Nacional (CSN).tif","Construção da CSN, em Volta Redonda (RJ).","Autor desconhecido · domínio público"],
+ "Plano Marshall":["Marshall Plan poster.JPG","Cartaz do Plano Marshall: “seja qual for o tempo, só chegamos ao bem-estar juntos”.","E. Spreckmeester · domínio público"],
+ "JK e as montadoras":["Construção de Brasília 1959-18.jpg","Construção de Brasília (1959), outra marca do governo JK.","Domínio público"],
+ "Crise humanitária em Bangladesh":["Monsoon Rain Flood in Dhaka.JPG","Rua alagada pelas chuvas de monções em Dhaka, Bangladesh (foto recente).","Shoreful (CC BY-SA 4.0)"],
+ "Política do filho único":["China 1982 happy family with one child.jpg","Rua na China em 1982, época da política do filho único.","Robert Schediwy (CC BY-SA 3.0)"],
+ "Tratado de Assunção: nasce o Mercosul":["Flag of Mercosur (Portuguese).svg","Bandeira do Mercosul.","Domínio público"],
+ "Espaço Schengen":["Bilingual Schengen border sign, Belgium.JPG","Placa de fronteira da Bélgica: só um aviso, sem controle de passaporte.","Smiley.toerist (CC BY-SA 3.0)"],
+ "Nasce o euro":["Euro sign Frankfurt.jpg","Escultura do euro em Frankfurt, perto da antiga sede do Banco Central Europeu.","Ypsilonatshared · domínio público"],
+ "China, maior parceira do Brasil":["Rondonópolis transporte soja (Roosevelt Pinheiro) 28mar09.JPG","Caminhões levando soja em Rondonópolis (MT).","Roosevelt Pinheiro/Agência Brasil (CC BY 3.0 BR)"],
+ "Referendo do Brexit":["Two black cabs with Big Ben in the background.jpg","Londres, onde a maioria votou para ficar na UE.","Pedro Lastra (CC0)"],
+ "Enchentes no Rio Grande do Sul":["Enchente Porto Alegre 2024 07.jpg","Porto Alegre durante as enchentes de 2024.","Ricardo André Frantz (CC BY 4.0)"]
+};
+TL.forEach(t=>{const m=TLIMG[t[5]];if(m){const k='x'+Object.keys(IMG).length;IMG[k]=FP(m[0]);t[8]=k;t[9]=m[1];t[10]=m[2];}});
+const BRIMG={
+ 11:["Enchente Porto Alegre 2024 31.jpg","Estragos deixados pela enchente em Porto Alegre (maio de 2024).","tetraktys (CC BY 4.0)"],
+ 13:["Ronodonópolis colheita soja (Roosevelt Pinheiro) 28mar09.jpg","Colheita de soja em Rondonópolis (MT): a commodity que o Brasil mais exporta.","Roosevelt Pinheiro/Agência Brasil (CC BY 3.0 BR)"],
+ 15:["PH-NXF AIRCRAFT Embraer E195-E2 -1a.jpg","Avião da Embraer: alta tecnologia feita no Brasil.","Sg1959 (CC BY-SA 4.0)"],
+ 16:['Edifício "Sede" do Banco Central do Brasil em Brasília.jpg',"Sede do Banco Central do Brasil, em Brasília.","Banco Central do Brasil (CC BY 2.0)"]
+};
+const fig=(f,cap,cred)=>`<figure class="fig"><img src="${FP(f)}" alt="${cap}" loading="lazy"><figcaption>${cap} <i>Imagem: ${cred}</i></figcaption></figure>`;
+R[11].forEach(r=>{if(/^Catar/.test(r[0]))r[1]+=fig("Doha Skyline 01.jpg","Doha, capital do Catar: arranha-céus construídos por trabalhadores estrangeiros.","Zairon (CC BY 4.0)");if(/prosperidade econômica/.test(r[0]))r[1]+=fig("Shanghai skyline waterfront pudong 5166168 69 70.jpg","Pudong, em Xangai (China): uma “ilha de tecnologia”.","Ermell (CC0)");});
+
+/* alternativas corretas espalhadas entre A–D (determinístico, não muda entre aparelhos) */
+QUIZ.forEach((q,i)=>{const o=q[2],c=o[q[3]],t=(i*7+2)%o.length,rest=o.filter((_,k)=>k!==q[3]);rest.splice(t,0,c);q[2]=rest;q[3]=t;});
+
+/* ---------- JOGADOR, PONTOS E SINCRONIZAÇÃO ---------- */
+const LS={get(k,d){try{const v=localStorage.getItem(k);return v?JSON.parse(v):d}catch(e){return d}},set(k,v){try{localStorage.setItem(k,JSON.stringify(v))}catch(e){}}};
+const slug=n=>n.normalize('NFD').replace(/[̀-ͯ]/g,'').toLowerCase().replace(/[^a-z0-9]+/g,'-').replace(/^-|-$/g,'').slice(0,40)||'jogador';
+const esc=t=>String(t).replace(/[&<>"]/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
+const blank=()=>({br:{},quiz:{},fc:{},tf:{},ord:{},match:{},who:{},err:{},think:{},rot:{},tl:{}});
+let USERS=LS.get('ggeo3:users',{}),CUR=LS.get('ggeo3:cur',null);
+if(CUR&&!USERS[CUR])CUR=null;
+let S=CUR?Object.assign(blank(),USERS[CUR].s):blank();
+const sum=o=>Object.values(o).reduce((a,b)=>a+(+b||0),0);
+const ROTKEYS=[];Object.keys(R).forEach(c=>R[c].forEach((_,i)=>ROTKEYS.push(c+'_'+i)));
+const CATS=[
+ ['quiz','Quiz',()=>QUIZ.length*10,()=>Object.entries(S.quiz).reduce((a,[i,v])=>a+(v===QUIZ[i][3]?10:0),0)],
+ ['fc','Flashcards',()=>CARDS.length*2,()=>Object.values(S.fc).filter(v=>v===true).length*2],
+ ['tf','Verdadeiro ou falso',()=>TF.length*5,()=>Object.entries(S.tf).reduce((a,[i,g])=>a+(g===TF[i][2]?5:0),0)],
+ ['ord','Ordene os fatos',()=>ORD.reduce((a,o)=>a+o[2].length*5+10,0),()=>sum(S.ord)],
+ ['match','Causa e consequência',()=>Object.keys(MATCH).length*20,()=>sum(S.match)],
+ ['who','Quem sou eu?',()=>WHO.length*15,()=>sum(S.who)],
+ ['err','Ache os erros',()=>ERR.length*10,()=>sum(S.err)],
+ ['think','Pense como geógrafo',()=>THINK.reduce((a,t)=>a+t[2].length*3,0),()=>Object.values(S.think).reduce((a,v)=>a+v.length*3,0)],
+ ['br','Brasil na prova',()=>BRQ*3,()=>Object.keys(S.br).length*3],
+ ['rot','Roteiro estudado',()=>ROTKEYS.length*3,()=>Object.keys(S.rot).length*3],
+ ['tl','Linha do tempo lida',()=>ERAS.length*5,()=>Object.keys(S.tl).length*5]
+];
+const MAX=()=>CATS.reduce((a,c)=>a+c[2](),0);
+const TOTAL=()=>CATS.reduce((a,c)=>a+c[3](),0);
+const RANKS=[[0,"Turista"],[10,"Mochileiro"],[25,"Explorador"],[40,"Navegador"],[55,"Cartógrafo"],[70,"Geógrafo"],[85,"Diplomata"],[95,"Embaixador"]];
+const patente=p=>{let r=RANKS[0][1];RANKS.forEach(([m,n])=>{if(p>=m)r=n});return r};
+const pctOf=t=>Math.round(t/MAX()*100);
+
+function toast(t){const el=document.getElementById('toast');el.textContent=t;el.hidden=false;clearTimeout(toast.t);toast.t=setTimeout(()=>el.hidden=true,1600);}
+function award(before){const d=TOTAL()-before;if(d>0)toast(`+${d} pontos`);}
+function save(before){if(!CUR){openLogin();return;}USERS[CUR].s=S;USERS[CUR].name=USERS[CUR].name||CUR;LS.set('ggeo3:users',USERS);if(before!==undefined)award(before);renderBar();renderPlacar();queueSync();}
+const need=()=>{if(!CUR){openLogin();return false}return true};
+
+/* ranking: Supabase quando a página roda fora do Claude (Vercel); db do Claude dentro do artefato */
+const SB=window.claude?null:{url:'https://htooiquctobyweffsydx.supabase.co/rest/v1/rpc/',key:'sb_publishable_NsOxvadWUPRl4pGLfpIvEQ_vfaXA7QK',guia:'geo3'};
+async function rpc(fn,body){const r=await fetch(SB.url+fn,{method:'POST',headers:{apikey:SB.key,'Content-Type':'application/json'},body:JSON.stringify(body)});if(!r.ok)throw new Error(await r.text());const t=await r.text();return t?JSON.parse(t):null;}
+function secret(){const u=USERS[CUR];if(!u.secret){let v='';try{v=crypto.randomUUID()+'-'+crypto.randomUUID()}catch(e){v=Date.now().toString(36)+Math.random().toString(36).slice(2)+Math.random().toString(36).slice(2)}u.secret=v;LS.set('ggeo3:users',USERS);}return u.secret;}
+async function fetchRank(){if(!SB)return;try{const d=await rpc('get_ranking',{p_guia:SB.guia,p_secret:CUR?secret():null});RANK=d.map(r=>({name:r.name,total:r.total,pct:r.pct,is_me:r.is_me}));syncState='online';}catch(e){if(!RANK)syncState='offline';}renderPlacar();}
+/* db: ranking compartilhado quando disponível */
+let NAMETAKEN=false,DB=null,UID=null,canWrite=false,OWNER=false,RANK=null,syncState='local',writing=false,again=false,syncT=null;
+const docId=()=>((UID||'anon').replace(/[^A-Za-z0-9_\-~:@+]/g,'_').slice(0,120))+'__'+CUR;
+function queueSync(){if(!CUR)return;if(!SB&&(!DB||!canWrite))return;clearTimeout(syncT);syncT=setTimeout(doSync,1200);}
+async function doSync(){if(writing){again=true;return}writing=true;
+ if(SB){try{const cats={};CATS.forEach(c=>cats[c[0]]=c[3]());await rpc('submit_score',{p_guia:SB.guia,p_secret:secret(),p_name:USERS[CUR].name,p_total:TOTAL(),p_cats:cats});NAMETAKEN=false;await fetchRank();}catch(e){if(/nome_em_uso/.test(String(e&&e.message))){NAMETAKEN=true;renderPlacar();}else syncState='offline';}writing=false;if(again){again=false;doSync();}return;}
+ try{const cats={};CATS.forEach(c=>cats[c[0]]=c[3]());const t=TOTAL();
+  await DB.doc('ranking/'+docId()).set({name:USERS[CUR].name,total:t,pct:pctOf(t),cats,updated:Date.now()});syncState='online';}
+ catch(e){if(e&&(e.code==='invalid_argument'||e.code==='not_granted')){canWrite=false;syncState='readonly';}}
+ writing=false;renderPlacar();if(again){again=false;doSync();}}
+if(SB){canWrite=true;fetchRank();setInterval(()=>{if(!document.hidden&&!document.getElementById('placar').hidden)fetchRank();},20000);}
+(async()=>{try{if(!window.claude||!claude.use)return;const [db,u]=await Promise.all([claude.use('db'),claude.use('user')]);if(!db)return;DB=db;
+ if(u){try{UID=await u.id()}catch(e){}try{OWNER=!!(await u.isOwner())}catch(e){}try{const c=await u.can('data.write');canWrite=c!==false}catch(e){canWrite=true}}else canWrite=true;
+ syncState=canWrite?'online':'readonly';
+ DB.collection('ranking').orderBy('total','desc').limit(300).onSnapshot(s=>{RANK=s.docs.map(d=>Object.assign({id:d.id},d.data()));renderPlacar();},()=>{});
+ renderPlacar();queueSync();}catch(e){}})();
+
+/* barra do jogador e login */
+function renderBar(){const b=document.getElementById('player');const u=CUR&&USERS[CUR];
+ if(!u){b.innerHTML=`<span>Ninguém identificado.</span><button class="btn" id="pbIn">Entrar</button>`;b.querySelector('#pbIn').onclick=openLogin;return;}
+ const t=TOTAL(),p=pctOf(t);b.innerHTML=`<span class="pn">${esc(u.name)}</span><span class="pr">${patente(p)} · <b>${t}</b> pts · ${p}%</span><button class="btn ghost sm" id="pbSw">Trocar</button>`;
+ b.querySelector('#pbSw').onclick=openLogin;}
+function openLogin(){const m=document.getElementById('login');m.hidden=false;const L=document.getElementById('loginList');L.innerHTML='';
+ const ks=Object.keys(USERS);document.getElementById('loginOld').hidden=!ks.length;
+ ks.forEach(k=>{const b=document.createElement('button');b.className='btn ghost';b.textContent=USERS[k].name;b.onclick=()=>login(USERS[k].name);L.appendChild(b);});
+ const i=document.getElementById('nameIn');i.value='';setTimeout(()=>i.focus(),50);}
+async function login(name){name=name.trim().replace(/\s+/g,' ').slice(0,40);const pw=name.split(' ');if(pw.length<2||pw[0].length<2||pw[pw.length-1].length<2){document.getElementById('loginErr').textContent='Digite seu nome e sobrenome.';return;}
+ const k=slug(name);const E=document.getElementById('loginErr');
+ if(SB){try{E.textContent='Conferindo se o nome está livre…';const free=await rpc('name_available',{p_guia:SB.guia,p_name:name,p_secret:USERS[k]&&USERS[k].secret||null});if(free===false){E.textContent='Esse nome já está no ranking da turma. Se for outro aluno, acrescente o segundo sobrenome.';return;}}catch(e){}E.textContent='';}
+ if(!USERS[k])USERS[k]={name,s:blank()};CUR=k;LS.set('ggeo3:cur',k);LS.set('ggeo3:users',USERS);S=Object.assign(blank(),USERS[k].s);
+ document.getElementById('login').hidden=true;document.getElementById('loginErr').textContent='';renderAll();queueSync();if(SB)fetchRank();toast(`Bem-vindo, ${name}!`);}
+document.getElementById('loginForm').addEventListener('submit',e=>{e.preventDefault();login(document.getElementById('nameIn').value);});
+document.getElementById('loginClose').onclick=()=>{document.getElementById('login').hidden=true;};
+
+/* ---------- UI ---------- */
+const ICONS={brasil:'<rect x="3" y="5" width="18" height="14" rx="2"/><path d="M12 7.5 18.5 12 12 16.5 5.5 12z"/><circle cx="12" cy="12" r="2.2"/>',linha:'<path d="M12 3v18"/><circle cx="12" cy="7" r="2.5"/><circle cx="12" cy="17" r="2.5"/><path d="M14.5 7H20M4 17h5.5"/>',
+ roteiro:'<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6h.01M4 12h.01M4 18h.01"/>',
+ resumo:'<path d="M6 3h9l4 4v14H6z"/><path d="M15 3v4h4M9 12h7M9 16h7"/>',
+ quiz:'<circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/>',
+ flash:'<rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v10"/>',
+ desafios:'<circle cx="12" cy="12" r="9"/><circle cx="12" cy="12" r="5"/><circle cx="12" cy="12" r="1"/>',
+ placar:'<path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6"/>'};
+const SHORT={brasil:'Brasil',linha:'Linha',roteiro:'Roteiro',resumo:'Resumo',quiz:'Quiz',flash:'Cards',desafios:'Desafios',placar:'Placar'};
+document.querySelectorAll('.tabs button').forEach(b=>{const k=b.dataset.tab,full=b.textContent;b.setAttribute('aria-label',full.replace('★','').trim());b.innerHTML=`<span class="ti" aria-hidden="true"><svg viewBox="0 0 24 24">${ICONS[k]}</svg></span><span class="tf">${full}</span><span class="ts">${SHORT[k]}</span>`;});
+
+let filter=0;
+const chips=document.getElementById('chips');
+[[0,"Todos"],...Object.keys(CH).map(c=>[+c,"Cap. "+c])].forEach(([v,l])=>{const b=document.createElement('button');b.textContent=l;b.dataset.v=v;b.setAttribute('aria-pressed',v===0);b.onclick=()=>{filter=v;chips.querySelectorAll('button').forEach(x=>x.setAttribute('aria-pressed',+x.dataset.v===v));renderAll();};chips.appendChild(b);});
+const tabs=document.querySelectorAll('.tabs button');
+tabs.forEach(b=>b.addEventListener('click',()=>{tabs.forEach(x=>x.setAttribute('aria-selected',x===b));if(matchMedia('(max-width:700px)').matches){try{window.scrollTo({top:0})}catch(e){}}document.querySelectorAll('section.panel').forEach(s=>s.hidden=s.id!==b.dataset.tab);chips.hidden=b.dataset.tab==='resumo'||b.dataset.tab==='placar';}));
+const inF=c=>filter===0||filter===c;
+
+function renderRoteiro(){const el=document.getElementById('roteiro');el.innerHTML='';
+ Object.keys(R).forEach(c=>{c=+c;if(!inF(c))return;
+  const h=document.createElement('div');h.className='chap-h';h.innerHTML=`<span class="tag">Cap. ${c}</span><h2>${CH[c]}</h2>`;el.appendChild(h);
+  const card=document.createElement('div');card.className='card';const start=1;
+  R[c].forEach(([q,a,chk],i)=>{const key=c+'_'+i;const d=document.createElement('details');
+   d.innerHTML=`<summary><span class="n">${start+i})</span><span>${q}${S.rot[key]?' <span class="okmark">✓</span>':''}</span></summary><div class="ans">${a}${chk?`<p class="check">Confira no livro: ${chk}</p>`:''}<button class="btn ${S.rot[key]?'':'ghost'} sm rotb">${S.rot[key]?'✓ Sei responder':'Sei responder sem olhar (+3)'}</button></div>`;
+   const rb=d.querySelector('.rotb');rb.onclick=()=>{if(!need())return;const b0=TOTAL();if(S.rot[key])delete S.rot[key];else S.rot[key]=1;save(b0);const on=!!S.rot[key];rb.className='btn '+(on?'':'ghost')+' sm rotb';rb.textContent=on?'✓ Sei responder':'Sei responder sem olhar (+3)';const sp=d.querySelector('summary span:last-child');sp.innerHTML=q+(on?' <span class="okmark">✓</span>':'');};
+   card.appendChild(d);});
+  el.appendChild(card);});
+ const n=document.createElement('p');n.className='note';n.textContent='Tente responder em voz alta antes de abrir. Se conseguir sem olhar, marque e ganhe 3 pontos.';el.appendChild(n);}
+
+function renderQuiz(){const L=document.getElementById('quizList');L.innerHTML='';let ok=0,ans=0,n=0;
+ QUIZ.forEach(([c,q,o,ci,w],qi)=>{if(!inF(c))return;n++;const d=document.createElement('div');d.className='card q';
+  d.innerHTML=`<span class="num">Cap. ${c} · Questão ${n} · 10 pts</span><h3></h3><div class="opts"></div><div class="why" hidden></div>`;
+  d.querySelector('h3').textContent=q;const O=d.querySelector('.opts'),W=d.querySelector('.why');
+  const lock=j=>{O.querySelectorAll('button').forEach((x,k)=>{x.disabled=true;if(k===ci)x.classList.add('ok');if(k===j&&j!==ci)x.classList.add('bad')});W.textContent=(j===ci?'Certo! ':'Quase. ')+w;W.hidden=false;};
+  o.forEach((t,j)=>{const b=document.createElement('button');b.textContent=String.fromCharCode(65+j)+') '+t;
+   b.onclick=()=>{if(!need())return;if(S.quiz[qi]!==undefined)return;const b0=TOTAL();S.quiz[qi]=j;lock(j);save(b0);renderQuizScore();};O.appendChild(b);});
+  if(S.quiz[qi]!==undefined)lock(S.quiz[qi]);L.appendChild(d);});
+ renderQuizScore();}
+function renderQuizScore(){let ok=0,ans=0,n=0;QUIZ.forEach((q,qi)=>{if(!inF(q[0]))return;n++;if(S.quiz[qi]!==undefined){ans++;if(S.quiz[qi]===q[3])ok++;}});
+ document.getElementById('scoreTxt').textContent=`Acertos: ${ok} de ${ans} respondidas · ${n-ans} faltando · ${ok*10} pts`;}
+
+let deck=[],pos=0;const card=document.getElementById('flashCard');
+function buildDeck(){deck=CARDS.map((_,i)=>i).filter(i=>inF(CARDS[i][0]));pos=0;}
+function show(){if(!deck.length)return;if(pos>=deck.length)pos=0;const [c,q,a]=CARDS[deck[pos]];card.classList.remove('flipped');
+ document.getElementById('fcQ').textContent=q;document.getElementById('fcA').textContent=a;document.getElementById('fcTag').textContent=`Cap. ${c} · toque para virar`;
+ const st=S.fc[deck[pos]];document.getElementById('fcCount').textContent=`Card ${pos+1} de ${deck.length}`+(st===true?' · ✓ sabia':st===false?' · ✗ rever':'');
+ const all=CARDS.map((_,i)=>i).filter(i=>inF(CARDS[i][0])),y=all.filter(i=>S.fc[i]===true).length,nn=all.filter(i=>S.fc[i]===false).length;
+ document.getElementById('fcStat').textContent=`Sabia: ${y} · Rever: ${nn} · Cada "Sabia" vale 2 pontos.`;}
+card.onclick=()=>card.classList.toggle('flipped');
+const nx=()=>{pos=(pos+1)%deck.length;show()};
+document.getElementById('fcNext').onclick=nx;
+document.getElementById('fcPrev').onclick=()=>{pos=(pos-1+deck.length)%deck.length;show()};
+document.getElementById('fcYes').onclick=()=>{if(!need())return;const b0=TOTAL();S.fc[deck[pos]]=true;save(b0);nx()};
+document.getElementById('fcNo').onclick=()=>{if(!need())return;S.fc[deck[pos]]=false;save();nx()};
+document.getElementById('fcShuffle').onclick=()=>{const m=deck.filter(i=>S.fc[i]===false),r=deck.filter(i=>S.fc[i]!==false);deck=[...sh(m),...sh(r)];pos=0;show();};
+document.getElementById('fcAll').onclick=()=>{const m=CARDS.map((_,i)=>i).filter(i=>inF(CARDS[i][0])&&S.fc[i]===false);if(!m.length){toast('Nenhum card para rever!');return}deck=m;pos=0;show();};
+document.addEventListener('keydown',e=>{if(document.getElementById('flash').hidden)return;if(e.key==='ArrowRight')nx();if(e.key==='ArrowLeft')document.getElementById('fcPrev').click();if(e.key===' '){e.preventDefault();card.click();}});
+
+/* linha do tempo */
+function renderTL(){const T=document.getElementById('tl'),E=document.getElementById('eras');T.innerHTML='';E.innerHTML='';let side=0;
+ ERAS.forEach(([id,yrs,name,intro])=>{const evs=TL.filter(e=>e[0]===id&&inF(e[2]));if(!evs.length)return;
+  const a=document.createElement('a');a.href='#'+id;a.innerHTML=`${name}<span>${yrs}</span>${S.tl[id]?' ✓':''}`;a.onclick=ev=>{ev.preventDefault();document.getElementById(id).scrollIntoView({behavior:matchMedia('(prefers-reduced-motion: reduce)').matches?'auto':'smooth'});};E.appendChild(a);
+  const h=document.createElement('div');h.className='era';h.id=id;h.innerHTML=`<div class="yrs">${yrs}</div><h2>${name}</h2><p>${intro}</p>`;T.appendChild(h);
+  evs.forEach(([,when,c,br,big,t,txt,then,img,cap,cred])=>{const d=document.createElement('article');d.className='ev '+(side++%2?'R':'L')+(br?' br':'')+(big?' big':'');
+   d.innerHTML=`<div class="when"><span class="date">${when}</span><span class="ct">${br?'Brasil · ':''}Cap. ${c}</span></div><h3>${t}</h3><p>${txt}</p>${img&&IMG[img]?`<figure><img src="${IMG[img]}" alt="${cap}" loading="lazy"><figcaption>${cap} <i>Imagem: ${cred}</i></figcaption></figure>`:''}<p class="then"><b>E então…</b> ${then}</p>`;T.appendChild(d);});
+  const done=document.createElement('div');done.className='era-done';const on=!!S.tl[id];
+  done.innerHTML=`<button class="btn ${on?'':'ghost'}">${on?'✓ Fase lida':'Li esta fase (+5)'}</button>`;
+  done.querySelector('button').onclick=()=>{if(!need())return;const b0=TOTAL();if(S.tl[id])delete S.tl[id];else S.tl[id]=1;save(b0);renderTL();};
+  T.appendChild(done);side=0;});}
+
+function renderBrasil(){const el=document.getElementById('brasil');if(!el)return;el.innerHTML=`<div class="card br-hero"><div class="br-flag" aria-hidden="true"></div><h2>O Brasil nisso tudo</h2><p>Cada capítulo tem um gancho com o Brasil. Usar um exemplo brasileiro numa resposta discursiva mostra que você entendeu a matéria, não só decorou.</p><p class="note">Os fatos do Brasil também aparecem na Linha do tempo (marcados como Brasil), no Quiz, nos Cards e nos Desafios.</p></div>`;
+ Object.keys(BR).forEach(c=>{c=+c;if(!inF(c))return;const [intro,items,qs]=BR[c];
+  const h=document.createElement('div');h.className='chap-h';h.innerHTML=`<span class="tag">Cap. ${c}</span><h2>${CH[c]}</h2>`;el.appendChild(h);
+  const card=document.createElement('div');card.className='card';card.innerHTML=`<p>${intro}</p>${BRIMG[c]?fig(...BRIMG[c]):''}<dl class="brl">${items.map(([k,v])=>`<div><dt>${k}</dt><dd>${v}</dd></div>`).join('')}</dl><h3 class="brq">Pode cair na prova</h3>`;
+  qs.forEach(([q,a],i)=>{const key=c+'_'+i,d=document.createElement('details');const on=()=>!!S.br[key];
+   d.innerHTML=`<summary><span class="n">${i+1})</span><span>${q}${on()?' <span class="okmark">✓</span>':''}</span></summary><div class="ans">${a}<button class="btn ${on()?'':'ghost'} sm">${on()?'✓ Sei responder':'Sei responder sem olhar (+3)'}</button></div>`;
+   const bt=d.querySelector('.ans button');bt.onclick=()=>{if(!need())return;const b0=TOTAL();if(S.br[key])delete S.br[key];else S.br[key]=1;save(b0);const v=on();bt.className='btn '+(v?'':'ghost')+' sm';bt.textContent=v?'✓ Sei responder':'Sei responder sem olhar (+3)';d.querySelector('summary span:last-child').innerHTML=q+(v?' <span class="okmark">✓</span>':'');};
+   card.appendChild(d);});
+  el.appendChild(card);});}
+
+/* ---------- DESAFIOS ---------- */
+let mode="ord";const sh=a=>{a=[...a];for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a};
+const M=document.getElementById('modes');
+const modePts=k=>{const c=CATS.find(x=>x[0]===k);return c?`${c[3]()}/${c[2]()} pts`:''};
+function renderModes(){M.innerHTML='';MODES.forEach(([k,t,s])=>{const b=document.createElement('button');b.innerHTML=`${t}<small>${s} · ${modePts(k)}</small>`;b.dataset.k=k;b.setAttribute('aria-pressed',k===mode);b.onclick=()=>{mode=k;renderModes();renderDz();};M.appendChild(b);});}
+const mk=(h)=>{const d=document.createElement('div');d.className='card';d.innerHTML=h;return d};
+function renderDz(){renderModes();const Z=document.getElementById('dz');Z.innerHTML='';
+ if(mode==="ord") ORD.forEach(([c,t,ev],oi)=>{if(!inF(c))return;const mx=ev.length*5+10;
+  const d=mk(`<span class="q num">Cap. ${c} · até ${mx} pts${S.ord[oi]!==undefined?` · seu melhor: ${S.ord[oi]} pts`:''}</span><h3>${t}</h3><p class="note">Toque nos fatos na ordem em que aconteceram, do mais antigo ao mais recente. 5 pts por posição certa e +10 se acertar tudo.</p><div class="ord"></div><div class="row" style="margin-top:12px"><button class="btn">Conferir</button><button class="btn ghost">Tentar de novo</button></div><p class="result"></p>`);
+  const O=d.querySelector('.ord'),[chk,clr]=d.querySelectorAll('.row button'),res=d.querySelector('.result');let pick=[],items=sh(ev.map((_,i)=>i));
+  const draw=()=>{O.innerHTML='';items.forEach(i=>{const b=document.createElement('button');const p=pick.indexOf(i);b.className=p>=0?'sel':'';b.innerHTML=`<span class="badge">${p>=0?p+1:''}</span><span>${ev[i][0]}</span>`;b.onclick=()=>{if(chk.disabled)return;p>=0?pick.splice(p,1):pick.push(i);draw();};O.appendChild(b);});};draw();
+  chk.onclick=()=>{if(!need())return;if(pick.length<ev.length){res.textContent=`Falta ordenar ${ev.length-pick.length} fato(s).`;return;}chk.disabled=true;let ok=0;
+   [...O.children].forEach((b,k)=>{const i=items[k],right=pick.indexOf(i)===i;if(right)ok++;b.classList.add(right?'ok':'bad');b.querySelector('span:last-child').innerHTML+=`<span class="yr">${ev[i][1]} · posição certa: ${i+1}</span>`;});
+   const pts=ok*5+(ok===ev.length?10:0);const b0=TOTAL();if(pts>(S.ord[oi]||0))S.ord[oi]=pts;else if(S.ord[oi]===undefined)S.ord[oi]=pts;save(b0);renderModes();
+   res.textContent=(ok===ev.length?`Perfeito! `:`${ok} de ${ev.length} no lugar certo. `)+`${pts} pts nesta tentativa.`;};
+  clr.onclick=()=>{pick=[];items=sh(ev.map((_,i)=>i));chk.disabled=false;res.textContent='';draw();};Z.appendChild(d);});
+ if(mode==="tf") TF.forEach(([c,s,v,w],ti)=>{if(!inF(c))return;
+  const d=mk(`<span class="q num">Cap. ${c} · 5 pts</span><h3></h3><div class="tf"><button class="btn ghost">Verdadeiro</button><button class="btn ghost">Falso</button></div><div class="why" hidden></div>`);
+  d.querySelector('h3').textContent=s;const [bv,bf]=d.querySelectorAll('.tf button'),W=d.querySelector('.why');
+  const lock=g=>{bv.disabled=bf.disabled=true;const r=g===v,b=g?bv:bf;b.style.background=r?'var(--ok-soft)':'var(--bad-soft)';b.style.borderColor=r?'var(--ok)':'var(--bad)';b.style.color='var(--ink)';
+   W.textContent=(r?'Certo! ':'Não. ')+(v?'É verdadeira. ':'É falsa. ')+w;W.hidden=false;};
+  const ans=g=>{if(!need())return;if(S.tf[ti]!==undefined)return;const b0=TOTAL();S.tf[ti]=g;lock(g);save(b0);renderModes();};
+  bv.onclick=()=>ans(true);bf.onclick=()=>ans(false);if(S.tf[ti]!==undefined)lock(S.tf[ti]);Z.appendChild(d);});
+ if(mode==="match") Object.keys(MATCH).forEach(c=>{if(!inF(+c))return;const P=MATCH[c];const opts=sh(P.map(p=>p[1]));
+  const d=mk(`<span class="q num">Cap. ${c} · 5 pts por par${S.match[c]!==undefined?` · seu melhor: ${S.match[c]} pts`:''}</span><h3>Qual é a consequência de cada causa?</h3><div class="match"></div><div class="row" style="margin-top:12px"><button class="btn">Conferir</button></div><p class="result"></p>`);
+  const X=d.querySelector('.match');P.forEach(([cause],i)=>{const l=document.createElement('label');l.innerHTML=`<span>${cause} →</span><select id="m${c}_${i}"><option value="">Escolha…</option>${opts.map(()=>`<option></option>`).join('')}</select>`;
+   const s=l.querySelector('select');[...s.options].slice(1).forEach((op,k)=>{op.textContent=opts[k];op.value=opts[k];});X.appendChild(l);});
+  d.querySelector('.btn').onclick=()=>{if(!need())return;let ok=0;X.querySelectorAll('select').forEach((s,i)=>{const r=s.value===P[i][1];if(r)ok++;s.className=r?'ok':'bad';});
+   const pts=ok*5,b0=TOTAL();if(pts>(S.match[c]||0)||S.match[c]===undefined)S.match[c]=Math.max(pts,S.match[c]||0);save(b0);renderModes();
+   d.querySelector('.result').textContent=`${ok} de ${P.length} certas (${pts} pts).`+(ok<P.length?' Corrija as vermelhas e confira de novo.':' Muito bem!');};
+  Z.appendChild(d);});
+ if(mode==="who") WHO.forEach(([c,cl,a],wi)=>{if(!inF(c))return;
+  const d=mk(`<span class="q num">Cap. ${c} · 15 pts com 1 pista, 10 com 2, 5 com 3</span><h3>Quem sou eu?</h3><ol class="clues"></ol><div class="row" style="margin-top:12px"><button class="btn ghost">Mais uma pista</button><button class="btn">Revelar</button></div><div class="row judge" hidden style="margin-top:10px"><button class="btn okb">Acertei</button><button class="btn badb">Errei</button></div><p class="result"></p>`);
+  const L=d.querySelector('.clues'),[more,rev]=d.querySelectorAll('.row:not(.judge) button'),J=d.querySelector('.judge'),[jy,jn]=J.querySelectorAll('button'),res=d.querySelector('.result');let n=0,used=0;
+  const add=()=>{if(n<cl.length){const li=document.createElement('li');li.textContent=cl[n++];L.appendChild(li);}if(n>=cl.length)more.disabled=true;};
+  const done=()=>{while(n<cl.length)add();more.disabled=rev.disabled=true;};
+  if(S.who[wi]!==undefined){done();res.textContent=`Resposta: ${a}. Você fez ${S.who[wi]} pts.`;}
+  else{add();more.onclick=add;rev.onclick=()=>{if(!need())return;used=n;done();res.textContent=`Resposta: ${a}. Você acertou usando ${used} pista(s)?`;J.hidden=false;};
+   const judge=ok=>{const b0=TOTAL();S.who[wi]=ok?[15,10,5][used-1]:0;save(b0);J.hidden=true;renderModes();res.textContent=`Resposta: ${a}. Você fez ${S.who[wi]} pts.`;};jy.onclick=()=>judge(true);jn.onclick=()=>judge(false);}
+  Z.appendChild(d);});
+ if(mode==="err") ERR.forEach(([c,s,e],ei)=>{if(!inF(c))return;
+  const d=mk(`<span class="q num">Cap. ${c} · até 10 pts</span><h3>Esta frase tem 2 erros. Quais?</h3><p class="err"></p><details><summary><span class="n">?</span><span>Ver os erros</span></summary><div class="ans"><ul class="pts">${e.map(x=>`<li>${x}</li>`).join('')}</ul><p class="note" style="margin-top:10px">Quantos você achou antes de abrir?</p><div class="row"><button class="btn sm" data-p="10">Os 2 (+10)</button><button class="btn sm" data-p="5">Só 1 (+5)</button><button class="btn sm" data-p="0">Nenhum</button></div></div></details>`);
+  d.querySelector('.err').textContent=`“${s}”`;const bs=d.querySelectorAll('[data-p]');
+  const mark=()=>bs.forEach(b=>b.classList.toggle('ghost',S.err[ei]!==+b.dataset.p));mark();
+  bs.forEach(b=>b.onclick=()=>{if(!need())return;const b0=TOTAL();S.err[ei]=+b.dataset.p;save(b0);mark();renderModes();});
+  if(S.err[ei]!==undefined)d.querySelector('details').open=true;Z.appendChild(d);});
+ if(mode==="think") THINK.forEach(([c,q,pts],ti)=>{if(!inF(c))return;const got=S.think[ti]||[];
+  const d=mk(`<span class="q num">Cap. ${c} · 3 pts por ponto citado</span><h3></h3><p class="note">Responda com suas palavras, em voz alta ou por escrito. Depois abra a lista e marque o que você citou.</p><details${got.length?' open':''}><summary><span class="n">✓</span><span>O que uma boa resposta tem</span></summary><div class="ans"><ul class="checklist">${pts.map((p,k)=>`<li><label><input type="checkbox" id="t${c}_${ti}_${k}"${got.includes(k)?' checked':''}><span>${p}</span></label></li>`).join('')}</ul><p class="result"></p></div></details>`);
+  d.querySelector('h3').textContent=q;const R2=d.querySelector('.result');
+  const upd=()=>{const n=d.querySelectorAll('input:checked').length;R2.textContent=`${n} de ${pts.length} pontos · ${n*3} pts`+(n>=3?' · ótima resposta!':n>=2?' · boa, dá para completar':'');};upd();
+  d.querySelectorAll('input').forEach((x,k)=>x.onchange=()=>{if(!need()){x.checked=!x.checked;return;}const b0=TOTAL();const arr=[...d.querySelectorAll('input')].map((y,j)=>y.checked?j:-1).filter(j=>j>=0);S.think[ti]=arr;save(b0);upd();renderModes();});
+  Z.appendChild(d);});
+}
+
+/* ---------- MISSÕES E RELATÓRIO ---------- */
+const nk=o=>Object.keys(o).filter(k=>o[k]!==undefined&&o[k]!==null).length;
+const MISS=()=>[
+ ['Quiz','quiz',nk(S.quiz),QUIZ.length],
+ ['Flashcards','flash',nk(S.fc),CARDS.length],
+ ['Verdadeiro ou falso','tf',nk(S.tf),TF.length],
+ ['Ordene os fatos','ord',nk(S.ord),ORD.length],
+ ['Causa e consequência','match',nk(S.match),Object.keys(MATCH).length],
+ ['Quem sou eu?','who',nk(S.who),WHO.length],
+ ['Ache os erros','err',nk(S.err),ERR.length],
+ ['Pense como geógrafo','think',nk(S.think),THINK.length]
+];
+const allDone=()=>MISS().every(m=>m[2]>=m[3]);
+function goMission(k){if(k==='quiz'||k==='flash'){document.querySelector(`.tabs [data-tab="${k}"]`).click();}else{mode=k;renderDz();document.querySelector('.tabs [data-tab="desafios"]').click();}window.scrollTo(0,0);}
+function openReport(pos,ntot){const u=USERS[CUR];const t=TOTAL(),p=pctOf(t),acc=chapterAcc();
+ const ch=Object.keys(acc).map(c=>({c,pc:acc[c][1]?acc[c][0]/acc[c][1]:0})).sort((a,b)=>b.pc-a.pc);
+ const best=ch[0],worst=ch[ch.length-1];const dt=new Date().toLocaleDateString('pt-BR',{day:'2-digit',month:'long',year:'numeric'});
+ const R2=document.getElementById('report');
+ R2.innerHTML=`<div class="rep" id="repCard">
+  <div class="rep-top"><span>Relatório de expedição</span><span>Nº ${String(t).padStart(4,'0')}</span></div>
+  <div class="rep-seal">EXPEDIÇÃO<br>CONCLUÍDA</div>
+  <div class="rep-sub">Geografia 3º tri · Economia mundial e globalização</div>
+  <div class="rep-name">${esc(u.name)}</div>
+  <div class="rep-date">${dt}</div>
+  <div class="rep-big"><div><b>${patente(p)}</b><span>patente</span></div><div><b>${t}</b><span>de ${MAX()} pts</span></div><div><b>${p}%</b><span>aproveitamento</span></div>${pos?`<div><b>${pos}º</b><span>de ${ntot} no ranking</span></div>`:''}</div>
+  <div class="rep-list">${CATS.map(([k,l,m,g])=>{const v=g(),M2=m(),pc=M2?Math.round(v/M2*100):0;return `<div class="rep-row"><span>${l}</span><div class="meter sm"><span style="width:${pc}%"></span></div><b>${pc}%</b></div>`}).join('')}</div>
+  <div class="rep-ch"><div><span>Mais forte em</span><b>Cap. ${best.c}</b><i>${CH[best.c]}</i></div><div><span>Revisar</span><b>Cap. ${worst.c}</b><i>${CH[worst.c]}</i></div></div>
+  <div class="rep-foot">Tire um print desta tela e desafie seus amigos a bater sua pontuação!</div>
+ </div>
+ <div class="row rep-actions"><button class="btn" id="repClose">Fechar relatório</button></div>`;
+ R2.hidden=false;R2.querySelector('#repClose').onclick=()=>R2.hidden=true;R2.scrollTop=0;}
+
+/* ---------- PLACAR ---------- */
+let confirmReset=false,confirmWipe=false;
+function chapterAcc(){const o={};Object.keys(CH).forEach(c=>o[c]=[0,0]);
+ QUIZ.forEach((q,i)=>{if(S.quiz[i]!==undefined){o[q[0]][1]++;if(S.quiz[i]===q[3])o[q[0]][0]++;}});
+ TF.forEach((t,i)=>{if(S.tf[i]!==undefined){o[t[0]][1]++;if(S.tf[i]===t[2])o[t[0]][0]++;}});return o;}
+function renderPlacar(){const P=document.getElementById('placar');if(!P)return;renderBar();
+ const u=CUR&&USERS[CUR];
+ if(!u){P.innerHTML=`<div class="card"><h2>Placar</h2><p>Digite seu nome para começar a pontuar.</p><button class="btn" id="plIn">Entrar</button></div>`;P.querySelector('#plIn').onclick=openLogin;return;}
+ const t=TOTAL(),mx=MAX(),p=pctOf(t),acc=chapterAcc();
+ let rows=[];
+ if(RANK){rows=RANK.map(r=>({name:r.name,total:r.total,pct:r.pct,me:r.is_me!==undefined?r.is_me:(CUR&&r.id===docId())}));if(!rows.some(r=>r.me))rows.push({name:u.name,total:t,pct:p,me:true,local:true});}
+ else rows=Object.keys(USERS).map(k=>{const s0=S;S=Object.assign(blank(),USERS[k].s);const tt=TOTAL();S=s0;return{name:USERS[k].name,total:tt,pct:pctOf(tt),me:k===CUR}});
+ rows.forEach(r=>{if(r.me){r.total=t;r.pct=p}});rows.sort((a,b)=>b.total-a.total);const pos=rows.findIndex(r=>r.me)+1;
+ const medal=i=>i===0?'🥇':i===1?'🥈':i===2?'🥉':(i+1)+'º';
+ const sync=SB?(NAMETAKEN?'⚠ Outro aluno já usa o nome "'+esc(u.name)+'" no ranking. Seus pontos ficam só neste aparelho: toque em Trocar e entre com seu nome e sobrenome completos.':syncState==='offline'?'Sem conexão com o ranking agora. Seus pontos continuam salvos neste aparelho e sobem quando a internet voltar.':'Ranking da turma ao vivo: todo mundo que joga por este link aparece aqui. Atualiza sozinho.'):RANK?(syncState==='online'?'Ranking da turma ao vivo. Seu placar é enviado automaticamente.':'Você está vendo o ranking da turma, mas seu placar fica salvo só neste aparelho. Peça ao dono do guia para te convidar como editor para entrar no ranking.'):'Ranking de quem jogou neste aparelho. Seu placar fica salvo neste navegador.';
+ P.innerHTML=`
+ <div class="card dash-hero">
+  <div class="dh-l"><span class="q num">Passaporte de</span><div class="dh-name">${esc(u.name)}</div><div class="dh-rank">Patente: <b>${patente(p)}</b></div>
+   <div class="meter" role="img" aria-label="${p}% concluído"><span style="width:${p}%"></span></div><div class="note">${p}% do total · próxima patente: ${(RANKS.find(r=>r[0]>p)||[100,'—'])[1]}</div></div>
+  <div class="dh-stats"><div><b>${t}</b><span>pontos de ${mx}</span></div><div><b>${pos}º</b><span>no ranking</span></div></div>
+ </div>
+ <div class="card miss ${allDone()?'done':''}"><h2>${allDone()?'Missão cumprida!':'Missões para liberar o relatório'}</h2>
+  <p class="${allDone()?'':'warn'}">${allDone()?'Você terminou todas as atividades. Gere seu relatório e compartilhe com os amigos.':'<b>Atenção:</b> para gerar o relatório final, você precisa finalizar TODAS as atividades abaixo: responder todo o quiz, marcar todos os flashcards e completar todos os desafios. Roteiro e linha do tempo contam pontos extras.'}</p>
+  <div class="mlist">${MISS().map(([l,k,d,n])=>`<button class="mi ${d>=n?'ok':''}" data-go="${k}"><span class="mk">${d>=n?'✓':''}</span><span class="ml">${l}</span><span class="mn">${Math.min(d,n)}/${n}</span></button>`).join('')}</div>
+  <button class="btn big" id="repGo" ${allDone()?'':'disabled'}>${allDone()?'★ Gerar meu relatório de missão':'Relatório bloqueado · finalize tudo'}</button>
+ </div>
+ <div class="card"><h2>Pontos por atividade</h2><div class="bars">${CATS.map(([k,l,m,g])=>{const v=g(),M2=m(),pc=M2?Math.round(v/M2*100):0;return `<div class="bar"><div class="bl"><span>${l}</span><span class="bv">${v}/${M2}</span></div><div class="meter sm"><span style="width:${pc}%"></span></div></div>`}).join('')}</div></div>
+ <div class="card"><h2>Acertos por capítulo</h2><p class="note">Quiz + verdadeiro ou falso. Mostra onde estudar mais.</p><div class="chaps">${Object.keys(acc).map(c=>{const [ok,n]=acc[c],pc=n?Math.round(ok/n*100):null;return `<div class="chap ${pc===null?'':pc>=70?'good':pc>=40?'mid':'low'}"><span class="cn">Cap. ${c}</span><b>${pc===null?'—':pc+'%'}</b><span class="cs">${n?`${ok} de ${n} certas`:'nada respondido'}</span><span class="ct2">${CH[c]}</span></div>`}).join('')}</div></div>
+ <div class="card"><h2>Ranking</h2><p class="note">${sync}</p><ol class="rank">${rows.slice(0,50).map((r,i)=>`<li class="${r.me?'me':''}"><span class="rp">${medal(i)}</span><span class="rn">${esc(r.name)}${r.me?' (você)':''}${r.local?' · neste aparelho':''}</span><span class="rpat">${patente(r.pct||0)}</span><span class="rt">${r.total} pts</span></li>`).join('')}</ol></div>
+ <div class="card danger"><h2>Zerar</h2>
+  ${confirmReset?`<p><b>Tem certeza?</b> Todo o progresso de ${esc(u.name)} volta a zero e não dá para desfazer.</p><div class="row"><button class="btn badb" id="rsYes">Sim, zerar tudo</button><button class="btn ghost" id="rsNo">Cancelar</button></div>`:`<p>Começa tudo do zero para ${esc(u.name)}: quiz, flashcards, desafios, roteiro e linha do tempo.</p><div class="row"><button class="btn badb" id="rsGo">Zerar meu progresso</button><button class="btn ghost" id="rsSw">Trocar de jogador</button></div>`}
+  ${OWNER&&RANK?(confirmWipe?`<p style="margin-top:14px"><b>Apagar o ranking da turma inteira?</b> Os placares salvos em cada aparelho continuam lá.</p><div class="row"><button class="btn badb" id="wpYes">Sim, apagar ranking</button><button class="btn ghost" id="wpNo">Cancelar</button></div>`:`<p class="note" style="margin-top:14px">Você é o dono do guia.</p><button class="btn ghost" id="wpGo">Apagar o ranking da turma</button>`):''}
+ </div>`;
+ const q=id=>P.querySelector('#'+id);
+ P.querySelectorAll('[data-go]').forEach(b=>b.onclick=()=>goMission(b.dataset.go));
+ if(q('repGo'))q('repGo').onclick=()=>{if(allDone())openReport(pos,rows.length);};
+ if(q('rsGo'))q('rsGo').onclick=()=>{confirmReset=true;renderPlacar();};
+ if(q('rsSw'))q('rsSw').onclick=openLogin;
+ if(q('rsNo'))q('rsNo').onclick=()=>{confirmReset=false;renderPlacar();};
+ if(q('rsYes'))q('rsYes').onclick=async()=>{confirmReset=false;S=blank();USERS[CUR].s=S;LS.set('ggeo3:users',USERS);if(SB){try{await rpc('delete_score',{p_guia:SB.guia,p_secret:secret()});await fetchRank();}catch(e){}}else if(DB&&canWrite){try{await DB.doc('ranking/'+docId()).delete()}catch(e){}}renderAll();toast('Progresso zerado');};
+ if(q('wpGo'))q('wpGo').onclick=()=>{confirmWipe=true;renderPlacar();};
+ if(q('wpNo'))q('wpNo').onclick=()=>{confirmWipe=false;renderPlacar();};
+ if(q('wpYes'))q('wpYes').onclick=async()=>{confirmWipe=false;try{const s=await DB.collection('ranking').get();for(const d of s.docs){await DB.doc('ranking/'+d.id).delete();}}catch(e){}renderPlacar();toast('Ranking apagado');};
+}
+
+function renderAll(){renderBar();renderTL();renderRoteiro();renderBrasil();renderQuiz();buildDeck();show();renderDz();renderPlacar();}
+renderAll();
+if(!CUR)openLogin();
+</script>
+</body></html>

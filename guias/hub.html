@@ -1,0 +1,390 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#070b14">
+<title>Escola do Papai · Guia de Estudos</title>
+<link rel="preconnect" href="https://htooiquctobyweffsydx.supabase.co">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;800&family=Sora:wght@400;600;700;800&family=IBM+Plex+Mono:wght@400;600&display=swap">
+<style>
+:root{--night:#070b14;--panel:#0e1626;--line:#22314a;--ink:#eef2f8;--muted:#93a3bb;--gold:#f4c25b;--gold2:#ffe3a1;--geo:#3fb6c9;--his:#c9b45f;--ok:#59d48b;--hot:#ff8a5b}
+*,*::before,*::after{box-sizing:border-box}
+html,body{margin:0;min-height:100%}
+body{background:var(--night);color:var(--ink);font:16px/1.5 Sora,system-ui,sans-serif;-webkit-font-smoothing:antialiased}
+[hidden]{display:none!important}
+button{font:inherit}
+
+/* =================== PORTAL =================== */
+#portal{position:fixed;inset:0;overflow:hidden;background:#05070d;z-index:20}
+.layer{position:absolute;inset:-4%;will-change:transform}
+.layer>img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;object-position:62% 30%}
+#lyBg>img{animation:bgIn 2.4s cubic-bezier(.2,.7,.2,1) both}
+@keyframes bgIn{from{transform:scale(1.25);filter:brightness(.15) blur(8px)}to{transform:scale(1);filter:brightness(.9)}}
+#lyMe>img{animation:meIn 1.8s .5s cubic-bezier(.2,.8,.2,1) both;filter:drop-shadow(0 0 40px rgba(255,190,90,.25))}
+@keyframes meIn{from{opacity:0;transform:translateY(6%) scale(1.04)}to{opacity:1;transform:none}}
+#sparks{position:absolute;inset:0;width:100%;height:100%;pointer-events:none}
+.vign{position:absolute;inset:0;pointer-events:none;background:
+  radial-gradient(ellipse at 62% 40%,transparent 35%,rgba(5,7,13,.5) 75%,rgba(5,7,13,.88) 100%),
+  linear-gradient(90deg,rgba(5,7,13,.92) 0%,rgba(5,7,13,.5) 26%,transparent 46%)}
+.orbs{pointer-events:none}
+.orb{position:absolute;left:var(--x);top:var(--y);transform:translate(-50%,-50%);pointer-events:auto;background:none;border:0;padding:0;color:var(--ink);cursor:pointer;opacity:0;animation:orbIn .8s var(--d,1.6s) cubic-bezier(.2,.9,.3,1.3) forwards}
+@keyframes orbIn{from{opacity:0;transform:translate(-50%,-30%) scale(.4)}to{opacity:1;transform:translate(-50%,-50%) scale(1)}}
+.orb .bob{display:flex;flex-direction:column;align-items:center;gap:8px;animation:bob var(--t,5s) ease-in-out infinite alternate}
+@keyframes bob{from{transform:translateY(-7px)}to{transform:translateY(7px)}}
+.orb .ball{position:relative;width:var(--s,72px);height:var(--s,72px);border-radius:50%;display:grid;place-items:center;
+  background:radial-gradient(circle at 35% 30%,rgba(255,255,255,.35),rgba(255,255,255,.06) 45%,rgba(10,16,30,.6) 75%);
+  border:1.5px solid color-mix(in srgb,var(--c) 70%,white);backdrop-filter:blur(6px);-webkit-backdrop-filter:blur(6px);
+  box-shadow:0 0 0 6px color-mix(in srgb,var(--c) 18%,transparent),0 0 34px 4px color-mix(in srgb,var(--c) 55%,transparent),inset 0 0 18px color-mix(in srgb,var(--c) 40%,transparent);transition:transform .25s,box-shadow .25s}
+.orb .ball::after{content:"";position:absolute;inset:-11px;border-radius:50%;border:1px dashed color-mix(in srgb,var(--c) 60%,transparent);animation:spin 14s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+.orb svg{width:46%;height:46%;stroke:#fff;fill:none;stroke-width:1.7;stroke-linecap:round;stroke-linejoin:round;filter:drop-shadow(0 0 6px var(--c))}
+.orb .lbl{font:700 13px Sora,sans-serif;letter-spacing:.03em;padding:4px 11px 3px;border-radius:12px;background:rgba(7,11,20,.75);border:1px solid color-mix(in srgb,var(--c) 55%,transparent);white-space:nowrap;line-height:1.2}
+.orb .lbl small{display:block;text-align:center;font:400 10px "IBM Plex Mono",monospace;color:var(--gold2);letter-spacing:.05em}
+.orb:hover .ball,.orb:focus-visible .ball{transform:scale(1.12);box-shadow:0 0 0 8px color-mix(in srgb,var(--c) 25%,transparent),0 0 60px 10px color-mix(in srgb,var(--c) 70%,transparent),inset 0 0 22px color-mix(in srgb,var(--c) 50%,transparent)}
+.orb:focus-visible{outline:none}.orb:focus-visible .lbl{outline:2px solid var(--gold);outline-offset:2px}
+.orb.lock{cursor:default}
+.orb.lock .ball{filter:saturate(.35) brightness(.7)}
+.orb.lock .lbl{color:#c4ccda}
+.orb.lock .lk{position:absolute;right:-3px;bottom:-3px;width:22px;height:22px;border-radius:50%;background:#1a2336;border:1px solid #5b6a82;display:grid;place-items:center;font-size:11px}
+.ptxt{position:absolute;z-index:6;left:clamp(20px,5vw,72px);top:50%;transform:translateY(-50%);max-width:min(440px,38vw)}
+.ptxt .k{font:600 12px "IBM Plex Mono",monospace;letter-spacing:.18em;color:var(--gold);text-transform:uppercase;opacity:0;animation:fadeUp .9s 1.2s forwards}
+.ptxt h1{font:800 clamp(38px,5.2vw,74px)/1 Cinzel,Georgia,serif;margin:.25em 0 .3em;background:linear-gradient(180deg,#fff7df 20%,#f4c25b 70%,#b07a1f);-webkit-background-clip:text;background-clip:text;color:transparent;filter:drop-shadow(0 4px 24px rgba(244,194,91,.25));opacity:0;animation:fadeUp 1s 1.4s forwards}
+.ptxt p{color:#cfd7e6;margin:0 0 26px;font-size:17px;opacity:0;animation:fadeUp 1s 1.7s forwards}
+@keyframes fadeUp{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:none}}
+.go{display:inline-flex;align-items:center;gap:12px;min-height:56px;padding:0 26px;border-radius:14px;border:0;cursor:pointer;font:800 17px Sora,sans-serif;color:#1d1405;background:linear-gradient(180deg,#ffe7a6,#f4b83c);box-shadow:0 0 0 1px #fff3 inset,0 10px 40px -8px rgba(244,184,60,.85);opacity:0;animation:fadeUp .9s 2s forwards,pulseG 2.4s 3s ease-in-out infinite}
+@keyframes pulseG{50%{box-shadow:0 0 0 1px #fff3 inset,0 10px 60px -2px rgba(255,205,100,1)}}
+.go:active{transform:translateY(2px)}
+.go span{display:inline-block;transition:transform .2s}.go:hover span{transform:translateX(4px)}
+.hint{display:block;margin-top:14px;font:400 12px "IBM Plex Mono",monospace;color:var(--muted);opacity:0;animation:fadeUp .9s 2.4s forwards}
+.skip{position:absolute;z-index:7;right:16px;top:calc(14px + env(safe-area-inset-top,0px));font:600 12px "IBM Plex Mono",monospace;color:#cfd7e6;background:rgba(7,11,20,.55);border:1px solid #ffffff33;border-radius:999px;padding:8px 14px;cursor:pointer;-webkit-backdrop-filter:blur(6px);backdrop-filter:blur(6px)}
+#flash{position:fixed;inset:0;z-index:50;pointer-events:none;background:radial-gradient(circle at var(--fx2,50%) var(--fy2,50%),#fff6d6 0,#f4c25b 18%,#070b14 60%);clip-path:circle(0 at var(--fx2,50%) var(--fy2,50%))}
+#flash.on{transition:clip-path .7s cubic-bezier(.6,0,.4,1);clip-path:circle(150% at var(--fx2,50%) var(--fy2,50%))}
+#flash.off{transition:opacity .6s ease;opacity:0}
+@media (max-aspect-ratio:1/1){
+  .layer>img{object-position:64% 20%}
+  .vign{background:radial-gradient(ellipse at 50% 30%,transparent 30%,rgba(5,7,13,.45) 70%),linear-gradient(180deg,transparent 42%,rgba(5,7,13,.85) 66%,#05070d 90%)}
+  .ptxt{left:20px;right:20px;top:auto;bottom:calc(20px + env(safe-area-inset-bottom,0px));transform:none;max-width:none}
+  .ptxt h1{font-size:clamp(32px,9.5vw,50px)}
+  .ptxt p{font-size:15px;margin-bottom:14px}
+  .go{width:100%;justify-content:center}
+  .hint{text-align:center}
+  .orb .ball{width:58px;height:58px}
+  .orb.big .ball{width:66px;height:66px}
+  .orb .lbl{font-size:11.5px}
+}
+@media (prefers-reduced-motion:reduce){#portal *,#escola *{animation-duration:.01s!important;animation-delay:0s!important;animation-iteration-count:1!important}}
+
+/* =================== ESCOLA (sistema) =================== */
+#escola{min-height:100vh;background:
+  radial-gradient(900px 500px at 85% -10%,rgba(244,194,91,.12),transparent 60%),
+  radial-gradient(700px 500px at -10% 10%,rgba(63,182,201,.10),transparent 60%),var(--night)}
+#escola.in{animation:fadeUp .7s both}
+.top{position:sticky;top:0;z-index:10;display:flex;align-items:center;gap:10px;padding:calc(10px + env(safe-area-inset-top,0px)) clamp(14px,3vw,28px) 10px;background:rgba(7,11,20,.8);-webkit-backdrop-filter:blur(12px);backdrop-filter:blur(12px);border-bottom:1px solid var(--line)}
+.brand{display:flex;align-items:center;gap:10px;text-decoration:none;color:inherit;min-width:0}
+.brand img{width:38px;height:38px;border-radius:50%;border:2px solid var(--gold);box-shadow:0 0 14px rgba(244,194,91,.45);flex:none}
+.brand b{display:block;font:800 15px/1.1 Sora,sans-serif}
+.brand small{display:block;font:400 11px "IBM Plex Mono",monospace;color:var(--muted)}
+.top .sp{flex:1}
+.who{display:flex;align-items:center;gap:8px;font:600 13px Sora,sans-serif;background:var(--panel);border:1px solid var(--line);border-radius:999px;padding:5px 12px 5px 6px;white-space:nowrap;max-width:44vw;overflow:hidden}
+.who span{overflow:hidden;text-overflow:ellipsis}
+.who i{width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-style:normal;font-size:12px;font-weight:800;background:linear-gradient(135deg,var(--geo),#2a6f9e);color:#fff;flex:none}
+.ibtn{display:grid;place-items:center;width:40px;height:40px;border-radius:12px;border:1px solid var(--line);background:var(--panel);color:var(--ink);cursor:pointer;flex:none}
+.ibtn svg{width:20px;height:20px;stroke:currentColor;fill:none;stroke-width:1.8;stroke-linecap:round;stroke-linejoin:round}
+.wrap{max-width:1120px;margin:0 auto;padding:22px clamp(14px,3vw,28px) 60px}
+.hello{display:grid;grid-template-columns:1fr auto;gap:16px;align-items:center;margin-bottom:16px}
+.hello h2{font:800 clamp(24px,4vw,34px)/1.15 Sora,sans-serif;margin:0}
+.hello h2 em{font-style:normal;color:var(--gold)}
+.hello p{margin:6px 0 0;color:var(--muted)}
+.exam{display:flex;align-items:center;gap:12px;background:linear-gradient(135deg,rgba(255,138,91,.16),rgba(244,194,91,.10));border:1px solid rgba(255,138,91,.45);border-radius:16px;padding:10px 16px}
+.exam b{font:800 30px/1 Sora,sans-serif;color:var(--hot)}
+.exam span{font:600 12px/1.3 Sora,sans-serif;color:#ffd9c9}
+.speech{display:flex;gap:12px;align-items:center;background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:12px 14px;margin-bottom:20px}
+.speech img{width:44px;height:44px;border-radius:50%;border:2px solid var(--gold);flex:none}
+.speech p{margin:0;font-size:15px}
+.speech p b{color:var(--gold)}
+.kpis{display:grid;grid-template-columns:repeat(4,1fr);gap:12px;margin-bottom:28px}
+.kpi{background:var(--panel);border:1px solid var(--line);border-radius:16px;padding:14px 16px;position:relative;overflow:hidden}
+.kpi::after{content:"";position:absolute;right:-20px;top:-20px;width:80px;height:80px;border-radius:50%;background:radial-gradient(var(--kc),transparent 70%);opacity:.22}
+.kpi span{font:400 11px "IBM Plex Mono",monospace;color:var(--muted);letter-spacing:.06em;text-transform:uppercase}
+.kpi b{display:block;font:800 26px/1.2 Sora,sans-serif;margin-top:4px}
+.kpi small{color:var(--muted);font-size:12px}
+h3.sec{display:flex;align-items:center;gap:10px;font:700 12px "IBM Plex Mono",monospace;letter-spacing:.14em;text-transform:uppercase;color:var(--muted);margin:0 0 12px}
+h3.sec::after{content:"";flex:1;height:1px;background:var(--line)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:16px;margin-bottom:30px}
+.app{position:relative;display:flex;flex-direction:column;text-decoration:none;color:inherit;background:var(--panel);border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:transform .25s,border-color .25s,box-shadow .25s}
+.app:hover{transform:translateY(-4px);border-color:color-mix(in srgb,var(--c) 60%,var(--line));box-shadow:0 18px 40px -20px color-mix(in srgb,var(--c) 70%,transparent)}
+.app.hl{animation:hl 1.4s 2 ease-in-out}
+@keyframes hl{50%{box-shadow:0 0 0 3px var(--c),0 0 40px 6px color-mix(in srgb,var(--c) 60%,transparent)}}
+.app .pic{position:relative;aspect-ratio:16/9;overflow:hidden;background:#0b1422}
+.app .pic img,.app .pic svg{width:100%;height:100%;object-fit:cover;display:block;transition:transform .6s}
+.app:hover .pic svg{transform:scale(1.05)}
+.app:hover .pic img{transform:scale(1.05)}
+.app .pic::after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,transparent 45%,rgba(14,22,38,.95))}
+.badge{position:absolute;z-index:1;left:12px;top:12px;font:700 11px "IBM Plex Mono",monospace;letter-spacing:.06em;padding:4px 10px;border-radius:999px;background:rgba(7,11,20,.78);border:1px solid var(--bc,var(--c));color:#fff}
+.badge.live::before{content:"";display:inline-block;width:7px;height:7px;border-radius:50%;background:var(--ok);margin-right:6px;vertical-align:1px;box-shadow:0 0 8px var(--ok);animation:blink 1.4s infinite}
+@keyframes blink{50%{opacity:.3}}
+.stamp{position:absolute;z-index:1;right:12px;top:10px;transform:rotate(-8deg);border:3px double #ff8a7a;color:#ffc0b5;padding:4px 10px;text-align:center;font:800 11px/1 Sora,sans-serif;letter-spacing:.08em;background:rgba(7,11,20,.65)}
+.stamp strong{display:block;font-size:24px;margin-top:2px}
+.app .bd{padding:4px 18px 18px;margin-top:-28px;position:relative;z-index:1;display:flex;flex-direction:column;gap:10px;flex:1}
+.app .sub{font:600 11px "IBM Plex Mono",monospace;letter-spacing:.1em;color:var(--c);text-transform:uppercase}
+.app h4{margin:0;font:800 21px/1.2 Sora,sans-serif}
+.app .desc{margin:0;color:var(--muted);font-size:14px}
+.prog{display:grid;gap:6px}
+.prog .row{display:flex;justify-content:space-between;font:400 12px "IBM Plex Mono",monospace;color:var(--muted)}
+.prog .row b{color:var(--ink);font-weight:600}
+.bar{height:8px;border-radius:999px;background:#1c2a42;overflow:hidden}
+.bar i{display:block;height:100%;width:0;border-radius:999px;background:linear-gradient(90deg,color-mix(in srgb,var(--c) 55%,transparent),var(--c));transition:width 1.2s cubic-bezier(.2,.8,.2,1)}
+.meta{display:flex;flex-wrap:wrap;gap:6px}
+.meta span{font:600 11px "IBM Plex Mono",monospace;padding:3px 9px;border-radius:999px;background:#1a2740;border:1px solid var(--line);color:#c9d3e3}
+.app .act{margin-top:auto;display:flex;align-items:center;justify-content:space-between;padding-top:6px}
+.app .act b{font:800 15px Sora,sans-serif;color:var(--c)}
+.app .act svg{width:22px;height:22px;stroke:var(--c);fill:none;stroke-width:2;transition:transform .2s}
+.app:hover .act svg{transform:translateX(4px)}
+.soon{display:grid;grid-template-columns:repeat(auto-fill,minmax(160px,1fr));gap:12px;margin-bottom:30px}
+.soon div{display:flex;align-items:center;gap:12px;background:var(--panel);border:1px dashed #33435f;border-radius:16px;padding:12px 14px}
+.soon svg{width:30px;height:30px;stroke:#7d8aa3;fill:none;stroke-width:1.6;flex:none}
+.soon b{display:block;font:700 14px Sora,sans-serif;color:#d6deea}
+.soon small{font:400 11px "IBM Plex Mono",monospace;color:#7d8aa3}
+.rank{background:var(--panel);border:1px solid var(--line);border-radius:20px;padding:6px;margin-bottom:30px}
+.tabsr{display:flex;gap:6px;padding:8px}
+.tabsr button{border:1px solid var(--line);background:#111c2e;color:var(--muted);border-radius:999px;padding:8px 16px;cursor:pointer;font:600 13px Sora,sans-serif;min-height:40px}
+.tabsr button[aria-pressed="true"]{background:var(--gold);color:#1d1405;border-color:var(--gold)}
+.rank ol{list-style:none;margin:0;padding:0}
+.rank li{display:grid;grid-template-columns:40px 1fr auto;gap:10px;align-items:center;padding:11px 12px;border-top:1px solid var(--line)}
+.rank li .p{font:800 16px Sora,sans-serif;color:var(--muted);text-align:center}
+.rank li:nth-child(1) .p{color:#ffd166}.rank li:nth-child(2) .p{color:#cfd8e6}.rank li:nth-child(3) .p{color:#e0a36b}
+.rank li .n{font-weight:600;text-transform:capitalize;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.rank li .t{font:600 13px "IBM Plex Mono",monospace;color:var(--muted)}
+.rank li.me{background:rgba(244,194,91,.10);border-radius:10px}
+.rank li.me .n::after{content:" · você";color:var(--gold);font-size:12px;text-transform:none}
+.rank .empty{display:block;padding:16px;color:var(--muted);font-size:14px}
+.thanks{display:flex;align-items:center;gap:14px;text-decoration:none;color:inherit;background:linear-gradient(135deg,rgba(120,190,120,.10),rgba(14,22,38,.6));border:1px solid rgba(140,200,140,.28);border-radius:16px;padding:10px 14px;margin:0 auto 18px;max-width:520px;transition:border-color .25s,transform .25s}
+.thanks:hover{border-color:rgba(140,200,140,.6);transform:translateY(-2px)}
+.thanks img{width:104px;height:auto;border-radius:10px;flex:none;box-shadow:0 4px 14px -6px rgba(0,0,0,.6)}
+.thanks span{font-size:13px;line-height:1.4;color:#c9d3e3}
+.thanks b{display:block;font:700 11px "IBM Plex Mono",monospace;letter-spacing:.12em;text-transform:uppercase;color:#9fd69f;margin-bottom:2px}
+.thanks em{font-style:normal;color:#fff}
+footer{color:var(--muted);font:400 12px "IBM Plex Mono",monospace;text-align:center;padding-top:10px}
+@media (max-width:760px){.kpis{grid-template-columns:repeat(2,1fr)}.hello{grid-template-columns:1fr}.exam{justify-self:start}}
+@media (max-width:420px){.brand small{display:none}.grid{grid-template-columns:1fr}.kpi b{font-size:22px}}
+</style>
+</head>
+<body>
+
+<section id="portal" aria-label="Entrada">
+  <div class="layer" id="lyBg" data-d="10"><img alt="" src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-bg-1920.webp" srcset="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-bg-1100.webp 1100w, https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-bg-1920.webp 1920w" sizes="100vw" fetchpriority="high"></div>
+  <canvas id="sparks" aria-hidden="true"></canvas>
+  <div class="layer orbs" id="lyBack" data-d="16"></div>
+  <div class="layer" id="lyMe" data-d="26"><img alt="O Papai, mestre dos estudos, com o mundo flutuando na mão" src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-cut-1672.webp" srcset="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-cut-1000.webp 1000w, https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-cut-1672.webp 1672w" sizes="100vw"></div>
+  <div class="vign"></div>
+  <div class="layer orbs" id="lyFront" data-d="40"></div>
+  <div class="ptxt">
+    <div class="k">✦ Guia de Estudos do Papai</div>
+    <h1>O Mestre dos Estudos</h1>
+    <p>As matérias flutuam ao redor do Mestre. Escolha uma, aprendiz… ou entre direto na escola.</p>
+    <button class="go" id="goBtn" type="button">Entrar na escola <span>→</span></button>
+    <small class="hint">ou toque numa matéria brilhando</small>
+  </div>
+  <button class="skip" id="skipBtn" type="button">Pular ⏭</button>
+</section>
+<div id="flash" aria-hidden="true"></div>
+
+<div id="escola" hidden>
+  <header class="top">
+    <a class="brand" href="#escola"><img src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-face.webp" alt=""><span><b>Escola do Papai</b><small>Sistema de estudos · 9º ano</small></span></a>
+    <span class="sp"></span>
+    <span class="who" id="who"><i>?</i><span>Aprendiz</span></span>
+    <button class="ibtn" id="portalBtn" type="button" title="Voltar ao portal" aria-label="Voltar ao portal"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M15.5 8.5l-2.2 5.2-5.2 2.2 2.2-5.2z"/></svg></button>
+  </header>
+  <main class="wrap">
+    <section class="hello">
+      <div><h2 id="helloT">Bem-vindo à escola, <em>aprendiz</em></h2><p>Escolha uma matéria e continue de onde parou.</p></div>
+      <div class="exam" id="exam" hidden><b id="examD">0</b><span id="examT">dias para a<br>prova de Geografia</span></div>
+    </section>
+    <div class="speech"><img src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/boss-face.webp" alt=""><p><b>O Mestre diz:</b> <span id="tip">só mais um capítulo…</span></p></div>
+
+    <section class="kpis" aria-label="Resumo">
+      <div class="kpi" style="--kc:var(--gold)"><span>XP total</span><b id="kXp">—</b><small>pontos nos guias</small></div>
+      <div class="kpi" style="--kc:var(--geo)"><span>Guias abertos</span><b>3</b><small>Prova Objetivo, Geo e História</small></div>
+      <div class="kpi" style="--kc:var(--ok)"><span>Em breve</span><b>4</b><small>novas matérias</small></div>
+      <div class="kpi" style="--kc:var(--hot)"><span>Ranking Objetivo</span><b id="kRank">—</b><small id="kRankS">entre na missão</small></div>
+    </section>
+
+    <h3 class="sec">Minhas matérias</h3>
+    <section class="grid">
+      <a class="app" id="app-objetivo" href="/objetivo" style="--c:#ff6b5b">
+        <div class="pic obj"><svg viewBox="0 0 320 180" preserveAspectRatio="xMidYMid slice" aria-hidden="true"><defs><pattern id="gq" width="16" height="16" patternUnits="userSpaceOnUse"><path d="M16 0H0V16" fill="none" stroke="#2b5fd9" stroke-opacity=".18"/></pattern></defs><rect width="320" height="180" fill="#f7f4ec"/><rect width="320" height="180" fill="url(#gq)"/><path d="M34 0V180" stroke="#cf3b2f" stroke-opacity=".5"/><g font-family="Georgia,serif" fill="#1c2742"><path d="M44 70h150" stroke="#ffe36e" stroke-width="10" stroke-opacity=".7"/><text x="48" y="64" font-size="22" font-style="italic">a² = b² + c²</text><text x="48" y="96" font-size="17" font-style="italic">x = (−b ± √Δ) / 2a</text><text x="48" y="122" font-size="16">embora · porém · logo</text></g><g transform="rotate(-12 252 70)"><rect x="200" y="36" width="104" height="70" rx="8" fill="none" stroke="#cf3b2f" stroke-width="4"/><rect x="206" y="42" width="92" height="58" rx="5" fill="none" stroke="#cf3b2f" stroke-width="1.5"/><text x="252" y="70" text-anchor="middle" font-family="Sora,sans-serif" font-weight="800" font-size="26" fill="#cf3b2f">100%</text><text x="252" y="90" text-anchor="middle" font-family="Sora,sans-serif" font-weight="700" font-size="11" letter-spacing="2" fill="#cf3b2f">BOLSA</text></g></svg><span class="badge live" style="--bc:#ff6b5b">MISSÃO ESPECIAL</span></div>
+        <div class="bd">
+          <span class="sub">Prova de bolsa · Colégio Objetivo</span>
+          <h4>Missão Bolsa 100%</h4>
+          <p class="desc">Revisão completa de Português e Matemática do 9º ano para o Desafio do Objetivo: teoria, exemplos resolvidos, pegadinhas e testes.</p>
+          <div class="prog"><div class="row"><span id="p-objetivo-l">Progresso</span><b id="p-objetivo-v">0%</b></div><div class="bar"><i id="p-objetivo-b"></i></div></div>
+          <div class="meta"><span>48 tópicos · BNCC + SAEB</span><span id="m-objetivo">Patente: Candidato</span></div>
+          <div class="act"><b id="a-objetivo">Começar a revisão</b><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+      </a>
+      <a class="app" id="app-geo3" href="/geo3" style="--c:var(--geo)">
+        <div class="pic"><img src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/card-geo3.webp" alt="O papai, de capa de mago, com uma pilha de livros de Geografia: só mais um capítulo" loading="lazy"><span class="badge" style="--bc:var(--geo)">MODO REVISÃO</span></div>
+        <div class="bd">
+          <span class="sub">Geografia · 3º trimestre</span>
+          <h4>Expedição pela economia mundial</h4>
+          <p class="desc">DIT, globalização, União Europeia e blocos, Norte × Sul, mercado financeiro e o Brasil nisso tudo.</p>
+          <div class="prog"><div class="row"><span id="p-geo3-l">Progresso</span><b id="p-geo3-v">0%</b></div><div class="bar"><i id="p-geo3-b"></i></div></div>
+          <div class="meta"><span>Caps. 11, 13–16</span><span id="m-geo3">Patente: Turista</span></div>
+          <div class="act"><b id="a-geo3">Começar expedição</b><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+      </a>
+      <a class="app" id="app-2gm" href="/2gm" style="--c:var(--his)">
+        <div class="pic"><img src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/card-2gm.webp" alt="O filho, de capacete de soldado, estuda História enquanto o papai, de capa de mago, faz uma ampulheta flutuar com o Coliseu e as caravelas ao fundo" loading="lazy" style="object-position:50% 30%"><span class="badge" style="--bc:var(--his)">MODO REVISÃO</span></div>
+        <div class="bd">
+          <span class="sub">História · Caps. 14 a 17</span>
+          <h4>Roteiro da 2ª Guerra Mundial</h4>
+          <p class="desc">A prova já passou, mas o guia continua aberto para revisar e disputar o ranking da turma.</p>
+          <div class="prog"><div class="row"><span id="p-2gm-l">Progresso</span><b id="p-2gm-v">0%</b></div><div class="bar"><i id="p-2gm-b"></i></div></div>
+          <div class="meta"><span>Caps. 14 a 17</span><span id="m-2gm">Patente: Recruta</span></div>
+          <div class="act"><b>Revisar</b><svg viewBox="0 0 24 24"><path d="M5 12h14M13 6l6 6-6 6"/></svg></div>
+        </div>
+      </a>
+    </section>
+
+    <h3 class="sec">Em breve</h3>
+    <section class="soon">
+      <div><svg viewBox="0 0 24 24"><path d="M5 7h14M9 7v11M15 7v8c0 2 1 3 3 3"/></svg><span><b>Matemática</b><small>🔒 trancada</small></span></div>
+      <div><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/></svg><span><b>Ciências</b><small>🔒 trancada</small></span></div>
+      <div><svg viewBox="0 0 24 24"><path d="M4 19 10 5l6 14M6.5 14h7M17 9h4M19 7v4"/></svg><span><b>Português</b><small>🔒 trancada</small></span></div>
+      <div><svg viewBox="0 0 24 24"><path d="M4 6h10M9 6v12M14 12h6M17 12v6M4 18h10"/></svg><span><b>Inglês</b><small>🔒 trancada</small></span></div>
+    </section>
+
+    <h3 class="sec">Ranking da turma</h3>
+    <section class="rank">
+      <div class="tabsr"><button type="button" aria-pressed="true" data-g="objetivo">Prova Objetivo</button><button type="button" aria-pressed="false" data-g="geo3">Geografia</button><button type="button" aria-pressed="false" data-g="2gm">História</button></div>
+      <ol id="rankList"><li class="empty">Carregando o ranking…</li></ol>
+    </section>
+    <a class="thanks" href="https://www.opticarocco.com.br/historia/" target="_blank" rel="noopener"><img src="https://htooiquctobyweffsydx.supabase.co/storage/v1/object/public/guias/rocco.webp" alt="Óptica Rocco" loading="lazy"><span><b>👓 Agradecimentos</b>À <em>Óptica Rocco</em>, que fez os óculos do nosso aprendiz. Agora dá pra ler o livro inteiro!</span></a>
+    <footer>Feito em casa, por pai e filho ✦ Escola do Papai</footer>
+  </main>
+</div>
+
+<script>
+(function(){
+var SB={url:'https://htooiquctobyweffsydx.supabase.co/rest/v1/rpc/',key:'sb_publishable_NsOxvadWUPRl4pGLfpIvEQ_vfaXA7QK'};
+var RM=matchMedia('(prefers-reduced-motion: reduce)').matches;
+function $(id){return document.getElementById(id)}
+var ICON={
+ geo:'<circle cx="12" cy="12" r="9"/><path d="M3 12h18M12 3c3.2 3 3.2 15 0 18M12 3c-3.2 3-3.2 15 0 18"/>',
+ his:'<path d="M7 3h10M7 21h10M8 3c0 5 8 5 8 9s-8 4-8 9M16 3c0 5-8 5-8 9"/>',
+ mat:'<path d="M5 7h14M9 7v11M15 7v8c0 2 1 3 3 3"/>',
+ cie:'<circle cx="12" cy="12" r="2"/><ellipse cx="12" cy="12" rx="9" ry="3.5"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(60 12 12)"/><ellipse cx="12" cy="12" rx="9" ry="3.5" transform="rotate(120 12 12)"/>',
+ por:'<path d="M4 19 10 5l6 14M6.5 14h7M17 9h4M19 7v4"/>',
+ ing:'<path d="M4 6h10M9 6v12M14 12h6M17 12v6M4 18h10"/>',
+ obj:'<path d="M12 2.5l2.8 5.9 6.4.8-4.7 4.4 1.2 6.4L12 16.9 6.3 20l1.2-6.4L2.8 9.2l6.4-.8z"/>'};
+/* L = ponto na imagem original (1672×941) nas telas largas; P = posição em % no celular em pé */
+var ORBS=[
+ {id:'objetivo',name:'Prova Objetivo',tag:'bolsa 100%',c:'#ff6b5b',ic:'obj',L:[715,545],P:[50,55],front:1,big:1},
+ {id:'geo3',name:'Geografia',tag:'revisão',c:'#3fb6c9',ic:'geo',L:[686,352],P:[24,15],front:1,big:1},
+ {id:'2gm',name:'História',tag:'revisão',c:'#e0b84f',ic:'his',L:[1336,205],P:[76,17],front:1,big:1},
+ {name:'Matemática',c:'#7fe0a0',ic:'mat',L:[792,190],P:[20,36],lock:1},
+ {name:'Ciências',c:'#7aa8ff',ic:'cie',L:[1545,262],P:[81,38],lock:1},
+ {name:'Português',c:'#ff9f6e',ic:'por',L:[1508,470],P:[78,53],lock:1},
+ {name:'Inglês',c:'#c38bff',ic:'ing',L:[1218,72],P:[22,52],lock:1}];
+ORBS.forEach(function(o,i){
+  var b=document.createElement('button');b.type='button';b.className='orb'+(o.lock?' lock':'')+(o.big?' big':'');
+  b.style.setProperty('--c',o.c);b.style.setProperty('--d',(1.8+i*.17)+'s');b.style.setProperty('--t',(4+i*.7)+'s');if(o.big)b.style.setProperty('--s','86px');
+  b.innerHTML='<span class="bob"><span class="ball"><svg viewBox="0 0 24 24">'+ICON[o.ic]+'</svg>'+(o.lock?'<span class="lk">🔒</span>':'')+'</span><span class="lbl">'+o.name+'<small>'+(o.lock?'em breve':o.tag)+'</small></span></span>';
+  b.setAttribute('aria-label',o.name+(o.lock?', em breve':''));
+  b.onclick=o.lock?function(){var bb=b.querySelector('.ball');bb.animate([{transform:'translateX(0)'},{transform:'translateX(-6px)'},{transform:'translateX(6px)'},{transform:'translateX(0)'}],{duration:280})}:function(e){enter(e.clientX,e.clientY,o.id)};
+  o.el=b;$(o.front?'lyFront':'lyBack').appendChild(b);
+});
+function place(){
+  var W=innerWidth,H=innerHeight,lw=W*1.08,lh=H*1.08,portrait=W<H;
+  var s=Math.max(lw/1672,lh/941),ox=(lw-1672*s)*.62,oy=(lh-941*s)*.30;
+  ORBS.forEach(function(o){var x,y;
+    var host=$(o.front||portrait?'lyFront':'lyBack');if(o.el.parentNode!==host)host.appendChild(o.el);
+    if(portrait){x=o.P[0]/100*lw;y=o.P[1]/100*lh}else{x=ox+o.L[0]*s;y=oy+o.L[1]*s}
+    o.el.style.setProperty('--x',x+'px');o.el.style.setProperty('--y',y+'px')});
+}
+place();addEventListener('resize',place);
+
+var layers=[].slice.call(document.querySelectorAll('#portal .layer')),tx=0,ty=0,cx=0,cy=0,t0=performance.now(),gyro=false,portalOn=true;
+addEventListener('pointermove',function(e){if(e.pointerType==='touch')return;tx=(e.clientX/innerWidth-.5)*2;ty=(e.clientY/innerHeight-.5)*2});
+addEventListener('deviceorientation',function(e){if(e.gamma==null)return;gyro=true;tx=Math.max(-1,Math.min(1,e.gamma/25));ty=Math.max(-1,Math.min(1,((e.beta||45)-45)/25))});
+document.addEventListener('touchstart',function ask(){document.removeEventListener('touchstart',ask);try{if(window.DeviceOrientationEvent&&DeviceOrientationEvent.requestPermission)DeviceOrientationEvent.requestPermission().catch(function(){})}catch(e){}},{passive:true});
+var cv=$('sparks'),ctx=cv.getContext('2d'),P=[];
+function sizeCv(){var r=Math.min(2,devicePixelRatio||1);cv.width=innerWidth*r;cv.height=innerHeight*r;ctx.setTransform(r,0,0,r,0,0)}
+sizeCv();addEventListener('resize',sizeCv);
+for(var i=0;i<60;i++)P.push({x:Math.random(),y:Math.random(),r:Math.random()*1.8+.4,v:Math.random()*.25+.05,p:Math.random()*6});
+function sparks(a){ctx.clearRect(0,0,innerWidth,innerHeight);
+  ctx.shadowColor='rgba(255,190,90,.9)';ctx.shadowBlur=8;
+  for(var k=0;k<P.length;k++){var p=P[k];p.y-=p.v*.0016;if(p.y<-.02){p.y=1.02;p.x=Math.random()}
+    var x=p.x*innerWidth+Math.sin(a+p.p)*8-cx*14,y=p.y*innerHeight-cy*9,al=.35+.45*Math.sin(a*2+p.p);
+    if(al<=0)continue;ctx.beginPath();ctx.fillStyle='rgba(255,214,130,'+al+')';ctx.arc(x,y,p.r,0,6.3);ctx.fill()}}
+function loop(now){
+  if(portalOn){var a=(now-t0)/1000,ax=gyro?0:Math.sin(a*.35)*.22,ay=gyro?0:Math.cos(a*.27)*.16;
+    if(RM){ax=ay=0}
+    cx+=((tx+ax)-cx)*.06;cy+=((ty+ay)-cy)*.06;
+    var sc=innerWidth<innerHeight?.55:1;for(var k=0;k<layers.length;k++){var d=+layers[k].dataset.d*(RM?0:sc);layers[k].style.transform='translate3d('+(-cx*d)+'px,'+(-cy*d*.6)+'px,0)'}
+    if(!RM)sparks(a)}
+  requestAnimationFrame(loop)}
+requestAnimationFrame(loop);
+
+function showEscola(hl){
+  $('portal').hidden=true;portalOn=false;var e=$('escola');e.hidden=false;e.classList.remove('in');void e.offsetWidth;e.classList.add('in');
+  window.scrollTo(0,0);loadData();
+  if(hl){var a=$('app-'+hl);if(a){a.classList.remove('hl');void a.offsetWidth;a.classList.add('hl');setTimeout(function(){a.scrollIntoView({behavior:RM?'auto':'smooth',block:'center'})},450)}}
+}
+function showPortal(){$('escola').hidden=true;$('portal').hidden=false;portalOn=true;window.scrollTo(0,0)}
+function enter(x,y,hl){
+  history.pushState(null,'','#escola'+(hl?'-'+hl:''));
+  if(RM){showEscola(hl);return}
+  var f=$('flash');f.className='';f.style.setProperty('--fx2',(x||innerWidth/2)+'px');f.style.setProperty('--fy2',(y||innerHeight/2)+'px');void f.offsetWidth;f.classList.add('on');
+  setTimeout(function(){showEscola(hl);f.classList.add('off');setTimeout(function(){f.className=''},700)},720);
+}
+$('goBtn').onclick=function(e){var r=e.currentTarget.getBoundingClientRect();enter(r.left+r.width/2,r.top+r.height/2)};
+$('skipBtn').onclick=function(){enter()};
+$('portalBtn').onclick=function(){history.pushState(null,'',location.pathname);showPortal()};
+addEventListener('popstate',function(){if(/^#escola/.test(location.hash))showEscola();else showPortal()});
+
+var GUIAS=[{id:'objetivo',ls:'gobj',max:980,ranks:[[0,'Candidato'],[10,'Inscrito'],[25,'Concorrente'],[40,'Classificado'],[55,'Aprovado'],[70,'Bolsista 50%'],[85,'Bolsista 80%'],[95,'Bolsa 100%']]},
+           {id:'geo3',ls:'ggeo3',max:1709,ranks:[[0,'Turista'],[10,'Mochileiro'],[25,'Explorador'],[40,'Navegador'],[55,'Cartógrafo'],[70,'Geógrafo'],[85,'Diplomata'],[95,'Embaixador']]},
+           {id:'2gm',ls:'g2gm',max:1316,ranks:[[0,'Recruta'],[10,'Soldado'],[25,'Cabo'],[40,'Sargento'],[55,'Tenente'],[70,'Capitão'],[85,'Major'],[95,'General']]}];
+function ls(k){try{var v=localStorage.getItem(k);return v?JSON.parse(v):null}catch(e){return null}}
+function pat(g,p){var r=g.ranks[0][1];g.ranks.forEach(function(x){if(p>=x[0])r=x[1]});return r}
+function rpc(fn,body){return fetch(SB.url+fn,{method:'POST',headers:{apikey:SB.key,'Content-Type':'application/json'},body:JSON.stringify(body)}).then(function(r){if(!r.ok)throw new Error(r.status);return r.json()})}
+var RANKS={},loaded=false;
+function loadData(){if(loaded)return;loaded=true;var name=null,xp=0;
+  var prova=new Date(2026,9,6,7,0,0),d=Math.ceil((prova-new Date())/864e5);
+  if(d>=0){$('exam').hidden=false;$('examD').textContent=d===0?'HOJE':d;$('examT').innerHTML=d===0?'é dia de prova<br>de Geografia!':(d===1?'dia':'dias')+' para a<br>prova de Geografia'}
+  var tips=['só mais um capítulo…','na prova do Objetivo são 6 minutos por questão: leia com calma.','(a + b)² não é a² + b². Falta o 2ab!','embora = ainda que = mesmo que. É concessão!','aumentar 20% e depois tirar 20% não volta ao preço original.','termine o quiz antes dos desafios: eles ficam mais fáceis.','vire os flashcards que você errou até acertar todos.','na prova, use um exemplo do Brasil na resposta. Professor ama!','nova DIT: descentralização da produção, centralização do comando.','Maastricht (1992) criou a UE. Roma (1957) criou o Mercado Comum.'];
+  $('tip').textContent=tips[Math.floor(Math.random()*tips.length)];
+  Promise.all(GUIAS.map(function(g){
+    var users=ls(g.ls+':users')||{},cur=ls(g.ls+':cur'),u=cur&&users[cur];
+    if(u&&u.name&&!name)name=u.name;
+    return rpc('get_ranking',{p_guia:g.id,p_secret:(u&&u.secret)||null}).then(function(list){list=list||[];RANKS[g.id]=list;
+      var i=-1;list.forEach(function(r,k){if(r.is_me)i=k});var me=i>=0?list[i]:null,pct=me?me.pct:0;xp+=me?me.total:0;
+      $('p-'+g.id+'-v').textContent=pct+'%';setTimeout(function(){$('p-'+g.id+'-b').style.width=pct+'%'},350);
+      if(me)$('p-'+g.id+'-l').textContent=me.total+' de '+g.max+' pts';
+      $('m-'+g.id).textContent='Patente: '+pat(g,pct)+(me?' · '+(i+1)+'º lugar':'');
+      if(g.id==='objetivo'){if(me){$('kRank').textContent=(i+1)+'º';$('kRankS').textContent='de '+list.length+' na missão';$('a-objetivo').textContent=pct>0?'Continuar a revisão':'Começar a revisão'}else{$('kRankS').textContent=list.length?list.length+' na missão':'seja o primeiro!'}}
+    }).catch(function(){RANKS[g.id]=null})
+  })).then(function(){
+    $('kXp').textContent=xp.toLocaleString('pt-BR');
+    if(name){var first=name.split(' ')[0];$('helloT').innerHTML='Bem-vindo de volta, <em></em>';$('helloT').querySelector('em').textContent=first;
+      var w=$('who');w.querySelector('i').textContent=first.charAt(0).toUpperCase();w.querySelector('span').textContent=name}
+    renderRank('objetivo')});
+}
+function renderRank(g){
+  document.querySelectorAll('.tabsr button').forEach(function(b){b.setAttribute('aria-pressed',String(b.dataset.g===g))});
+  var L=$('rankList');L.innerHTML='';
+  if(RANKS[g]===null){L.innerHTML='<li class="empty">Sem conexão com o ranking agora.</li>';return}
+  var list=(RANKS[g]||[]).filter(function(r){return r.total>0||r.is_me});
+  if(!list.length){L.innerHTML='<li class="empty">Ninguém pontuou ainda. Seja o primeiro! 🏁</li>';return}
+  list.slice(0,8).forEach(function(r,i){var li=document.createElement('li');if(r.is_me)li.className='me';
+    li.innerHTML='<span class="p">'+(i+1)+'</span><span class="n"></span><span class="t">'+r.total+' pts</span>';li.querySelector('.n').textContent=String(r.name).toLowerCase();L.appendChild(li)});
+}
+document.querySelectorAll('.tabsr button').forEach(function(b){b.onclick=function(){renderRank(b.dataset.g)}});
+if(/^#escola/.test(location.hash))showEscola(location.hash.split('-')[1]||null);
+})();
+</script>
+</body>
+</html>
