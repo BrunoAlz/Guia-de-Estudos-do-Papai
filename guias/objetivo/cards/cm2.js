@@ -1,0 +1,90 @@
+/* Flashcards · M2 · Álgebra (ver CARDS_SPEC.md) — contas conferidas em check_cm2.py */
+const CARDS_M2 = [
+/* ---------- m-eq1 · Equação do 1º grau (12) ---------- */
+ {t:'m-eq1', k:'regra', f:`Quais são os 3 passos para resolver uma equação do 1º grau?`, b:`<b>1) Tire os parênteses; 2) termos com x de um lado, números do outro; 3) divida pelo número que multiplica o x.</b>`},
+ {t:'m-eq1', k:'regra', f:`Equação com frações: qual é o primeiro passo?`, b:`<b>Multiplicar todos os termos pelo MMC dos denominadores.</b> Assim as frações “somem”.`},
+ {t:'m-eq1', k:'conta', f:`2x + 6 = 20. Quanto vale x?`, b:`<b>x = 7</b><br>2x = 14 → x = 7.`},
+ {t:'m-eq1', k:'conta', f:`5x − 3 = 2x + 9. Quanto vale x?`, b:`<b>x = 4</b><br>5x − 2x = 9 + 3 → 3x = 12.`},
+ {t:'m-eq1', k:'conta', f:`[[x|4]] = 6. Quanto vale x?`, b:`<b>x = 24</b><br>O 4 está dividindo, passa multiplicando: 6 × 4.`},
+ {t:'m-eq1', k:'conta', f:`4(x − 1) = 20. Quanto vale x?`, b:`<b>x = 6</b><br>Distributiva: 4x − 4 = 20 → 4x = 24.`},
+ {t:'m-eq1', k:'exemplo', f:`“O dobro de um número, mais 5, é 17.” Qual é a equação?`, b:`<b>2x + 5 = 17</b><br>Resolvendo: 2x = 12 → x = 6.`},
+ {t:'m-eq1', k:'exemplo', f:`Como escrever três números consecutivos?`, b:`<b>x, x + 1 e x + 2</b><br>Ex.: soma 72 → 3x + 3 = 72 → 23, 24 e 25.`},
+ {t:'m-eq1', k:'exemplo', f:`“A tem 5 a mais que B.” Como se escreve?`, b:`<b>A = B + 5</b><br>Quem tem “a mais” é o A, então o +5 vai do lado do B.`},
+ {t:'m-eq1', k:'pegadinha', f:`[[x|2]] + 3 = 5. Multiplicando tudo por 2, fica x + 3 = 10?`, b:`<b>Não!</b> O 3 também é multiplicado: x + 6 = 10 → x = 4. É <b>todo</b> termo.`},
+ {t:'m-eq1', k:'pegadinha', f:`3x = 12, então x = 12 − 3 = 9?`, b:`<b>Não!</b> O 3 está multiplicando, então passa <b>dividindo</b>: x = 12 ÷ 3 = 4.`},
+ {t:'m-eq1', k:'conceito', f:`Achei o valor de x num problema. Como ter certeza de que está certo?`, b:`<b>Substitua o valor no enunciado</b> e veja se a igualdade (e a história) funciona.`},
+
+/* ---------- m-sist · Sistemas (12) ---------- */
+ {t:'m-sist', k:'regra', f:`Como funciona o método da adição?`, b:`<b>Some (ou subtraia) as equações para eliminar uma letra.</b> Se preciso, multiplique uma equação antes para os coeficientes ficarem opostos.`},
+ {t:'m-sist', k:'regra', f:`Como funciona o método da substituição?`, b:`<b>Isole uma letra numa equação e substitua na outra.</b> Ex.: y = 2x vai direto para a outra equação.`},
+ {t:'m-sist', k:'conceito', f:`Quando é melhor usar adição e quando usar substituição?`, b:`<b>Adição:</b> quando dá para cancelar uma letra. <b>Substituição:</b> quando uma letra já está “sozinha”.`},
+ {t:'m-sist', k:'regra', f:`Problema de quantidade e valor (carros e rodas, ingressos e reais): que duas equações montar?`, b:`<b>Uma para a quantidade e outra para o valor</b> (rodas, pontos, reais…).`},
+ {t:'m-sist', k:'conta', f:`x + y = 10 e x − y = 2. Quanto vale x?`, b:`<b>x = 6</b><br>Somando: 2x = 12. (E y = 4.)`},
+ {t:'m-sist', k:'conta', f:`x + y = 9 e x − y = 1. Quanto vale y?`, b:`<b>y = 4</b><br>Somando: 2x = 10 → x = 5; 5 + y = 9.`},
+ {t:'m-sist', k:'conta', f:`y = 2x e x + y = 15. Quanto vale x?`, b:`<b>x = 5</b><br>Substituindo: x + 2x = 15 → 3x = 15. (E y = 10.)`},
+ {t:'m-sist', k:'conta', f:`a + b = 7 e a − b = 3. Quanto vale a · b?`, b:`<b>10</b><br>Somando: 2a = 10 → a = 5; b = 2; 5 × 2 = 10.`},
+ {t:'m-sist', k:'exemplo', f:`20 veículos entre carros e motos, com 60 rodas. Quais são as duas equações?`, b:`<b>c + m = 20 e 4c + 2m = 60</b><br>Resolvendo: 10 carros e 10 motos.`},
+ {t:'m-sist', k:'exemplo', f:`40 ingressos vendidos (inteira R$ 20, meia R$ 10), total R$ 600. Quais são as equações?`, b:`<b>i + m = 40 e 20i + 10m = 600</b><br>Resolvendo: 20 inteiras e 20 meias.`},
+ {t:'m-sist', k:'pegadinha', f:`2x + y = 8 e x + y = 5. Somar as equações faz o y sumir?`, b:`<b>Não!</b> Aqui é preciso <b>subtrair</b>: (2x + y) − (x + y) = 8 − 5 → x = 3 (e y = 2).`},
+ {t:'m-sist', k:'pegadinha', f:`Achei x = 7 e y = 3, mas a pergunta era o y. Posso marcar 7?`, b:`<b>Não!</b> Responda o que foi <b>perguntado</b>: y = 3. Muitas alternativas trazem o valor da outra letra.`},
+
+/* ---------- m-prod · Produtos notáveis e fatoração (12) ---------- */
+ {t:'m-prod', k:'regra', f:`(a + b)² = ?`, b:`<b>a² + 2ab + b²</b><br>“Quadrado do 1º, duas vezes o 1º pelo 2º, quadrado do 2º.”`},
+ {t:'m-prod', k:'regra', f:`(a − b)² = ?`, b:`<b>a² − 2ab + b²</b><br>Só o termo do meio fica negativo.`},
+ {t:'m-prod', k:'regra', f:`(a + b)(a − b) = ?`, b:`<b>a² − b²</b><br>Soma vezes diferença dá diferença dos quadrados.`},
+ {t:'m-prod', k:'conceito', f:`O que é fatorar uma expressão?`, b:`<b>Transformar uma soma em produto</b> (o caminho de volta). Ex.: 6x + 9y = 3(2x + 3y), fator comum.`},
+ {t:'m-prod', k:'exemplo', f:`x² + 6x + 9 fatorado é…?`, b:`<b>(x + 3)²</b><br>É um trinômio quadrado perfeito: x², 2·x·3 e 3².`},
+ {t:'m-prod', k:'exemplo', f:`x² − 25 fatorado é…?`, b:`<b>(x + 5)(x − 5)</b><br>Diferença de quadrados: x² − 5².`},
+ {t:'m-prod', k:'exemplo', f:`Simplifique [[x² − 9|x + 3]] (com x ≠ −3).`, b:`<b>x − 3</b><br>x² − 9 = (x + 3)(x − 3); corta o (x + 3).`},
+ {t:'m-prod', k:'conta', f:`31² de cabeça?`, b:`<b>961</b><br>(30 + 1)² = 900 + 60 + 1.`},
+ {t:'m-prod', k:'conta', f:`29 × 31 de cabeça?`, b:`<b>899</b><br>(30 − 1)(30 + 1) = 30² − 1 = 900 − 1.`},
+ {t:'m-prod', k:'conta', f:`102² − 98² de cabeça?`, b:`<b>800</b><br>(102 + 98)(102 − 98) = 200 × 4.`},
+ {t:'m-prod', k:'conta', f:`Desenvolva (x + 5)².`, b:`<b>x² + 10x + 25</b><br>x², 2·x·5 = 10x e 5² = 25.`},
+ {t:'m-prod', k:'pegadinha', f:`(a + b)² = a² + b²?`, b:`<b>Não!</b> Falta o 2ab. Teste: (2 + 3)² = 25, mas 2² + 3² = 13.`},
+
+/* ---------- m-eq2 · Equação do 2º grau (12) ---------- */
+ {t:'m-eq2', k:'regra', f:`Fórmula do Δ (delta)?`, b:`<b>Δ = b² − 4ac</b><br>“Bê-dois menos quatro-a-cê.”`},
+ {t:'m-eq2', k:'regra', f:`Fórmula de Bhaskara para x?`, b:`<b>x = [[−b ± √{Δ}|2a]]</b><br>O ± dá as duas raízes.`},
+ {t:'m-eq2', k:'conceito', f:`O que o sinal do Δ diz sobre as raízes?`, b:`<b>Δ &gt; 0: duas raízes reais diferentes; Δ = 0: duas iguais (uma só); Δ &lt; 0: nenhuma raiz real.</b>`},
+ {t:'m-eq2', k:'regra', f:`Em ax² + bx + c = 0, quanto valem a soma S e o produto P das raízes?`, b:`<b>S = [[−b|a]] e P = [[c|a]]</b><br>Ex.: x² − 5x + 6 = 0 → soma 5, produto 6 → 2 e 3.`},
+ {t:'m-eq2', k:'regra', f:`Como resolver ax² + bx = 0 (sem o c)?`, b:`<b>Coloque x em evidência: x(ax + b) = 0 → x = 0 ou x = [[−b|a]].</b>`},
+ {t:'m-eq2', k:'conta', f:`Raízes de x² − 7x + 12 = 0?`, b:`<b>3 e 4</b><br>Soma 7 e produto 12.`},
+ {t:'m-eq2', k:'conta', f:`Δ de x² + 2x − 3 = 0?`, b:`<b>Δ = 16</b><br>2² − 4·1·(−3) = 4 + 12. Raízes: 1 e −3.`},
+ {t:'m-eq2', k:'conta', f:`Raízes de x² − 3x = 0?`, b:`<b>0 e 3</b><br>x(x − 3) = 0.`},
+ {t:'m-eq2', k:'conta', f:`Raízes de x² − 16 = 0?`, b:`<b>4 e −4</b><br>x² = 16 → x = ±4.`},
+ {t:'m-eq2', k:'pegadinha', f:`x² = 9. Então x = 3, e só?`, b:`<b>Não!</b> São <b>duas</b> soluções: 3 e −3, porque (−3)² também é 9.`},
+ {t:'m-eq2', k:'pegadinha', f:`Em x² − 6x + 8 = 0, quanto vale −b na fórmula?`, b:`<b>+6</b><br>Aqui b = −6, então −b = −(−6) = 6. Raízes: 2 e 4.`},
+ {t:'m-eq2', k:'exemplo', f:`Problema do lado de um terreno deu raízes 5 e −8. Qual é a resposta?`, b:`<b>5</b><br>Medida (lado, idade, quantidade) não é negativa: descarte o −8.`},
+
+/* ---------- m-prop · Razão, proporção, regra de três e escalas (12) ---------- */
+ {t:'m-prop', k:'conceito', f:`Razão × proporção: qual a diferença?`, b:`<b>Razão</b> é uma divisão que compara ([[a|b]]); <b>proporção</b> é uma igualdade de razões ([[a|b]] = [[c|d]]).`},
+ {t:'m-prop', k:'regra', f:`[[a|b]] = [[c|d]]. O que vale pela propriedade fundamental?`, b:`<b>a · d = b · c</b><br>Multiplica cruzado.`},
+ {t:'m-prop', k:'conceito', f:`Diretamente × inversamente proporcionais?`, b:`<b>Direta:</b> uma dobra, a outra dobra (razão constante). <b>Inversa:</b> uma dobra, a outra cai pela metade (produto constante).`},
+ {t:'m-prop', k:'exemplo', f:`Operários e dias para fazer a mesma obra: direta ou inversa?`, b:`<b>Inversa.</b> Mais operários → menos dias. Ex.: 6 fazem em 10 dias; 4 fazem em x: 6 × 10 = 4 × x → 15 dias.`},
+ {t:'m-prop', k:'regra', f:`Como se calcula a escala?`, b:`<b>Escala = [[medida no desenho|medida real]]</b>, as duas na mesma unidade.`},
+ {t:'m-prop', k:'regra', f:`1 km tem quantos centímetros?`, b:`<b>100 000 cm</b><br>1 km = 1 000 m e 1 m = 100 cm.`},
+ {t:'m-prop', k:'regra', f:`Fórmulas da velocidade média e da densidade demográfica?`, b:`<b>v = [[distância|tempo]]</b> (km/h) e <b>densidade = [[habitantes|área]]</b> (hab/km²).`},
+ {t:'m-prop', k:'conta', f:`Escala 1 : 100 000. 3 cm no mapa são quantos km reais?`, b:`<b>3 km</b><br>3 × 100 000 = 300 000 cm = 3 km.`},
+ {t:'m-prop', k:'conta', f:`3 cadernos custam R$ 12. Quanto custam 5?`, b:`<b>R$ 20</b><br>Cada um custa R$ 4 (direta).`},
+ {t:'m-prop', k:'conta', f:`Um carro fez 90 km em 1h30. Velocidade média?`, b:`<b>60 km/h</b><br>1h30 = 1,5 h; 90 ÷ 1,5 = 60.`},
+ {t:'m-prop', k:'conta', f:`Divida 100 em partes proporcionais a 2 e 3.`, b:`<b>40 e 60</b><br>2 + 3 = 5 partes; 100 ÷ 5 = 20 → 2 × 20 e 3 × 20.`},
+ {t:'m-prop', k:'pegadinha', f:`2h30 é o mesmo que 2,3 h?`, b:`<b>Não!</b> 2h30 = <b>2,5 h</b>, porque meia hora é 0,5 h.`},
+
+/* ---------- m-func · Funções e valor numérico (8) ---------- */
+ {t:'m-func', k:'conceito', f:`O que é uma função?`, b:`<b>Uma regra que, para cada x que entra, dá um único y.</b> Pode vir como tabela, fórmula ou gráfico.`},
+ {t:'m-func', k:'regra', f:`Em y = ax + b, o que são o a e o b?`, b:`<b>a = taxa de variação</b> (“anda”) e <b>b = valor inicial</b> (“base”, onde o gráfico corta o eixo y).`},
+ {t:'m-func', k:'exemplo', f:`y = −3x + 2: o gráfico é crescente ou decrescente?`, b:`<b>Decrescente</b>, porque a = −3 &lt; 0.`},
+ {t:'m-func', k:'conceito', f:`Que forma tem o gráfico de y = ax² + bx + c?`, b:`<b>Parábola.</b> É o gráfico da função quadrática.`},
+ {t:'m-func', k:'conta', f:`y = 3x − 1. Quanto vale y para x = 4?`, b:`<b>11</b><br>3 × 4 − 1 = 12 − 1.`},
+ {t:'m-func', k:'conta', f:`Valor de x² + x para x = −3?`, b:`<b>6</b><br>(−3)² + (−3) = 9 − 3. Use parênteses: (−3)² = 9, não −9.`},
+ {t:'m-func', k:'conta', f:`Tabela: x = 0, 1, 2 e y = 1, 4, 7. Qual é a lei?`, b:`<b>y = 3x + 1</b><br>y sobe 3 a cada passo (a = 3); em x = 0, y = 1 (b = 1).`},
+ {t:'m-func', k:'pegadinha', f:`Táxi: y = 2x + 4. Dobrando os quilômetros, o preço dobra?`, b:`<b>Não!</b> 1 km custa 6 e 2 km custam 8, por causa da bandeirada (o b). Só é proporcional quando b = 0.`},
+
+/* ---------- m-seq · Sequências (6) ---------- */
+ {t:'m-seq', k:'regra', f:`Termo geral da sequência que soma sempre o mesmo número (r)?`, b:`<b>a<sub>n</sub> = a<sub>1</sub> + (n − 1)·r</b>`},
+ {t:'m-seq', k:'conceito', f:`Progressão aritmética × geométrica?`, b:`<b>Aritmética:</b> soma sempre o mesmo número (5, 9, 13…). <b>Geométrica:</b> multiplica sempre pelo mesmo (3, 6, 12…).`},
+ {t:'m-seq', k:'conta', f:`Próximo termo de 2, 6, 18, 54, …?`, b:`<b>162</b><br>Multiplica por 3: 54 × 3.`},
+ {t:'m-seq', k:'conta', f:`10º termo de 3, 7, 11, 15, …?`, b:`<b>39</b><br>3 + 9 × 4 = 3 + 36.`},
+ {t:'m-seq', k:'exemplo', f:`1, 1, 2, 3, 5, 8, … Qual é o próximo termo?`, b:`<b>13</b><br>Cada termo é a soma dos dois anteriores: 5 + 8.`},
+ {t:'m-seq', k:'pegadinha', f:`Do 1º ao 20º termo de uma sequência, quantos “pulos” de r há?`, b:`<b>19</b>, e não 20! Por isso é (n − 1) na fórmula.`}
+];

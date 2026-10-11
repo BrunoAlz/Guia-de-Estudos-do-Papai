@@ -218,6 +218,31 @@ sup,sub{font-size:.7em;line-height:0}
 #toast{white-space:nowrap;position:fixed;left:50%;transform:translateX(-50%);bottom:calc(24px + env(safe-area-inset-bottom,0px));z-index:60;background:var(--ink);color:var(--paper2);font:800 16px var(--head);padding:10px 18px;border-radius:99px;box-shadow:0 10px 30px -10px rgba(0,0,0,.6)}
 @media (max-width:700px){#toast{bottom:calc(88px + env(safe-area-inset-bottom,0px))}.sum b{font-size:19px}.trow{grid-template-columns:1fr auto}.trow .st{grid-column:1/-1;width:auto;margin-bottom:-6px}}
 footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
+
+/* flashcards */
+.fc{perspective:1400px;margin:14px 0 12px;cursor:pointer;outline:none}
+.fcin{position:relative;display:grid;transition:transform .5s cubic-bezier(.3,.7,.3,1);transform-style:preserve-3d;min-height:min(56vh,420px)}
+.fc.flip .fcin{transform:rotateY(180deg)}
+.face{grid-area:1/1;backface-visibility:hidden;-webkit-backface-visibility:hidden;border-radius:20px;padding:18px 18px 16px;display:flex;flex-direction:column;box-shadow:var(--shadow);border:1px solid var(--line)}
+.face.front{background:var(--card);background-image:repeating-linear-gradient(transparent 0 31px,var(--grid) 31px 32px);border-top:8px solid var(--ac)}
+.face.back{background:var(--abg);transform:rotateY(180deg);border-top:8px solid var(--ac)}
+.fk{display:flex;justify-content:space-between;gap:10px;font:800 12px var(--head);letter-spacing:.06em;text-transform:uppercase;color:var(--ac)}
+.fk span:last-child{color:var(--muted);text-align:right;text-transform:none;letter-spacing:0;font:600 12px var(--serif)}
+.ft{flex:1;display:flex;align-items:center;justify-content:center;text-align:center;font:800 clamp(21px,5.6vw,27px)/1.35 var(--head);padding:18px 4px}
+.fa{text-align:center;font:700 20px var(--hand);color:var(--red)}
+.fh{text-align:center;font:700 13px var(--serif);color:var(--muted)}
+.fq{font-size:14px;color:var(--muted);padding:10px 0;border-bottom:1px dashed var(--line);margin-bottom:12px}
+.fb{flex:1;font-size:19px;line-height:1.55}
+.fb b:first-child{display:block;font:800 23px/1.3 var(--head);margin-bottom:6px;color:var(--ink)}
+.fc:focus-visible .face{outline:3px solid var(--hl)}
+.fbtns{display:grid;grid-template-columns:1fr 1fr;gap:10px}
+.fbtns.one{grid-template-columns:1fr}
+.fbtns .btn{min-height:60px;font-size:18px}
+.fbtns .no{background:var(--red);border-color:var(--red);color:#fff}
+.fbtns .yes{background:var(--ok);border-color:var(--ok);color:#fff}
+.fkeys{text-align:center;font-size:13px;color:var(--muted);margin:10px 0 24px}
+@media (max-width:700px){.fkeys b{font-weight:400}}
+@media (prefers-reduced-motion:reduce){.fcin{transition:none}}
 /* macete, contagem e treino */
 .mac{position:relative;background:var(--card);border:2px dashed var(--ac,var(--gold));border-radius:12px;padding:12px 16px;margin:18px 0}
 .mac b.h{display:block;font:700 24px/1 var(--hand);color:var(--ac,var(--gold));margin-bottom:4px}
@@ -282,7 +307,7 @@ footer{color:var(--muted);font-size:13px;text-align:center;padding:10px 0 30px}
 <nav class="tabs" role="tablist" aria-label="Seções">
  <button class="tab" role="tab" data-tab="rev" aria-selected="true"><svg viewBox="0 0 24 24"><path d="M4 5a2 2 0 0 1 2-2h12v16H6a2 2 0 0 0-2 2z"/><path d="M4 21V5M9 8h6M9 12h6"/></svg><span class="tl">Revisão completa</span><span class="ts">Revisão</span></button>
  <button class="tab" role="tab" data-tab="treino" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="9"/><path d="M9.5 9.5a2.5 2.5 0 1 1 3.5 2.3c-.7.3-1 .9-1 1.7M12 17h.01"/></svg><span class="tl">Treino estilo prova</span><span class="ts">Treino</span></button>
- <button class="tab" role="tab" data-tab="cards" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v10"/></svg><span class="tl">Flashcards</span><span class="ts">Cards</span><span class="soon">em breve</span></button>
+ <button class="tab" role="tab" data-tab="cards" aria-selected="false"><svg viewBox="0 0 24 24"><rect x="3" y="7" width="14" height="12" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v10"/></svg><span class="tl">Flashcards</span><span class="ts">Cards</span></button>
  <button class="tab" role="tab" data-tab="simu" aria-selected="false"><svg viewBox="0 0 24 24"><circle cx="12" cy="13" r="8"/><path d="M12 9v4l2.5 2.5M9 2h6"/></svg><span class="tl">Simulado</span><span class="ts">Simulado</span><span class="soon">em breve</span></button>
  <button class="tab" role="tab" data-tab="placar" aria-selected="false"><svg viewBox="0 0 24 24"><path d="M8 4h8v5a4 4 0 0 1-8 0z"/><path d="M8 6H5a3 3 0 0 0 3 4M16 6h3a3 3 0 0 1-3 4M12 13v4M8 21h8M9 17h6"/></svg><span class="tl">Placar ★</span><span class="ts">Placar</span></button>
 </nav>
@@ -3089,6 +3114,592 @@ const TREINO_P3 = [
  ], a:3, e:`Em “<b>a</b>noit<b>ecer</b>”, não existem “anoite” nem “noitecer”: o prefixo <b>a-</b> e o sufixo <b>-ecer</b> entraram juntos na palavra “noite”. Isso é <b>derivação parassintética</b>.<br>Teste: tire o prefixo ou o sufixo; se a palavra que sobra não existe, é parassíntese.`}
 ];
 
+/* Flashcards · Matemática · M1 (Números e operações) */
+const CARDS_M1 = [
+/* ---------- m-pct (12) ---------- */
+ {t:'m-pct', k:'conceito', f:`O que quer dizer 35%?`, b:`<b>35 de cada 100: [[35|100]] = 0,35.</b><br>Para achar 35% de um valor, multiplique o valor por 0,35.`},
+ {t:'m-pct', k:'regra', f:`Qual é o fator multiplicador de um <b>aumento</b> de i%?`, b:`<b>1 + [[i|100]]</b><br>Ex.: aumento de 15% → × 1,15 (100% + 15%).`},
+ {t:'m-pct', k:'regra', f:`Qual é o fator multiplicador de um <b>desconto</b> de i%?`, b:`<b>1 − [[i|100]]</b><br>Ex.: desconto de 15% → × 0,85 (100% − 15%).`},
+ {t:'m-pct', k:'regra', f:`Fórmula da taxa de variação percentual?`, b:`<b>[[novo − antigo|antigo]] · 100</b><br>A base é sempre o valor <b>antigo</b>.`},
+ {t:'m-pct', k:'conceito', f:`Percentuais sucessivos: soma as porcentagens ou multiplica os fatores?`, b:`<b>Multiplica os fatores.</b><br>Cada nova porcentagem é calculada sobre o valor atual, não sobre o original.`},
+ {t:'m-pct', k:'exemplo', f:`Multiplicar um preço por 0,93 equivale a quê?`, b:`<b>Desconto de 7%.</b><br>0,93 = 93% do preço → 100% − 93% = 7% a menos.`},
+ {t:'m-pct', k:'conta', f:`20% de 45?`, b:`<b>9</b><br>0,2 × 45 = 9.`},
+ {t:'m-pct', k:'conta', f:`25% de 120?`, b:`<b>30</b><br>25% = [[1|4]] → 120 ÷ 4 = 30.`},
+ {t:'m-pct', k:'conta', f:`Um produto de R$ 50,00 com 10% de desconto sai por quanto?`, b:`<b>R$ 45,00</b><br>Fator 0,9: 50 × 0,9 = 45.`},
+ {t:'m-pct', k:'conta', f:`O preço passou de R$ 40,00 para R$ 50,00. Aumento de quantos %?`, b:`<b>25%</b><br>Subiu 10 sobre 40: 10 ÷ 40 = 0,25.`},
+ {t:'m-pct', k:'pegadinha', f:`Aumentar 20% e depois descontar 20% volta ao preço original?`, b:`<b>Não!</b> 1,2 × 0,8 = 0,96: o preço final fica <b>4% menor</b>.`},
+ {t:'m-pct', k:'pegadinha', f:`Dois aumentos seguidos de 10% dão aumento total de 20%?`, b:`<b>Não! Dão 21%.</b><br>1,1 × 1,1 = 1,21. O 2º aumento é calculado sobre o preço já aumentado.`},
+
+/* ---------- m-frac (12) ---------- */
+ {t:'m-frac', k:'regra', f:`Como dividir uma fração por outra?`, b:`<b>Mantém a 1ª, inverte a 2ª e multiplica (MIM).</b><br>[[a|b]] ÷ [[c|d]] = [[a|b]] × [[d|c]]`},
+ {t:'m-frac', k:'regra', f:`Como somar frações com denominadores diferentes?`, b:`<b>Iguale os denominadores com o MMC</b> e some só os numeradores.<br>Ex.: [[2|3]] + [[1|4]] = [[8|12]] + [[3|12]] = [[11|12]].`},
+ {t:'m-frac', k:'regra', f:`Como calcular [[a|b]] de uma quantidade N?`, b:`<b>Divide N pelo de baixo (b) e multiplica pelo de cima (a).</b><br>Ex.: [[3|4]] de 60 = 60 ÷ 4 × 3 = 45.`},
+ {t:'m-frac', k:'conceito', f:`Qual é o jeito mais seguro de comparar frações diferentes?`, b:`<b>Transformar em decimal</b> (dividir o de cima pelo de baixo).<br>Ex.: [[5|8]] = 0,625 e [[2|3]] ≈ 0,667 → [[2|3]] é maior.`},
+ {t:'m-frac', k:'exemplo', f:`Qual fração corresponde a 0,75?`, b:`<b>[[3|4]]</b><br>0,75 = [[75|100]] = [[3|4]] (dividindo por 25).`},
+ {t:'m-frac', k:'exemplo', f:`“Gastou [[1|3]] do total e depois [[1|2]] <b>do que sobrou</b>.” O [[1|2]] é calculado sobre qual base?`, b:`<b>Sobre o que sobrou ([[2|3]] do total).</b><br>[[1|2]] de [[2|3]] = [[1|3]] do total.`},
+ {t:'m-frac', k:'conta', f:`[[2|3]] de 30?`, b:`<b>20</b><br>30 ÷ 3 = 10; 10 × 2 = 20.`},
+ {t:'m-frac', k:'conta', f:`[[1|4]] + [[1|6]]?`, b:`<b>[[5|12]]</b><br>MMC(4, 6) = 12: [[3|12]] + [[2|12]] = [[5|12]].`},
+ {t:'m-frac', k:'conta', f:`[[2|5]] × [[3|4]]?`, b:`<b>[[3|10]]</b><br>[[2 × 3|5 × 4]] = [[6|20]] = [[3|10]].`},
+ {t:'m-frac', k:'conta', f:`[[3|4]] ÷ [[1|2]]?`, b:`<b>[[3|2]]</b><br>[[3|4]] × [[2|1]] = [[6|4]] = [[3|2]] (= 1,5).`},
+ {t:'m-frac', k:'pegadinha', f:`[[1|2]] + [[1|3]] = [[2|5]]?`, b:`<b>Não! É [[5|6]].</b><br>Nunca some numerador com numerador e denominador com denominador: [[3|6]] + [[2|6]] = [[5|6]].`},
+ {t:'m-frac', k:'pegadinha', f:`Para multiplicar frações, é preciso igualar os denominadores?`, b:`<b>Não!</b> Multiplica de cima com de cima e de baixo com de baixo. Igualar denominadores é só para somar ou subtrair.`},
+
+/* ---------- m-reais (8) ---------- */
+ {t:'m-reais', k:'conceito', f:`O que é um número racional?`, b:`<b>É o que pode ser escrito como fração [[a|b]], com b ≠ 0.</b><br>Inteiros, decimais finitos (2,75) e dízimas periódicas (0,333…).`},
+ {t:'m-reais', k:'conceito', f:`O que é um número irracional?`, b:`<b>Decimal infinito e não periódico</b> (não pode ser escrito como fração).<br>Ex.: √{2} = 1,4142…, √{3}, π.`},
+ {t:'m-reais', k:'regra', f:`Ordem de inclusão dos conjuntos ℕ, ℤ, ℚ e ℝ?`, b:`<b>ℕ ⊂ ℤ ⊂ ℚ ⊂ ℝ</b><br>Os irracionais são os reais que ficam fora de ℚ.`},
+ {t:'m-reais', k:'exemplo', f:`√{16} é racional ou irracional?`, b:`<b>Racional</b>, pois √{16} = 4.<br>Só é irracional a raiz que não dá exata.`},
+ {t:'m-reais', k:'conta', f:`√{40} está entre quais inteiros consecutivos?`, b:`<b>Entre 6 e 7.</b><br>36 &lt; 40 &lt; 49 → 6 &lt; √{40} &lt; 7.`},
+ {t:'m-reais', k:'conta', f:`Fração geratriz de 0,444…?`, b:`<b>[[4|9]]</b><br>Período de 1 algarismo → um 9 embaixo.`},
+ {t:'m-reais', k:'conta', f:`Fração geratriz de 0,121212…?`, b:`<b>[[4|33]]</b><br>[[12|99]], simplificando por 3 = [[4|33]].`},
+ {t:'m-reais', k:'pegadinha', f:`3,14 é igual a π?`, b:`<b>Não!</b> 3,14 é racional (decimal finito), só uma <b>aproximação</b> de π, que é irracional.`},
+
+/* ---------- m-pot (8) ---------- */
+ {t:'m-pot', k:'regra', f:`Quanto vale a<sup>−n</sup> (a ≠ 0)?`, b:`<b>[[1|a<sup>n</sup>]]</b><br>O expoente negativo inverte a base; não deixa o número negativo.`},
+ {t:'m-pot', k:'regra', f:`Como escrever a<sup>m/n</sup> com raiz?`, b:`<b>Raiz de índice n de a<sup>m</sup>.</b><br>“Quem está embaixo mora na raiz.” Ex.: 25<sup>1/2</sup> = √{25} = 5.`},
+ {t:'m-pot', k:'conta', f:`3<sup>−2</sup>?`, b:`<b>[[1|9]]</b><br>3<sup>−2</sup> = [[1|3<sup>2</sup>]] = [[1|9]].`},
+ {t:'m-pot', k:'conta', f:`27<sup>2/3</sup>?`, b:`<b>9</b><br>Raiz cúbica de 27 = 3; depois 3<sup>2</sup> = 9.`},
+ {t:'m-pot', k:'conta', f:`Simplifique √{50}.`, b:`<b>5√{2}</b><br>√{50} = √{25 · 2} = 5√{2}.`},
+ {t:'m-pot', k:'exemplo', f:`Racionalize [[8|√{2}]].`, b:`<b>4√{2}</b><br>Multiplique em cima e embaixo por √{2}: [[8√{2}|2]] = 4√{2}.`},
+ {t:'m-pot', k:'pegadinha', f:`−3<sup>2</sup> é igual a 9?`, b:`<b>Não! −3<sup>2</sup> = −9.</b><br>Sem parênteses, só o 3 é elevado. Já (−3)<sup>2</sup> = 9.`},
+ {t:'m-pot', k:'pegadinha', f:`2<sup>3</sup> · 2<sup>4</sup> = 2<sup>12</sup>?`, b:`<b>Não! É 2<sup>7</sup>.</b><br>Mesma base multiplicando: <b>soma</b> os expoentes (3 + 4). Multiplica expoentes só em (a<sup>m</sup>)<sup>n</sup>.`},
+
+/* ---------- m-cient (8) ---------- */
+ {t:'m-cient', k:'regra', f:`Qual é a forma da notação científica?`, b:`<b>a × 10<sup>n</sup>, com 1 ≤ a &lt; 10.</b><br>Ex.: 150 000 000 = 1,5 × 10<sup>8</sup>.`},
+ {t:'m-cient', k:'regra', f:`Como multiplicar dois números em notação científica?`, b:`<b>Multiplica os números e soma os expoentes.</b><br>Na divisão: divide os números e subtrai os expoentes. Depois ajuste para 1 ≤ a &lt; 10.`},
+ {t:'m-cient', k:'conceito', f:`Número menor que 1 em notação científica: expoente positivo ou negativo?`, b:`<b>Negativo.</b><br>Número grande, expoente positivo; número miudinho, expoente negativo.`},
+ {t:'m-cient', k:'exemplo', f:`Qual potência de 10 vale o prefixo micro (µ)?`, b:`<b>10<sup>−6</sup></b><br>Mili = 10<sup>−3</sup>, micro = 10<sup>−6</sup>, nano = 10<sup>−9</sup>.`},
+ {t:'m-cient', k:'conta', f:`4 500 000 em notação científica?`, b:`<b>4,5 × 10<sup>6</sup></b><br>A vírgula andou 6 casas para a esquerda.`},
+ {t:'m-cient', k:'conta', f:`0,0007 em notação científica?`, b:`<b>7 × 10<sup>−4</sup></b><br>A vírgula andou 4 casas para a direita.`},
+ {t:'m-cient', k:'conta', f:`(2 × 10<sup>4</sup>) × (3 × 10<sup>5</sup>)?`, b:`<b>6 × 10<sup>9</sup></b><br>2 × 3 = 6 e 4 + 5 = 9.`},
+ {t:'m-cient', k:'pegadinha', f:`0,5 × 10<sup>4</sup> está em notação científica?`, b:`<b>Não!</b> 0,5 é menor que 1. O certo é <b>5 × 10<sup>3</sup></b> (mesmo valor: 5 000).`},
+
+/* ---------- m-mmc (8) ---------- */
+ {t:'m-mmc', k:'conceito', f:`“Vão se encontrar de novo”, “acontecem juntos outra vez”: MMC ou MDC?`, b:`<b>MMC</b> (mínimo múltiplo comum).<br>“Mais à frente eles se encontram.”`},
+ {t:'m-mmc', k:'conceito', f:`“Dividir em partes iguais, do maior tamanho possível, sem sobra”: MMC ou MDC?`, b:`<b>MDC</b> (máximo divisor comum).<br>“Divide em pedaços.”`},
+ {t:'m-mmc', k:'regra', f:`Pela fatoração, como se acham o MMC e o MDC?`, b:`<b>MMC: todos os fatores, com o maior expoente.<br>MDC: só os fatores comuns, com o menor expoente.</b>`},
+ {t:'m-mmc', k:'exemplo', f:`234 é divisível por 9?`, b:`<b>Sim.</b><br>2 + 3 + 4 = 9, e a soma dos algarismos é divisível por 9.`},
+ {t:'m-mmc', k:'conta', f:`MMC(6, 8)?`, b:`<b>24</b><br>6 = 2 · 3 e 8 = 2<sup>3</sup> → 2<sup>3</sup> · 3 = 24.`},
+ {t:'m-mmc', k:'conta', f:`MDC(18, 30)?`, b:`<b>6</b><br>18 = 2 · 3<sup>2</sup> e 30 = 2 · 3 · 5 → 2 · 3 = 6.`},
+ {t:'m-mmc', k:'conta', f:`Se a · b = 96 e MDC(a, b) = 4, quanto vale o MMC(a, b)?`, b:`<b>24</b><br>MMC × MDC = a × b → MMC = 96 ÷ 4 = 24.`},
+ {t:'m-mmc', k:'pegadinha', f:`O número 1 é primo?`, b:`<b>Não!</b> Primo tem exatamente dois divisores (1 e ele mesmo). O 1 tem só um divisor.`}
+];
+
+/* Flashcards · M2 · Álgebra (ver CARDS_SPEC.md) — contas conferidas em check_cm2.py */
+const CARDS_M2 = [
+/* ---------- m-eq1 · Equação do 1º grau (12) ---------- */
+ {t:'m-eq1', k:'regra', f:`Quais são os 3 passos para resolver uma equação do 1º grau?`, b:`<b>1) Tire os parênteses; 2) termos com x de um lado, números do outro; 3) divida pelo número que multiplica o x.</b>`},
+ {t:'m-eq1', k:'regra', f:`Equação com frações: qual é o primeiro passo?`, b:`<b>Multiplicar todos os termos pelo MMC dos denominadores.</b> Assim as frações “somem”.`},
+ {t:'m-eq1', k:'conta', f:`2x + 6 = 20. Quanto vale x?`, b:`<b>x = 7</b><br>2x = 14 → x = 7.`},
+ {t:'m-eq1', k:'conta', f:`5x − 3 = 2x + 9. Quanto vale x?`, b:`<b>x = 4</b><br>5x − 2x = 9 + 3 → 3x = 12.`},
+ {t:'m-eq1', k:'conta', f:`[[x|4]] = 6. Quanto vale x?`, b:`<b>x = 24</b><br>O 4 está dividindo, passa multiplicando: 6 × 4.`},
+ {t:'m-eq1', k:'conta', f:`4(x − 1) = 20. Quanto vale x?`, b:`<b>x = 6</b><br>Distributiva: 4x − 4 = 20 → 4x = 24.`},
+ {t:'m-eq1', k:'exemplo', f:`“O dobro de um número, mais 5, é 17.” Qual é a equação?`, b:`<b>2x + 5 = 17</b><br>Resolvendo: 2x = 12 → x = 6.`},
+ {t:'m-eq1', k:'exemplo', f:`Como escrever três números consecutivos?`, b:`<b>x, x + 1 e x + 2</b><br>Ex.: soma 72 → 3x + 3 = 72 → 23, 24 e 25.`},
+ {t:'m-eq1', k:'exemplo', f:`“A tem 5 a mais que B.” Como se escreve?`, b:`<b>A = B + 5</b><br>Quem tem “a mais” é o A, então o +5 vai do lado do B.`},
+ {t:'m-eq1', k:'pegadinha', f:`[[x|2]] + 3 = 5. Multiplicando tudo por 2, fica x + 3 = 10?`, b:`<b>Não!</b> O 3 também é multiplicado: x + 6 = 10 → x = 4. É <b>todo</b> termo.`},
+ {t:'m-eq1', k:'pegadinha', f:`3x = 12, então x = 12 − 3 = 9?`, b:`<b>Não!</b> O 3 está multiplicando, então passa <b>dividindo</b>: x = 12 ÷ 3 = 4.`},
+ {t:'m-eq1', k:'conceito', f:`Achei o valor de x num problema. Como ter certeza de que está certo?`, b:`<b>Substitua o valor no enunciado</b> e veja se a igualdade (e a história) funciona.`},
+
+/* ---------- m-sist · Sistemas (12) ---------- */
+ {t:'m-sist', k:'regra', f:`Como funciona o método da adição?`, b:`<b>Some (ou subtraia) as equações para eliminar uma letra.</b> Se preciso, multiplique uma equação antes para os coeficientes ficarem opostos.`},
+ {t:'m-sist', k:'regra', f:`Como funciona o método da substituição?`, b:`<b>Isole uma letra numa equação e substitua na outra.</b> Ex.: y = 2x vai direto para a outra equação.`},
+ {t:'m-sist', k:'conceito', f:`Quando é melhor usar adição e quando usar substituição?`, b:`<b>Adição:</b> quando dá para cancelar uma letra. <b>Substituição:</b> quando uma letra já está “sozinha”.`},
+ {t:'m-sist', k:'regra', f:`Problema de quantidade e valor (carros e rodas, ingressos e reais): que duas equações montar?`, b:`<b>Uma para a quantidade e outra para o valor</b> (rodas, pontos, reais…).`},
+ {t:'m-sist', k:'conta', f:`x + y = 10 e x − y = 2. Quanto vale x?`, b:`<b>x = 6</b><br>Somando: 2x = 12. (E y = 4.)`},
+ {t:'m-sist', k:'conta', f:`x + y = 9 e x − y = 1. Quanto vale y?`, b:`<b>y = 4</b><br>Somando: 2x = 10 → x = 5; 5 + y = 9.`},
+ {t:'m-sist', k:'conta', f:`y = 2x e x + y = 15. Quanto vale x?`, b:`<b>x = 5</b><br>Substituindo: x + 2x = 15 → 3x = 15. (E y = 10.)`},
+ {t:'m-sist', k:'conta', f:`a + b = 7 e a − b = 3. Quanto vale a · b?`, b:`<b>10</b><br>Somando: 2a = 10 → a = 5; b = 2; 5 × 2 = 10.`},
+ {t:'m-sist', k:'exemplo', f:`20 veículos entre carros e motos, com 60 rodas. Quais são as duas equações?`, b:`<b>c + m = 20 e 4c + 2m = 60</b><br>Resolvendo: 10 carros e 10 motos.`},
+ {t:'m-sist', k:'exemplo', f:`40 ingressos vendidos (inteira R$ 20, meia R$ 10), total R$ 600. Quais são as equações?`, b:`<b>i + m = 40 e 20i + 10m = 600</b><br>Resolvendo: 20 inteiras e 20 meias.`},
+ {t:'m-sist', k:'pegadinha', f:`2x + y = 8 e x + y = 5. Somar as equações faz o y sumir?`, b:`<b>Não!</b> Aqui é preciso <b>subtrair</b>: (2x + y) − (x + y) = 8 − 5 → x = 3 (e y = 2).`},
+ {t:'m-sist', k:'pegadinha', f:`Achei x = 7 e y = 3, mas a pergunta era o y. Posso marcar 7?`, b:`<b>Não!</b> Responda o que foi <b>perguntado</b>: y = 3. Muitas alternativas trazem o valor da outra letra.`},
+
+/* ---------- m-prod · Produtos notáveis e fatoração (12) ---------- */
+ {t:'m-prod', k:'regra', f:`(a + b)² = ?`, b:`<b>a² + 2ab + b²</b><br>“Quadrado do 1º, duas vezes o 1º pelo 2º, quadrado do 2º.”`},
+ {t:'m-prod', k:'regra', f:`(a − b)² = ?`, b:`<b>a² − 2ab + b²</b><br>Só o termo do meio fica negativo.`},
+ {t:'m-prod', k:'regra', f:`(a + b)(a − b) = ?`, b:`<b>a² − b²</b><br>Soma vezes diferença dá diferença dos quadrados.`},
+ {t:'m-prod', k:'conceito', f:`O que é fatorar uma expressão?`, b:`<b>Transformar uma soma em produto</b> (o caminho de volta). Ex.: 6x + 9y = 3(2x + 3y), fator comum.`},
+ {t:'m-prod', k:'exemplo', f:`x² + 6x + 9 fatorado é…?`, b:`<b>(x + 3)²</b><br>É um trinômio quadrado perfeito: x², 2·x·3 e 3².`},
+ {t:'m-prod', k:'exemplo', f:`x² − 25 fatorado é…?`, b:`<b>(x + 5)(x − 5)</b><br>Diferença de quadrados: x² − 5².`},
+ {t:'m-prod', k:'exemplo', f:`Simplifique [[x² − 9|x + 3]] (com x ≠ −3).`, b:`<b>x − 3</b><br>x² − 9 = (x + 3)(x − 3); corta o (x + 3).`},
+ {t:'m-prod', k:'conta', f:`31² de cabeça?`, b:`<b>961</b><br>(30 + 1)² = 900 + 60 + 1.`},
+ {t:'m-prod', k:'conta', f:`29 × 31 de cabeça?`, b:`<b>899</b><br>(30 − 1)(30 + 1) = 30² − 1 = 900 − 1.`},
+ {t:'m-prod', k:'conta', f:`102² − 98² de cabeça?`, b:`<b>800</b><br>(102 + 98)(102 − 98) = 200 × 4.`},
+ {t:'m-prod', k:'conta', f:`Desenvolva (x + 5)².`, b:`<b>x² + 10x + 25</b><br>x², 2·x·5 = 10x e 5² = 25.`},
+ {t:'m-prod', k:'pegadinha', f:`(a + b)² = a² + b²?`, b:`<b>Não!</b> Falta o 2ab. Teste: (2 + 3)² = 25, mas 2² + 3² = 13.`},
+
+/* ---------- m-eq2 · Equação do 2º grau (12) ---------- */
+ {t:'m-eq2', k:'regra', f:`Fórmula do Δ (delta)?`, b:`<b>Δ = b² − 4ac</b><br>“Bê-dois menos quatro-a-cê.”`},
+ {t:'m-eq2', k:'regra', f:`Fórmula de Bhaskara para x?`, b:`<b>x = [[−b ± √{Δ}|2a]]</b><br>O ± dá as duas raízes.`},
+ {t:'m-eq2', k:'conceito', f:`O que o sinal do Δ diz sobre as raízes?`, b:`<b>Δ &gt; 0: duas raízes reais diferentes; Δ = 0: duas iguais (uma só); Δ &lt; 0: nenhuma raiz real.</b>`},
+ {t:'m-eq2', k:'regra', f:`Em ax² + bx + c = 0, quanto valem a soma S e o produto P das raízes?`, b:`<b>S = [[−b|a]] e P = [[c|a]]</b><br>Ex.: x² − 5x + 6 = 0 → soma 5, produto 6 → 2 e 3.`},
+ {t:'m-eq2', k:'regra', f:`Como resolver ax² + bx = 0 (sem o c)?`, b:`<b>Coloque x em evidência: x(ax + b) = 0 → x = 0 ou x = [[−b|a]].</b>`},
+ {t:'m-eq2', k:'conta', f:`Raízes de x² − 7x + 12 = 0?`, b:`<b>3 e 4</b><br>Soma 7 e produto 12.`},
+ {t:'m-eq2', k:'conta', f:`Δ de x² + 2x − 3 = 0?`, b:`<b>Δ = 16</b><br>2² − 4·1·(−3) = 4 + 12. Raízes: 1 e −3.`},
+ {t:'m-eq2', k:'conta', f:`Raízes de x² − 3x = 0?`, b:`<b>0 e 3</b><br>x(x − 3) = 0.`},
+ {t:'m-eq2', k:'conta', f:`Raízes de x² − 16 = 0?`, b:`<b>4 e −4</b><br>x² = 16 → x = ±4.`},
+ {t:'m-eq2', k:'pegadinha', f:`x² = 9. Então x = 3, e só?`, b:`<b>Não!</b> São <b>duas</b> soluções: 3 e −3, porque (−3)² também é 9.`},
+ {t:'m-eq2', k:'pegadinha', f:`Em x² − 6x + 8 = 0, quanto vale −b na fórmula?`, b:`<b>+6</b><br>Aqui b = −6, então −b = −(−6) = 6. Raízes: 2 e 4.`},
+ {t:'m-eq2', k:'exemplo', f:`Problema do lado de um terreno deu raízes 5 e −8. Qual é a resposta?`, b:`<b>5</b><br>Medida (lado, idade, quantidade) não é negativa: descarte o −8.`},
+
+/* ---------- m-prop · Razão, proporção, regra de três e escalas (12) ---------- */
+ {t:'m-prop', k:'conceito', f:`Razão × proporção: qual a diferença?`, b:`<b>Razão</b> é uma divisão que compara ([[a|b]]); <b>proporção</b> é uma igualdade de razões ([[a|b]] = [[c|d]]).`},
+ {t:'m-prop', k:'regra', f:`[[a|b]] = [[c|d]]. O que vale pela propriedade fundamental?`, b:`<b>a · d = b · c</b><br>Multiplica cruzado.`},
+ {t:'m-prop', k:'conceito', f:`Diretamente × inversamente proporcionais?`, b:`<b>Direta:</b> uma dobra, a outra dobra (razão constante). <b>Inversa:</b> uma dobra, a outra cai pela metade (produto constante).`},
+ {t:'m-prop', k:'exemplo', f:`Operários e dias para fazer a mesma obra: direta ou inversa?`, b:`<b>Inversa.</b> Mais operários → menos dias. Ex.: 6 fazem em 10 dias; 4 fazem em x: 6 × 10 = 4 × x → 15 dias.`},
+ {t:'m-prop', k:'regra', f:`Como se calcula a escala?`, b:`<b>Escala = [[medida no desenho|medida real]]</b>, as duas na mesma unidade.`},
+ {t:'m-prop', k:'regra', f:`1 km tem quantos centímetros?`, b:`<b>100 000 cm</b><br>1 km = 1 000 m e 1 m = 100 cm.`},
+ {t:'m-prop', k:'regra', f:`Fórmulas da velocidade média e da densidade demográfica?`, b:`<b>v = [[distância|tempo]]</b> (km/h) e <b>densidade = [[habitantes|área]]</b> (hab/km²).`},
+ {t:'m-prop', k:'conta', f:`Escala 1 : 100 000. 3 cm no mapa são quantos km reais?`, b:`<b>3 km</b><br>3 × 100 000 = 300 000 cm = 3 km.`},
+ {t:'m-prop', k:'conta', f:`3 cadernos custam R$ 12. Quanto custam 5?`, b:`<b>R$ 20</b><br>Cada um custa R$ 4 (direta).`},
+ {t:'m-prop', k:'conta', f:`Um carro fez 90 km em 1h30. Velocidade média?`, b:`<b>60 km/h</b><br>1h30 = 1,5 h; 90 ÷ 1,5 = 60.`},
+ {t:'m-prop', k:'conta', f:`Divida 100 em partes proporcionais a 2 e 3.`, b:`<b>40 e 60</b><br>2 + 3 = 5 partes; 100 ÷ 5 = 20 → 2 × 20 e 3 × 20.`},
+ {t:'m-prop', k:'pegadinha', f:`2h30 é o mesmo que 2,3 h?`, b:`<b>Não!</b> 2h30 = <b>2,5 h</b>, porque meia hora é 0,5 h.`},
+
+/* ---------- m-func · Funções e valor numérico (8) ---------- */
+ {t:'m-func', k:'conceito', f:`O que é uma função?`, b:`<b>Uma regra que, para cada x que entra, dá um único y.</b> Pode vir como tabela, fórmula ou gráfico.`},
+ {t:'m-func', k:'regra', f:`Em y = ax + b, o que são o a e o b?`, b:`<b>a = taxa de variação</b> (“anda”) e <b>b = valor inicial</b> (“base”, onde o gráfico corta o eixo y).`},
+ {t:'m-func', k:'exemplo', f:`y = −3x + 2: o gráfico é crescente ou decrescente?`, b:`<b>Decrescente</b>, porque a = −3 &lt; 0.`},
+ {t:'m-func', k:'conceito', f:`Que forma tem o gráfico de y = ax² + bx + c?`, b:`<b>Parábola.</b> É o gráfico da função quadrática.`},
+ {t:'m-func', k:'conta', f:`y = 3x − 1. Quanto vale y para x = 4?`, b:`<b>11</b><br>3 × 4 − 1 = 12 − 1.`},
+ {t:'m-func', k:'conta', f:`Valor de x² + x para x = −3?`, b:`<b>6</b><br>(−3)² + (−3) = 9 − 3. Use parênteses: (−3)² = 9, não −9.`},
+ {t:'m-func', k:'conta', f:`Tabela: x = 0, 1, 2 e y = 1, 4, 7. Qual é a lei?`, b:`<b>y = 3x + 1</b><br>y sobe 3 a cada passo (a = 3); em x = 0, y = 1 (b = 1).`},
+ {t:'m-func', k:'pegadinha', f:`Táxi: y = 2x + 4. Dobrando os quilômetros, o preço dobra?`, b:`<b>Não!</b> 1 km custa 6 e 2 km custam 8, por causa da bandeirada (o b). Só é proporcional quando b = 0.`},
+
+/* ---------- m-seq · Sequências (6) ---------- */
+ {t:'m-seq', k:'regra', f:`Termo geral da sequência que soma sempre o mesmo número (r)?`, b:`<b>a<sub>n</sub> = a<sub>1</sub> + (n − 1)·r</b>`},
+ {t:'m-seq', k:'conceito', f:`Progressão aritmética × geométrica?`, b:`<b>Aritmética:</b> soma sempre o mesmo número (5, 9, 13…). <b>Geométrica:</b> multiplica sempre pelo mesmo (3, 6, 12…).`},
+ {t:'m-seq', k:'conta', f:`Próximo termo de 2, 6, 18, 54, …?`, b:`<b>162</b><br>Multiplica por 3: 54 × 3.`},
+ {t:'m-seq', k:'conta', f:`10º termo de 3, 7, 11, 15, …?`, b:`<b>39</b><br>3 + 9 × 4 = 3 + 36.`},
+ {t:'m-seq', k:'exemplo', f:`1, 1, 2, 3, 5, 8, … Qual é o próximo termo?`, b:`<b>13</b><br>Cada termo é a soma dos dois anteriores: 5 + 8.`},
+ {t:'m-seq', k:'pegadinha', f:`Do 1º ao 20º termo de uma sequência, quantos “pulos” de r há?`, b:`<b>19</b>, e não 20! Por isso é (n − 1) na fórmula.`}
+];
+
+const CARDS_M3 = [
+ /* ===== m-ang · Ângulos e retas paralelas (12) ===== */
+ {t:'m-ang', k:'regra', f:`Dois ângulos complementares somam quanto?`, b:`<b>90°</b>. Ex.: 30° e 60° são complementares.`},
+ {t:'m-ang', k:'regra', f:`Dois ângulos suplementares somam quanto?`, b:`<b>180°</b>. Ex.: 110° e 70° são suplementares.`},
+ {t:'m-ang', k:'conceito', f:`O que se sabe sobre dois ângulos opostos pelo vértice?`, b:`<b>São iguais.</b> Quando duas retas se cruzam, os ângulos “de frente” um para o outro têm a mesma medida.`},
+ {t:'m-ang', k:'exemplo', f:`Um ângulo de exatamente 180° (meia-volta, formando uma reta) se chama como?`, b:`<b>Ângulo raso.</b> Lembre: agudo &lt; 90°, reto = 90°, obtuso entre 90° e 180°.`},
+ {t:'m-ang', k:'conceito', f:`Paralelas cortadas por transversal: ângulos alternos internos são iguais ou somam 180°?`, b:`<b>São iguais.</b> Ficam entre as paralelas, em lados opostos da transversal: formam a letra “Z”.`},
+ {t:'m-ang', k:'conceito', f:`Paralelas cortadas por transversal: como são os ângulos correspondentes (mesma posição em cada cruzamento)?`, b:`<b>Iguais.</b> Formam a letra “F”.`},
+ {t:'m-ang', k:'regra', f:`Paralelas cortadas por transversal: quanto somam dois colaterais internos?`, b:`<b>180°.</b> Ficam entre as paralelas, do mesmo lado da transversal: formam a letra “U”.`},
+ {t:'m-ang', k:'conta', f:`Complemento de 35°?`, b:`<b>55°</b>. 90 − 35 = 55.`},
+ {t:'m-ang', k:'conta', f:`Suplemento de 125°?`, b:`<b>55°</b>. 180 − 125 = 55.`},
+ {t:'m-ang', k:'conta', f:`Suplemento do complemento de 50°?`, b:`<b>140°</b>. Complemento de 50° = 40°; suplemento de 40° = 140°.`},
+ {t:'m-ang', k:'conta', f:`A bissetriz divide um ângulo de 130° em dois ângulos de quanto?`, b:`<b>65°</b> cada. A bissetriz corta o ângulo ao meio: 130 ÷ 2 = 65.`},
+ {t:'m-ang', k:'pegadinha', f:`“O complemento de 40° é 140°.” Certo?`, b:`<b>Não!</b> 140° é o <b>suplemento</b> (soma 180°). O complemento (soma 90°) é <b>50°</b>.`},
+
+ /* ===== m-pol · Triângulos e polígonos (8) ===== */
+ {t:'m-pol', k:'regra', f:`Fórmula da soma dos ângulos internos de um polígono de n lados?`, b:`<b>S<sub>i</sub> = (n − 2)·180°</b>. O polígono se divide em (n − 2) triângulos.`},
+ {t:'m-pol', k:'regra', f:`Fórmula do número de diagonais de um polígono de n lados?`, b:`<b>d = [[n(n − 3)|2]]</b>. Divide por 2 porque cada diagonal seria contada duas vezes.`},
+ {t:'m-pol', k:'regra', f:`Quanto somam os ângulos externos de qualquer polígono convexo?`, b:`<b>360°</b>, sempre (uma volta completa). No regular, cada externo = [[360°|n]].`},
+ {t:'m-pol', k:'conceito', f:`O ângulo externo de um triângulo é igual a quê?`, b:`<b>À soma dos dois ângulos internos não vizinhos a ele.</b> Ex.: internos 50° e 60° → externo oposto = 110°.`},
+ {t:'m-pol', k:'conta', f:`Soma dos ângulos internos de um pentágono?`, b:`<b>540°</b>. (5 − 2)·180 = 3·180 = 540.`},
+ {t:'m-pol', k:'conta', f:`Cada ângulo externo de um decágono regular (10 lados) mede?`, b:`<b>36°</b>. 360 ÷ 10 = 36. (O interno é 180 − 36 = 144°.)`},
+ {t:'m-pol', k:'conta', f:`Quantas diagonais tem um pentágono?`, b:`<b>5</b>. d = [[5·2|2]] = 5.`},
+ {t:'m-pol', k:'pegadinha', f:`Todo losango é um quadrado?`, b:`<b>Não!</b> O losango tem 4 lados iguais, mas o quadrado precisa também de 4 ângulos retos. (Todo quadrado é losango, não o contrário.)`},
+
+ /* ===== m-sem · Semelhança e Tales (12) ===== */
+ {t:'m-sem', k:'conceito', f:`O que duas figuras semelhantes têm em comum?`, b:`<b>Ângulos correspondentes iguais e lados correspondentes proporcionais.</b> Mesma forma, tamanhos diferentes.`},
+ {t:'m-sem', k:'regra', f:`Quais são os três casos de semelhança de triângulos?`, b:`<b>AA, LAL e LLL.</b> AA (dois ângulos iguais) é o mais usado.`},
+ {t:'m-sem', k:'exemplo', f:`Um triângulo tem ângulos de 40° e 75°; outro, de 40° e 65°. São semelhantes?`, b:`<b>Sim, pelo caso AA.</b> O terceiro ângulo do primeiro é 65°, então os dois têm 40°, 65° e 75°.`},
+ {t:'m-sem', k:'regra', f:`Se a razão de semelhança entre os lados é k, qual a razão entre os perímetros?`, b:`<b>k</b> (a mesma dos lados).`},
+ {t:'m-sem', k:'regra', f:`Se a razão de semelhança entre os lados é k, qual a razão entre as áreas?`, b:`<b>k²</b>. Ex.: lados ×2 → área ×4.`},
+ {t:'m-sem', k:'regra', f:`O que diz o Teorema de Tales?`, b:`<b>Um feixe de paralelas cortado por duas transversais determina segmentos proporcionais:</b> [[a|b]] = [[c|d]].`},
+ {t:'m-sem', k:'conceito', f:`Por que dá para medir a altura de um prédio pela sombra?`, b:`<b>No mesmo instante, os raios de sol são paralelos</b>, então os triângulos são semelhantes e [[altura|sombra]] é igual para todos os objetos.`},
+ {t:'m-sem', k:'conta', f:`Triângulos de lados 3, 4, 5 e 6, 8, 10. Razão de semelhança (maior ÷ menor)?`, b:`<b>k = 2</b>. [[6|3]] = [[8|4]] = [[10|5]] = 2.`},
+ {t:'m-sem', k:'conta', f:`Figuras semelhantes com razão k = 2. A menor tem 10 cm² de área. Área da maior?`, b:`<b>40 cm²</b>. Áreas na razão k² = 4: 10 × 4 = 40.`},
+ {t:'m-sem', k:'conta', f:`Uma vara de 1 m faz sombra de 2 m. No mesmo instante, uma árvore faz sombra de 10 m. Altura da árvore?`, b:`<b>5 m</b>. A sombra é o dobro da altura: 10 ÷ 2 = 5.`},
+ {t:'m-sem', k:'conta', f:`Tales: [[2|3]] = [[4|x]]. Quanto vale x?`, b:`<b>x = 6</b>. 2x = 12 → x = 6.`},
+ {t:'m-sem', k:'pegadinha', f:`Os lados de uma figura triplicam. A área fica 3 vezes maior?`, b:`<b>Não!</b> Fica <b>9 vezes</b> maior (3² = 9). Só o perímetro triplica.`},
+
+ /* ===== m-pit · Pitágoras e relações métricas (12) ===== */
+ {t:'m-pit', k:'regra', f:`Teorema de Pitágoras (a = hipotenusa; b e c = catetos)?`, b:`<b>a² = b² + c²</b>. O quadrado da hipotenusa é a soma dos quadrados dos catetos.`},
+ {t:'m-pit', k:'conceito', f:`O que é a hipotenusa num triângulo retângulo?`, b:`<b>O lado oposto ao ângulo de 90°</b>, sempre o maior. Os outros dois (que formam o ângulo reto) são os catetos.`},
+ {t:'m-pit', k:'regra', f:`Diagonal de um quadrado de lado ℓ?`, b:`<b>d = ℓ√{2}</b>. Ex.: lado 5 → diagonal 5√{2}.`},
+ {t:'m-pit', k:'regra', f:`Altura de um triângulo equilátero de lado ℓ?`, b:`<b>h = [[ℓ√{3}|2]]</b>. Ex.: lado 10 → h = 5√{3}.`},
+ {t:'m-pit', k:'regra', f:`A altura relativa à hipotenusa a divide em m e n. Quanto vale h²?`, b:`<b>h² = m·n</b>. Ex.: m = 4 e n = 9 → h² = 36 → h = 6.`},
+ {t:'m-pit', k:'regra', f:`No triângulo retângulo, hipotenusa × altura relativa a ela é igual a quê?`, b:`<b>Ao produto dos catetos: a·h = b·c</b>.`},
+ {t:'m-pit', k:'exemplo', f:`Um triângulo de lados 6, 8 e 10 é retângulo?`, b:`<b>Sim.</b> 6² + 8² = 36 + 64 = 100 = 10². (É o 3-4-5 vezes 2.)`},
+ {t:'m-pit', k:'conta', f:`Catetos 6 e 8. Hipotenusa?`, b:`<b>10</b>. 36 + 64 = 100 → √{100} = 10.`},
+ {t:'m-pit', k:'conta', f:`Hipotenusa 13 e um cateto 5. O outro cateto?`, b:`<b>12</b>. 169 − 25 = 144 → √{144} = 12 (terno 5-12-13).`},
+ {t:'m-pit', k:'conta', f:`Catetos 8 e 15. Hipotenusa?`, b:`<b>17</b>. 64 + 225 = 289 → √{289} = 17 (terno 8-15-17).`},
+ {t:'m-pit', k:'conta', f:`A altura relativa à hipotenusa a divide em m = 1 e n = 9. Altura?`, b:`<b>3</b>. h² = 1 · 9 = 9 → h = 3.`},
+ {t:'m-pit', k:'pegadinha', f:`Hipotenusa 10 e cateto 6. O outro cateto é √{10² + 6²}?`, b:`<b>Não!</b> Quando falta um cateto, <b>subtraia</b>: 100 − 36 = 64 → cateto = <b>8</b>.`},
+
+ /* ===== m-circ · Circunferência (8) ===== */
+ {t:'m-circ', k:'conceito', f:`Onde fica o vértice do ângulo central e quanto ele mede?`, b:`<b>No centro da circunferência</b>, e mede o mesmo que o arco que ele determina.`},
+ {t:'m-circ', k:'regra', f:`Quanto mede um ângulo inscrito em relação ao arco que ele “olha”?`, b:`<b>A metade do arco</b> (e metade do central correspondente). Vértice na própria circunferência.`},
+ {t:'m-circ', k:'conceito', f:`Quanto mede um ângulo inscrito que “olha” para um diâmetro?`, b:`<b>90°.</b> Todo triângulo inscrito com um lado sendo diâmetro é retângulo.`},
+ {t:'m-circ', k:'regra', f:`Fórmula do comprimento de uma circunferência de raio r?`, b:`<b>C = 2πr</b>. Um arco de α° mede [[α|360]]·2πr.`},
+ {t:'m-circ', k:'conta', f:`Ângulo central de 80°. Quanto mede o inscrito que olha o mesmo arco?`, b:`<b>40°</b>. Inscrito = metade do central.`},
+ {t:'m-circ', k:'conta', f:`Ângulo inscrito de 25°. Quanto mede o central que olha o mesmo arco?`, b:`<b>50°</b>. Central = dobro do inscrito.`},
+ {t:'m-circ', k:'conta', f:`Comprimento de uma circunferência de raio 10 cm (π ≈ 3,14)?`, b:`<b>62,8 cm</b>. 2 × 3,14 × 10 = 62,8.`},
+ {t:'m-circ', k:'pegadinha', f:`O comprimento da circunferência é πr²?`, b:`<b>Não!</b> πr² é a <b>área</b> do círculo. O comprimento é <b>2πr</b>.`},
+
+ /* ===== m-cart · Plano cartesiano (8) ===== */
+ {t:'m-cart', k:'pegadinha', f:`Os pares (2, 3) e (3, 2) representam o mesmo ponto?`, b:`<b>Não!</b> A ordem importa: primeiro o x (horizontal, abscissa), depois o y (vertical, ordenada).`},
+ {t:'m-cart', k:'regra', f:`Quais são os sinais (x, y) dos pontos do 2º quadrante?`, b:`<b>(−, +)</b>. Ordem anti-horária: 1º (+, +), 2º (−, +), 3º (−, −), 4º (+, −).`},
+ {t:'m-cart', k:'exemplo', f:`Em que quadrante fica o ponto (3, −2)?`, b:`<b>4º quadrante</b>: x positivo e y negativo.`},
+ {t:'m-cart', k:'regra', f:`Como calcular o ponto médio entre dois pontos?`, b:`<b>Média dos x e média dos y:</b> M = ([[x<sub>1</sub> + x<sub>2</sub>|2]], [[y<sub>1</sub> + y<sub>2</sub>|2]]).`},
+ {t:'m-cart', k:'regra', f:`Fórmula da distância entre dois pontos?`, b:`<b>d² = (Δx)² + (Δy)²</b>. É Pitágoras: Δx e Δy são os catetos, d é a hipotenusa.`},
+ {t:'m-cart', k:'conta', f:`Ponto médio entre (2, 4) e (6, 10)?`, b:`<b>(4, 7)</b>. [[2 + 6|2]] = 4 e [[4 + 10|2]] = 7.`},
+ {t:'m-cart', k:'conta', f:`Distância entre (1, 1) e (4, 5)?`, b:`<b>5</b>. Δx = 3, Δy = 4 → d² = 9 + 16 = 25 → d = 5.`},
+ {t:'m-cart', k:'conta', f:`Distância entre (2, 3) e (9, 3)?`, b:`<b>7</b>. Mesma horizontal (mesmo y): basta a diferença dos x, 9 − 2 = 7.`},
+];
+
+/* Flashcards · Matemática · M4 (Medidas) e M5 (Estatística) */
+const CARDS_M45 = [
+ /* ---------- m-area (12) ---------- */
+ {t:'m-area', k:'regra', f:`Fórmula da área do trapézio?`, b:`<b>[[(B + b)·h|2]]</b><br>B = base maior, b = base menor, h = altura.`},
+ {t:'m-area', k:'regra', f:`Fórmula da área do losango?`, b:`<b>[[D·d|2]]</b><br>D e d são as duas diagonais.`},
+ {t:'m-area', k:'regra', f:`Fórmula da área da coroa circular (anel) de raio maior R e raio menor r?`, b:`<b>π(R² − r²)</b><br>Círculo grande menos o círculo do buraco: πR² − πr².`},
+ {t:'m-area', k:'regra', f:`Fórmula da área de um setor circular de α graus?`, b:`<b>[[α|360]] · πr²</b><br>É a fração do círculo inteiro que o setor ocupa.`},
+ {t:'m-area', k:'conceito', f:`Perímetro × área: qual é a diferença?`, b:`<b>Perímetro é a volta (contorno); área é o espaço de dentro.</b><br>Perímetro em m; área em m² (unidade ao quadrado).`},
+ {t:'m-area', k:'regra', f:`1 hectare equivale a quantos m²?`, b:`<b>10 000 m²</b><br>É um quadrado de 100 m × 100 m.`},
+ {t:'m-area', k:'pegadinha', f:`Círculo de diâmetro 10 cm: a área é π · 10²?`, b:`<b>Não! O raio é 5.</b><br>Área = π · 5² = 25π cm². Divida o diâmetro por 2 antes.`},
+ {t:'m-area', k:'pegadinha', f:`1 m² = 100 cm²?`, b:`<b>Não! 1 m² = 10 000 cm².</b><br>Porque 100 cm × 100 cm.`},
+ {t:'m-area', k:'conta', f:`Área do triângulo de base 8 cm e altura 5 cm?`, b:`<b>20 cm²</b><br>[[8 × 5|2]] = [[40|2]] = 20.`},
+ {t:'m-area', k:'conta', f:`Área do trapézio de bases 9 e 5 e altura 4?`, b:`<b>28</b><br>[[(9 + 5) × 4|2]] = [[56|2]] = 28.`},
+ {t:'m-area', k:'conta', f:`Área do círculo de raio 3 m (use π ≈ 3)?`, b:`<b>27 m²</b><br>3 × 3² = 3 × 9 = 27.`},
+ {t:'m-area', k:'conta', f:`Quadrado de lado 10 cm com um furo quadrado de lado 4 cm. Área que sobra?`, b:`<b>84 cm²</b><br>Grande menos o buraco: 100 − 16 = 84.`},
+
+ /* ---------- m-vol (8) ---------- */
+ {t:'m-vol', k:'regra', f:`Fórmula do volume do cilindro?`, b:`<b>V = πr² · h</b><br>Área da base (círculo) × altura.`},
+ {t:'m-vol', k:'conceito', f:`Regra geral do volume de qualquer prisma ou cilindro?`, b:`<b>Área da base × altura</b><br>Imagine pilhas de folhas iguais à base.`},
+ {t:'m-vol', k:'regra', f:`1 m³ equivale a quantos litros?`, b:`<b>1 000 litros</b><br>E 1 dm³ = 1 L; 1 cm³ = 1 mL.`},
+ {t:'m-vol', k:'pegadinha', f:`Um aquário de 60 000 cm³ tem 6 000 litros?`, b:`<b>Não! Tem 60 litros.</b><br>cm³ → litros: divide por 1 000 (1 000 cm³ = 1 L).`},
+ {t:'m-vol', k:'pegadinha', f:`Se a aresta de um cubo dobra, o volume dobra?`, b:`<b>Não! Fica 8 vezes maior.</b><br>(2a)³ = 2³ · a³ = 8a³.`},
+ {t:'m-vol', k:'conta', f:`Volume de um cubo de aresta 3 cm?`, b:`<b>27 cm³</b><br>3³ = 3 × 3 × 3 = 27.`},
+ {t:'m-vol', k:'conta', f:`Uma caixa-d’água mede 2 m × 3 m × 1 m. Quantos litros cabem?`, b:`<b>6 000 litros</b><br>2 × 3 × 1 = 6 m³; 6 × 1 000 = 6 000 L.`},
+ {t:'m-vol', k:'conta', f:`Volume do cilindro de raio 2 cm e altura 10 cm (use π ≈ 3)?`, b:`<b>120 cm³</b><br>3 × 2² × 10 = 3 × 4 × 10 = 120.`},
+
+ /* ---------- m-unid (8) ---------- */
+ {t:'m-unid', k:'regra', f:`Na escada km-hm-dam-m-dm-cm-mm, quanto vale cada degrau no comprimento, na área e no volume?`, b:`<b>×10, ×100 e ×1 000</b><br>1 zero, 2 zeros e 3 zeros por degrau.`},
+ {t:'m-unid', k:'regra', f:`Como converter km/h em m/s?`, b:`<b>Divida por 3,6.</b><br>E de m/s para km/h, multiplique por 3,6.`},
+ {t:'m-unid', k:'conceito', f:`Para converter de uma unidade maior para uma menor (ex.: m → cm), multiplica ou divide?`, b:`<b>Multiplica.</b><br>A unidade menor cabe mais vezes, então o número aumenta: 2 m = 200 cm.`},
+ {t:'m-unid', k:'pegadinha', f:`1,5 h é 1h50min?`, b:`<b>Não! É 1h30min.</b><br>Hora é base 60: 0,5 h × 60 = 30 min.`},
+ {t:'m-unid', k:'pegadinha', f:`1 m³ = 100 cm³?`, b:`<b>Não! 1 m³ = 1 000 000 cm³.</b><br>Volume anda de 1 000 em 1 000 por degrau: 100 cm × 100 cm × 100 cm.`},
+ {t:'m-unid', k:'conta', f:`3,5 km em metros?`, b:`<b>3 500 m</b><br>1 km = 1 000 m: 3,5 × 1 000.`},
+ {t:'m-unid', k:'conta', f:`0,25 h em minutos?`, b:`<b>15 min</b><br>0,25 × 60 = 15.`},
+ {t:'m-unid', k:'conta', f:`36 km/h em m/s?`, b:`<b>10 m/s</b><br>36 ÷ 3,6 = 10.`},
+
+ /* ---------- m-graf (12) ---------- */
+ {t:'m-graf', k:'regra', f:`Num gráfico de setores (pizza), como achar o ângulo de um setor?`, b:`<b>Ângulo = porcentagem × 360°</b><br>Ex.: 50% → 180°.`},
+ {t:'m-graf', k:'exemplo', f:`Temperatura de uma cidade dia a dia durante um mês. Qual gráfico usar?`, b:`<b>Gráfico de linhas</b><br>Linha = variação ao longo do tempo.`},
+ {t:'m-graf', k:'exemplo', f:`Número de votos de cada candidato. Qual gráfico usar?`, b:`<b>Colunas (ou barras)</b><br>Coluna = comparar categorias.`},
+ {t:'m-graf', k:'exemplo', f:`Como a renda de uma família se divide entre os gastos (em %). Qual gráfico usar?`, b:`<b>Setores (pizza)</b><br>Pizza = partes de um todo, somando 100%.`},
+ {t:'m-graf', k:'conceito', f:`Num gráfico de linhas, onde está o maior crescimento?`, b:`<b>No trecho mais inclinado (subida mais íngreme).</b>`},
+ {t:'m-graf', k:'conceito', f:`O que ler antes de responder a uma questão com gráfico?`, b:`<b>Título, eixos, unidades, legenda e fonte.</b><br>E se o eixo começa no zero.`},
+ {t:'m-graf', k:'pegadinha', f:`O eixo vertical começa em 100, e uma coluna parece o dobro da outra. O valor dobrou?`, b:`<b>Não necessariamente!</b><br>Eixo que não começa no zero exagera as diferenças. Compare os valores, não o tamanho.`},
+ {t:'m-graf', k:'pegadinha', f:`Um gráfico de pizza mostra fatias de 50%, 40% e 20%. Está correto?`, b:`<b>Não! Soma 110%.</b><br>As partes de uma pizza devem somar 100% (360°).`},
+ {t:'m-graf', k:'conta', f:`Setor de 25% numa pizza: quantos graus?`, b:`<b>90°</b><br>[[1|4]] de 360° = 90°.`},
+ {t:'m-graf', k:'conta', f:`Setor de 10% numa pizza: quantos graus?`, b:`<b>36°</b><br>10% de 360° = 36°.`},
+ {t:'m-graf', k:'conta', f:`Um setor mede 72°. Que porcentagem ele representa?`, b:`<b>20%</b><br>[[72|360]] = [[1|5]] = 20%.`},
+ {t:'m-graf', k:'conta', f:`Pesquisa com 300 alunos: o setor “futebol” mede 120°. Quantos alunos escolheram futebol?`, b:`<b>100 alunos</b><br>[[120|360]] = [[1|3]]; [[1|3]] de 300 = 100.`},
+
+ /* ---------- m-media (12) ---------- */
+ {t:'m-media', k:'regra', f:`Fórmula da média ponderada?`, b:`<b>[[soma (valor × peso)|soma dos pesos]]</b><br>Cada valor conta tantas vezes quanto o seu peso.`},
+ {t:'m-media', k:'regra', f:`Como achar a mediana quando a quantidade de dados é par?`, b:`<b>Ordene e faça a média dos dois do meio.</b><br>Ex.: 2, 4, 6, 10 → [[4 + 6|2]] = 5.`},
+ {t:'m-media', k:'conceito', f:`Moda × mediana: qual é a diferença?`, b:`<b>Moda é o valor que mais aparece; mediana é o do meio (depois de ordenar).</b>`},
+ {t:'m-media', k:'conceito', f:`Qual medida é “puxada” por um valor muito alto ou muito baixo: média ou mediana?`, b:`<b>A média.</b><br>A mediana não muda muito; por isso salários são bem representados pela mediana.`},
+ {t:'m-media', k:'exemplo', f:`Qual é a moda de 2, 4, 4, 5, 5, 9?`, b:`<b>4 e 5</b><br>Os dois aparecem 2 vezes: pode haver mais de uma moda (ou nenhuma).`},
+ {t:'m-media', k:'exemplo', f:`Notas 6 e 8 nas duas primeiras provas. Quanto tirar na 3ª para a média ser 8?`, b:`<b>10</b><br>Soma precisa ser 3 × 8 = 24; já tem 14; falta 10.`},
+ {t:'m-media', k:'pegadinha', f:`Mediana de 9, 2, 7: é o 2, que está no meio?`, b:`<b>Não! Primeiro ordene: 2, 7, 9.</b><br>A mediana é 7.`},
+ {t:'m-media', k:'pegadinha', f:`Nota 6 (peso 1) e nota 9 (peso 2). A média ponderada é 7,5?`, b:`<b>Não! É 8.</b><br>[[6 × 1 + 9 × 2|1 + 2]] = [[24|3]] = 8. (7,5 é a média simples.)`},
+ {t:'m-media', k:'conta', f:`Média de 4, 6 e 8?`, b:`<b>6</b><br>[[4 + 6 + 8|3]] = [[18|3]] = 6.`},
+ {t:'m-media', k:'conta', f:`Mediana de 9, 2, 5, 4, 7?`, b:`<b>5</b><br>Ordene: 2, 4, 5, 7, 9 → o do meio é 5.`},
+ {t:'m-media', k:'conta', f:`Amplitude de 3, 12, 7, 15?`, b:`<b>12</b><br>Maior − menor: 15 − 3 = 12.`},
+ {t:'m-media', k:'conta', f:`A média de 5 números é 8. Qual é a soma deles?`, b:`<b>40</b><br>Soma = média × quantidade = 8 × 5.`},
+
+ /* ---------- m-prob (8) ---------- */
+ {t:'m-prob', k:'regra', f:`Fórmula da probabilidade (todos os casos com a mesma chance)?`, b:`<b>P = [[casos favoráveis|casos possíveis]]</b><br>O que eu quero ÷ tudo o que pode acontecer.`},
+ {t:'m-prob', k:'regra', f:`A chance de chover é 0,3. Qual a chance de não chover?`, b:`<b>0,7</b><br>P(não A) = 1 − P(A) = 1 − 0,3.`},
+ {t:'m-prob', k:'conceito', f:`Probabilidade 0 e probabilidade 1 significam o quê?`, b:`<b>0 = impossível; 1 = certo.</b><br>Toda probabilidade fica entre 0 e 1 (0% a 100%).`},
+ {t:'m-prob', k:'pegadinha', f:`Dois dados: (1, 6) e (6, 1) são o mesmo caso?`, b:`<b>Não! São casos diferentes.</b><br>Por isso dois dados têm 6 × 6 = 36 resultados.`},
+ {t:'m-prob', k:'pegadinha', f:`Urna com 2 bolas vermelhas e 2 azuis. Tirar 2 vermelhas sem reposição: [[2|4]] × [[2|4]]?`, b:`<b>Não! [[2|4]] × [[1|3]] = [[1|6]].</b><br>Sem reposição, tira uma do total e uma das favoráveis.`},
+ {t:'m-prob', k:'conta', f:`Ao lançar um dado, qual a probabilidade de sair número par?`, b:`<b>[[1|2]]</b><br>Pares: 2, 4, 6 → [[3|6]] = [[1|2]].`},
+ {t:'m-prob', k:'conta', f:`Lançam-se uma moeda e um dado. Probabilidade de cara e 6?`, b:`<b>[[1|12]]</b><br>“E” multiplica: [[1|2]] × [[1|6]] = [[1|12]].`},
+ {t:'m-prob', k:'conta', f:`Urna com 2 bolas vermelhas e 3 azuis. Probabilidade de tirar vermelha?`, b:`<b>[[2|5]]</b><br>2 favoráveis em 5 possíveis.`},
+
+ /* ---------- m-cont (8) ---------- */
+ {t:'m-cont', k:'regra', f:`O que diz o princípio multiplicativo?`, b:`<b>Multiplique as opções de cada etapa.</b><br>Um tracinho por etapa: m opções e depois n → m × n.`},
+ {t:'m-cont', k:'regra', f:`Fórmula do número de apertos de mão entre n pessoas (todos com todos)?`, b:`<b>[[n(n − 1)|2]]</b><br>Divide por 2 porque A com B é o mesmo que B com A.`},
+ {t:'m-cont', k:'exemplo', f:`Escolher presidente e vice entre 5 pessoas: a ordem importa? Quantas formas?`, b:`<b>Sim, importa: 20 formas.</b><br>Presidente: 5 opções; vice: 4 → 5 × 4 = 20.`},
+ {t:'m-cont', k:'pegadinha', f:`Senhas de 3 algarismos: com e sem repetição dá o mesmo total?`, b:`<b>Não!</b><br>Com repetição: 10 × 10 × 10 = 1 000. Sem repetir: 10 × 9 × 8 = 720.`},
+ {t:'m-cont', k:'pegadinha', f:`6 times, todos contra todos uma vez: 6 × 5 = 30 partidas?`, b:`<b>Não! São 15.</b><br>A × B e B × A são o mesmo jogo: 30 ÷ 2 = 15.`},
+ {t:'m-cont', k:'conta', f:`5 camisas e 2 bermudas. Quantos conjuntos diferentes?`, b:`<b>10</b><br>5 × 2 = 10.`},
+ {t:'m-cont', k:'conta', f:`Quantos anagramas tem a palavra GATO?`, b:`<b>24</b><br>4 letras diferentes: 4 × 3 × 2 × 1 = 24.`},
+ {t:'m-cont', k:'conta', f:`5 pessoas, todas se cumprimentam uma vez. Quantos apertos de mão?`, b:`<b>10</b><br>[[5 × 4|2]] = [[20|2]] = 10.`}
+];
+
+/* Flashcards · PORTUGUÊS · P1 Leitura e interpretação
+   Todas as frases, slogans e manchetes foram escritos para este guia (exceto trechos em domínio público, indicados). */
+const CARDS_P1 = [
+/* ---------- p-impl · Explícito, implícito e inferência (12) ---------- */
+ {t:'p-impl', k:'conceito', f:`Informação explícita × implícita: qual a diferença?`, b:`<b>Explícita está escrita com todas as letras; implícita não está escrita, mas o texto permite concluir.</b> Para achar a explícita, volte ao texto e localize.`},
+ {t:'p-impl', k:'conceito', f:`Pressuposto × subentendido: qual a diferença?`, b:`<b>Pressuposto vem marcado numa palavra; subentendido depende do contexto.</b> “Ele ainda mora lá” → já morava (pressuposto). “Que calor aqui…” → pedido para abrir a janela (subentendido).`},
+ {t:'p-impl', k:'regra', f:`Cite palavras que costumam “carregar” um pressuposto.`, b:`<b>Parou de, continua, voltou a, ainda, de novo, finalmente.</b> O pressuposto vem “de brinde” na palavra.`},
+ {t:'p-impl', k:'exemplo', f:`“Rafa voltou a treinar.” O que essa frase pressupõe?`, b:`<b>Que Rafa já treinava antes e tinha parado.</b> “Voltou a” carrega essa informação.`},
+ {t:'p-impl', k:'exemplo', f:`“Choveu de novo no dia do passeio.” O que fica pressuposto?`, b:`<b>Que já tinha chovido antes.</b> A expressão “de novo” traz essa informação.`},
+ {t:'p-impl', k:'exemplo', f:`Às 22 h, a mãe diz ao filho no videogame: “Já são dez horas, e amanhã tem aula.” Que tipo de implícito há?`, b:`<b>Subentendido: é um pedido para ele ir dormir.</b> Nada na frase diz “vá dormir”; é o contexto que mostra.`},
+ {t:'p-impl', k:'exemplo', f:`“O goleiro fechou o gol na final.” Pelo contexto, o que significa “fechou o gol”?`, b:`<b>Defendeu tudo, não deixou a bola entrar.</b> Sentido descoberto pelo contexto, não pelo dicionário.`},
+ {t:'p-impl', k:'regra', f:`O que diferencia uma inferência boa de uma invenção?`, b:`<b>A inferência boa tem pista no texto.</b> Inferir é concluir a partir de pistas, e não imaginar o que o texto não sustenta.`},
+ {t:'p-impl', k:'conceito', f:`Tema × assunto do primeiro parágrafo: qual é mais amplo?`, b:`<b>O tema: é a ideia central, o que o texto inteiro quer discutir.</b> O primeiro parágrafo pode tratar só de um pedaço dele.`},
+ {t:'p-impl', k:'regra', f:`Como descobrir o sentido de uma palavra difícil numa questão?`, b:`<b>Pelo contexto: troque a palavra por cada alternativa e veja qual mantém o sentido da frase.</b>`},
+ {t:'p-impl', k:'pegadinha', f:`Uma alternativa é verdadeira no mundo real, mas o texto não fala disso. Pode ser a resposta?`, b:`<b>Não!</b> A resposta precisa caber no texto. Essa é a alternativa errada mais comum.`},
+ {t:'p-impl', k:'pegadinha', f:`Alternativas com “sempre”, “nunca” ou “todos”: o que fazer?`, b:`<b>Desconfiar.</b> Essas palavras costumam extrapolar o que o texto diz.`},
+
+/* ---------- p-tira · Tirinhas, charges e memes (12) ---------- */
+ {t:'p-tira', k:'conceito', f:`Tirinha × charge: qual a diferença?`, b:`<b>Tirinha é uma sequência curta de quadros; charge critica um fato atual (política, cidade), muitas vezes com caricatura.</b>`},
+ {t:'p-tira', k:'conceito', f:`Charge × cartum: qual a diferença?`, b:`<b>A charge critica um fato atual, com data; o cartum critica um comportamento, sem data.</b>`},
+ {t:'p-tira', k:'conceito', f:`O que é um meme?`, b:`<b>Uma imagem conhecida reaproveitada com um texto novo.</b> O humor depende de o leitor reconhecer a imagem.`},
+ {t:'p-tira', k:'regra', f:`Numa tirinha, em que quadro a graça costuma estar?`, b:`<b>No último quadro.</b> É ali que aparece a surpresa.`},
+ {t:'p-tira', k:'regra', f:`De onde nasce o humor, quase sempre?`, b:`<b>Da quebra de expectativa.</b> Fontes comuns: duplo sentido, leitura literal de algo figurado, exagero e contraste entre fala e imagem.`},
+ {t:'p-tira', k:'conceito', f:`O que é ironia?`, b:`<b>Dizer o contrário do que se pensa, e o contexto mostra isso.</b> Ironia = fala × situação apontando para lados opostos.`},
+ {t:'p-tira', k:'exemplo', f:`Depois de duas horas na fila do banco, Léo diz: “Adorei esse passeio!”. Que recurso é esse?`, b:`<b>Ironia.</b> A situação (espera chata) mostra que ele quer dizer o contrário de “adorei”.`},
+ {t:'p-tira', k:'exemplo', f:`Tirinha: o pai diz ao filho “Cai na real!”, e o menino se joga no chão. De onde vem o humor?`, b:`<b>Da interpretação literal de uma expressão figurada.</b> “Cair na real” significa encarar a realidade, não cair de verdade.`},
+ {t:'p-tira', k:'exemplo', f:`Numa tirinha, o balão tem forma de nuvem e se liga ao personagem por bolinhas. O que ele indica?`, b:`<b>Pensamento.</b> O personagem não está falando em voz alta.`},
+ {t:'p-tira', k:'exemplo', f:`Charge: um rio cheio de lixo e, na margem, a placa “Bem-vindo ao rio mais limpo do estado”. O que ela critica?`, b:`<b>A poluição do rio (e o descaso com ela).</b> A crítica nasce do contraste entre a placa e a imagem.`},
+ {t:'p-tira', k:'pegadinha', f:`Na questão sobre charge, basta descrever o que aparece na imagem?`, b:`<b>Não!</b> É preciso interpretar o efeito: qual crítica, humor ou ironia a imagem produz.`},
+ {t:'p-tira', k:'pegadinha', f:`Ironia é o mesmo que mentira?`, b:`<b>Não!</b> Quem mente quer enganar; quem usa ironia quer ser entendido, e o contexto revela o sentido oposto.`},
+
+/* ---------- p-arg · Texto argumentativo (12) ---------- */
+ {t:'p-arg', k:'conceito', f:`O que é a tese de um texto argumentativo?`, b:`<b>O ponto de vista que o autor defende.</b> Tese = O QUE o autor defende.`},
+ {t:'p-arg', k:'conceito', f:`O que é um argumento?`, b:`<b>A razão que sustenta a tese, para convencer o leitor.</b> Argumento = POR QUE eu deveria concordar.`},
+ {t:'p-arg', k:'regra', f:`Onde a tese costuma aparecer no texto?`, b:`<b>No começo, ou retomada na conclusão.</b> Pistas: “Por isso…”, “Portanto…”.`},
+ {t:'p-arg', k:'regra', f:`O que a estrutura “É verdade que…, mas…” faz?`, b:`<b>Concessão + refutação: o autor reconhece a ideia contrária e depois a rebate.</b> Isso é um contra-argumento.`},
+ {t:'p-arg', k:'exemplo', f:`“Segundo um neurologista, dormir pouco prejudica a memória.” Que tipo de argumento é esse?`, b:`<b>Argumento de autoridade.</b> Usa a fala de um especialista.`},
+ {t:'p-arg', k:'exemplo', f:`“Sete em cada dez alunos dormem menos de oito horas, aponta pesquisa.” Que tipo de argumento é esse?`, b:`<b>Dados e pesquisas.</b> Usa números e estatísticas como prova.`},
+ {t:'p-arg', k:'exemplo', f:`“Veja o caso de Lucas: passou a ler 20 minutos por dia e suas redações melhoraram.” Que tipo de argumento é esse?`, b:`<b>Argumento por exemplo.</b> Apresenta um caso concreto.`},
+ {t:'p-arg', k:'exemplo', f:`“Se o lixo continuar na rua, os bueiros entopem e a cidade alaga.” Que tipo de argumento é esse?`, b:`<b>Causa e consequência.</b> Mostra o que acontece por causa de uma atitude.`},
+ {t:'p-arg', k:'exemplo', f:`“Assim como o cinto de segurança virou hábito, o capacete também pode virar.” Que tipo de argumento é esse?`, b:`<b>Comparação.</b> Aproxima duas situações parecidas.`},
+ {t:'p-arg', k:'exemplo', f:`“É claro que o uniforme custa caro, mas ele evita a competição por roupas de marca.” Qual parte é a concessão?`, b:`<b>“É claro que o uniforme custa caro”.</b> O autor cede um pouco; o “mas…” traz a refutação.`},
+ {t:'p-arg', k:'pegadinha', f:`Uma alternativa traz um dos argumentos do texto. Ela pode ser a tese?`, b:`<b>Não!</b> A tese é a ideia que os argumentos sustentam. Argumento é o “porquê”, não o “quê”.`},
+ {t:'p-arg', k:'pegadinha', f:`Mostrar a opinião contrária enfraquece o texto argumentativo?`, b:`<b>Não! Fortalece.</b> O autor mostra que conhece o outro lado e o rebate (concessão + refutação).`},
+
+/* ---------- p-pub · Publicidade, propaganda e persuasão (12) ---------- */
+ {t:'p-pub', k:'conceito', f:`Publicidade × propaganda (campanha): qual a diferença?`, b:`<b>Publicidade vende produtos e marcas; propaganda divulga ideias e causas.</b> PUBlicidade vende PRODUTO; PROPaganda PROPõe uma ideia.`},
+ {t:'p-pub', k:'regra', f:`Cite recursos de persuasão de anúncios.`, b:`<b>Imperativo, falar com “você”, slogan, rima e trocadilho, apelo à emoção ou à autoridade, urgência, imagem e cores.</b>`},
+ {t:'p-pub', k:'regra', f:`Diante de um anúncio, quais duas perguntas fazer?`, b:`<b>Qual é a finalidade do texto? Para quem ele foi feito?</b> (público-alvo)`},
+ {t:'p-pub', k:'conceito', f:`O que é um slogan?`, b:`<b>Uma frase curta e fácil de lembrar que identifica a marca ou a campanha.</b> Costuma usar rima, ritmo ou trocadilho.`},
+ {t:'p-pub', k:'exemplo', f:`“Experimente hoje. Você merece.” Em que modo está o verbo “Experimente” e para quê?`, b:`<b>Imperativo: chama o leitor à ação.</b> E o “você” cria proximidade.`},
+ {t:'p-pub', k:'exemplo', f:`Slogan: “Pão Dourado: quentinho e caprichado.” Que recurso ajuda a memorizar?`, b:`<b>A rima (Dourado / caprichado).</b> Frase curta e sonora gruda na memória.`},
+ {t:'p-pub', k:'exemplo', f:`“Só hoje! Últimas unidades!” Que recurso de persuasão é esse?`, b:`<b>Urgência e exclusividade.</b> O prazo curto pressiona o consumidor a agir logo.`},
+ {t:'p-pub', k:'exemplo', f:`“Tênis Raio: o tênis do campeão olímpico.” Que apelo é esse?`, b:`<b>Apelo à autoridade (celebridade).</b> Se o campeão usa, o produto “deve ser bom”.`},
+ {t:'p-pub', k:'exemplo', f:`“Colchão Nuvem: chegou a hora de deitar e rolar.” Que recurso há em “deitar e rolar”?`, b:`<b>Duplo sentido (trocadilho).</b> Literal: deitar no colchão. Figurado: aproveitar à vontade.`},
+ {t:'p-pub', k:'exemplo', f:`“Mãe: o abraço que nunca envelhece. Floricultura Jardim.” Qual o principal apelo?`, b:`<b>Apelo à emoção.</b> Liga o produto ao carinho pela mãe.`},
+ {t:'p-pub', k:'exemplo', f:`Cartaz: “Vacine seu filho. Proteja quem você ama.” Qual é a finalidade?`, b:`<b>Conscientizar os pais a vacinar os filhos.</b> É propaganda (campanha), com imperativo e apelo à emoção.`},
+ {t:'p-pub', k:'pegadinha', f:`Uma campanha contra a dengue mostra um repelente. A finalidade é vender repelente?`, b:`<b>Não!</b> O objetivo é mudar comportamento. Não confunda o objeto que aparece com a finalidade.`},
+
+/* ---------- p-gen · Gêneros jornalísticos e fato × opinião (8) ---------- */
+ {t:'p-gen', k:'conceito', f:`O que é uma notícia?`, b:`<b>Relato objetivo de um fato recente, em 3ª pessoa.</b> A manchete resume o fato e o lide abre o texto.`},
+ {t:'p-gen', k:'regra', f:`Quais perguntas o lide responde?`, b:`<b>O quê, quem, quando, onde, como e por quê.</b> O lide é o 1º parágrafo da notícia.`},
+ {t:'p-gen', k:'conceito', f:`Notícia × reportagem: qual a diferença?`, b:`<b>A notícia relata o fato; a reportagem aprofunda o tema, com entrevistas, dados e mais de um ponto de vista.</b>`},
+ {t:'p-gen', k:'conceito', f:`Artigo de opinião × editorial: qual a diferença?`, b:`<b>O artigo é assinado por um autor; o editorial é a opinião do próprio jornal, sem assinatura individual.</b> Os dois defendem pontos de vista.`},
+ {t:'p-gen', k:'conceito', f:`O que é uma crônica?`, b:`<b>Texto que parte de um fato do dia a dia com olhar pessoal, leve, às vezes com humor.</b>`},
+ {t:'p-gen', k:'exemplo', f:`“O show de ontem foi o melhor do ano.” Fato ou opinião?`, b:`<b>Opinião: “o melhor” é julgamento.</b> Fato pode ser verificado (“O show durou duas horas”). Pistas de opinião: adjetivos de avaliação, “acho”, “deveria”, “infelizmente”.`},
+ {t:'p-gen', k:'exemplo', f:`Manchetes do mesmo fato: “Prefeitura entrega ponte” × “Prefeitura entrega ponte com dois anos de atraso”. O que a segunda revela?`, b:`<b>Um enfoque diferente, que destaca o atraso (tom crítico).</b> A escolha das palavras revela a posição de cada veículo.`},
+ {t:'p-gen', k:'pegadinha', f:`Uma notícia cita entre aspas a opinião de um entrevistado. Ela deixa de ser notícia?`, b:`<b>Não!</b> A opinião é do entrevistado, não do jornalista.`},
+
+/* ---------- p-fake · Fake news (8) ---------- */
+ {t:'p-fake', k:'regra', f:`Qual é o checklist FADUT antes de compartilhar?`, b:`<b>Fonte, Autor, Data, URL, Tom.</b> Tom sensacionalista é sinal de alerta.`},
+ {t:'p-fake', k:'exemplo', f:`“URGENTE!!! COMPARTILHE ANTES QUE APAGUEM!!!” Que sinais de alerta aparecem?`, b:`<b>Caixa alta, excesso de “!!!” e pedido urgente de compartilhamento.</b> Tom sensacionalista típico de fake news.`},
+ {t:'p-fake', k:'exemplo', f:`A notícia vem do link “noticiasverdadeiras-oficial.click”, sem autor. Que sinais de alerta há?`, b:`<b>URL estranha, fonte desconhecida e autor não identificado.</b>`},
+ {t:'p-fake', k:'exemplo', f:`Foto de uma enchente de outro país, de anos atrás, circula como se fosse da sua cidade hoje. Qual o problema?`, b:`<b>Imagem fora do contexto original.</b> A foto é real, mas o lugar e a data estão errados.`},
+ {t:'p-fake', k:'regra', f:`O que fazer antes de acreditar numa notícia surpreendente?`, b:`<b>Procurar a informação em veículos confiáveis, consultar agências de checagem e conferir a data e a origem da imagem.</b>`},
+ {t:'p-fake', k:'conceito', f:`Sátira (notícia inventada de propósito para fazer humor) é fake news?`, b:`<b>Não, desde que o leitor saiba que é humor.</b>`},
+ {t:'p-fake', k:'pegadinha', f:`Uma notícia verdadeira, mas antiga, compartilhada como se fosse de hoje, desinforma?`, b:`<b>Sim!</b> É descontextualização: mesmo verdadeira, fora da data e do contexto ela engana.`},
+ {t:'p-fake', k:'pegadinha', f:`A mensagem já foi compartilhada milhares de vezes. Isso prova que é verdadeira?`, b:`<b>Não!</b> Compartilhamento não é prova. Confira a fonte.`},
+
+/* ---------- p-lit · Narrativa e poema (8) ---------- */
+ {t:'p-lit', k:'regra', f:`Quais são os cinco elementos da narrativa?`, b:`<b>Narrador, personagens, tempo, espaço e enredo.</b>`},
+ {t:'p-lit', k:'regra', f:`Qual é a sequência do enredo?`, b:`<b>Situação inicial → conflito → clímax → desfecho.</b> Clímax é o momento de maior tensão.`},
+ {t:'p-lit', k:'conceito', f:`O que é o conflito de uma narrativa?`, b:`<b>O problema que move a história.</b> É ele que faz a ação andar.`},
+ {t:'p-lit', k:'conceito', f:`Narrador observador × onisciente: qual a diferença?`, b:`<b>O observador conta de fora o que se vê; o onisciente sabe o que os personagens pensam e sentem.</b> Os dois são de 3ª pessoa.`},
+ {t:'p-lit', k:'exemplo', f:`“Naquele domingo, eu e meu primo nos perdemos na feira.” Qual é o foco narrativo?`, b:`<b>1ª pessoa: narrador-personagem.</b> Quem conta participa da história (“eu”).`},
+ {t:'p-lit', k:'exemplo', f:`Passe para o discurso indireto: Davi prometeu: “Eu trago o livro amanhã.”`, b:`<b>Davi prometeu que traria o livro no dia seguinte.</b> Entra o “que”; muda o verbo (trago → traria), o pronome e o “amanhã”.`},
+ {t:'p-lit', k:'exemplo', f:`“Bia olhou o boletim. Que vergonha, meu Deus! Guardou o papel no fundo da mochila.” Que discurso aparece?`, b:`<b>Discurso indireto livre.</b> O pensamento de Bia se mistura à voz do narrador, sem travessão nem “disse que”.`},
+ {t:'p-lit', k:'pegadinha', f:`O eu lírico de um poema é sempre o próprio autor?`, b:`<b>Não!</b> O eu lírico é a “voz” do poema, que não é necessariamente o autor.`},
+
+/* ---------- p-inter · Intertextualidade (8) ---------- */
+ {t:'p-inter', k:'conceito', f:`O que é paródia?`, b:`<b>Imitação de um texto conhecido que muda o sentido, geralmente para criticar ou fazer humor.</b> Pa-RÓ-dia faz RIr.`},
+ {t:'p-inter', k:'conceito', f:`O que é paráfrase?`, b:`<b>Reescrever um texto com outras palavras, mantendo o sentido original.</b> Pa-RÁ-frase REpete o sentido.`},
+ {t:'p-inter', k:'conceito', f:`Citação × alusão: qual a diferença?`, b:`<b>A citação reproduz o trecho entre aspas, indicando o autor; a alusão só lembra o outro texto, sem copiar.</b>`},
+ {t:'p-inter', k:'conceito', f:`O que é epígrafe?`, b:`<b>Trecho de outro autor colocado no início de uma obra ou capítulo.</b>`},
+ {t:'p-inter', k:'exemplo', f:`“Minha escola tem goteiras, / onde pinga sem parar.” Que relação há com a “Canção do Exílio”?`, b:`<b>Paródia.</b> Imita “Minha terra tem palmeiras, / Onde canta o Sabiá” (Gonçalves Dias, 1843) mudando o sentido para criticar a escola.`},
+ {t:'p-inter', k:'exemplo', f:`Anúncio de loja: “Penso, logo compro.” A que frase famosa ele faz referência?`, b:`<b>“Penso, logo existo”, do filósofo Descartes.</b> O anúncio troca “existo” por “compro” para brincar com o original.`},
+ {t:'p-inter', k:'exemplo', f:`Original: “Quem espera sempre alcança.” Reescrita: “Quem tem paciência consegue o que quer.” Qual é a relação?`, b:`<b>Paráfrase.</b> Outras palavras, mesmo sentido.`},
+ {t:'p-inter', k:'pegadinha', f:`O novo texto imita a forma do original, mas brinca com ele e muda o sentido. É paráfrase?`, b:`<b>Não! É paródia.</b> O que decide é o sentido: se mudou, é paródia; se manteve, é paráfrase.`}
+];
+
+/* Flashcards · Português · P2 (Sentido, coesão e argumentação)
+   Todos os exemplos foram escritos para este guia (exceto o trecho de Camões, domínio público, indicado). */
+const CARDS_P2 = [
+/* ---------- p-conj · Conjunções e relações de sentido (12) ---------- */
+ {t:'p-conj', k:'regra', f:`Cite as conjunções de <b>oposição</b> (adversativas) do “ritmo de canto”.`, b:`<b>Mas, porém, contudo, todavia, entretanto, no entanto.</b><br>Uma pode substituir a outra sem mudar o sentido.`},
+ {t:'p-conj', k:'conceito', f:`Qual a diferença entre <b>oposição</b> e <b>concessão</b>?`, b:`<b>Na concessão, o obstáculo é admitido, mas não impede o resultado</b>, e o verbo costuma ir para o subjuntivo. “Embora estivesse cansado, terminou” = “Estava cansado, mas terminou”.`},
+ {t:'p-conj', k:'regra', f:`As conjunções concessivas (embora, ainda que, mesmo que) pedem o verbo em qual modo?`, b:`<b>Subjuntivo.</b><br>“Embora <b>esteja</b> frio, vou sair.” (e não “embora está”).`},
+ {t:'p-conj', k:'exemplo', f:`“<b>Embora</b> chovesse, fomos à praia.” Qual a relação de sentido?`, b:`<b>Concessão.</b><br>A chuva é admitida, mas não impede o passeio.`},
+ {t:'p-conj', k:'exemplo', f:`“Fiquei em casa <b>porque</b> estava gripado.” Qual a relação de sentido?`, b:`<b>Causa.</b><br>Estar gripado é o motivo de ficar em casa.`},
+ {t:'p-conj', k:'exemplo', f:`“<b>Como</b> estava chovendo, levei o guarda-chuva.” O que indica “como” no início da frase?`, b:`<b>Causa</b> (= já que, visto que).<br>Atenção: “como” também pode ser comparação ou conformidade, dependendo da frase.`},
+ {t:'p-conj', k:'exemplo', f:`“Falou <b>tão</b> alto <b>que</b> acordou o bebê.” Qual a relação de sentido?`, b:`<b>Consequência.</b><br>“Tão… que” mostra o resultado de falar alto.`},
+ {t:'p-conj', k:'exemplo', f:`“Saiu cedo <b>para que</b> não pegasse trânsito.” Qual a relação de sentido?`, b:`<b>Finalidade.</b><br>Mostra o objetivo de sair cedo (= a fim de que).`},
+ {t:'p-conj', k:'exemplo', f:`“<b>À medida que</b> subíamos a serra, o ar ficava mais frio.” Qual a relação de sentido?`, b:`<b>Proporção.</b><br>Uma coisa aumenta junto com a outra (= à proporção que).`},
+ {t:'p-conj', k:'exemplo', f:`“Fiz o bolo <b>conforme</b> a receita mandava.” Qual a relação de sentido?`, b:`<b>Conformidade.</b><br>Conforme = segundo = como (de acordo com).`},
+ {t:'p-conj', k:'pegadinha', f:`“Pois” sempre indica causa?`, b:`<b>Não!</b> No início da oração = causa/explicação (“Saí cedo, pois tinha prova”). Deslocado, entre vírgulas = conclusão (“O jogo foi, pois, adiado”).`},
+ {t:'p-conj', k:'pegadinha', f:`“Queria ir, <b>mais</b> não deu.” Está correto?`, b:`<b>Não!</b> O certo é “<b>mas</b>” (oposição).<br>“Mais” indica quantidade: “quero mais suco”.`},
+
+/* ---------- p-coes · Coesão referencial (12) ---------- */
+ {t:'p-coes', k:'regra', f:`Como descobrir a que termo um pronome se refere?`, b:`<b>Troque o pronome pelo termo candidato</b> e veja se a frase faz sentido.<br>Volte sempre ao texto para conferir.`},
+ {t:'p-coes', k:'regra', f:`Pela norma-padrão, o pronome relativo “<b>onde</b>” só deve ser usado para quê?`, b:`<b>Para lugar físico.</b><br>“A cidade <b>onde</b> nasci.” Para tempo ou situação, use “em que” ou “no qual”.`},
+ {t:'p-coes', k:'pegadinha', f:`“Chegou o momento <b>onde</b> tudo mudou.” Está de acordo com a norma-padrão?`, b:`<b>Não!</b> Momento não é lugar físico.<br>Certo: “o momento <b>em que</b> tudo mudou”.`},
+ {t:'p-coes', k:'pegadinha', f:`“Conheci o menino <b>cujo o</b> pai é piloto.” Está correto?`, b:`<b>Não!</b> “Cujo” indica posse e não vem seguido de artigo.<br>Certo: “o menino <b>cujo pai</b> é piloto”.`},
+ {t:'p-coes', k:'conceito', f:`<b>Este</b> × <b>esse</b>: qual anuncia e qual retoma?`, b:`<b>“Este” anuncia</b> o que ainda vem; <b>“esse” retoma</b> o que já foi dito.<br>“Meu pedido é <b>este</b>: silêncio.” · “Silêncio: <b>esse</b> foi meu pedido.”`},
+ {t:'p-coes', k:'conceito', f:`O que é um <b>hiperônimo</b> na coesão do texto?`, b:`<b>Uma palavra de sentido mais geral</b> que retoma outra mais específica.<br>“O cachorro latiu. O <b>animal</b> estava assustado.”`},
+ {t:'p-coes', k:'conceito', f:`O pronome relativo “<b>quem</b>” se refere a quê?`, b:`<b>A pessoas</b>, geralmente depois de preposição.<br>“A amiga <b>de quem</b> falei chegou.”`},
+ {t:'p-coes', k:'exemplo', f:`“Comprei um livro e uma caneta. <b>Ela</b> custou dois reais.” A que termo “Ela” se refere?`, b:`<b>À caneta.</b><br>“Ela” é feminino; “livro” é masculino.`},
+ {t:'p-coes', k:'exemplo', f:`“Lia adotou um gato. <b>O bichano</b> dorme o dia todo.” A que termo “O bichano” se refere?`, b:`<b>Ao gato.</b><br>É um sinônimo usado para não repetir a palavra.`},
+ {t:'p-coes', k:'exemplo', f:`“Marta chegou cedo. Trouxe pão.” Quem trouxe pão, e qual recurso de coesão foi usado?`, b:`<b>Marta; elipse.</b><br>O sujeito foi omitido porque já se sabe quem é: “Marta chegou cedo. (Ø) Trouxe pão.”`},
+ {t:'p-coes', k:'exemplo', f:`“Visitei o museu <b>de que</b> você gostou.” A que termo o “que” se refere?`, b:`<b>Ao museu.</b><br>É pronome relativo: retoma “museu” e inicia nova oração (= do qual).`},
+ {t:'p-coes', k:'pegadinha', f:`“Pedro avisou ao pai que <b>ele</b> estava atrasado.” Quem estava atrasado?`, b:`<b>Não dá para saber: a frase é ambígua.</b><br>“Ele” pode ser Pedro ou o pai.`},
+
+/* ---------- p-fig · Figuras de linguagem (12) ---------- */
+ {t:'p-fig', k:'pegadinha', f:`“Ela é delicada <b>como</b> uma flor.” É metáfora?`, b:`<b>Não! É comparação</b>, porque tem o conectivo “como”.<br>Metáfora seria: “Ela é uma flor.”`},
+ {t:'p-fig', k:'exemplo', f:`“Meu irmão é uma tartaruga.” Que figura de linguagem?`, b:`<b>Metáfora.</b><br>Compara o irmão a uma tartaruga (lentidão) sem usar conectivo.`},
+ {t:'p-fig', k:'exemplo', f:`“Adoro ler Monteiro Lobato.” Que figura de linguagem?`, b:`<b>Metonímia.</b><br>O nome do autor está no lugar da obra dele.`},
+ {t:'p-fig', k:'exemplo', f:`“A lua espiava os namorados pela janela.” Que figura de linguagem?`, b:`<b>Personificação.</b><br>“Espiar” é ação humana atribuída à lua.`},
+ {t:'p-fig', k:'exemplo', f:`“Já te liguei um milhão de vezes!” Que figura de linguagem?`, b:`<b>Hipérbole.</b><br>Exagero intencional para dar ênfase.`},
+ {t:'p-fig', k:'exemplo', f:`“O vendedor <b>faltou com a verdade</b>.” Que figura de linguagem?`, b:`<b>Eufemismo.</b><br>Suaviza algo desagradável: em vez de “mentiu”.`},
+ {t:'p-fig', k:'exemplo', f:`“Que menino organizado! Deixou o quarto todo bagunçado.” Que figura de linguagem?`, b:`<b>Ironia.</b><br>Diz “organizado” querendo dizer o contrário.`},
+ {t:'p-fig', k:'exemplo', f:`“Na vitória e na derrota, estaremos juntos.” Que figura de linguagem?`, b:`<b>Antítese.</b><br>Ideias opostas (vitória × derrota) lado a lado.`},
+ {t:'p-fig', k:'exemplo', f:`“É ferida que dói, e não se sente.” (Camões) Que figura de linguagem?`, b:`<b>Paradoxo.</b><br>Opostos fundidos numa mesma ideia: doer sem se sentir é uma contradição aparente.`},
+ {t:'p-fig', k:'exemplo', f:`“Senti um cheiro <b>doce</b> vindo da cozinha.” Que figura de linguagem?`, b:`<b>Sinestesia.</b><br>Mistura sentidos: olfato (cheiro) com paladar (doce).`},
+ {t:'p-fig', k:'conceito', f:`<b>Antítese</b> × <b>paradoxo</b>: qual a diferença?`, b:`<b>Antítese = opostos lado a lado</b> (“amor e ódio”). <b>Paradoxo = opostos grudados</b>, contradição aparente (“silêncio ensurdecedor”).`},
+ {t:'p-fig', k:'conceito', f:`<b>Aliteração</b> × <b>assonância</b>: qual repete consoantes e qual repete vogais?`, b:`<b>Aliteração = sons consonantais</b> (“O rato roeu a roupa do rei de Roma”).<br><b>Assonância = sons vocálicos</b> (“A arara clara cantava na mata”).`},
+
+/* ---------- p-sent · Denotação, conotação, polissemia e ambiguidade (8) ---------- */
+ {t:'p-sent', k:'conceito', f:`<b>Denotação</b> × <b>conotação</b>: qual a diferença?`, b:`<b>Denotação = sentido literal, de dicionário; conotação = sentido figurado.</b><br>Macete: DENOtação = Dicionário; CONOtação = COm imaginação.`},
+ {t:'p-sent', k:'exemplo', f:`“Meu tio tem um coração de <b>pedra</b>.” A palavra “pedra” está em sentido denotativo ou conotativo?`, b:`<b>Conotativo</b> (figurado).<br>Quer dizer que ele é insensível, e não que o coração seja de pedra de verdade.`},
+ {t:'p-sent', k:'conceito', f:`O que é <b>polissemia</b>?`, b:`<b>Uma mesma palavra com vários sentidos ligados entre si.</b><br>“Pegar” ônibus, pegar gripe, pegar sol, pegar o jeito.`},
+ {t:'p-sent', k:'regra', f:`<b>Sessão</b>, <b>seção</b> e <b>cessão</b>: o que significa cada uma?`, b:`<b>Sessão</b> = reunião, exibição (de cinema). <b>Seção</b> = setor, divisão. <b>Cessão</b> = ato de ceder.`},
+ {t:'p-sent', k:'regra', f:`<b>Eminente</b> × <b>iminente</b>: o que significa cada uma?`, b:`<b>Eminente = importante</b> (“um eminente cientista”).<br><b>Iminente = prestes a acontecer</b> (“chuva iminente”).`},
+ {t:'p-sent', k:'pegadinha', f:`“O <b>tráfico</b> na avenida está lento hoje.” Está correto?`, b:`<b>Não!</b> O certo é “<b>tráfego</b>” (trânsito).<br>“Tráfico” é comércio ilegal.`},
+ {t:'p-sent', k:'exemplo', f:`“O policial viu o ladrão correndo.” Por que a frase é ambígua?`, b:`<b>Não se sabe quem estava correndo:</b> o policial ou o ladrão.`},
+ {t:'p-sent', k:'pegadinha', f:`A ambiguidade é sempre um defeito do texto?`, b:`<b>Não!</b> Em anúncios e tirinhas costuma ser <b>proposital</b> (humor, criatividade). Em texto informativo ou na redação, é falha.`},
+
+/* ---------- p-modal · Modalização e operadores argumentativos (8) ---------- */
+ {t:'p-modal', k:'exemplo', f:`“<b>Talvez</b> o show seja adiado.” O que a palavra destacada expressa?`, b:`<b>Possibilidade/dúvida.</b><br>O autor não tem certeza do adiamento.`},
+ {t:'p-modal', k:'pegadinha', f:`Trocar “<b>provavelmente</b>” por “<b>certamente</b>” mantém o sentido da frase?`, b:`<b>Não!</b> Muda de hipótese (dúvida) para certeza.`},
+ {t:'p-modal', k:'exemplo', f:`“<b>É preciso</b> economizar água.” Que atitude do autor a expressão revela?`, b:`<b>Obrigação/necessidade.</b><br>Equivale a “deve-se”, “é necessário”.`},
+ {t:'p-modal', k:'exemplo', f:`“<b>Felizmente</b>, ninguém se feriu.” O que a palavra destacada expressa?`, b:`<b>Avaliação positiva do autor.</b><br>Mostra que ele se alegra com o fato.`},
+ {t:'p-modal', k:'exemplo', f:`“Todos vieram à festa, <b>inclusive</b> o diretor.” O que “inclusive” indica?`, b:`<b>O argumento mais forte ou inesperado.</b><br>Funciona como “até”: a presença do diretor é a mais surpreendente.`},
+ {t:'p-modal', k:'regra', f:`Que sentido introduzem “<b>ou seja</b>” e “<b>isto é</b>”?`, b:`<b>Explicação</b> (reformulam o que foi dito).<br>“Choveu 100 mm, <b>ou seja</b>, muita chuva.”`},
+ {t:'p-modal', k:'exemplo', f:`“O técnico <b>admitiu</b> o erro.” O que o verbo “admitiu” sugere?`, b:`<b>Que se trata de algo negativo</b>, reconhecido por ele.<br>“Afirmou” seria neutro.`},
+ {t:'p-modal', k:'conceito', f:`Ao introduzir uma fala, que diferença há entre “<b>afirmou</b>” e “<b>alegou</b>”?`, b:`<b>“Afirmou” é neutro; “alegou” sugere que a fala não está provada.</b><br>Macete: alegou = disse sem provar.`}
+];
+
+/* Flashcards — Módulo P3: Gramática a serviço do texto */
+const CARDS_P3 = [
+/* p-per — Período composto (12) */
+ {t:'p-per', k:'conceito', f:`Período simples × período composto: qual a diferença?`, b:`<b>Simples tem uma oração (um verbo); composto tem duas ou mais.</b><br>“Choveu.” é simples; “Choveu e esfriou.” é composto.`},
+ {t:'p-per', k:'regra', f:`Como descobrir quantas orações há num período?`, b:`<b>Conte os verbos: cada verbo ou locução verbal = uma oração.</b><br>“Vou estudar” é locução verbal: conta como uma só.`},
+ {t:'p-per', k:'conceito', f:`Oração coordenada × oração subordinada?`, b:`<b>Coordenada é independente; subordinada depende da oração principal.</b><br>Macete: coordenada anda sozinha; SUBordinada é SUBmissa.`},
+ {t:'p-per', k:'conceito', f:`Coordenada assindética × coordenada sindética?`, b:`<b>Assindética: sem conjunção (só vírgula). Sindética: com conjunção.</b><br>“Acordei, tomei café, saí.” (assindéticas) · “Acordei <b>e saí</b>.” (a destacada é sindética aditiva)`},
+ {t:'p-per', k:'exemplo', f:`“Treinou muito, <b>mas perdeu o jogo</b>.” Como se classifica a oração destacada?`, b:`<b>Coordenada sindética adversativa.</b><br>“Mas” indica oposição, e as duas orações são independentes.`},
+ {t:'p-per', k:'exemplo', f:`“Revisei a matéria, <b>portanto estou tranquilo</b>.” Como se classifica a oração destacada?`, b:`<b>Coordenada sindética conclusiva.</b><br>“Portanto” (como “logo” e “por isso”) introduz uma conclusão.`},
+ {t:'p-per', k:'regra', f:`Quais são os três tipos de oração subordinada?`, b:`<b>Substantiva, adjetiva e adverbial.</b><br>Substantiva funciona como substantivo; adjetiva caracteriza um nome; adverbial dá uma circunstância (tempo, causa, condição…).`},
+ {t:'p-per', k:'exemplo', f:`“É importante <b>que você estude</b>.” A oração destacada é subordinada de que tipo?`, b:`<b>Subordinada substantiva.</b><br>Ela funciona como sujeito de “é importante” (isto é importante).`},
+ {t:'p-per', k:'exemplo', f:`“<b>Ora</b> chove, <b>ora</b> faz sol.” Como se classificam essas orações?`, b:`<b>Coordenadas sindéticas alternativas.</b><br>“Ora… ora” (como “ou… ou”) indica fatos que se alternam.`},
+ {t:'p-per', k:'exemplo', f:`“<b>Se chover</b>, o passeio será adiado.” Que circunstância a oração destacada indica?`, b:`<b>Condição (subordinada adverbial condicional).</b><br>O adiamento depende de chover.`},
+ {t:'p-per', k:'conceito', f:`O que é uma oração reduzida?`, b:`<b>Oração sem conjunção, com verbo no infinitivo, gerúndio ou particípio.</b><br>“Ao chegar, liguei.” = “Quando cheguei, liguei.”`},
+ {t:'p-per', k:'pegadinha', f:`Toda oração iniciada por “que” é adjetiva?`, b:`<b>Não!</b> Só é adjetiva se “que” for pronome relativo (dá para trocar por “o qual”). Em “Espero que você venha”, a oração é substantiva.`},
+
+/* p-adj — Orações adjetivas (12) */
+ {t:'p-adj', k:'conceito', f:`Com que tipo de palavra começa uma oração adjetiva?`, b:`<b>Com um pronome relativo</b> (que, o qual, onde, cujo…).<br>Ela caracteriza um nome: “O livro <b>que comprei</b> é ótimo.”`},
+ {t:'p-adj', k:'conceito', f:`Por que a oração adjetiva tem esse nome?`, b:`<b>Porque funciona como um adjetivo: caracteriza um substantivo.</b><br>“Aluno <b>que estuda</b>” = “aluno <b>estudioso</b>”.`},
+ {t:'p-adj', k:'regra', f:`Oração adjetiva restritiva: com ou sem vírgula? O que ela faz?`, b:`<b>Sem vírgula. Restringe: separa só uma parte do grupo.</b><br>Macete: sem vírgula = só ALGUNS.`},
+ {t:'p-adj', k:'regra', f:`Oração adjetiva explicativa: com ou sem vírgula? O que ela faz?`, b:`<b>Entre vírgulas. Acrescenta informação sobre todo o grupo</b> e pode ser retirada.<br>Macete: com vírgula = vale para TODOS.`},
+ {t:'p-adj', k:'exemplo', f:`“Os alunos que estudaram passaram.” Todos os alunos passaram?`, b:`<b>Não. Só os que estudaram passaram.</b><br>Oração restritiva (sem vírgula): separa um grupo dentro da turma.`},
+ {t:'p-adj', k:'exemplo', f:`“Os convidados, que chegaram cedo, ganharam um brinde.” Quantos convidados chegaram cedo?`, b:`<b>Todos.</b><br>Oração explicativa (entre vírgulas): a informação vale para todos os convidados, e todos ganharam o brinde.`},
+ {t:'p-adj', k:'exemplo', f:`“Meu irmão que mora em Recife vem me visitar.” O que se pode deduzir da falta de vírgulas?`, b:`<b>Que a pessoa tem mais de um irmão.</b><br>A restritiva separa este irmão dos outros.`},
+ {t:'p-adj', k:'exemplo', f:`“Os gatos, que são independentes, dormem muito.” O que as vírgulas fazem a frase afirmar?`, b:`<b>Que todos os gatos são independentes.</b><br>A explicativa atribui a característica ao grupo inteiro; sem vírgulas, falaria só dos gatos independentes.`},
+ {t:'p-adj', k:'pegadinha', f:`“O Sol que é uma estrela ilumina a Terra.” A pontuação está correta?`, b:`<b>Não!</b> Correto: “O Sol, que é uma estrela, ilumina a Terra.”<br>Só existe um Sol: com nome único, a oração é explicativa.`},
+ {t:'p-adj', k:'pegadinha', f:`“O Sol, que é uma estrela ilumina a Terra.” O que está errado?`, b:`<b>Falta a segunda vírgula</b> (depois de “estrela”).<br>A oração explicativa fica <b>entre</b> vírgulas: abre e fecha.`},
+ {t:'p-adj', k:'exemplo', f:`“A professora, <b>que é muito paciente</b>, explicou de novo.” A oração destacada é restritiva ou explicativa?`, b:`<b>Explicativa.</b><br>Está entre vírgulas e só acrescenta uma informação sobre a professora: pode ser retirada.`},
+ {t:'p-adj', k:'regra', f:`Que expressão pode substituir o “que” para confirmar que ele é pronome relativo?`, b:`<b>“O qual” (a qual, os quais, as quais).</b><br>“O aluno <b>que</b> faltou” = “o aluno <b>o qual</b> faltou”. Se a troca funciona, a oração é adjetiva.`},
+
+/* p-vl — Verbos de ligação e predicativo (8) */
+ {t:'p-vl', k:'conceito', f:`O que é um verbo de ligação?`, b:`<b>Verbo que não indica ação: liga o sujeito a um estado ou qualidade.</b><br>“Pedro <b>é</b> calmo.”`},
+ {t:'p-vl', k:'conceito', f:`Em “O dia está lindo”, qual é o predicativo do sujeito?`, b:`<b>“Lindo”.</b><br>É a característica atribuída ao sujeito (“o dia”) por meio do verbo de ligação “está”.`},
+ {t:'p-vl', k:'regra', f:`Cite os principais verbos de ligação.`, b:`<b>Ser, estar, parecer, permanecer, ficar, continuar, andar, virar</b> (e tornar-se).<br>Teste: depois dele vem uma característica do sujeito?`},
+ {t:'p-vl', k:'exemplo', f:`“Pedro é nervoso” × “Pedro está nervoso”: qual a diferença de sentido?`, b:`<b>“É” = característica permanente; “está” = estado passageiro.</b><br>Ser = essência; estar = momento.`},
+ {t:'p-vl', k:'exemplo', f:`“O céu ficou escuro.” Que sentido o verbo de ligação expressa?`, b:`<b>Mudança de estado.</b><br>O céu não era escuro e passou a ser.`},
+ {t:'p-vl', k:'exemplo', f:`“Ana parece cansada.” Que sentido o verbo de ligação expressa?`, b:`<b>Aparência.</b><br>Ana dá a impressão de estar cansada, sem certeza de que está.`},
+ {t:'p-vl', k:'pegadinha', f:`“Ele ficou em casa.” O verbo “ficar” é de ligação?`, b:`<b>Não!</b> “Em casa” é lugar, não característica do sujeito. Em “Ele ficou triste”, aí sim é de ligação.`},
+ {t:'p-vl', k:'pegadinha', f:`“Ana anda preocupada” × “Ana anda pela praça”: em qual “andar” é verbo de ligação?`, b:`<b>Em “Ana anda preocupada”.</b><br>Indica estado frequente. Em “anda pela praça”, é a ação de andar.`},
+
+/* p-reg — Regência e crase (8) */
+ {t:'p-reg', k:'regra', f:`Na norma-padrão, “assistir” no sentido de “ver” pede qual preposição?`, b:`<b>A preposição “a”.</b><br>“Assisti <b>ao</b> jogo.” (Na fala: “assisti o jogo”.)`},
+ {t:'p-reg', k:'pegadinha', f:`“Prefiro mais pizza do que lasanha.” Está de acordo com a norma-padrão?`, b:`<b>Não!</b> Correto: “Prefiro pizza <b>a</b> lasanha.”<br>Preferir algo A outra coisa, sem “mais” e sem “do que”.`},
+ {t:'p-reg', k:'pegadinha', f:`“Cheguei na escola cedo.” Como fica na norma-padrão?`, b:`<b>“Cheguei à escola cedo.”</b><br>Chegar e ir pedem a preposição “a”, não “em”.`},
+ {t:'p-reg', k:'conceito', f:`O que é a crase?`, b:`<b>A fusão da preposição “a” com o artigo “a”, marcada pelo acento grave: à.</b><br>Vou a + a feira → vou <b>à</b> feira.`},
+ {t:'p-reg', k:'exemplo', f:`Complete com “a” ou “à”: “Vou ___ feira.” Qual o truque para conferir?`, b:`<b>“Vou à feira.”</b><br>Truque: troque por uma palavra masculina. “Vou <b>ao</b> mercado” → deu “ao”, então tem crase.`},
+ {t:'p-reg', k:'pegadinha', f:`“Começou à chover.” A crase está correta?`, b:`<b>Não!</b> Correto: “Começou a chover.”<br>Nunca há crase antes de verbo (nem antes de palavra masculina).`},
+ {t:'p-reg', k:'exemplo', f:`Complete: “A aula começa ___ 10h.”`, b:`<b>“às 10h”.</b><br>Hora exata leva crase. Mas: “desde as 10h”, “após as 10h”.`},
+ {t:'p-reg', k:'exemplo', f:`Complete: “Vou ___ Bahia” e “Vou ___ Recife”.`, b:`<b>“Vou à Bahia” e “Vou a Recife”.</b><br>Macete: volto DA Bahia (crase há!); volto DE Recife (crase pra quê?).`},
+
+/* p-conc — Concordância (8) */
+ {t:'p-conc', k:'conceito', f:`Concordância verbal × concordância nominal?`, b:`<b>Verbal: o verbo concorda com o sujeito. Nominal: o adjetivo concorda com o substantivo.</b><br>“Os alunos <b>chegaram</b>.” · “Casas <b>antigas</b>.”`},
+ {t:'p-conc', k:'regra', f:`“Haver” no sentido de “existir” vai para o plural?`, b:`<b>Não: é impessoal, fica no singular.</b><br>“<b>Havia</b> muitos alunos no pátio.” (nunca “haviam”)`},
+ {t:'p-conc', k:'exemplo', f:`“Existia muitas pessoas na fila” ou “Existiam muitas pessoas na fila”?`, b:`<b>“Existiam”.</b><br>Diferente de “haver”, “existir” concorda com o sujeito “muitas pessoas”.`},
+ {t:'p-conc', k:'regra', f:`“Faz dois anos” ou “Fazem dois anos”?`, b:`<b>“Faz dois anos.”</b><br>“Fazer” indicando tempo decorrido é impessoal: fica no singular.`},
+ {t:'p-conc', k:'exemplo', f:`Complete: “______ três dias para as férias.” (Falta / Faltam)`, b:`<b>“Faltam”.</b><br>O sujeito é “três dias” (plural), mesmo vindo depois do verbo.`},
+ {t:'p-conc', k:'pegadinha', f:`“Ela ficou meia preocupada.” Está na norma-padrão?`, b:`<b>Não!</b> Correto: “meio preocupada”.<br>“Meio” = um pouco (advérbio) não varia. Varia como numeral: “meia hora”.`},
+ {t:'p-conc', k:'pegadinha', f:`Uma menina agradece um presente. Ela deve dizer “obrigado” ou “obrigada”?`, b:`<b>“Obrigada”.</b><br>A palavra concorda com quem fala: mulher diz “obrigada”; homem, “obrigado”.`},
+ {t:'p-conc', k:'exemplo', f:`Complete: “Seguem ______ as fotos.” (anexo / anexas)`, b:`<b>“anexas”.</b><br>“Anexo” é adjetivo e concorda com o substantivo: fotos anexas.`},
+
+/* p-col — Colocação pronominal (8) */
+ {t:'p-col', k:'conceito', f:`Próclise, ênclise e mesóclise: onde fica o pronome em cada uma?`, b:`<b>Próclise: antes do verbo. Ênclise: depois (com hífen). Mesóclise: no meio.</b><br>“Não <b>me</b> deixe.” · “Diga-<b>me</b>.” · “Dir-<b>te</b>-ei.”`},
+ {t:'p-col', k:'regra', f:`Na norma-padrão, pode-se começar uma frase com pronome oblíquo (me, te, se…)?`, b:`<b>Não: no início da frase, usa-se ênclise.</b><br>“Empreste-<b>me</b> o lápis.” (Na fala: “Me empresta o lápis”.)`},
+ {t:'p-col', k:'regra', f:`Que palavras “atraem” o pronome para antes do verbo?`, b:`<b>Negativas, advérbios, pronomes relativos, indefinidos e conjunções subordinativas.</b><br>Ex.: não, nunca, ninguém, sempre, já, que, alguém, quando, se.`},
+ {t:'p-col', k:'pegadinha', f:`“Não deixe-me sozinho.” Está na norma-padrão?`, b:`<b>Não!</b> Correto: “Não <b>me</b> deixe sozinho.”<br>O “não” atrai o pronome para antes do verbo.`},
+ {t:'p-col', k:'pegadinha', f:`“Quando vi-te, sorri.” Está na norma-padrão?`, b:`<b>Não!</b> Correto: “Quando <b>te</b> vi, sorri.”<br>A conjunção “quando” atrai o pronome (próclise).`},
+ {t:'p-col', k:'exemplo', f:`Ponha o pronome “me” na norma-padrão: “Ninguém avisou.”`, b:`<b>“Ninguém me avisou.”</b><br>“Ninguém” é palavra negativa: atrai o pronome.`},
+ {t:'p-col', k:'exemplo', f:`“Dir-te-ei a verdade.” Que colocação pronominal é essa?`, b:`<b>Mesóclise.</b><br>O pronome fica no meio do verbo no futuro (direi). É rara e muito formal.`},
+ {t:'p-col', k:'conceito', f:`Numa conversa entre amigos, “Me passa o sal?” é adequado?`, b:`<b>Sim: a próclise é natural no português brasileiro falado e informal.</b><br>Num texto formal, a norma-padrão pede “Passe-me o sal”.`},
+
+/* p-pont — Pontuação (8) */
+ {t:'p-pont', k:'regra', f:`Pode-se separar o sujeito do verbo com vírgula?`, b:`<b>Nunca.</b> Nem o verbo do complemento.<br>Errado: “Os alunos do 9º ano, viajaram.” Macete: sujeito e verbo são namorados. (Um aposto entre duas vírgulas pode ficar no meio.)`},
+ {t:'p-pont', k:'exemplo', f:`“Pedro, venha cá.” O que a vírgula separa?`, b:`<b>O vocativo</b> (“Pedro”, a pessoa com quem se fala).<br>O vocativo sempre leva vírgula.`},
+ {t:'p-pont', k:'exemplo', f:`“Belém, capital do Pará, recebe muitos turistas.” O que fica entre as vírgulas?`, b:`<b>Um aposto.</b><br>Ele explica quem é o termo anterior (Belém).`},
+ {t:'p-pont', k:'pegadinha', f:`“Não, espere!” × “Não espere!”: a vírgula muda o sentido?`, b:`<b>Sim! Inverte o sentido.</b><br>“Não, espere!” pede que a pessoa espere; “Não espere!” pede que ela não espere.`},
+ {t:'p-pont', k:'exemplo', f:`“Bem… acho que não vou à festa.” O que as reticências indicam?`, b:`<b>Hesitação.</b><br>As reticências também podem indicar suspense, ideia interrompida ou ironia.`},
+ {t:'p-pont', k:'conceito', f:`Para que servem os dois-pontos (:)?`, b:`<b>Para anunciar uma explicação, uma enumeração ou uma fala.</b><br>“Comprei três frutas: maçã, pera e uva.”`},
+ {t:'p-pont', k:'exemplo', f:`“Que dia ‘ótimo’: choveu e perdi o ônibus.” Que efeito as aspas criam em “ótimo”?`, b:`<b>Ironia.</b><br>A palavra é usada no sentido contrário: o dia foi ruim.`},
+ {t:'p-pont', k:'regra', f:`“Ontem à noite, fomos ao cinema.” Por que há vírgula depois de “noite”?`, b:`<b>Porque a expressão de tempo foi deslocada para o início da frase.</b><br>Ordem direta: “Fomos ao cinema ontem à noite.”`},
+
+/* p-var — Variação linguística (8) */
+ {t:'p-var', k:'regra', f:`Quais são os quatro tipos de variação linguística?`, b:`<b>Regional, social (ou etária), situacional e histórica.</b><br>O critério não é certo × errado, e sim adequado × inadequado.`},
+ {t:'p-var', k:'exemplo', f:`“Bergamota”, “mexerica” e “tangerina” nomeiam a mesma fruta. Que tipo de variação é essa?`, b:`<b>Variação regional.</b><br>Cada região do país usa um nome.`},
+ {t:'p-var', k:'exemplo', f:`“Vossa mercê” → “vosmecê” → “você” → “cê”. Que tipo de variação é essa?`, b:`<b>Variação histórica.</b><br>A língua muda com o passar do tempo.`},
+ {t:'p-var', k:'exemplo', f:`Gírias como “mano” e “rolê”, comuns entre adolescentes, são marcas de que tipo de variação?`, b:`<b>Variação social (etária).</b><br>Revelam o grupo e a idade de quem fala.`},
+ {t:'p-var', k:'exemplo', f:`Lucas diz “E aí, beleza?” ao amigo e “Bom dia, como vai o senhor?” ao diretor. Que variação é essa?`, b:`<b>Variação situacional</b> (informal × formal).<br>A mesma pessoa adapta a fala à situação e ao interlocutor.`},
+ {t:'p-var', k:'conceito', f:`O que é a norma-padrão?`, b:`<b>O modelo de língua usado em situações formais</b> (documentos, provas, notícias).<br>Saber usá-la é importante, mas isso não torna as outras variedades “erradas”.`},
+ {t:'p-var', k:'conceito', f:`O que é preconceito linguístico?`, b:`<b>Discriminar alguém pelo jeito de falar</b> (sotaque, origem, escolaridade).<br>Ex.: rir do sotaque de um colega de outro estado.`},
+ {t:'p-var', k:'pegadinha', f:`Uma conversa informal entre amigos, cheia de gírias, está “errada”?`, b:`<b>Não!</b> Está adequada à situação.<br>Macete: língua é como roupa: chinelo na praia, terno no casamento.`},
+
+/* p-form — Formação de palavras, estrangeirismos e acentuação (6) */
+ {t:'p-form', k:'exemplo', f:`Como se forma a palavra “entardecer”?`, b:`<b>Derivação parassintética.</b><br>Prefixo “en-” e sufixo “-ecer” entram juntos: não existe “entarde” nem “tardecer”.`},
+ {t:'p-form', k:'pegadinha', f:`“Infelizmente” é formada por derivação parassintética?`, b:`<b>Não!</b> Existem “infeliz” e “felizmente” sozinhas: prefixo e sufixo não entraram ao mesmo tempo (derivação prefixal e sufixal).`},
+ {t:'p-form', k:'exemplo', f:`“Planalto” (plano + alto): que processo de formação é esse?`, b:`<b>Composição por aglutinação.</b><br>As palavras se juntam e uma perde parte do som (o “o” de plano). Em “girassol”, nada se perde: justaposição.`},
+ {t:'p-form', k:'conceito', f:`Estrangeirismo adaptado × não adaptado: dê um exemplo de cada.`, b:`<b>Adaptado: futebol (de “football”). Não adaptado: delivery.</b><br>O adaptado ganhou grafia portuguesa; o outro mantém a original.`},
+ {t:'p-form', k:'regra', f:`Quais proparoxítonas são acentuadas?`, b:`<b>Todas.</b><br>Ex.: lâmpada, matemática, música.`},
+ {t:'p-form', k:'pegadinha', f:`“Idéia”, “heróico” e “vôo” estão corretas pelo Acordo Ortográfico em vigor?`, b:`<b>Não!</b> Escreve-se <b>ideia, heroico, voo</b>, sem acento.`}
+];
+
 </script>
 <script>
 (function(){
@@ -3113,7 +3724,7 @@ function order(id,n){const a=[...Array(n).keys()];let h=hash(id);for(let i=n-1;i
 
 /* ---------- jogador e pontos ---------- */
 let USERS=LS.get(P+':users')||{},CUR=LS.get(P+':cur');if(CUR&&!USERS[CUR])CUR=null;
-const blank=()=>({rev:{},tr:{},sol:{},tn:{}});
+const blank=()=>({rev:{},tr:{},sol:{},tn:{},fc:{}});
 let S=CUR?Object.assign(blank(),USERS[CUR].s):blank();
 const sum=o=>Object.values(o).reduce((a,v)=>a+(+v||0),0);
 const trOk=()=>QS.filter(x=>S.tr[x.id]===x.q[2]).length;
@@ -3198,7 +3809,7 @@ document.querySelectorAll('.tab').forEach(b=>b.addEventListener('click',()=>go(b
 function route(){const h=(location.hash||'#rev').slice(1);const [tab,arg]=h.split('/');
  const k=['rev','treino','cards','simu','placar'].includes(tab)?tab:'rev';setTab(k);document.body.classList.remove('focus');
  if(k==='rev'){if(arg==='folha')renderFolha();else if(arg&&T[arg])renderTopic(arg);else renderList()}
- else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else renderSoon(k);
+ else if(k==='placar')renderPlacar();else if(k==='treino')renderTreino();else if(k==='cards')renderCards();else renderSoon(k);
  try{window.scrollTo(0,0)}catch(e){}}
 addEventListener('hashchange',route);
 
@@ -3276,7 +3887,7 @@ let confirmReset=false;
 function renderPlacar(){const el=$('placar');const t=TOTAL(),p=pctOf(t);
  let h='<div class="card hero"><div><div class="big">'+t+'<small style="font-size:16px;color:var(--muted)"> / '+MAX()+' pts</small></div><div class="rk">'+patente(p)+'</div><small style="color:var(--muted)">'+p+'% da missão</small></div></div>';
  if(!CUR)h+='<p class="card" style="padding:14px">Entre com seu nome para salvar seus pontos. <button type="button" class="btn sm" id="plIn">Entrar</button></p>';
- h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'<div class="r" style="opacity:.6"><span>Flashcards e simulado</span><b>em breve</b></div></div>';
+ h+='<div class="card bars"><h3>Pontos por atividade</h3>'+CATS.map(c=>{const m=c[2](),v=c[3]();return '<div class="r"><span>'+c[1]+'</span><b>'+v+' / '+m+'</b><span class="b"><i style="width:'+Math.round(v/m*100)+'%"></i></span></div>'}).join('')+'<div class="r" style="opacity:.6"><span>Simulado cronometrado</span><b>em breve</b></div></div>';
  h+='<div class="card heat"><h3>Mapa dos tópicos</h3>';
  Object.keys(AREAS).forEach(a=>{const A=AREAS[a];h+='<p style="margin:6px 0;font-weight:700;color:'+A.ac+'">'+A.n+'</p><div class="cells">'+A.tops.map(x=>{const s=stat(x);const lv=s.r&&s.ok===s.n?2:(s.r||s.ans)?1:0;return '<button type="button" class="cell r'+lv+'" title="'+esc(x.t)+'" aria-label="'+esc(x.t)+'" data-t="'+x.id+'"></button>'}).join('')+'</div>'});
  h+='<div class="hleg"><span><i></i>não começado</span><span><i style="background:var(--hl)"></i>em andamento</span><span><i style="background:var(--ok)"></i>revisado e teste 100%</span></div></div>';
@@ -3363,7 +3974,66 @@ function renderEnd(){const el=$('treino');const ids=SES.list.filter(id=>SES.ans[
  if($('tRedo'))$('tRedo').onclick=()=>startSession(shuffle(wrong),'Refazendo erros');
  $('tNew').onclick=()=>{SES=null;renderTreino();try{window.scrollTo(0,0)}catch(e){}};}
 
-window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id)};
+/* ---------- FLASHCARDS ---------- */
+const FC=[];{const cnt={};[...CARDS_M1,...CARDS_M2,...CARDS_M3,...CARDS_M45,...CARDS_P1,...CARDS_P2,...CARDS_P3].forEach(c=>{if(!T[c.t])return;cnt[c.t]=(cnt[c.t]||0)+1;c.id='c:'+c.t+':'+cnt[c.t];c.area=T[c.t].area;FC.push(c)})}
+const FCI={};FC.forEach(c=>FCI[c.id]=c);
+const KIND={regra:['Regra','📐'],conceito:['Conceito','💡'],conta:['Conta relâmpago','⚡'],exemplo:['Exemplo','🔎'],pegadinha:['Pegadinha','⚠️']};
+function fcPts(){let p=0;for(const id in S.fc){if(FCI[id]&&S.fc[id].n>0)p+=2}return p}
+CATS.push(['fc','Flashcards',()=>FC.length*2,fcPts]);
+function fst(c){const r=S.fc&&S.fc[c.id];if(!r)return 'new';return r.s?'ok':'bad'}
+let FCO=Object.assign({area:'mix',foco:'all',n:20},LS.get(P+':fco')||{});
+let FS=null;
+function fcPool(area,foco){return FC.filter(c=>(area==='mix'||c.area===area)&&(foco==='all'||(foco==='star3'&&T[c.t].star===3)||(foco==='conta'&&c.k==='conta')||(foco==='pega'&&c.k==='pegadinha')||(foco==='new'&&fst(c)==='new')||(foco==='bad'&&fst(c)==='bad')))}
+function fcPick(pool,n){const g={bad:[],new:[],ok:[]};pool.forEach(c=>g[fst(c)].push(c));return [...shuffle(g.bad),...shuffle(g.new),...shuffle(g.ok)].slice(0,n)}
+function fcStart(ids){if(!ids.length){toast('Nenhum cartão nesse filtro');return}FS={q:ids.slice(),seen:{},ok:[],miss:{},flip:false,total:ids.length};renderCards();try{window.scrollTo(0,0)}catch(e){}}
+function renderCards(){const f=!!(FS&&FS.q.length);document.body.classList.toggle('focus',f);if(f)renderCard();else if(FS)renderCardsEnd();else renderCardsSetup()}
+
+function renderCardsSetup(){const el=$('cards');
+ const tot=FC.length,ok=FC.filter(c=>fst(c)==='ok').length,bad=FC.filter(c=>fst(c)==='bad').length;
+ const avail=fcPool(FCO.area,FCO.foco).length,nn=Math.min(FCO.n,avail);
+ let h='<div class="card tcard"><h2 class="th" style="margin:0 0 6px">Flashcards</h2><p style="margin:0;color:var(--muted)">'+tot+' cartões para deixar tudo na ponta da língua. Leia a frente, <b>responda de cabeça</b>, vire e seja honesto: sabia ou não? Os que você errar <b>voltam</b> na mesma rodada até grudar.</p></div>';
+ h+='<div class="sum"><div><span>Dominados</span><b>'+ok+'/'+tot+'</b></div><div><span>Para rever</span><b>'+bad+'</b></div><div><span>Nunca vistos</span><b>'+(tot-ok-bad)+'</b></div></div>';
+ h+='<div class="opt-g"><span class="lbl">Matéria</span><div class="chips" data-k="area">'+[['mix','Misturado'],['mat','Matemática'],['por','Português']].map(([v,l])=>'<button type="button" data-v="'+v+'" aria-pressed="'+(FCO.area===v)+'">'+l+'</button>').join('')+'</div></div>';
+ h+='<div class="opt-g"><span class="lbl">Foco</span><div class="chips" data-k="foco">'+[['all','Todos'],['star3','Só ★★★'],['conta','⚡ Conta relâmpago'],['pega','⚠️ Pegadinhas'],['new','Nunca vistos'],['bad','Não sabia ('+bad+')']].map(([v,l])=>'<button type="button" data-v="'+v+'" aria-pressed="'+(FCO.foco===v)+'">'+l+'</button>').join('')+'</div></div>';
+ h+='<div class="opt-g"><span class="lbl">Quantos cartões</span><div class="chips" data-k="n">'+[10,20,40,80].map(v=>'<button type="button" data-v="'+v+'" aria-pressed="'+(FCO.n===v)+'">'+v+'</button>').join('')+'</div></div>';
+ h+=avail?'<button type="button" class="btn big" id="fGo">Começar · '+nn+' cartões</button>':'<p class="card" style="padding:14px;margin:0 0 16px">'+(FCO.foco==='bad'?'Nenhum cartão para rever. 👏':'Nenhum cartão nesse filtro.')+'</p>';
+ h+='<div class="sec" style="--ac:var(--ink)">Baralho por tópico</div>';
+ Object.keys(AREAS).forEach(a=>{const A=AREAS[a];h+='<p style="margin:14px 0 6px;font:800 16px var(--head);color:'+A.ac+'">'+A.n+'</p><div class="tlist">';
+  A.tops.forEach(t=>{const cs=FC.filter(c=>c.t===t.id);if(!cs.length)return;const o=cs.filter(c=>fst(c)==='ok').length,b=cs.filter(c=>fst(c)==='bad').length;
+   h+='<button type="button" class="trow" style="--ac:'+A.ac+'" data-ft="'+t.id+'"><span class="st">'+'★'.repeat(t.star)+'<span style="opacity:.25">'+'★'.repeat(3-t.star)+'</span></span><span><span class="tt">'+t.t+'</span><span class="tg">'+cs.length+' cartões</span></span><span class="ck">'+(b?'<span class="pill bad">'+b+' ✗</span>':'')+'<span class="pill'+(o===cs.length?' ok':o?' part':'')+'">'+o+'/'+cs.length+'</span></span></button>'});
+  h+='</div>'});
+ el.innerHTML=h;
+ el.querySelectorAll('.chips').forEach(c=>c.querySelectorAll('button').forEach(b=>b.onclick=()=>{const k=c.dataset.k;FCO[k]=k==='n'?+b.dataset.v:b.dataset.v;LS.set(P+':fco',FCO);renderCardsSetup()}));
+ if($('fGo'))$('fGo').onclick=()=>{if(!need())return;let list;const pool=fcPool(FCO.area,FCO.foco);
+  if(FCO.area==='mix'){const m=fcPick(pool.filter(c=>c.area==='mat'),Math.ceil(FCO.n/2)),p=fcPick(pool.filter(c=>c.area==='por'),FCO.n);list=[];let i=0,j=0;while(list.length<FCO.n&&(i<m.length||j<p.length)){if(i<m.length)list.push(m[i++]);if(list.length<FCO.n&&j<p.length)list.push(p[j++])}}
+  else list=fcPick(pool,FCO.n);fcStart(list.map(c=>c.id))};
+ el.querySelectorAll('[data-ft]').forEach(b=>b.onclick=()=>{if(!need())return;fcStart(shuffle(FC.filter(c=>c.t===b.dataset.ft)).map(c=>c.id))});}
+
+function renderCard(){const el=$('cards');const id=FS.q[0],c=FCI[id],t=T[c.t],A=AREAS[c.area],K=KIND[c.k]||['Cartão','🃏'];
+ const done=FS.ok.length,again=FS.miss[id]||0;
+ let h='<div style="--ac:'+A.ac+';--abg:'+A.abg+'"><div class="qhead"><button type="button" class="lnk" id="fQuit">✕ Sair</button><span class="qn">'+done+' de '+FS.total+' dominados</span><span class="qok">'+FS.q.length+' na pilha</span></div><div class="pbar"><i style="width:'+Math.round(done/FS.total*100)+'%"></i></div>';
+ h+='<div class="fc'+(FS.flip?' flip':'')+'" id="fcard" role="button" tabindex="0" aria-label="Virar cartão"><div class="fcin"><div class="face front"><div class="fk"><span>'+K[1]+' '+K[0]+'</span><span>'+A.n+' · '+t.t+'</span></div><div class="ft">'+fmt(c.f)+'</div>'+(again?'<div class="fa">voltou '+again+'× · você consegue!</div>':'')+'<div class="fh">Toque para virar</div></div><div class="face back"><div class="fk"><span>'+K[1]+' '+K[0]+'</span><span>'+t.t+'</span></div><div class="fq">'+fmt(c.f)+'</div><div class="fb">'+fmt(c.b)+'</div></div></div></div>';
+ h+=FS.flip?'<div class="fbtns"><button type="button" class="btn no" id="fNo">✗ Não sabia</button><button type="button" class="btn yes" id="fYes">✓ Sabia</button></div><p class="fkeys">No computador: <b>1</b> não sabia · <b>2</b> sabia · <b>espaço</b> vira</p>':'<div class="fbtns one"><button type="button" class="btn" id="fFlip">Virar cartão</button></div><p class="fkeys">Responda de cabeça antes de virar 😉</p>';
+ h+='</div>';el.innerHTML=h;
+ const flip=()=>{if(FS.flip)return;FS.flip=true;renderCard()};
+ $('fcard').onclick=flip;if($('fFlip'))$('fFlip').onclick=flip;
+ if($('fYes'))$('fYes').onclick=()=>fcMark(true);if($('fNo'))$('fNo').onclick=()=>fcMark(false);
+ $('fQuit').onclick=()=>{if(FS.ok.length||Object.keys(FS.miss).length){FS.q=[];renderCards()}else{FS=null;renderCards()}try{window.scrollTo(0,0)}catch(e){}};}
+function fcMark(yes){if(!need())return;const id=FS.q.shift(),before=TOTAL();const r=S.fc[id]||(S.fc[id]={s:0,n:0});
+ if(yes){r.s=1;r.n++;FS.ok.push(id)}else{r.s=0;FS.miss[id]=(FS.miss[id]||0)+1;const pos=Math.min(3,FS.q.length);FS.q.splice(pos,0,id)}
+ FS.flip=false;save(before);renderCards();try{window.scrollTo(0,0)}catch(e){}}
+document.addEventListener('keydown',e=>{if($('cards').hidden||!FS||!FS.q.length||!$('login').hidden)return;if(e.target&&/INPUT|TEXTAREA/.test(e.target.tagName))return;
+ if(e.key===' '||e.key==='Enter'){e.preventDefault();if(!FS.flip){FS.flip=true;renderCard()}}else if(FS.flip&&e.key==='1')fcMark(false);else if(FS.flip&&e.key==='2')fcMark(true)});
+
+function renderCardsEnd(){const el=$('cards');const missed=Object.keys(FS.miss);const first=FS.ok.filter(id=>!FS.miss[id]).length;
+ let h='<div class="card score"><div class="big">'+first+'<small>/'+FS.ok.length+'</small></div><div><div class="rk">de primeira!</div><p style="margin:4px 0 0">'+(FS.q.length?'Rodada interrompida. ':'Rodada completa. ')+(missed.length?missed.length+' cartão(ões) precisaram voltar: eles estão em “Não sabia” para você rever amanhã.':'Nenhum cartão precisou voltar. 🏆')+'</p></div></div>';
+ if(missed.length)h+='<div class="card" style="padding:6px 14px;margin-bottom:14px"><p style="margin:10px 0 4px;font-weight:700">Os que deram trabalho:</p><ol class="rlist">'+missed.map(id=>{const c=FCI[id];return '<li class="b"><span>'+FS.miss[id]+'×</span><span>'+fmt(c.f)+'</span></li>'}).join('')+'</ol></div>';
+ h+='<div class="nav1">'+(missed.length?'<button type="button" class="btn" id="fAgain">Rever só esses '+missed.length+'</button>':'')+'<button type="button" class="btn ghost" id="fNew">Nova rodada</button></div>';
+ el.innerHTML=h;
+ if($('fAgain'))$('fAgain').onclick=()=>fcStart(shuffle(missed));
+ $('fNew').onclick=()=>{FS=null;renderCards();try{window.scrollTo(0,0)}catch(e){}};}
+
+window.__OBJ={ids:TOPS.map(t=>t.id),tq:TQ.map(x=>x.id),fc:FC.map(c=>c.id)};
 renderCount();
 renderBar();route();
 if(!CUR)setTimeout(openLogin,600);

@@ -1,0 +1,73 @@
+const CARDS_M3 = [
+ /* ===== m-ang · Ângulos e retas paralelas (12) ===== */
+ {t:'m-ang', k:'regra', f:`Dois ângulos complementares somam quanto?`, b:`<b>90°</b>. Ex.: 30° e 60° são complementares.`},
+ {t:'m-ang', k:'regra', f:`Dois ângulos suplementares somam quanto?`, b:`<b>180°</b>. Ex.: 110° e 70° são suplementares.`},
+ {t:'m-ang', k:'conceito', f:`O que se sabe sobre dois ângulos opostos pelo vértice?`, b:`<b>São iguais.</b> Quando duas retas se cruzam, os ângulos “de frente” um para o outro têm a mesma medida.`},
+ {t:'m-ang', k:'exemplo', f:`Um ângulo de exatamente 180° (meia-volta, formando uma reta) se chama como?`, b:`<b>Ângulo raso.</b> Lembre: agudo &lt; 90°, reto = 90°, obtuso entre 90° e 180°.`},
+ {t:'m-ang', k:'conceito', f:`Paralelas cortadas por transversal: ângulos alternos internos são iguais ou somam 180°?`, b:`<b>São iguais.</b> Ficam entre as paralelas, em lados opostos da transversal: formam a letra “Z”.`},
+ {t:'m-ang', k:'conceito', f:`Paralelas cortadas por transversal: como são os ângulos correspondentes (mesma posição em cada cruzamento)?`, b:`<b>Iguais.</b> Formam a letra “F”.`},
+ {t:'m-ang', k:'regra', f:`Paralelas cortadas por transversal: quanto somam dois colaterais internos?`, b:`<b>180°.</b> Ficam entre as paralelas, do mesmo lado da transversal: formam a letra “U”.`},
+ {t:'m-ang', k:'conta', f:`Complemento de 35°?`, b:`<b>55°</b>. 90 − 35 = 55.`},
+ {t:'m-ang', k:'conta', f:`Suplemento de 125°?`, b:`<b>55°</b>. 180 − 125 = 55.`},
+ {t:'m-ang', k:'conta', f:`Suplemento do complemento de 50°?`, b:`<b>140°</b>. Complemento de 50° = 40°; suplemento de 40° = 140°.`},
+ {t:'m-ang', k:'conta', f:`A bissetriz divide um ângulo de 130° em dois ângulos de quanto?`, b:`<b>65°</b> cada. A bissetriz corta o ângulo ao meio: 130 ÷ 2 = 65.`},
+ {t:'m-ang', k:'pegadinha', f:`“O complemento de 40° é 140°.” Certo?`, b:`<b>Não!</b> 140° é o <b>suplemento</b> (soma 180°). O complemento (soma 90°) é <b>50°</b>.`},
+
+ /* ===== m-pol · Triângulos e polígonos (8) ===== */
+ {t:'m-pol', k:'regra', f:`Fórmula da soma dos ângulos internos de um polígono de n lados?`, b:`<b>S<sub>i</sub> = (n − 2)·180°</b>. O polígono se divide em (n − 2) triângulos.`},
+ {t:'m-pol', k:'regra', f:`Fórmula do número de diagonais de um polígono de n lados?`, b:`<b>d = [[n(n − 3)|2]]</b>. Divide por 2 porque cada diagonal seria contada duas vezes.`},
+ {t:'m-pol', k:'regra', f:`Quanto somam os ângulos externos de qualquer polígono convexo?`, b:`<b>360°</b>, sempre (uma volta completa). No regular, cada externo = [[360°|n]].`},
+ {t:'m-pol', k:'conceito', f:`O ângulo externo de um triângulo é igual a quê?`, b:`<b>À soma dos dois ângulos internos não vizinhos a ele.</b> Ex.: internos 50° e 60° → externo oposto = 110°.`},
+ {t:'m-pol', k:'conta', f:`Soma dos ângulos internos de um pentágono?`, b:`<b>540°</b>. (5 − 2)·180 = 3·180 = 540.`},
+ {t:'m-pol', k:'conta', f:`Cada ângulo externo de um decágono regular (10 lados) mede?`, b:`<b>36°</b>. 360 ÷ 10 = 36. (O interno é 180 − 36 = 144°.)`},
+ {t:'m-pol', k:'conta', f:`Quantas diagonais tem um pentágono?`, b:`<b>5</b>. d = [[5·2|2]] = 5.`},
+ {t:'m-pol', k:'pegadinha', f:`Todo losango é um quadrado?`, b:`<b>Não!</b> O losango tem 4 lados iguais, mas o quadrado precisa também de 4 ângulos retos. (Todo quadrado é losango, não o contrário.)`},
+
+ /* ===== m-sem · Semelhança e Tales (12) ===== */
+ {t:'m-sem', k:'conceito', f:`O que duas figuras semelhantes têm em comum?`, b:`<b>Ângulos correspondentes iguais e lados correspondentes proporcionais.</b> Mesma forma, tamanhos diferentes.`},
+ {t:'m-sem', k:'regra', f:`Quais são os três casos de semelhança de triângulos?`, b:`<b>AA, LAL e LLL.</b> AA (dois ângulos iguais) é o mais usado.`},
+ {t:'m-sem', k:'exemplo', f:`Um triângulo tem ângulos de 40° e 75°; outro, de 40° e 65°. São semelhantes?`, b:`<b>Sim, pelo caso AA.</b> O terceiro ângulo do primeiro é 65°, então os dois têm 40°, 65° e 75°.`},
+ {t:'m-sem', k:'regra', f:`Se a razão de semelhança entre os lados é k, qual a razão entre os perímetros?`, b:`<b>k</b> (a mesma dos lados).`},
+ {t:'m-sem', k:'regra', f:`Se a razão de semelhança entre os lados é k, qual a razão entre as áreas?`, b:`<b>k²</b>. Ex.: lados ×2 → área ×4.`},
+ {t:'m-sem', k:'regra', f:`O que diz o Teorema de Tales?`, b:`<b>Um feixe de paralelas cortado por duas transversais determina segmentos proporcionais:</b> [[a|b]] = [[c|d]].`},
+ {t:'m-sem', k:'conceito', f:`Por que dá para medir a altura de um prédio pela sombra?`, b:`<b>No mesmo instante, os raios de sol são paralelos</b>, então os triângulos são semelhantes e [[altura|sombra]] é igual para todos os objetos.`},
+ {t:'m-sem', k:'conta', f:`Triângulos de lados 3, 4, 5 e 6, 8, 10. Razão de semelhança (maior ÷ menor)?`, b:`<b>k = 2</b>. [[6|3]] = [[8|4]] = [[10|5]] = 2.`},
+ {t:'m-sem', k:'conta', f:`Figuras semelhantes com razão k = 2. A menor tem 10 cm² de área. Área da maior?`, b:`<b>40 cm²</b>. Áreas na razão k² = 4: 10 × 4 = 40.`},
+ {t:'m-sem', k:'conta', f:`Uma vara de 1 m faz sombra de 2 m. No mesmo instante, uma árvore faz sombra de 10 m. Altura da árvore?`, b:`<b>5 m</b>. A sombra é o dobro da altura: 10 ÷ 2 = 5.`},
+ {t:'m-sem', k:'conta', f:`Tales: [[2|3]] = [[4|x]]. Quanto vale x?`, b:`<b>x = 6</b>. 2x = 12 → x = 6.`},
+ {t:'m-sem', k:'pegadinha', f:`Os lados de uma figura triplicam. A área fica 3 vezes maior?`, b:`<b>Não!</b> Fica <b>9 vezes</b> maior (3² = 9). Só o perímetro triplica.`},
+
+ /* ===== m-pit · Pitágoras e relações métricas (12) ===== */
+ {t:'m-pit', k:'regra', f:`Teorema de Pitágoras (a = hipotenusa; b e c = catetos)?`, b:`<b>a² = b² + c²</b>. O quadrado da hipotenusa é a soma dos quadrados dos catetos.`},
+ {t:'m-pit', k:'conceito', f:`O que é a hipotenusa num triângulo retângulo?`, b:`<b>O lado oposto ao ângulo de 90°</b>, sempre o maior. Os outros dois (que formam o ângulo reto) são os catetos.`},
+ {t:'m-pit', k:'regra', f:`Diagonal de um quadrado de lado ℓ?`, b:`<b>d = ℓ√{2}</b>. Ex.: lado 5 → diagonal 5√{2}.`},
+ {t:'m-pit', k:'regra', f:`Altura de um triângulo equilátero de lado ℓ?`, b:`<b>h = [[ℓ√{3}|2]]</b>. Ex.: lado 10 → h = 5√{3}.`},
+ {t:'m-pit', k:'regra', f:`A altura relativa à hipotenusa a divide em m e n. Quanto vale h²?`, b:`<b>h² = m·n</b>. Ex.: m = 4 e n = 9 → h² = 36 → h = 6.`},
+ {t:'m-pit', k:'regra', f:`No triângulo retângulo, hipotenusa × altura relativa a ela é igual a quê?`, b:`<b>Ao produto dos catetos: a·h = b·c</b>.`},
+ {t:'m-pit', k:'exemplo', f:`Um triângulo de lados 6, 8 e 10 é retângulo?`, b:`<b>Sim.</b> 6² + 8² = 36 + 64 = 100 = 10². (É o 3-4-5 vezes 2.)`},
+ {t:'m-pit', k:'conta', f:`Catetos 6 e 8. Hipotenusa?`, b:`<b>10</b>. 36 + 64 = 100 → √{100} = 10.`},
+ {t:'m-pit', k:'conta', f:`Hipotenusa 13 e um cateto 5. O outro cateto?`, b:`<b>12</b>. 169 − 25 = 144 → √{144} = 12 (terno 5-12-13).`},
+ {t:'m-pit', k:'conta', f:`Catetos 8 e 15. Hipotenusa?`, b:`<b>17</b>. 64 + 225 = 289 → √{289} = 17 (terno 8-15-17).`},
+ {t:'m-pit', k:'conta', f:`A altura relativa à hipotenusa a divide em m = 1 e n = 9. Altura?`, b:`<b>3</b>. h² = 1 · 9 = 9 → h = 3.`},
+ {t:'m-pit', k:'pegadinha', f:`Hipotenusa 10 e cateto 6. O outro cateto é √{10² + 6²}?`, b:`<b>Não!</b> Quando falta um cateto, <b>subtraia</b>: 100 − 36 = 64 → cateto = <b>8</b>.`},
+
+ /* ===== m-circ · Circunferência (8) ===== */
+ {t:'m-circ', k:'conceito', f:`Onde fica o vértice do ângulo central e quanto ele mede?`, b:`<b>No centro da circunferência</b>, e mede o mesmo que o arco que ele determina.`},
+ {t:'m-circ', k:'regra', f:`Quanto mede um ângulo inscrito em relação ao arco que ele “olha”?`, b:`<b>A metade do arco</b> (e metade do central correspondente). Vértice na própria circunferência.`},
+ {t:'m-circ', k:'conceito', f:`Quanto mede um ângulo inscrito que “olha” para um diâmetro?`, b:`<b>90°.</b> Todo triângulo inscrito com um lado sendo diâmetro é retângulo.`},
+ {t:'m-circ', k:'regra', f:`Fórmula do comprimento de uma circunferência de raio r?`, b:`<b>C = 2πr</b>. Um arco de α° mede [[α|360]]·2πr.`},
+ {t:'m-circ', k:'conta', f:`Ângulo central de 80°. Quanto mede o inscrito que olha o mesmo arco?`, b:`<b>40°</b>. Inscrito = metade do central.`},
+ {t:'m-circ', k:'conta', f:`Ângulo inscrito de 25°. Quanto mede o central que olha o mesmo arco?`, b:`<b>50°</b>. Central = dobro do inscrito.`},
+ {t:'m-circ', k:'conta', f:`Comprimento de uma circunferência de raio 10 cm (π ≈ 3,14)?`, b:`<b>62,8 cm</b>. 2 × 3,14 × 10 = 62,8.`},
+ {t:'m-circ', k:'pegadinha', f:`O comprimento da circunferência é πr²?`, b:`<b>Não!</b> πr² é a <b>área</b> do círculo. O comprimento é <b>2πr</b>.`},
+
+ /* ===== m-cart · Plano cartesiano (8) ===== */
+ {t:'m-cart', k:'pegadinha', f:`Os pares (2, 3) e (3, 2) representam o mesmo ponto?`, b:`<b>Não!</b> A ordem importa: primeiro o x (horizontal, abscissa), depois o y (vertical, ordenada).`},
+ {t:'m-cart', k:'regra', f:`Quais são os sinais (x, y) dos pontos do 2º quadrante?`, b:`<b>(−, +)</b>. Ordem anti-horária: 1º (+, +), 2º (−, +), 3º (−, −), 4º (+, −).`},
+ {t:'m-cart', k:'exemplo', f:`Em que quadrante fica o ponto (3, −2)?`, b:`<b>4º quadrante</b>: x positivo e y negativo.`},
+ {t:'m-cart', k:'regra', f:`Como calcular o ponto médio entre dois pontos?`, b:`<b>Média dos x e média dos y:</b> M = ([[x<sub>1</sub> + x<sub>2</sub>|2]], [[y<sub>1</sub> + y<sub>2</sub>|2]]).`},
+ {t:'m-cart', k:'regra', f:`Fórmula da distância entre dois pontos?`, b:`<b>d² = (Δx)² + (Δy)²</b>. É Pitágoras: Δx e Δy são os catetos, d é a hipotenusa.`},
+ {t:'m-cart', k:'conta', f:`Ponto médio entre (2, 4) e (6, 10)?`, b:`<b>(4, 7)</b>. [[2 + 6|2]] = 4 e [[4 + 10|2]] = 7.`},
+ {t:'m-cart', k:'conta', f:`Distância entre (1, 1) e (4, 5)?`, b:`<b>5</b>. Δx = 3, Δy = 4 → d² = 9 + 16 = 25 → d = 5.`},
+ {t:'m-cart', k:'conta', f:`Distância entre (2, 3) e (9, 3)?`, b:`<b>7</b>. Mesma horizontal (mesmo y): basta a diferença dos x, 9 − 2 = 7.`},
+];
